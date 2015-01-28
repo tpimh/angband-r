@@ -91,9 +91,9 @@ end
 
 SPELL_MAGIC_MISSILE = add_magic_spell
 {
-	name = "Волшебная Стрела",
+	name = "п▓п╬п╩я┬п╣п╠п╫п╟я▐ п║я┌я─п╣п╩п╟",
 	info = function()
-			return string.format(" ур %dd4", 3 + ((player.lev - 1) / 5))
+			return string.format(" я┐я─ %dd4", 3 + ((player.lev - 1) / 5))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -107,7 +107,7 @@ SPELL_MAGIC_MISSILE = add_magic_spell
 
 SPELL_DETECT_MONSTERS = add_magic_spell
 {
-	name = "Поиск Монстров",
+	name = "п÷п╬п╦я│п╨ п°п╬п╫я│я┌я─п╬п╡",
 	effect = function()
 			detect_monsters_normal()
 			return true
@@ -116,9 +116,9 @@ SPELL_DETECT_MONSTERS = add_magic_spell
 
 SPELL_PHASE_DOOR = add_magic_spell
 {
-	name = "Фазовая Дверь",
+	name = "п╓п╟п╥п╬п╡п╟я▐ п■п╡п╣я─я▄",
 	info = function()
-			return " расст 10"
+			return " я─п╟я│я│я┌ 10"
 		end,
 	effect = function()
 			teleport_player(10)
@@ -129,7 +129,7 @@ SPELL_PHASE_DOOR = add_magic_spell
 
 SPELL_LIGHT_AREA = add_magic_spell
 {
-	name = "Освещение",
+	name = "п·я│п╡п╣я┴п╣п╫п╦п╣",
 	effect = function()
 			lite_area(damroll(2, (player.lev / 2)), (player.lev / 10) + 1)
 			return true
@@ -138,7 +138,7 @@ SPELL_LIGHT_AREA = add_magic_spell
 
 SPELL_FIND_TRAPS_DOORS = add_magic_spell
 {
-	name = "Поиск Дверей/Ловушек",
+	name = "п÷п╬п╦я│п╨ п■п╡п╣я─п╣п╧/п⌡п╬п╡я┐я┬п╣п╨",
 	effect = function()
 			detect_traps()
 			detect_doors()
@@ -149,9 +149,9 @@ SPELL_FIND_TRAPS_DOORS = add_magic_spell
 
 SPELL_CURE_LIGHT_WOUNDS = add_magic_spell
 {
-	name = "Лечение Легких Ран",
+	name = "п⌡п╣я┤п╣п╫п╦п╣ п⌡п╣пЁп╨п╦я┘ п═п╟п╫",
 	info = function()
-			return " леч 2d8"
+			return " п╩п╣я┤ 2d8"
 		end,
 	effect = function()
 			hp_player(damroll(2, 8))
@@ -162,7 +162,7 @@ SPELL_CURE_LIGHT_WOUNDS = add_magic_spell
 
 SPELL_TREASURE_DETECTION = add_magic_spell
 {
-	name = "Поиск Сокровищ",
+	name = "п÷п╬п╦я│п╨ п║п╬п╨я─п╬п╡п╦я┴",
 	effect = function()
 			detect_treasure()
 			detect_objects_gold()
@@ -172,7 +172,7 @@ SPELL_TREASURE_DETECTION = add_magic_spell
 
 SPELL_OBJECT_DETECTION = add_magic_spell
 {
-	name = "Поиск Предметов",
+	name = "п÷п╬п╦я│п╨ п÷я─п╣п╢п╪п╣я┌п╬п╡",
 	effect = function()
 			detect_objects_normal()
 			return true
@@ -181,7 +181,7 @@ SPELL_OBJECT_DETECTION = add_magic_spell
 
 SPELL_IDENTIFY = add_magic_spell
 {
-	name = "Идентификация",
+	name = "п≤п╢п╣п╫я┌п╦я└п╦п╨п╟я├п╦я▐",
 	effect = function()
 			return ident_spell()
 		end,
@@ -189,7 +189,7 @@ SPELL_IDENTIFY = add_magic_spell
 
 SPELL_DETECT_INVISIBLE = add_magic_spell
 {
-	name = "Поиск Невидимого",
+	name = "п÷п╬п╦я│п╨ п²п╣п╡п╦п╢п╦п╪п╬пЁп╬",
 	effect = function()
 			detect_monsters_invis()
 			return true
@@ -198,7 +198,7 @@ SPELL_DETECT_INVISIBLE = add_magic_spell
 
 SPELL_DETECT_ENCHANTMENT = add_magic_spell
 {
-	name = "Поиск Чар",
+	name = "п÷п╬п╦я│п╨ п╖п╟я─",
 	effect = function()
 			detect_objects_magic()
 			return true
@@ -207,9 +207,9 @@ SPELL_DETECT_ENCHANTMENT = add_magic_spell
 
 SPELL_STINKING_CLOUD = add_magic_spell
 {
-	name = "Ядовитое Облако",
+	name = "п╞п╢п╬п╡п╦я┌п╬п╣ п·п╠п╩п╟п╨п╬",
 	info = function()
-			return string.format(" ур %d", 10 + (player.lev / 2))
+			return string.format(" я┐я─ %d", 10 + (player.lev / 2))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -222,9 +222,9 @@ SPELL_STINKING_CLOUD = add_magic_spell
 
 SPELL_LIGHTNING_BOLT = add_magic_spell
 {
-	name = "Удар Молнии",
+	name = "пёп╢п╟я─ п°п╬п╩п╫п╦п╦",
 	info = function()
-			return string.format(" ур %dd6", (3 + ((player.lev - 5) / 6)))
+			return string.format(" я┐я─ %dd6", (3 + ((player.lev - 5) / 6)))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -237,7 +237,7 @@ SPELL_LIGHTNING_BOLT = add_magic_spell
 
 SPELL_CONFUSE_MONSTER = add_magic_spell
 {
-	name = "Контузия",
+	name = "п п╬п╫я┌я┐п╥п╦я▐",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -249,7 +249,7 @@ SPELL_CONFUSE_MONSTER = add_magic_spell
 
 SPELL_SLEEP_MONSTER = add_magic_spell
 {
-	name = "Усыпление",
+	name = "пёя│я▀п©п╩п╣п╫п╦п╣",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -261,7 +261,7 @@ SPELL_SLEEP_MONSTER = add_magic_spell
 
 SPELL_WONDER = add_magic_spell
 {
-	name = "Чудо",
+	name = "п╖я┐п╢п╬",
 	effect = function()
 			local plev = player.lev
 			local die = randint(100) + plev / 5
@@ -271,7 +271,7 @@ SPELL_WONDER = add_magic_spell
 			if not success then return false end
 
 			if (die > 100) then
-				msg_print("Вы чувствуете волну мощи!")
+				msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ п╡п╬п╩п╫я┐ п╪п╬я┴п╦!")
 			end
 
 			if (die < 8) then
@@ -335,9 +335,9 @@ SPELL_WONDER = add_magic_spell
 
 SPELL_FROST_BOLT = add_magic_spell
 {
-	name = "Ледяная Стрела",
+	name = "п⌡п╣п╢я▐п╫п╟я▐ п║я┌я─п╣п╩п╟",
 	info = function()
-			return string.format(" ур %dd8", (5 + ((player.lev - 5) / 4)))
+			return string.format(" я┐я─ %dd8", (5 + ((player.lev - 5) / 4)))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -351,9 +351,9 @@ SPELL_FROST_BOLT = add_magic_spell
 
 SPELL_ACID_BOLT = add_magic_spell
 {
-	name = "Кислотная Стрела",
+	name = "п п╦я│п╩п╬я┌п╫п╟я▐ п║я┌я─п╣п╩п╟",
 	info = function()
-			return string.format(" ур %dd8", (8 + ((player.lev - 5) / 4)))
+			return string.format(" я┐я─ %dd8", (8 + ((player.lev - 5) / 4)))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -367,9 +367,9 @@ SPELL_ACID_BOLT = add_magic_spell
 
 SPELL_FIRE_BOLT = add_magic_spell
 {
-	name = "Огненная Стрела",
+	name = "п·пЁп╫п╣п╫п╫п╟я▐ п║я┌я─п╣п╩п╟",
 	info = function()
-			return string.format(" ур %dd8", (6 + ((player.lev - 5) / 4)))
+			return string.format(" я┐я─ %dd8", (6 + ((player.lev - 5) / 4)))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -383,7 +383,7 @@ SPELL_FIRE_BOLT = add_magic_spell
 
 SPELL_TRAP_DOOR_DESTRUCTION = add_magic_spell
 {
-	name = "Разрушение Двери/Ловушки",
+	name = "п═п╟п╥я─я┐я┬п╣п╫п╦п╣ п■п╡п╣я─п╦/п⌡п╬п╡я┐я┬п╨п╦",
 	effect = function()
 			destroy_doors_touch()
 			return true
@@ -392,15 +392,15 @@ SPELL_TRAP_DOOR_DESTRUCTION = add_magic_spell
 
 SPELL_SPEAR_OF_LIGHT = add_magic_spell
 {
-	name = "Луч Света",
+	name = "п⌡я┐я┤ п║п╡п╣я┌п╟",
 	info = function()
-			return " ур 6d8"
+			return " я┐я─ 6d8"
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
 
-			msg_print("Появляется коридор синего мерцающего света.")
+			msg_print("п÷п╬я▐п╡п╩я▐п╣я┌я│я▐ п╨п╬я─п╦п╢п╬я─ я│п╦п╫п╣пЁп╬ п╪п╣я─я├п╟я▌я┴п╣пЁп╬ я│п╡п╣я┌п╟.")
 			lite_line(dir)
 			return true
 		end,
@@ -408,7 +408,7 @@ SPELL_SPEAR_OF_LIGHT = add_magic_spell
 
 SPELL_TURN_STONE_TO_MUD = add_magic_spell
 {
-	name = "Плавка Камня",
+	name = "п÷п╩п╟п╡п╨п╟ п п╟п╪п╫я▐",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -420,7 +420,7 @@ SPELL_TURN_STONE_TO_MUD = add_magic_spell
 
 SPELL_DOOR_CREATION = add_magic_spell
 {
-	name = "Создание Дверей",
+	name = "п║п╬п╥п╢п╟п╫п╦п╣ п■п╡п╣я─п╣п╧",
 	effect = function()
 			door_creation()
 			return true
@@ -429,7 +429,7 @@ SPELL_DOOR_CREATION = add_magic_spell
 
 SPELL_EARTHQUAKE = add_magic_spell
 {
-	name = "Землетрясение",
+	name = "п≈п╣п╪п╩п╣я┌я─я▐я│п╣п╫п╦п╣",
 	effect = function()
 			earthquake(player.py, player.px, 10)
 			return true
@@ -438,7 +438,7 @@ SPELL_EARTHQUAKE = add_magic_spell
 
 SPELL_STAIR_CREATION = add_magic_spell
 {
-	name = "Создание Лестницы",
+	name = "п║п╬п╥п╢п╟п╫п╦п╣ п⌡п╣я│я┌п╫п╦я├я▀",
 	effect = function()
 			stair_creation()
 			return true
@@ -447,7 +447,7 @@ SPELL_STAIR_CREATION = add_magic_spell
 
 SPELL_CURE_POISON = add_magic_spell
 {
-	name = "Лечение Яда",
+	name = "п⌡п╣я┤п╣п╫п╦п╣ п╞п╢п╟",
 	effect = function()
 			set_poisoned(0)
 			return true
@@ -456,7 +456,7 @@ SPELL_CURE_POISON = add_magic_spell
 
 SPELL_SATISFY_HUNGER = add_magic_spell
 {
-	name = "Удовлетворение Голода",
+	name = "пёп╢п╬п╡п╩п╣я┌п╡п╬я─п╣п╫п╦п╣ п⌠п╬п╩п╬п╢п╟",
 	effect = function()
 			set_food(PY_FOOD_MAX - 1)
 			return true
@@ -465,9 +465,9 @@ SPELL_SATISFY_HUNGER = add_magic_spell
 
 SPELL_HEROISM = add_magic_spell
 {
-	name = "Героизм",
+	name = "п⌠п╣я─п╬п╦п╥п╪",
 	info = function()
-			return " врем 25+d25"
+			return " п╡я─п╣п╪ 25+d25"
 		end,
 	effect = function()
 			hp_player(10)
@@ -479,9 +479,9 @@ SPELL_HEROISM = add_magic_spell
 
 SPELL_BERSERKER = add_magic_spell
 {
-	name = "Ярость",
+	name = "п╞я─п╬я│я┌я▄",
 	info = function()
-			return " врем 25+d25"
+			return " п╡я─п╣п╪ 25+d25"
 		end,
 	effect = function()
 			hp_player(30)
@@ -493,9 +493,9 @@ SPELL_BERSERKER = add_magic_spell
 
 SPELL_HASTE_SELF = add_magic_spell
 {
-	name = "Ускорение",
+	name = "пёя│п╨п╬я─п╣п╫п╦п╣",
 	info = function()
-			return string.format(" врем %d+d20", player.lev)
+			return string.format(" п╡я─п╣п╪ %d+d20", player.lev)
 		end,
 	effect = function()
 			if player.fast == 0 then
@@ -509,9 +509,9 @@ SPELL_HASTE_SELF = add_magic_spell
 
 SPELL_TELEPORT_SELF = add_magic_spell
 {
-	name = "Телепортация",
+	name = "п╒п╣п╩п╣п©п╬я─я┌п╟я├п╦я▐",
 	info = function()
-			return string.format(" расст %d", player.lev * 5)
+			return string.format(" я─п╟я│я│я┌ %d", player.lev * 5)
 		end,
 	effect = function()
 			teleport_player(player.lev * 5)
@@ -521,7 +521,7 @@ SPELL_TELEPORT_SELF = add_magic_spell
 
 SPELL_SLOW_MONSTER = add_magic_spell
 {
-	name = "Замедление",
+	name = "п≈п╟п╪п╣п╢п╩п╣п╫п╦п╣",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -533,7 +533,7 @@ SPELL_SLOW_MONSTER = add_magic_spell
 
 SPELL_TELEPORT_OTHER = add_magic_spell
 {
-	name = "Телепортация Монстра",
+	name = "п╒п╣п╩п╣п©п╬я─я┌п╟я├п╦я▐ п°п╬п╫я│я┌я─п╟",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -545,7 +545,7 @@ SPELL_TELEPORT_OTHER = add_magic_spell
 
 SPELL_TELEPORT_LEVEL = add_magic_spell
 {
-	name = "Телепортация Уровня",
+	name = "п╒п╣п╩п╣п©п╬я─я┌п╟я├п╦я▐ пёя─п╬п╡п╫я▐",
 	effect = function()
 			teleport_player_level()
 			return true
@@ -554,7 +554,7 @@ SPELL_TELEPORT_LEVEL = add_magic_spell
 
 SPELL_WORD_OF_RECALL = add_magic_spell
 {
-	name = "Слово Возвращения",
+	name = "п║п╩п╬п╡п╬ п▓п╬п╥п╡я─п╟я┴п╣п╫п╦я▐",
 	effect = function()
 			set_recall()
 			return true
@@ -563,7 +563,7 @@ SPELL_WORD_OF_RECALL = add_magic_spell
 
 SPELL_POLYMORPH_OTHER = add_magic_spell
 {
-	name = "Трансформация",
+	name = "п╒я─п╟п╫я│я└п╬я─п╪п╟я├п╦я▐",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -575,9 +575,9 @@ SPELL_POLYMORPH_OTHER = add_magic_spell
 
 SPELL_SHOCK_WAVE = add_magic_spell
 {
-	name = "Ударная Волна",
+	name = "пёп╢п╟я─п╫п╟я▐ п▓п╬п╩п╫п╟",
 	info = function()
-			return string.format(" ур %d", 10 + player.lev)
+			return string.format(" я┐я─ %d", 10 + player.lev)
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -590,9 +590,9 @@ SPELL_SHOCK_WAVE = add_magic_spell
 
 SPELL_EXPLOSION = add_magic_spell
 {
-	name = "Взрыв",
+	name = "п▓п╥я─я▀п╡",
 	info = function()
-			return string.format(" ур %d", 20 + player.lev * 2)
+			return string.format(" я┐я─ %d", 20 + player.lev * 2)
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -605,9 +605,9 @@ SPELL_EXPLOSION = add_magic_spell
 
 SPELL_CLOUD_KILL = add_magic_spell
 {
-	name = "Газовое Облако",
+	name = "п⌠п╟п╥п╬п╡п╬п╣ п·п╠п╩п╟п╨п╬",
 	info = function()
-			return string.format(" ур %d", 40 + (player.lev / 2))
+			return string.format(" я┐я─ %d", 40 + (player.lev / 2))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -620,7 +620,7 @@ SPELL_CLOUD_KILL = add_magic_spell
 
 SPELL_MASS_SLEEP = add_magic_spell
 {
-	name = "Массовое Усыпление",
+	name = "п°п╟я│я│п╬п╡п╬п╣ пёя│я▀п©п╩п╣п╫п╦п╣",
 	effect = function()
 			sleep_monsters()
 			return true
@@ -629,7 +629,7 @@ SPELL_MASS_SLEEP = add_magic_spell
 
 SPELL_BEDLAM = add_magic_spell
 {
-	name = "Бедлам",
+	name = "п▒п╣п╢п╩п╟п╪",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -641,9 +641,9 @@ SPELL_BEDLAM = add_magic_spell
 
 SPELL_REND_SOUL = add_magic_spell
 {
-	name = "Пытка Души",
+	name = "п÷я▀я┌п╨п╟ п■я┐я┬п╦",
 	info = function()
-			return string.format(" ур 11d%d", player.lev)
+			return string.format(" я┐я─ 11d%d", player.lev)
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -657,7 +657,7 @@ SPELL_REND_SOUL = add_magic_spell
 
 SPELL_WORD_OF_DESTRUCTION = add_magic_spell
 {
-	name = "Слово Разрушения",
+	name = "п║п╩п╬п╡п╬ п═п╟п╥я─я┐я┬п╣п╫п╦я▐",
 	effect = function()
 			destroy_area(player.py, player.px, 15, true)
 			return true
@@ -666,9 +666,9 @@ SPELL_WORD_OF_DESTRUCTION = add_magic_spell
 
 SPELL_CHAOS_STRIKE = add_magic_spell
 {
-	name = "Удар Хаоса",
+	name = "пёп╢п╟я─ п╔п╟п╬я│п╟",
 	info = function()
-			return string.format(" ур 13d%d", player.lev)
+			return string.format(" я┐я─ 13d%d", player.lev)
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -682,9 +682,9 @@ SPELL_CHAOS_STRIKE = add_magic_spell
 
 SPELL_RESIST_COLD = add_magic_spell
 {
-	name = "Сопротивление Холоду",
+	name = "п║п╬п©я─п╬я┌п╦п╡п╩п╣п╫п╦п╣ п╔п╬п╩п╬п╢я┐",
 	info = function()
-			return " врем 20+d20"
+			return " п╡я─п╣п╪ 20+d20"
 		end,
 	effect = function()
 			set_oppose_cold(player.oppose_cold + randint(20) + 20)
@@ -694,9 +694,9 @@ SPELL_RESIST_COLD = add_magic_spell
 
 SPELL_RESIST_FIRE = add_magic_spell
 {
-	name = "Сопротивление Огню",
+	name = "п║п╬п©я─п╬я┌п╦п╡п╩п╣п╫п╦п╣ п·пЁп╫я▌",
 	info = function()
-			return " врем 20+d20"
+			return " п╡я─п╣п╪ 20+d20"
 		end,
 	effect = function()
 			set_oppose_fire(player.oppose_fire + randint(20) + 20)
@@ -706,9 +706,9 @@ SPELL_RESIST_FIRE = add_magic_spell
 
 SPELL_RESIST_POISON = add_magic_spell
 {
-	name = "Сопротивление Яду",
+	name = "п║п╬п©я─п╬я┌п╦п╡п╩п╣п╫п╦п╣ п╞п╢я┐",
 	info = function()
-			return " врем 20+d20"
+			return " п╡я─п╣п╪ 20+d20"
 		end,
 	effect = function()
 			set_oppose_pois(player.oppose_pois + randint(20) + 20)
@@ -718,9 +718,9 @@ SPELL_RESIST_POISON = add_magic_spell
 
 SPELL_RESISTANCE = add_magic_spell
 {
-	name = "Сопротивление",
+	name = "п║п╬п©я─п╬я┌п╦п╡п╩п╣п╫п╦п╣",
 	info = function()
-			return " врем 20+d20"
+			return " п╡я─п╣п╪ 20+d20"
 		end,
 	effect = function()
 			local time = randint(20) + 20
@@ -735,9 +735,9 @@ SPELL_RESISTANCE = add_magic_spell
 
 SPELL_SHIELD = add_magic_spell
 {
-	name = "Щит",
+	name = "п╘п╦я┌",
 	info = function()
-			return " врем 30+d20"
+			return " п╡я─п╣п╪ 30+d20"
 		end,
 	effect = function()
 			set_shield(player.shield + randint(20) + 30)
@@ -747,7 +747,7 @@ SPELL_SHIELD = add_magic_spell
 
 SPELL_RUNE_OF_PROTECTION = add_magic_spell
 {
-	name = "Руна Защиты",
+	name = "п═я┐п╫п╟ п≈п╟я┴п╦я┌я▀",
 	effect = function()
 			warding_glyph()
 			return true
@@ -756,7 +756,7 @@ SPELL_RUNE_OF_PROTECTION = add_magic_spell
 
 SPELL_RECHARGE_ITEM_I = add_magic_spell
 {
-	name = "Малая Перезарядка",
+	name = "п°п╟п╩п╟я▐ п÷п╣я─п╣п╥п╟я─я▐п╢п╨п╟",
 	effect = function()
 			return recharge(2 + player.lev / 5)
 		end,
@@ -764,7 +764,7 @@ SPELL_RECHARGE_ITEM_I = add_magic_spell
 
 SPELL_ENCHANT_ARMOR = add_magic_spell
 {
-	name = "Зачарование Доспехов",
+	name = "п≈п╟я┤п╟я─п╬п╡п╟п╫п╦п╣ п■п╬я│п©п╣я┘п╬п╡",
 	effect = function()
 			return enchant_spell(0, 0, rand_int(3) + player.lev / 20)
 		end,
@@ -772,7 +772,7 @@ SPELL_ENCHANT_ARMOR = add_magic_spell
 
 SPELL_ENCHANT_WEAPON = add_magic_spell
 {
-	name = "Зачарование Оружия",
+	name = "п≈п╟я┤п╟я─п╬п╡п╟п╫п╦п╣ п·я─я┐п╤п╦я▐",
 	effect = function()
 			return enchant_spell(rand_int(4) + player.lev / 20,
 			                    rand_int(4) + player.lev / 20, 0)
@@ -782,7 +782,7 @@ SPELL_ENCHANT_WEAPON = add_magic_spell
 -- ToDo - replace one of the recharge spells
 SPELL_RECHARGE_ITEM_II = add_magic_spell
 {
-	name = "Большая Перезарядка",
+	name = "п▒п╬п╩я▄я┬п╟я▐ п÷п╣я─п╣п╥п╟я─я▐п╢п╨п╟",
 	effect = function()
 			return recharge(50 + player.lev)
 		end,
@@ -790,7 +790,7 @@ SPELL_RECHARGE_ITEM_II = add_magic_spell
 
 SPELL_ELEMENTAL_BRAND = add_magic_spell
 {
-	name = "Клеймо Элементов",
+	name = "п п╩п╣п╧п╪п╬ п╜п╩п╣п╪п╣п╫я┌п╬п╡",
 	effect = function()
 			-- ToDo: poison brand for rogues
 			return brand_ammo()
@@ -799,9 +799,9 @@ SPELL_ELEMENTAL_BRAND = add_magic_spell
 
 SPELL_FROST_BALL = add_magic_spell
 {
-	name = "Ледяной Шар",
+	name = "п⌡п╣п╢я▐п╫п╬п╧ п╗п╟я─",
 	info = function()
-			return string.format(" ур %d", 30 + player.lev)
+			return string.format(" я┐я─ %d", 30 + player.lev)
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -814,9 +814,9 @@ SPELL_FROST_BALL = add_magic_spell
 
 SPELL_ACID_BALL = add_magic_spell
 {
-	name = "Кислотный Шар",
+	name = "п п╦я│п╩п╬я┌п╫я▀п╧ п╗п╟я─",
 	info = function()
-			return string.format(" ур %d", 40 + player.lev)
+			return string.format(" я┐я─ %d", 40 + player.lev)
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -829,9 +829,9 @@ SPELL_ACID_BALL = add_magic_spell
 
 SPELL_FIRE_BALL = add_magic_spell
 {
-	name = "Огненный Шар",
+	name = "п·пЁп╫п╣п╫п╫я▀п╧ п╗п╟я─",
 	info = function()
-			return string.format(" ур %d", 55 + player.lev)
+			return string.format(" я┐я─ %d", 55 + player.lev)
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -844,9 +844,9 @@ SPELL_FIRE_BALL = add_magic_spell
 
 SPELL_ICE_STORM = add_magic_spell
 {
-	name = "Метель",
+	name = "п°п╣я┌п╣п╩я▄",
 	info = function()
-			return string.format(" ур %d", 50 + (2 * player.lev))
+			return string.format(" я┐я─ %d", 50 + (2 * player.lev))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -859,7 +859,7 @@ SPELL_ICE_STORM = add_magic_spell
 
 SPELL_BANISHMENT = add_magic_spell
 {
-	name = "Изгнание",
+	name = "п≤п╥пЁп╫п╟п╫п╦п╣",
 	effect = function()
 			return banishment()
 		end,
@@ -867,9 +867,9 @@ SPELL_BANISHMENT = add_magic_spell
 
 SPELL_METEOR_SWARM = add_magic_spell
 {
-	name = "Поток Метеоров",
+	name = "п÷п╬я┌п╬п╨ п°п╣я┌п╣п╬я─п╬п╡",
 	info = function()
-			return string.format(" ур %dx%d", 30 + player.lev / 2,
+			return string.format(" я┐я─ %dx%d", 30 + player.lev / 2,
 			              2 + player.lev / 20)
 		end,
 	effect = function()
@@ -883,7 +883,7 @@ SPELL_METEOR_SWARM = add_magic_spell
 
 SPELL_MASS_BANISHMENT = add_magic_spell
 {
-	name = "Массовое Изгнание",
+	name = "п°п╟я│я│п╬п╡п╬п╣ п≤п╥пЁп╫п╟п╫п╦п╣",
 	effect = function()
 			mass_banishment()
 			return true
@@ -892,9 +892,9 @@ SPELL_MASS_BANISHMENT = add_magic_spell
 
 SPELL_RIFT = add_magic_spell
 {
-	name = "Сдвиг",
+	name = "п║п╢п╡п╦пЁ",
 	info = function()
-			return string.format(" ур 40+%dd7", player.lev)
+			return string.format(" я┐я─ 40+%dd7", player.lev)
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -907,9 +907,9 @@ SPELL_RIFT = add_magic_spell
 
 SPELL_MANA_STORM = add_magic_spell
 {
-	name = "Шторм Маны",
+	name = "п╗я┌п╬я─п╪ п°п╟п╫я▀",
 	info = function()
-			return string.format(" ур %d", 300 + (player.lev * 2))
+			return string.format(" я┐я─ %d", 300 + (player.lev * 2))
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -1028,7 +1028,7 @@ end
 
 PRAYER_DETECT_EVIL = add_prayer
 {
-	name = "Поиск Зла",
+	name = "п÷п╬п╦я│п╨ п≈п╩п╟",
 	effect = function()
 			detect_monsters_evil()
 			return true
@@ -1037,9 +1037,9 @@ PRAYER_DETECT_EVIL = add_prayer
 
 PRAYER_CURE_LIGHT_WOUNDS = add_prayer
 {
-	name = "Лечение Легких Ран",
+	name = "п⌡п╣я┤п╣п╫п╦п╣ п⌡п╣пЁп╨п╦я┘ п═п╟п╫",
 	info = function()
-			return " леч 2d10"
+			return " п╩п╣я┤ 2d10"
 		end,
 	effect = function()
 			hp_player(damroll(2, 10))
@@ -1050,9 +1050,9 @@ PRAYER_CURE_LIGHT_WOUNDS = add_prayer
 
 PRAYER_BLESS = add_prayer
 {
-	name = "Благословление",
+	name = "п▒п╩п╟пЁп╬я│п╩п╬п╡п╩п╣п╫п╦п╣",
 	info = function()
-			return " врем 12+d12"
+			return " п╡я─п╣п╪ 12+d12"
 		end,
 	effect = function()
 			set_blessed(player.blessed + randint(12) + 12)
@@ -1062,7 +1062,7 @@ PRAYER_BLESS = add_prayer
 
 PRAYER_REMOVE_FEAR = add_prayer
 {
-	name = "Бесстрашие",
+	name = "п▒п╣я│я│я┌я─п╟я┬п╦п╣",
 	effect = function()
 			set_afraid(0)
 			return true
@@ -1071,7 +1071,7 @@ PRAYER_REMOVE_FEAR = add_prayer
 
 PRAYER_CALL_LIGHT = add_prayer
 {
-	name = "Призвать Свет",
+	name = "п÷я─п╦п╥п╡п╟я┌я▄ п║п╡п╣я┌",
 	effect = function()
 			lite_area(damroll(2, (player.lev / 2)), (player.lev / 10) + 1)
 			return true
@@ -1080,7 +1080,7 @@ PRAYER_CALL_LIGHT = add_prayer
 
 PRAYER_FIND_TRAPS = add_prayer
 {
-	name = "Поиск Ловушек",
+	name = "п÷п╬п╦я│п╨ п⌡п╬п╡я┐я┬п╣п╨",
 	effect = function()
 			detect_traps()
 			return true
@@ -1089,7 +1089,7 @@ PRAYER_FIND_TRAPS = add_prayer
 
 PRAYER_DETECT_DOORS_STAIRS = add_prayer
 {
-	name = "Поиск Дверей/Лестниц",
+	name = "п÷п╬п╦я│п╨ п■п╡п╣я─п╣п╧/п⌡п╣я│я┌п╫п╦я├",
 	effect = function()
 			detect_doors()
 			detect_stairs()
@@ -1099,7 +1099,7 @@ PRAYER_DETECT_DOORS_STAIRS = add_prayer
 
 PRAYER_SLOW_POISON = add_prayer
 {
-	name = "Замедление Яда",
+	name = "п≈п╟п╪п╣п╢п╩п╣п╫п╦п╣ п╞п╢п╟",
 	effect = function()
 			set_poisoned(player.poisoned / 2)
 			return true
@@ -1108,7 +1108,7 @@ PRAYER_SLOW_POISON = add_prayer
 
 PRAYER_SCARE_MONSTER = add_prayer
 {
-	name = "Устрашение",
+	name = "пёя│я┌я─п╟я┬п╣п╫п╦п╣",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -1120,9 +1120,9 @@ PRAYER_SCARE_MONSTER = add_prayer
 
 PRAYER_PORTAL = add_prayer
 {
-	name = "Портал",
+	name = "п÷п╬я─я┌п╟п╩",
 	info = function()
-			return string.format(" расст %d", 3 * player.lev)
+			return string.format(" я─п╟я│я│я┌ %d", 3 * player.lev)
 		end,
 	effect = function()
 			teleport_player(3 * player.lev)
@@ -1132,9 +1132,9 @@ PRAYER_PORTAL = add_prayer
 
 PRAYER_CURE_SERIOUS_WOUNDS = add_prayer
 {
-	name = "Лечение Серьезных Ран",
+	name = "п⌡п╣я┤п╣п╫п╦п╣ п║п╣я─я▄п╣п╥п╫я▀я┘ п═п╟п╫",
 	info = function()
-			return " леч 4d10"
+			return " п╩п╣я┤ 4d10"
 		end,
 	effect = function()
 			hp_player(damroll(4, 10))
@@ -1145,9 +1145,9 @@ PRAYER_CURE_SERIOUS_WOUNDS = add_prayer
 
 PRAYER_CHANT = add_prayer
 {
-	name = "Пение",
+	name = "п÷п╣п╫п╦п╣",
 	info = function()
-			return " врем 24+d24"
+			return " п╡я─п╣п╪ 24+d24"
 		end,
 	effect = function()
 			set_blessed(player.blessed + randint(24) + 24)
@@ -1157,7 +1157,7 @@ PRAYER_CHANT = add_prayer
 
 PRAYER_SANCTUARY = add_prayer
 {
-	name = "Убежище",
+	name = "пёп╠п╣п╤п╦я┴п╣",
 	effect = function()
 			sleep_monsters_touch()
 			return true
@@ -1166,7 +1166,7 @@ PRAYER_SANCTUARY = add_prayer
 
 PRAYER_SATISFY_HUNGER = add_prayer
 {
-	name = "Удовлетворение Голода",
+	name = "пёп╢п╬п╡п╩п╣я┌п╡п╬я─п╣п╫п╦п╣ п⌠п╬п╩п╬п╢п╟",
 	effect = function()
 			set_food(PY_FOOD_MAX - 1)
 			return true
@@ -1175,7 +1175,7 @@ PRAYER_SATISFY_HUNGER = add_prayer
 
 PRAYER_REMOVE_CURSE = add_prayer
 {
-	name = "Снятие Проклятья",
+	name = "п║п╫я▐я┌п╦п╣ п÷я─п╬п╨п╩я▐я┌я▄я▐",
 	effect = function()
 			remove_curse()
 			return true
@@ -1184,9 +1184,9 @@ PRAYER_REMOVE_CURSE = add_prayer
 
 PRAYER_RESIST_HEAT_COLD = add_prayer
 {
-	name = "Сопротивление Теплу и Холоду",
+	name = "п║п╬п©я─п╬я┌п╦п╡п╩п╣п╫п╦п╣ п╒п╣п©п╩я┐ п╦ п╔п╬п╩п╬п╢я┐",
 	info = function()
-			return " врем 10+d10"
+			return " п╡я─п╣п╪ 10+d10"
 		end,
 	effect = function()
 			set_oppose_fire(player.oppose_fire + randint(10) + 10)
@@ -1197,7 +1197,7 @@ PRAYER_RESIST_HEAT_COLD = add_prayer
 
 PRAYER_NEUTRALIZE_POISON = add_prayer
 {
-	name = "Излечение Яда",
+	name = "п≤п╥п╩п╣я┤п╣п╫п╦п╣ п╞п╢п╟",
 	effect = function()
 			set_poisoned(0)
 			return true
@@ -1206,7 +1206,7 @@ PRAYER_NEUTRALIZE_POISON = add_prayer
 
 PRAYER_ORB_OF_DRAINING = add_prayer
 {
-	name = "Святой Огонь",
+	name = "п║п╡я▐я┌п╬п╧ п·пЁп╬п╫я▄",
 	info = function()
 			local div
 			if bitlib.bAnd(cp_ptr.flags, CF_BLESS_WEAPON) ~= 0 then
@@ -1239,9 +1239,9 @@ PRAYER_ORB_OF_DRAINING = add_prayer
 
 PRAYER_CURE_CRITICAL_WOUNDS = add_prayer
 {
-	name = "Лечение Критических Ран",
+	name = "п⌡п╣я┤п╣п╫п╦п╣ п я─п╦я┌п╦я┤п╣я│п╨п╦я┘ п═п╟п╫",
 	info = function()
-			return " леч 6d10"
+			return " п╩п╣я┤ 6d10"
 		end,
 	effect = function()
 			hp_player(damroll(6, 10))
@@ -1252,9 +1252,9 @@ PRAYER_CURE_CRITICAL_WOUNDS = add_prayer
 
 PRAYER_SENSE_INVISIBLE = add_prayer
 {
-	name = "Ощутить Невидимое",
+	name = "п·я┴я┐я┌п╦я┌я▄ п²п╣п╡п╦п╢п╦п╪п╬п╣",
 	info = function()
-			return " врем 24+d24"
+			return " п╡я─п╣п╪ 24+d24"
 		end,
 	effect = function()
 			set_tim_invis(player.tim_invis + randint(24) + 24)
@@ -1264,9 +1264,9 @@ PRAYER_SENSE_INVISIBLE = add_prayer
 
 PRAYER_PROTECTION_FROM_EVIL = add_prayer
 {
-	name = "Защита от Зла",
+	name = "п≈п╟я┴п╦я┌п╟ п╬я┌ п≈п╩п╟",
 	info = function()
-			return string.format(" врем %d+d25", 3 * player.lev)
+			return string.format(" п╡я─п╣п╪ %d+d25", 3 * player.lev)
 		end,
 	effect = function()
 			set_protevil(player.protevil + randint(25) + 3 * player.lev)
@@ -1276,7 +1276,7 @@ PRAYER_PROTECTION_FROM_EVIL = add_prayer
 
 PRAYER_EARTHQUAKE = add_prayer
 {
-	name = "Землетрясение",
+	name = "п≈п╣п╪п╩п╣я┌я─я▐я│п╣п╫п╦п╣",
 	effect = function()
 			earthquake(player.py, player.px, 10)
 			return true
@@ -1285,7 +1285,7 @@ PRAYER_EARTHQUAKE = add_prayer
 
 PRAYER_SENSE_SURROUNDINGS = add_prayer
 {
-	name = "Ощутить Окрестности",
+	name = "п·я┴я┐я┌п╦я┌я▄ п·п╨я─п╣я│я┌п╫п╬я│я┌п╦",
 	effect = function()
 			map_area()
 			return true
@@ -1294,9 +1294,9 @@ PRAYER_SENSE_SURROUNDINGS = add_prayer
 
 PRAYER_CURE_MORTAL_WOUNDS = add_prayer
 {
-	name = "Лечение Смертельных Ран",
+	name = "п⌡п╣я┤п╣п╫п╦п╣ п║п╪п╣я─я┌п╣п╩я▄п╫я▀я┘ п═п╟п╫",
 	info = function()
-			return " леч 8d10"
+			return " п╩п╣я┤ 8d10"
 		end,
 	effect = function()
 			hp_player(damroll(8, 10))
@@ -1308,7 +1308,7 @@ PRAYER_CURE_MORTAL_WOUNDS = add_prayer
 
 PRAYER_TURN_UNDEAD = add_prayer
 {
-	name = "Изгнание Мертвецов",
+	name = "п≤п╥пЁп╫п╟п╫п╦п╣ п°п╣я─я┌п╡п╣я├п╬п╡",
 	effect = function()
 			turn_undead()
 			return true
@@ -1317,9 +1317,9 @@ PRAYER_TURN_UNDEAD = add_prayer
 
 PRAYER_PRAYER = add_prayer
 {
-	name = "Молитва",
+	name = "п°п╬п╩п╦я┌п╡п╟",
 	info = function()
-			return " врем 48+d48"
+			return " п╡я─п╣п╪ 48+d48"
 		end,
 	effect = function()
 			set_blessed(player.blessed + randint(48) + 48)
@@ -1329,9 +1329,9 @@ PRAYER_PRAYER = add_prayer
 
 PRAYER_DISPEL_UNDEAD = add_prayer
 {
-	name = "Уничтожение Мертвецов",
+	name = "пёп╫п╦я┤я┌п╬п╤п╣п╫п╦п╣ п°п╣я─я┌п╡п╣я├п╬п╡",
 	info = function()
-			return string.format(" ур d%d", 3 * player.lev)
+			return string.format(" я┐я─ d%d", 3 * player.lev)
 		end,
 	effect = function()
 			dispel_undead(randint(3 * player.lev))
@@ -1341,9 +1341,9 @@ PRAYER_DISPEL_UNDEAD = add_prayer
 
 PRAYER_HEAL = add_prayer
 {
-	name = "Исцеление",
+	name = "п≤я│я├п╣п╩п╣п╫п╦п╣",
 	info = function()
-			return " леч 300"
+			return " п╩п╣я┤ 300"
 		end,
 	effect = function()
 			hp_player(300)
@@ -1355,9 +1355,9 @@ PRAYER_HEAL = add_prayer
 
 PRAYER_DISPEL_EVIL = add_prayer
 {
-	name = "Уничтожени Зла",
+	name = "пёп╫п╦я┤я┌п╬п╤п╣п╫п╦ п≈п╩п╟",
 	info = function()
-			return string.format(" ур d%d", 3 * player.lev)
+			return string.format(" я┐я─ d%d", 3 * player.lev)
 		end,
 	effect = function()
 			dispel_evil(randint(3 * player.lev))
@@ -1367,7 +1367,7 @@ PRAYER_DISPEL_EVIL = add_prayer
 
 PRAYER_GLYPH_OF_WARDING = add_prayer
 {
-	name = "Глиф Защиты",
+	name = "п⌠п╩п╦я└ п≈п╟я┴п╦я┌я▀",
 	effect = function()
 			warding_glyph()
 			return true
@@ -1376,9 +1376,9 @@ PRAYER_GLYPH_OF_WARDING = add_prayer
 
 PRAYER_HOLY_WORD = add_prayer
 {
-	name = "Священное Слово",
+	name = "п║п╡я▐я┴п╣п╫п╫п╬п╣ п║п╩п╬п╡п╬",
 	info = function()
-			return " леч 1000"
+			return " п╩п╣я┤ 1000"
 		end,
 	effect = function()
 			dispel_evil(randint(player.lev * 4))
@@ -1393,7 +1393,7 @@ PRAYER_HOLY_WORD = add_prayer
 
 PRAYER_DETECT_MONSTERS = add_prayer
 {
-	name = "Поиск Монстров",
+	name = "п÷п╬п╦я│п╨ п°п╬п╫я│я┌я─п╬п╡",
 	effect = function()
 			detect_monsters_normal()
 			return true
@@ -1402,7 +1402,7 @@ PRAYER_DETECT_MONSTERS = add_prayer
 
 PRAYER_DETECTION = add_prayer
 {
-	name = "Поиск",
+	name = "п÷п╬п╦я│п╨",
 	effect = function()
 			detect_all()
 			return true
@@ -1411,7 +1411,7 @@ PRAYER_DETECTION = add_prayer
 
 PRAYER_PERCEPTION = add_prayer
 {
-	name = "Ощущение",
+	name = "п·я┴я┐я┴п╣п╫п╦п╣",
 	effect = function()
 			return ident_spell()
 		end,
@@ -1419,7 +1419,7 @@ PRAYER_PERCEPTION = add_prayer
 
 PRAYER_PROBING = add_prayer
 {
-	name = "Зондирование",
+	name = "п≈п╬п╫п╢п╦я─п╬п╡п╟п╫п╦п╣",
 	effect = function()
 			probing()
 			return true
@@ -1428,7 +1428,7 @@ PRAYER_PROBING = add_prayer
 
 PRAYER_CLAIRVOYANCE = add_prayer
 {
-	name = "Ясновидение",
+	name = "п╞я│п╫п╬п╡п╦п╢п╣п╫п╦п╣",
 	effect = function()
 			wiz_lite()
 			return true
@@ -1437,9 +1437,9 @@ PRAYER_CLAIRVOYANCE = add_prayer
 
 PRAYER_CURE_SERIOUS_WOUNDS2 = add_prayer
 {
-	name = "Лечение Серьезных Ран",
+	name = "п⌡п╣я┤п╣п╫п╦п╣ п║п╣я─я▄п╣п╥п╫я▀я┘ п═п╟п╫",
 	info = function()
-			return " леч 4d10"
+			return " п╩п╣я┤ 4d10"
 		end,
 	effect = function()
 			hp_player(damroll(4, 10))
@@ -1450,9 +1450,9 @@ PRAYER_CURE_SERIOUS_WOUNDS2 = add_prayer
 
 PRAYER_CURE_MORTAL_WOUNDS2 = add_prayer
 {
-	name = "Лечение Смертельных Ран",
+	name = "п⌡п╣я┤п╣п╫п╦п╣ п║п╪п╣я─я┌п╣п╩я▄п╫я▀я┘ п═п╟п╫",
 	info = function()
-			return " леч 8d10"
+			return " п╩п╣я┤ 8d10"
 		end,
 	effect = function()
 			hp_player(damroll(8, 10))
@@ -1464,9 +1464,9 @@ PRAYER_CURE_MORTAL_WOUNDS2 = add_prayer
 
 PRAYER_HEALING = add_prayer
 {
-	name = "Полное Исцеление",
+	name = "п÷п╬п╩п╫п╬п╣ п≤я│я├п╣п╩п╣п╫п╦п╣",
 	info = function()
-			return " леч 2000"
+			return " п╩п╣я┤ 2000"
 		end,
 	effect = function()
 			hp_player(2000)
@@ -1478,7 +1478,7 @@ PRAYER_HEALING = add_prayer
 
 PRAYER_RESTORATION = add_prayer
 {
-	name = "Восстановление",
+	name = "п▓п╬я│я│я┌п╟п╫п╬п╡п╩п╣п╫п╦п╣",
 	effect = function()
 			do_res_stat(A_STR)
 			do_res_stat(A_INT)
@@ -1492,7 +1492,7 @@ PRAYER_RESTORATION = add_prayer
 
 PRAYER_REMEMBRANCE = add_prayer
 {
-	name = "Воспоминание",
+	name = "п▓п╬я│п©п╬п╪п╦п╫п╟п╫п╦п╣",
 	effect = function()
 			restore_level()
 			return true
@@ -1501,9 +1501,9 @@ PRAYER_REMEMBRANCE = add_prayer
 
 PRAYER_DISPEL_UNDEAD2 = add_prayer
 {
-	name = "Уничтожение Мертвецов",
+	name = "пёп╫п╦я┤я┌п╬п╤п╣п╫п╦п╣ п°п╣я─я┌п╡п╣я├п╬п╡",
 	info = function()
-			return string.format(" ур d%d", 4 * player.lev)
+			return string.format(" я┐я─ d%d", 4 * player.lev)
 		end,
 	effect = function()
 			dispel_undead(randint(4 * player.lev))
@@ -1513,9 +1513,9 @@ PRAYER_DISPEL_UNDEAD2 = add_prayer
 
 PRAYER_DISPEL_EVIL2 = add_prayer
 {
-	name = "Уничтожение Зла",
+	name = "пёп╫п╦я┤я┌п╬п╤п╣п╫п╦п╣ п≈п╩п╟",
 	info = function()
-			return string.format(" ур d%d", 4 * player.lev)
+			return string.format(" я┐я─ d%d", 4 * player.lev)
 		end,
 	effect = function()
 			dispel_evil(randint(4 * player.lev))
@@ -1525,10 +1525,10 @@ PRAYER_DISPEL_EVIL2 = add_prayer
 
 PRAYER_BANISH_EVIL = add_prayer
 {
-	name = "Изгнание Зла",
+	name = "п≤п╥пЁп╫п╟п╫п╦п╣ п≈п╩п╟",
 	effect = function()
 			if banish_evil(100) then
-				msg_print("Сила вашего бога изгоняет зло!")
+				msg_print("п║п╦п╩п╟ п╡п╟я┬п╣пЁп╬ п╠п╬пЁп╟ п╦п╥пЁп╬п╫я▐п╣я┌ п╥п╩п╬!")
 			end
 			return true
 		end,
@@ -1536,7 +1536,7 @@ PRAYER_BANISH_EVIL = add_prayer
 
 PRAYER_WORD_OF_DESTRUCTION = add_prayer
 {
-	name = "Слово Разрушения",
+	name = "п║п╩п╬п╡п╬ п═п╟п╥я─я┐я┬п╣п╫п╦я▐",
 	effect = function()
 			destroy_area(player.py, player.px, 15, true)
 			return true
@@ -1545,9 +1545,9 @@ PRAYER_WORD_OF_DESTRUCTION = add_prayer
 
 PRAYER_ANNIHILATION = add_prayer
 {
-	name = "Аннигиляция",
+	name = "п░п╫п╫п╦пЁп╦п╩я▐я├п╦я▐",
 	info = function()
-			return " ур 200"
+			return " я┐я─ 200"
 		end,
 	effect = function()
 			local success, dir = get_aim_dir()
@@ -1560,7 +1560,7 @@ PRAYER_ANNIHILATION = add_prayer
 
 PRAYER_UNBARRING_WAYS = add_prayer
 {
-	name = "Открытие Путей",
+	name = "п·я┌п╨я─я▀я┌п╦п╣ п÷я┐я┌п╣п╧",
 	effect = function()
 			destroy_doors_touch()
 			return true
@@ -1569,7 +1569,7 @@ PRAYER_UNBARRING_WAYS = add_prayer
 
 PRAYER_RECHARGING = add_prayer
 {
-	name = "Перезарядка",
+	name = "п÷п╣я─п╣п╥п╟я─я▐п╢п╨п╟",
 	effect = function()
 			return recharge(15)
 		end,
@@ -1577,7 +1577,7 @@ PRAYER_RECHARGING = add_prayer
 
 PRAYER_DISPEL_CURSE = add_prayer
 {
-	name = "Уничтожение Проклятья",
+	name = "пёп╫п╦я┤я┌п╬п╤п╣п╫п╦п╣ п÷я─п╬п╨п╩я▐я┌я▄я▐",
 	effect = function()
 			remove_all_curse()
 			return true
@@ -1586,7 +1586,7 @@ PRAYER_DISPEL_CURSE = add_prayer
 
 PRAYER_ENCHANT_WEAPON = add_prayer
 {
-	name = "Зачарование Оружия",
+	name = "п≈п╟я┤п╟я─п╬п╡п╟п╫п╦п╣ п·я─я┐п╤п╦я▐",
 	effect = function()
 			return enchant_spell(rand_int(4) + 1, rand_int(4) + 1, 0)
 		end,
@@ -1594,7 +1594,7 @@ PRAYER_ENCHANT_WEAPON = add_prayer
 
 PRAYER_ENCHANT_ARMOUR = add_prayer
 {
-	name = "Зачарование Доспехов",
+	name = "п≈п╟я┤п╟я─п╬п╡п╟п╫п╦п╣ п■п╬я│п©п╣я┘п╬п╡",
 	effect = function()
 			return enchant_spell(0, 0, rand_int(3) + 2)
 		end,
@@ -1602,7 +1602,7 @@ PRAYER_ENCHANT_ARMOUR = add_prayer
 
 PRAYER_ELEMENTAL_BRAND = add_prayer
 {
-	name = "Клеймо Элементов",
+	name = "п п╩п╣п╧п╪п╬ п╜п╩п╣п╪п╣п╫я┌п╬п╡",
 	effect = function()
 			brand_weapon()
 			return true
@@ -1611,9 +1611,9 @@ PRAYER_ELEMENTAL_BRAND = add_prayer
 
 PRAYER_BLINK = add_prayer
 {
-	name = "Скачок",
+	name = "п║п╨п╟я┤п╬п╨",
 	info = function()
-			return " расст 10"
+			return " я─п╟я│я│я┌ 10"
 		end,
 	effect = function()
 			teleport_player(10)
@@ -1623,9 +1623,9 @@ PRAYER_BLINK = add_prayer
 
 PRAYER_TELEPORT_SELF = add_prayer
 {
-	name = "Телепортация",
+	name = "п╒п╣п╩п╣п©п╬я─я┌п╟я├п╦я▐",
 	info = function()
-			return string.format(" расст %d", 8 * player.lev)
+			return string.format(" я─п╟я│я│я┌ %d", 8 * player.lev)
 		end,
 	effect = function()
 			teleport_player(player.lev * 8)
@@ -1635,7 +1635,7 @@ PRAYER_TELEPORT_SELF = add_prayer
 
 PRAYER_TELEPORT_OTHER = add_prayer
 {
-	name = "Телепортация Монстра",
+	name = "п╒п╣п╩п╣п©п╬я─я┌п╟я├п╦я▐ п°п╬п╫я│я┌я─п╟",
 	effect = function()
 			local success, dir = get_aim_dir()
 			if not success then return false end
@@ -1647,7 +1647,7 @@ PRAYER_TELEPORT_OTHER = add_prayer
 
 PRAYER_TELEPORT_LEVEL = add_prayer
 {
-	name = "Телепортация Уровня",
+	name = "п╒п╣п╩п╣п©п╬я─я┌п╟я├п╦я▐ пёя─п╬п╡п╫я▐",
 	effect = function()
 			teleport_player_level()
 			return true
@@ -1656,7 +1656,7 @@ PRAYER_TELEPORT_LEVEL = add_prayer
 
 PRAYER_WORD_OF_RECALL = add_prayer
 {
-	name = "Слово Возвращения",
+	name = "п║п╩п╬п╡п╬ п▓п╬п╥п╡я─п╟я┴п╣п╫п╦я▐",
 	effect = function()
 			set_recall()
 			return true
@@ -1665,9 +1665,9 @@ PRAYER_WORD_OF_RECALL = add_prayer
 
 PRAYER_ALTER_REALITY = add_prayer
 {
-	name = "Изменение Реальности",
+	name = "п≤п╥п╪п╣п╫п╣п╫п╦п╣ п═п╣п╟п╩я▄п╫п╬я│я┌п╦",
 	effect = function()
-			msg_print("Мир меняется!")
+			msg_print("п°п╦я─ п╪п╣п╫я▐п╣я┌я│я▐!")
 			player.leaving = true
 			return true
 		end,

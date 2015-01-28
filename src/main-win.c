@@ -698,7 +698,7 @@ static void show_win_error(void)
 	              MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
 	              (LPTSTR) &lpMsgBuf, 0, NULL);
 
-	MessageBox(NULL, lpMsgBuf, "Ошибка", MB_OK | MB_ICONINFORMATION);
+	MessageBox(NULL, lpMsgBuf, "п·я┬п╦п╠п╨п╟", MB_OK | MB_ICONINFORMATION);
 
 	LocalFree(lpMsgBuf);
 }
@@ -863,7 +863,7 @@ static void validate_file(cptr s)
 	/* Verify or fail */
 	if (!check_file(s))
 	{
-		quit_fmt("Не найден необходимый файл:\n%s", s);
+		quit_fmt("п²п╣ п╫п╟п╧п╢п╣п╫ п╫п╣п╬п╠я┘п╬п╢п╦п╪я▀п╧ я└п╟п╧п╩:\n%s", s);
 	}
 }
 
@@ -876,7 +876,7 @@ static void validate_dir(cptr s)
 	/* Verify or fail */
 	if (!check_dir(s))
 	{
-		quit_fmt("Не найдена необходимая папка:\n%s", s);
+		quit_fmt("п²п╣ п╫п╟п╧п╢п╣п╫п╟ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╟я▐ п©п╟п©п╨п╟:\n%s", s);
 	}
 }
 
@@ -1257,7 +1257,7 @@ static int new_palette(void)
 		if ((nEntries == 0) || (nEntries > 220))
 		{
 			/* Warn the user */
-			plog("Для полноценной работы необходима глубина цвета 16 или 24 бит.");
+			plog("п■п╩я▐ п©п╬п╩п╫п╬я├п╣п╫п╫п╬п╧ я─п╟п╠п╬я┌я▀ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╟ пЁп╩я┐п╠п╦п╫п╟ я├п╡п╣я┌п╟ 16 п╦п╩п╦ 24 п╠п╦я┌.");
 
 			/* Cleanup */
 			free(lppe);
@@ -1320,7 +1320,7 @@ static int new_palette(void)
 
 	/* Create a new palette, or fail */
 	hNewPal = CreatePalette(pLogPal);
-	if (!hNewPal) quit("Не удалось создать палитру!");
+	if (!hNewPal) quit("п²п╣ я┐п╢п╟п╩п╬я│я▄ я│п╬п╥п╢п╟я┌я▄ п©п╟п╩п╦я┌я─я┐!");
 
 	/* Free the palette */
 	free(pLogPal);
@@ -1333,7 +1333,7 @@ static int new_palette(void)
 	SelectPalette(hdc, hNewPal, 0);
 	i = RealizePalette(hdc);
 	ReleaseDC(td->w, hdc);
-	if (i == 0) quit("Не удалось реализовать палитру!");
+	if (i == 0) quit("п²п╣ я┐п╢п╟п╩п╬я│я▄ я─п╣п╟п╩п╦п╥п╬п╡п╟я┌я▄ п©п╟п╩п╦я┌я─я┐!");
 
 	/* Sub-windows */
 	for (i = 1; i < MAX_TERM_DATA; i++)
@@ -1409,7 +1409,7 @@ static bool init_graphics(void)
 		/* Load the bitmap or quit */
 		if (!ReadDIB(data[0].w, buf, &infGraph))
 		{
-			plog_fmt("Не удалось прочитать файл '%s'", name);
+			plog_fmt("п²п╣ я┐п╢п╟п╩п╬я│я▄ п©я─п╬я┤п╦я┌п╟я┌я▄ я└п╟п╧п╩ '%s'", name);
 			return (FALSE);
 		}
 
@@ -1425,7 +1425,7 @@ static bool init_graphics(void)
 			/* Load the bitmap or quit */
 			if (!ReadDIB(data[0].w, buf, &infMask))
 			{
-				plog_fmt("Не удалось прочитать файл '%s'", buf);
+				plog_fmt("п²п╣ я┐п╢п╟п╩п╬я│я▄ п©я─п╬я┤п╦я┌п╟я┌я▄ я└п╟п╧п╩ '%s'", buf);
 				return (FALSE);
 			}
 		}
@@ -1436,7 +1436,7 @@ static bool init_graphics(void)
 			/* Free bitmap XXX XXX XXX */
 
 			/* Oops */
-			plog("Не удалось включить палитру!");
+			plog("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╡п╨п╩я▌я┤п╦я┌я▄ п©п╟п╩п╦я┌я─я┐!");
 			return (FALSE);
 		}
 
@@ -1620,7 +1620,7 @@ static void term_change_font(term_data *td)
 	memset(&ofn, 0, sizeof(ofn));
 	ofn.lStructSize = sizeof(ofn);
 	ofn.hwndOwner = data[0].w;
-	ofn.lpstrFilter = "Файлы шрифтов для Angband (*.fon)\0*.fon\0";
+	ofn.lpstrFilter = "п╓п╟п╧п╩я▀ я┬я─п╦я└я┌п╬п╡ п╢п╩я▐ Angband (*.fon)\0*.fon\0";
 	ofn.nFilterIndex = 1;
 	ofn.lpstrFile = tmp;
 	ofn.nMaxFile = 128;
@@ -1814,7 +1814,7 @@ static errr Term_xtra_win_react(void)
 		if (arg_sound && !init_sound())
 		{
 			/* Warning */
-			plog("Не удалось инициализировать звук!");
+			plog("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╦п╫п╦я├п╦п╟п╩п╦п╥п╦я─п╬п╡п╟я┌я▄ п╥п╡я┐п╨!");
 
 			/* Cannot enable */
 			arg_sound = FALSE;
@@ -1843,7 +1843,7 @@ static errr Term_xtra_win_react(void)
 		if (arg_graphics && !init_graphics())
 		{
 			/* Warning */
-			plog("Не удалось инициализировать графику!");
+			plog("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╦п╫п╦я├п╦п╟п╩п╦п╥п╦я─п╬п╡п╟я┌я▄ пЁя─п╟я└п╦п╨я┐!");
 
 			/* Cannot enable */
 			arg_graphics = GRAPHICS_NONE;
@@ -2315,16 +2315,16 @@ static errr Term_text_win(int x, int y, int n, byte a, cptr s)
 		/* Dump each character */
 		for (i = 0; i < n; i++)
 		{
-			/* Мега-Хак -- перекодировка CP1251 в KOI8-R на лету */
+			/* п°п╣пЁп╟-п╔п╟п╨ -- п©п╣я─п╣п╨п╬п╢п╦я─п╬п╡п╨п╟ CP1251 п╡ KOI8-R п╫п╟ п╩п╣я┌я┐ */
 			cptr win2koi[] = {
-				0xe1, 0xe2, 0xf7, 0xe7, 0xe4, 0xe5, 0xf6, 0xfa,		/* А..З */
-				0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, 0xef, 0xf0,		/* И..П */
-				0xf2, 0xf3, 0xf4, 0xf5, 0xe6, 0xe8, 0xe3, 0xfe,		/* Р..Ч */
-				0xfb, 0xfd, 0xff, 0xf9, 0xf8, 0xfc, 0xe0, 0xf1,		/* Ш..Я */
-				0xc1, 0xc2, 0xd7, 0xc7, 0xc4, 0xc5, 0xd6, 0xda,		/* а..з */
-				0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 0xd0,		/* и..п */
-				0xd2, 0xd3, 0xd4, 0xd5, 0xc6, 0xc8, 0xc3, 0xde,		/* р..ч */
-				0xdb, 0xdd, 0xdf, 0xd9, 0xd8, 0xdc, 0xc0, 0xd1		/* щ..я */
+				0xe1, 0xe2, 0xf7, 0xe7, 0xe4, 0xe5, 0xf6, 0xfa,		/* п░..п≈ */
+				0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, 0xef, 0xf0,		/* п≤..п÷ */
+				0xf2, 0xf3, 0xf4, 0xf5, 0xe6, 0xe8, 0xe3, 0xfe,		/* п═..п╖ */
+				0xfb, 0xfd, 0xff, 0xf9, 0xf8, 0xfc, 0xe0, 0xf1,		/* п╗..п╞ */
+				0xc1, 0xc2, 0xd7, 0xc7, 0xc4, 0xc5, 0xd6, 0xda,		/* п╟..п╥ */
+				0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 0xd0,		/* п╦..п© */
+				0xd2, 0xd3, 0xd4, 0xd5, 0xc6, 0xc8, 0xc3, 0xde,		/* я─..я┤ */
+				0xdb, 0xdd, 0xdf, 0xd9, 0xd8, 0xdc, 0xc0, 0xd1		/* я┴..я▐ */
 			};
 			
 			byte str[2] = "";
@@ -2815,7 +2815,7 @@ static void init_windows(void)
 		                       td->size_wid, td->size_hgt,
 		                       HWND_DESKTOP, NULL, hInstance, NULL);
 		my_td = NULL;
-		if (!td->w) quit("Не удалось создать подокно");
+		if (!td->w) quit("п²п╣ я┐п╢п╟п╩п╬я│я▄ я│п╬п╥п╢п╟я┌я▄ п©п╬п╢п╬п╨п╫п╬");
 
 		if (td->visible)
 		{
@@ -2849,7 +2849,7 @@ static void init_windows(void)
 	                       td->size_wid, td->size_hgt,
 	                       HWND_DESKTOP, NULL, hInstance, NULL);
 	my_td = NULL;
-	if (!td->w) quit_fmt("Не удалось создать окно %s", VERSION_NAME);
+	if (!td->w) quit_fmt("п²п╣ я┐п╢п╟п╩п╬я│я▄ я│п╬п╥п╢п╟я┌я▄ п╬п╨п╫п╬ %s", VERSION_NAME);
 
 	term_data_link(td);
 	term_screen = &td->t;
@@ -3341,8 +3341,8 @@ static void display_help(cptr filename)
 	}
 	else
 	{
-		plog_fmt("Не удалось найти файл справки: %s", tmp);
-		plog("Используйте встроенную справку игры (нажмите \"?\").");
+		plog_fmt("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╫п╟п╧я┌п╦ я└п╟п╧п╩ я│п©я─п╟п╡п╨п╦: %s", tmp);
+		plog("п≤я│п©п╬п╩я▄п╥я┐п╧я┌п╣ п╡я│я┌я─п╬п╣п╫п╫я┐я▌ я│п©я─п╟п╡п╨я┐ п╦пЁя─я▀ (п╫п╟п╤п╪п╦я┌п╣ \"?\").");
 	}
 }
 
@@ -3366,11 +3366,11 @@ static void process_menus(WORD wCmd)
 		{
 			if (!initialized)
 			{
-				plog("Подождите...");
+				plog("п÷п╬п╢п╬п╤п╢п╦я┌п╣...");
 			}
 			else if (game_in_progress)
 			{
-				plog("Игра уже идет!");
+				plog("п≤пЁя─п╟ я┐п╤п╣ п╦п╢п╣я┌!");
 			}
 			else
 			{
@@ -3387,18 +3387,18 @@ static void process_menus(WORD wCmd)
 		{
 			if (!initialized)
 			{
-				plog("Подождите...");
+				plog("п÷п╬п╢п╬п╤п╢п╦я┌п╣...");
 			}
 			else if (game_in_progress)
 			{
-				plog("Игра уже идет!");
+				plog("п≤пЁя─п╟ я┐п╤п╣ п╦п╢п╣я┌!");
 			}
 			else
 			{
 				memset(&ofn, 0, sizeof(ofn));
 				ofn.lStructSize = sizeof(ofn);
 				ofn.hwndOwner = data[0].w;
-				ofn.lpstrFilter = "Сохраненные игры (*.)\0*\0";
+				ofn.lpstrFilter = "п║п╬я┘я─п╟п╫п╣п╫п╫я▀п╣ п╦пЁя─я▀ (*.)\0*\0";
 				ofn.nFilterIndex = 1;
 				ofn.lpstrFile = savefile;
 				ofn.nMaxFile = 1024;
@@ -3436,7 +3436,7 @@ static void process_menus(WORD wCmd)
 			else
 			{
 				/* Paranoia */
-				plog("Сейчас это сделать нельзя.");
+				plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 			}
 			break;
 		}
@@ -3449,7 +3449,7 @@ static void process_menus(WORD wCmd)
 				/* Paranoia */
 				if (!inkey_flag)
 				{
-					plog("Сейчас это сделать нельзя.");
+					plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 					break;
 				}
 
@@ -3469,7 +3469,7 @@ static void process_menus(WORD wCmd)
 
 		case IDM_WINDOW_VIS_0:
 		{
-			plog("Нельзя отключить это окно!");
+			plog("п²п╣п╩я▄п╥я▐ п╬я┌п╨п╩я▌я┤п╦я┌я▄ я█я┌п╬ п╬п╨п╫п╬!");
 
 			break;
 		}
@@ -3655,7 +3655,7 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
-				plog("Сейчас это сделать нельзя.");
+				plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 				break;
 			}
 
@@ -3679,7 +3679,7 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
-				plog("Сейчас это сделать нельзя.");
+				plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 				break;
 			}
 
@@ -3703,7 +3703,7 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
-				plog("Сейчас это сделать нельзя.");
+				plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 				break;
 			}
 
@@ -3727,7 +3727,7 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
-				plog("Сейчас это сделать нельзя.");
+				plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 				break;
 			}
 
@@ -3751,7 +3751,7 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
-				plog("Сейчас это сделать нельзя.");
+				plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 				break;
 			}
 
@@ -3769,7 +3769,7 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
-				plog("Сейчас это сделать нельзя.");
+				plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 				break;
 			}
 
@@ -3851,7 +3851,7 @@ static void process_menus(WORD wCmd)
 				}
 				else
 				{
-					plog("Не удалось создать окно заставки");
+					plog("п²п╣ я┐п╢п╟п╩п╬я│я▄ я│п╬п╥п╢п╟я┌я▄ п╬п╨п╫п╬ п╥п╟я│я┌п╟п╡п╨п╦");
 				}
 			}
 
@@ -3879,7 +3879,7 @@ static void process_menus(WORD wCmd)
 			/* Paranoia */
 			if (!inkey_flag || !initialized)
 			{
-				plog("Сейчас это сделать нельзя.");
+				plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 				break;
 			}
 
@@ -4115,7 +4115,7 @@ static LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
 			{
 				if (!inkey_flag)
 				{
-					plog("Сейчас это сделать нельзя.");
+					plog("п║п╣п╧я┤п╟я│ я█я┌п╬ я│п╢п╣п╩п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 					return 0;
 				}
 
@@ -4644,7 +4644,7 @@ static void hack_plog(cptr str)
 	/* Give a warning */
 	if (str)
 	{
-		MessageBox(NULL, str, "Информация",
+		MessageBox(NULL, str, "п≤п╫я└п╬я─п╪п╟я├п╦я▐",
 		           MB_ICONEXCLAMATION | MB_OK);
 	}
 }
@@ -4658,7 +4658,7 @@ static void hack_quit(cptr str)
 	/* Give a warning */
 	if (str)
 	{
-		MessageBox(NULL, str, "Ошибка",
+		MessageBox(NULL, str, "п·я┬п╦п╠п╨п╟",
 		           MB_ICONEXCLAMATION | MB_OK | MB_ICONSTOP);
 	}
 
@@ -4693,7 +4693,7 @@ static void hook_plog(cptr str)
 	/* Warning */
 	if (str)
 	{
-		MessageBox(data[0].w, str, "Информация",
+		MessageBox(data[0].w, str, "п≤п╫я└п╬я─п╪п╟я├п╦я▐",
 		           MB_ICONEXCLAMATION | MB_OK);
 	}
 }
@@ -4718,7 +4718,7 @@ static void hook_quit(cptr str)
 		/* Give a warning */
 		if (str)
 		{
-			MessageBox(data[0].w, str, "Ошибка",
+			MessageBox(data[0].w, str, "п·я┬п╦п╠п╨п╟",
 			           MB_ICONEXCLAMATION | MB_OK | MB_ICONSTOP);
 		}
 
@@ -5098,7 +5098,7 @@ int FAR PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
 	check_for_save_file(lpCmdLine);
 
 	/* Prompt the user */
-	prt("[Выберите 'Новая' или 'Открыть' из меню 'Игра']", 23, 20);
+	prt("[п▓я▀п╠п╣я─п╦я┌п╣ 'п²п╬п╡п╟я▐' п╦п╩п╦ 'п·я┌п╨я─я▀я┌я▄' п╦п╥ п╪п╣п╫я▌ 'п≤пЁя─п╟']", 23, 20);
 	Term_fresh();
 
 	/* Process messages forever */

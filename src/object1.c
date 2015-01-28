@@ -831,7 +831,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			/* Color the object */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
 			if (aware) append_name = TRUE;
-			basenm = (flavor ? "& # амулет$N2A" : "& амулет$N2A");
+			basenm = (flavor ? "& # п╟п╪я┐п╩п╣я┌$N2A" : "& п╟п╪я┐п╩п╣я┌$N2A");
 
 			break;
 		}
@@ -845,7 +845,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			/* Color the object */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
 			if (aware) append_name = TRUE;
-			basenm = (flavor ? "& # кол\\ь|ец*о$N2D" : "& кол\\ь|ец*о$N2D");
+			basenm = (flavor ? "& # п╨п╬п╩\\я▄|п╣я├*п╬$N2D" : "& п╨п╬п╩\\я▄|п╣я├*п╬$N2D");
 
 			break;
 		}
@@ -856,7 +856,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			/* Color the object */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
 			if (aware) append_name = TRUE;
-			basenm = (flavor ? "& # посох$N2A" : "& посох$N2A");
+			basenm = (flavor ? "& # п©п╬я│п╬я┘$N2A" : "& п©п╬я│п╬я┘$N2A");
 
 			break;
 		}
@@ -867,7 +867,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			/* Color the object */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
 			if (aware) append_name = TRUE;
-			basenm = (flavor ? "& # палоч|ек$N1M" : "& палоч|ек$N1M");
+			basenm = (flavor ? "& # п©п╟п╩п╬я┤|п╣п╨$N1M" : "& п©п╟п╩п╬я┤|п╣п╨$N1M");
 
 			break;
 		}
@@ -878,7 +878,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			/* Color the object */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
 			if (aware) append_name = TRUE;
-			basenm = (flavor ? "& # жезл$N2A" : "& жезл$N2A");
+			basenm = (flavor ? "& # п╤п╣п╥п╩$N2A" : "& п╤п╣п╥п╩$N2A");
 
 			break;
 		}
@@ -889,7 +889,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			/* Color the object */
 			modstr = scroll_adj[o_ptr->sval];
 			if (aware) append_name = TRUE;
-			basenm = (flavor ? "& свит*ок$N2A \"#\"" : "& свит*ок$N2A");
+			basenm = (flavor ? "& я│п╡п╦я┌*п╬п╨$N2A \"#\"" : "& я│п╡п╦я┌*п╬п╨$N2A");
 
 			break;
 		}
@@ -900,7 +900,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			/* Color the object */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
 			if (aware) append_name = TRUE;
-			basenm = (flavor ? "& # напит*ок$N2A" : "& напит*ок$N2A");
+			basenm = (flavor ? "& # п╫п╟п©п╦я┌*п╬п╨$N2A" : "& п╫п╟п©п╦я┌*п╬п╨$N2A");
 
 			break;
 		}
@@ -914,7 +914,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			/* Color the object */
 			modstr = flavor_text + flavor_info[k_ptr->flavor].text;
 			if (aware) append_name = TRUE;
-			basenm = (flavor ? "& # гриб$N2A" : "& гриб$N2A");
+			basenm = (flavor ? "& # пЁя─п╦п╠$N2A" : "& пЁя─п╦п╠$N2A");
 
 			break;
 		}
@@ -923,7 +923,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		case TV_MAGIC_BOOK:
 		{
 			modstr = basenm;
-			basenm = "& книг$N1M заклинаний #";
+			basenm = "& п╨п╫п╦пЁ$N1M п╥п╟п╨п╩п╦п╫п╟п╫п╦п╧ #";
 			break;
 		}
 
@@ -931,7 +931,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		case TV_PRAYER_BOOK:
 		{
 			modstr = basenm;
-			basenm = "& молитвенник$N2A #";
+			basenm = "& п╪п╬п╩п╦я┌п╡п╣п╫п╫п╦п╨$N2A #";
 			break;
 		}
 
@@ -945,7 +945,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		/* Hack -- Default -- Used in the "inventory" routine */
 		default:
 		{
-			my_strcpy(buf, "(пусто)", max);
+			my_strcpy(buf, "(п©я┐я│я┌п╬)", max);
 			return ROD_N;
 		}
 	}
@@ -975,7 +975,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		/* Hack -- None left */
 		else if (o_ptr->number <= 0)
 		{
-			object_desc_str_macro(t, "нет больше ");
+			object_desc_str_macro(t, "п╫п╣я┌ п╠п╬п╩я▄я┬п╣ ");
 			chsl = 1;
 			pad = PAD_RODIT;
 		}
@@ -1033,7 +1033,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		/* Hack -- all gone */
 		else if (o_ptr->number <= 0)
 		{
-			object_desc_str_macro(t, "нет больше ");
+			object_desc_str_macro(t, "п╫п╣я┌ п╠п╬п╩я▄я┬п╣ ");
 			chsl = 1;
 			pad = PAD_RODIT;
 		}
@@ -1145,7 +1145,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		/* May be "empty" */
 		else if (!o_ptr->pval)
 		{
-			tail = " (пустой)";
+			tail = " (п©я┐я│я┌п╬п╧)";
 		}
 
 		/* May be "disarmed" */
@@ -1153,11 +1153,11 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		{
 			if (chest_traps[0 - o_ptr->pval])
 			{
-				tail = " (обезврежен)";
+				tail = " (п╬п╠п╣п╥п╡я─п╣п╤п╣п╫)";
 			}
 			else
 			{
-				tail = " (взломан)";
+				tail = " (п╡п╥п╩п╬п╪п╟п╫)";
 			}
 		}
 
@@ -1169,42 +1169,42 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 			{
 				case 0:
 				{
-					tail = " (запертый)";
+					tail = " (п╥п╟п©п╣я─я┌я▀п╧)";
 					break;
 				}
 				case CHEST_LOSE_STR:
 				{
-					tail = " (ядовитый шип)";
+					tail = " (я▐п╢п╬п╡п╦я┌я▀п╧ я┬п╦п©)";
 					break;
 				}
 				case CHEST_LOSE_CON:
 				{
-					tail = " (ядовитый шип)";
+					tail = " (я▐п╢п╬п╡п╦я┌я▀п╧ я┬п╦п©)";
 					break;
 				}
 				case CHEST_POISON:
 				{
-					tail = " (газовая ловушка)";
+					tail = " (пЁп╟п╥п╬п╡п╟я▐ п╩п╬п╡я┐я┬п╨п╟)";
 					break;
 				}
 				case CHEST_PARALYZE:
 				{
-					tail = " (газовая ловушка)";
+					tail = " (пЁп╟п╥п╬п╡п╟я▐ п╩п╬п╡я┐я┬п╨п╟)";
 					break;
 				}
 				case CHEST_EXPLODE:
 				{
-					tail = " (взрывчатое устройство)";
+					tail = " (п╡п╥я─я▀п╡я┤п╟я┌п╬п╣ я┐я│я┌я─п╬п╧я│я┌п╡п╬)";
 					break;
 				}
 				case CHEST_SUMMON:
 				{
-					tail = " (руны вызова)";
+					tail = " (я─я┐п╫я▀ п╡я▀п╥п╬п╡п╟)";
 					break;
 				}
 				default:
 				{
-					tail = " (несколько ловушек)";
+					tail = " (п╫п╣я│п╨п╬п╩я▄п╨п╬ п╩п╬п╡я┐я┬п╣п╨)";
 					break;
 				}
 			}
@@ -1348,9 +1348,9 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 	if ((o_ptr->tval == TV_LITE) && (!artifact_p(o_ptr)))
 	{
 		/* Hack -- Turns of light for normal lites */
-		object_desc_str_macro(t, " (с ");
+		object_desc_str_macro(t, " (я│ ");
 		object_desc_num_macro(t, o_ptr->pval);
-		object_desc_str_macro(t, " ходами света)");
+		object_desc_str_macro(t, " я┘п╬п╢п╟п╪п╦ я│п╡п╣я┌п╟)");
 	}
 
 
@@ -1377,21 +1377,21 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		else if (f1 & (TR1_STEALTH))
 		{
 			/* Dump " to stealth" */
-			tail = " к скрытности";
+			tail = " п╨ я│п╨я─я▀я┌п╫п╬я│я┌п╦";
 		}
 
 		/* Searching */
 		else if (f1 & (TR1_SEARCH))
 		{
 			/* Dump " to searching" */
-			tail = " к поиску";
+			tail = " п╨ п©п╬п╦я│п╨я┐";
 		}
 
 		/* Infravision */
 		else if (f1 & (TR1_INFRA))
 		{
 			/* Dump " to infravision" */
-			tail = " к инфразрению";
+			tail = " п╨ п╦п╫я└я─п╟п╥я─п╣п╫п╦я▌";
 		}
 
 #if 0
@@ -1400,7 +1400,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		else if (f1 & (TR1_TUNNEL))
 		{
 			/* Dump " to digging" */
-			tail = " к копанию";
+			tail = " п╨ п╨п╬п©п╟п╫п╦я▌";
 		}
 
 #endif
@@ -1409,14 +1409,14 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		else if (f1 & (TR1_SPEED))
 		{
 			/* Dump " to speed" */
-			tail = " к скорости";
+			tail = " п╨ я│п╨п╬я─п╬я│я┌п╦";
 		}
 
 		/* Blows */
 		else if (f1 & (TR1_BLOWS))
 		{
 			/* Add " attack" */
-			tail = " атакам";
+			tail = " п╟я┌п╟п╨п╟п╪";
 		}
 
 #if 0
@@ -1452,10 +1452,10 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 		object_desc_chr_macro(t, ' ');
 		object_desc_chr_macro(t, p1);
 		object_desc_num_macro(t, o_ptr->pval);
-		object_desc_str_macro(t, " заряд");
+		object_desc_str_macro(t, " п╥п╟я─я▐п╢");
 		if (o_ptr->pval != 1)
 		{
-			object_desc_str_macro(t, "ов");
+			object_desc_str_macro(t, "п╬п╡");
 		}
 		object_desc_chr_macro(t, p2);
 	}
@@ -1484,12 +1484,12 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 				/* Display prettily */
 				object_desc_str_macro(t, " (");
 				object_desc_num_macro(t, power);
-				object_desc_str_macro(t, " зарядка)");
+				object_desc_str_macro(t, " п╥п╟я─я▐п╢п╨п╟)");
 			}
 			else
 			{
 				/* Single rod */
-				object_desc_str_macro(t, " (зарядка)");
+				object_desc_str_macro(t, " (п╥п╟я─я▐п╢п╨п╟)");
 			}
 		}
 	}
@@ -1498,7 +1498,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 	else if (known && o_ptr->timeout)
 	{
 		/* Hack -- Dump " (charging)" if relevant */
-		object_desc_str_macro(t, " (зарядка)");
+		object_desc_str_macro(t, " (п╥п╟я─я▐п╢п╨п╟)");
 	}
 
 
@@ -1528,19 +1528,19 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 	/* Use "cursed" if the item is known to be cursed */
 	else if (cursed_p(o_ptr) && known)
 	{
-		v = "проклятый";
+		v = "п©я─п╬п╨п╩я▐я┌я▀п╧";
 	}
 
 	/* Hack -- Use "empty" for empty wands/staffs */
 	else if (!known && (o_ptr->ident & (IDENT_EMPTY)))
 	{
-		v = "пусто";
+		v = "п©я┐я│я┌п╬";
 	}
 
 	/* Use "tried" if the object has been tested unsuccessfully */
 	else if (!aware && object_tried_p(o_ptr))
 	{
-		v = "испробовано";
+		v = "п╦я│п©я─п╬п╠п╬п╡п╟п╫п╬";
 	}
 
 	/* Use the discount, if any */
@@ -1548,7 +1548,7 @@ int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int m
 	{
 		char *q = discount_buf;
 		object_desc_num_macro(q, o_ptr->discount);
-		object_desc_str_macro(q, "% скидка");
+		object_desc_str_macro(q, "% я│п╨п╦п╢п╨п╟");
 		*q = '\0';
 		v = discount_buf;
 	}
@@ -1602,8 +1602,8 @@ object_desc_done:
 	/* Copy the string over */
 	my_strcpy(buf, tmp_buf, max);
 	
-	/* Мега-Хак: для артефактов убеждаемся, что все слова с большой буквы;
-	 * разворачиваем морфологию
+	/* п°п╣пЁп╟-п╔п╟п╨: п╢п╩я▐ п╟я─я┌п╣я└п╟п╨я┌п╬п╡ я┐п╠п╣п╤п╢п╟п╣п╪я│я▐, я┤я┌п╬ п╡я│п╣ я│п╩п╬п╡п╟ я│ п╠п╬п╩я▄я┬п╬п╧ п╠я┐п╨п╡я▀;
+	 * я─п╟п╥п╡п╬я─п╟я┤п╦п╡п╟п╣п╪ п╪п╬я─я└п╬п╩п╬пЁп╦я▌
 	 */
 	{
 		int i;
@@ -1622,7 +1622,7 @@ object_desc_done:
 			}
 		}
 		
-		/* Хак - для и.п. перекидывает первую букву в заглавную */
+		/* п╔п╟п╨ - п╢п╩я▐ п╦.п©. п©п╣я─п╣п╨п╦п╢я▀п╡п╟п╣я┌ п©п╣я─п╡я┐я▌ п╠я┐п╨п╡я┐ п╡ п╥п╟пЁп╩п╟п╡п╫я┐я▌ */
 		if (pad == PAD_IMEN)
 			buf[0] = a_toupper(buf[0]);
 	}
@@ -1823,19 +1823,19 @@ cptr mention_use(int i)
 	/* Examine the location */
 	switch (i)
 	{
-		case INVEN_WIELD: p = "В руках"; break;
-		case INVEN_BOW:   p = "Стрельба"; break;
-		case INVEN_LEFT:  p = "На левой руке"; break;
-		case INVEN_RIGHT: p = "На прав. руке"; break;
-		case INVEN_NECK:  p = "На шее"; break;
-		case INVEN_LITE:  p = "Свет"; break;
-		case INVEN_BODY:  p = "На теле"; break;
-		case INVEN_OUTER: p = "Накинуто"; break;
-		case INVEN_ARM:   p = "Щит"; break;
-		case INVEN_HEAD:  p = "На голове"; break;
-		case INVEN_HANDS: p = "На руках"; break;
-		case INVEN_FEET:  p = "На ногах"; break;
-		default:          p = "В рюкзаке"; break;
+		case INVEN_WIELD: p = "п▓ я─я┐п╨п╟я┘"; break;
+		case INVEN_BOW:   p = "п║я┌я─п╣п╩я▄п╠п╟"; break;
+		case INVEN_LEFT:  p = "п²п╟ п╩п╣п╡п╬п╧ я─я┐п╨п╣"; break;
+		case INVEN_RIGHT: p = "п²п╟ п©я─п╟п╡. я─я┐п╨п╣"; break;
+		case INVEN_NECK:  p = "п²п╟ я┬п╣п╣"; break;
+		case INVEN_LITE:  p = "п║п╡п╣я┌"; break;
+		case INVEN_BODY:  p = "п²п╟ я┌п╣п╩п╣"; break;
+		case INVEN_OUTER: p = "п²п╟п╨п╦п╫я┐я┌п╬"; break;
+		case INVEN_ARM:   p = "п╘п╦я┌"; break;
+		case INVEN_HEAD:  p = "п²п╟ пЁп╬п╩п╬п╡п╣"; break;
+		case INVEN_HANDS: p = "п²п╟ я─я┐п╨п╟я┘"; break;
+		case INVEN_FEET:  p = "п²п╟ п╫п╬пЁп╟я┘"; break;
+		default:          p = "п▓ я─я▌п╨п╥п╟п╨п╣"; break;
 	}
 
 	/* Hack -- Heavy weapon */
@@ -1845,7 +1845,7 @@ cptr mention_use(int i)
 		o_ptr = &inventory[i];
 		if (adj_str_hold[p_ptr->stat_ind[A_STR]] < o_ptr->weight / 10)
 		{
-			p = "Едва подняли";
+			p = "п∙п╢п╡п╟ п©п╬п╢п╫я▐п╩п╦";
 		}
 	}
 
@@ -1856,7 +1856,7 @@ cptr mention_use(int i)
 		o_ptr = &inventory[i];
 		if (adj_str_hold[p_ptr->stat_ind[A_STR]] < o_ptr->weight / 10)
 		{
-			p = "Едва подняли";
+			p = "п∙п╢п╡п╟ п©п╬п╢п╫я▐п╩п╦";
 		}
 	}
 
@@ -1875,19 +1875,19 @@ cptr describe_use(int i)
 
 	switch (i)
 	{
-		case INVEN_WIELD: p = "атакуете монстров с помощью:"; break;
-		case INVEN_BOW:   p = "стреляете с помощью:"; break;
-		case INVEN_LEFT:  p = "носите на левой руке:"; break;
-		case INVEN_RIGHT: p = "носите на правой руке:"; break;
-		case INVEN_NECK:  p = "носите на шее:"; break;
-		case INVEN_LITE:  p = "используете для освещения:"; break;
-		case INVEN_BODY:  p = "носите на теле:"; break;
-		case INVEN_OUTER: p = "носите на спине:"; break;
-		case INVEN_ARM:   p = "носите на руке:"; break;
-		case INVEN_HEAD:  p = "носите на голове:"; break;
-		case INVEN_HANDS: p = "носите на руках:"; break;
-		case INVEN_FEET:  p = "носите на ногах:"; break;
-		default:          p = "носите в рюкзаке:"; break;
+		case INVEN_WIELD: p = "п╟я┌п╟п╨я┐п╣я┌п╣ п╪п╬п╫я│я┌я─п╬п╡ я│ п©п╬п╪п╬я┴я▄я▌:"; break;
+		case INVEN_BOW:   p = "я│я┌я─п╣п╩я▐п╣я┌п╣ я│ п©п╬п╪п╬я┴я▄я▌:"; break;
+		case INVEN_LEFT:  p = "п╫п╬я│п╦я┌п╣ п╫п╟ п╩п╣п╡п╬п╧ я─я┐п╨п╣:"; break;
+		case INVEN_RIGHT: p = "п╫п╬я│п╦я┌п╣ п╫п╟ п©я─п╟п╡п╬п╧ я─я┐п╨п╣:"; break;
+		case INVEN_NECK:  p = "п╫п╬я│п╦я┌п╣ п╫п╟ я┬п╣п╣:"; break;
+		case INVEN_LITE:  p = "п╦я│п©п╬п╩я▄п╥я┐п╣я┌п╣ п╢п╩я▐ п╬я│п╡п╣я┴п╣п╫п╦я▐:"; break;
+		case INVEN_BODY:  p = "п╫п╬я│п╦я┌п╣ п╫п╟ я┌п╣п╩п╣:"; break;
+		case INVEN_OUTER: p = "п╫п╬я│п╦я┌п╣ п╫п╟ я│п©п╦п╫п╣:"; break;
+		case INVEN_ARM:   p = "п╫п╬я│п╦я┌п╣ п╫п╟ я─я┐п╨п╣:"; break;
+		case INVEN_HEAD:  p = "п╫п╬я│п╦я┌п╣ п╫п╟ пЁп╬п╩п╬п╡п╣:"; break;
+		case INVEN_HANDS: p = "п╫п╬я│п╦я┌п╣ п╫п╟ я─я┐п╨п╟я┘:"; break;
+		case INVEN_FEET:  p = "п╫п╬я│п╦я┌п╣ п╫п╟ п╫п╬пЁп╟я┘:"; break;
+		default:          p = "п╫п╬я│п╦я┌п╣ п╡ я─я▌п╨п╥п╟п╨п╣:"; break;
 	}
 
 	/* Hack -- Heavy weapon */
@@ -1897,7 +1897,7 @@ cptr describe_use(int i)
 		o_ptr = &inventory[i];
 		if (adj_str_hold[p_ptr->stat_ind[A_STR]] < o_ptr->weight / 10)
 		{
-			p = "едва смогли поднять";
+			p = "п╣п╢п╡п╟ я│п╪п╬пЁп╩п╦ п©п╬п╢п╫я▐я┌я▄";
 		}
 	}
 
@@ -1908,7 +1908,7 @@ cptr describe_use(int i)
 		o_ptr = &inventory[i];
 		if (adj_str_hold[p_ptr->stat_ind[A_STR]] < o_ptr->weight / 10)
 		{
-			p = "едва смогли поднять";
+			p = "п╣п╢п╡п╟ я│п╪п╬пЁп╩п╦ п©п╬п╢п╫я▐я┌я▄";
 		}
 	}
 
@@ -2073,7 +2073,7 @@ void display_inven(void)
 		if (show_weights && o_ptr->weight)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
-			sprintf(tmp_val, "%3d.%1d фнт", wgt / 10, wgt % 10);
+			sprintf(tmp_val, "%3d.%1d я└п╫я┌", wgt / 10, wgt % 10);
 			Term_putstr(71, i, -1, TERM_WHITE, tmp_val);
 		}
 	}
@@ -2151,7 +2151,7 @@ void display_equip(void)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
 			int col = (show_labels ? 52 : 71);
-			sprintf(tmp_val, "%3d.%1d фнт", wgt / 10, wgt % 10);
+			sprintf(tmp_val, "%3d.%1d я└п╫я┌", wgt / 10, wgt % 10);
 			Term_putstr(col, i - INVEN_WIELD, -1, TERM_WHITE, tmp_val);
 		}
 	}
@@ -2273,7 +2273,7 @@ void show_inven(void)
 		if (show_weights)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
-			sprintf(tmp_val, "%3d.%1d фнт", wgt / 10, wgt % 10);
+			sprintf(tmp_val, "%3d.%1d я└п╫я┌", wgt / 10, wgt % 10);
 			put_str(tmp_val, j + 1, 71);
 		}
 	}
@@ -2396,7 +2396,7 @@ void show_equip(void)
 		if (show_weights)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
-			sprintf(tmp_val, "%3d.%d фнт", wgt / 10, wgt % 10);
+			sprintf(tmp_val, "%3d.%d я└п╫я┌", wgt / 10, wgt % 10);
 			put_str(tmp_val, j+1, 71);
 		}
 	}
@@ -2498,7 +2498,7 @@ void show_floor(const int *floor_list, int floor_num)
 		if (show_weights)
 		{
 			int wgt = o_ptr->weight * o_ptr->number;
-			sprintf(tmp_val, "%3d.%1d фнт", wgt / 10, wgt % 10);
+			sprintf(tmp_val, "%3d.%1d я└п╫я┌", wgt / 10, wgt % 10);
 			put_str(tmp_val, j + 1, 71);
 		}
 	}
@@ -2620,7 +2620,7 @@ static bool get_item_allow(int item)
 		if ((s[1] == p_ptr->command_cmd) || (s[1] == '*'))
 		{
 			/* Verify the choice */
-			if (!verify_item("Действительно", item)) return (FALSE);
+			if (!verify_item("п■п╣п╧я│я┌п╡п╦я┌п╣п╩я▄п╫п╬", item)) return (FALSE);
 		}
 
 		/* Find another '!' */
@@ -3004,7 +3004,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			if (p_ptr->command_see) show_inven();
 
 			/* Begin the prompt */
-			sprintf(out_val, "Инвен:");
+			sprintf(out_val, "п≤п╫п╡п╣п╫:");
 
 			/* List choices */
 			if (i1 <= i2)
@@ -3018,13 +3018,13 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			}
 
 			/* Indicate ability to "view" */
-			if (!p_ptr->command_see) strcat(out_val, " * для просм.,");
+			if (!p_ptr->command_see) strcat(out_val, " * п╢п╩я▐ п©я─п╬я│п╪.,");
 
 			/* Indicate legality of "toggle" */
-			if (use_equip) strcat(out_val, " / для экипировки,");
+			if (use_equip) strcat(out_val, " / п╢п╩я▐ я█п╨п╦п©п╦я─п╬п╡п╨п╦,");
 
 			/* Indicate legality of the "floor" */
-			if (allow_floor) strcat(out_val, " - для пола,");
+			if (allow_floor) strcat(out_val, " - п╢п╩я▐ п©п╬п╩п╟,");
 		}
 
 		/* Viewing equipment */
@@ -3034,7 +3034,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			if (p_ptr->command_see) show_equip();
 
 			/* Begin the prompt */
-			sprintf(out_val, "Экип.:");
+			sprintf(out_val, "п╜п╨п╦п©.:");
 
 			/* List choices */
 			if (e1 <= e2)
@@ -3048,13 +3048,13 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			}
 
 			/* Indicate ability to "view" */
-			if (!p_ptr->command_see) strcat(out_val, " * для просм.,");
+			if (!p_ptr->command_see) strcat(out_val, " * п╢п╩я▐ п©я─п╬я│п╪.,");
 
 			/* Indicate legality of "toggle" */
-			if (use_inven) strcat(out_val, " / для инвен.,");
+			if (use_inven) strcat(out_val, " / п╢п╩я▐ п╦п╫п╡п╣п╫.,");
 
 			/* Indicate legality of the "floor" */
-			if (allow_floor) strcat(out_val, " - для пола,");
+			if (allow_floor) strcat(out_val, " - п╢п╩я▐ п©п╬п╩п╟,");
 		}
 
 		/* Viewing floor */
@@ -3064,7 +3064,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			if (p_ptr->command_see) show_floor(floor_list, floor_num);
 
 			/* Begin the prompt */
-			sprintf(out_val, "Пол:");
+			sprintf(out_val, "п÷п╬п╩:");
 
 			/* List choices */
 			if (f1 <= f2)
@@ -3077,13 +3077,13 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 			}
 
 			/* Indicate ability to "view" */
-			if (!p_ptr->command_see) strcat(out_val, " * для просм.,");
+			if (!p_ptr->command_see) strcat(out_val, " * п╢п╩я▐ п©я─п╬я│п╪.,");
 
 			/* Append */
-			if (use_inven) strcat(out_val, " / для инвен.,");
+			if (use_inven) strcat(out_val, " / п╢п╩я▐ п╦п╫п╡п╣п╫.,");
 
 			/* Append */
-			else if (use_equip) strcat(out_val, " / для экипировки,");
+			else if (use_equip) strcat(out_val, " / п╢п╩я▐ я█п╨п╦п©п╦я─п╬п╡п╨п╦,");
 		}
 
 		/* Finish the prompt */
@@ -3152,7 +3152,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* No toggle allowed */
 				else
 				{
-					bell("Нельзя выбрать это!");
+					bell("п²п╣п╩я▄п╥я▐ п╡я▀п╠я─п╟я┌я▄ я█я┌п╬!");
 					break;
 				}
 
@@ -3175,7 +3175,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* Paranoia */
 				if (!allow_floor)
 				{
-					bell("Нельзя выбрать на полу!");
+					bell("п²п╣п╩я▄п╥я▐ п╡я▀п╠я─п╟я┌я▄ п╫п╟ п©п╬п╩я┐!");
 					break;
 				}
 
@@ -3255,21 +3255,21 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* Look up the tag */
 				if (!get_tag(&k, which))
 				{
-					bell("Неправильный выбор предмета!");
+					bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 					break;
 				}
 
 				/* Hack -- Validate the item */
 				if ((k < INVEN_WIELD) ? !allow_inven : !allow_equip)
 				{
-					bell("Неправильный выбор предмета!");
+					bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 					break;
 				}
 
 				/* Validate the item */
 				if (!get_item_okay(k))
 				{
-					bell("Неправильный выбор предмета!");
+					bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 					break;
 				}
 
@@ -3295,7 +3295,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				{
 					if (i1 != i2)
 					{
-						bell("Неправильный выбор предмета!");
+						bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 						break;
 					}
 
@@ -3307,7 +3307,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				{
 					if (e1 != e2)
 					{
-						bell("Неправильный выбор предмета!");
+						bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 						break;
 					}
 
@@ -3319,7 +3319,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				{
 					if (f1 != f2)
 					{
-						bell("Неправильный выбор предмета!");
+						bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 						break;
 					}
 
@@ -3329,7 +3329,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* Validate the item */
 				if (!get_item_okay(k))
 				{
-					bell("Неправильный выбор предмета!");
+					bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 					break;
 				}
 
@@ -3364,7 +3364,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 
 					if (k < 0)
 					{
-						bell("Неправильный выбор предмета!");
+						bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 						break;
 					}
 				}
@@ -3376,7 +3376,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 
 					if (k < 0)
 					{
-						bell("Неправильный выбор предмета!");
+						bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 						break;
 					}
 				}
@@ -3389,7 +3389,7 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 
 					if (k < 0 || k >= floor_num)
 					{
-						bell("Неправильный выбор предмета!");
+						bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 						break;
 					}
 
@@ -3400,12 +3400,12 @@ bool get_item(int *cp, cptr pmt, cptr str, int mode)
 				/* Validate the item */
 				if (!get_item_okay(k))
 				{
-					bell("Неправильный выбор предмета!");
+					bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─ п©я─п╣п╢п╪п╣я┌п╟!");
 					break;
 				}
 
 				/* Verify the item */
-				if (verify && !verify_item("Использовать", k))
+				if (verify && !verify_item("п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄", k))
 				{
 					done = TRUE;
 					break;

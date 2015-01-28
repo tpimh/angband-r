@@ -869,7 +869,7 @@ bool make_attack_spell(int m_idx)
 	if ((thrown_spell >= RF5_OFFSET) && (rand_int(100) < failrate))
 	{
 		/* Message */
-		msg_format("%^s пытается сколдовать заклинание, но не может.", m_name);
+		msg_format("%^s п©я▀я┌п╟п╣я┌я│я▐ я│п╨п╬п╩п╢п╬п╡п╟я┌я▄ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣, п╫п╬ п╫п╣ п╪п╬п╤п╣я┌.", m_name);
 
 		return (TRUE);
 	}
@@ -883,7 +883,7 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			msg_format("%^s громко пищит.", m_name);
+			msg_format("%^s пЁя─п╬п╪п╨п╬ п©п╦я┴п╦я┌.", m_name);
 			aggravate_monsters(m_idx);
 			break;
 		}
@@ -910,8 +910,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+4:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s издает странный звук.", m_name);
-			else msg_format("%^s пускает стрелу в вас.", m_name);
+			if (blind) msg_format("%^s п╦п╥п╢п╟п╣я┌ я│я┌я─п╟п╫п╫я▀п╧ п╥п╡я┐п╨.", m_name);
+			else msg_format("%^s п©я┐я│п╨п╟п╣я┌ я│я┌я─п╣п╩я┐ п╡ п╡п╟я│.", m_name);
 			bolt(m_idx, GF_ARROW, damroll(1, 6));
 			break;
 		}
@@ -920,8 +920,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+5:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s издает странный звук.", m_name);
-			else msg_format("%^s пускает стрелу в вас!", m_name);
+			if (blind) msg_format("%^s п╦п╥п╢п╟п╣я┌ я│я┌я─п╟п╫п╫я▀п╧ п╥п╡я┐п╨.", m_name);
+			else msg_format("%^s п©я┐я│п╨п╟п╣я┌ я│я┌я─п╣п╩я┐ п╡ п╡п╟я│!", m_name);
 			bolt(m_idx, GF_ARROW, damroll(3, 6));
 			break;
 		}
@@ -930,8 +930,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+6:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s издает странный звук.", m_name);
-			else msg_format("%^s пускает снаряд в вас.", m_name);
+			if (blind) msg_format("%^s п╦п╥п╢п╟п╣я┌ я│я┌я─п╟п╫п╫я▀п╧ п╥п╡я┐п╨.", m_name);
+			else msg_format("%^s п©я┐я│п╨п╟п╣я┌ я│п╫п╟я─я▐п╢ п╡ п╡п╟я│.", m_name);
 			bolt(m_idx, GF_ARROW, damroll(5, 6));
 			break;
 		}
@@ -940,8 +940,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+7:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s издает странный звук.", m_name);
-			else msg_format("%^s пускает снаряд в вас!", m_name);
+			if (blind) msg_format("%^s п╦п╥п╢п╟п╣я┌ я│я┌я─п╟п╫п╫я▀п╧ п╥п╡я┐п╨.", m_name);
+			else msg_format("%^s п©я┐я│п╨п╟п╣я┌ я│п╫п╟я─я▐п╢ п╡ п╡п╟я│!", m_name);
 			bolt(m_idx, GF_ARROW, damroll(7, 6));
 			break;
 		}
@@ -950,8 +950,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+8:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит кислотой.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╨п╦я│п╩п╬я┌п╬п╧.", m_name);
 			breath(m_idx, GF_ACID,
 			       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_ACID);
@@ -962,8 +962,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+9:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит молнией.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╪п╬п╩п╫п╦п╣п╧.", m_name);
 			breath(m_idx, GF_ELEC,
 			       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_ELEC);
@@ -974,8 +974,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+10:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит огнем.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╬пЁп╫п╣п╪.", m_name);
 			breath(m_idx, GF_FIRE,
 			       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_FIRE);
@@ -986,8 +986,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+11:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит холодом.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ я┘п╬п╩п╬п╢п╬п╪.", m_name);
 			breath(m_idx, GF_COLD,
 			       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_COLD);
@@ -998,8 +998,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+12:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит газом.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ пЁп╟п╥п╬п╪.", m_name);
 			breath(m_idx, GF_POIS,
 			       ((m_ptr->hp / 3) > 800 ? 800 : (m_ptr->hp / 3)));
 			update_smart_learn(m_idx, DRS_RES_POIS);
@@ -1010,8 +1010,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+13:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит могильной силой.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╪п╬пЁп╦п╩я▄п╫п╬п╧ я│п╦п╩п╬п╧.", m_name);
 			breath(m_idx, GF_NETHER,
 			       ((m_ptr->hp / 6) > 550 ? 550 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_NETHR);
@@ -1022,8 +1022,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+14:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит светом.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ я│п╡п╣я┌п╬п╪.", m_name);
 			breath(m_idx, GF_LITE,
 			       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_LITE);
@@ -1034,8 +1034,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+15:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит темнотой.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ я┌п╣п╪п╫п╬я┌п╬п╧.", m_name);
 			breath(m_idx, GF_DARK,
 			       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_DARK);
@@ -1046,8 +1046,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+16:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит контузией.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╨п╬п╫я┌я┐п╥п╦п╣п╧.", m_name);
 			breath(m_idx, GF_CONFUSION,
 			       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_CONFU);
@@ -1058,8 +1058,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+17:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит звуком.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╥п╡я┐п╨п╬п╪.", m_name);
 			breath(m_idx, GF_SOUND,
 			       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_SOUND);
@@ -1070,8 +1070,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+18:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит хаосом.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ я┘п╟п╬я│п╬п╪.", m_name);
 			breath(m_idx, GF_CHAOS,
 			       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_CHAOS);
@@ -1082,8 +1082,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+19:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит антимагией.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╟п╫я┌п╦п╪п╟пЁп╦п╣п╧.", m_name);
 			breath(m_idx, GF_DISENCHANT,
 			       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_DISEN);
@@ -1094,8 +1094,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+20:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит пространством.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п©я─п╬я│я┌я─п╟п╫я│я┌п╡п╬п╪.", m_name);
 			breath(m_idx, GF_NEXUS,
 			       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_NEXUS);
@@ -1106,8 +1106,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+21:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит временем.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╡я─п╣п╪п╣п╫п╣п╪.", m_name);
 			breath(m_idx, GF_TIME,
 			       ((m_ptr->hp / 3) > 150 ? 150 : (m_ptr->hp / 3)));
 			break;
@@ -1117,8 +1117,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+22:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит инерцией.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╦п╫п╣я─я├п╦п╣п╧.", m_name);
 			breath(m_idx, GF_INERTIA,
 			       ((m_ptr->hp / 6) > 200 ? 200 : (m_ptr->hp / 6)));
 			break;
@@ -1128,8 +1128,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+23:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит гравитацией.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ пЁя─п╟п╡п╦я┌п╟я├п╦п╣п╧.", m_name);
 			breath(m_idx, GF_GRAVITY,
 			       ((m_ptr->hp / 3) > 200 ? 200 : (m_ptr->hp / 3)));
 			break;
@@ -1139,8 +1139,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+24:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит осколками.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п╬я│п╨п╬п╩п╨п╟п╪п╦.", m_name);
 			breath(m_idx, GF_SHARD,
 			       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)));
 			update_smart_learn(m_idx, DRS_RES_SHARD);
@@ -1151,8 +1151,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+25:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит плазмой.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ п©п╩п╟п╥п╪п╬п╧.", m_name);
 			breath(m_idx, GF_PLASMA,
 			       ((m_ptr->hp / 6) > 150 ? 150 : (m_ptr->hp / 6)));
 			break;
@@ -1162,8 +1162,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+26:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s дышит.", m_name);
-			else msg_format("%^s дышит силой.", m_name);
+			if (blind) msg_format("%^s п╢я▀я┬п╦я┌.", m_name);
+			else msg_format("%^s п╢я▀я┬п╦я┌ я│п╦п╩п╬п╧.", m_name);
 			breath(m_idx, GF_FORCE,
 			       ((m_ptr->hp / 6) > 200 ? 200 : (m_ptr->hp / 6)));
 			break;
@@ -1198,8 +1198,8 @@ bool make_attack_spell(int m_idx)
 		case RF4_OFFSET+31:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("Вы слышите громкое пыхтенье.", m_name);
-			else msg_format("%^s бросает в вас валун!", m_name);
+			if (blind) msg_format("п▓я▀ я│п╩я▀я┬п╦я┌п╣ пЁя─п╬п╪п╨п╬п╣ п©я▀я┘я┌п╣п╫я▄п╣.", m_name);
+			else msg_format("%^s п╠я─п╬я│п╟п╣я┌ п╡ п╡п╟я│ п╡п╟п╩я┐п╫!", m_name);
 			bolt(m_idx, GF_ARROW, damroll(1 + r_ptr->level / 7, 12));
 			break;
 		}
@@ -1209,8 +1209,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+0:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует кислотный шар.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╨п╦я│п╩п╬я┌п╫я▀п╧ я┬п╟я─.", m_name);
 			breath(m_idx, GF_ACID,
 			       randint(rlev * 3) + 15);
 			update_smart_learn(m_idx, DRS_RES_ACID);
@@ -1221,8 +1221,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+1:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует шаровую молнию.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ я┬п╟я─п╬п╡я┐я▌ п╪п╬п╩п╫п╦я▌.", m_name);
 			breath(m_idx, GF_ELEC,
 			       randint(rlev * 3 / 2) + 8);
 			update_smart_learn(m_idx, DRS_RES_ELEC);
@@ -1233,8 +1233,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+2:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует огненный шар.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╬пЁп╫п╣п╫п╫я▀п╧ я┬п╟я─.", m_name);
 			breath(m_idx, GF_FIRE,
 			       randint(rlev * 7 / 2) + 10);
 			update_smart_learn(m_idx, DRS_RES_FIRE);
@@ -1245,8 +1245,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+3:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует ледяной шар.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╩п╣п╢я▐п╫п╬п╧ я┬п╟я─.", m_name);
 			breath(m_idx, GF_COLD,
 			       randint(rlev * 3 / 2) + 10);
 			update_smart_learn(m_idx, DRS_RES_COLD);
@@ -1257,8 +1257,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+4:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует вонючее облако.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╡п╬п╫я▌я┤п╣п╣ п╬п╠п╩п╟п╨п╬.", m_name);
 			breath(m_idx, GF_POIS,
 			       damroll(12, 2));
 			update_smart_learn(m_idx, DRS_RES_POIS);
@@ -1269,8 +1269,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+5:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует могильный шар.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╪п╬пЁп╦п╩я▄п╫я▀п╧ я┬п╟я─.", m_name);
 			breath(m_idx, GF_NETHER,
 			       (50 + damroll(10, 10) + rlev));
 			update_smart_learn(m_idx, DRS_RES_NETHR);
@@ -1281,9 +1281,9 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+6:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s делает странные движения.", m_name);
-			msg_print("Вы попали в водоворот.");
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╢п╣п╩п╟п╣я┌ я│я┌я─п╟п╫п╫я▀п╣ п╢п╡п╦п╤п╣п╫п╦я▐.", m_name);
+			msg_print("п▓я▀ п©п╬п©п╟п╩п╦ п╡ п╡п╬п╢п╬п╡п╬я─п╬я┌.");
 			breath(m_idx, GF_WATER,
 			       randint(rlev * 5 / 2) + 50);
 			break;
@@ -1293,8 +1293,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+7:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s громко заклинает.", m_name);
-			else msg_format("%^s вызывает шторм маны.", m_name);
+			if (blind) msg_format("%^s пЁя─п╬п╪п╨п╬ п╥п╟п╨п╩п╦п╫п╟п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ я┬я┌п╬я─п╪ п╪п╟п╫я▀.", m_name);
 			breath(m_idx, GF_MANA,
 			       (rlev * 5) + damroll(10, 10));
 			break;
@@ -1304,8 +1304,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+8:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s громко заклинает.", m_name);
-			else msg_format("%^s вызывает шторм тьмы.", m_name);
+			if (blind) msg_format("%^s пЁя─п╬п╪п╨п╬ п╥п╟п╨п╩п╦п╫п╟п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ я┬я┌п╬я─п╪ я┌я▄п╪я▀.", m_name);
 			breath(m_idx, GF_DARK,
 			       (rlev * 5) + damroll(10, 10));
 			update_smart_learn(m_idx, DRS_RES_DARK);
@@ -1324,7 +1324,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 
 				/* Basic message */
-				msg_format("%^s высысывает из вас психическую энергию!", m_name);
+				msg_format("%^s п╡я▀я│я▀я│я▀п╡п╟п╣я┌ п╦п╥ п╡п╟я│ п©я│п╦я┘п╦я┤п╣я│п╨я┐я▌ я█п╫п╣я─пЁп╦я▌!", m_name);
 
 				/* Attack power */
 				r1 = (randint(rlev) / 2) + 1;
@@ -1362,7 +1362,7 @@ bool make_attack_spell(int m_idx)
 					/* Special message */
 					if (seen)
 					{
-						msg_format("%^s выглядит здоровее.", m_name);
+						msg_format("%^s п╡я▀пЁп╩я▐п╢п╦я┌ п╥п╢п╬я─п╬п╡п╣п╣.", m_name);
 					}
 				}
 			}
@@ -1377,20 +1377,20 @@ bool make_attack_spell(int m_idx)
 			disturb(1, 0);
 			if (!seen)
 			{
-				msg_print("Вы чуствуете, как что-то фокусируется на вас.");
+				msg_print("п▓я▀ я┤я┐я│я┌п╡я┐п╣я┌п╣, п╨п╟п╨ я┤я┌п╬-я┌п╬ я└п╬п╨я┐я│п╦я─я┐п╣я┌я│я▐ п╫п╟ п╡п╟я│.");
 			}
 			else
 			{
-				msg_format("%^s пристально смотрит вам в глаза.", m_name);
+				msg_format("%^s п©я─п╦я│я┌п╟п╩я▄п╫п╬ я│п╪п╬я┌я─п╦я┌ п╡п╟п╪ п╡ пЁп╩п╟п╥п╟.", m_name);
 			}
 
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
-				msg_print("Ваш разум поврежден псионической энергией.");
+				msg_print("п▓п╟я┬ я─п╟п╥я┐п╪ п©п╬п╡я─п╣п╤п╢п╣п╫ п©я│п╦п╬п╫п╦я┤п╣я│п╨п╬п╧ я█п╫п╣я─пЁп╦п╣п╧.");
 				if (!p_ptr->resist_confu)
 				{
 					(void)set_confused(p_ptr->confused + rand_int(4) + 4);
@@ -1407,19 +1407,19 @@ bool make_attack_spell(int m_idx)
 			disturb(1, 0);
 			if (!seen)
 			{
-				msg_print("Вы чувствуете, как что-то фокусируется на вас.");
+				msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣, п╨п╟п╨ я┤я┌п╬-я┌п╬ я└п╬п╨я┐я│п╦я─я┐п╣я┌я│я▐ п╫п╟ п╡п╟я│.");
 			}
 			else
 			{
-				msg_format("%^s глубоко смотрит вам в глаза.", m_name);
+				msg_format("%^s пЁп╩я┐п╠п╬п╨п╬ я│п╪п╬я┌я─п╦я┌ п╡п╟п╪ п╡ пЁп╩п╟п╥п╟.", m_name);
 			}
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
-				msg_print("Ваш разум поврежден псионической энергией.");
+				msg_print("п▓п╟я┬ я─п╟п╥я┐п╪ п©п╬п╡я─п╣п╤п╢п╣п╫ п©я│п╦п╬п╫п╦я┤п╣я│п╨п╬п╧ я█п╫п╣я─пЁп╦п╣п╧.");
 				take_hit(damroll(12, 15), ddesc);
 				if (!p_ptr->resist_blind)
 				{
@@ -1443,11 +1443,11 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s указывает на вас и заклинает.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s я┐п╨п╟п╥я▀п╡п╟п╣я┌ п╫п╟ п╡п╟я│ п╦ п╥п╟п╨п╩п╦п╫п╟п╣я┌.", m_name);
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
@@ -1461,11 +1461,11 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s указывает на вас и громко заклинает.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s я┐п╨п╟п╥я▀п╡п╟п╣я┌ п╫п╟ п╡п╟я│ п╦ пЁя─п╬п╪п╨п╬ п╥п╟п╨п╩п╦п╫п╟п╣я┌.", m_name);
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
@@ -1479,11 +1479,11 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s громко бормочет.", m_name);
-			else msg_format("%^s указывает на вас и произносит ужасное проклятье!", m_name);
+			if (blind) msg_format("%^s пЁя─п╬п╪п╨п╬ п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s я┐п╨п╟п╥я▀п╡п╟п╣я┌ п╫п╟ п╡п╟я│ п╦ п©я─п╬п╦п╥п╫п╬я│п╦я┌ я┐п╤п╟я│п╫п╬п╣ п©я─п╬п╨п╩я▐я┌я▄п╣!", m_name);
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
@@ -1497,11 +1497,11 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s кричит 'УМРИ!'", m_name);
-			else msg_format("%^s указывает на вас и кричит 'УМРИ'!", m_name);
+			if (blind) msg_format("%^s п╨я─п╦я┤п╦я┌ 'пёп°п═п≤!'", m_name);
+			else msg_format("%^s я┐п╨п╟п╥я▀п╡п╟п╣я┌ п╫п╟ п╡п╟я│ п╦ п╨я─п╦я┤п╦я┌ 'пёп°п═п≤'!", m_name);
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
@@ -1515,8 +1515,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+16:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует кислотную стрелу.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╨п╦я│п╩п╬я┌п╫я┐я▌ я│я┌я─п╣п╩я┐.", m_name);
 			bolt(m_idx, GF_ACID,
 			     damroll(7, 8) + (rlev / 3));
 			update_smart_learn(m_idx, DRS_RES_ACID);
@@ -1527,8 +1527,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+17:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует удар молнии.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ я┐п╢п╟я─ п╪п╬п╩п╫п╦п╦.", m_name);
 			bolt(m_idx, GF_ELEC,
 			     damroll(4, 8) + (rlev / 3));
 			update_smart_learn(m_idx, DRS_RES_ELEC);
@@ -1539,8 +1539,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+18:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует огненную стрелу.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╬пЁп╫п╣п╫п╫я┐я▌ я│я┌я─п╣п╩я┐.", m_name);
 			bolt(m_idx, GF_FIRE,
 			     damroll(9, 8) + (rlev / 3));
 			update_smart_learn(m_idx, DRS_RES_FIRE);
@@ -1551,8 +1551,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+19:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует ледяную стрелу.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╩п╣п╢я▐п╫я┐я▌ я│я┌я─п╣п╩я┐.", m_name);
 			bolt(m_idx, GF_COLD,
 			     damroll(6, 8) + (rlev / 3));
 			update_smart_learn(m_idx, DRS_RES_COLD);
@@ -1570,8 +1570,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+21:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует могильную стрелу.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╪п╬пЁп╦п╩я▄п╫я┐я▌ я│я┌я─п╣п╩я┐.", m_name);
 			bolt(m_idx, GF_NETHER,
 			     30 + damroll(5, 5) + (rlev * 3) / 2);
 			update_smart_learn(m_idx, DRS_RES_NETHR);
@@ -1582,8 +1582,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+22:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует струю воды.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ я│я┌я─я┐я▌ п╡п╬п╢я▀.", m_name);
 			bolt(m_idx, GF_WATER,
 			     damroll(10, 10) + (rlev));
 			break;
@@ -1593,8 +1593,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+23:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует стрелу маны.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ я│я┌я─п╣п╩я┐ п╪п╟п╫я▀.", m_name);
 			bolt(m_idx, GF_MANA,
 			     randint(rlev * 7 / 2) + 50);
 			break;
@@ -1604,8 +1604,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+24:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует плазменную стрелу.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п©п╩п╟п╥п╪п╣п╫п╫я┐я▌ я│я┌я─п╣п╩я┐.", m_name);
 			bolt(m_idx, GF_PLASMA,
 			     10 + damroll(8, 7) + (rlev));
 			break;
@@ -1615,8 +1615,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+25:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует мощную ледяную стрелу.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╪п╬я┴п╫я┐я▌ п╩п╣п╢я▐п╫я┐я▌ я│я┌я─п╣п╩я┐.", m_name);
 			bolt(m_idx, GF_ICE,
 			     damroll(6, 6) + (rlev));
 			update_smart_learn(m_idx, DRS_RES_COLD);
@@ -1627,8 +1627,8 @@ bool make_attack_spell(int m_idx)
 		case RF5_OFFSET+26:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует волшебную стрелу.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╡п╬п╩я┬п╣п╠п╫я┐я▌ я│я┌я─п╣п╩я┐.", m_name);
 			bolt(m_idx, GF_MISSILE,
 			     damroll(2, 6) + (rlev / 3));
 			break;
@@ -1639,15 +1639,15 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет, и вы слышите страшные звуки.", m_name);
-			else msg_format("%^s создает страшную иллюзию.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌, п╦ п╡я▀ я│п╩я▀я┬п╦я┌п╣ я│я┌я─п╟я┬п╫я▀п╣ п╥п╡я┐п╨п╦.", m_name);
+			else msg_format("%^s я│п╬п╥п╢п╟п╣я┌ я│я┌я─п╟я┬п╫я┐я▌ п╦п╩п╩я▌п╥п╦я▌.", m_name);
 			if (p_ptr->resist_fear)
 			{
-				msg_print("Но вас так просто не запугать!");
+				msg_print("п²п╬ п╡п╟я│ я┌п╟п╨ п©я─п╬я│я┌п╬ п╫п╣ п╥п╟п©я┐пЁп╟я┌я▄!");
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Но вас так просто не запугать!");
+				msg_print("п²п╬ п╡п╟я│ я┌п╟п╨ п©я─п╬я│я┌п╬ п╫п╣ п╥п╟п©я┐пЁп╟я┌я▄!");
 			}
 			else
 			{
@@ -1662,15 +1662,15 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s колдует заклинание, выжигающее ваши глаза!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣, п╡я▀п╤п╦пЁп╟я▌я┴п╣п╣ п╡п╟я┬п╦ пЁп╩п╟п╥п╟!", m_name);
 			if (p_ptr->resist_blind)
 			{
-				msg_print("Ничего не произошло!");
+				msg_print("п²п╦я┤п╣пЁп╬ п╫п╣ п©я─п╬п╦п╥п╬я┬п╩п╬!");
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
@@ -1685,15 +1685,15 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет, и вы слышите загадочные звуки.", m_name);
-			else msg_format("%^s создает странную иллюзию.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌, п╦ п╡я▀ я│п╩я▀я┬п╦я┌п╣ п╥п╟пЁп╟п╢п╬я┤п╫я▀п╣ п╥п╡я┐п╨п╦.", m_name);
+			else msg_format("%^s я│п╬п╥п╢п╟п╣я┌ я│я┌я─п╟п╫п╫я┐я▌ п╦п╩п╩я▌п╥п╦я▌.", m_name);
 			if (p_ptr->resist_confu)
 			{
-				msg_print("Вы не верите заклинанию.");
+				msg_print("п▓я▀ п╫п╣ п╡п╣я─п╦я┌п╣ п╥п╟п╨п╩п╦п╫п╟п╫п╦я▌.");
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы не верите заклинанию.");
+				msg_print("п▓я▀ п╫п╣ п╡п╣я─п╦я┌п╣ п╥п╟п╨п╩п╦п╫п╟п╫п╦я▌.");
 			}
 			else
 			{
@@ -1708,14 +1708,14 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			msg_format("%^s вытягивает силы из ваших мускулов!", m_name);
+			msg_format("%^s п╡я▀я┌я▐пЁп╦п╡п╟п╣я┌ я│п╦п╩я▀ п╦п╥ п╡п╟я┬п╦я┘ п╪я┐я│п╨я┐п╩п╬п╡!", m_name);
 			if (p_ptr->free_act)
 			{
-				msg_print("Ничего не произошло!");
+				msg_print("п²п╦я┤п╣пЁп╬ п╫п╣ п©я─п╬п╦п╥п╬я┬п╩п╬!");
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
@@ -1730,15 +1730,15 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s странно смотрит вам в глаза.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s я│я┌я─п╟п╫п╫п╬ я│п╪п╬я┌я─п╦я┌ п╡п╟п╪ п╡ пЁп╩п╟п╥п╟.", m_name);
 			if (p_ptr->free_act)
 			{
-				msg_print("Ничего не произошло!");
+				msg_print("п²п╦я┤п╣пЁп╬ п╫п╣ п©я─п╬п╦п╥п╬я┬п╩п╬!");
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_format("Вы сопротивляетесь эффектам!");
+				msg_format("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
@@ -1756,24 +1756,24 @@ bool make_attack_spell(int m_idx)
 			disturb(1, 0);
 			if (blind)
 			{
-				msg_format("%^s бормочет.", m_name);
+				msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
 			}
 			else
 			{
-				msg_format("%^s концентрируется на своем теле.", m_name);
+				msg_format("%^s п╨п╬п╫я├п╣п╫я┌я─п╦я─я┐п╣я┌я│я▐ п╫п╟ я│п╡п╬п╣п╪ я┌п╣п╩п╣.", m_name);
 			}
 
 			/* Allow quick speed increases to base+10 */
 			if (m_ptr->mspeed < r_ptr->speed + 10)
 			{
-				msg_format("%^s начинает двигаться быстрее.", m_name);
+				msg_format("%^s п╫п╟я┤п╦п╫п╟п╣я┌ п╢п╡п╦пЁп╟я┌я▄я│я▐ п╠я▀я│я┌я─п╣п╣.", m_name);
 				m_ptr->mspeed += 10;
 			}
 
 			/* Allow small speed increases to base+20 */
 			else if (m_ptr->mspeed < r_ptr->speed + 20)
 			{
-				msg_format("%^s начинает двигаться немного быстрее.", m_name);
+				msg_format("%^s п╫п╟я┤п╦п╫п╟п╣я┌ п╢п╡п╦пЁп╟я┌я▄я│я▐ п╫п╣п╪п╫п╬пЁп╬ п╠я▀я│я┌я─п╣п╣.", m_name);
 				m_ptr->mspeed += 2;
 			}
 
@@ -1794,11 +1794,11 @@ bool make_attack_spell(int m_idx)
 			/* Message */
 			if (blind)
 			{
-				msg_format("%^s бормочет.", m_name);
+				msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
 			}
 			else
 			{
-				msg_format("%^s концентрируется на своих ранах.", m_name);
+				msg_format("%^s п╨п╬п╫я├п╣п╫я┌я─п╦я─я┐п╣я┌я│я▐ п╫п╟ я│п╡п╬п╦я┘ я─п╟п╫п╟я┘.", m_name);
 			}
 
 			/* Heal some */
@@ -1813,11 +1813,11 @@ bool make_attack_spell(int m_idx)
 				/* Message */
 				if (seen)
 				{
-					msg_format("%^s просто блещет здоровьем!", m_name);
+					msg_format("%^s п©я─п╬я│я┌п╬ п╠п╩п╣я┴п╣я┌ п╥п╢п╬я─п╬п╡я▄п╣п╪!", m_name);
 				}
 				else
 				{
-					msg_format("%^s просто блещет здоровьем!", m_name);
+					msg_format("%^s п©я─п╬я│я┌п╬ п╠п╩п╣я┴п╣я┌ п╥п╢п╬я─п╬п╡я▄п╣п╪!", m_name);
 				}
 			}
 
@@ -1827,11 +1827,11 @@ bool make_attack_spell(int m_idx)
 				/* Message */
 				if (seen)
 				{
-					msg_format("%^s выглядит здоровее.", m_name);
+					msg_format("%^s п╡я▀пЁп╩я▐п╢п╦я┌ п╥п╢п╬я─п╬п╡п╣п╣.", m_name);
 				}
 				else
 				{
-					msg_format("%^s звучит здоровее.", m_name);
+					msg_format("%^s п╥п╡я┐я┤п╦я┌ п╥п╢п╬я─п╬п╡п╣п╣.", m_name);
 				}
 			}
 
@@ -1848,7 +1848,7 @@ bool make_attack_spell(int m_idx)
 				monster_desc(m_name, sizeof(m_name), m_ptr, 0x00, PAD_DAT);
 
 				/* Message */
-				msg_format("К %s возвращается храбрость.", m_name);
+				msg_format("п  %s п╡п╬п╥п╡я─п╟я┴п╟п╣я┌я│я▐ я┘я─п╟п╠я─п╬я│я┌я▄.", m_name);
 			}
 
 			break;
@@ -1864,7 +1864,7 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+4:
 		{
 			disturb(1, 0);
-			msg_format("%^s телепортируется недалеко.", m_name);
+			msg_format("%^s я┌п╣п╩п╣п©п╬я─я┌п╦я─я┐п╣я┌я│я▐ п╫п╣п╢п╟п╩п╣п╨п╬.", m_name);
 			teleport_away(m_idx, 10);
 			break;
 		}
@@ -1873,7 +1873,7 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+5:
 		{
 			disturb(1, 0);
-			msg_format("%^s телепортируется куда-то.", m_name);
+			msg_format("%^s я┌п╣п╩п╣п©п╬я─я┌п╦я─я┐п╣я┌я│я▐ п╨я┐п╢п╟-я┌п╬.", m_name);
 			teleport_away(m_idx, MAX_SIGHT * 2 + 5);
 			break;
 		}
@@ -1895,7 +1895,7 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			msg_format("%^s приказывает вам вернуться.", m_name);
+			msg_format("%^s п©я─п╦п╨п╟п╥я▀п╡п╟п╣я┌ п╡п╟п╪ п╡п╣я─п╫я┐я┌я▄я│я▐.", m_name);
 			teleport_player_to(m_ptr->fy, m_ptr->fx);
 			break;
 		}
@@ -1905,7 +1905,7 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			msg_format("%^s телепортирует вас куда-то.", m_name);
+			msg_format("%^s я┌п╣п╩п╣п©п╬я─я┌п╦я─я┐п╣я┌ п╡п╟я│ п╨я┐п╢п╟-я┌п╬.", m_name);
 			teleport_player(100);
 			break;
 		}
@@ -1915,15 +1915,15 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s странно бормочет.", m_name);
-			else msg_format("%^s указывает на ваши ноги.", m_name);
+			if (blind) msg_format("%^s я│я┌я─п╟п╫п╫п╬ п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s я┐п╨п╟п╥я▀п╡п╟п╣я┌ п╫п╟ п╡п╟я┬п╦ п╫п╬пЁп╦.", m_name);
 			if (p_ptr->resist_nexus)
 			{
-				msg_print("Ничего не происходит!");
+				msg_print("п²п╦я┤п╣пЁп╬ п╫п╣ п©я─п╬п╦я│я┘п╬п╢п╦я┌!");
 			}
 			else if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else
 			{
@@ -1944,8 +1944,8 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s бормочет в тени.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌ п╡ я┌п╣п╫п╦.", m_name);
 			(void)unlite_area(0, 3);
 			break;
 		}
@@ -1955,8 +1955,8 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет и злобно хихикает.", m_name);
-			else msg_format("%^s колдует заклинание и злобно хихикает.", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌ п╦ п╥п╩п╬п╠п╫п╬ я┘п╦я┘п╦п╨п╟п╣я┌.", m_name);
+			else msg_format("%^s п╨п╬п╩п╢я┐п╣я┌ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣ п╦ п╥п╩п╬п╠п╫п╬ я┘п╦я┘п╦п╨п╟п╣я┌.", m_name);
 			(void)trap_creation();
 			break;
 		}
@@ -1966,15 +1966,15 @@ bool make_attack_spell(int m_idx)
 		{
 			if (!direct) break;
 			disturb(1, 0);
-			msg_format("%^s пытается стереть вашу память.", m_name);
+			msg_format("%^s п©я▀я┌п╟п╣я┌я│я▐ я│я┌п╣я─п╣я┌я▄ п╡п╟я┬я┐ п©п╟п╪я▐я┌я▄.", m_name);
 
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 			}
 			else if (lose_all_info())
 			{
-				msg_print("Вы все забываете.");
+				msg_print("п▓я▀ п╡я│п╣ п╥п╟п╠я▀п╡п╟п╣я┌п╣.");
 			}
 			break;
 		}
@@ -1989,10 +1989,10 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+16:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает своих %s!", m_name,
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ я│п╡п╬п╦я┘ %s!", m_name,
 			                ((r_ptr->flags1) & RF1_UNIQUE ?
-			                 "подданных" : "сородичей"));
+			                 "п©п╬п╢п╢п╟п╫п╫я▀я┘" : "я│п╬я─п╬п╢п╦я┤п╣п╧"));
 
 			/* Hack -- Set the letter of the monsters to summon */
 			summon_kin_type = r_ptr->d_char;
@@ -2002,7 +2002,7 @@ bool make_attack_spell(int m_idx)
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2011,15 +2011,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+17:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает великих демонов!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п╡п╣п╩п╦п╨п╦я┘ п╢п╣п╪п╬п╫п╬п╡!", m_name);
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_DEMON);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много злых существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ п╥п╩я▀я┘ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2028,15 +2028,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+18:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает подмогу!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п©п╬п╢п╪п╬пЁя┐!", m_name);
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, 0);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как что-то появляется вблизи.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ я┤я┌п╬-я┌п╬ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╡п╠п╩п╦п╥п╦.");
 			}
 			break;
 		}
@@ -2045,15 +2045,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+19:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает монстров!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п╪п╬п╫я│я┌я─п╬п╡!", m_name);
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, 0);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2062,15 +2062,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+20:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает животных!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п╤п╦п╡п╬я┌п╫я▀я┘!", m_name);
 			for (k = 0; k < 6; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_ANIMAL);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2079,15 +2079,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+21:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает пауков!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п©п╟я┐п╨п╬п╡!", m_name);
 			for (k = 0; k < 6; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_SPIDER);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2096,15 +2096,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+22:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает гончих эфира!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ пЁп╬п╫я┤п╦я┘ я█я└п╦я─п╟!", m_name);
 			for (k = 0; k < 6; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HOUND);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2113,15 +2113,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+23:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает гидр!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ пЁп╦п╢я─!", m_name);
 			for (k = 0; k < 6; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HYDRA);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2130,15 +2130,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+24:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает ангела!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п╟п╫пЁп╣п╩п╟!", m_name);
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_ANGEL);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как что-то появляется вблизи.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ я┤я┌п╬-я┌п╬ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╡п╠п╩п╦п╥п╦.");
 			}
 			break;
 		}
@@ -2147,15 +2147,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+25:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает подмогу из ада!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п©п╬п╢п╪п╬пЁя┐ п╦п╥ п╟п╢п╟!", m_name);
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_DEMON);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как что-то появляется вблизи.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ я┤я┌п╬-я┌п╬ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╡п╠п╩п╦п╥п╦.");
 			}
 			break;
 		}
@@ -2164,15 +2164,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+26:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает подмогу из могилы!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п©п╬п╢п╪п╬пЁя┐ п╦п╥ п╪п╬пЁп╦п╩я▀!", m_name);
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_UNDEAD);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как что-то появляется вблизи.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ я┤я┌п╬-я┌п╬ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╡п╠п╩п╦п╥п╦.");
 			}
 			break;
 		}
@@ -2181,15 +2181,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+27:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает дракона!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п╢я─п╟п╨п╬п╫п╟!", m_name);
 			for (k = 0; k < 1; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_DRAGON);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как что-то появляется вблизи.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ я┤я┌п╬-я┌п╬ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╡п╠п╩п╦п╥п╦.");
 			}
 			break;
 		}
@@ -2198,15 +2198,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+28:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает живых мертвецов!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п╤п╦п╡я▀я┘ п╪п╣я─я┌п╡п╣я├п╬п╡!", m_name);
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_UNDEAD);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много страшных существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ я│я┌я─п╟я┬п╫я▀я┘ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2215,15 +2215,15 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+29:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает древних драконов!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п╢я─п╣п╡п╫п╦я┘ п╢я─п╟п╨п╬п╫п╬п╡!", m_name);
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_DRAGON);
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много мощных существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ п╪п╬я┴п╫я▀я┘ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2232,8 +2232,8 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+30:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает Девятерых Кольценосцев!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п■п╣п╡я▐я┌п╣я─я▀я┘ п п╬п╩я▄я├п╣п╫п╬я│я├п╣п╡!", m_name);
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_WRAITH);
@@ -2244,7 +2244,7 @@ bool make_attack_spell(int m_idx)
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много страшных существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ я│я┌я─п╟я┬п╫я▀я┘ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -2253,8 +2253,8 @@ bool make_attack_spell(int m_idx)
 		case RF6_OFFSET+31:
 		{
 			disturb(1, 0);
-			if (blind) msg_format("%^s бормочет.", m_name);
-			else msg_format("%^s вызывает легендарных оппонентов!", m_name);
+			if (blind) msg_format("%^s п╠п╬я─п╪п╬я┤п╣я┌.", m_name);
+			else msg_format("%^s п╡я▀п╥я▀п╡п╟п╣я┌ п╩п╣пЁп╣п╫п╢п╟я─п╫я▀я┘ п╬п©п©п╬п╫п╣п╫я┌п╬п╡!", m_name);
 			for (k = 0; k < 8; k++)
 			{
 				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_UNIQUE);
@@ -2265,7 +2265,7 @@ bool make_attack_spell(int m_idx)
 			}
 			if (blind && count)
 			{
-				msg_print("Вы слышите, как вблизи появляется много мощных существ.");
+				msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣, п╨п╟п╨ п╡п╠п╩п╦п╥п╦ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╪п╫п╬пЁп╬ п╪п╬я┴п╫я▀я┘ я│я┐я┴п╣я│я┌п╡.");
 			}
 			break;
 		}
@@ -3332,7 +3332,7 @@ static void process_monster(int m_idx)
 				monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
 
 				/* Dump a message */
-				msg_format("%^s просыпается.", m_name);
+				msg_format("%^s п©я─п╬я│я▀п©п╟п╣я┌я│я▐.", m_name);
 
 				/* Hack -- Update the health bar */
 				if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3385,7 +3385,7 @@ static void process_monster(int m_idx)
 					monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
 
 					/* Dump a message */
-					msg_format("%^s просыпается.", m_name);
+					msg_format("%^s п©я─п╬я│я▀п©п╟п╣я┌я│я▐.", m_name);
 
 					/* Hack -- Update the health bar */
 					if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3438,8 +3438,8 @@ static void process_monster(int m_idx)
 				monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
 
 				/* Dump a message */
-				msg_format("%^s больше не оглушен%s.", m_name,
-					(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о"));
+				msg_format("%^s п╠п╬п╩я▄я┬п╣ п╫п╣ п╬пЁп╩я┐я┬п╣п╫%s.", m_name,
+					(r_ptr->flags1 & RF1_FEMALE ? "п╟" : r_ptr->flags1 & RF1_MALE ? "" : "п╬"));
 
 				/* Hack -- Update the health bar */
 				if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3478,8 +3478,8 @@ static void process_monster(int m_idx)
 				monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
 
 				/* Dump a message */
-				msg_format("%^s больше не контужен%s.", m_name,
-					(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о"));
+				msg_format("%^s п╠п╬п╩я▄я┬п╣ п╫п╣ п╨п╬п╫я┌я┐п╤п╣п╫%s.", m_name,
+					(r_ptr->flags1 & RF1_FEMALE ? "п╟" : r_ptr->flags1 & RF1_MALE ? "" : "п╬"));
 
 				/* Hack -- Update the health bar */
 				if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3516,7 +3516,7 @@ static void process_monster(int m_idx)
 				monster_desc(m_name, sizeof(m_name), m_ptr, 0x00, PAD_DAT);
 
 				/* Dump a message */
-				msg_format("К %s возвращается храбрость.", m_name);
+				msg_format("п  %s п╡п╬п╥п╡я─п╟я┴п╟п╣я┌я│я▐ я┘я─п╟п╠я─п╬я│я┌я▄.", m_name);
 
 				/* Hack -- Update the health bar */
 				if (p_ptr->health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3757,7 +3757,7 @@ static void process_monster(int m_idx)
 				if (rand_int(m_ptr->hp / 10) > k)
 				{
 					/* Message */
-					msg_print("Вы слышите звук вышибаемой двери!");
+					msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣ п╥п╡я┐п╨ п╡я▀я┬п╦п╠п╟п╣п╪п╬п╧ п╢п╡п╣я─п╦!");
 
 					/* Disturb (sometimes) */
 					if (disturb_minor) disturb(0, 0);
@@ -3804,7 +3804,7 @@ static void process_monster(int m_idx)
 				/* Describe observable breakage */
 				if (cave_info[ny][nx] & (CAVE_MARK))
 				{
-					msg_print("Руна защиты сломана!");
+					msg_print("п═я┐п╫п╟ п╥п╟я┴п╦я┌я▀ я│п╩п╬п╪п╟п╫п╟!");
 				}
 
 				/* Forget the rune */
@@ -3986,7 +3986,7 @@ static void process_monster(int m_idx)
 							if (m_ptr->ml && player_has_los_bold(ny, nx))
 							{
 								/* Dump a message */
-								msg_format("%^s пытается поднять %s, но не может.",
+								msg_format("%^s п©я▀я┌п╟п╣я┌я│я▐ п©п╬п╢п╫я▐я┌я▄ %s, п╫п╬ п╫п╣ п╪п╬п╤п╣я┌.",
 								           m_name, o_name);
 							}
 						}
@@ -4005,7 +4005,7 @@ static void process_monster(int m_idx)
 						if (player_has_los_bold(ny, nx))
 						{
 							/* Dump a message */
-							msg_format("%^s поднимает %s.", m_name, o_name);
+							msg_format("%^s п©п╬п╢п╫п╦п╪п╟п╣я┌ %s.", m_name, o_name);
 						}
 
 						/* Get local object */
@@ -4031,7 +4031,7 @@ static void process_monster(int m_idx)
 						if (player_has_los_bold(ny, nx))
 						{
 							/* Dump a message */
-							msg_format("%^s сокрушает %s.", m_name, o_name);
+							msg_format("%^s я│п╬п╨я─я┐я┬п╟п╣я┌ %s.", m_name, o_name);
 						}
 
 						/* Delete the object */
@@ -4108,7 +4108,7 @@ static void process_monster(int m_idx)
 			monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
 
 			/* Dump a message */
-			msg_format("%^s оборачивается в отчаянии!", m_name);
+			msg_format("%^s п╬п╠п╬я─п╟я┤п╦п╡п╟п╣я┌я│я▐ п╡ п╬я┌я┤п╟я▐п╫п╦п╦!", m_name);
 		}
 
 		/* XXX XXX XXX Actually do something now (?) */

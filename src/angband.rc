@@ -2,126 +2,126 @@
 
 ANGBAND MENU
 {
-	POPUP "&Игра"
+	POPUP "&п≤пЁя─п╟"
 	{
-		MENUITEM "&Новая", 100
-		MENUITEM "&Открыть...", 101
+		MENUITEM "&п²п╬п╡п╟я▐", 100
+		MENUITEM "&п·я┌п╨я─я▀я┌я▄...", 101
 		MENUITEM SEPARATOR
-		MENUITEM "&Сохранить", 110
+		MENUITEM "&п║п╬я┘я─п╟п╫п╦я┌я▄", 110
 		MENUITEM SEPARATOR
-		MENUITEM "В&ыход", 130
+		MENUITEM "п▓&я▀я┘п╬п╢", 130
 	}
 
-	POPUP "&Окна"
+	POPUP "&п·п╨п╫п╟"
 	{
-		POPUP "&Видимость"
+		POPUP "&п▓п╦п╢п╦п╪п╬я│я┌я▄"
 		{
-			MENUITEM "Окно 0", 200
-			MENUITEM "Окно 1", 201
-			MENUITEM "Окно 2", 202
-			MENUITEM "Окно 3", 203
-			MENUITEM "Окно 4", 204
-			MENUITEM "Окно 5", 205
-			MENUITEM "Окно 6", 206
-			MENUITEM "Окно 7", 207
+			MENUITEM "п·п╨п╫п╬ 0", 200
+			MENUITEM "п·п╨п╫п╬ 1", 201
+			MENUITEM "п·п╨п╫п╬ 2", 202
+			MENUITEM "п·п╨п╫п╬ 3", 203
+			MENUITEM "п·п╨п╫п╬ 4", 204
+			MENUITEM "п·п╨п╫п╬ 5", 205
+			MENUITEM "п·п╨п╫п╬ 6", 206
+			MENUITEM "п·п╨п╫п╬ 7", 207
 		}
 
-		POPUP "&Шрифт"
+		POPUP "&п╗я─п╦я└я┌"
 		{
-			MENUITEM "Окно 0", 210
-			MENUITEM "Окно 1", 211
-			MENUITEM "Окно 2", 212
-			MENUITEM "Окно 3", 213
-			MENUITEM "Окно 4", 214
-			MENUITEM "Окно 5", 215
-			MENUITEM "Окно 6", 216
-			MENUITEM "Окно 7", 217
+			MENUITEM "п·п╨п╫п╬ 0", 210
+			MENUITEM "п·п╨п╫п╬ 1", 211
+			MENUITEM "п·п╨п╫п╬ 2", 212
+			MENUITEM "п·п╨п╫п╬ 3", 213
+			MENUITEM "п·п╨п╫п╬ 4", 214
+			MENUITEM "п·п╨п╫п╬ 5", 215
+			MENUITEM "п·п╨п╫п╬ 6", 216
+			MENUITEM "п·п╨п╫п╬ 7", 217
 		}
 
 		MENUITEM SEPARATOR
 
-		POPUP "Специальный вывод"
+		POPUP "п║п©п╣я├п╦п╟п╩я▄п╫я▀п╧ п╡я▀п╡п╬п╢"
 		{
-			MENUITEM "Окно 0", 230
-			MENUITEM "Окно 1", 231
-			MENUITEM "Окно 2", 232
-			MENUITEM "Окно 3", 233
-			MENUITEM "Окно 4", 234
-			MENUITEM "Окно 5", 235
-			MENUITEM "Окно 6", 236
-			MENUITEM "Окно 7", 237
+			MENUITEM "п·п╨п╫п╬ 0", 230
+			MENUITEM "п·п╨п╫п╬ 1", 231
+			MENUITEM "п·п╨п╫п╬ 2", 232
+			MENUITEM "п·п╨п╫п╬ 3", 233
+			MENUITEM "п·п╨п╫п╬ 4", 234
+			MENUITEM "п·п╨п╫п╬ 5", 235
+			MENUITEM "п·п╨п╫п╬ 6", 236
+			MENUITEM "п·п╨п╫п╬ 7", 237
 		}
 
-		POPUP "Увеличить ширину клетки"
+		POPUP "пёп╡п╣п╩п╦я┤п╦я┌я▄ я┬п╦я─п╦п╫я┐ п╨п╩п╣я┌п╨п╦"
 		{
-			MENUITEM "Окно 0", 240
-			MENUITEM "Окно 1", 241
-			MENUITEM "Окно 2", 242
-			MENUITEM "Окно 3", 243
-			MENUITEM "Окно 4", 244
-			MENUITEM "Окно 5", 245
-			MENUITEM "Окно 6", 246
-			MENUITEM "Окно 7", 247
+			MENUITEM "п·п╨п╫п╬ 0", 240
+			MENUITEM "п·п╨п╫п╬ 1", 241
+			MENUITEM "п·п╨п╫п╬ 2", 242
+			MENUITEM "п·п╨п╫п╬ 3", 243
+			MENUITEM "п·п╨п╫п╬ 4", 244
+			MENUITEM "п·п╨п╫п╬ 5", 245
+			MENUITEM "п·п╨п╫п╬ 6", 246
+			MENUITEM "п·п╨п╫п╬ 7", 247
 		}
 
-		POPUP "Уменьшить ширину клетки"
+		POPUP "пёп╪п╣п╫я▄я┬п╦я┌я▄ я┬п╦я─п╦п╫я┐ п╨п╩п╣я┌п╨п╦"
 		{
-			MENUITEM "Окно 0", 250
-			MENUITEM "Окно 1", 251
-			MENUITEM "Окно 2", 252
-			MENUITEM "Окно 3", 253
-			MENUITEM "Окно 4", 254
-			MENUITEM "Окно 5", 255
-			MENUITEM "Окно 6", 256
-			MENUITEM "Окно 7", 257
+			MENUITEM "п·п╨п╫п╬ 0", 250
+			MENUITEM "п·п╨п╫п╬ 1", 251
+			MENUITEM "п·п╨п╫п╬ 2", 252
+			MENUITEM "п·п╨п╫п╬ 3", 253
+			MENUITEM "п·п╨п╫п╬ 4", 254
+			MENUITEM "п·п╨п╫п╬ 5", 255
+			MENUITEM "п·п╨п╫п╬ 6", 256
+			MENUITEM "п·п╨п╫п╬ 7", 257
 		}
 
-		POPUP "Увеличить высоту клетки"
+		POPUP "пёп╡п╣п╩п╦я┤п╦я┌я▄ п╡я▀я│п╬я┌я┐ п╨п╩п╣я┌п╨п╦"
 		{
-			MENUITEM "Окно 0", 260
-			MENUITEM "Окно 1", 261
-			MENUITEM "Окно 2", 262
-			MENUITEM "Окно 3", 263
-			MENUITEM "Окно 4", 264
-			MENUITEM "Окно 5", 265
-			MENUITEM "Окно 6", 266
-			MENUITEM "Окно 7", 267
+			MENUITEM "п·п╨п╫п╬ 0", 260
+			MENUITEM "п·п╨п╫п╬ 1", 261
+			MENUITEM "п·п╨п╫п╬ 2", 262
+			MENUITEM "п·п╨п╫п╬ 3", 263
+			MENUITEM "п·п╨п╫п╬ 4", 264
+			MENUITEM "п·п╨п╫п╬ 5", 265
+			MENUITEM "п·п╨п╫п╬ 6", 266
+			MENUITEM "п·п╨п╫п╬ 7", 267
 		}
 
-		POPUP "Уменьшить высоту клетки"
+		POPUP "пёп╪п╣п╫я▄я┬п╦я┌я▄ п╡я▀я│п╬я┌я┐ п╨п╩п╣я┌п╨п╦"
 		{
-			MENUITEM "Окно 0", 270
-			MENUITEM "Окно 1", 271
-			MENUITEM "Окно 2", 272
-			MENUITEM "Окно 3", 273
-			MENUITEM "Окно 4", 274
-			MENUITEM "Окно 5", 275
-			MENUITEM "Окно 6", 276
-			MENUITEM "Окно 7", 277
+			MENUITEM "п·п╨п╫п╬ 0", 270
+			MENUITEM "п·п╨п╫п╬ 1", 271
+			MENUITEM "п·п╨п╫п╬ 2", 272
+			MENUITEM "п·п╨п╫п╬ 3", 273
+			MENUITEM "п·п╨п╫п╬ 4", 274
+			MENUITEM "п·п╨п╫п╬ 5", 275
+			MENUITEM "п·п╨п╫п╬ 6", 276
+			MENUITEM "п·п╨п╫п╬ 7", 277
 		}
 	}
 
-	POPUP "&Прочее"
+	POPUP "&п÷я─п╬я┤п╣п╣"
 	{
-		POPUP "&Графика"
+		POPUP "&п⌠я─п╟я└п╦п╨п╟"
 		{
-			MENUITEM "&Нет", 400
-			MENUITEM "&Старая (8x8)", 401
-			MENUITEM "&Адам Болт (16x16)", 402
-			MENUITEM "&Дэвид Гервэйс (32x32)", 403
-			MENUITEM "&Удвоенная ширина", 409
+			MENUITEM "&п²п╣я┌", 400
+			MENUITEM "&п║я┌п╟я─п╟я▐ (8x8)", 401
+			MENUITEM "&п░п╢п╟п╪ п▒п╬п╩я┌ (16x16)", 402
+			MENUITEM "&п■я█п╡п╦п╢ п⌠п╣я─п╡я█п╧я│ (32x32)", 403
+			MENUITEM "&пёп╢п╡п╬п╣п╫п╫п╟я▐ я┬п╦я─п╦п╫п╟", 409
 		}
 
-		MENUITEM "&Звук", 410
+		MENUITEM "&п≈п╡я┐п╨", 410
 		MENUITEM SEPARATOR
-		MENUITEM "Пониженный приоритет", 420
-		MENUITEM "Заставка", 430
-		MENUITEM "&Карта", 440
+		MENUITEM "п÷п╬п╫п╦п╤п╣п╫п╫я▀п╧ п©я─п╦п╬я─п╦я┌п╣я┌", 420
+		MENUITEM "п≈п╟я│я┌п╟п╡п╨п╟", 430
+		MENUITEM "&п п╟я─я┌п╟", 440
 	}
 
-	POPUP "&Справка"
+	POPUP "&п║п©я─п╟п╡п╨п╟"
 	{
-		MENUITEM "&Вызов справки", 901
+		MENUITEM "&п▓я▀п╥п╬п╡ я│п©я─п╟п╡п╨п╦", 901
 	}
 }
 

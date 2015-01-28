@@ -76,14 +76,14 @@ static bool check_hit(int power, int level)
  */
 static cptr desc_insult[MAX_DESC_INSULT] =
 {
-	"оскорбляет вас!",
-	"оскорбляет вашу маму!",
-	"показывает вам палец!",
-	"смеется над вами!",
-	"дразнит вас!",
-	"угрожает вам!",
-	"показывает вам кукиш!!!",
-	"обзывает вас!"
+	"п╬я│п╨п╬я─п╠п╩я▐п╣я┌ п╡п╟я│!",
+	"п╬я│п╨п╬я─п╠п╩я▐п╣я┌ п╡п╟я┬я┐ п╪п╟п╪я┐!",
+	"п©п╬п╨п╟п╥я▀п╡п╟п╣я┌ п╡п╟п╪ п©п╟п╩п╣я├!",
+	"я│п╪п╣п╣я┌я│я▐ п╫п╟п╢ п╡п╟п╪п╦!",
+	"п╢я─п╟п╥п╫п╦я┌ п╡п╟я│!",
+	"я┐пЁя─п╬п╤п╟п╣я┌ п╡п╟п╪!",
+	"п©п╬п╨п╟п╥я▀п╡п╟п╣я┌ п╡п╟п╪ п╨я┐п╨п╦я┬!!!",
+	"п╬п╠п╥я▀п╡п╟п╣я┌ п╡п╟я│!"
 };
 
 
@@ -95,10 +95,10 @@ static cptr desc_insult[MAX_DESC_INSULT] =
  */
 static cptr desc_moan[MAX_DESC_MOAN] =
 {
-	"выглядит грустным.",
-	"спрашивает насчет своих собак.",
-	"требует убраться с его земли.",
-	"что-то говорит про грибы."
+	"п╡я▀пЁп╩я▐п╢п╦я┌ пЁя─я┐я│я┌п╫я▀п╪.",
+	"я│п©я─п╟я┬п╦п╡п╟п╣я┌ п╫п╟я│я┤п╣я┌ я│п╡п╬п╦я┘ я│п╬п╠п╟п╨.",
+	"я┌я─п╣п╠я┐п╣я┌ я┐п╠я─п╟я┌я▄я│я▐ я│ п╣пЁп╬ п╥п╣п╪п╩п╦.",
+	"я┤я┌п╬-я┌п╬ пЁп╬п╡п╬я─п╦я┌ п©я─п╬ пЁя─п╦п╠я▀."
 };
 
 
@@ -239,7 +239,7 @@ bool make_attack_normal(int m_idx)
 				}
 
 				/* Message */
-				msg_format("%^s отражается.", m_name);
+				msg_format("%^s п╬я┌я─п╟п╤п╟п╣я┌я│я▐.", m_name);
 
 				/* Hack -- Next attack */
 				continue;
@@ -254,48 +254,48 @@ bool make_attack_normal(int m_idx)
 			{
 				case RBM_HIT:
 				{
-					act = "бьет вас.";
+					act = "п╠я▄п╣я┌ п╡п╟я│.";
 					do_cut = do_stun = 1;
 					break;
 				}
 
 				case RBM_TOUCH:
 				{
-					act = "касается вас.";
+					act = "п╨п╟я│п╟п╣я┌я│я▐ п╡п╟я│.";
 					break;
 				}
 
 				case RBM_PUNCH:
 				{
-					act = "толкает вас.";
+					act = "я┌п╬п╩п╨п╟п╣я┌ п╡п╟я│.";
 					do_stun = 1;
 					break;
 				}
 
 				case RBM_KICK:
 				{
-					act = "пинает вас.";
+					act = "п©п╦п╫п╟п╣я┌ п╡п╟я│.";
 					do_stun = 1;
 					break;
 				}
 
 				case RBM_CLAW:
 				{
-					act = "царапает вас.";
+					act = "я├п╟я─п╟п©п╟п╣я┌ п╡п╟я│.";
 					do_cut = 1;
 					break;
 				}
 
 				case RBM_BITE:
 				{
-					act = "кусает вас.";
+					act = "п╨я┐я│п╟п╣я┌ п╡п╟я│.";
 					do_cut = 1;
 					break;
 				}
 
 				case RBM_STING:
 				{
-					act = "жалит вас.";
+					act = "п╤п╟п╩п╦я┌ п╡п╟я│.";
 					break;
 				}
 
@@ -307,21 +307,21 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_BUTT:
 				{
-					act = "бодает вас.";
+					act = "п╠п╬п╢п╟п╣я┌ п╡п╟я│.";
 					do_stun = 1;
 					break;
 				}
 
 				case RBM_CRUSH:
 				{
-					act = "сдавливает вас.";
+					act = "я│п╢п╟п╡п╩п╦п╡п╟п╣я┌ п╡п╟я│.";
 					do_stun = 1;
 					break;
 				}
 
 				case RBM_ENGULF:
 				{
-					act = "обволакивает вас.";
+					act = "п╬п╠п╡п╬п╩п╟п╨п╦п╡п╟п╣я┌ п╡п╟я│.";
 					break;
 				}
 
@@ -333,19 +333,19 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_CRAWL:
 				{
-					act = "ползет по вам.";
+					act = "п©п╬п╩п╥п╣я┌ п©п╬ п╡п╟п╪.";
 					break;
 				}
 
 				case RBM_DROOL:
 				{
-					act = "кричит на вас.";
+					act = "п╨я─п╦я┤п╦я┌ п╫п╟ п╡п╟я│.";
 					break;
 				}
 
 				case RBM_SPIT:
 				{
-					act = "плюет на вас.";
+					act = "п©п╩я▌п╣я┌ п╫п╟ п╡п╟я│.";
 					break;
 				}
 
@@ -357,19 +357,19 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_GAZE:
 				{
-					act = "смотрит на вас.";
+					act = "я│п╪п╬я┌я─п╦я┌ п╫п╟ п╡п╟я│.";
 					break;
 				}
 
 				case RBM_WAIL:
 				{
-					act = "воет на вас.";
+					act = "п╡п╬п╣я┌ п╫п╟ п╡п╟я│.";
 					break;
 				}
 
 				case RBM_SPORE:
 				{
-					act = "высыпает споры на вас.";
+					act = "п╡я▀я│я▀п©п╟п╣я┌ я│п©п╬я─я▀ п╫п╟ п╡п╟я│.";
 					break;
 				}
 
@@ -381,7 +381,7 @@ bool make_attack_normal(int m_idx)
 
 				case RBM_BEG:
 				{
-					act = "просит милостыню у вас.";
+					act = "п©я─п╬я│п╦я┌ п╪п╦п╩п╬я│я┌я▀п╫я▌ я┐ п╡п╟я│.";
 					break;
 				}
 
@@ -518,7 +518,7 @@ bool make_attack_normal(int m_idx)
 						{
 							int heal = rlev * drained;
 
-							msg_print("Энергия вытекает из вашего рюкзака!");
+							msg_print("п╜п╫п╣я─пЁп╦я▐ п╡я▀я┌п╣п╨п╟п╣я┌ п╦п╥ п╡п╟я┬п╣пЁп╬ я─я▌п╨п╥п╟п╨п╟!");
 
 							obvious = TRUE;
 
@@ -560,7 +560,7 @@ bool make_attack_normal(int m_idx)
 					                      p_ptr->lev)))
 					{
 						/* Saving throw message */
-						msg_print("Вы быстро закрываете кошелек рукой!");
+						msg_print("п▓я▀ п╠я▀я│я┌я─п╬ п╥п╟п╨я─я▀п╡п╟п╣я┌п╣ п╨п╬я┬п╣п╩п╣п╨ я─я┐п╨п╬п╧!");
 
 						/* Occasional blink anyway */
 						if (rand_int(3)) blinked = TRUE;
@@ -576,17 +576,17 @@ bool make_attack_normal(int m_idx)
 						p_ptr->au -= gold;
 						if (gold <= 0)
 						{
-							msg_print("Ничего не было украдено.");
+							msg_print("п²п╦я┤п╣пЁп╬ п╫п╣ п╠я▀п╩п╬ я┐п╨я─п╟п╢п╣п╫п╬.");
 						}
 						else if (p_ptr->au)
 						{
-							msg_print("Ваш кошелек становится легче.");
-							msg_format("%ld монет было украдено!", (long)gold);
+							msg_print("п▓п╟я┬ п╨п╬я┬п╣п╩п╣п╨ я│я┌п╟п╫п╬п╡п╦я┌я│я▐ п╩п╣пЁя┤п╣.");
+							msg_format("%ld п╪п╬п╫п╣я┌ п╠я▀п╩п╬ я┐п╨я─п╟п╢п╣п╫п╬!", (long)gold);
 						}
 						else
 						{
-							msg_print("Ваш кошелек становится легче.");
-							msg_print("Все ваши деньги были украдены!");
+							msg_print("п▓п╟я┬ п╨п╬я┬п╣п╩п╣п╨ я│я┌п╟п╫п╬п╡п╦я┌я│я▐ п╩п╣пЁя┤п╣.");
+							msg_print("п▓я│п╣ п╡п╟я┬п╦ п╢п╣п╫я▄пЁп╦ п╠я▀п╩п╦ я┐п╨я─п╟п╢п╣п╫я▀!");
 						}
 
 						/* Redraw gold */
@@ -613,7 +613,7 @@ bool make_attack_normal(int m_idx)
 					                      p_ptr->lev)))
 					{
 						/* Saving throw message */
-						msg_print("Вы быстро закрываете свою рюкзак!");
+						msg_print("п▓я▀ п╠я▀я│я┌я─п╬ п╥п╟п╨я─я▀п╡п╟п╣я┌п╣ я│п╡п╬я▌ я─я▌п╨п╥п╟п╨!");
 
 						/* Occasional "blink" anyway */
 						blinked = TRUE;
@@ -648,11 +648,11 @@ bool make_attack_normal(int m_idx)
 						rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3, PAD_IMEN);
 
 						/* Message */
-						msg_format("Ваш%s %s (%c) был%s похищен%s!",
-							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+						msg_format("п▓п╟я┬%s %s (%c) п╠я▀п╩%s п©п╬я┘п╦я┴п╣п╫%s!",
+							   (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╣" : "п╦"),
 						           o_name, index_to_label(i),
-							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"),
-							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+							   (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "п╦"),
+							   (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀"));
 
 						/* Get local object */
 						i_ptr = &object_type_body;
@@ -715,11 +715,11 @@ bool make_attack_normal(int m_idx)
 						rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0, PAD_IMEN);
 
 						/* Message */
-						msg_format("Ваш%s %s (%c) был%s съеден%s!",
-							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+						msg_format("п▓п╟я┬%s %s (%c) п╠я▀п╩%s я│я┼п╣п╢п╣п╫%s!",
+							   (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╣" : "п╦"),
 						           o_name, index_to_label(i),
-							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"),
-							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+							   (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "п╦"),
+							   (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀"));
 
 						/* Steal the items */
 						inven_item_increase(i, -1);
@@ -753,7 +753,7 @@ bool make_attack_normal(int m_idx)
 						/* Notice */
 						if (!p_ptr->blind)
 						{
-							msg_print("Свет мерцает.");
+							msg_print("п║п╡п╣я┌ п╪п╣я─я├п╟п╣я┌.");
 							obvious = TRUE;
 						}
 
@@ -770,7 +770,7 @@ bool make_attack_normal(int m_idx)
 					obvious = TRUE;
 
 					/* Message */
-					msg_print("Вы покрыты кислотой!");
+					msg_print("п▓я▀ п©п╬п╨я─я▀я┌я▀ п╨п╦я│п╩п╬я┌п╬п╧!");
 
 					/* Special damage */
 					acid_dam(damage, ddesc);
@@ -787,7 +787,7 @@ bool make_attack_normal(int m_idx)
 					obvious = TRUE;
 
 					/* Message */
-					msg_print("Вас ударило током!");
+					msg_print("п▓п╟я│ я┐п╢п╟я─п╦п╩п╬ я┌п╬п╨п╬п╪!");
 
 					/* Take damage (special) */
 					elec_dam(damage, ddesc);
@@ -804,7 +804,7 @@ bool make_attack_normal(int m_idx)
 					obvious = TRUE;
 
 					/* Message */
-					msg_print("Вас обволакивает пламя!");
+					msg_print("п▓п╟я│ п╬п╠п╡п╬п╩п╟п╨п╦п╡п╟п╣я┌ п©п╩п╟п╪я▐!");
 
 					/* Take damage (special) */
 					fire_dam(damage, ddesc);
@@ -821,7 +821,7 @@ bool make_attack_normal(int m_idx)
 					obvious = TRUE;
 
 					/* Message */
-					msg_print("Вас покрывает иней!");
+					msg_print("п▓п╟я│ п©п╬п╨я─я▀п╡п╟п╣я┌ п╦п╫п╣п╧!");
 
 					/* Take damage (special) */
 					cold_dam(damage, ddesc);
@@ -880,12 +880,12 @@ bool make_attack_normal(int m_idx)
 					/* Increase "afraid" */
 					if (p_ptr->resist_fear)
 					{
-						msg_print("Вы не поддаетесь страху!");
+						msg_print("п▓я▀ п╫п╣ п©п╬п╢п╢п╟п╣я┌п╣я│я▄ я│я┌я─п╟я┘я┐!");
 						obvious = TRUE;
 					}
 					else if (rand_int(100) < p_ptr->skill_sav)
 					{
-						msg_print("Вы не поддаетесь страху!");
+						msg_print("п▓я▀ п╫п╣ п©п╬п╢п╢п╟п╣я┌п╣я│я▄ я│я┌я─п╟я┘я┐!");
 						obvious = TRUE;
 					}
 					else
@@ -913,12 +913,12 @@ bool make_attack_normal(int m_idx)
 					/* Increase "paralyzed" */
 					if (p_ptr->free_act)
 					{
-						msg_print("Вы не воздействованы!");
+						msg_print("п▓я▀ п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫я▀!");
 						obvious = TRUE;
 					}
 					else if (rand_int(100) < p_ptr->skill_sav)
 					{
-						msg_print("Вы сопротивляетесь эффектам!");
+						msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 						obvious = TRUE;
 					}
 					else
@@ -1055,19 +1055,19 @@ bool make_attack_normal(int m_idx)
 
 					if (p_ptr->hold_life && (rand_int(100) < 95))
 					{
-						msg_print("Вы сопротивляетесь вытягиванию жизни!");
+						msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╫п╦я▌ п╤п╦п╥п╫п╦!");
 					}
 					else
 					{
 						s32b d = damroll(10, 6) + (p_ptr->exp/100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life)
 						{
-							msg_print("Ваша жизнь вытягивается из вас!");
+							msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 							lose_exp(d/10);
 						}
 						else
 						{
-							msg_print("Ваша жизнь высасывается из вас!");
+							msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я│п╟я│я▀п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 							lose_exp(d);
 						}
 					}
@@ -1084,7 +1084,7 @@ bool make_attack_normal(int m_idx)
 
 					if (p_ptr->hold_life && (rand_int(100) < 90))
 					{
-						msg_print("Вы сопротивляетесь вытягиванию жизни!");
+						msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╫п╦я▌ п╤п╦п╥п╫п╦!");
 					}
 					else
 					{
@@ -1092,12 +1092,12 @@ bool make_attack_normal(int m_idx)
 
 						if (p_ptr->hold_life)
 						{
-							msg_print("Ваша жизнь вытягивается из вас!");
+							msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 							lose_exp(d / 10);
 						}
 						else
 						{
-							msg_print("Ваша жизнь высасывается из вас!");
+							msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я│п╟я│я▀п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 							lose_exp(d);
 						}
 					}
@@ -1114,7 +1114,7 @@ bool make_attack_normal(int m_idx)
 
 					if (p_ptr->hold_life && (rand_int(100) < 75))
 					{
-						msg_print("Вы сопротивляетесь вытягиванию жизни!");
+						msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╫п╦я▌ п╤п╦п╥п╫п╦!");
 					}
 					else
 					{
@@ -1122,12 +1122,12 @@ bool make_attack_normal(int m_idx)
 
 						if (p_ptr->hold_life)
 						{
-							msg_print("Ваша жизнь вытягивается из вас!");
+							msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 							lose_exp(d / 10);
 						}
 						else
 						{
-							msg_print("Ваша жизнь высасывается из вас!");
+							msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я│п╟я│я▀п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 							lose_exp(d);
 						}
 					}
@@ -1144,7 +1144,7 @@ bool make_attack_normal(int m_idx)
 
 					if (p_ptr->hold_life && (rand_int(100) < 50))
 					{
-						msg_print("Вы сопротивляетесь вытягиванию жизни!");
+						msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╫п╦я▌ п╤п╦п╥п╫п╦!");
 					}
 					else
 					{
@@ -1152,12 +1152,12 @@ bool make_attack_normal(int m_idx)
 
 						if (p_ptr->hold_life)
 						{
-							msg_print("Ваша жизнь вытягивается из вас!");
+							msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 							lose_exp(d / 10);
 						}
 						else
 						{
-							msg_print("Ваша жизнь высасывается из вас!");
+							msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я│п╟я│я▀п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 							lose_exp(d);
 						}
 					}
@@ -1279,7 +1279,7 @@ bool make_attack_normal(int m_idx)
 					disturb(1, 0);
 
 					/* Message */
-					msg_format("%^s не попадает в вас.", m_name);
+					msg_format("%^s п╫п╣ п©п╬п©п╟п╢п╟п╣я┌ п╡ п╡п╟я│.", m_name);
 				}
 
 				break;
@@ -1308,7 +1308,7 @@ bool make_attack_normal(int m_idx)
 	/* Blink away */
 	if (blinked)
 	{
-		msg_print("Вор исчезает в клубе дыма!");
+		msg_print("п▓п╬я─ п╦я│я┤п╣п╥п╟п╣я┌ п╡ п╨п╩я┐п╠п╣ п╢я▀п╪п╟!");
 		teleport_away(m_idx, MAX_SIGHT * 2 + 5);
 	}
 

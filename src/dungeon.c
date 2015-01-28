@@ -192,7 +192,7 @@ static void sense_inventory(void)
 		/* Message (equipment) */
 		if (i >= INVEN_WIELD)
 		{
-			msg_format("Вы чувствуете, что ваш предмет %^s (%c) %s...",
+			msg_format("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣, я┤я┌п╬ п╡п╟я┬ п©я─п╣п╢п╪п╣я┌ %^s (%c) %s...",
 			           o_name, index_to_label(i),
 			           inscrip_text[feel - INSCRIP_NULL]);
 		}
@@ -200,7 +200,7 @@ static void sense_inventory(void)
 		/* Message (inventory) */
 		else
 		{
-			msg_format("Вы чувствуете, что ваш предмет %^s (%c) в рюкзаке %s...",
+			msg_format("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣, я┤я┌п╬ п╡п╟я┬ п©я─п╣п╢п╪п╣я┌ %^s (%c) п╡ я─я▌п╨п╥п╟п╨п╣ %s...",
 			           o_name, index_to_label(i),
 			           inscrip_text[feel - INSCRIP_NULL]);
 		}
@@ -390,11 +390,11 @@ static void recharged_notice(const object_type *o_ptr)
 
 			/* Notify the player */
 			if (o_ptr->number > 1)
-				msg_format("%^s перезарядились.", o_name);
+				msg_format("%^s п©п╣я─п╣п╥п╟я─я▐п╢п╦п╩п╦я│я▄.", o_name);
 
 			/* Single, non-artifact items */
-			else msg_format("%^s перезарядил%s.", o_name,
-				(rod == ROD_M ? "ся" : rod == ROD_F ? "ась" : rod == ROD_N ? "ось" : "ись"));
+			else msg_format("%^s п©п╣я─п╣п╥п╟я─я▐п╢п╦п╩%s.", o_name,
+				(rod == ROD_M ? "я│я▐" : rod == ROD_F ? "п╟я│я▄" : rod == ROD_N ? "п╬я│я▄" : "п╦я│я▄"));
 
 			/* Done */
 			return;
@@ -555,15 +555,15 @@ static void process_world(void)
 				closing_flag++;
 
 				/* Message */
-				msg_print("Врата в ANGBAND закрываются...");
-				msg_print("Завершите или сохраните игру.");
+				msg_print("п▓я─п╟я┌п╟ п╡ ANGBAND п╥п╟п╨я─я▀п╡п╟я▌я┌я│я▐...");
+				msg_print("п≈п╟п╡п╣я─я┬п╦я┌п╣ п╦п╩п╦ я│п╬я┘я─п╟п╫п╦я┌п╣ п╦пЁя─я┐.");
 			}
 
 			/* Slam the gate */
 			else
 			{
 				/* Message */
-				msg_print("Врата в ANGBAND закрыты.");
+				msg_print("п▓я─п╟я┌п╟ п╡ ANGBAND п╥п╟п╨я─я▀я┌я▀.");
 
 				/* Stop playing */
 				p_ptr->playing = FALSE;
@@ -592,14 +592,14 @@ static void process_world(void)
 			if (dawn)
 			{
 				/* Message */
-				msg_print("Взошло солнце.");
+				msg_print("п▓п╥п╬я┬п╩п╬ я│п╬п╩п╫я├п╣.");
 			}
 
 			/* Night falls */
 			else
 			{
 				/* Message */
-				msg_print("Зашло солнце.");
+				msg_print("п≈п╟я┬п╩п╬ я│п╬п╩п╫я├п╣.");
 			}
 
 			/* Illuminate */
@@ -619,7 +619,7 @@ static void process_world(void)
 			int n;
 
 			/* Message */
-			if (cheat_xtra) msg_print("Обновление магазинов...");
+			if (cheat_xtra) msg_print("п·п╠п╫п╬п╡п╩п╣п╫п╦п╣ п╪п╟пЁп╟п╥п╦п╫п╬п╡...");
 
 			/* Maintain each shop (except home) */
 			for (n = 0; n < MAX_STORES; n++)
@@ -635,7 +635,7 @@ static void process_world(void)
 			if (rand_int(STORE_SHUFFLE) == 0)
 			{
 				/* Message */
-				if (cheat_xtra) msg_print("Смена продавца...");
+				if (cheat_xtra) msg_print("п║п╪п╣п╫п╟ п©я─п╬п╢п╟п╡я├п╟...");
 
 				/* Pick a random shop (except home) */
 				while (1)
@@ -649,7 +649,7 @@ static void process_world(void)
 			}
 
 			/* Message */
-			if (cheat_xtra) msg_print("Сделано.");
+			if (cheat_xtra) msg_print("п║п╢п╣п╩п╟п╫п╬.");
 		}
 	}
 
@@ -673,7 +673,7 @@ static void process_world(void)
 	if (p_ptr->poisoned)
 	{
 		/* Take damage */
-		take_hit(1, "отравлением");
+		take_hit(1, "п╬я┌я─п╟п╡п╩п╣п╫п╦п╣п╪");
 	}
 
 	/* Take damage from cuts */
@@ -698,7 +698,7 @@ static void process_world(void)
 		}
 
 		/* Take damage */
-		take_hit(i, "ранениями");
+		take_hit(i, "я─п╟п╫п╣п╫п╦я▐п╪п╦");
 	}
 
 
@@ -741,7 +741,7 @@ static void process_world(void)
 		i = (PY_FOOD_STARVE - p_ptr->food) / 10;
 
 		/* Take damage */
-		take_hit(i, "голоданием");
+		take_hit(i, "пЁп╬п╩п╬п╢п╟п╫п╦п╣п╪");
 	}
 
 	/* Default regeneration */
@@ -771,7 +771,7 @@ static void process_world(void)
 			if (!p_ptr->paralyzed && (rand_int(100) < 10))
 			{
 				/* Message */
-				msg_print("Вы слабеете от голода.");
+				msg_print("п▓я▀ я│п╩п╟п╠п╣п╣я┌п╣ п╬я┌ пЁп╬п╩п╬п╢п╟.");
 				disturb(1, 0);
 
 				/* Hack -- faint (bypass free action) */
@@ -1000,14 +1000,14 @@ static void process_world(void)
 			else if (o_ptr->pval == 0)
 			{
 				disturb(0, 0);
-				msg_print("У вас вышел весь свет!");
+				msg_print("пё п╡п╟я│ п╡я▀я┬п╣п╩ п╡п╣я│я▄ я│п╡п╣я┌!");
 			}
 
 			/* The light is getting dim */
 			else if ((o_ptr->pval < 100) && (!(o_ptr->pval % 10)))
 			{
 				if (disturb_minor) disturb(0, 0);
-				msg_print("Ваш свет начинает затухать.");
+				msg_print("п▓п╟я┬ я│п╡п╣я┌ п╫п╟я┤п╦п╫п╟п╣я┌ п╥п╟я┌я┐я┘п╟я┌я▄.");
 			}
 		}
 	}
@@ -1063,7 +1063,7 @@ static void process_world(void)
 			/* Determine the level */
 			if (p_ptr->depth)
 			{
-				msg_print("Вы перемещаетесь наверх!");
+				msg_print("п▓я▀ п©п╣я─п╣п╪п╣я┴п╟п╣я┌п╣я│я▄ п╫п╟п╡п╣я─я┘!");
 
 				/* New depth */
 				p_ptr->depth = 0;
@@ -1073,7 +1073,7 @@ static void process_world(void)
 			}
 			else
 			{
-				msg_print("Вы перемещаетесь вниз!");
+				msg_print("п▓я▀ п©п╣я─п╣п╪п╣я┴п╟п╣я┌п╣я│я▄ п╡п╫п╦п╥!");
 
 				/* New depth */
 				p_ptr->depth = p_ptr->max_depth;
@@ -1097,12 +1097,12 @@ static bool enter_wizard_mode(void)
 	if (verify_special && !(p_ptr->noscore & 0x0002) && !(p_ptr->is_dead))
 	{
 		/* Mention effects */
-		msg_print("Вы собираетесь войти в режим волшебника в первый раз!");
-		msg_print("Это форма читерства, и ваш счет не будет засчитан!");
+		msg_print("п▓я▀ я│п╬п╠п╦я─п╟п╣я┌п╣я│я▄ п╡п╬п╧я┌п╦ п╡ я─п╣п╤п╦п╪ п╡п╬п╩я┬п╣п╠п╫п╦п╨п╟ п╡ п©п╣я─п╡я▀п╧ я─п╟п╥!");
+		msg_print("п╜я┌п╬ я└п╬я─п╪п╟ я┤п╦я┌п╣я─я│я┌п╡п╟, п╦ п╡п╟я┬ я│я┤п╣я┌ п╫п╣ п╠я┐п╢п╣я┌ п╥п╟я│я┤п╦я┌п╟п╫!");
 		message_flush();
 
 		/* Verify request */
-		if (!get_check("Вы уверены, что хотите войти в режим волшебника? "))
+		if (!get_check("п▓я▀ я┐п╡п╣я─п╣п╫я▀, я┤я┌п╬ я┘п╬я┌п╦я┌п╣ п╡п╬п╧я┌п╦ п╡ я─п╣п╤п╦п╪ п╡п╬п╩я┬п╣п╠п╫п╦п╨п╟? "))
 		{
 			return (FALSE);
 		}
@@ -1128,12 +1128,12 @@ static bool verify_debug_mode(void)
 	if (verify_special && !(p_ptr->noscore & 0x0008))
 	{
 		/* Mention effects */
-		msg_print("Вы собираетесь использовать специальные отладочные команды!");
-		msg_print("Игра может повиснуть, и сохраненные игры могут перестать читаться!");
+		msg_print("п▓я▀ я│п╬п╠п╦я─п╟п╣я┌п╣я│я▄ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ я│п©п╣я├п╦п╟п╩я▄п╫я▀п╣ п╬я┌п╩п╟п╢п╬я┤п╫я▀п╣ п╨п╬п╪п╟п╫п╢я▀!");
+		msg_print("п≤пЁя─п╟ п╪п╬п╤п╣я┌ п©п╬п╡п╦я│п╫я┐я┌я▄, п╦ я│п╬я┘я─п╟п╫п╣п╫п╫я▀п╣ п╦пЁя─я▀ п╪п╬пЁя┐я┌ п©п╣я─п╣я│я┌п╟я┌я▄ я┤п╦я┌п╟я┌я▄я│я▐!");
 		message_flush();
 
 		/* Verify request */
-		if (!get_check("Вы уверены, что хотите использовать отладочные команды? "))
+		if (!get_check("п▓я▀ я┐п╡п╣я─п╣п╫я▀, я┤я┌п╬ я┘п╬я┌п╦я┌п╣ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╬я┌п╩п╟п╢п╬я┤п╫я▀п╣ п╨п╬п╪п╟п╫п╢я▀? "))
 		{
 			return (FALSE);
 		}
@@ -1161,12 +1161,12 @@ static bool verify_borg_mode(void)
 	if (verify_special && !(p_ptr->noscore & 0x0010))
 	{
 		/* Mention effects */
-		msg_print("Вы собираетесь использовать специальные команды борга!");
-		msg_print("Борг - это автоматический игрок, и ваш счет не будет засчитан!");
+		msg_print("п▓я▀ я│п╬п╠п╦я─п╟п╣я┌п╣я│я▄ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ я│п©п╣я├п╦п╟п╩я▄п╫я▀п╣ п╨п╬п╪п╟п╫п╢я▀ п╠п╬я─пЁп╟!");
+		msg_print("п▒п╬я─пЁ - я█я┌п╬ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦п╧ п╦пЁя─п╬п╨, п╦ п╡п╟я┬ я│я┤п╣я┌ п╫п╣ п╠я┐п╢п╣я┌ п╥п╟я│я┤п╦я┌п╟п╫!");
 		message_flush();
 
 		/* Verify request */
-		if (!get_check("Вы уверены, что хотите использовать команды борга? "))
+		if (!get_check("п▓я▀ я┐п╡п╣я─п╣п╫я▀, я┤я┌п╬ я┘п╬я┌п╦я┌п╣ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╨п╬п╪п╟п╫п╢я▀ п╠п╬я─пЁп╟? "))
 		{
 			return (FALSE);
 		}
@@ -1222,12 +1222,12 @@ static void process_command(void)
 			if (p_ptr->wizard)
 			{
 				p_ptr->wizard = FALSE;
-				msg_print("Режим волшебника выключен.");
+				msg_print("п═п╣п╤п╦п╪ п╡п╬п╩я┬п╣п╠п╫п╦п╨п╟ п╡я▀п╨п╩я▌я┤п╣п╫.");
 			}
 			else if (enter_wizard_mode())
 			{
 				p_ptr->wizard = TRUE;
-				msg_print("Режим волшебника включен.");
+				msg_print("п═п╣п╤п╦п╪ п╡п╬п╩я┬п╣п╠п╫п╦п╨п╟ п╡п╨п╩я▌я┤п╣п╫.");
 			}
 
 			/* Update monsters */
@@ -1789,7 +1789,7 @@ static void process_command(void)
 		/* Hack -- Unknown command */
 		default:
 		{
-			prt("Нажмите '?' для справки.", 0, 0);
+			prt("п²п╟п╤п╪п╦я┌п╣ '?' п╢п╩я▐ я│п©я─п╟п╡п╨п╦.", 0, 0);
 			break;
 		}
 	}
@@ -1957,7 +1957,7 @@ static void process_player(void)
 				disturb(0, 0);
 
 				/* Hack -- Show a Message */
-				msg_print("Отменено.");
+				msg_print("п·я┌п╪п╣п╫п╣п╫п╬.");
 			}
 		}
 	}
@@ -2004,13 +2004,13 @@ static void process_player(void)
 			disturb(0, 0);
 
 			/* Warning */
-			msg_print("Ваш рюкзак переполнен!");
+			msg_print("п▓п╟я┬ я─я▌п╨п╥п╟п╨ п©п╣я─п╣п©п╬п╩п╫п╣п╫!");
 
 			/* Describe */
 			object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_VINIT);
 
 			/* Message */
-			msg_format("Вы бросаете %s (%c).", o_name, index_to_label(item));
+			msg_format("п▓я▀ п╠я─п╬я│п╟п╣я┌п╣ %s (%c).", o_name, index_to_label(item));
 
 			/* Drop it (carefully) near the player */
 			drop_near(o_ptr, 0, p_ptr->py, p_ptr->px);
@@ -2633,7 +2633,7 @@ void play_game(bool new_game)
 	/* Verify main term */
 	if (!term_screen)
 	{
-		quit("основное окно не существует");
+		quit("п╬я│п╫п╬п╡п╫п╬п╣ п╬п╨п╫п╬ п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌");
 	}
 
 	/* Make sure main term is active */
@@ -2642,7 +2642,7 @@ void play_game(bool new_game)
 	/* Verify minimum size */
 	if ((Term->hgt < 24) || (Term->wid < 80))
 	{
-		quit("основное окно слишком мало");
+		quit("п╬я│п╫п╬п╡п╫п╬п╣ п╬п╨п╫п╬ я│п╩п╦я┬п╨п╬п╪ п╪п╟п╩п╬");
 	}
 
 	/* Hack -- Turn off the cursor */
@@ -2653,7 +2653,7 @@ void play_game(bool new_game)
 	if (!load_player())
 	{
 		/* Oops */
-		quit("ошибка в сохраненной игре");
+		quit("п╬я┬п╦п╠п╨п╟ п╡ я│п╬я┘я─п╟п╫п╣п╫п╫п╬п╧ п╦пЁя─п╣");
 	}
 
 	/* Nothing loaded */
@@ -2751,7 +2751,7 @@ void play_game(bool new_game)
 	}
 
 	/* Flash a message */
-	prt("Ждите...", 0, 0);
+	prt("п√п╢п╦я┌п╣...", 0, 0);
 
 	/* Flush the message */
 	Term_fresh();
@@ -2866,7 +2866,7 @@ void play_game(bool new_game)
 		if (p_ptr->playing && p_ptr->is_dead)
 		{
 			/* Mega-Hack -- Allow player to cheat death */
-			if ((p_ptr->wizard || cheat_live) && !get_check("Умереть? "))
+			if ((p_ptr->wizard || cheat_live) && !get_check("пёп╪п╣я─п╣я┌я▄? "))
 			{
 				/* Mark social class, reset age, if needed */
 				if (p_ptr->sc) p_ptr->sc = p_ptr->age = 0;
@@ -2878,7 +2878,7 @@ void play_game(bool new_game)
 				p_ptr->noscore |= 0x0001;
 
 				/* Message */
-				msg_print("Вы вызываете режим волшебника и обманываете смерть!");
+				msg_print("п▓я▀ п╡я▀п╥я▀п╡п╟п╣я┌п╣ я─п╣п╤п╦п╪ п╡п╬п╩я┬п╣п╠п╫п╦п╨п╟ п╦ п╬п╠п╪п╟п╫я▀п╡п╟п╣я┌п╣ я│п╪п╣я─я┌я▄!");
 				message_flush();
 
 				/* Cheat death */
@@ -2909,7 +2909,7 @@ void play_game(bool new_game)
 				if (p_ptr->word_recall)
 				{
 					/* Message */
-					msg_print("Напряжение покидает воздух вокруг вас...");
+					msg_print("п²п╟п©я─я▐п╤п╣п╫п╦п╣ п©п╬п╨п╦п╢п╟п╣я┌ п╡п╬п╥п╢я┐я┘ п╡п╬п╨я─я┐пЁ п╡п╟я│...");
 					message_flush();
 
 					/* Hack -- Prevent recall */
@@ -2917,7 +2917,7 @@ void play_game(bool new_game)
 				}
 
 				/* Note cause of death XXX XXX XXX */
-				strcpy(p_ptr->died_from, "читерством");
+				strcpy(p_ptr->died_from, "я┤п╦я┌п╣я─я│я┌п╡п╬п╪");
 
 				/* New depth */
 				p_ptr->depth = 0;

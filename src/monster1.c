@@ -15,11 +15,11 @@
  * Pronoun arrays, by gender.
  */
 static cptr wd_he[3] =
-{ "оно", "он", "она" };
+{ "п╬п╫п╬", "п╬п╫", "п╬п╫п╟" };
 static cptr wd_che[3] =
-{ "Оно", "Он", "Она" };
+{ "п·п╫п╬", "п·п╫", "п·п╫п╟" };
 static cptr wd_his[3] =
-{ "его", "его", "ее" };
+{ "п╣пЁп╬", "п╣пЁп╬", "п╣п╣" };
 
 
 /*
@@ -122,15 +122,15 @@ static void describe_monster_spells(int r_idx, const monster_lore *l_ptr)
 
 	/* Collect innate attacks */
 	vn = 0;
-	if (l_ptr->flags4 & RF4_SHRIEK)  vp[vn++] = "кричать о помощи";
+	if (l_ptr->flags4 & RF4_SHRIEK)  vp[vn++] = "п╨я─п╦я┤п╟я┌я▄ п╬ п©п╬п╪п╬я┴п╦";
 	if (l_ptr->flags4 & RF4_XXX2)    vp[vn++] = "do something";
 	if (l_ptr->flags4 & RF4_XXX3)    vp[vn++] = "do something";
 	if (l_ptr->flags4 & RF4_XXX4)    vp[vn++] = "do something";
-	if (l_ptr->flags4 & RF4_ARROW_1) vp[vn++] = "стрелять из лука";
-	if (l_ptr->flags4 & RF4_ARROW_2) vp[vn++] = "стрелять из большого лука";
-	if (l_ptr->flags4 & RF4_ARROW_3) vp[vn++] = "стрелять снарядами";
-	if (l_ptr->flags4 & RF4_ARROW_4) vp[vn++] = "стрелять большими снарядами";
-	if (l_ptr->flags4 & RF4_BOULDER) vp[vn++] = "метать валуны";
+	if (l_ptr->flags4 & RF4_ARROW_1) vp[vn++] = "я│я┌я─п╣п╩я▐я┌я▄ п╦п╥ п╩я┐п╨п╟";
+	if (l_ptr->flags4 & RF4_ARROW_2) vp[vn++] = "я│я┌я─п╣п╩я▐я┌я▄ п╦п╥ п╠п╬п╩я▄я┬п╬пЁп╬ п╩я┐п╨п╟";
+	if (l_ptr->flags4 & RF4_ARROW_3) vp[vn++] = "я│я┌я─п╣п╩я▐я┌я▄ я│п╫п╟я─я▐п╢п╟п╪п╦";
+	if (l_ptr->flags4 & RF4_ARROW_4) vp[vn++] = "я│я┌я─п╣п╩я▐я┌я▄ п╠п╬п╩я▄я┬п╦п╪п╦ я│п╫п╟я─я▐п╢п╟п╪п╦";
+	if (l_ptr->flags4 & RF4_BOULDER) vp[vn++] = "п╪п╣я┌п╟я┌я▄ п╡п╟п╩я┐п╫я▀";
 
 	/* Describe innate attacks */
 	if (vn)
@@ -142,9 +142,9 @@ static void describe_monster_spells(int r_idx, const monster_lore *l_ptr)
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(" может ");
+			if (n == 0) text_out(" п╪п╬п╤п╣я┌ ");
 			else if (n < vn-1) text_out(", ");
-			else text_out(" или ");
+			else text_out(" п╦п╩п╦ ");
 
 			/* Dump */
 			text_out_c(TERM_L_RED, vp[n]);
@@ -157,26 +157,26 @@ static void describe_monster_spells(int r_idx, const monster_lore *l_ptr)
 
 	/* Collect breaths */
 	vn = 0;
-	if (l_ptr->flags4 & RF4_BR_ACID)		vp[vn++] = "кислотой";
-	if (l_ptr->flags4 & RF4_BR_ELEC)		vp[vn++] = "молнией";
-	if (l_ptr->flags4 & RF4_BR_FIRE)		vp[vn++] = "огнем";
-	if (l_ptr->flags4 & RF4_BR_COLD)		vp[vn++] = "холодом";
-	if (l_ptr->flags4 & RF4_BR_POIS)		vp[vn++] = "ядом";
-	if (l_ptr->flags4 & RF4_BR_NETH)		vp[vn++] = "могильной силой";
-	if (l_ptr->flags4 & RF4_BR_LITE)		vp[vn++] = "светом";
-	if (l_ptr->flags4 & RF4_BR_DARK)		vp[vn++] = "темнотой";
-	if (l_ptr->flags4 & RF4_BR_CONF)		vp[vn++] = "контузией";
-	if (l_ptr->flags4 & RF4_BR_SOUN)		vp[vn++] = "звуком";
-	if (l_ptr->flags4 & RF4_BR_CHAO)		vp[vn++] = "хаосом";
-	if (l_ptr->flags4 & RF4_BR_DISE)		vp[vn++] = "антимагией";
-	if (l_ptr->flags4 & RF4_BR_NEXU)		vp[vn++] = "пространством";
-	if (l_ptr->flags4 & RF4_BR_TIME)		vp[vn++] = "временем";
-	if (l_ptr->flags4 & RF4_BR_INER)		vp[vn++] = "инерцией";
-	if (l_ptr->flags4 & RF4_BR_GRAV)		vp[vn++] = "гравитацией";
-	if (l_ptr->flags4 & RF4_BR_SHAR)		vp[vn++] = "осколками";
-	if (l_ptr->flags4 & RF4_BR_PLAS)		vp[vn++] = "плазмой";
-	if (l_ptr->flags4 & RF4_BR_WALL)		vp[vn++] = "силой";
-	if (l_ptr->flags4 & RF4_BR_MANA)		vp[vn++] = "маной";
+	if (l_ptr->flags4 & RF4_BR_ACID)		vp[vn++] = "п╨п╦я│п╩п╬я┌п╬п╧";
+	if (l_ptr->flags4 & RF4_BR_ELEC)		vp[vn++] = "п╪п╬п╩п╫п╦п╣п╧";
+	if (l_ptr->flags4 & RF4_BR_FIRE)		vp[vn++] = "п╬пЁп╫п╣п╪";
+	if (l_ptr->flags4 & RF4_BR_COLD)		vp[vn++] = "я┘п╬п╩п╬п╢п╬п╪";
+	if (l_ptr->flags4 & RF4_BR_POIS)		vp[vn++] = "я▐п╢п╬п╪";
+	if (l_ptr->flags4 & RF4_BR_NETH)		vp[vn++] = "п╪п╬пЁп╦п╩я▄п╫п╬п╧ я│п╦п╩п╬п╧";
+	if (l_ptr->flags4 & RF4_BR_LITE)		vp[vn++] = "я│п╡п╣я┌п╬п╪";
+	if (l_ptr->flags4 & RF4_BR_DARK)		vp[vn++] = "я┌п╣п╪п╫п╬я┌п╬п╧";
+	if (l_ptr->flags4 & RF4_BR_CONF)		vp[vn++] = "п╨п╬п╫я┌я┐п╥п╦п╣п╧";
+	if (l_ptr->flags4 & RF4_BR_SOUN)		vp[vn++] = "п╥п╡я┐п╨п╬п╪";
+	if (l_ptr->flags4 & RF4_BR_CHAO)		vp[vn++] = "я┘п╟п╬я│п╬п╪";
+	if (l_ptr->flags4 & RF4_BR_DISE)		vp[vn++] = "п╟п╫я┌п╦п╪п╟пЁп╦п╣п╧";
+	if (l_ptr->flags4 & RF4_BR_NEXU)		vp[vn++] = "п©я─п╬я│я┌я─п╟п╫я│я┌п╡п╬п╪";
+	if (l_ptr->flags4 & RF4_BR_TIME)		vp[vn++] = "п╡я─п╣п╪п╣п╫п╣п╪";
+	if (l_ptr->flags4 & RF4_BR_INER)		vp[vn++] = "п╦п╫п╣я─я├п╦п╣п╧";
+	if (l_ptr->flags4 & RF4_BR_GRAV)		vp[vn++] = "пЁя─п╟п╡п╦я┌п╟я├п╦п╣п╧";
+	if (l_ptr->flags4 & RF4_BR_SHAR)		vp[vn++] = "п╬я│п╨п╬п╩п╨п╟п╪п╦";
+	if (l_ptr->flags4 & RF4_BR_PLAS)		vp[vn++] = "п©п╩п╟п╥п╪п╬п╧";
+	if (l_ptr->flags4 & RF4_BR_WALL)		vp[vn++] = "я│п╦п╩п╬п╧";
+	if (l_ptr->flags4 & RF4_BR_MANA)		vp[vn++] = "п╪п╟п╫п╬п╧";
 	if (l_ptr->flags4 & RF4_XXX5)		vp[vn++] = "something";
 	if (l_ptr->flags4 & RF4_XXX6)		vp[vn++] = "something";
 	if (l_ptr->flags4 & RF4_XXX7)		vp[vn++] = "something";
@@ -194,9 +194,9 @@ static void describe_monster_spells(int r_idx, const monster_lore *l_ptr)
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(" может дышать ");
+			if (n == 0) text_out(" п╪п╬п╤п╣я┌ п╢я▀я┬п╟я┌я▄ ");
 			else if (n < vn-1) text_out(", ");
-			else text_out(" или ");
+			else text_out(" п╦п╩п╦ ");
 
 			/* Dump */
 			text_out_c(TERM_L_RED, vp[n]);
@@ -206,70 +206,70 @@ static void describe_monster_spells(int r_idx, const monster_lore *l_ptr)
 
 	/* Collect spells */
 	vn = 0;
-	if (l_ptr->flags5 & RF5_BA_ACID)     vp[vn++] = "создают кислотные шары";
-	if (l_ptr->flags5 & RF5_BA_ELEC)     vp[vn++] = "создают шаровые молнии";
-	if (l_ptr->flags5 & RF5_BA_FIRE)     vp[vn++] = "создают огненные шары";
-	if (l_ptr->flags5 & RF5_BA_COLD)     vp[vn++] = "создают ледяные шары";
-	if (l_ptr->flags5 & RF5_BA_POIS)     vp[vn++] = "создают ядовитые облака";
-	if (l_ptr->flags5 & RF5_BA_NETH)     vp[vn++] = "создают могильные шары";
-	if (l_ptr->flags5 & RF5_BA_WATE)     vp[vn++] = "создают водовороты";
-	if (l_ptr->flags5 & RF5_BA_MANA)     vp[vn++] = "вызывают штормы маны";
-	if (l_ptr->flags5 & RF5_BA_DARK)     vp[vn++] = "вызывают штормы тьмы";
-	if (l_ptr->flags5 & RF5_DRAIN_MANA)  vp[vn++] = "высасывают ману";
-	if (l_ptr->flags5 & RF5_MIND_BLAST)  vp[vn++] = "повреждают разум";
-	if (l_ptr->flags5 & RF5_BRAIN_SMASH) vp[vn++] = "тяжело повреждают разум";
-	if (l_ptr->flags5 & RF5_CAUSE_1)     vp[vn++] = "вызывают легкие ранения";
-	if (l_ptr->flags5 & RF5_CAUSE_2)     vp[vn++] = "вызывают серьезные ранения";
-	if (l_ptr->flags5 & RF5_CAUSE_3)     vp[vn++] = "вызывают критические ранения";
-	if (l_ptr->flags5 & RF5_CAUSE_4)     vp[vn++] = "вызывают смертельные ранения";
-	if (l_ptr->flags5 & RF5_BO_ACID)     vp[vn++] = "создают кислотные стрелы";
-	if (l_ptr->flags5 & RF5_BO_ELEC)     vp[vn++] = "бьют молнией";
-	if (l_ptr->flags5 & RF5_BO_FIRE)     vp[vn++] = "создают огненные стрелы";
-	if (l_ptr->flags5 & RF5_BO_COLD)     vp[vn++] = "создают ледяные стрелы";
-	if (l_ptr->flags5 & RF5_BO_POIS)     vp[vn++] = "создают ядовитые стрелы";
-	if (l_ptr->flags5 & RF5_BO_NETH)     vp[vn++] = "создают могильные стрелы";
-	if (l_ptr->flags5 & RF5_BO_WATE)     vp[vn++] = "создают струи воды";
-	if (l_ptr->flags5 & RF5_BO_MANA)     vp[vn++] = "создают стрелы маны";
-	if (l_ptr->flags5 & RF5_BO_PLAS)     vp[vn++] = "создают плазменные стрелы";
-	if (l_ptr->flags5 & RF5_BO_ICEE)     vp[vn++] = "создают мощные ледяные стрелы";
-	if (l_ptr->flags5 & RF5_MISSILE)     vp[vn++] = "создают волшебные стрелы";
-	if (l_ptr->flags5 & RF5_SCARE)       vp[vn++] = "пугают";
-	if (l_ptr->flags5 & RF5_BLIND)       vp[vn++] = "ослепляют";
-	if (l_ptr->flags5 & RF5_CONF)        vp[vn++] = "контузят";
-	if (l_ptr->flags5 & RF5_SLOW)        vp[vn++] = "замедляют";
-	if (l_ptr->flags5 & RF5_HOLD)        vp[vn++] = "парализуют";
-	if (l_ptr->flags6 & RF6_HASTE)       vp[vn++] = "ускоряют";
+	if (l_ptr->flags5 & RF5_BA_ACID)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╨п╦я│п╩п╬я┌п╫я▀п╣ я┬п╟я─я▀";
+	if (l_ptr->flags5 & RF5_BA_ELEC)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ я┬п╟я─п╬п╡я▀п╣ п╪п╬п╩п╫п╦п╦";
+	if (l_ptr->flags5 & RF5_BA_FIRE)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╬пЁп╫п╣п╫п╫я▀п╣ я┬п╟я─я▀";
+	if (l_ptr->flags5 & RF5_BA_COLD)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╩п╣п╢я▐п╫я▀п╣ я┬п╟я─я▀";
+	if (l_ptr->flags5 & RF5_BA_POIS)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ я▐п╢п╬п╡п╦я┌я▀п╣ п╬п╠п╩п╟п╨п╟";
+	if (l_ptr->flags5 & RF5_BA_NETH)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╪п╬пЁп╦п╩я▄п╫я▀п╣ я┬п╟я─я▀";
+	if (l_ptr->flags5 & RF5_BA_WATE)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╡п╬п╢п╬п╡п╬я─п╬я┌я▀";
+	if (l_ptr->flags5 & RF5_BA_MANA)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ я┬я┌п╬я─п╪я▀ п╪п╟п╫я▀";
+	if (l_ptr->flags5 & RF5_BA_DARK)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ я┬я┌п╬я─п╪я▀ я┌я▄п╪я▀";
+	if (l_ptr->flags5 & RF5_DRAIN_MANA)  vp[vn++] = "п╡я▀я│п╟я│я▀п╡п╟я▌я┌ п╪п╟п╫я┐";
+	if (l_ptr->flags5 & RF5_MIND_BLAST)  vp[vn++] = "п©п╬п╡я─п╣п╤п╢п╟я▌я┌ я─п╟п╥я┐п╪";
+	if (l_ptr->flags5 & RF5_BRAIN_SMASH) vp[vn++] = "я┌я▐п╤п╣п╩п╬ п©п╬п╡я─п╣п╤п╢п╟я▌я┌ я─п╟п╥я┐п╪";
+	if (l_ptr->flags5 & RF5_CAUSE_1)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╩п╣пЁп╨п╦п╣ я─п╟п╫п╣п╫п╦я▐";
+	if (l_ptr->flags5 & RF5_CAUSE_2)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ я│п╣я─я▄п╣п╥п╫я▀п╣ я─п╟п╫п╣п╫п╦я▐";
+	if (l_ptr->flags5 & RF5_CAUSE_3)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╨я─п╦я┌п╦я┤п╣я│п╨п╦п╣ я─п╟п╫п╣п╫п╦я▐";
+	if (l_ptr->flags5 & RF5_CAUSE_4)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ я│п╪п╣я─я┌п╣п╩я▄п╫я▀п╣ я─п╟п╫п╣п╫п╦я▐";
+	if (l_ptr->flags5 & RF5_BO_ACID)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╨п╦я│п╩п╬я┌п╫я▀п╣ я│я┌я─п╣п╩я▀";
+	if (l_ptr->flags5 & RF5_BO_ELEC)     vp[vn++] = "п╠я▄я▌я┌ п╪п╬п╩п╫п╦п╣п╧";
+	if (l_ptr->flags5 & RF5_BO_FIRE)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╬пЁп╫п╣п╫п╫я▀п╣ я│я┌я─п╣п╩я▀";
+	if (l_ptr->flags5 & RF5_BO_COLD)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╩п╣п╢я▐п╫я▀п╣ я│я┌я─п╣п╩я▀";
+	if (l_ptr->flags5 & RF5_BO_POIS)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ я▐п╢п╬п╡п╦я┌я▀п╣ я│я┌я─п╣п╩я▀";
+	if (l_ptr->flags5 & RF5_BO_NETH)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╪п╬пЁп╦п╩я▄п╫я▀п╣ я│я┌я─п╣п╩я▀";
+	if (l_ptr->flags5 & RF5_BO_WATE)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ я│я┌я─я┐п╦ п╡п╬п╢я▀";
+	if (l_ptr->flags5 & RF5_BO_MANA)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ я│я┌я─п╣п╩я▀ п╪п╟п╫я▀";
+	if (l_ptr->flags5 & RF5_BO_PLAS)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п©п╩п╟п╥п╪п╣п╫п╫я▀п╣ я│я┌я─п╣п╩я▀";
+	if (l_ptr->flags5 & RF5_BO_ICEE)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╪п╬я┴п╫я▀п╣ п╩п╣п╢я▐п╫я▀п╣ я│я┌я─п╣п╩я▀";
+	if (l_ptr->flags5 & RF5_MISSILE)     vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╡п╬п╩я┬п╣п╠п╫я▀п╣ я│я┌я─п╣п╩я▀";
+	if (l_ptr->flags5 & RF5_SCARE)       vp[vn++] = "п©я┐пЁп╟я▌я┌";
+	if (l_ptr->flags5 & RF5_BLIND)       vp[vn++] = "п╬я│п╩п╣п©п╩я▐я▌я┌";
+	if (l_ptr->flags5 & RF5_CONF)        vp[vn++] = "п╨п╬п╫я┌я┐п╥я▐я┌";
+	if (l_ptr->flags5 & RF5_SLOW)        vp[vn++] = "п╥п╟п╪п╣п╢п╩я▐я▌я┌";
+	if (l_ptr->flags5 & RF5_HOLD)        vp[vn++] = "п©п╟я─п╟п╩п╦п╥я┐я▌я┌";
+	if (l_ptr->flags6 & RF6_HASTE)       vp[vn++] = "я┐я│п╨п╬я─я▐я▌я┌";
 	if (l_ptr->flags6 & RF6_XXX1)        vp[vn++] = "do something";
-	if (l_ptr->flags6 & RF6_HEAL)        vp[vn++] = "лечат";
+	if (l_ptr->flags6 & RF6_HEAL)        vp[vn++] = "п╩п╣я┤п╟я┌";
 	if (l_ptr->flags6 & RF6_XXX2)        vp[vn++] = "do something";
-	if (l_ptr->flags6 & RF6_BLINK)       vp[vn++] = "телепортируют на короткое расстояние";
-	if (l_ptr->flags6 & RF6_TPORT)       vp[vn++] = "телепортируют";
+	if (l_ptr->flags6 & RF6_BLINK)       vp[vn++] = "я┌п╣п╩п╣п©п╬я─я┌п╦я─я┐я▌я┌ п╫п╟ п╨п╬я─п╬я┌п╨п╬п╣ я─п╟я│я│я┌п╬я▐п╫п╦п╣";
+	if (l_ptr->flags6 & RF6_TPORT)       vp[vn++] = "я┌п╣п╩п╣п©п╬я─я┌п╦я─я┐я▌я┌";
 	if (l_ptr->flags6 & RF6_XXX3)        vp[vn++] = "do something";
 	if (l_ptr->flags6 & RF6_XXX4)        vp[vn++] = "do something";
-	if (l_ptr->flags6 & RF6_TELE_TO)     vp[vn++] = "телепортируют вас к нему";
-	if (l_ptr->flags6 & RF6_TELE_AWAY)   vp[vn++] = "телепортируют вас от него";
-	if (l_ptr->flags6 & RF6_TELE_LEVEL)  vp[vn++] = "телепортируют вас между уровнями";
+	if (l_ptr->flags6 & RF6_TELE_TO)     vp[vn++] = "я┌п╣п╩п╣п©п╬я─я┌п╦я─я┐я▌я┌ п╡п╟я│ п╨ п╫п╣п╪я┐";
+	if (l_ptr->flags6 & RF6_TELE_AWAY)   vp[vn++] = "я┌п╣п╩п╣п©п╬я─я┌п╦я─я┐я▌я┌ п╡п╟я│ п╬я┌ п╫п╣пЁп╬";
+	if (l_ptr->flags6 & RF6_TELE_LEVEL)  vp[vn++] = "я┌п╣п╩п╣п©п╬я─я┌п╦я─я┐я▌я┌ п╡п╟я│ п╪п╣п╤п╢я┐ я┐я─п╬п╡п╫я▐п╪п╦";
 	if (l_ptr->flags6 & RF6_XXX5)        vp[vn++] = "do something";
-	if (l_ptr->flags6 & RF6_DARKNESS)    vp[vn++] = "гасят свет";
-	if (l_ptr->flags6 & RF6_TRAPS)       vp[vn++] = "создают ловушки";
-	if (l_ptr->flags6 & RF6_FORGET)      vp[vn++] = "вызывают амнезию";
+	if (l_ptr->flags6 & RF6_DARKNESS)    vp[vn++] = "пЁп╟я│я▐я┌ я│п╡п╣я┌";
+	if (l_ptr->flags6 & RF6_TRAPS)       vp[vn++] = "я│п╬п╥п╢п╟я▌я┌ п╩п╬п╡я┐я┬п╨п╦";
+	if (l_ptr->flags6 & RF6_FORGET)      vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╟п╪п╫п╣п╥п╦я▌";
 	if (l_ptr->flags6 & RF6_XXX6)        vp[vn++] = "do something";
-	if (l_ptr->flags6 & RF6_S_KIN)       vp[vn++] = "вызывают похожих монстров";
-	if (l_ptr->flags6 & RF6_S_MONSTER)   vp[vn++] = "вызывают монстра";
-	if (l_ptr->flags6 & RF6_S_MONSTERS)  vp[vn++] = "вызывают монстров";
-	if (l_ptr->flags6 & RF6_S_ANIMAL)    vp[vn++] = "вызывают животных";
-	if (l_ptr->flags6 & RF6_S_SPIDER)    vp[vn++] = "вызывают пауков";
-	if (l_ptr->flags6 & RF6_S_HOUND)     vp[vn++] = "вызывают гончих";
-	if (l_ptr->flags6 & RF6_S_HYDRA)     vp[vn++] = "вызывают гидр";
-	if (l_ptr->flags6 & RF6_S_ANGEL)     vp[vn++] = "вызывают ангела";
-	if (l_ptr->flags6 & RF6_S_DEMON)     vp[vn++] = "вызывают демона";
-	if (l_ptr->flags6 & RF6_S_UNDEAD)    vp[vn++] = "вызывают живого мертвеца";
-	if (l_ptr->flags6 & RF6_S_DRAGON)    vp[vn++] = "вызывают дракона";
-	if (l_ptr->flags6 & RF6_S_HI_UNDEAD) vp[vn++] = "вызывают великих Живых Мертвецов";
-	if (l_ptr->flags6 & RF6_S_HI_DRAGON) vp[vn++] = "вызывают Древних Драконов";
-	if (l_ptr->flags6 & RF6_S_HI_DEMON)  vp[vn++] = "вызывают Великих Демонов";
-	if (l_ptr->flags6 & RF6_S_WRAITH)    vp[vn++] = "вызывают Девятерых Кольценосцев";
-	if (l_ptr->flags6 & RF6_S_UNIQUE)    vp[vn++] = "вызывают уникальных монстров";
+	if (l_ptr->flags6 & RF6_S_KIN)       vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п©п╬я┘п╬п╤п╦я┘ п╪п╬п╫я│я┌я─п╬п╡";
+	if (l_ptr->flags6 & RF6_S_MONSTER)   vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╪п╬п╫я│я┌я─п╟";
+	if (l_ptr->flags6 & RF6_S_MONSTERS)  vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╪п╬п╫я│я┌я─п╬п╡";
+	if (l_ptr->flags6 & RF6_S_ANIMAL)    vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╤п╦п╡п╬я┌п╫я▀я┘";
+	if (l_ptr->flags6 & RF6_S_SPIDER)    vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п©п╟я┐п╨п╬п╡";
+	if (l_ptr->flags6 & RF6_S_HOUND)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ пЁп╬п╫я┤п╦я┘";
+	if (l_ptr->flags6 & RF6_S_HYDRA)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ пЁп╦п╢я─";
+	if (l_ptr->flags6 & RF6_S_ANGEL)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╟п╫пЁп╣п╩п╟";
+	if (l_ptr->flags6 & RF6_S_DEMON)     vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╢п╣п╪п╬п╫п╟";
+	if (l_ptr->flags6 & RF6_S_UNDEAD)    vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╤п╦п╡п╬пЁп╬ п╪п╣я─я┌п╡п╣я├п╟";
+	if (l_ptr->flags6 & RF6_S_DRAGON)    vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╢я─п╟п╨п╬п╫п╟";
+	if (l_ptr->flags6 & RF6_S_HI_UNDEAD) vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п╡п╣п╩п╦п╨п╦я┘ п√п╦п╡я▀я┘ п°п╣я─я┌п╡п╣я├п╬п╡";
+	if (l_ptr->flags6 & RF6_S_HI_DRAGON) vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п■я─п╣п╡п╫п╦я┘ п■я─п╟п╨п╬п╫п╬п╡";
+	if (l_ptr->flags6 & RF6_S_HI_DEMON)  vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п▓п╣п╩п╦п╨п╦я┘ п■п╣п╪п╬п╫п╬п╡";
+	if (l_ptr->flags6 & RF6_S_WRAITH)    vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ п■п╣п╡я▐я┌п╣я─я▀я┘ п п╬п╩я▄я├п╣п╫п╬я│я├п╣п╡";
+	if (l_ptr->flags6 & RF6_S_UNIQUE)    vp[vn++] = "п╡я▀п╥я▀п╡п╟я▌я┌ я┐п╫п╦п╨п╟п╩я▄п╫я▀я┘ п╪п╬п╫я│я┌я─п╬п╡";
 
 	/* Describe spells */
 	if (vn)
@@ -280,27 +280,27 @@ static void describe_monster_spells(int r_idx, const monster_lore *l_ptr)
 		/* Intro */
 		if (breath)
 		{
-			text_out(", а также");
+			text_out(", п╟ я┌п╟п╨п╤п╣");
 		}
 		else
 		{
-			text_out(format("%^s может", wd_che[msex]));
+			text_out(format("%^s п╪п╬п╤п╣я┌", wd_che[msex]));
 		}
 
 		/* Adverb */
-		if (l_ptr->flags2 & RF2_SMART) text_out_c(TERM_ORANGE, " мастерски");
+		if (l_ptr->flags2 & RF2_SMART) text_out_c(TERM_ORANGE, " п╪п╟я│я┌п╣я─я│п╨п╦");
 
 		/* Verb Phrase */
-		text_out(" колдовать заклинания");
+		text_out(" п╨п╬п╩п╢п╬п╡п╟я┌я▄ п╥п╟п╨п╩п╦п╫п╟п╫п╦я▐");
 
 
 		/* Scan */
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(", которые ");
+			if (n == 0) text_out(", п╨п╬я┌п╬я─я▀п╣ ");
 			else if (n < vn-1) text_out(", ");
-			else text_out(" или ");
+			else text_out(" п╦п╩п╦ ");
 
 			/* Dump */
 			text_out_c(TERM_L_RED, vp[n]);
@@ -320,14 +320,14 @@ static void describe_monster_spells(int r_idx, const monster_lore *l_ptr)
 		/* Describe the spell frequency */
 		if (m > 100)
 		{
-			text_out(format(" 1/%d времени", 100 / n));
+			text_out(format(" 1/%d п╡я─п╣п╪п╣п╫п╦", 100 / n));
 		}
 
 		/* Guess at the frequency */
 		else if (m)
 		{
 			n = ((n + 9) / 10) * 10;
-			text_out(format(" примерно 1/%d времени", 100 / n));
+			text_out(format(" п©я─п╦п╪п╣я─п╫п╬ 1/%d п╡я─п╣п╪п╣п╫п╦", 100 / n));
 		}
 
 		/* End this sentence */
@@ -357,7 +357,7 @@ static void describe_monster_drop(int r_idx, const monster_lore *l_ptr)
 	if (l_ptr->drop_gold || l_ptr->drop_item)
 	{
 		/* Intro */
-		text_out(format("%^s может нести", wd_che[msex]));
+		text_out(format("%^s п╪п╬п╤п╣я┌ п╫п╣я│я┌п╦", wd_che[msex]));
 
 		/* Count maximum drop */
 		n = MAX(l_ptr->drop_gold, l_ptr->drop_item);
@@ -371,26 +371,26 @@ static void describe_monster_drop(int r_idx, const monster_lore *l_ptr)
 		/* Two drops */
 		else if (n == 2)
 		{
-			text_out(" один или два");
+			text_out(" п╬п╢п╦п╫ п╦п╩п╦ п╢п╡п╟");
 		}
 
 		/* Many drops */
 		else
 		{
-			text_out(format(" до %d", n));
+			text_out(format(" п╢п╬ %d", n));
 		}
 
 
 		/* Great */
 		if (l_ptr->flags1 & RF1_DROP_GREAT)
 		{
-			p = (sin ? " исключительный" : " исключительных");
+			p = (sin ? " п╦я│п╨п╩я▌я┤п╦я┌п╣п╩я▄п╫я▀п╧" : " п╦я│п╨п╩я▌я┤п╦я┌п╣п╩я▄п╫я▀я┘");
 		}
 
 		/* Good (no "n" needed) */
 		else if (l_ptr->flags1 & RF1_DROP_GOOD)
 		{
-			p = (sin ? " хороший" : " хороших");
+			p = (sin ? " я┘п╬я─п╬я┬п╦п╧" : " я┘п╬я─п╬я┬п╦я┘");
 		}
 
 		/* Okay */
@@ -406,11 +406,11 @@ static void describe_monster_drop(int r_idx, const monster_lore *l_ptr)
 
 			/* Dump "object(s)" */
 			if (p) text_out(p);
-			text_out(" предмет");
-			if (n != 1) text_out("ов");
+			text_out(" п©я─п╣п╢п╪п╣я┌");
+			if (n != 1) text_out("п╬п╡");
 
 			/* Conjunction replaces variety, if needed for "gold" below */
-			p = " или";
+			p = " п╦п╩п╦";
 		}
 
 		/* Treasures */
@@ -420,8 +420,8 @@ static void describe_monster_drop(int r_idx, const monster_lore *l_ptr)
 			if (!p) sin = FALSE;
 
 			if (p) text_out(p);
-			text_out(" cокровищ");
-			if (n == 1) text_out("е");
+			text_out(" cп╬п╨я─п╬п╡п╦я┴");
+			if (n == 1) text_out("п╣");
 		}
 
 		/* End this sentence */
@@ -478,29 +478,29 @@ static void describe_monster_attack(int r_idx, const monster_lore *l_ptr)
 		/* Get the method */
 		switch (method)
 		{
-			case RBM_HIT:	p = "бить"; break;
-			case RBM_TOUCH:	p = "касаться"; break;
-			case RBM_PUNCH:	p = "толкать"; break;
-			case RBM_KICK:	p = "пинать"; break;
-			case RBM_CLAW:	p = "царапать"; break;
-			case RBM_BITE:	p = "кусать"; break;
-			case RBM_STING:	p = "жалить"; break;
+			case RBM_HIT:	p = "п╠п╦я┌я▄"; break;
+			case RBM_TOUCH:	p = "п╨п╟я│п╟я┌я▄я│я▐"; break;
+			case RBM_PUNCH:	p = "я┌п╬п╩п╨п╟я┌я▄"; break;
+			case RBM_KICK:	p = "п©п╦п╫п╟я┌я▄"; break;
+			case RBM_CLAW:	p = "я├п╟я─п╟п©п╟я┌я▄"; break;
+			case RBM_BITE:	p = "п╨я┐я│п╟я┌я▄"; break;
+			case RBM_STING:	p = "п╤п╟п╩п╦я┌я▄"; break;
 			case RBM_XXX1:	break;
-			case RBM_BUTT:	p = "бодать"; break;
-			case RBM_CRUSH:	p = "сжимать"; break;
-			case RBM_ENGULF:	p = "обволакивать"; break;
+			case RBM_BUTT:	p = "п╠п╬п╢п╟я┌я▄"; break;
+			case RBM_CRUSH:	p = "я│п╤п╦п╪п╟я┌я▄"; break;
+			case RBM_ENGULF:	p = "п╬п╠п╡п╬п╩п╟п╨п╦п╡п╟я┌я▄"; break;
 			case RBM_XXX2:	break;
-			case RBM_CRAWL:	p = "ползти по вам"; break;
-			case RBM_DROOL:	p = "кричать на вас"; break;
-			case RBM_SPIT:	p = "плевать"; break;
+			case RBM_CRAWL:	p = "п©п╬п╩п╥я┌п╦ п©п╬ п╡п╟п╪"; break;
+			case RBM_DROOL:	p = "п╨я─п╦я┤п╟я┌я▄ п╫п╟ п╡п╟я│"; break;
+			case RBM_SPIT:	p = "п©п╩п╣п╡п╟я┌я▄"; break;
 			case RBM_XXX3:	break;
-			case RBM_GAZE:	p = "пристально смотреть"; break;
-			case RBM_WAIL:	p = "выть"; break;
-			case RBM_SPORE:	p = "выбрасывать споры"; break;
+			case RBM_GAZE:	p = "п©я─п╦я│я┌п╟п╩я▄п╫п╬ я│п╪п╬я┌я─п╣я┌я▄"; break;
+			case RBM_WAIL:	p = "п╡я▀я┌я▄"; break;
+			case RBM_SPORE:	p = "п╡я▀п╠я─п╟я│я▀п╡п╟я┌я▄ я│п©п╬я─я▀"; break;
 			case RBM_XXX4:	break;
-			case RBM_BEG:	p = "просить милостыню"; break;
-			case RBM_INSULT:	p = "оскорблять"; break;
-			case RBM_MOAN:	p = "ворчать"; break;
+			case RBM_BEG:	p = "п©я─п╬я│п╦я┌я▄ п╪п╦п╩п╬я│я┌я▀п╫я▌"; break;
+			case RBM_INSULT:	p = "п╬я│п╨п╬я─п╠п╩я▐я┌я▄"; break;
+			case RBM_MOAN:	p = "п╡п╬я─я┤п╟я┌я▄"; break;
 			case RBM_XXX5:	break;
 		}
 
@@ -511,42 +511,42 @@ static void describe_monster_attack(int r_idx, const monster_lore *l_ptr)
 		/* Get the effect */
 		switch (effect)
 		{
-			case RBE_HURT:      q = "атаки"; break;
-			case RBE_POISON:    q = "отравления"; break;
-			case RBE_UN_BONUS:  q = "раззачарования"; break;
-			case RBE_UN_POWER:  q = "высасывания зарядов"; break;
-			case RBE_EAT_GOLD:  q = "кражи золота"; break;
-			case RBE_EAT_ITEM:  q = "кражи предметов"; break;
-			case RBE_EAT_FOOD:  q = "поедания вашей еды"; break;
-			case RBE_EAT_LITE:  q = "поглощения света"; break;
-			case RBE_ACID:      q = "выстреливания кислоты"; break;
-			case RBE_ELEC:      q = "электрошока"; break;
-			case RBE_FIRE:      q = "сжигания"; break;
-			case RBE_COLD:      q = "замораживания"; break;
-			case RBE_BLIND:     q = "ослепления"; break;
-			case RBE_CONFUSE:   q = "контузии"; break;
-			case RBE_TERRIFY:   q = "устрашения"; break;
-			case RBE_PARALYZE:  q = "паралича"; break;
-			case RBE_LOSE_STR:  q = "уменьшения силы"; break;
-			case RBE_LOSE_INT:  q = "уменьшения интеллекта"; break;
-			case RBE_LOSE_WIS:  q = "уменьшения мудрости"; break;
-			case RBE_LOSE_DEX:  q = "уменьшения ловкости"; break;
-			case RBE_LOSE_CON:  q = "уменьшения телосложения"; break;
-			case RBE_LOSE_CHR:  q = "уменьшения обаяния"; break;
-			case RBE_LOSE_ALL:  q = "уменьшения всех показателей"; break;
-			case RBE_SHATTER:   q = "землетрясений"; break;
-			case RBE_EXP_10:    q = "снижения опыта"; break;
-			case RBE_EXP_20:    q = "снижения опыта"; break;
-			case RBE_EXP_40:    q = "снижения опыта"; break;
-			case RBE_EXP_80:    q = "снижения опыта"; break;
-			case RBE_HALLU:     q = "вызова галлюцинаций"; break;
+			case RBE_HURT:      q = "п╟я┌п╟п╨п╦"; break;
+			case RBE_POISON:    q = "п╬я┌я─п╟п╡п╩п╣п╫п╦я▐"; break;
+			case RBE_UN_BONUS:  q = "я─п╟п╥п╥п╟я┤п╟я─п╬п╡п╟п╫п╦я▐"; break;
+			case RBE_UN_POWER:  q = "п╡я▀я│п╟я│я▀п╡п╟п╫п╦я▐ п╥п╟я─я▐п╢п╬п╡"; break;
+			case RBE_EAT_GOLD:  q = "п╨я─п╟п╤п╦ п╥п╬п╩п╬я┌п╟"; break;
+			case RBE_EAT_ITEM:  q = "п╨я─п╟п╤п╦ п©я─п╣п╢п╪п╣я┌п╬п╡"; break;
+			case RBE_EAT_FOOD:  q = "п©п╬п╣п╢п╟п╫п╦я▐ п╡п╟я┬п╣п╧ п╣п╢я▀"; break;
+			case RBE_EAT_LITE:  q = "п©п╬пЁп╩п╬я┴п╣п╫п╦я▐ я│п╡п╣я┌п╟"; break;
+			case RBE_ACID:      q = "п╡я▀я│я┌я─п╣п╩п╦п╡п╟п╫п╦я▐ п╨п╦я│п╩п╬я┌я▀"; break;
+			case RBE_ELEC:      q = "я█п╩п╣п╨я┌я─п╬я┬п╬п╨п╟"; break;
+			case RBE_FIRE:      q = "я│п╤п╦пЁп╟п╫п╦я▐"; break;
+			case RBE_COLD:      q = "п╥п╟п╪п╬я─п╟п╤п╦п╡п╟п╫п╦я▐"; break;
+			case RBE_BLIND:     q = "п╬я│п╩п╣п©п╩п╣п╫п╦я▐"; break;
+			case RBE_CONFUSE:   q = "п╨п╬п╫я┌я┐п╥п╦п╦"; break;
+			case RBE_TERRIFY:   q = "я┐я│я┌я─п╟я┬п╣п╫п╦я▐"; break;
+			case RBE_PARALYZE:  q = "п©п╟я─п╟п╩п╦я┤п╟"; break;
+			case RBE_LOSE_STR:  q = "я┐п╪п╣п╫я▄я┬п╣п╫п╦я▐ я│п╦п╩я▀"; break;
+			case RBE_LOSE_INT:  q = "я┐п╪п╣п╫я▄я┬п╣п╫п╦я▐ п╦п╫я┌п╣п╩п╩п╣п╨я┌п╟"; break;
+			case RBE_LOSE_WIS:  q = "я┐п╪п╣п╫я▄я┬п╣п╫п╦я▐ п╪я┐п╢я─п╬я│я┌п╦"; break;
+			case RBE_LOSE_DEX:  q = "я┐п╪п╣п╫я▄я┬п╣п╫п╦я▐ п╩п╬п╡п╨п╬я│я┌п╦"; break;
+			case RBE_LOSE_CON:  q = "я┐п╪п╣п╫я▄я┬п╣п╫п╦я▐ я┌п╣п╩п╬я│п╩п╬п╤п╣п╫п╦я▐"; break;
+			case RBE_LOSE_CHR:  q = "я┐п╪п╣п╫я▄я┬п╣п╫п╦я▐ п╬п╠п╟я▐п╫п╦я▐"; break;
+			case RBE_LOSE_ALL:  q = "я┐п╪п╣п╫я▄я┬п╣п╫п╦я▐ п╡я│п╣я┘ п©п╬п╨п╟п╥п╟я┌п╣п╩п╣п╧"; break;
+			case RBE_SHATTER:   q = "п╥п╣п╪п╩п╣я┌я─я▐я│п╣п╫п╦п╧"; break;
+			case RBE_EXP_10:    q = "я│п╫п╦п╤п╣п╫п╦я▐ п╬п©я▀я┌п╟"; break;
+			case RBE_EXP_20:    q = "я│п╫п╦п╤п╣п╫п╦я▐ п╬п©я▀я┌п╟"; break;
+			case RBE_EXP_40:    q = "я│п╫п╦п╤п╣п╫п╦я▐ п╬п©я▀я┌п╟"; break;
+			case RBE_EXP_80:    q = "я│п╫п╦п╤п╣п╫п╦я▐ п╬п©я▀я┌п╟"; break;
+			case RBE_HALLU:     q = "п╡я▀п╥п╬п╡п╟ пЁп╟п╩п╩я▌я├п╦п╫п╟я├п╦п╧"; break;
 		}
 
 
 		/* Introduce the attack description */
 		if (!r)
 		{
-			text_out(format("%^s может ", wd_che[msex]));
+			text_out(format("%^s п╪п╬п╤п╣я┌ ", wd_che[msex]));
 		}
 		else if (r < n-1)
 		{
@@ -554,7 +554,7 @@ static void describe_monster_attack(int r_idx, const monster_lore *l_ptr)
 		}
 		else
 		{
-			text_out(", и ");
+			text_out(", п╦ ");
 		}
 
 
@@ -569,14 +569,14 @@ static void describe_monster_attack(int r_idx, const monster_lore *l_ptr)
 		if (q)
 		{
 			/* Describe the attack type */
-			text_out(" для ");
+			text_out(" п╢п╩я▐ ");
 			text_out_c(TERM_L_RED, q);
 
 			/* Describe damage (if known) */
 			if (d1 && d2 && know_damage(r_idx, l_ptr, m))
 			{
 				/* Display the damage */
-				text_out(" с уроном");
+				text_out(" я│ я┐я─п╬п╫п╬п╪");
 				text_out(format(" %dd%d", d1, d2));
 			}
 		}
@@ -595,13 +595,13 @@ static void describe_monster_attack(int r_idx, const monster_lore *l_ptr)
 	/* Notice lack of attacks */
 	else if (l_ptr->flags1 & RF1_NEVER_BLOW)
 	{
-		text_out(format("%^s не имеет физических атак.  ", wd_che[msex]));
+		text_out(format("%^s п╫п╣ п╦п╪п╣п╣я┌ я└п╦п╥п╦я┤п╣я│п╨п╦я┘ п╟я┌п╟п╨.  ", wd_che[msex]));
 	}
 
 	/* Or describe the lack of knowledge */
 	else
 	{
-		text_out(format("О %s атаках ничего не известно.  ", wd_his[msex]));
+		text_out(format("п· %s п╟я┌п╟п╨п╟я┘ п╫п╦я┤п╣пЁп╬ п╫п╣ п╦п╥п╡п╣я│я┌п╫п╬.  ", wd_his[msex]));
 	}
 }
 
@@ -624,14 +624,14 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 
 	/* Collect special abilities. */
 	vn = 0;
-	if (l_ptr->flags2 & RF2_OPEN_DOOR) vp[vn++] = "открывать двери";
-	if (l_ptr->flags2 & RF2_BASH_DOOR) vp[vn++] = "вышибать двери";
-	if (l_ptr->flags2 & RF2_PASS_WALL) vp[vn++] = "проходить через стены";
-	if (l_ptr->flags2 & RF2_KILL_WALL) vp[vn++] = "пробиваться через стены";
-	if (l_ptr->flags2 & RF2_MOVE_BODY) vp[vn++] = "расталкивать слабых монстров";
-	if (l_ptr->flags2 & RF2_KILL_BODY) vp[vn++] = "уничтожать слабых монстров";
-	if (l_ptr->flags2 & RF2_TAKE_ITEM) vp[vn++] = "поднимать предметы";
-	if (l_ptr->flags2 & RF2_KILL_ITEM) vp[vn++] = "уничтожать предметы";
+	if (l_ptr->flags2 & RF2_OPEN_DOOR) vp[vn++] = "п╬я┌п╨я─я▀п╡п╟я┌я▄ п╢п╡п╣я─п╦";
+	if (l_ptr->flags2 & RF2_BASH_DOOR) vp[vn++] = "п╡я▀я┬п╦п╠п╟я┌я▄ п╢п╡п╣я─п╦";
+	if (l_ptr->flags2 & RF2_PASS_WALL) vp[vn++] = "п©я─п╬я┘п╬п╢п╦я┌я▄ я┤п╣я─п╣п╥ я│я┌п╣п╫я▀";
+	if (l_ptr->flags2 & RF2_KILL_WALL) vp[vn++] = "п©я─п╬п╠п╦п╡п╟я┌я▄я│я▐ я┤п╣я─п╣п╥ я│я┌п╣п╫я▀";
+	if (l_ptr->flags2 & RF2_MOVE_BODY) vp[vn++] = "я─п╟я│я┌п╟п╩п╨п╦п╡п╟я┌я▄ я│п╩п╟п╠я▀я┘ п╪п╬п╫я│я┌я─п╬п╡";
+	if (l_ptr->flags2 & RF2_KILL_BODY) vp[vn++] = "я┐п╫п╦я┤я┌п╬п╤п╟я┌я▄ я│п╩п╟п╠я▀я┘ п╪п╬п╫я│я┌я─п╬п╡";
+	if (l_ptr->flags2 & RF2_TAKE_ITEM) vp[vn++] = "п©п╬п╢п╫п╦п╪п╟я┌я▄ п©я─п╣п╢п╪п╣я┌я▀";
+	if (l_ptr->flags2 & RF2_KILL_ITEM) vp[vn++] = "я┐п╫п╦я┤я┌п╬п╤п╟я┌я▄ п©я─п╣п╢п╪п╣я┌я▀";
 
 	/* Describe special abilities. */
 	if (vn)
@@ -643,9 +643,9 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(" может ");
+			if (n == 0) text_out(" п╪п╬п╤п╣я┌ ");
 			else if (n < vn-1) text_out(", ");
-			else text_out(" и ");
+			else text_out(" п╦ ");
 
 			/* Dump */
 			text_out(vp[n]);
@@ -659,36 +659,36 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 	/* Describe special abilities. */
 	if (l_ptr->flags2 & RF2_INVISIBLE)
 	{
-		text_out(format("%^s невидим%s.  ", wd_che[msex], (msex == 0 ? "о" : msex == 1 ? "" : "а")));
+		text_out(format("%^s п╫п╣п╡п╦п╢п╦п╪%s.  ", wd_che[msex], (msex == 0 ? "п╬" : msex == 1 ? "" : "п╟")));
 	}
 	if (l_ptr->flags2 & RF2_COLD_BLOOD)
 	{
-		text_out(format("%^s холоднокров%s.  ", wd_che[msex], (msex == 0 ? "но" : msex == 1 ? "ен" : "на")));
+		text_out(format("%^s я┘п╬п╩п╬п╢п╫п╬п╨я─п╬п╡%s.  ", wd_che[msex], (msex == 0 ? "п╫п╬" : msex == 1 ? "п╣п╫" : "п╫п╟")));
 	}
 	if (l_ptr->flags2 & RF2_EMPTY_MIND)
 	{
-		text_out(format("%^s не обнаруживается телепатией.  ", wd_che[msex]));
+		text_out(format("%^s п╫п╣ п╬п╠п╫п╟я─я┐п╤п╦п╡п╟п╣я┌я│я▐ я┌п╣п╩п╣п©п╟я┌п╦п╣п╧.  ", wd_che[msex]));
 	}
 	if (l_ptr->flags2 & RF2_WEIRD_MIND)
 	{
-		text_out(format("%^s редко обнаруживается телепатией.  ", wd_che[msex]));
+		text_out(format("%^s я─п╣п╢п╨п╬ п╬п╠п╫п╟я─я┐п╤п╦п╡п╟п╣я┌я│я▐ я┌п╣п╩п╣п©п╟я┌п╦п╣п╧.  ", wd_che[msex]));
 	}
 	if (l_ptr->flags2 & RF2_MULTIPLY)
 	{
-		text_out(format("%^s быстро размножается.  ", wd_che[msex]));
+		text_out(format("%^s п╠я▀я│я┌я─п╬ я─п╟п╥п╪п╫п╬п╤п╟п╣я┌я│я▐.  ", wd_che[msex]));
 	}
 	if (l_ptr->flags2 & RF2_REGENERATE)
 	{
-		text_out(format("%^s быстро регенерирует.  ", wd_che[msex]));
+		text_out(format("%^s п╠я▀я│я┌я─п╬ я─п╣пЁп╣п╫п╣я─п╦я─я┐п╣я┌.  ", wd_che[msex]));
 	}
 
 
 	/* Collect susceptibilities */
 	vn = 0;
-	if (l_ptr->flags3 & RF3_HURT_ROCK) vp[vn++] = "плавке камня";
-	if (l_ptr->flags3 & RF3_HURT_LITE) vp[vn++] = "яркому свету";
-	if (l_ptr->flags3 & RF3_HURT_FIRE) vp[vn++] = "огню";
-	if (l_ptr->flags3 & RF3_HURT_COLD) vp[vn++] = "холоду";
+	if (l_ptr->flags3 & RF3_HURT_ROCK) vp[vn++] = "п©п╩п╟п╡п╨п╣ п╨п╟п╪п╫я▐";
+	if (l_ptr->flags3 & RF3_HURT_LITE) vp[vn++] = "я▐я─п╨п╬п╪я┐ я│п╡п╣я┌я┐";
+	if (l_ptr->flags3 & RF3_HURT_FIRE) vp[vn++] = "п╬пЁп╫я▌";
+	if (l_ptr->flags3 & RF3_HURT_COLD) vp[vn++] = "я┘п╬п╩п╬п╢я┐";
 
 	/* Describe susceptibilities */
 	if (vn)
@@ -700,9 +700,9 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(format(" уязвим%s ", (msex == 0 ? "о" : msex == 1 ? "" : "а")));
+			if (n == 0) text_out(format(" я┐я▐п╥п╡п╦п╪%s ", (msex == 0 ? "п╬" : msex == 1 ? "" : "п╟")));
 			else if (n < vn-1) text_out(", ");
-			else text_out(" и ");
+			else text_out(" п╦ ");
 
 			/* Dump */
 			text_out_c(TERM_YELLOW, vp[n]);
@@ -715,12 +715,12 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 
 	/* Collect immunities */
 	vn = 0;
-	if (l_ptr->flags3 & RF3_IM_ACID) vp[vn++] = "кислоте";
-	if (l_ptr->flags3 & RF3_IM_ELEC) vp[vn++] = "молнии";
-	if (l_ptr->flags3 & RF3_IM_FIRE) vp[vn++] = "огню";
-	if (l_ptr->flags3 & RF3_IM_COLD) vp[vn++] = "холоду";
-	if (l_ptr->flags3 & RF3_IM_POIS) vp[vn++] = "яду";
-	if (l_ptr->flags3 & RF3_IM_WATER) vp[vn++] = "воде";
+	if (l_ptr->flags3 & RF3_IM_ACID) vp[vn++] = "п╨п╦я│п╩п╬я┌п╣";
+	if (l_ptr->flags3 & RF3_IM_ELEC) vp[vn++] = "п╪п╬п╩п╫п╦п╦";
+	if (l_ptr->flags3 & RF3_IM_FIRE) vp[vn++] = "п╬пЁп╫я▌";
+	if (l_ptr->flags3 & RF3_IM_COLD) vp[vn++] = "я┘п╬п╩п╬п╢я┐";
+	if (l_ptr->flags3 & RF3_IM_POIS) vp[vn++] = "я▐п╢я┐";
+	if (l_ptr->flags3 & RF3_IM_WATER) vp[vn++] = "п╡п╬п╢п╣";
 
 	/* Describe immunities */
 	if (vn)
@@ -732,9 +732,9 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(" сопротивляется ");
+			if (n == 0) text_out(" я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐ ");
 			else if (n < vn-1) text_out(", ");
-			else text_out(" и ");
+			else text_out(" п╦ ");
 
 			/* Dump */
 			text_out_c(TERM_ORANGE, vp[n]);
@@ -747,10 +747,10 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 
 	/* Collect resistances */
 	vn = 0;
-	if (l_ptr->flags3 & RF3_RES_NETH)  vp[vn++] = "могильной силе";
-	if (l_ptr->flags3 & RF3_RES_PLAS)  vp[vn++] = "плазме";
-	if (l_ptr->flags3 & RF3_RES_NEXUS) vp[vn++] = "пространственным атакам";
-	if (l_ptr->flags3 & RF3_RES_DISE)  vp[vn++] = "антимагии";
+	if (l_ptr->flags3 & RF3_RES_NETH)  vp[vn++] = "п╪п╬пЁп╦п╩я▄п╫п╬п╧ я│п╦п╩п╣";
+	if (l_ptr->flags3 & RF3_RES_PLAS)  vp[vn++] = "п©п╩п╟п╥п╪п╣";
+	if (l_ptr->flags3 & RF3_RES_NEXUS) vp[vn++] = "п©я─п╬я│я┌я─п╟п╫я│я┌п╡п╣п╫п╫я▀п╪ п╟я┌п╟п╨п╟п╪";
+	if (l_ptr->flags3 & RF3_RES_DISE)  vp[vn++] = "п╟п╫я┌п╦п╪п╟пЁп╦п╦";
 
 	/* Describe resistances */
 	if (vn)
@@ -762,9 +762,9 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(" сопротивляется ");
+			if (n == 0) text_out(" я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐ ");
 			else if (n < vn-1) text_out(", ");
-			else text_out(" и ");
+			else text_out(" п╦ ");
 
 			/* Dump */
 			text_out_c(TERM_ORANGE, vp[n]);
@@ -777,10 +777,10 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 
 	/* Collect non-effects */
 	vn = 0;
-	if (l_ptr->flags3 & RF3_NO_STUN) vp[vn++] = "оглушен%s";
-	if (l_ptr->flags3 & RF3_NO_FEAR) vp[vn++] = "напуган%s";
-	if (l_ptr->flags3 & RF3_NO_CONF) vp[vn++] = "контужен%s";
-	if (l_ptr->flags3 & RF3_NO_SLEEP) vp[vn++] = "усыплен%s";
+	if (l_ptr->flags3 & RF3_NO_STUN) vp[vn++] = "п╬пЁп╩я┐я┬п╣п╫%s";
+	if (l_ptr->flags3 & RF3_NO_FEAR) vp[vn++] = "п╫п╟п©я┐пЁп╟п╫%s";
+	if (l_ptr->flags3 & RF3_NO_CONF) vp[vn++] = "п╨п╬п╫я┌я┐п╤п╣п╫%s";
+	if (l_ptr->flags3 & RF3_NO_SLEEP) vp[vn++] = "я┐я│я▀п©п╩п╣п╫%s";
 
 	/* Describe non-effects */
 	if (vn)
@@ -792,12 +792,12 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(" не может быть ");
+			if (n == 0) text_out(" п╫п╣ п╪п╬п╤п╣я┌ п╠я▀я┌я▄ ");
 			else if (n < vn-1) text_out(", ");
-			else text_out(" или ");
+			else text_out(" п╦п╩п╦ ");
 
 			/* Dump */
-			text_out_c(TERM_YELLOW, format(vp[n], (msex == 0 ? "о" : msex == 1 ? "" : "а")));
+			text_out_c(TERM_YELLOW, format(vp[n], (msex == 0 ? "п╬" : msex == 1 ? "" : "п╟")));
 		}
 
 		/* End */
@@ -814,64 +814,64 @@ static void describe_monster_abilities(int r_idx, const monster_lore *l_ptr)
 
 		if (r_ptr->sleep > 200)
 		{
-			act = "предпочтает игнорировать";
+			act = "п©я─п╣п╢п©п╬я┤я┌п╟п╣я┌ п╦пЁп╫п╬я─п╦я─п╬п╡п╟я┌я▄";
 		}
 		else if (r_ptr->sleep > 95)
 		{
-			act = "очень редко обращает внимание на";
+			act = "п╬я┤п╣п╫я▄ я─п╣п╢п╨п╬ п╬п╠я─п╟я┴п╟п╣я┌ п╡п╫п╦п╪п╟п╫п╦п╣ п╫п╟";
 		}
 		else if (r_ptr->sleep > 75)
 		{
-			act = "редко обращает внимание на";
+			act = "я─п╣п╢п╨п╬ п╬п╠я─п╟я┴п╟п╣я┌ п╡п╫п╦п╪п╟п╫п╦п╣ п╫п╟";
 		}
 		else if (r_ptr->sleep > 45)
 		{
-			act = "не интересуется";
+			act = "п╫п╣ п╦п╫я┌п╣я─п╣я│я┐п╣я┌я│я▐";
 		}
 		else if (r_ptr->sleep > 25)
 		{
-			act = "довольно медленно находит";
+			act = "п╢п╬п╡п╬п╩я▄п╫п╬ п╪п╣п╢п╩п╣п╫п╫п╬ п╫п╟я┘п╬п╢п╦я┌";
 		}
 		else if (r_ptr->sleep > 10)
 		{
-			act = "медленно находит";
+			act = "п╪п╣п╢п╩п╣п╫п╫п╬ п╫п╟я┘п╬п╢п╦я┌";
 		}
 		else if (r_ptr->sleep > 5)
 		{
-			act = "довольно быстро находит";
+			act = "п╢п╬п╡п╬п╩я▄п╫п╬ п╠я▀я│я┌я─п╬ п╫п╟я┘п╬п╢п╦я┌";
 		}
 		else if (r_ptr->sleep > 3)
 		{
-			act = "быстро находит";
+			act = "п╠я▀я│я┌я─п╬ п╫п╟я┘п╬п╢п╦я┌";
 		}
 		else if (r_ptr->sleep > 1)
 		{
-			act = "очень быстро находит";
+			act = "п╬я┤п╣п╫я▄ п╠я▀я│я┌я─п╬ п╫п╟я┘п╬п╢п╦я┌";
 		}
 		else if (r_ptr->sleep > 0)
 		{
-			act = "часто в поисках";
+			act = "я┤п╟я│я┌п╬ п╡ п©п╬п╦я│п╨п╟я┘";
 		}
 		else
 		{
-			act = "вечно в поисках";
+			act = "п╡п╣я┤п╫п╬ п╡ п©п╬п╦я│п╨п╟я┘";
 		}
 
-		text_out(format("%^s %s чужих, которых %s может заметить с %d футов.  ",
+		text_out(format("%^s %s я┤я┐п╤п╦я┘, п╨п╬я┌п╬я─я▀я┘ %s п╪п╬п╤п╣я┌ п╥п╟п╪п╣я┌п╦я┌я▄ я│ %d я└я┐я┌п╬п╡.  ",
 		            wd_che[msex], act, wd_he[msex], 10 * r_ptr->aaf));
 	}
 
 	/* Describe escorts */
 	if ((l_ptr->flags1 & RF1_ESCORT) || (l_ptr->flags1 & RF1_ESCORTS))
 	{
-		text_out(format("%^s обычно появляется с похожими существами.  ",
+		text_out(format("%^s п╬п╠я▀я┤п╫п╬ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ я│ п©п╬я┘п╬п╤п╦п╪п╦ я│я┐я┴п╣я│я┌п╡п╟п╪п╦.  ",
 		            wd_che[msex]));
 	}
 
 	/* Describe friends */
 	else if ((l_ptr->flags1 & RF1_FRIEND) || (l_ptr->flags1 & RF1_FRIENDS))
 	{
-		text_out(format("%^s обычно появляется в группах.  ",
+		text_out(format("%^s п╬п╠я▀я┤п╫п╬ п©п╬я▐п╡п╩я▐п╣я┌я│я▐ п╡ пЁя─я┐п©п©п╟я┘.  ",
 		            wd_che[msex]));
 	}
 }
@@ -901,28 +901,28 @@ static void describe_monster_kills(int r_idx, const monster_lore *l_ptr)
 		if (l_ptr->deaths)
 		{
 			/* Killed ancestors */
-			text_out(format("%^s убил%s %d ваш%s",
-			            wd_che[msex], (msex == 0 ? "о" : msex == 1 ? "" : "а"),
-			            l_ptr->deaths, (l_ptr->deaths > 1 ? "их предшественников" : "его предшественника")));
+			text_out(format("%^s я┐п╠п╦п╩%s %d п╡п╟я┬%s",
+			            wd_che[msex], (msex == 0 ? "п╬" : msex == 1 ? "" : "п╟"),
+			            l_ptr->deaths, (l_ptr->deaths > 1 ? "п╦я┘ п©я─п╣п╢я┬п╣я│я┌п╡п╣п╫п╫п╦п╨п╬п╡" : "п╣пЁп╬ п©я─п╣п╢я┬п╣я│я┌п╡п╣п╫п╫п╦п╨п╟")));
 
 			/* But we've also killed it */
 			if (dead)
 			{
-				text_out(", но вы смогли отомстить!  ");
+				text_out(", п╫п╬ п╡я▀ я│п╪п╬пЁп╩п╦ п╬я┌п╬п╪я│я┌п╦я┌я▄!  ");
 			}
 
 			/* Unavenged (ever) */
 			else
 			{
-				text_out(format(", остающ%s.  ",
-				            plural(l_ptr->deaths, "егося неотмщенным", "ихся неотмщенными")));
+				text_out(format(", п╬я│я┌п╟я▌я┴%s.  ",
+				            plural(l_ptr->deaths, "п╣пЁп╬я│я▐ п╫п╣п╬я┌п╪я┴п╣п╫п╫я▀п╪", "п╦я┘я│я▐ п╫п╣п╬я┌п╪я┴п╣п╫п╫я▀п╪п╦")));
 			}
 		}
 
 		/* Dead unique who never hurt us */
 		else if (dead)
 		{
-			text_out("Вы уничтожили этого врага.  ");
+			text_out("п▓я▀ я┐п╫п╦я┤я┌п╬п╤п╦п╩п╦ я█я┌п╬пЁп╬ п╡я─п╟пЁп╟.  ");
 		}
 		else
 		{
@@ -935,29 +935,29 @@ static void describe_monster_kills(int r_idx, const monster_lore *l_ptr)
 	else if (l_ptr->deaths)
 	{
 		/* Dead ancestors */
-		text_out(format("%d %s был%s этим существом, ",
-		            l_ptr->deaths, plural(l_ptr->deaths, "ваш предшественник", "ваших предшественника"),
-		            plural(l_ptr->deaths, " убит", "и убиты")));
+		text_out(format("%d %s п╠я▀п╩%s я█я┌п╦п╪ я│я┐я┴п╣я│я┌п╡п╬п╪, ",
+		            l_ptr->deaths, plural(l_ptr->deaths, "п╡п╟я┬ п©я─п╣п╢я┬п╣я│я┌п╡п╣п╫п╫п╦п╨", "п╡п╟я┬п╦я┘ п©я─п╣п╢я┬п╣я│я┌п╡п╣п╫п╫п╦п╨п╟"),
+		            plural(l_ptr->deaths, " я┐п╠п╦я┌", "п╦ я┐п╠п╦я┌я▀")));
 
 		/* Some kills this life */
 		if (l_ptr->pkills)
 		{
-			text_out(format("и вы уничтожили не менее %d таких существ.  ",
+			text_out(format("п╦ п╡я▀ я┐п╫п╦я┤я┌п╬п╤п╦п╩п╦ п╫п╣ п╪п╣п╫п╣п╣ %d я┌п╟п╨п╦я┘ я│я┐я┴п╣я│я┌п╡.  ",
 			            l_ptr->pkills));
 		}
 
 		/* Some kills past lives */
 		else if (l_ptr->tkills)
 		{
-			text_out(format("и %s уничтожили не менее %d таких существ.  ",
-			            "другие ваши предшественники", l_ptr->tkills));
+			text_out(format("п╦ %s я┐п╫п╦я┤я┌п╬п╤п╦п╩п╦ п╫п╣ п╪п╣п╫п╣п╣ %d я┌п╟п╨п╦я┘ я│я┐я┴п╣я│я┌п╡.  ",
+			            "п╢я─я┐пЁп╦п╣ п╡п╟я┬п╦ п©я─п╣п╢я┬п╣я│я┌п╡п╣п╫п╫п╦п╨п╦", l_ptr->tkills));
 		}
 
 		/* No kills */
 		else
 		{
-			text_out_c(TERM_RED, format("и %s ни разу не был%s.  ",
-			            wd_he[msex], (msex == 0 ? "о побеждено" : msex == 1 ? " побежден" : "а побеждена")));
+			text_out_c(TERM_RED, format("п╦ %s п╫п╦ я─п╟п╥я┐ п╫п╣ п╠я▀п╩%s.  ",
+			            wd_he[msex], (msex == 0 ? "п╬ п©п╬п╠п╣п╤п╢п╣п╫п╬" : msex == 1 ? " п©п╬п╠п╣п╤п╢п╣п╫" : "п╟ п©п╬п╠п╣п╤п╢п╣п╫п╟")));
 		}
 	}
 
@@ -967,21 +967,21 @@ static void describe_monster_kills(int r_idx, const monster_lore *l_ptr)
 		/* Killed some this life */
 		if (l_ptr->pkills)
 		{
-			text_out(format("Вы убили не менее %d таких существ.  ",
+			text_out(format("п▓я▀ я┐п╠п╦п╩п╦ п╫п╣ п╪п╣п╫п╣п╣ %d я┌п╟п╨п╦я┘ я│я┐я┴п╣я│я┌п╡.  ",
 			            l_ptr->pkills));
 		}
 
 		/* Killed some last life */
 		else if (l_ptr->tkills)
 		{
-			text_out(format("Ваши предшественники убили не менее %d таких существ.  ",
+			text_out(format("п▓п╟я┬п╦ п©я─п╣п╢я┬п╣я│я┌п╡п╣п╫п╫п╦п╨п╦ я┐п╠п╦п╩п╦ п╫п╣ п╪п╣п╫п╣п╣ %d я┌п╟п╨п╦я┘ я│я┐я┴п╣я│я┌п╡.  ",
 			            l_ptr->tkills));
 		}
 
 		/* Killed none */
 		else
 		{
-			text_out("Битв до смерти с такими существами не было.  ");
+			text_out("п▒п╦я┌п╡ п╢п╬ я│п╪п╣я─я┌п╦ я│ я┌п╟п╨п╦п╪п╦ я│я┐я┴п╣я│я┌п╡п╟п╪п╦ п╫п╣ п╠я▀п╩п╬.  ");
 		}
 	}
 
@@ -1005,20 +1005,20 @@ static void describe_monster_toughness(int r_idx, const monster_lore *l_ptr)
 	if (know_armour(r_idx, l_ptr))
 	{
 		/* Armor */
-		text_out(format("%^s имеет класс брони %d",
+		text_out(format("%^s п╦п╪п╣п╣я┌ п╨п╩п╟я│я│ п╠я─п╬п╫п╦ %d",
 		            wd_che[msex], r_ptr->ac));
 
 		/* Maximized hitpoints */
 		if (l_ptr->flags1 & RF1_FORCE_MAXHP)
 		{
-			text_out(format(" и %d здоровья.  ",
+			text_out(format(" п╦ %d п╥п╢п╬я─п╬п╡я▄я▐.  ",
 			            r_ptr->hdice * r_ptr->hside));
 		}
 
 		/* Variable hitpoints */
 		else
 		{
-			text_out(format(" и %dd%d здоровья.  ",
+			text_out(format(" п╦ %dd%d п╥п╢п╬я─п╬п╡я▄я▐.  ",
 			            r_ptr->hdice, r_ptr->hside));
 		}
 	}
@@ -1039,9 +1039,9 @@ static void describe_monster_exp(int r_idx, const monster_lore *l_ptr)
 	{
 		/* Introduction */
 		if (l_ptr->flags1 & RF1_UNIQUE)
-			text_out("Убийство этого существа");
+			text_out("пёп╠п╦п╧я│я┌п╡п╬ я█я┌п╬пЁп╬ я│я┐я┴п╣я│я┌п╡п╟");
 		else
-			text_out("Одно убийство такого существа");
+			text_out("п·п╢п╫п╬ я┐п╠п╦п╧я│я┌п╡п╬ я┌п╟п╨п╬пЁп╬ я│я┐я┴п╣я│я┌п╡п╟");
 
 		/* calculate the integer exp part */
 		i = (long)r_ptr->mexp * r_ptr->level / p_ptr->lev;
@@ -1052,13 +1052,13 @@ static void describe_monster_exp(int r_idx, const monster_lore *l_ptr)
 			  (long)1000 / p_ptr->lev + 5) / 10);
 
 		/* Mention the experience */
-		text_out(format(" стоит %ld.%02ld очков опыта",
+		text_out(format(" я│я┌п╬п╦я┌ %ld.%02ld п╬я┤п╨п╬п╡ п╬п©я▀я┌п╟",
 			        (long)i, (long)j));
 
 		i = p_ptr->lev;
 
 		/* Mention the dependance on the player's level */
-		text_out(format(" для героя %lu уровня.  ",
+		text_out(format(" п╢п╩я▐ пЁп╣я─п╬я▐ %lu я┐я─п╬п╡п╫я▐.  ",
 			        (long)i));
 	}
 }
@@ -1073,48 +1073,48 @@ static void describe_monster_movement(int r_idx, const monster_lore *l_ptr)
 		RF3_TROLL | RF3_ORC | RF3_UNDEAD));
 
 
-	text_out(format("Это%s", srr ? "" : "т"));
+	text_out(format("п╜я┌п╬%s", srr ? "" : "я┌"));
 
-	if (l_ptr->flags3 & RF3_ANIMAL) text_out_c(TERM_L_BLUE, format(" естественн%s", srr ? "ое" : "ый"));
-	if (l_ptr->flags3 & RF3_EVIL) text_out_c(TERM_L_BLUE, format(" зло%s", srr ? "е" : "й"));
-	if (l_ptr->flags3 & RF3_UNDEAD) text_out_c(TERM_L_BLUE, " живой мертвец");
+	if (l_ptr->flags3 & RF3_ANIMAL) text_out_c(TERM_L_BLUE, format(" п╣я│я┌п╣я│я┌п╡п╣п╫п╫%s", srr ? "п╬п╣" : "я▀п╧"));
+	if (l_ptr->flags3 & RF3_EVIL) text_out_c(TERM_L_BLUE, format(" п╥п╩п╬%s", srr ? "п╣" : "п╧"));
+	if (l_ptr->flags3 & RF3_UNDEAD) text_out_c(TERM_L_BLUE, " п╤п╦п╡п╬п╧ п╪п╣я─я┌п╡п╣я├");
 
-	if (l_ptr->flags3 & RF3_DRAGON) text_out_c(TERM_L_BLUE, " дракон");
-	else if (l_ptr->flags3 & RF3_DEMON) text_out_c(TERM_L_BLUE, " демон");
-	else if (l_ptr->flags3 & RF3_GIANT) text_out_c(TERM_L_BLUE, " гигант");
-	else if (l_ptr->flags3 & RF3_TROLL) text_out_c(TERM_L_BLUE, " тролль");
-	else if (l_ptr->flags3 & RF3_ORC) text_out_c(TERM_L_BLUE, " орк");
-	else if (!(l_ptr->flags3 & RF3_UNDEAD)) text_out(" существо");
+	if (l_ptr->flags3 & RF3_DRAGON) text_out_c(TERM_L_BLUE, " п╢я─п╟п╨п╬п╫");
+	else if (l_ptr->flags3 & RF3_DEMON) text_out_c(TERM_L_BLUE, " п╢п╣п╪п╬п╫");
+	else if (l_ptr->flags3 & RF3_GIANT) text_out_c(TERM_L_BLUE, " пЁп╦пЁп╟п╫я┌");
+	else if (l_ptr->flags3 & RF3_TROLL) text_out_c(TERM_L_BLUE, " я┌я─п╬п╩п╩я▄");
+	else if (l_ptr->flags3 & RF3_ORC) text_out_c(TERM_L_BLUE, " п╬я─п╨");
+	else if (!(l_ptr->flags3 & RF3_UNDEAD)) text_out(" я│я┐я┴п╣я│я┌п╡п╬");
 
 	/* Describe location */
 	if (r_ptr->level == 0)
 	{
-		text_out_c(TERM_SLATE, " живет в городе");
+		text_out_c(TERM_SLATE, " п╤п╦п╡п╣я┌ п╡ пЁп╬я─п╬п╢п╣");
 		old = TRUE;
 	}
 	else if (l_ptr->tkills)
 	{
 		if (l_ptr->flags1 & RF1_FORCE_DEPTH)
-			text_out_c(TERM_SLATE, " встречается ");
+			text_out_c(TERM_SLATE, " п╡я│я┌я─п╣я┤п╟п╣я┌я│я▐ ");
 		else
-			text_out_c(TERM_SLATE, " обычно встречается ");
+			text_out_c(TERM_SLATE, " п╬п╠я▀я┤п╫п╬ п╡я│я┌я─п╣я┤п╟п╣я┌я│я▐ ");
 		
 		if (depth_in_feet)
 		{
-			text_out_c(TERM_SLATE, format("на глубине %d футов",
+			text_out_c(TERM_SLATE, format("п╫п╟ пЁп╩я┐п╠п╦п╫п╣ %d я└я┐я┌п╬п╡",
 			                            r_ptr->level * 50));
 		}
 		else
 		{
-			text_out_c(TERM_SLATE, format("на %d уровне подземелья",
+			text_out_c(TERM_SLATE, format("п╫п╟ %d я┐я─п╬п╡п╫п╣ п©п╬п╢п╥п╣п╪п╣п╩я▄я▐",
 			                            r_ptr->level));
 		}
 		old = TRUE;
 	}
 
-	if (old) text_out(", и");
+	if (old) text_out(", п╦");
 
-	text_out(" двигается");
+	text_out(" п╢п╡п╦пЁп╟п╣я┌я│я▐");
 
 	/* Random-ness */
 	if ((l_ptr->flags1 & RF1_RAND_50) || (l_ptr->flags1 & RF1_RAND_25))
@@ -1122,7 +1122,7 @@ static void describe_monster_movement(int r_idx, const monster_lore *l_ptr)
 		/* Adverb */
 		if ((l_ptr->flags1 & RF1_RAND_50) && (l_ptr->flags1 & RF1_RAND_25))
 		{
-			text_out(" крайне");
+			text_out(" п╨я─п╟п╧п╫п╣");
 		}
 		else if (l_ptr->flags1 & RF1_RAND_50)
 		{
@@ -1130,38 +1130,38 @@ static void describe_monster_movement(int r_idx, const monster_lore *l_ptr)
 		}
 		else if (l_ptr->flags1 & RF1_RAND_25)
 		{
-			text_out(" немного");
+			text_out(" п╫п╣п╪п╫п╬пЁп╬");
 		}
 
 		/* Adjective */
-		text_out(" хаотично");
+		text_out(" я┘п╟п╬я┌п╦я┤п╫п╬");
 
 		/* Hack -- Occasional conjunction */
-		if (r_ptr->speed != 110) text_out(", и");
+		if (r_ptr->speed != 110) text_out(", п╦");
 	}
 
 	/* Speed */
 	if (r_ptr->speed > 110)
 	{
-		if (r_ptr->speed > 130) text_out_c(TERM_GREEN, " невероятно");
-		else if (r_ptr->speed > 120) text_out_c(TERM_GREEN, " очень");
-		text_out_c(TERM_GREEN, " быстро");
+		if (r_ptr->speed > 130) text_out_c(TERM_GREEN, " п╫п╣п╡п╣я─п╬я▐я┌п╫п╬");
+		else if (r_ptr->speed > 120) text_out_c(TERM_GREEN, " п╬я┤п╣п╫я▄");
+		text_out_c(TERM_GREEN, " п╠я▀я│я┌я─п╬");
 	}
 	else if (r_ptr->speed < 110)
 	{
-		if (r_ptr->speed < 90) text_out_c(TERM_GREEN, " невероятно");
-		else if (r_ptr->speed < 100) text_out_c(TERM_GREEN, " очень");
-		text_out_c(TERM_GREEN, " медленно");
+		if (r_ptr->speed < 90) text_out_c(TERM_GREEN, " п╫п╣п╡п╣я─п╬я▐я┌п╫п╬");
+		else if (r_ptr->speed < 100) text_out_c(TERM_GREEN, " п╬я┤п╣п╫я▄");
+		text_out_c(TERM_GREEN, " п╪п╣п╢п╩п╣п╫п╫п╬");
 	}
 	else
 	{
-		text_out_c(TERM_GREEN, " с нормальной скоростью");
+		text_out_c(TERM_GREEN, " я│ п╫п╬я─п╪п╟п╩я▄п╫п╬п╧ я│п╨п╬я─п╬я│я┌я▄я▌");
 	}
 
 	/* The code above includes "attack speed" */
 	if (l_ptr->flags1 & RF1_NEVER_MOVE)
 	{
-		text_out(", но не пытается догонять противника");
+		text_out(", п╫п╬ п╫п╣ п©я▀я┌п╟п╣я┌я│я▐ п╢п╬пЁп╬п╫я▐я┌я▄ п©я─п╬я┌п╦п╡п╫п╦п╨п╟");
 	}
 
 	/* End this sentence */
@@ -1297,7 +1297,7 @@ void describe_monster(int r_idx, bool spoilers)
 	/* Notice "Quest" monsters */
 	if (lore.flags1 & RF1_QUESTOR)
 	{
-		text_out("Вы чувствуете крайнюю необходимость в убийстве этого монстра...  ");
+		text_out("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ п╨я─п╟п╧п╫я▌я▌ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬я│я┌я▄ п╡ я┐п╠п╦п╧я│я┌п╡п╣ я█я┌п╬пЁп╬ п╪п╬п╫я│я┌я─п╟...  ");
 	}
 
 	/* All done */

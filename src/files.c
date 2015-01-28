@@ -980,8 +980,8 @@ static errr process_pref_file_aux(cptr name)
 	{
 		/* Print error message */
 		/* ToDo: Add better error messages */
-		msg_format("Ошибка %d в строке %d в файле '%s'.", err, line, name);
-		msg_format("Не удалось понять '%s'", old);
+		msg_format("п·я┬п╦п╠п╨п╟ %d п╡ я│я┌я─п╬п╨п╣ %d п╡ я└п╟п╧п╩п╣ '%s'.", err, line, name);
+		msg_format("п²п╣ я┐п╢п╟п╩п╬я│я▄ п©п╬п╫я▐я┌я▄ '%s'", old);
 		message_flush();
 	}
 
@@ -1283,7 +1283,7 @@ static cptr likert(int x, int y, byte *attr)
 	if (x < 0)
 	{
 		*attr = TERM_RED;
-		return ("Очень плохо");
+		return ("п·я┤п╣п╫я▄ п©п╩п╬я┘п╬");
 	}
 
 	/* Analyze the value */
@@ -1293,34 +1293,34 @@ static cptr likert(int x, int y, byte *attr)
 		case 1:
 		{
 			*attr = TERM_RED;
-			return ("Плохо");
+			return ("п÷п╩п╬я┘п╬");
 		}
 		case 2:
 		{
 			*attr = TERM_RED;
-			return ("Неважно");
+			return ("п²п╣п╡п╟п╤п╫п╬");
 		}
 		case 3:
 		case 4:
 		{
 			*attr = TERM_YELLOW;
-			return ("Средне");
+			return ("п║я─п╣п╢п╫п╣");
 		}
 		case 5:
 		{
 			*attr = TERM_YELLOW;
-			return ("Хорошо");
+			return ("п╔п╬я─п╬я┬п╬");
 		}
 		case 6:
 		{
 			*attr = TERM_YELLOW;
-			return ("Оч. хорошо");
+			return ("п·я┤. я┘п╬я─п╬я┬п╬");
 		}
 		case 7:
 		case 8:
 		{
 			*attr = TERM_L_GREEN;
-			return ("Отлично");
+			return ("п·я┌п╩п╦я┤п╫п╬");
 		}
 		case 9:
 		case 10:
@@ -1329,7 +1329,7 @@ static cptr likert(int x, int y, byte *attr)
 		case 13:
 		{
 			*attr = TERM_L_GREEN;
-			return ("Превосходно");
+			return ("п÷я─п╣п╡п╬я│я┘п╬п╢п╫п╬");
 		}
 		case 14:
 		case 15:
@@ -1337,12 +1337,12 @@ static cptr likert(int x, int y, byte *attr)
 		case 17:
 		{
 			*attr = TERM_L_GREEN;
-			return ("Идеально");
+			return ("п≤п╢п╣п╟п╩я▄п╫п╬");
 		}
 		default:
 		{
 			*attr = TERM_L_GREEN;
-			return ("Легендарно");
+			return ("п⌡п╣пЁп╣п╫п╢п╟я─п╫п╬");
 		}
 	}
 }
@@ -1378,28 +1378,28 @@ static void display_player_xtra_info(void)
 
 
 	/* Age */
-	Term_putstr(col, 3, -1, TERM_WHITE, "Возраст");
+	Term_putstr(col, 3, -1, TERM_WHITE, "п▓п╬п╥я─п╟я│я┌");
 	Term_putstr(col+9, 3, -1, TERM_L_BLUE, format("%4d", (int)p_ptr->age));
 
 	/* Height */
-	Term_putstr(col, 4, -1, TERM_WHITE, "Рост");
+	Term_putstr(col, 4, -1, TERM_WHITE, "п═п╬я│я┌");
 	Term_putstr(col+9, 4, -1, TERM_L_BLUE, format("%4d", (int)p_ptr->ht));
 
 	/* Weight */
-	Term_putstr(col, 5, -1, TERM_WHITE, "Вес");
+	Term_putstr(col, 5, -1, TERM_WHITE, "п▓п╣я│");
 	Term_putstr(col+9, 5, -1, TERM_L_BLUE, format("%4d", (int)p_ptr->wt));
 
 	/* Status */
-	Term_putstr(col, 6, -1, TERM_WHITE, "Статус");
+	Term_putstr(col, 6, -1, TERM_WHITE, "п║я┌п╟я┌я┐я│");
 	Term_putstr(col+9, 6, -1, TERM_L_BLUE, format("%4d", (int)p_ptr->sc));
 
 	/* Maximize */
-	Term_putstr(col, 7, -1, TERM_WHITE, "Максимиз.");
-	Term_putstr(col+10, 7, -1, TERM_L_BLUE, adult_maximize ? " Да" : "Нет");
+	Term_putstr(col, 7, -1, TERM_WHITE, "п°п╟п╨я│п╦п╪п╦п╥.");
+	Term_putstr(col+10, 7, -1, TERM_L_BLUE, adult_maximize ? " п■п╟" : "п²п╣я┌");
 
 	/* Preserve */
-	Term_putstr(col, 8, -1, TERM_WHITE, "Сохранен.");
-	Term_putstr(col+10, 8, -1, TERM_L_BLUE, adult_preserve ? " Да" : "Нет");
+	Term_putstr(col, 8, -1, TERM_WHITE, "п║п╬я┘я─п╟п╫п╣п╫.");
+	Term_putstr(col+10, 8, -1, TERM_L_BLUE, adult_preserve ? " п■п╟" : "п²п╣я┌");
 
 
 	/* Left */
@@ -1407,7 +1407,7 @@ static void display_player_xtra_info(void)
 
 
 	/* Level */
-	Term_putstr(col, 10, -1, TERM_WHITE, "Уровень");
+	Term_putstr(col, 10, -1, TERM_WHITE, "пёя─п╬п╡п╣п╫я▄");
 	if (p_ptr->lev >= p_ptr->max_lev)
 	{
 		Term_putstr(col+13, 10, -1, TERM_L_GREEN,
@@ -1421,7 +1421,7 @@ static void display_player_xtra_info(void)
 
 
 	/* Current Experience */
-	Term_putstr(col, 11, -1, TERM_WHITE, "Текущий опыт");
+	Term_putstr(col, 11, -1, TERM_WHITE, "п╒п╣п╨я┐я┴п╦п╧ п╬п©я▀я┌");
 	if (p_ptr->exp >= p_ptr->max_exp)
 	{
 		Term_putstr(col+13, 11, -1, TERM_L_GREEN,
@@ -1435,13 +1435,13 @@ static void display_player_xtra_info(void)
 
 
 	/* Maximum Experience */
-	Term_putstr(col, 12, -1, TERM_WHITE, "Макс. опыт");
+	Term_putstr(col, 12, -1, TERM_WHITE, "п°п╟п╨я│. п╬п©я▀я┌");
 	Term_putstr(col+13, 12, -1, TERM_L_GREEN,
 	            format("%10ld", p_ptr->max_exp));
 
 
 	/* Advance Experience */
-	Term_putstr(col, 13, -1, TERM_WHITE, "След. уровень");
+	Term_putstr(col, 13, -1, TERM_WHITE, "п║п╩п╣п╢. я┐я─п╬п╡п╣п╫я▄");
 	if (p_ptr->lev < PY_MAX_LEVEL)
 	{
 		s32b advance = (player_exp[p_ptr->lev - 1] *
@@ -1457,18 +1457,18 @@ static void display_player_xtra_info(void)
 
 
 	/* Maximum depth */
-	Term_putstr(col, 14, -1, TERM_WHITE, "Макс. глубина");
+	Term_putstr(col, 14, -1, TERM_WHITE, "п°п╟п╨я│. пЁп╩я┐п╠п╦п╫п╟");
 	if (!p_ptr->max_depth)
 	{
-		my_strcpy(depths, "Город", sizeof(depths));
+		my_strcpy(depths, "п⌠п╬я─п╬п╢", sizeof(depths));
 	}
 	else if (depth_in_feet)
 	{
-		strnfmt(depths, sizeof(depths), "%d фт", p_ptr->max_depth * 50);
+		strnfmt(depths, sizeof(depths), "%d я└я┌", p_ptr->max_depth * 50);
 	}
 	else
 	{
-		strnfmt(depths, sizeof(depths), "Уров. %d", p_ptr->max_depth);
+		strnfmt(depths, sizeof(depths), "пёя─п╬п╡. %d", p_ptr->max_depth);
 	}
 
 	Term_putstr(col+13, 14, -1, TERM_L_GREEN,
@@ -1476,16 +1476,16 @@ static void display_player_xtra_info(void)
 
 
 	/* Gold */
-	Term_putstr(col, 15, -1, TERM_WHITE, "Золото");
+	Term_putstr(col, 15, -1, TERM_WHITE, "п≈п╬п╩п╬я┌п╬");
 	Term_putstr(col+13, 15, -1, TERM_L_GREEN,
 	            format("%10ld", p_ptr->au));
 
 
 	/* Burden */
-	strnfmt(buf, sizeof(buf), "%ld.%ld фнт",
+	strnfmt(buf, sizeof(buf), "%ld.%ld я└п╫я┌",
 	        p_ptr->total_weight / 10L,
 	        p_ptr->total_weight % 10L);
-	Term_putstr(col, 17, -1, TERM_WHITE, "Загрузка");
+	Term_putstr(col, 17, -1, TERM_WHITE, "п≈п╟пЁя─я┐п╥п╨п╟");
 	Term_putstr(col+13, 17, -1, TERM_L_GREEN,
 	            format("%10s", buf));
 
@@ -1500,7 +1500,7 @@ static void display_player_xtra_info(void)
 
 	/* Total Armor */
 	strnfmt(buf, sizeof(buf), "[%d,%+d]", base, plus);
-	Term_putstr(col, 10, -1, TERM_WHITE, "Броня");
+	Term_putstr(col, 10, -1, TERM_WHITE, "п▒я─п╬п╫я▐");
 	Term_putstr(col+5, 10, -1, TERM_L_BLUE, format("%13s", buf));
 
 
@@ -1510,7 +1510,7 @@ static void display_player_xtra_info(void)
 
 	/* Basic fighting */
 	strnfmt(buf, sizeof(buf), "(%+d,%+d)", hit, dam);
-	Term_putstr(col, 11, -1, TERM_WHITE, "Бой");
+	Term_putstr(col, 11, -1, TERM_WHITE, "п▒п╬п╧");
 	Term_putstr(col+5, 11, -1, TERM_L_BLUE, format("%13s", buf));
 
 
@@ -1527,7 +1527,7 @@ static void display_player_xtra_info(void)
 
 	/* Melee attacks */
 	strnfmt(buf, sizeof(buf), "(%+d,%+d)", hit, dam);
-	Term_putstr(col, 12, -1, TERM_WHITE, "Рукоп");
+	Term_putstr(col, 12, -1, TERM_WHITE, "п═я┐п╨п╬п©");
 	Term_putstr(col+5, 12, -1, TERM_L_BLUE, format("%13s", buf));
 
 
@@ -1544,25 +1544,25 @@ static void display_player_xtra_info(void)
 
 	/* Range attacks */
 	strnfmt(buf, sizeof(buf), "(%+d,%+d)", hit, dam);
-	Term_putstr(col, 13, -1, TERM_WHITE, "Огонь");
+	Term_putstr(col, 13, -1, TERM_WHITE, "п·пЁп╬п╫я▄");
 	Term_putstr(col+5, 13, -1, TERM_L_BLUE, format("%13s", buf));
 
 
 	/* Blows */
-	strnfmt(buf, sizeof(buf), "%d/ход", p_ptr->num_blow);
-	Term_putstr(col, 14, -1, TERM_WHITE, "Удары");
+	strnfmt(buf, sizeof(buf), "%d/я┘п╬п╢", p_ptr->num_blow);
+	Term_putstr(col, 14, -1, TERM_WHITE, "пёп╢п╟я─я▀");
 	Term_putstr(col+5, 14, -1, TERM_L_BLUE, format("%13s", buf));
 
 
 	/* Shots */
-	strnfmt(buf, sizeof(buf), "%d/ход", p_ptr->num_fire);
-	Term_putstr(col, 15, -1, TERM_WHITE, "Выст.");
+	strnfmt(buf, sizeof(buf), "%d/я┘п╬п╢", p_ptr->num_fire);
+	Term_putstr(col, 15, -1, TERM_WHITE, "п▓я▀я│я┌.");
 	Term_putstr(col+5, 15, -1, TERM_L_BLUE, format("%13s", buf));
 
 
 	/* Infra */
-	strnfmt(buf, sizeof(buf), "%d фт", p_ptr->see_infra * 10);
-	Term_putstr(col, 17, -1, TERM_WHITE, "Инфра");
+	strnfmt(buf, sizeof(buf), "%d я└я┌", p_ptr->see_infra * 10);
+	Term_putstr(col, 17, -1, TERM_WHITE, "п≤п╫я└я─п╟");
 	Term_putstr(col+5, 17, -1, TERM_L_BLUE, format("%13s", buf));
 
 
@@ -1589,35 +1589,35 @@ static void display_player_xtra_info(void)
 	xfos = p_ptr->skill_fos;
 
 
-	put_str("Сохранение", 10, col);
+	put_str("п║п╬я┘я─п╟п╫п╣п╫п╦п╣", 10, col);
 	desc = likert(xsav, 6, &likert_attr);
 	c_put_str(likert_attr, format("%11s", desc), 10, col+12);
 
-	put_str("Скрытность", 11, col);
+	put_str("п║п╨я─я▀я┌п╫п╬я│я┌я▄", 11, col);
 	desc = likert(xstl, 1, &likert_attr);
 	c_put_str(likert_attr, format("%11s", desc), 11, col+12);
 
-	put_str("Сражение", 12, col);
+	put_str("п║я─п╟п╤п╣п╫п╦п╣", 12, col);
 	desc = likert(xthn, 12, &likert_attr);
 	c_put_str(likert_attr, format("%11s", desc), 12, col+12);
 
-	put_str("Стрельба", 13, col);
+	put_str("п║я┌я─п╣п╩я▄п╠п╟", 13, col);
 	desc = likert(xthb, 12, &likert_attr);
 	c_put_str(likert_attr, format("%11s", desc), 13, col+12);
 
-	put_str("Обезвреж.", 14, col);
+	put_str("п·п╠п╣п╥п╡я─п╣п╤.", 14, col);
 	desc = likert(xdis, 8, &likert_attr);
 	c_put_str(likert_attr, format("%11s", desc), 14, col+12);
 
-	put_str("Магич. вещи", 15, col);
+	put_str("п°п╟пЁп╦я┤. п╡п╣я┴п╦", 15, col);
 	desc = likert(xdev, 6, &likert_attr);
 	c_put_str(likert_attr, format("%11s", desc), 15, col+12);
 
-	put_str("Восприятие", 16, col);
+	put_str("п▓п╬я│п©я─п╦я▐я┌п╦п╣", 16, col);
 	desc = likert(xfos, 6, &likert_attr);
 	c_put_str(likert_attr, format("%11s", desc), 16, col+12);
 
-	put_str("Поиск", 17, col);
+	put_str("п÷п╬п╦я│п╨", 17, col);
 	desc = likert(xsrh, 6, &likert_attr);
 	c_put_str(likert_attr, format("%11s", desc), 17, col+12);
 
@@ -1716,47 +1716,47 @@ static const u32b display_player_flag_head[4] =
 static cptr display_player_flag_names[4][8] =
 {
 	{
-		" Кисл:",	/* TR2_RES_ACID */
-		" Элек:",	/* TR2_RES_ELEC */
-		" Огон:",	/* TR2_RES_FIRE */
-		" Холо:",	/* TR2_RES_COLD */
-		" Яд  :",	/* TR2_RES_POIS */
-		" Стрх:",	/* TR2_RES_FEAR */
-		" Свет:",	/* TR2_RES_LITE */
-		" Тьма:"	/* TR2_RES_DARK */
+		" п п╦я│п╩:",	/* TR2_RES_ACID */
+		" п╜п╩п╣п╨:",	/* TR2_RES_ELEC */
+		" п·пЁп╬п╫:",	/* TR2_RES_FIRE */
+		" п╔п╬п╩п╬:",	/* TR2_RES_COLD */
+		" п╞п╢  :",	/* TR2_RES_POIS */
+		" п║я┌я─я┘:",	/* TR2_RES_FEAR */
+		" п║п╡п╣я┌:",	/* TR2_RES_LITE */
+		" п╒я▄п╪п╟:"	/* TR2_RES_DARK */
 	},
 
 	{
-		"Слепо:",	/* TR2_RES_BLIND */
-		"Конту:",	/* TR2_RES_CONFU */
-		"Звук :",	/* TR2_RES_SOUND */
-		"Оскол:",	/* TR2_RES_SHARD */
-		"Прост:",	/* TR2_RES_NEXUS */
-		"Могил:",	/* TR2_RES_NETHR */
-		"Хаос :",	/* TR2_RES_CHAOS */
-		"АМаги:"	/* TR2_RES_DISEN */
+		"п║п╩п╣п©п╬:",	/* TR2_RES_BLIND */
+		"п п╬п╫я┌я┐:",	/* TR2_RES_CONFU */
+		"п≈п╡я┐п╨ :",	/* TR2_RES_SOUND */
+		"п·я│п╨п╬п╩:",	/* TR2_RES_SHARD */
+		"п÷я─п╬я│я┌:",	/* TR2_RES_NEXUS */
+		"п°п╬пЁп╦п╩:",	/* TR2_RES_NETHR */
+		"п╔п╟п╬я│ :",	/* TR2_RES_CHAOS */
+		"п░п°п╟пЁп╦:"	/* TR2_RES_DISEN */
 	},
 
 	{
-		"М.Пищ:",	/* TR3_SLOW_DIGEST */
-		"М.Пад:",	/* TR3_FEATHER */
-		"ПСвет:",	/* TR3_LITE */
-		"Реген:",	/* TR3_REGEN */
-		"Телеп:",	/* TR3_TELEPATHY */
-		"Невид:",	/* TR3_SEE_INVIS */
-		"Парал:",	/* TR3_FREE_ACT */
-		"ВЖизн:"	/* TR3_HOLD_LIFE */
+		"п°.п÷п╦я┴:",	/* TR3_SLOW_DIGEST */
+		"п°.п÷п╟п╢:",	/* TR3_FEATHER */
+		"п÷п║п╡п╣я┌:",	/* TR3_LITE */
+		"п═п╣пЁп╣п╫:",	/* TR3_REGEN */
+		"п╒п╣п╩п╣п©:",	/* TR3_TELEPATHY */
+		"п²п╣п╡п╦п╢:",	/* TR3_SEE_INVIS */
+		"п÷п╟я─п╟п╩:",	/* TR3_FREE_ACT */
+		"п▓п√п╦п╥п╫:"	/* TR3_HOLD_LIFE */
 	},
 
 	{
-		"Скрыт:",	/* TR1_STEALTH */
-		"Поиск:",	/* TR1_SEARCH */
-		"Инфра:",	/* TR1_INFRA */
-		"Копан:",	/* TR1_TUNNEL */
-		"Скоро:",	/* TR1_SPEED */
-		"Удары:",	/* TR1_BLOWS */
-		"Выстр:",	/* TR1_SHOTS */
-		"ВСила:"	/* TR1_MIGHT */
+		"п║п╨я─я▀я┌:",	/* TR1_STEALTH */
+		"п÷п╬п╦я│п╨:",	/* TR1_SEARCH */
+		"п≤п╫я└я─п╟:",	/* TR1_INFRA */
+		"п п╬п©п╟п╫:",	/* TR1_TUNNEL */
+		"п║п╨п╬я─п╬:",	/* TR1_SPEED */
+		"пёп╢п╟я─я▀:",	/* TR1_BLOWS */
+		"п▓я▀я│я┌я─:",	/* TR1_SHOTS */
+		"п▓п║п╦п╩п╟:"	/* TR1_MIGHT */
 	}
 };
 
@@ -1885,38 +1885,38 @@ static void display_player_misc_info(void)
 
 
 	/* Name */
-	put_str("Имя", 2, 1);
+	put_str("п≤п╪я▐", 2, 1);
 	c_put_str(TERM_L_BLUE, op_ptr->full_name, 2, 8);
 
 
 	/* Sex */
-	put_str("Пол", 3, 1);
+	put_str("п÷п╬п╩", 3, 1);
 	c_put_str(TERM_L_BLUE, sp_ptr->title, 3, 8);
 
 
 	/* Race */
-	put_str("Раса", 4, 1);
+	put_str("п═п╟я│п╟", 4, 1);
 	c_put_str(TERM_L_BLUE, p_name + rp_ptr->name, 4, 8);
 
 
 	/* Class */
-	put_str("Класс", 5, 1);
+	put_str("п п╩п╟я│я│", 5, 1);
 	c_put_str(TERM_L_BLUE, c_name + cp_ptr->name, 5, 8);
 
 
 	/* Title */
-	put_str("Титул", 6, 1);
+	put_str("п╒п╦я┌я┐п╩", 6, 1);
 
 	/* Wizard */
 	if (p_ptr->wizard)
 	{
-		p = "[=-ВОЛШЕБ-=]";
+		p = "[=-п▓п·п⌡п╗п∙п▒-=]";
 	}
 
 	/* Winner */
 	else if (p_ptr->total_winner || (p_ptr->lev > PY_MAX_LEVEL))
 	{
-		p = "*ПОБЕДИТЕЛЬ*";
+		p = "*п÷п·п▒п∙п■п≤п╒п∙п⌡п╛*";
 	}
 
 	/* Normal */
@@ -1930,13 +1930,13 @@ static void display_player_misc_info(void)
 
 
 	/* Hit Points */
-	put_str("Здор.", 7, 1);
+	put_str("п≈п╢п╬я─.", 7, 1);
 	strnfmt(buf, sizeof(buf), "%d/%d", p_ptr->chp, p_ptr->mhp);
 	c_put_str(TERM_L_BLUE, buf, 7, 8);
 
 
 	/* Spell Points */
-	put_str("Мана", 8, 1);
+	put_str("п°п╟п╫п╟", 8, 1);
 	strnfmt(buf, sizeof(buf), "%d/%d", p_ptr->csp, p_ptr->msp);
 	c_put_str(TERM_L_BLUE, buf, 8, 8);
 }
@@ -1959,11 +1959,11 @@ static void display_player_stat_info(void)
 	col = 42;
 
 	/* Print out the labels for the columns */
-	c_put_str(TERM_WHITE, "  Соб.", row-1, col+5);
-	c_put_str(TERM_WHITE, " РБ", row-1, col+12);
-	c_put_str(TERM_WHITE, " КБ", row-1, col+16);
-	c_put_str(TERM_WHITE, " НБ", row-1, col+20);
-	c_put_str(TERM_WHITE, "  Лучш", row-1, col+24);
+	c_put_str(TERM_WHITE, "  п║п╬п╠.", row-1, col+5);
+	c_put_str(TERM_WHITE, " п═п▒", row-1, col+12);
+	c_put_str(TERM_WHITE, " п п▒", row-1, col+16);
+	c_put_str(TERM_WHITE, " п²п▒", row-1, col+20);
+	c_put_str(TERM_WHITE, "  п⌡я┐я┤я┬", row-1, col+24);
 
 	/* Display the stats */
 	for (i = 0; i < A_MAX; i++)
@@ -2129,7 +2129,7 @@ static void display_player_sust_info(void)
 		{
 			/* Dark green "s" */
 			a = TERM_GREEN;
-			c = 'з';
+			c = 'п╥';
 		}
 
 		/* Dump */
@@ -2170,7 +2170,7 @@ void display_player(int mode)
 	if (mode)
 	{
 		/* Hack -- Level */
-		put_str("Уров.", 9, 1);
+		put_str("пёя─п╬п╡.", 9, 1);
 		c_put_str(TERM_L_BLUE, format("%d", p_ptr->lev), 9, 8);
 
 		/* Stat/Sustain flags */
@@ -2234,7 +2234,7 @@ errr file_character(cptr name, bool full)
 		fd_close(fd);
 
 		/* Build query */
-		strnfmt(out_val, sizeof(out_val), "Заменить файл %s? ", buf);
+		strnfmt(out_val, sizeof(out_val), "п≈п╟п╪п╣п╫п╦я┌я▄ я└п╟п╧п╩ %s? ", buf);
 
 		/* Ask */
 		if (get_check(out_val)) fd = -1;
@@ -2252,7 +2252,7 @@ errr file_character(cptr name, bool full)
 	text_out_file = fff;
 
 	/* Begin dump */
-	fprintf(fff, "  [%s %s Информация о герое]\n\n",
+	fprintf(fff, "  [%s %s п≤п╫я└п╬я─п╪п╟я├п╦я▐ п╬ пЁп╣я─п╬п╣]\n\n",
 	        VERSION_NAME, VERSION_STRING);
 
 
@@ -2346,7 +2346,7 @@ errr file_character(cptr name, bool full)
 	{
 		i = message_num();
 		if (i > 15) i = 15;
-		fprintf(fff, "  [Последниее сообщения]\n\n");
+		fprintf(fff, "  [п÷п╬я│п╩п╣п╢п╫п╦п╣п╣ я│п╬п╬п╠я┴п╣п╫п╦я▐]\n\n");
 		while (i-- > 0)
 		{
 			fprintf(fff, "> %s\n", message_str((s16b)i));
@@ -2357,7 +2357,7 @@ errr file_character(cptr name, bool full)
 	/* Dump the equipment */
 	if (p_ptr->equip_cnt)
 	{
-		fprintf(fff, "  [Экипировка]\n\n");
+		fprintf(fff, "  [п╜п╨п╦п©п╦я─п╬п╡п╨п╟]\n\n");
 		for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 		{
 			object_desc(o_name, sizeof(o_name), &inventory[i], TRUE, 3, PAD_IMEN);
@@ -2371,7 +2371,7 @@ errr file_character(cptr name, bool full)
 	}
 
 	/* Dump the inventory */
-	fprintf(fff, "  [Инвентарь]\n\n");
+	fprintf(fff, "  [п≤п╫п╡п╣п╫я┌п╟я─я▄]\n\n");
 	for (i = 0; i < INVEN_PACK; i++)
 	{
 		if (!inventory[i].k_idx) break;
@@ -2390,7 +2390,7 @@ errr file_character(cptr name, bool full)
 	if (st_ptr->stock_num)
 	{
 		/* Header */
-		fprintf(fff, "  [Домашний инвентарь]\n\n");
+		fprintf(fff, "  [п■п╬п╪п╟я┬п╫п╦п╧ п╦п╫п╡п╣п╫я┌п╟я─я▄]\n\n");
 
 		/* Dump all available items */
 		for (i = 0; i < st_ptr->stock_num; i++)
@@ -2408,7 +2408,7 @@ errr file_character(cptr name, bool full)
 
 
 	/* Dump options */
-	fprintf(fff, "  [Опции]\n\n");
+	fprintf(fff, "  [п·п©я├п╦п╦]\n\n");
 
 	/* Dump options */
 	for (i = OPT_ADULT; i < OPT_MAX; i++)
@@ -2417,7 +2417,7 @@ errr file_character(cptr name, bool full)
 		{
 			fprintf(fff, "%-45s: %s (%s)\n",
 			        option_desc[i],
-			        op_ptr->opt[i] ? "вкл " : "выкл",
+			        op_ptr->opt[i] ? "п╡п╨п╩ " : "п╡я▀п╨п╩",
 			        option_text[i]);
 		}
 	}
@@ -2574,7 +2574,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 	if (!fff)
 	{
 		/* Caption */
-		strnfmt(caption, sizeof(caption), "Справочный файл '%s'", name);
+		strnfmt(caption, sizeof(caption), "п║п©я─п╟п╡п╬я┤п╫я▀п╧ я└п╟п╧п╩ '%s'", name);
 
 		/* Build the filename */
 		path_build(path, sizeof(path), ANGBAND_DIR_HELP, name);
@@ -2587,7 +2587,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 	if (!fff)
 	{
 		/* Caption */
-		strnfmt(caption, sizeof(caption), "Информационный файл '%s'", name);
+		strnfmt(caption, sizeof(caption), "п≤п╫я└п╬я─п╪п╟я├п╦п╬п╫п╫я▀п╧ я└п╟п╧п╩ '%s'", name);
 
 		/* Build the filename */
 		path_build(path, sizeof(path), ANGBAND_DIR_INFO, name);
@@ -2600,7 +2600,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 	if (!fff)
 	{
 		/* Message */
-		msg_format("Не удалось открыть '%s'.", name);
+		msg_format("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╬я┌п╨я─я▀я┌я▄ '%s'.", name);
 		message_flush();
 
 		/* Oops */
@@ -2761,7 +2761,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 		/* Hack -- failed search */
 		if (find)
 		{
-			bell("Строка не найдена!");
+			bell("п║я┌я─п╬п╨п╟ п╫п╣ п╫п╟п╧п╢п╣п╫п╟!");
 			line = back;
 			find = NULL;
 			continue;
@@ -2769,7 +2769,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 
 
 		/* Show a general "title" */
-		prt(format("[%s %s, %s, строка %d-%d/%d]", VERSION_NAME,
+		prt(format("[%s %s, %s, я│я┌я─п╬п╨п╟ %d-%d/%d]", VERSION_NAME,
 		           VERSION_STRING, caption, line, line + hgt - 4, size), 0, 0);
 
 
@@ -2777,21 +2777,21 @@ bool show_file(cptr name, cptr what, int line, int mode)
 		if (menu)
 		{
 			/* Wait for it */
-			prt("[Нажмите цифру, или ESC для выхода.]", hgt - 1, 0);
+			prt("[п²п╟п╤п╪п╦я┌п╣ я├п╦я└я─я┐, п╦п╩п╦ ESC п╢п╩я▐ п╡я▀я┘п╬п╢п╟.]", hgt - 1, 0);
 		}
 
 		/* Prompt -- small files */
 		else if (size <= hgt - 4)
 		{
 			/* Wait for it */
-			prt("[Нажмите ESC для выхода.]", hgt - 1, 0);
+			prt("[п²п╟п╤п╪п╦я┌п╣ ESC п╢п╩я▐ п╡я▀я┘п╬п╢п╟.]", hgt - 1, 0);
 		}
 
 		/* Prompt -- large files */
 		else
 		{
 			/* Wait for it */
-			prt("[Нажмите Space для прокрутки, или ESC для выхода.]", hgt - 1, 0);
+			prt("[п²п╟п╤п╪п╦я┌п╣ Space п╢п╩я▐ п©я─п╬п╨я─я┐я┌п╨п╦, п╦п╩п╦ ESC п╢п╩я▐ п╡я▀я┘п╬п╢п╟.]", hgt - 1, 0);
 		}
 
 		/* Get a keypress */
@@ -2810,7 +2810,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 		if (ch == '&')
 		{
 			/* Get "shower" */
-			prt("Показать: ", hgt - 1, 0);
+			prt("п÷п╬п╨п╟п╥п╟я┌я▄: ", hgt - 1, 0);
 			(void)askfor_aux(shower, sizeof(shower));
 
 			/* Make the "shower" lowercase */
@@ -2821,7 +2821,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 		if (ch == '/')
 		{
 			/* Get "finder" */
-			prt("Найти: ", hgt - 1, 0);
+			prt("п²п╟п╧я┌п╦: ", hgt - 1, 0);
 			if (askfor_aux(finder, sizeof(finder)))
 			{
 				/* Find it */
@@ -2841,7 +2841,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 		if (ch == '#')
 		{
 			char tmp[80];
-			prt("Перейти к строке: ", hgt - 1, 0);
+			prt("п÷п╣я─п╣п╧я┌п╦ п╨ я│я┌я─п╬п╨п╣: ", hgt - 1, 0);
 			strcpy(tmp, "0");
 			if (askfor_aux(tmp, sizeof(tmp)))
 			{
@@ -2853,7 +2853,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 		if (ch == '%')
 		{
 			char ftmp[80];
-			prt("Перейти к файлу: ", hgt - 1, 0);
+			prt("п÷п╣я─п╣п╧я┌п╦ п╨ я└п╟п╧п╩я┐: ", hgt - 1, 0);
 			strcpy(ftmp, "help.hlp");
 			if (askfor_aux(ftmp, sizeof(ftmp)))
 			{
@@ -2975,7 +2975,7 @@ void process_player_name(bool sf)
 		if (iscntrl((unsigned char)c))
 		{
 			/* Illegal characters */
-			quit_fmt("Неправильный символ (0x%02X) в имени героя", c);
+			quit_fmt("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ я│п╦п╪п╡п╬п╩ (0x%02X) п╡ п╦п╪п╣п╫п╦ пЁп╣я─п╬я▐", c);
 		}
 
 		/* Convert all non-alphanumeric symbols */
@@ -3042,7 +3042,7 @@ void get_name(void)
 	my_strcpy(tmp, op_ptr->full_name, sizeof(tmp));
 
 	/* Prompt for a new name */
-	if (get_string("Введите имя для вашего героя: ", tmp, sizeof(tmp)))
+	if (get_string("п▓п╡п╣п╢п╦я┌п╣ п╦п╪я▐ п╢п╩я▐ п╡п╟я┬п╣пЁп╬ пЁп╣я─п╬я▐: ", tmp, sizeof(tmp)))
 	{
 		/* Use the name */
 		my_strcpy(op_ptr->full_name, tmp, sizeof(op_ptr->full_name));
@@ -3066,7 +3066,7 @@ void do_cmd_suicide(void)
 	if (p_ptr->total_winner)
 	{
 		/* Verify */
-		if (!get_check("Хотите прекратить ваши подвиги? ")) return;
+		if (!get_check("п╔п╬я┌п╦я┌п╣ п©я─п╣п╨я─п╟я┌п╦я┌я▄ п╡п╟я┬п╦ п©п╬п╢п╡п╦пЁп╦? ")) return;
 	}
 
 	/* Verify Suicide */
@@ -3075,10 +3075,10 @@ void do_cmd_suicide(void)
 		char ch;
 
 		/* Verify */
-		if (!get_check("Действительно покончить с собой? ")) return;
+		if (!get_check("п■п╣п╧я│я┌п╡п╦я┌п╣п╩я▄п╫п╬ п©п╬п╨п╬п╫я┤п╦я┌я▄ я│ я│п╬п╠п╬п╧? ")) return;
 
 		/* Special Verification for suicide */
-		prt("Пожалуйста, введите знак '@' для подтверждения: ", 0, 0);
+		prt("п÷п╬п╤п╟п╩я┐п╧я│я┌п╟, п╡п╡п╣п╢п╦я┌п╣ п╥п╫п╟п╨ '@' п╢п╩я▐ п©п╬п╢я┌п╡п╣я─п╤п╢п╣п╫п╦я▐: ", 0, 0);
 		flush();
 		ch = inkey();
 		prt("", 0, 0);
@@ -3095,7 +3095,7 @@ void do_cmd_suicide(void)
 	p_ptr->leaving = TRUE;
 
 	/* Cause of death */
-	strcpy(p_ptr->died_from, "самоубийством");
+	strcpy(p_ptr->died_from, "я│п╟п╪п╬я┐п╠п╦п╧я│я┌п╡п╬п╪");
 }
 
 
@@ -3115,7 +3115,7 @@ void do_cmd_save_game(void)
 	handle_stuff();
 
 	/* Message */
-	prt("Сохранение...", 0, 0);
+	prt("п║п╬я┘я─п╟п╫п╣п╫п╦п╣...", 0, 0);
 
 	/* Refresh */
 	Term_fresh();
@@ -3129,13 +3129,13 @@ void do_cmd_save_game(void)
 	/* Save the player */
 	if (save_player())
 	{
-		prt("Сохранение... сделано.", 0, 0);
+		prt("п║п╬я┘я─п╟п╫п╣п╫п╦п╣... я│п╢п╣п╩п╟п╫п╬.", 0, 0);
 	}
 
 	/* Save failed (oops) */
 	else
 	{
-		prt("Сохранение... не удалось!", 0, 0);
+		prt("п║п╬я┘я─п╟п╫п╣п╫п╦п╣... п╫п╣ я┐п╢п╟п╩п╬я│я▄!", 0, 0);
 	}
 
 	/* Allow suspend again */
@@ -3298,7 +3298,7 @@ static void print_tomb(void)
 	/* King or Queen */
 	if (p_ptr->total_winner || (p_ptr->lev > PY_MAX_LEVEL))
 	{
-		p = (p_ptr->psex == SEX_MALE ? "Великий" : "Великая");
+		p = (p_ptr->psex == SEX_MALE ? "п▓п╣п╩п╦п╨п╦п╧" : "п▓п╣п╩п╦п╨п╟я▐");
 	}
 
 	/* Normal */
@@ -3320,19 +3320,19 @@ static void print_tomb(void)
 	center_string(buf, sizeof(buf), c_name + cp_ptr->name);
 	put_str(buf, 10, 11);
 
-	strnfmt(tmp, sizeof(tmp), "Уровень: %d", (int)p_ptr->lev);
+	strnfmt(tmp, sizeof(tmp), "пёя─п╬п╡п╣п╫я▄: %d", (int)p_ptr->lev);
 	center_string(buf, sizeof(buf), tmp);
 	put_str(buf, 11, 11);
 
-	strnfmt(tmp, sizeof(tmp), "Опыт: %ld", (long)p_ptr->exp);
+	strnfmt(tmp, sizeof(tmp), "п·п©я▀я┌: %ld", (long)p_ptr->exp);
 	center_string(buf, sizeof(buf), tmp);
 	put_str(buf, 12, 11);
 
-	strnfmt(tmp, sizeof(tmp), "Золото: %ld", (long)p_ptr->au);
+	strnfmt(tmp, sizeof(tmp), "п≈п╬п╩п╬я┌п╬: %ld", (long)p_ptr->au);
 	center_string(buf, sizeof(buf), tmp);
 	put_str(buf, 13, 11);
 
-	strnfmt(tmp, sizeof(tmp), "Убит на уровне %d", p_ptr->depth);
+	strnfmt(tmp, sizeof(tmp), "пёп╠п╦я┌ п╫п╟ я┐я─п╬п╡п╫п╣ %d", p_ptr->depth);
 	center_string(buf, sizeof(buf), tmp);
 	put_str(buf, 14, 11);
 
@@ -3415,7 +3415,7 @@ static void show_info(void)
 	display_player(0);
 
 	/* Prompt for inventory */
-	prt("Нажмите любую клавишу для дальнейшей информации (ESC для выхода): ", 23, 0);
+	prt("п²п╟п╤п╪п╦я┌п╣ п╩я▌п╠я┐я▌ п╨п╩п╟п╡п╦я┬я┐ п╢п╩я▐ п╢п╟п╩я▄п╫п╣п╧я┬п╣п╧ п╦п╫я└п╬я─п╪п╟я├п╦п╦ (ESC п╢п╩я▐ п╡я▀я┘п╬п╢п╟): ", 23, 0);
 
 	/* Allow abort at this point */
 	if (inkey() == ESCAPE) return;
@@ -3429,7 +3429,7 @@ static void show_info(void)
 		Term_clear();
 		item_tester_full = TRUE;
 		show_equip();
-		prt("Вы используете: -далее-", 0, 0);
+		prt("п▓я▀ п╦я│п©п╬п╩я▄п╥я┐п╣я┌п╣: -п╢п╟п╩п╣п╣-", 0, 0);
 		if (inkey() == ESCAPE) return;
 	}
 
@@ -3439,7 +3439,7 @@ static void show_info(void)
 		Term_clear();
 		item_tester_full = TRUE;
 		show_inven();
-		prt("Вы несете: -далее-", 0, 0);
+		prt("п▓я▀ п╫п╣я│п╣я┌п╣: -п╢п╟п╩п╣п╣-", 0, 0);
 		if (inkey() == ESCAPE) return;
 	}
 
@@ -3480,7 +3480,7 @@ static void show_info(void)
 			}
 
 			/* Caption */
-			prt(format("Ваш дом содержит (стр. %d): -далее-", k+1), 0, 0);
+			prt(format("п▓п╟я┬ п╢п╬п╪ я│п╬п╢п╣я─п╤п╦я┌ (я│я┌я─. %d): -п╢п╟п╩п╣п╣-", k+1), 0, 0);
 
 			/* Wait for it */
 			if (inkey() == ESCAPE) return;
@@ -3505,8 +3505,8 @@ static void death_examine(void)
 	p_ptr->command_see = TRUE;
 
 	/* Get an item */
-	q = "Изучить какой предмет? ";
-	s = "Вам нечего изучать.";
+	q = "п≤п╥я┐я┤п╦я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ п╦п╥я┐я┤п╟я┌я▄.";
 
 	while (TRUE)
 	{
@@ -3691,13 +3691,13 @@ static void display_scores_aux(int from, int to, int note, high_score *score)
 		Term_clear();
 
 		/* Title */
-		put_str(format("                %s - Зал Славы", VERSION_NAME),
+		put_str(format("                %s - п≈п╟п╩ п║п╩п╟п╡я▀", VERSION_NAME),
 		        0, 0);
 
 		/* Indicate non-top scores */
 		if (k > 0)
 		{
-			strnfmt(tmp_val, sizeof(tmp_val), "(с %d места)", place);
+			strnfmt(tmp_val, sizeof(tmp_val), "(я│ %d п╪п╣я│я┌п╟)", place);
 			put_str(tmp_val, 0, 40);
 		}
 
@@ -3757,46 +3757,46 @@ static void display_scores_aux(int from, int to, int note, high_score *score)
 
 			/* Dump some info */
 			strnfmt(out_val, sizeof(out_val),
-			        "%3d.%9s  %s, %s-%s, уровень %d",
+			        "%3d.%9s  %s, %s-%s, я┐я─п╬п╡п╣п╫я▄ %d",
 			        place, the_score.pts, the_score.who,
 			        p_name + p_info[pr].name, c_name + c_info[pc].name,
 			        clev);
 
 			/* Append a "maximum level" */
-			if (mlev > clev) my_strcat(out_val, format(" (Макс. %d)", mlev), sizeof(out_val));
+			if (mlev > clev) my_strcat(out_val, format(" (п°п╟п╨я│. %d)", mlev), sizeof(out_val));
 
 			/* Dump the first line */
 			c_put_str(attr, out_val, n*4 + 2, 0);
 
 			/* Another line of info */
 			strnfmt(out_val, sizeof(out_val),
-			        "               Убит %s на уровне %d",
+			        "               пёп╠п╦я┌ %s п╫п╟ я┐я─п╬п╡п╫п╣ %d",
 			        the_score.how, cdun);
 
 			/* Hack -- some people die in the town */
 			if (!cdun)
 			{
 				strnfmt(out_val, sizeof(out_val),
-				        "               Убит %s в городе",
+				        "               пёп╠п╦я┌ %s п╡ пЁп╬я─п╬п╢п╣",
 				        the_score.how);
 			}
 
 			/* Append a "maximum level" */
-			if (mdun > cdun) my_strcat(out_val, format(" (Макс. %d)", mdun), sizeof(out_val));
+			if (mdun > cdun) my_strcat(out_val, format(" (п°п╟п╨я│. %d)", mdun), sizeof(out_val));
 
 			/* Dump the info */
 			c_put_str(attr, out_val, n*4 + 3, 0);
 
 			/* And still another line of info */
 			strnfmt(out_val, sizeof(out_val),
-			        "               (польз. %s, дата %s, золота %s, ход %s).",
+			        "               (п©п╬п╩я▄п╥. %s, п╢п╟я┌п╟ %s, п╥п╬п╩п╬я┌п╟ %s, я┘п╬п╢ %s).",
 			        user, when, gold, aged);
 			c_put_str(attr, out_val, n*4 + 4, 0);
 		}
 
 
 		/* Wait for response */
-		prt("[Нажмите ESC для выхода, любую другую клавишу для продолжения.]", 23, 17);
+		prt("[п²п╟п╤п╪п╦я┌п╣ ESC п╢п╩я▐ п╡я▀я┘п╬п╢п╟, п╩я▌п╠я┐я▌ п╢я─я┐пЁя┐я▌ п╨п╩п╟п╡п╦я┬я┐ п╢п╩я▐ п©я─п╬п╢п╬п╩п╤п╣п╫п╦я▐.]", 23, 17);
 		ch = inkey();
 		prt("", 23, 0);
 
@@ -3826,7 +3826,7 @@ void display_scores(int from, int to)
 	Term_clear();
 
 	/* Title */
-	put_str(format("                %s - Зал Славы", VERSION_NAME), 0, 0);
+	put_str(format("                %s - п≈п╟п╩ п║п╩п╟п╡я▀", VERSION_NAME), 0, 0);
 
 	/* Display the scores */
 	display_scores_aux(from, to, -1, NULL);
@@ -3838,7 +3838,7 @@ void display_scores(int from, int to)
 	highscore_fd = -1;
 
 	/* Wait for response */
-	prt("[Нажмите любую клавишу для выхода.]", 23, 17);
+	prt("[п²п╟п╤п╪п╦я┌п╣ п╩я▌п╠я┐я▌ п╨п╩п╟п╡п╦я┬я┐ п╢п╩я▐ п╡я▀я┘п╬п╢п╟.]", 23, 17);
 	(void)inkey();
 	prt("", 23, 0);
 
@@ -3878,7 +3878,7 @@ static errr enter_score(void)
 	/* Wizard-mode pre-empts scoring */
 	if (p_ptr->noscore & 0x000F)
 	{
-		msg_print("Счет не засчитывается для волшебников.");
+		msg_print("п║я┤п╣я┌ п╫п╣ п╥п╟я│я┤п╦я┌я▀п╡п╟п╣я┌я│я▐ п╢п╩я▐ п╡п╬п╩я┬п╣п╠п╫п╦п╨п╬п╡.");
 		message_flush();
 		score_idx = -1;
 		return (0);
@@ -3891,7 +3891,7 @@ static errr enter_score(void)
 	/* Borg-mode pre-empts scoring */
 	if (p_ptr->noscore & 0x00F0)
 	{
-		msg_print("Счет не засчитывается для боргов.");
+		msg_print("п║я┤п╣я┌ п╫п╣ п╥п╟я│я┤п╦я┌я▀п╡п╟п╣я┌я│я▐ п╢п╩я▐ п╠п╬я─пЁп╬п╡.");
 		message_flush();
 		score_idx = -1;
 		return (0);
@@ -3905,7 +3905,7 @@ static errr enter_score(void)
 	{
 		if (!op_ptr->opt[j]) continue;
 
-		msg_print("Счет не засчитывается для читеров.");
+		msg_print("п║я┤п╣я┌ п╫п╣ п╥п╟я│я┤п╦я┌я▀п╡п╟п╣я┌я│я▐ п╢п╩я▐ я┤п╦я┌п╣я─п╬п╡.");
 		message_flush();
 		score_idx = -1;
 		return (0);
@@ -3914,18 +3914,18 @@ static errr enter_score(void)
 #endif /* SCORE_CHEATERS */
 
 	/* Hack -- Interupted */
-	if (!p_ptr->total_winner && streq(p_ptr->died_from, "прерыванием"))
+	if (!p_ptr->total_winner && streq(p_ptr->died_from, "п©я─п╣я─я▀п╡п╟п╫п╦п╣п╪"))
 	{
-		msg_print("Счет не засчитывается из-за прерывания.");
+		msg_print("п║я┤п╣я┌ п╫п╣ п╥п╟я│я┤п╦я┌я▀п╡п╟п╣я┌я│я▐ п╦п╥-п╥п╟ п©я─п╣я─я▀п╡п╟п╫п╦я▐.");
 		message_flush();
 		score_idx = -1;
 		return (0);
 	}
 
 	/* Hack -- Quitter */
-	if (!p_ptr->total_winner && streq(p_ptr->died_from, "выходом"))
+	if (!p_ptr->total_winner && streq(p_ptr->died_from, "п╡я▀я┘п╬п╢п╬п╪"))
 	{
-		msg_print("Счет не засчитывается из-за выхода.");
+		msg_print("п║я┤п╣я┌ п╫п╣ п╥п╟я│я┤п╦я┌я▀п╡п╟п╣я┌я│я▐ п╦п╥-п╥п╟ п╡я▀я┘п╬п╢п╟.");
 		message_flush();
 		score_idx = -1;
 		return (0);
@@ -4012,7 +4012,7 @@ static void top_twenty(void)
 	/* No score file */
 	if (highscore_fd < 0)
 	{
-		msg_print("Файл рекордов отсутствует.");
+		msg_print("п╓п╟п╧п╩ я─п╣п╨п╬я─п╢п╬п╡ п╬я┌я│я┐я┌я│я┌п╡я┐п╣я┌.");
 		message_flush();
 		return;
 	}
@@ -4056,7 +4056,7 @@ static errr predict_score(void)
 	/* No score file */
 	if (highscore_fd < 0)
 	{
-		msg_print("Файл рекордов отсутствует.");
+		msg_print("п╓п╟п╧п╩ я─п╣п╨п╬я─п╢п╬п╡ п╬я┌я│я┐я┌я│я┌п╡я┐п╣я┌.");
 		message_flush();
 		return (0);
 	}
@@ -4075,7 +4075,7 @@ static errr predict_score(void)
 	strnfmt(the_score.turns, sizeof(the_score.turns), "%9lu", (long)turn);
 
 	/* Hack -- no time needed */
-	strcpy(the_score.day, "- сегодня");
+	strcpy(the_score.day, "- я│п╣пЁп╬п╢п╫я▐");
 
 	/* Save the player name (15 chars) */
 	strnfmt(the_score.who, sizeof(the_score.who), "%-.15s", op_ptr->full_name);
@@ -4093,7 +4093,7 @@ static errr predict_score(void)
 	strnfmt(the_score.max_dun, sizeof(the_score.max_dun), "%3d", p_ptr->max_depth);
 
 	/* Hack -- no cause of death */
-	strcpy(the_score.how, "...пока никем");
+	strcpy(the_score.how, "...п©п╬п╨п╟ п╫п╦п╨п╣п╪");
 
 
 	/* See where the entry would be placed */
@@ -4132,7 +4132,7 @@ void show_scores(void)
 	/* Paranoia -- No score file */
 	if (highscore_fd < 0)
 	{
-		msg_print("Файл рекордов отсутствует.");
+		msg_print("п╓п╟п╧п╩ я─п╣п╨п╬я─п╢п╬п╡ п╬я┌я│я┐я┌я│я┌п╡я┐п╣я┌.");
 	}
 	else
 	{
@@ -4175,7 +4175,7 @@ static void kingly(void)
 	p_ptr->depth = 0;
 
 	/* Fake death */
-	strcpy(p_ptr->died_from, "(умер от старости)");
+	strcpy(p_ptr->died_from, "(я┐п╪п╣я─ п╬я┌ я│я┌п╟я─п╬я│я┌п╦)");
 
 	/* Restore the experience */
 	p_ptr->exp = p_ptr->max_exp;
@@ -4205,8 +4205,8 @@ static void kingly(void)
 
 	/* Display a message */
 	put_str("Veni, Vidi, Vici!", 15, 26);
-	put_str("Пришел, увидел, победил!", 16, 18);
-	put_str(format("Да здраствует велик%s %s!", (p_ptr->psex == SEX_MALE ? "ий" : "ая"), sp_ptr->winner), 17, 17);
+	put_str("п÷я─п╦я┬п╣п╩, я┐п╡п╦п╢п╣п╩, п©п╬п╠п╣п╢п╦п╩!", 16, 18);
+	put_str(format("п■п╟ п╥п╢я─п╟я│я┌п╡я┐п╣я┌ п╡п╣п╩п╦п╨%s %s!", (p_ptr->psex == SEX_MALE ? "п╦п╧" : "п╟я▐"), sp_ptr->winner), 17, 17);
 
 	/* Flush input */
 	flush();
@@ -4223,7 +4223,7 @@ static void close_game_aux(void)
 {
 	int ch;
 	bool wants_to_quit = FALSE;
-	cptr p = "[(i)информация, (m)сообщения, (f)файл, (v)рекорды, (x)изучить предмет, ESC]";
+	cptr p = "[(i)п╦п╫я└п╬я─п╪п╟я├п╦я▐, (m)я│п╬п╬п╠я┴п╣п╫п╦я▐, (f)я└п╟п╧п╩, (v)я─п╣п╨п╬я─п╢я▀, (x)п╦п╥я┐я┤п╦я┌я▄ п©я─п╣п╢п╪п╣я┌, ESC]";
 
 
 	/* Handle retirement */
@@ -4232,7 +4232,7 @@ static void close_game_aux(void)
 	/* Save dead player */
 	if (!save_player())
 	{
-		msg_print("Посмертное сохранение не удалось!");
+		msg_print("п÷п╬я│п╪п╣я─я┌п╫п╬п╣ я│п╬я┘я─п╟п╫п╣п╫п╦п╣ п╫п╣ я┐п╢п╟п╩п╬я│я▄!");
 		message_flush();
 	}
 
@@ -4268,7 +4268,7 @@ static void close_game_aux(void)
 			/* Exit */
 			case ESCAPE:
 			{
-				if (get_check("Хотите выйти? "))
+				if (get_check("п╔п╬я┌п╦я┌п╣ п╡я▀п╧я┌п╦? "))
 					wants_to_quit = TRUE;
 
 				break;
@@ -4282,7 +4282,7 @@ static void close_game_aux(void)
 
 				strnfmt(ftmp, sizeof(ftmp), "%s.txt", op_ptr->base_name);
 
-				if (get_string("Файл: ", ftmp, sizeof(ftmp)))
+				if (get_string("п╓п╟п╧п╩: ", ftmp, sizeof(ftmp)))
 				{
 					if (ftmp[0] && (ftmp[0] != ' '))
 					{
@@ -4300,11 +4300,11 @@ static void close_game_aux(void)
 						/* Check result */
 						if (err)
 						{
-							msg_print("Не получилось вывести информацию о герое!");
+							msg_print("п²п╣ п©п╬п╩я┐я┤п╦п╩п╬я│я▄ п╡я▀п╡п╣я│я┌п╦ п╦п╫я└п╬я─п╪п╟я├п╦я▌ п╬ пЁп╣я─п╬п╣!");
 						}
 						else
 						{
-							msg_print("Информация о герое выведена в файл.");
+							msg_print("п≤п╫я└п╬я─п╪п╟я├п╦я▐ п╬ пЁп╣я─п╬п╣ п╡я▀п╡п╣п╢п╣п╫п╟ п╡ я└п╟п╧п╩.");
 						}
 
 						/* Flush messages */
@@ -4448,7 +4448,7 @@ void close_game(void)
 		do_cmd_save_game();
 
 		/* Prompt for scores XXX XXX XXX */
-		prt("Нажмите Return (или Escape).", 0, 40);
+		prt("п²п╟п╤п╪п╦я┌п╣ Return (п╦п╩п╦ Escape).", 0, 40);
 
 		/* Predict score (or ESCAPE) */
 		if (inkey() != ESCAPE) predict_score();
@@ -4507,10 +4507,10 @@ void exit_game_panic(void)
 	strcpy(p_ptr->died_from, "(panic save)");
 
 	/* Panic save, or get worried */
-	if (!save_player()) quit("критическое сохранение не удалось!");
+	if (!save_player()) quit("п╨я─п╦я┌п╦я┤п╣я│п╨п╬п╣ я│п╬я┘я─п╟п╫п╣п╫п╦п╣ п╫п╣ я┐п╢п╟п╩п╬я│я▄!");
 
 	/* Successful panic save */
-	quit("критическое сохранение совершено!");
+	quit("п╨я─п╦я┌п╦я┤п╣я│п╨п╬п╣ я│п╬я┘я─п╟п╫п╣п╫п╦п╣ я│п╬п╡п╣я─я┬п╣п╫п╬!");
 }
 
 
@@ -4614,7 +4614,7 @@ static void handle_signal_simple(int sig)
 	if (p_ptr->is_dead)
 	{
 		/* Mark the savefile */
-		strcpy(p_ptr->died_from, "прерыванием");
+		strcpy(p_ptr->died_from, "п©я─п╣я─я▀п╡п╟п╫п╦п╣п╪");
 
 		/* HACK - Skip the tombscreen if it is already displayed */
 		if (score_idx == -1)
@@ -4631,7 +4631,7 @@ static void handle_signal_simple(int sig)
 	else if (signal_count >= 5)
 	{
 		/* Cause of "death" */
-		strcpy(p_ptr->died_from, "прерыванием");
+		strcpy(p_ptr->died_from, "п©я─п╣я─я▀п╡п╟п╫п╦п╣п╪");
 
 		/* Commit suicide */
 		p_ptr->is_dead = TRUE;
@@ -4659,7 +4659,7 @@ static void handle_signal_simple(int sig)
 		Term_erase(0, 0, 255);
 
 		/* Display the cause */
-		Term_putstr(0, 0, -1, TERM_WHITE, "Будет совершено самоубийство!");
+		Term_putstr(0, 0, -1, TERM_WHITE, "п▒я┐п╢п╣я┌ я│п╬п╡п╣я─я┬п╣п╫п╬ я│п╟п╪п╬я┐п╠п╦п╧я│я┌п╡п╬!");
 
 		/* Flush */
 		Term_fresh();
@@ -4698,10 +4698,10 @@ static void handle_signal_abort(int sig)
 
 	/* Give a warning */
 	Term_putstr(0, 23, -1, TERM_RED,
-	            "Жуткий баг ВЫСКАКИЕВАЕТ на вас!");
+	            "п√я┐я┌п╨п╦п╧ п╠п╟пЁ п▓п╚п║п п░п п≤п∙п▓п░п∙п╒ п╫п╟ п╡п╟я│!");
 
 	/* Message */
-	Term_putstr(45, 23, -1, TERM_RED, "аварийное сохранение...");
+	Term_putstr(45, 23, -1, TERM_RED, "п╟п╡п╟я─п╦п╧п╫п╬п╣ я│п╬я┘я─п╟п╫п╣п╫п╦п╣...");
 
 	/* Flush output */
 	Term_fresh();
@@ -4718,13 +4718,13 @@ static void handle_signal_abort(int sig)
 	/* Attempt to save */
 	if (save_player())
 	{
-		Term_putstr(45, 23, -1, TERM_RED, "Аварийное сохранение успешно!");
+		Term_putstr(45, 23, -1, TERM_RED, "п░п╡п╟я─п╦п╧п╫п╬п╣ я│п╬я┘я─п╟п╫п╣п╫п╦п╣ я┐я│п©п╣я┬п╫п╬!");
 	}
 
 	/* Save failed */
 	else
 	{
-		Term_putstr(45, 23, -1, TERM_RED, "Аварийное сохранение не удалось!");
+		Term_putstr(45, 23, -1, TERM_RED, "п░п╡п╟я─п╦п╧п╫п╬п╣ я│п╬я┘я─п╟п╫п╣п╫п╦п╣ п╫п╣ я┐п╢п╟п╩п╬я│я▄!");
 	}
 
 	/* Flush output */
@@ -4997,7 +4997,7 @@ void html_screenshot(cptr name)
 	/* Oops */
 	if (!htm)
 	{
-		plog_fmt("Не удалось записать файл '%s'!", buf);
+		plog_fmt("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╥п╟п©п╦я│п╟я┌я▄ я└п╟п╧п╩ '%s'!", buf);
 		return;
 	}
 

@@ -75,8 +75,8 @@ void do_cmd_eat_food(void)
 	item_tester_tval = TV_FOOD;
 
 	/* Get an item */
-	q = "Съесть какой предмет? ";
-	s = "У вас нет ничего съедобного.";
+	q = "п║я┼п╣я│я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п╫п╦я┤п╣пЁп╬ я│я┼п╣п╢п╬п╠п╫п╬пЁп╬.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -160,8 +160,8 @@ void do_cmd_quaff_potion(void)
 	item_tester_tval = TV_POTION;
 
 	/* Get an item */
-	q = "Выпить какой напиток? ";
-	s = "Вам нечего выпивать.";
+	q = "п▓я▀п©п╦я┌я▄ п╨п╟п╨п╬п╧ п╫п╟п©п╦я┌п╬п╨? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ п╡я▀п©п╦п╡п╟я┌я▄.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -247,17 +247,17 @@ void do_cmd_read_scroll(void)
 	/* Check some conditions */
 	if (p_ptr->blind)
 	{
-		msg_print("Вы ничего не видите.");
+		msg_print("п▓я▀ п╫п╦я┤п╣пЁп╬ п╫п╣ п╡п╦п╢п╦я┌п╣.");
 		return;
 	}
 	if (no_lite())
 	{
-		msg_print("У вас нет света для чтения.");
+		msg_print("пё п╡п╟я│ п╫п╣я┌ я│п╡п╣я┌п╟ п╢п╩я▐ я┤я┌п╣п╫п╦я▐.");
 		return;
 	}
 	if (p_ptr->confused)
 	{
-		msg_print("Вы контужены!");
+		msg_print("п▓я▀ п╨п╬п╫я┌я┐п╤п╣п╫я▀!");
 		return;
 	}
 
@@ -266,8 +266,8 @@ void do_cmd_read_scroll(void)
 	item_tester_tval = TV_SCROLL;
 
 	/* Get an item */
-	q = "Прочитать какой свиток? ";
-	s = "У вас нет свитков для чтения.";
+	q = "п÷я─п╬я┤п╦я┌п╟я┌я▄ п╨п╟п╨п╬п╧ я│п╡п╦я┌п╬п╨? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ я│п╡п╦я┌п╨п╬п╡ п╢п╩я▐ я┤я┌п╣п╫п╦я▐.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -363,8 +363,8 @@ void do_cmd_use_staff(void)
 	item_tester_tval = TV_STAFF;
 
 	/* Get an item */
-	q = "Использовать какой посох? ";
-	s = "У вас нет посохов для использования.";
+	q = "п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╨п╟п╨п╬п╧ п©п╬я│п╬я┘? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п©п╬я│п╬я┘п╬п╡ п╢п╩я▐ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦я▐.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -407,7 +407,7 @@ void do_cmd_use_staff(void)
 	if ((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE))
 	{
 		if (flush_failure) flush();
-		msg_print("Вам не удалось использовать посох.");
+		msg_print("п▓п╟п╪ п╫п╣ я┐п╢п╟п╩п╬я│я▄ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п©п╬я│п╬я┘.");
 		return;
 	}
 
@@ -415,7 +415,7 @@ void do_cmd_use_staff(void)
 	if (o_ptr->pval <= 0)
 	{
 		if (flush_failure) flush();
-		msg_print("В посохе кончились заряды.");
+		msg_print("п▓ п©п╬я│п╬я┘п╣ п╨п╬п╫я┤п╦п╩п╦я│я▄ п╥п╟я─я▐п╢я▀.");
 		o_ptr->ident |= (IDENT_EMPTY);
 		p_ptr->notice |= (PN_COMBINE | PN_REORDER);
 		p_ptr->window |= (PW_INVEN);
@@ -504,8 +504,8 @@ void do_cmd_aim_wand(void)
 	item_tester_tval = TV_WAND;
 
 	/* Get an item */
-	q = "Направить какую палочку? ";
-	s = "У вас нет палочек.";
+	q = "п²п╟п©я─п╟п╡п╦я┌я▄ п╨п╟п╨я┐я▌ п©п╟п╩п╬я┤п╨я┐? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п©п╟п╩п╬я┤п╣п╨.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -584,8 +584,8 @@ void do_cmd_zap_rod(void)
 	item_tester_tval = TV_ROD;
 
 	/* Get an item */
-	q = "Использовать какой жезл? ";
-	s = "У вас нет жезлов.";
+	q = "п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╨п╟п╨п╬п╧ п╤п╣п╥п╩? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п╤п╣п╥п╩п╬п╡.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -667,8 +667,8 @@ void do_cmd_activate(void)
 	item_tester_hook = item_tester_hook_activate;
 
 	/* Get an item */
-	q = "Активировать какой предмет? ";
-	s = "Вам нечего активировать.";
+	q = "п░п╨я┌п╦п╡п╦я─п╬п╡п╟я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ п╟п╨я┌п╦п╡п╦я─п╬п╡п╟я┌я▄.";
 	if (!get_item(&item, q, s, (USE_EQUIP))) return;
 
 	/* Get the item (in the pack) */
@@ -712,7 +712,7 @@ void do_cmd_activate(void)
 	if ((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE))
 	{
 		if (flush_failure) flush();
-		msg_print("У вас не получилось активировать предмет.");
+		msg_print("пё п╡п╟я│ п╫п╣ п©п╬п╩я┐я┤п╦п╩п╬я│я▄ п╟п╨я┌п╦п╡п╦я─п╬п╡п╟я┌я▄ п©я─п╣п╢п╪п╣я┌.");
 		return;
 	}
 

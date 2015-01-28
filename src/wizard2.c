@@ -178,7 +178,7 @@ static void do_cmd_wiz_change_aux(void)
 	sprintf(tmp_val, "%ld", (long)(p_ptr->au));
 
 	/* Query */
-	if (!get_string("Золото: ", tmp_val, 10)) return;
+	if (!get_string("п≈п╬п╩п╬я┌п╬: ", tmp_val, 10)) return;
 
 	/* Extract */
 	tmp_long = atol(tmp_val);
@@ -194,7 +194,7 @@ static void do_cmd_wiz_change_aux(void)
 	sprintf(tmp_val, "%ld", (long)(p_ptr->exp));
 
 	/* Query */
-	if (!get_string("Опыт: ", tmp_val, 10)) return;
+	if (!get_string("п·п©я▀я┌: ", tmp_val, 10)) return;
 
 	/* Extract */
 	tmp_long = atol(tmp_val);
@@ -212,7 +212,7 @@ static void do_cmd_wiz_change_aux(void)
 	sprintf(tmp_val, "%ld", (long)(p_ptr->max_exp));
 
 	/* Query */
-	if (!get_string("Макс. опыт: ", tmp_val, 10)) return;
+	if (!get_string("п°п╟п╨я│. п╬п©я▀я┌: ", tmp_val, 10)) return;
 
 	/* Extract */
 	tmp_long = atol(tmp_val);
@@ -1475,7 +1475,7 @@ void do_cmd_debug(void)
 
 
 	/* Get a "debug command" */
-	if (!get_com("Отладочная команда: ", &cmd)) return;
+	if (!get_com("п·я┌п╩п╟п╢п╬я┤п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟: ", &cmd)) return;
 
 	/* Analyze the command */
 	switch (cmd)
@@ -1712,7 +1712,7 @@ void do_cmd_debug(void)
 		/* Oops */
 		default:
 		{
-			msg_print("Неправильная команда отладки.");
+			msg_print("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟ п╬я┌п╩п╟п╢п╨п╦.");
 			break;
 		}
 	}

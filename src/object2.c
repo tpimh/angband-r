@@ -311,7 +311,7 @@ void compact_objects(int size)
 	if (size)
 	{
 		/* Message */
-		msg_print("Сжатие объектов...");
+		msg_print("п║п╤п╟я┌п╦п╣ п╬п╠я┼п╣п╨я┌п╬п╡...");
 
 		/* Redraw map */
 		p_ptr->redraw |= (PR_MAP);
@@ -524,7 +524,7 @@ s16b o_pop(void)
 
 
 	/* Warn the player (except during dungeon creation) */
-	if (character_dungeon) msg_print("Слишком много объектов!");
+	if (character_dungeon) msg_print("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ п╬п╠я┼п╣п╨я┌п╬п╡!");
 
 	/* Oops */
 	return (0);
@@ -1589,21 +1589,21 @@ static void object_mention(const object_type *o_ptr)
 	if (artifact_p(o_ptr))
 	{
 		/* Silly message */
-		msg_format("Артефакт (%s)", o_name);
+		msg_format("п░я─я┌п╣я└п╟п╨я┌ (%s)", o_name);
 	}
 
 	/* Ego-item */
 	else if (ego_item_p(o_ptr))
 	{
 		/* Silly message */
-		msg_format("Эго-предмет (%s)", o_name);
+		msg_format("п╜пЁп╬-п©я─п╣п╢п╪п╣я┌ (%s)", o_name);
 	}
 
 	/* Normal item */
 	else
 	{
 		/* Silly message */
-		msg_format("Предмет (%s)", o_name);
+		msg_format("п÷я─п╣п╢п╪п╣я┌ (%s)", o_name);
 	}
 }
 
@@ -3216,8 +3216,8 @@ void drop_near(object_type *j_ptr, int chance, int y, int x)
 	if (!artifact_p(j_ptr) && (rand_int(100) < chance))
 	{
 		/* Message */
-		msg_format("%s исчеза%cт.",
-		           o_name, (plural ? 'ю' : 'е'));
+		msg_format("%s п╦я│я┤п╣п╥п╟%cя┌.",
+		           o_name, (plural ? 'я▌' : 'п╣'));
 
 		/* Debug */
 		if (p_ptr->wizard) msg_print("Breakage (breakage).");
@@ -3315,8 +3315,8 @@ void drop_near(object_type *j_ptr, int chance, int y, int x)
 	if (!flag && !artifact_p(j_ptr))
 	{
 		/* Message */
-		msg_format("%s исчеза%ст.",
-		           o_name, (plural ? 'ю' : 'е'));
+		msg_format("%s п╦я│я┤п╣п╥п╟%я│я┌.",
+		           o_name, (plural ? 'я▌' : 'п╣'));
 
 		/* Debug */
 		if (p_ptr->wizard) msg_print("Breakage (no floor space).");
@@ -3362,8 +3362,8 @@ void drop_near(object_type *j_ptr, int chance, int y, int x)
 	if (!floor_carry(by, bx, j_ptr))
 	{
 		/* Message */
-		msg_format("%s исчеза%cт.",
-		           o_name, (plural ? 'ю' : 'е'));
+		msg_format("%s п╦я│я┤п╣п╥п╟%cя┌.",
+		           o_name, (plural ? 'я▌' : 'п╣'));
 
 		/* Debug */
 		if (p_ptr->wizard) msg_print("Breakage (too many objects).");
@@ -3383,7 +3383,7 @@ void drop_near(object_type *j_ptr, int chance, int y, int x)
 	/* Message when an object falls under the player */
 	if (chance && (cave_m_idx[by][bx] < 0))
 	{
-		msg_print("Что-то катится вам под ноги.");
+		msg_print("п╖я┌п╬-я┌п╬ п╨п╟я┌п╦я┌я│я▐ п╡п╟п╪ п©п╬п╢ п╫п╬пЁп╦.");
 	}
 }
 
@@ -3633,7 +3633,7 @@ void inven_item_charges(int item)
 	if (!object_known_p(o_ptr)) return;
 
 	/* Print a message */
-	msg_format("Осталось зарядов: %d.", o_ptr->pval);
+	msg_format("п·я│я┌п╟п╩п╬я│я▄ п╥п╟я─я▐п╢п╬п╡: %d.", o_ptr->pval);
 }
 
 
@@ -3652,7 +3652,7 @@ void inven_item_describe(int item)
 		object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3, PAD_RODIT);
 
 		/* Print a message */
-		msg_format("У вас больше нет %s (%c).", o_name, index_to_label(item));
+		msg_format("пё п╡п╟я│ п╠п╬п╩я▄я┬п╣ п╫п╣я┌ %s (%c).", o_name, index_to_label(item));
 	}
 	else
 	{
@@ -3660,7 +3660,7 @@ void inven_item_describe(int item)
 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
 
 		/* Print a message */
-		msg_format("У вас: %s (%c).", o_name, index_to_label(item));
+		msg_format("пё п╡п╟я│: %s (%c).", o_name, index_to_label(item));
 	}
 }
 
@@ -3781,7 +3781,7 @@ void floor_item_charges(int item)
 	if (!object_known_p(o_ptr)) return;
 
 	/* Print a message */
-	msg_format("Осталось зарядов: %d.", o_ptr->pval);
+	msg_format("п·я│я┌п╟п╩п╬я│я▄ п╥п╟я─я▐п╢п╬п╡: %d.", o_ptr->pval);
 }
 
 
@@ -3799,7 +3799,7 @@ void floor_item_describe(int item)
 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
 
 	/* Print a message */
-	msg_format("Вы видите: %s.", o_name);
+	msg_format("п▓я▀ п╡п╦п╢п╦я┌п╣: %s.", o_name);
 }
 
 
@@ -4095,28 +4095,28 @@ s16b inven_takeoff(int item, int amt)
 	/* Took off weapon */
 	if (item == INVEN_WIELD)
 	{
-		act = "Вы сражались";
+		act = "п▓я▀ я│я─п╟п╤п╟п╩п╦я│я▄";
 		pad = PAD_TVORIT;
 	}
 
 	/* Took off bow */
 	else if (item == INVEN_BOW)
 	{
-		act = "Вы стреляли из";
+		act = "п▓я▀ я│я┌я─п╣п╩я▐п╩п╦ п╦п╥";
 		pad = PAD_RODIT;
 	}
 
 	/* Took off light */
 	else if (item == INVEN_LITE)
 	{
-		act = "Ваш бывший источник света -";
+		act = "п▓п╟я┬ п╠я▀п╡я┬п╦п╧ п╦я│я┌п╬я┤п╫п╦п╨ я│п╡п╣я┌п╟ -";
 		pad = PAD_IMEN;
 	}
 
 	/* Took off something */
 	else
 	{
-		act = "Вы носили";
+		act = "п▓я▀ п╫п╬я│п╦п╩п╦";
 		pad = PAD_VINIT;
 	}
 
@@ -4193,7 +4193,7 @@ void inven_drop(int item, int amt)
 	object_desc(o_name, sizeof(o_name), i_ptr, TRUE, 3, PAD_VINIT);
 
 	/* Message */
-	msg_format("Вы бросаете %s (%c).", o_name, index_to_label(item));
+	msg_format("п▓я▀ п╠я─п╬я│п╟п╣я┌п╣ %s (%c).", o_name, index_to_label(item));
 
 	/* Drop it near the player */
 	drop_near(i_ptr, 0, py, px);
@@ -4271,7 +4271,7 @@ void combine_pack(void)
 	}
 
 	/* Message */
-	if (flag) msg_print("Вы складываете несколько предметов в рюкзаке.");
+	if (flag) msg_print("п▓я▀ я│п╨п╩п╟п╢я▀п╡п╟п╣я┌п╣ п╫п╣я│п╨п╬п╩я▄п╨п╬ п©я─п╣п╢п╪п╣я┌п╬п╡ п╡ я─я▌п╨п╥п╟п╨п╣.");
 }
 
 
@@ -4384,7 +4384,7 @@ void reorder_pack(void)
 	}
 
 	/* Message */
-	if (flag) msg_print("Вы перекладываете предметы в рюкзаке.");
+	if (flag) msg_print("п▓я▀ п©п╣я─п╣п╨п╩п╟п╢я▀п╡п╟п╣я┌п╣ п©я─п╣п╢п╪п╣я┌я▀ п╡ я─я▌п╨п╥п╟п╨п╣.");
 }
 
 

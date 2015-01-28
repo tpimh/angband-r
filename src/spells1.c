@@ -275,14 +275,14 @@ void teleport_player_level(void)
 {
 	if (adult_ironman)
 	{
-		msg_print("Ничего не происходит.");
+		msg_print("п²п╦я┤п╣пЁп╬ п╫п╣ п©я─п╬п╦я│я┘п╬п╢п╦я┌.");
 		return;
 	}
 
 
 	if (!p_ptr->depth)
 	{
-		message(MSG_TPLEVEL, 0, "Вы проваливаетесь сквозь пол.");
+		message(MSG_TPLEVEL, 0, "п▓я▀ п©я─п╬п╡п╟п╩п╦п╡п╟п╣я┌п╣я│я▄ я│п╨п╡п╬п╥я▄ п©п╬п╩.");
 
 		/* New depth */
 		p_ptr->depth++;
@@ -293,7 +293,7 @@ void teleport_player_level(void)
 
 	else if (is_quest(p_ptr->depth) || (p_ptr->depth >= MAX_DEPTH-1))
 	{
-		message(MSG_TPLEVEL, 0, "Вы поднимаетесь через потолок.");
+		message(MSG_TPLEVEL, 0, "п▓я▀ п©п╬п╢п╫п╦п╪п╟п╣я┌п╣я│я▄ я┤п╣я─п╣п╥ п©п╬я┌п╬п╩п╬п╨.");
 
 		/* New depth */
 		p_ptr->depth--;
@@ -304,7 +304,7 @@ void teleport_player_level(void)
 
 	else if (rand_int(100) < 50)
 	{
-		message(MSG_TPLEVEL, 0, "Вы поднимаетесь через потолок.");
+		message(MSG_TPLEVEL, 0, "п▓я▀ п©п╬п╢п╫п╦п╪п╟п╣я┌п╣я│я▄ я┤п╣я─п╣п╥ п©п╬я┌п╬п╩п╬п╨.");
 
 		/* New depth */
 		p_ptr->depth--;
@@ -315,7 +315,7 @@ void teleport_player_level(void)
 
 	else
 	{
-		message(MSG_TPLEVEL, 0, "Вы проваливаетесь сквозь пол.");
+		message(MSG_TPLEVEL, 0, "п▓я▀ п©я─п╬п╡п╟п╩п╦п╡п╟п╣я┌п╣я│я▄ я│п╨п╡п╬п╥я▄ п©п╬п╩.");
 
 		/* New depth */
 		p_ptr->depth++;
@@ -493,7 +493,7 @@ void take_hit(int dam, cptr kb_str)
 	if (p_ptr->chp < 0)
 	{
 		/* Hack -- Note death */
-		message(MSG_DEATH, 0, "Вы умираете...");
+		message(MSG_DEATH, 0, "п▓я▀ я┐п╪п╦я─п╟п╣я┌п╣...");
 		message_flush();
 
 		/* Note cause of death */
@@ -518,11 +518,11 @@ void take_hit(int dam, cptr kb_str)
 		/* Hack -- bell on first notice */
 		if (old_chp > warning)
 		{
-			bell("Низкое здоровье!");
+			bell("п²п╦п╥п╨п╬п╣ п╥п╢п╬я─п╬п╡я▄п╣!");
 		}
 
 		/* Message */
-		message(MSG_HITPOINT_WARN, 0, "*** НИЗКОЕ ЗДОРОВЬЕ! ***");
+		message(MSG_HITPOINT_WARN, 0, "*** п²п≤п≈п п·п∙ п≈п■п·п═п·п▓п╛п∙! ***");
 		message_flush();
 	}
 }
@@ -788,19 +788,19 @@ static int inven_damage(inven_func typ, int perc)
 					(amt < o_ptr->number) ? PAD_RODIT : PAD_IMEN);
 
 				/* Message */
-				msg_format("%s %s (%c) %s уничтожен%s!",
+				msg_format("%s %s (%c) %s я┐п╫п╦я┤я┌п╬п╤п╣п╫%s!",
 				           ((o_ptr->number > 1) ?
-				            ((amt == o_ptr->number) ? "Все ваши" :
-				             (amt > 1 ? "Некоторые из ваших" :
-				              (rod == ROD_M ? "Один из ваших" : rod == ROD_F ? "Одна из ваших" : rod == ROD_N ? "Одно из ваших" : "Одни из ваших")
+				            ((amt == o_ptr->number) ? "п▓я│п╣ п╡п╟я┬п╦" :
+				             (amt > 1 ? "п²п╣п╨п╬я┌п╬я─я▀п╣ п╦п╥ п╡п╟я┬п╦я┘" :
+				              (rod == ROD_M ? "п·п╢п╦п╫ п╦п╥ п╡п╟я┬п╦я┘" : rod == ROD_F ? "п·п╢п╫п╟ п╦п╥ п╡п╟я┬п╦я┘" : rod == ROD_N ? "п·п╢п╫п╬ п╦п╥ п╡п╟я┬п╦я┘" : "п·п╢п╫п╦ п╦п╥ п╡п╟я┬п╦я┘")
 				              )) :
-				              (rod == ROD_M ? "Ваш" : rod == ROD_F ? "Ваша" : rod == ROD_N ? "Ваше" : "Ваши")
+				              (rod == ROD_M ? "п▓п╟я┬" : rod == ROD_F ? "п▓п╟я┬п╟" : rod == ROD_N ? "п▓п╟я┬п╣" : "п▓п╟я┬п╦")
 				              ),
 				           o_name, index_to_label(i),
-				           ((amt > 1) ? "были" :
-				              (rod == ROD_M ? "был" : rod == ROD_F ? "была" : rod == ROD_N ? "было" : "были")
+				           ((amt > 1) ? "п╠я▀п╩п╦" :
+				              (rod == ROD_M ? "п╠я▀п╩" : rod == ROD_F ? "п╠я▀п╩п╟" : rod == ROD_N ? "п╠я▀п╩п╬" : "п╠я▀п╩п╦")
 				           ),
-				              (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы")
+				              (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀")
 				           );
 
 				/* Hack -- If rods, wands, or staves are destroyed, the total
@@ -877,19 +877,19 @@ static int minus_ac(void)
 	/* Object resists */
 	if (f3 & (TR3_IGNORE_ACID))
 	{
-		msg_format("Ваш%s %s не поврежден%s!",
-			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+		msg_format("п▓п╟я┬%s %s п╫п╣ п©п╬п╡я─п╣п╤п╢п╣п╫%s!",
+			(rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╣" : "п╦"),
 			o_name,
-			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+			(rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀"));
 
 		return (TRUE);
 	}
 
 	/* Message */
-	msg_format("Ваш%s %s поврежден%s!",
-			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+	msg_format("п▓п╟я┬%s %s п©п╬п╡я─п╣п╤п╢п╣п╫%s!",
+			(rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╣" : "п╦"),
 			o_name,
-			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+			(rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀"));
 
 	/* Damage the item */
 	o_ptr->to_a--;
@@ -1268,10 +1268,10 @@ bool apply_disenchant(int mode)
 	if (artifact_p(o_ptr) && (rand_int(100) < 60))
 	{
 		/* Message */
-		msg_format("Ваш%s %s (%c) сопротивля%cтся антимагии!",
-			   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+		msg_format("п▓п╟я┬%s %s (%c) я│п╬п©я─п╬я┌п╦п╡п╩я▐%cя┌я│я▐ п╟п╫я┌п╦п╪п╟пЁп╦п╦!",
+			   (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╣" : "п╦"),
 		           o_name, index_to_label(t),
-		           ((o_ptr->number != 1) ? 'ю' : 'е'));
+		           ((o_ptr->number != 1) ? 'я▌' : 'п╣'));
 
 		/* Notice */
 		return (TRUE);
@@ -1291,11 +1291,11 @@ bool apply_disenchant(int mode)
 	if ((o_ptr->to_a > 5) && (rand_int(100) < 20)) o_ptr->to_a--;
 
 	/* Message */
-	msg_format("Ваш%s %s (%c) был%s раззачарован%s!",
-		   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+	msg_format("п▓п╟я┬%s %s (%c) п╠я▀п╩%s я─п╟п╥п╥п╟я┤п╟я─п╬п╡п╟п╫%s!",
+		   (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╣" : "п╦"),
 	           o_name, index_to_label(t),
-	           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"),
-	           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+	           (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "п╦"),
+	           (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀"));
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -1333,7 +1333,7 @@ static void apply_nexus(const monster_type *m_ptr)
 		{
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 				break;
 			}
 
@@ -1346,11 +1346,11 @@ static void apply_nexus(const monster_type *m_ptr)
 		{
 			if (rand_int(100) < p_ptr->skill_sav)
 			{
-				msg_print("Вы сопротивляетесь эффектам!");
+				msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ я█я└я└п╣п╨я┌п╟п╪!");
 				break;
 			}
 
-			msg_print("Ваше тело начинает меняться...");
+			msg_print("п▓п╟я┬п╣ я┌п╣п╩п╬ п╫п╟я┤п╦п╫п╟п╣я┌ п╪п╣п╫я▐я┌я▄я│я▐...");
 
 			/* Pick a pair of stats */
 			ii = rand_int(A_MAX);
@@ -1459,7 +1459,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Check line of sight */
 				if (player_has_los_bold(y, x))
 				{
-					msg_print("Вы видите яркую вспышку!");
+					msg_print("п▓я▀ п╡п╦п╢п╦я┌п╣ я▐я─п╨я┐я▌ п╡я│п©я▀я┬п╨я┐!");
 					obvious = TRUE;
 				}
 
@@ -1480,7 +1480,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Check line of sound */
 				if (player_has_los_bold(y, x))
 				{
-					msg_print("Щелк!");
+					msg_print("п╘п╣п╩п╨!");
 					obvious = TRUE;
 				}
 			}
@@ -1504,7 +1504,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				if (player_has_los_bold(y, x))
 				{
 					/* Message */
-					msg_print("Вы видите яркую вспышку!");
+					msg_print("п▓я▀ п╡п╦п╢п╦я┌п╣ я▐я─п╨я┐я▌ п╡я│п©я▀я┬п╨я┐!");
 					obvious = TRUE;
 
 					/* Visibility change */
@@ -1541,7 +1541,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
-					msg_print("Стена расплавляется!");
+					msg_print("п║я┌п╣п╫п╟ я─п╟я│п©п╩п╟п╡п╩я▐п╣я┌я│я▐!");
 					obvious = TRUE;
 				}
 
@@ -1558,8 +1558,8 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
-					msg_print("Жила расплавляется!");
-					msg_print("Вы что-то нашли!");
+					msg_print("п√п╦п╩п╟ я─п╟я│п©п╩п╟п╡п╩я▐п╣я┌я│я▐!");
+					msg_print("п▓я▀ я┤я┌п╬-я┌п╬ п╫п╟я┬п╩п╦!");
 					obvious = TRUE;
 				}
 
@@ -1579,7 +1579,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
-					msg_print("Жила расплавляется!");
+					msg_print("п√п╦п╩п╟ я─п╟я│п©п╩п╟п╡п╩я▐п╣я┌я│я▐!");
 					obvious = TRUE;
 				}
 
@@ -1596,7 +1596,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
-					msg_print("Мусор расплавляется!");
+					msg_print("п°я┐я│п╬я─ я─п╟я│п©п╩п╟п╡п╩я▐п╣я┌я│я▐!");
 					obvious = TRUE;
 				}
 
@@ -1612,7 +1612,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 					/* Found something */
 					if (player_can_see_bold(y, x))
 					{
-						msg_print("В нем что-то было закопано!");
+						msg_print("п▓ п╫п╣п╪ я┤я┌п╬-я┌п╬ п╠я▀п╩п╬ п╥п╟п╨п╬п©п╟п╫п╬!");
 						obvious = TRUE;
 					}
 
@@ -1627,7 +1627,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Hack -- special message */
 				if (cave_info[y][x] & (CAVE_MARK))
 				{
-					msg_print("Дверь расплавляется!");
+					msg_print("п■п╡п╣я─я▄ я─п╟я│п©п╩п╟п╡п╩я▐п╣я┌я│я▐!");
 					obvious = TRUE;
 				}
 
@@ -1809,7 +1809,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_acid(o_ptr))
 				{
 					do_kill = TRUE;
-					note_kill = (plural ? " плавятся!" : " плавится!");
+					note_kill = (plural ? " п©п╩п╟п╡я▐я┌я│я▐!" : " п©п╩п╟п╡п╦я┌я│я▐!");
 					if (f3 & (TR3_IGNORE_ACID)) ignore = TRUE;
 				}
 				break;
@@ -1821,7 +1821,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_elec(o_ptr))
 				{
 					do_kill = TRUE;
-					note_kill = (plural ? " замыкаются!" : " замыкается!");
+					note_kill = (plural ? " п╥п╟п╪я▀п╨п╟я▌я┌я│я▐!" : " п╥п╟п╪я▀п╨п╟п╣я┌я│я▐!");
 					if (f3 & (TR3_IGNORE_ELEC)) ignore = TRUE;
 				}
 				break;
@@ -1833,7 +1833,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_fire(o_ptr))
 				{
 					do_kill = TRUE;
-					note_kill = (plural ? " загораются!" : " загорается!");
+					note_kill = (plural ? " п╥п╟пЁп╬я─п╟я▌я┌я│я▐!" : " п╥п╟пЁп╬я─п╟п╣я┌я│я▐!");
 					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
 				}
 				break;
@@ -1844,7 +1844,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 			{
 				if (hates_cold(o_ptr))
 				{
-					note_kill = (plural ? " разбиваются!" : " разбивается!");
+					note_kill = (plural ? " я─п╟п╥п╠п╦п╡п╟я▌я┌я│я▐!" : " я─п╟п╥п╠п╦п╡п╟п╣я┌я│я▐!");
 					do_kill = TRUE;
 					if (f3 & (TR3_IGNORE_COLD)) ignore = TRUE;
 				}
@@ -1857,14 +1857,14 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_fire(o_ptr))
 				{
 					do_kill = TRUE;
-					note_kill = (plural ? " загораются!" : " загорается!");
+					note_kill = (plural ? " п╥п╟пЁп╬я─п╟я▌я┌я│я▐!" : " п╥п╟пЁп╬я─п╟п╣я┌я│я▐!");
 					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
 				}
 				if (hates_elec(o_ptr))
 				{
 					ignore = FALSE;
 					do_kill = TRUE;
-					note_kill = (plural ? " замыкаются!" : " замыкается!");
+					note_kill = (plural ? " п╥п╟п╪я▀п╨п╟я▌я┌я│я▐!" : " п╥п╟п╪я▀п╨п╟п╣я┌я│я▐!");
 					if (f3 & (TR3_IGNORE_ELEC)) ignore = TRUE;
 				}
 				break;
@@ -1876,14 +1876,14 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (hates_fire(o_ptr))
 				{
 					do_kill = TRUE;
-					note_kill = (plural ? " загораются!" : " загорается!");
+					note_kill = (plural ? " п╥п╟пЁп╬я─п╟я▌я┌я│я▐!" : " п╥п╟пЁп╬я─п╟п╣я┌я│я▐!");
 					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
 				}
 				if (hates_cold(o_ptr))
 				{
 					ignore = FALSE;
 					do_kill = TRUE;
-					note_kill = (plural ? " разбиваются!" : " разбиваются!");
+					note_kill = (plural ? " я─п╟п╥п╠п╦п╡п╟я▌я┌я│я▐!" : " я─п╟п╥п╠п╦п╡п╟я▌я┌я│я▐!");
 					if (f3 & (TR3_IGNORE_COLD)) ignore = TRUE;
 				}
 				break;
@@ -1897,7 +1897,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 			{
 				if (hates_cold(o_ptr))
 				{
-					note_kill = (plural ? " разбиваются!" : " разбивается!");
+					note_kill = (plural ? " я─п╟п╥п╠п╦п╡п╟я▌я┌я│я▐!" : " я─п╟п╥п╠п╦п╡п╟п╣я┌я│я▐!");
 					do_kill = TRUE;
 				}
 				break;
@@ -1907,7 +1907,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 			case GF_MANA:
 			{
 				do_kill = TRUE;
-				note_kill = (plural ? " дезинтегрируются!" : " дезинтегрируется!");
+				note_kill = (plural ? " п╢п╣п╥п╦п╫я┌п╣пЁя─п╦я─я┐я▌я┌я│я▐!" : " п╢п╣п╥п╦п╫я┌п╣пЁя─п╦я─я┐п╣я┌я│я▐!");
 				break;
 			}
 
@@ -1917,7 +1917,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				if (cursed_p(o_ptr))
 				{
 					do_kill = TRUE;
-					note_kill = (plural ? " сгорают!" : " сгорает!");
+					note_kill = (plural ? " я│пЁп╬я─п╟я▌я┌!" : " я│пЁп╬я─п╟п╣я┌!");
 				}
 				break;
 			}
@@ -1941,7 +1941,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 						/* Notice */
 						if (o_ptr->marked)
 						{
-							msg_print("Щелк!");
+							msg_print("п╘п╣п╩п╨!");
 							obvious = TRUE;
 						}
 					}
@@ -1970,9 +1970,9 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				/* Observe the resist */
 				if (o_ptr->marked)
 				{
-					msg_format("%s не воздействован%s!",
+					msg_format("%s п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!",
 					           o_name,
-					           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+					           (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀"));
 				}
 			}
 
@@ -2099,7 +2099,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 	cptr note = NULL;
 
 	/* Assume a default death */
-	cptr note_dies = " погибает.";
+	cptr note_dies = " п©п╬пЁп╦п╠п╟п╣я┌.";
 
 
 	/* Walls protect monsters */
@@ -2137,9 +2137,9 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 	    (strchr("Evg", r_ptr->d_char)))
 	{
 		/* Special note at death */
-		if (!m_ptr->ml) note_dies = " уничтожено.";
-		else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " уничтожена." :
-	                   r_ptr->flags1 & RF1_MALE ? " уничтожен." : " уничтожено.");
+		if (!m_ptr->ml) note_dies = " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╬.";
+		else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╟." :
+	                   r_ptr->flags1 & RF1_MALE ? " я┐п╫п╦я┤я┌п╬п╤п╣п╫." : " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╬.");
 	}
 
 
@@ -2159,7 +2159,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_ACID))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_ACID);
 			}
@@ -2172,7 +2172,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_ELEC))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_ELEC);
 			}
@@ -2185,7 +2185,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_FIRE))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_FIRE);
 			}
@@ -2198,7 +2198,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_COLD))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_COLD);
 			}
@@ -2211,7 +2211,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_IM_POIS))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_POIS);
 			}
@@ -2225,7 +2225,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (r_ptr->flags3 & (RF3_EVIL))
 			{
 				dam *= 2;
-				note = " серьезно задет%s.";
+				note = " я│п╣я─я▄п╣п╥п╫п╬ п╥п╟п╢п╣я┌%s.";
 				if (seen) l_ptr->flags3 |= (RF3_EVIL);
 			}
 			break;
@@ -2244,7 +2244,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & RF3_RES_PLAS)
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 				if (seen) l_ptr->flags3 |= RF3_RES_PLAS;
 			}
@@ -2257,19 +2257,19 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & (RF3_UNDEAD))
 			{
-				note = " неуязвим%s к атаке.";
+				note = " п╫п╣я┐я▐п╥п╡п╦п╪%s п╨ п╟я┌п╟п╨п╣.";
 				dam = 0;
 				if (seen) l_ptr->flags3 |= (RF3_UNDEAD);
 			}
 			else if (r_ptr->flags4 & (RF4_BR_NETH))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			else if (r_ptr->flags3 & (RF3_EVIL))
 			{
 				dam /= 2;
-				note = " немного сопротивляется.";
+				note = " п╫п╣п╪п╫п╬пЁп╬ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				if (seen) l_ptr->flags3 |= (RF3_EVIL);
 			}
 			break;
@@ -2281,7 +2281,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & RF3_IM_WATER)
 			{
-				note = " неуязвим%s к атаке.";
+				note = " п╫п╣я┐я▐п╥п╡п╦п╪%s п╨ п╟я┌п╟п╨п╣.";
 				dam = 0;
 				if (seen) l_ptr->flags3 |= RF3_IM_WATER;
 			}
@@ -2296,7 +2296,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_conf = (5 + randint(11) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_CHAO))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 				do_poly = FALSE;
 			}
@@ -2309,7 +2309,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_SHAR))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			break;
@@ -2322,7 +2322,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_stun = (10 + randint(15) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_SOUN))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 2; dam /= (randint(6)+6);
 			}
 			break;
@@ -2335,12 +2335,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_conf = (10 + randint(15) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_CONF))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 2; dam /= (randint(6)+6);
 			}
 			else if (r_ptr->flags3 & (RF3_NO_CONF))
 			{
-				note = " немного сопротивляется.";
+				note = " п╫п╣п╪п╫п╬пЁп╬ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam /= 2;
 			}
 			break;
@@ -2352,7 +2352,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & RF3_RES_DISE)
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 				if (seen) l_ptr->flags3 |= RF3_RES_DISE;
 			}
@@ -2365,7 +2365,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags3 & RF3_RES_NEXUS)
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 				if (seen) l_ptr->flags3 |= RF3_RES_NEXUS;
 			}
@@ -2379,7 +2379,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_stun = (randint(15) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_WALL))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			break;
@@ -2391,7 +2391,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_INER))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			break;
@@ -2403,7 +2403,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_TIME))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 			}
 			break;
@@ -2420,7 +2420,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 
 			if (r_ptr->flags4 & (RF4_BR_GRAV))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 3; dam /= (randint(6)+6);
 				do_dist = 0;
 			}
@@ -2448,7 +2448,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			do_stun = (randint(15) + 1) / (r + 1);
 			if (r_ptr->flags3 & (RF3_IM_COLD))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam /= 9;
 				if (seen) l_ptr->flags3 |= (RF3_IM_COLD);
 			}
@@ -2473,7 +2473,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 					if (seen) l_ptr->flags3 |= (RF3_DEMON);
 				}
 
-				note = " не воздействован%s!";
+				note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 				obvious = FALSE;
 				dam = 0;
 			}
@@ -2493,7 +2493,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if ((r_ptr->flags1 & (RF1_UNIQUE)) ||
 			    (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10))
 			{
-				note = " не воздействован%s!";
+				note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 				do_poly = FALSE;
 				obvious = FALSE;
 			}
@@ -2519,7 +2519,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			/* Attempt to clone. */
 			if (multiply_monster(cave_m_idx[y][x]))
 			{
-				note = " удваивается!";
+				note = " я┐п╢п╡п╟п╦п╡п╟п╣я┌я│я▐!";
 			}
 
 			/* No "real" damage */
@@ -2547,7 +2547,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (p_ptr->health_who == cave_m_idx[y][x]) p_ptr->redraw |= (PR_HEALTH);
 
 			/* Message */
-			note = " выглядит здоровее.";
+			note = " п╡я▀пЁп╩я▐п╢п╦я┌ п╥п╢п╬я─п╬п╡п╣п╣.";
 
 			/* No "real" damage */
 			dam = 0;
@@ -2562,7 +2562,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 
 			/* Speed up */
 			if (m_ptr->mspeed < 150) m_ptr->mspeed += 10;
-			note = " начинает двигаться быстрее.";
+			note = " п╫п╟я┤п╦п╫п╟п╣я┌ п╢п╡п╦пЁп╟я┌я▄я│я▐ п╠я▀я│я┌я─п╣п╣.";
 
 			/* No "real" damage */
 			dam = 0;
@@ -2579,7 +2579,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if ((r_ptr->flags1 & (RF1_UNIQUE)) ||
 			    (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10))
 			{
-				note = " не воздействован%s!";
+				note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 				obvious = FALSE;
 			}
 
@@ -2587,7 +2587,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			else
 			{
 				if (m_ptr->mspeed > 60) m_ptr->mspeed -= 10;
-				note = " начинает двигаться медленнее.";
+				note = " п╫п╟я┤п╦п╫п╟п╣я┌ п╢п╡п╦пЁп╟я┌я▄я│я▐ п╪п╣п╢п╩п╣п╫п╫п╣п╣.";
 			}
 
 			/* No "real" damage */
@@ -2613,13 +2613,13 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				}
 
 				/* No obvious effect */
-				note = " не воздействован%s!";
+				note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 				obvious = FALSE;
 			}
 			else
 			{
 				/* Go to sleep (much) later */
-				note = " засыпает!";
+				note = " п╥п╟я│я▀п©п╟п╣я┌!";
 				do_sleep = 500;
 			}
 
@@ -2652,7 +2652,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				do_conf = 0;
 
 				/* No obvious effect */
-				note = " не воздействован%s!";
+				note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 				obvious = FALSE;
 			}
 
@@ -2676,8 +2676,8 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) l_ptr->flags3 |= (RF3_HURT_LITE);
 
 				/* Special effect */
-				note = " корчится от света!";
-				note_dies = " погибает от лучей света!";
+				note = " п╨п╬я─я┤п╦я┌я│я▐ п╬я┌ я│п╡п╣я┌п╟!";
+				note_dies = " п©п╬пЁп╦п╠п╟п╣я┌ п╬я┌ п╩я┐я┤п╣п╧ я│п╡п╣я┌п╟!";
 			}
 
 			/* Normally no damage */
@@ -2698,14 +2698,14 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_LITE))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 2; dam /= (randint(6)+6);
 			}
 			else if (r_ptr->flags3 & (RF3_HURT_LITE))
 			{
 				if (seen) l_ptr->flags3 |= (RF3_HURT_LITE);
-				note = " корчится от света!";
-				note_dies = " погибает от лучей света!";
+				note = " п╨п╬я─я┤п╦я┌я│я▐ п╬я┌ я│п╡п╣я┌п╟!";
+				note_dies = " п©п╬пЁп╦п╠п╟п╣я┌ п╬я┌ п╩я┐я┤п╣п╧ я│п╡п╣я┌п╟!";
 				dam *= 2;
 			}
 			break;
@@ -2718,7 +2718,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if (r_ptr->flags4 & (RF4_BR_DARK))
 			{
-				note = " сопротивляется.";
+				note = " я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌я│я▐.";
 				dam *= 2; dam /= (randint(6)+6);
 			}
 			break;
@@ -2738,8 +2738,8 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) l_ptr->flags3 |= (RF3_HURT_ROCK);
 
 				/* Cute little message */
-				note = " теряет части тела!";
-				note_dies = " рассыпается!";
+				note = " я┌п╣я─я▐п╣я┌ я┤п╟я│я┌п╦ я┌п╣п╩п╟!";
+				note_dies = " я─п╟я│я│я▀п©п╟п╣я┌я│я▐!";
 			}
 
 			/* Usually, ignore the effects */
@@ -2835,7 +2835,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10)
 				{
 					/* No obvious effect */
-					note = " не воздействован%s!";
+					note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 					obvious = FALSE;
 					do_fear = 0;
 				}
@@ -2873,7 +2873,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10)
 				{
 					/* No obvious effect */
-					note = " не воздействован%s!";
+					note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 					obvious = FALSE;
 					do_fear = 0;
 				}
@@ -2907,7 +2907,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			    (r_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10))
 			{
 				/* No obvious effect */
-				note = " не воздействован%s!";
+				note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 				obvious = FALSE;
 				do_fear = 0;
 			}
@@ -2931,8 +2931,8 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) obvious = TRUE;
 
 				/* Message */
-				note = " трясется.";
-				note_dies = " рассыпается!";
+				note = " я┌я─я▐я│п╣я┌я│я▐.";
+				note_dies = " я─п╟я│я│я▀п©п╟п╣я┌я│я▐!";
 			}
 
 			/* Others ignore */
@@ -2962,8 +2962,8 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) obvious = TRUE;
 
 				/* Message */
-				note = " трясется.";
-				note_dies = " рассыпается!";
+				note = " я┌я─я▐я│п╣я┌я│я▐.";
+				note_dies = " я─п╟я│я│я▀п©п╟п╣я┌я│я▐!";
 			}
 
 			/* Others ignore */
@@ -2987,8 +2987,8 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 
 			/* Message */
-			note = " трясется.";
-			note_dies = " рассыпается!";
+			note = " я┌я─я▐я│п╣я┌я│я▐.";
+			note_dies = " я─п╟я│я│я▀п©п╟п╣я┌я│я▐!";
 
 			break;
 		}
@@ -3035,7 +3035,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 	else if (do_poly && (randint(90) > r_ptr->level))
 	{
 		/* Default -- assume no polymorph */
-		note = " не воздействован%s!";
+		note = " п╫п╣ п╡п╬п╥п╢п╣п╧я│я┌п╡п╬п╡п╟п╫%s!";
 
 		/* Pick a "new" monster race */
 		tmp = poly_r_idx(m_ptr->r_idx);
@@ -3047,7 +3047,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 
 			/* Monster polymorphs */
-			note = " меняется!";
+			note = " п╪п╣п╫я▐п╣я┌я│я▐!";
 
 			/* Turn off the damage */
 			dam = 0;
@@ -3075,7 +3075,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		if (seen) obvious = TRUE;
 
 		/* Message */
-		note = " исчезает!";
+		note = " п╦я│я┤п╣п╥п╟п╣я┌!";
 
 		/* Teleport */
 		teleport_away(cave_m_idx[y][x], do_dist);
@@ -3096,12 +3096,12 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		/* Get confused */
 		if (m_ptr->stunned)
 		{
-			note = " оглушен%s сильнее.";
+			note = " п╬пЁп╩я┐я┬п╣п╫%s я│п╦п╩я▄п╫п╣п╣.";
 			tmp = m_ptr->stunned + (do_stun / 2);
 		}
 		else
 		{
-			note = " оглушен%s.";
+			note = " п╬пЁп╩я┐я┬п╣п╫%s.";
 			tmp = do_stun;
 		}
 
@@ -3121,14 +3121,14 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		/* Already partially confused */
 		if (m_ptr->confused)
 		{
-			note = " контужен%s сильнее.";
+			note = " п╨п╬п╫я┌я┐п╤п╣п╫%s я│п╦п╩я▄п╫п╣п╣.";
 			tmp = m_ptr->confused + (do_conf / 2);
 		}
 
 		/* Was not confused */
 		else
 		{
-			note = " контужен%s.";
+			note = " п╨п╬п╫я┌я┐п╤п╣п╫%s.";
 			tmp = do_conf;
 		}
 
@@ -3171,7 +3171,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 
 			/* Give detailed messages if destroyed */
 			if (note) msg_format("%^s%s", m_name, format(note,
-				(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о")));
+				(r_ptr->flags1 & RF1_FEMALE ? "п╟" : r_ptr->flags1 & RF1_MALE ? "" : "п╬")));
 		}
 
 		/* Damaged monster */
@@ -3179,7 +3179,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{	
 			/* Give detailed messages if visible or destroyed */
 			if (note && seen) msg_format("%^s%s", m_name, format(note,
-				(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о")));
+				(r_ptr->flags1 & RF1_FEMALE ? "п╟" : r_ptr->flags1 & RF1_MALE ? "" : "п╬")));
 
 			/* Hack -- Pain message */
 			else if (dam > 0) message_pain(cave_m_idx[y][x], dam);
@@ -3205,7 +3205,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{
 			/* Give detailed messages if visible or destroyed */
 			if (note && seen) msg_format("%^s%s", m_name, format(note,
-				(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о")));
+				(r_ptr->flags1 & RF1_FEMALE ? "п╟" : r_ptr->flags1 & RF1_MALE ? "" : "п╬")));
 
 			/* Hack -- Pain message */
 			else if (dam > 0) message_pain(cave_m_idx[y][x], dam);
@@ -3215,7 +3215,7 @@ static bool project_m(int who, int r, int y, int x, int dam, int typ)
 			{
 				/* Message */
 				message_format(MSG_FLEE, m_ptr->r_idx,
-				               "%^s бежит в ужасе!", m_name);
+				               "%^s п╠п╣п╤п╦я┌ п╡ я┐п╤п╟я│п╣!", m_name);
 			}
 
 			/* Hack -- handle sleep */
@@ -3333,7 +3333,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- hurts inventory too */
 		case GF_ACID:
 		{
-			if (blind) msg_print("В вас попали кислотой!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ п╨п╦я│п╩п╬я┌п╬п╧!");
 			acid_dam(dam, killer);
 			break;
 		}
@@ -3341,7 +3341,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- hurts inventory too */
 		case GF_FIRE:
 		{
-			if (blind) msg_print("В вас попали огнем!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ п╬пЁп╫п╣п╪!");
 			fire_dam(dam, killer);
 			break;
 		}
@@ -3349,7 +3349,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- hurts inventory too */
 		case GF_COLD:
 		{
-			if (blind) msg_print("В вас попали холодом!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┘п╬п╩п╬п╢п╬п╪!");
 			cold_dam(dam, killer);
 			break;
 		}
@@ -3357,7 +3357,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- hurts inventory too */
 		case GF_ELEC:
 		{
-			if (blind) msg_print("В вас попали молнией!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ п╪п╬п╩п╫п╦п╣п╧!");
 			elec_dam(dam, killer);
 			break;
 		}
@@ -3365,7 +3365,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage -- also poisons player */
 		case GF_POIS:
 		{
-			if (blind) msg_print("В вас попали ядом!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я▐п╢п╬п╪!");
 			if (p_ptr->resist_pois) dam = (dam + 2) / 3;
 			if (p_ptr->oppose_pois) dam = (dam + 2) / 3;
 			take_hit(dam, killer);
@@ -3379,7 +3379,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Standard damage */
 		case GF_MISSILE:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			take_hit(dam, killer);
 			break;
 		}
@@ -3387,7 +3387,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Holy Orb -- Player only takes partial damage */
 		case GF_HOLY_ORB:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			dam /= 2;
 			take_hit(dam, killer);
 			break;
@@ -3396,7 +3396,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Arrow -- no dodging XXX */
 		case GF_ARROW:
 		{
-			if (blind) msg_print("В вас попали чем-то острым!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ п╬я│я┌я─я▀п╪!");
 			take_hit(dam, killer);
 			break;
 		}
@@ -3404,7 +3404,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Plasma -- No resist XXX */
 		case GF_PLASMA:
 		{
-			if (blind) msg_print("В вас попали чем-то горячим!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ пЁп╬я─я▐я┤п╦п╪!");
 			take_hit(dam, killer);
 			if (!p_ptr->resist_sound)
 			{
@@ -3417,7 +3417,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Nether -- drain experience */
 		case GF_NETHER:
 		{
-			if (blind) msg_print("В вас попали чем-то странным!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ я│я┌я─п╟п╫п╫я▀п╪!");
 			if (p_ptr->resist_nethr)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3426,16 +3426,16 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 			{
 				if (p_ptr->hold_life && (rand_int(100) < 75))
 				{
-					msg_print("Вы сопротивляетесь вытягиванию жизни!");
+					msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╫п╦я▌ п╤п╦п╥п╫п╦!");
 				}
 				else if (p_ptr->hold_life)
 				{
-					msg_print("Ваша жизнь вытягивается из вас!");
+					msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 					lose_exp(200 + (p_ptr->exp/1000) * MON_DRAIN_LIFE);
 				}
 				else
 				{
-					msg_print("Ваша жизнь высасывается из вас!");
+					msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я│п╟я│я▀п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 					lose_exp(200 + (p_ptr->exp/100) * MON_DRAIN_LIFE);
 				}
 			}
@@ -3446,7 +3446,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Water -- stun/confuse */
 		case GF_WATER:
 		{
-			if (blind) msg_print("В вас попали чем-то мокрым!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ п╪п╬п╨я─я▀п╪!");
 			if (!p_ptr->resist_sound)
 			{
 				(void)set_stun(p_ptr->stun + randint(40));
@@ -3462,7 +3462,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Chaos -- many effects */
 		case GF_CHAOS:
 		{
-			if (blind) msg_print("В вас попали чем-то очень странным!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ п╬я┤п╣п╫я▄ я│я┌я─п╟п╫п╫я▀п╪!");
 			if (p_ptr->resist_chaos)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3479,16 +3479,16 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 			{
 				if (p_ptr->hold_life && (rand_int(100) < 75))
 				{
-					msg_print("Вы сопротивляетесь вытягиванию жизни!");
+					msg_print("п▓я▀ я│п╬п©я─п╬я┌п╦п╡п╩я▐п╣я┌п╣я│я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╫п╦я▌ п╤п╦п╥п╫п╦!");
 				}
 				else if (p_ptr->hold_life)
 				{
-					msg_print("Ваша жизнь вытягивается из вас!");
+					msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я┌я▐пЁп╦п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 					lose_exp(500 + (p_ptr->exp/1000) * MON_DRAIN_LIFE);
 				}
 				else
 				{
-					msg_print("Ваша жизнь высасывается из вас!");
+					msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╡я▀я│п╟я│я▀п╡п╟п╣я┌я│я▐ п╦п╥ п╡п╟я│!");
 					lose_exp(5000 + (p_ptr->exp/100) * MON_DRAIN_LIFE);
 				}
 			}
@@ -3499,7 +3499,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Shards -- mostly cutting */
 		case GF_SHARD:
 		{
-			if (blind) msg_print("В вас попали чем-то острым!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ п╬я│я┌я─я▀п╪!");
 			if (p_ptr->resist_shard)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3515,7 +3515,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Sound -- mostly stunning */
 		case GF_SOUND:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			if (p_ptr->resist_sound)
 			{
 				dam *= 5; dam /= (randint(6) + 6);
@@ -3532,7 +3532,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Pure confusion */
 		case GF_CONFUSION:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			if (p_ptr->resist_confu)
 			{
 				dam *= 5; dam /= (randint(6) + 6);
@@ -3548,7 +3548,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Disenchantment -- see above */
 		case GF_DISENCHANT:
 		{
-			if (blind) msg_print("В вас попали чем-то странным!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ я│я┌я─п╟п╫п╫я▀п╪!");
 			if (p_ptr->resist_disen)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3564,7 +3564,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Nexus -- see above */
 		case GF_NEXUS:
 		{
-			if (blind) msg_print("В вас попали чем-то странным!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ я│я┌я─п╟п╫п╫я▀п╪!");
 			if (p_ptr->resist_nexus)
 			{
 				dam *= 6; dam /= (randint(6) + 6);
@@ -3580,7 +3580,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Force -- mostly stun */
 		case GF_FORCE:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			if (!p_ptr->resist_sound)
 			{
 				(void)set_stun(p_ptr->stun + randint(20));
@@ -3592,7 +3592,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Inertia -- slowness */
 		case GF_INERTIA:
 		{
-			if (blind) msg_print("В вас попали чем-то странным!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ я│я┌я─п╟п╫п╫я▀п╪!");
 			(void)set_slow(p_ptr->slow + rand_int(4) + 4);
 			take_hit(dam, killer);
 			break;
@@ -3601,7 +3601,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Lite -- blinding */
 		case GF_LITE:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			if (p_ptr->resist_lite)
 			{
 				dam *= 4; dam /= (randint(6) + 6);
@@ -3617,7 +3617,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Dark -- blinding */
 		case GF_DARK:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			if (p_ptr->resist_dark)
 			{
 				dam *= 4; dam /= (randint(6) + 6);
@@ -3633,13 +3633,13 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Time -- bolt fewer effects XXX */
 		case GF_TIME:
 		{
-			if (blind) msg_print("В вас попали чем-то странным!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ я│я┌я─п╟п╫п╫я▀п╪!");
 
 			switch (randint(10))
 			{
 				case 1: case 2: case 3: case 4: case 5:
 				{
-					msg_print("Ваша жизнь пошла вспять.");
+					msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п©п╬я┬п╩п╟ п╡я│п©я▐я┌я▄.");
 					lose_exp(100 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 					break;
 				}
@@ -3648,15 +3648,15 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 				{
 					switch (randint(6))
 					{
-						case 1: k = A_STR; act = "сильным"; break;
-						case 2: k = A_INT; act = "умным"; break;
-						case 3: k = A_WIS; act = "мудрым"; break;
-						case 4: k = A_DEX; act = "ловким"; break;
-						case 5: k = A_CON; act = "здоровым"; break;
-						case 6: k = A_CHR; act = "красивым"; break;
+						case 1: k = A_STR; act = "я│п╦п╩я▄п╫я▀п╪"; break;
+						case 2: k = A_INT; act = "я┐п╪п╫я▀п╪"; break;
+						case 3: k = A_WIS; act = "п╪я┐п╢я─я▀п╪"; break;
+						case 4: k = A_DEX; act = "п╩п╬п╡п╨п╦п╪"; break;
+						case 5: k = A_CON; act = "п╥п╢п╬я─п╬п╡я▀п╪"; break;
+						case 6: k = A_CHR; act = "п╨я─п╟я│п╦п╡я▀п╪"; break;
 					}
 
-					msg_format("Вы чувствуете себя намного менее %s...", act);
+					msg_format("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╫п╟п╪п╫п╬пЁп╬ п╪п╣п╫п╣п╣ %s...", act);
 
 					p_ptr->stat_cur[k] = (p_ptr->stat_cur[k] * 3) / 4;
 					if (p_ptr->stat_cur[k] < 3) p_ptr->stat_cur[k] = 3;
@@ -3666,7 +3666,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 
 				case 10:
 				{
-					msg_print("Вы чувствуете себя намного менее могущественным...");
+					msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╫п╟п╪п╫п╬пЁп╬ п╪п╣п╫п╣п╣ п╪п╬пЁя┐я┴п╣я│я┌п╡п╣п╫п╫я▀п╪...");
 
 					for (k = 0; k < A_MAX; k++)
 					{
@@ -3684,8 +3684,8 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Gravity -- stun plus slowness plus teleport */
 		case GF_GRAVITY:
 		{
-			if (blind) msg_print("В вас попали чем-то странным!");
-			msg_print("Гравитация вокруг вас искривляется.");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ я│я┌я─п╟п╫п╫я▀п╪!");
+			msg_print("п⌠я─п╟п╡п╦я┌п╟я├п╦я▐ п╡п╬п╨я─я┐пЁ п╡п╟я│ п╦я│п╨я─п╦п╡п╩я▐п╣я┌я│я▐.");
 			
 			/* Higher level players can resist the teleportation better */
 			if (randint(127) > p_ptr->lev)
@@ -3704,7 +3704,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Pure damage */
 		case GF_MANA:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			take_hit(dam, killer);
 			break;
 		}
@@ -3712,7 +3712,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Pure damage */
 		case GF_METEOR:
 		{
-			if (blind) msg_print("В вас чем-то попали!");
+			if (blind) msg_print("п▓ п╡п╟я│ я┤п╣п╪-я┌п╬ п©п╬п©п╟п╩п╦!");
 			take_hit(dam, killer);
 			break;
 		}
@@ -3720,7 +3720,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ)
 		/* Ice -- cold plus stun plus cuts */
 		case GF_ICE:
 		{
-			if (blind) msg_print("В вас попали чем-то острым!");
+			if (blind) msg_print("п▓ п╡п╟я│ п©п╬п©п╟п╩п╦ я┤п╣п╪-я┌п╬ п╬я│я┌я─я▀п╪!");
 			cold_dam(dam, killer);
 			if (!p_ptr->resist_shard)
 			{

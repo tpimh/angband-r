@@ -260,7 +260,7 @@ void core(cptr str)
 int a_toupper(int c)
 {
 #ifdef WINDOWS
-	if (c >= '¡' && c <= '—')
+	if (c >= '–∞' && c <= '—è')
 		return c - 32;
 	else if ((unsigned char)c >= 128)
 		return c;
@@ -272,7 +272,7 @@ int a_toupper(int c)
 int a_tolower(int c)
 {
 #ifdef WINDOWS
-	if (c >= '·' && c <= 'Ò')
+	if (c >= '–ê' && c <= '–Ø')
 		return c + 32;
 	else if ((unsigned char)c >= 128)
 		return c;
@@ -284,7 +284,7 @@ int a_tolower(int c)
 int a_isupper(int c)
 {
 #ifdef WINDOWS
-	if (c >= '·' && c <= 'Ò')
+	if (c >= '–ê' && c <= '–Ø')
 		return TRUE;
 	else if ((unsigned char)c >= 128)
 		return FALSE;
@@ -296,7 +296,7 @@ int a_isupper(int c)
 int a_islower(int c)
 {
 #ifdef WINDOWS
-	if (c >= '¡' && c <= '—')
+	if (c >= '–∞' && c <= '—è')
 		return TRUE;
 	else if ((unsigned char)c >= 128)
 		return FALSE;
@@ -308,7 +308,7 @@ int a_islower(int c)
 int a_isalpha(int c)
 {
 #ifdef WINDOWS
-	if ((c >= '·' && c <= 'Ò') || (c >= '¡' && c <= '—'))
+	if ((c >= '–ê' && c <= '–Ø') || (c >= '–∞' && c <= '—è'))
 		return TRUE;
 	else if ((unsigned char)c >= 128)
 		return FALSE;

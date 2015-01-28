@@ -17,25 +17,25 @@
 
 static cptr comment_accept[MAX_COMMENT_ACCEPT] =
 {
-	"Хорошо.",
-	"Прекрасно.",
-	"Принято!",
-	"Отлично!",
-	"Нет проблем!",
-	"Продано!"
+	"п╔п╬я─п╬я┬п╬.",
+	"п÷я─п╣п╨я─п╟я│п╫п╬.",
+	"п÷я─п╦п╫я▐я┌п╬!",
+	"п·я┌п╩п╦я┤п╫п╬!",
+	"п²п╣я┌ п©я─п╬п╠п╩п╣п╪!",
+	"п÷я─п╬п╢п╟п╫п╬!"
 };
 
 #define MAX_COMMENT_INSULT	7
 
 static cptr comment_insult[MAX_COMMENT_INSULT] =
 {
-	"Не будем ссориться.",
-	"Не смешите.",
-	"Это оскорбление!",
-	"Я предлагаю отличную цену.",
-	"Не будем терять время.",
-	"Мое терпение на исходе.",
-	"Простите, вы о чем?"
+	"п²п╣ п╠я┐п╢п╣п╪ я│я│п╬я─п╦я┌я▄я│я▐.",
+	"п²п╣ я│п╪п╣я┬п╦я┌п╣.",
+	"п╜я┌п╬ п╬я│п╨п╬я─п╠п╩п╣п╫п╦п╣!",
+	"п╞ п©я─п╣п╢п╩п╟пЁп╟я▌ п╬я┌п╩п╦я┤п╫я┐я▌ я├п╣п╫я┐.",
+	"п²п╣ п╠я┐п╢п╣п╪ я┌п╣я─я▐я┌я▄ п╡я─п╣п╪я▐.",
+	"п°п╬п╣ я┌п╣я─п©п╣п╫п╦п╣ п╫п╟ п╦я│я┘п╬п╢п╣.",
+	"п÷я─п╬я│я┌п╦я┌п╣, п╡я▀ п╬ я┤п╣п╪?"
 };
 
 
@@ -43,10 +43,10 @@ static cptr comment_insult[MAX_COMMENT_INSULT] =
 
 static cptr comment_nonsense[MAX_COMMENT_NONSENSE] =
 {
-	"Извините?",
-	"Простите, я не вполне вас понял.",
-	"Повторите, я плохо вас расслышал.",
-	"Вы не могли бы повторить?"
+	"п≤п╥п╡п╦п╫п╦я┌п╣?",
+	"п÷я─п╬я│я┌п╦я┌п╣, я▐ п╫п╣ п╡п©п╬п╩п╫п╣ п╡п╟я│ п©п╬п╫я▐п╩.",
+	"п÷п╬п╡я┌п╬я─п╦я┌п╣, я▐ п©п╩п╬я┘п╬ п╡п╟я│ я─п╟я│я│п╩я▀я┬п╟п╩.",
+	"п▓я▀ п╫п╣ п╪п╬пЁп╩п╦ п╠я▀ п©п╬п╡я┌п╬я─п╦я┌я▄?"
 };
 
 
@@ -87,40 +87,40 @@ static void say_comment_nonsense(void)
 
 static cptr comment_worthless[MAX_COMMENT_WORTHLESS] =
 {
-	"Продавец горько плачет!",
-	"Продавец едва сдерживает гнев!",
-	"Продавец рвет и мечет!",
-	"Продавец рвет волосы!"
+	"п÷я─п╬п╢п╟п╡п╣я├ пЁп╬я─я▄п╨п╬ п©п╩п╟я┤п╣я┌!",
+	"п÷я─п╬п╢п╟п╡п╣я├ п╣п╢п╡п╟ я│п╢п╣я─п╤п╦п╡п╟п╣я┌ пЁп╫п╣п╡!",
+	"п÷я─п╬п╢п╟п╡п╣я├ я─п╡п╣я┌ п╦ п╪п╣я┤п╣я┌!",
+	"п÷я─п╬п╢п╟п╡п╣я├ я─п╡п╣я┌ п╡п╬п╩п╬я│я▀!"
 };
 
 #define MAX_COMMENT_BAD	4
 
 static cptr comment_bad[MAX_COMMENT_BAD] =
 {
-	"Продавец выглядит недовольным.",
-	"Продавец бормочет ругательства.",
-	"Продавец проклинает вас.",
-	"Продавец смотрит на вас с ненавистью."
+	"п÷я─п╬п╢п╟п╡п╣я├ п╡я▀пЁп╩я▐п╢п╦я┌ п╫п╣п╢п╬п╡п╬п╩я▄п╫я▀п╪.",
+	"п÷я─п╬п╢п╟п╡п╣я├ п╠п╬я─п╪п╬я┤п╣я┌ я─я┐пЁп╟я┌п╣п╩я▄я│я┌п╡п╟.",
+	"п÷я─п╬п╢п╟п╡п╣я├ п©я─п╬п╨п╩п╦п╫п╟п╣я┌ п╡п╟я│.",
+	"п÷я─п╬п╢п╟п╡п╣я├ я│п╪п╬я┌я─п╦я┌ п╫п╟ п╡п╟я│ я│ п╫п╣п╫п╟п╡п╦я│я┌я▄я▌."
 };
 
 #define MAX_COMMENT_GOOD	4
 
 static cptr comment_good[MAX_COMMENT_GOOD] =
 {
-	"Продавец подмигивает вам!",
-	"Продавец напевает радостную песенку.",
-	"Продавец ухмыляется.",
-	"Продавец громко смеется."
+	"п÷я─п╬п╢п╟п╡п╣я├ п©п╬п╢п╪п╦пЁп╦п╡п╟п╣я┌ п╡п╟п╪!",
+	"п÷я─п╬п╢п╟п╡п╣я├ п╫п╟п©п╣п╡п╟п╣я┌ я─п╟п╢п╬я│я┌п╫я┐я▌ п©п╣я│п╣п╫п╨я┐.",
+	"п÷я─п╬п╢п╟п╡п╣я├ я┐я┘п╪я▀п╩я▐п╣я┌я│я▐.",
+	"п÷я─п╬п╢п╟п╡п╣я├ пЁя─п╬п╪п╨п╬ я│п╪п╣п╣я┌я│я▐."
 };
 
 #define MAX_COMMENT_GREAT	4
 
 static cptr comment_great[MAX_COMMENT_GREAT] =
 {
-	"Продавец дико хохочет!",
-	"Продавец издевается над вами!",
-	"Продавец прыгает от счастья.",
-	"Продавец рыдает от счастья."
+	"п÷я─п╬п╢п╟п╡п╣я├ п╢п╦п╨п╬ я┘п╬я┘п╬я┤п╣я┌!",
+	"п÷я─п╬п╢п╟п╡п╣я├ п╦п╥п╢п╣п╡п╟п╣я┌я│я▐ п╫п╟п╢ п╡п╟п╪п╦!",
+	"п÷я─п╬п╢п╟п╡п╣я├ п©я─я▀пЁп╟п╣я┌ п╬я┌ я│я┤п╟я│я┌я▄я▐.",
+	"п÷я─п╬п╢п╟п╡п╣я├ я─я▀п╢п╟п╣я┌ п╬я┌ я│я┤п╟я│я┌я▄я▐."
 };
 
 
@@ -1052,7 +1052,7 @@ static void display_entry(int item)
 		{
 			/* Only show the weight of a single object */
 			int wgt = o_ptr->weight;
-			sprintf(out_val, "%3d.%d фнт", wgt / 10, wgt % 10);
+			sprintf(out_val, "%3d.%d я└п╫я┌", wgt / 10, wgt % 10);
 			put_str(out_val, y, 68);
 		}
 	}
@@ -1083,7 +1083,7 @@ static void display_entry(int item)
 		{
 			/* Only show the weight of a single object */
 			int wgt = o_ptr->weight;
-			sprintf(out_val, "%3d.%d фнт", wgt / 10, wgt % 10);
+			sprintf(out_val, "%3d.%d я└п╫я┌", wgt / 10, wgt % 10);
 			put_str(out_val, y, 61);
 		}
 
@@ -1131,10 +1131,10 @@ static void display_inventory(void)
 	if (st_ptr->stock_num > 12)
 	{
 		/* Show "more" reminder (after the last object ) */
-		prt("-дальше-", k + 6, 3);
+		prt("-п╢п╟п╩я▄я┬п╣-", k + 6, 3);
 
 		/* Indicate the "current page" */
-		put_str(format("(Стр. %d)", store_top/12 + 1), 5, 20);
+		put_str(format("(п║я┌я─. %d)", store_top/12 + 1), 5, 20);
 	}
 }
 
@@ -1146,7 +1146,7 @@ static void store_prt_gold(void)
 {
 	char out_val[64];
 
-	prt("Осталось золота: ", 19, 53);
+	prt("п·я│я┌п╟п╩п╬я│я▄ п╥п╬п╩п╬я┌п╟: ", 19, 53);
 
 	sprintf(out_val, "%9ld", (long)p_ptr->au);
 	prt(out_val, 19, 68);
@@ -1168,15 +1168,15 @@ static void display_store(void)
 	if (store_num == STORE_HOME)
 	{
 		/* Put the owner name */
-		put_str("Ваш Дом", 3, 30);
+		put_str("п▓п╟я┬ п■п╬п╪", 3, 30);
 
 		/* Label the object descriptions */
-		put_str("Предмет", 5, 3);
+		put_str("п÷я─п╣п╢п╪п╣я┌", 5, 3);
 
 		/* If showing weights, show label */
 		if (show_weights)
 		{
-			put_str("Вес", 5, 70);
+			put_str("п▓п╣я│", 5, 70);
 		}
 	}
 
@@ -1196,16 +1196,16 @@ static void display_store(void)
 		prt(buf, 3, 50);
 
 		/* Label the object descriptions */
-		put_str("Предмет", 5, 3);
+		put_str("п÷я─п╣п╢п╪п╣я┌", 5, 3);
 
 		/* If showing weights, show label */
 		if (show_weights)
 		{
-			put_str("Вес", 5, 60);
+			put_str("п▓п╣я│", 5, 60);
 		}
 
 		/* Label the asking price (in stores) */
-		put_str("Цена", 5, 72);
+		put_str("п╕п╣п╫п╟", 5, 72);
 	}
 
 	/* Display the current gold */
@@ -1260,7 +1260,7 @@ static bool get_stock(int *com_val, cptr pmt)
 	*com_val = (-1);
 
 	/* Build the prompt */
-	strnfmt(buf, sizeof(buf), "(Предметы %c-%c, ESC для выхода) %s",
+	strnfmt(buf, sizeof(buf), "(п÷я─п╣п╢п╪п╣я┌я▀ %c-%c, ESC п╢п╩я▐ п╡я▀я┘п╬п╢п╟) %s",
 	        store_to_label(0), store_to_label(st_ptr->stock_num - 1),
 	        pmt);
 
@@ -1285,7 +1285,7 @@ static bool get_stock(int *com_val, cptr pmt)
 		if (item < 0)
 		{
 			/* Oops */
-			bell("Неправильный выбор!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╡я▀п╠п╬я─!");
 
 			continue;
 		}
@@ -1300,7 +1300,7 @@ static bool get_stock(int *com_val, cptr pmt)
 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_VINIT);
 
 		/* Prompt */
-		strnfmt(out_val, sizeof(out_val), "Взять %s? ", o_name);
+		strnfmt(out_val, sizeof(out_val), "п▓п╥я▐я┌я▄ %s? ", o_name);
 
 		/* Query */
 		if (!get_check(out_val)) return (FALSE);
@@ -1374,7 +1374,7 @@ static int get_haggle(cptr pmt, s32b *poffer, s32b price)
 		}
 
 		/* Warning */
-		msg_print("Неправильный ответ.");
+		msg_print("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╬я┌п╡п╣я┌.");
 		message_flush();
 	}
 
@@ -1425,7 +1425,7 @@ static bool purchase_haggle(object_type *o_ptr, s32b *price)
 
 	bool cancel = FALSE;
 
-	cptr pmt = "Последнее предложение";
+	cptr pmt = "п÷п╬я│п╩п╣п╢п╫п╣п╣ п©я─п╣п╢п╩п╬п╤п╣п╫п╦п╣";
 
 	char out_val[160];
 
@@ -1437,7 +1437,7 @@ static bool purchase_haggle(object_type *o_ptr, s32b *price)
 	ask_price = price_item(o_ptr, ot_ptr->inflate, FALSE);
 
 	/* Message summary */
-	msg_print("Вы быстро соглашаетесь с ценой.");
+	msg_print("п▓я▀ п╠я▀я│я┌я─п╬ я│п╬пЁп╩п╟я┬п╟п╣я┌п╣я│я▄ я│ я├п╣п╫п╬п╧.");
 	message_flush();
 
 	/* Haggle for the whole pile */
@@ -1455,7 +1455,7 @@ static bool purchase_haggle(object_type *o_ptr, s32b *price)
 		{
 			strnfmt(out_val, sizeof(out_val), "%s :  %ld", pmt, (long)ask_price);
 			put_str(out_val, 1, 0);
-			cancel = receive_offer("Сколько предлагаете? [принять] ",
+			cancel = receive_offer("п║п╨п╬п╩я▄п╨п╬ п©я─п╣п╢п╩п╟пЁп╟п╣я┌п╣? [п©я─п╦п╫я▐я┌я▄] ",
 			                       &offer, 1, ask_price);
 
 			if (cancel)
@@ -1509,7 +1509,7 @@ static bool sell_haggle(object_type *o_ptr, s32b *price)
 
 	bool cancel = FALSE;
 
-	cptr pmt = "Последнее предложение";
+	cptr pmt = "п÷п╬я│п╩п╣п╢п╫п╣п╣ п©я─п╣п╢п╩п╬п╤п╣п╫п╦п╣";
 
 	char out_val[160];
 
@@ -1526,7 +1526,7 @@ static bool sell_haggle(object_type *o_ptr, s32b *price)
 	if (ask_price >= purse)
 	{
 		/* Message */
-		msg_print("Вы сразу же соглашаетесь с ценой.");
+		msg_print("п▓я▀ я│я─п╟п╥я┐ п╤п╣ я│п╬пЁп╩п╟я┬п╟п╣я┌п╣я│я▄ я│ я├п╣п╫п╬п╧.");
 		message_flush();
 		
 		/* Offer full price */
@@ -1537,7 +1537,7 @@ static bool sell_haggle(object_type *o_ptr, s32b *price)
 	else
 	{
 		/* Message summary */
-		msg_print("Вы быстро соглашаетесь с ценой.");
+		msg_print("п▓я▀ п╠я▀я│я┌я─п╬ я│п╬пЁп╩п╟я┬п╟п╣я┌п╣я│я▄ я│ я├п╣п╫п╬п╧.");
 		message_flush();
 	}
 
@@ -1559,7 +1559,7 @@ static bool sell_haggle(object_type *o_ptr, s32b *price)
 
 			strnfmt(out_val, sizeof(out_val), "%s :  %ld", pmt, (long)ask_price);
 			put_str(out_val, 1, 0);
-			cancel = receive_offer("Сколько просите? ",
+			cancel = receive_offer("п║п╨п╬п╩я▄п╨п╬ п©я─п╬я│п╦я┌п╣? ",
 			                       &offer, -1, ask_price);
 
 			if (cancel)
@@ -1631,11 +1631,11 @@ static void store_purchase(void)
 	{
 		if (store_num == STORE_HOME)
 		{
-			msg_print("Ваш дом пуст.");
+			msg_print("п▓п╟я┬ п╢п╬п╪ п©я┐я│я┌.");
 		}
 		else
 		{
-			msg_print("У меня ничего нет.");
+			msg_print("пё п╪п╣п╫я▐ п╫п╦я┤п╣пЁп╬ п╫п╣я┌.");
 		}
 		return;
 	}
@@ -1644,11 +1644,11 @@ static void store_purchase(void)
 	/* Prompt */
 	if (store_num == STORE_HOME)
 	{
-		sprintf(out_val, "Что вы хотите взять? ");
+		sprintf(out_val, "п╖я┌п╬ п╡я▀ я┘п╬я┌п╦я┌п╣ п╡п╥я▐я┌я▄? ");
 	}
 	else
 	{
-		sprintf(out_val, "Что вы хотели бы приобрести? ");
+		sprintf(out_val, "п╖я┌п╬ п╡я▀ я┘п╬я┌п╣п╩п╦ п╠я▀ п©я─п╦п╬п╠я─п╣я│я┌п╦? ");
 	}
 
 	/* Get the object number to be bought */
@@ -1681,7 +1681,7 @@ static void store_purchase(void)
 	/* Hack -- require room in pack */
 	if (!inven_carry_okay(i_ptr))
 	{
-		msg_print("Вы не сможете нести столько предметов.");
+		msg_print("п▓я▀ п╫п╣ я│п╪п╬п╤п╣я┌п╣ п╫п╣я│я┌п╦ я│я┌п╬п╩я▄п╨п╬ п©я─п╣п╢п╪п╣я┌п╬п╡.");
 		return;
 	}
 
@@ -1692,7 +1692,7 @@ static void store_purchase(void)
 		object_desc(o_name, sizeof(o_name), i_ptr, TRUE, 3, PAD_RODIT);
 
 		/* Message */
-		msg_format("Покупка %s (%c).",
+		msg_format("п÷п╬п╨я┐п©п╨п╟ %s (%c).",
 		           o_name, store_to_label(item));
 		message_flush();
 
@@ -1727,7 +1727,7 @@ static void store_purchase(void)
 				object_desc(o_name, sizeof(o_name), i_ptr, TRUE, 3, PAD_VINIT);
 
 				/* Message */
-				msg_format("Вы купили %s (%c) за %ld золотых.",
+				msg_format("п▓я▀ п╨я┐п©п╦п╩п╦ %s (%c) п╥п╟ %ld п╥п╬п╩п╬я┌я▀я┘.",
 				           o_name, store_to_label(item),
 				           (long)price);
 
@@ -1744,7 +1744,7 @@ static void store_purchase(void)
 				object_desc(o_name, sizeof(o_name), &inventory[item_new], TRUE, 3, PAD_IMEN);
 
 				/* Message */
-				msg_format("У вас: %s (%c).",
+				msg_format("пё п╡п╟я│: %s (%c).",
 				           o_name, index_to_label(item_new));
 
 				/* Now, reduce the original stack's pval */
@@ -1774,7 +1774,7 @@ static void store_purchase(void)
 					if (rand_int(STORE_SHUFFLE) == 0)
 					{
 						/* Message */
-						msg_print("Продавец увольняется.");
+						msg_print("п÷я─п╬п╢п╟п╡п╣я├ я┐п╡п╬п╩я▄п╫я▐п╣я┌я│я▐.");
 
 						/* Shuffle the store */
 						store_shuffle(store_num);
@@ -1784,7 +1784,7 @@ static void store_purchase(void)
 					else
 					{
 						/* Message */
-						msg_print("Продавец приносит новые товары.");
+						msg_print("п÷я─п╬п╢п╟п╡п╣я├ п©я─п╦п╫п╬я│п╦я┌ п╫п╬п╡я▀п╣ я┌п╬п╡п╟я─я▀.");
 					}
 
 					/* New inventory */
@@ -1826,7 +1826,7 @@ static void store_purchase(void)
 			else
 			{
 				/* Simple message (no insult) */
-				msg_print("У вас не хватает золота.");
+				msg_print("пё п╡п╟я│ п╫п╣ я┘п╡п╟я┌п╟п╣я┌ п╥п╬п╩п╬я┌п╟.");
 			}
 		}
 	}
@@ -1844,7 +1844,7 @@ static void store_purchase(void)
 		object_desc(o_name, sizeof(o_name), &inventory[item_new], TRUE, 3, PAD_IMEN);
 
 		/* Message */
-		msg_format("Вы забираете с собой: %s (%c).", o_name, index_to_label(item_new));
+		msg_format("п▓я▀ п╥п╟п╠п╦я─п╟п╣я┌п╣ я│ я│п╬п╠п╬п╧: %s (%c).", o_name, index_to_label(item_new));
 
 		/* Handle stuff */
 		handle_stuff();
@@ -1904,20 +1904,20 @@ static void store_sell(void)
 
 
 	/* Home */
-	q = "Бросить какой предмет? ";
+	q = "п▒я─п╬я│п╦я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
 
 	/* Real store */
 	if (store_num != STORE_HOME)
 	{
 		/* New prompt */
-		q = "Продать какой предмет? ";
+		q = "п÷я─п╬п╢п╟я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
 
 		/* Only allow items the store will buy */
 		item_tester_hook = store_will_buy_tester;
 	}
 
 	/* Get an item */
-	s = "У вас нет ничего подходящего для меня.";
+	s = "пё п╡п╟я│ п╫п╣я┌ п╫п╦я┤п╣пЁп╬ п©п╬п╢я┘п╬п╢я▐я┴п╣пЁп╬ п╢п╩я▐ п╪п╣п╫я▐.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -1937,7 +1937,7 @@ static void store_sell(void)
 	if ((item >= INVEN_WIELD) && cursed_p(o_ptr))
 	{
 		/* Oops */
-		msg_print("Хм. Похоже, этот предмет проклят.");
+		msg_print("п╔п╪. п÷п╬я┘п╬п╤п╣, я█я┌п╬я┌ п©я─п╣п╢п╪п╣я┌ п©я─п╬п╨п╩я▐я┌.");
 
 		/* Nope */
 		return;
@@ -1977,11 +1977,11 @@ static void store_sell(void)
 	{
 		if (store_num == STORE_HOME)
 		{
-			msg_print("Ваш дом полон.");
+			msg_print("п▓п╟я┬ п╢п╬п╪ п©п╬п╩п╬п╫.");
 		}
 		else
 		{
-			msg_print("У меня не хватит места в магазине.");
+			msg_print("пё п╪п╣п╫я▐ п╫п╣ я┘п╡п╟я┌п╦я┌ п╪п╣я│я┌п╟ п╡ п╪п╟пЁп╟п╥п╦п╫п╣.");
 		}
 		return;
 	}
@@ -1991,7 +1991,7 @@ static void store_sell(void)
 	if (store_num != STORE_HOME)
 	{
 		/* Describe the transaction */
-		msg_format("Продается %s (%c).", o_name, index_to_label(item));
+		msg_format("п÷я─п╬п╢п╟п╣я┌я│я▐ %s (%c).", o_name, index_to_label(item));
 		message_flush();
 
 		/* Haggle for it */
@@ -2055,7 +2055,7 @@ static void store_sell(void)
 			object_desc(o_name, sizeof(o_name), i_ptr, TRUE, 3, PAD_VINIT);
 
 			/* Describe the result (in message buffer) */
-			msg_format("Вы продали %s (%c) за %ld золотых.",
+			msg_format("п▓я▀ п©я─п╬п╢п╟п╩п╦ %s (%c) п╥п╟ %ld п╥п╬п╩п╬я┌я▀я┘.",
 			           o_name, index_to_label(item), (long)price);
 
 			/* Analyze the prices (and comment verbally) */
@@ -2091,7 +2091,7 @@ static void store_sell(void)
 		object_desc(o_name, sizeof(o_name), i_ptr, TRUE, 3, PAD_VINIT);
 
 		/* Describe */
-		msg_format("Вы оставляете дома %s (%c).", o_name, index_to_label(item));
+		msg_format("п▓я▀ п╬я│я┌п╟п╡п╩я▐п╣я┌п╣ п╢п╬п╪п╟ %s (%c).", o_name, index_to_label(item));
 
 		/* Take it from the players inventory */
 		inven_item_increase(item, -amt);
@@ -2129,18 +2129,18 @@ static void store_examine(void)
 	{
 		if (store_num == STORE_HOME)
 		{
-			msg_print("Ваш дом пуст.");
+			msg_print("п▓п╟я┬ п╢п╬п╪ п©я┐я│я┌.");
 		}
 		else
 		{
-			msg_print("У меня ничего нет.");
+			msg_print("пё п╪п╣п╫я▐ п╫п╦я┤п╣пЁп╬ п╫п╣я┌.");
 		}
 		return;
 	}
 
 
 	/* Prompt */
-	sprintf(out_val, "Что вы хотите исследовать? ");
+	sprintf(out_val, "п╖я┌п╬ п╡я▀ я┘п╬я┌п╦я┌п╣ п╦я│я│п╩п╣п╢п╬п╡п╟я┌я▄? ");
 
 	/* Get the item number to be examined */
 	if (!get_stock(&item, out_val)) return;
@@ -2198,7 +2198,7 @@ static void store_process_command(void)
 			if (st_ptr->stock_num <= 12)
 			{
 				/* Nothing to see */
-				msg_print("Показан весь инвентарь.");
+				msg_print("п÷п╬п╨п╟п╥п╟п╫ п╡п╣я│я▄ п╦п╫п╡п╣п╫я┌п╟я─я▄.");
 			}
 
 			else if (store_top == 0)
@@ -2475,7 +2475,7 @@ static void store_process_command(void)
 		/* Hack -- Unknown command */
 		default:
 		{
-			msg_print("Эта команда не работает в магазинах.");
+			msg_print("п╜я┌п╟ п╨п╬п╪п╟п╫п╢п╟ п╫п╣ я─п╟п╠п╬я┌п╟п╣я┌ п╡ п╪п╟пЁп╟п╥п╦п╫п╟я┘.");
 			break;
 		}
 	}
@@ -2506,7 +2506,7 @@ void do_cmd_store(void)
 	if (!((cave_feat[py][px] >= FEAT_SHOP_HEAD) &&
 	      (cave_feat[py][px] <= FEAT_SHOP_TAIL)))
 	{
-		msg_print("Здесь нет магазинов.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╣я┌ п╪п╟пЁп╟п╥п╦п╫п╬п╡.");
 		return;
 	}
 
@@ -2516,7 +2516,7 @@ void do_cmd_store(void)
 	/* Hack -- Check the "locked doors" */
 	if (adult_no_stores)
 	{
-		msg_print("Магазин закрыт.");
+		msg_print("п°п╟пЁп╟п╥п╦п╫ п╥п╟п╨я─я▀я┌.");
 		return;
 	}
 
@@ -2569,26 +2569,26 @@ void do_cmd_store(void)
 		clear_from(21);
 
 		/* Basic commands */
-		prt(" ESC) Выйти из здания.", 22, 0);
+		prt(" ESC) п▓я▀п╧я┌п╦ п╦п╥ п╥п╢п╟п╫п╦я▐.", 22, 0);
 
 		/* Browse if necessary */
 		if (st_ptr->stock_num > 12)
 		{
-			prt(" SPACE) Следующ. страница", 23, 0);
+			prt(" SPACE) п║п╩п╣п╢я┐я▌я┴. я│я┌я─п╟п╫п╦я├п╟", 23, 0);
 		}
 
 		/* Commands */
-		prt(" g) Взять/Купить предмет", 22, 29);
-		prt(" d) Бросить/Продать предмет", 23, 29);
+		prt(" g) п▓п╥я▐я┌я▄/п я┐п©п╦я┌я▄ п©я─п╣п╢п╪п╣я┌", 22, 29);
+		prt(" d) п▒я─п╬я│п╦я┌я▄/п÷я─п╬п╢п╟я┌я▄ п©я─п╣п╢п╪п╣я┌", 23, 29);
 
 		/* Add in the eXamine option */
 		if (rogue_like_commands)
-			prt(" x) Исследовать предмет", 22, 56);
+			prt(" x) п≤я│я│п╩п╣п╢п╬п╡п╟я┌я▄ п©я─п╣п╢п╪п╣я┌", 22, 56);
 		else
-			prt(" l) Посмотреть на предмет", 22, 56);
+			prt(" l) п÷п╬я│п╪п╬я┌я─п╣я┌я▄ п╫п╟ п©я─п╣п╢п╪п╣я┌", 22, 56);
 
 		/* Prompt */
-		prt("Вы можете: ", 21, 0);
+		prt("п▓я▀ п╪п╬п╤п╣я┌п╣: ", 21, 0);
 
 		/* Get a command */
 		request_command(TRUE);
@@ -2613,7 +2613,7 @@ void do_cmd_store(void)
 			if (store_num != STORE_HOME)
 			{
 				/* Message */
-				msg_print("Вы выбегаете из магазина с переполненным рюкзаком...");
+				msg_print("п▓я▀ п╡я▀п╠п╣пЁп╟п╣я┌п╣ п╦п╥ п╪п╟пЁп╟п╥п╦п╫п╟ я│ п©п╣я─п╣п©п╬п╩п╫п╣п╫п╫я▀п╪ я─я▌п╨п╥п╟п╨п╬п╪...");
 
 				/* Leave */
 				leave_store = TRUE;
@@ -2623,7 +2623,7 @@ void do_cmd_store(void)
 			else if (!store_check_num(o_ptr))
 			{
 				/* Message */
-				msg_print("Вы выбегаете из дома с переполненным рюкзаком...");
+				msg_print("п▓я▀ п╡я▀п╠п╣пЁп╟п╣я┌п╣ п╦п╥ п╢п╬п╪п╟ я│ п©п╣я─п╣п©п╬п╩п╫п╣п╫п╫я▀п╪ я─я▌п╨п╥п╟п╨п╬п╪...");
 
 				/* Leave */
 				leave_store = TRUE;
@@ -2641,7 +2641,7 @@ void do_cmd_store(void)
 
 
 				/* Give a message */
-				msg_print("Ваш рюкзак переполнен!");
+				msg_print("п▓п╟я┬ я─я▌п╨п╥п╟п╨ п©п╣я─п╣п©п╬п╩п╫п╣п╫!");
 
 				/* Get local object */
 				i_ptr = &object_type_body;
@@ -2653,7 +2653,7 @@ void do_cmd_store(void)
 				object_desc(o_name, sizeof(o_name), i_ptr, TRUE, 3, PAD_VINIT);
 
 				/* Message */
-				msg_format("Вы бросаете %s (%c).", o_name, index_to_label(item));
+				msg_format("п▓я▀ п╠я─п╬я│п╟п╣я┌п╣ %s (%c).", o_name, index_to_label(item));
 
 				/* Remove it from the players inventory */
 				inven_item_increase(item, -255);

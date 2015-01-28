@@ -19,14 +19,14 @@ void do_cmd_go_up(void)
 	/* Verify stairs */
 	if (cave_feat[p_ptr->py][p_ptr->px] != FEAT_LESS)
 	{
-		msg_print("Здесь нет лестницы вверх.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╣я┌ п╩п╣я│я┌п╫п╦я├я▀ п╡п╡п╣я─я┘.");
 		return;
 	}
 
 	/* Ironman */
 	if (adult_ironman)
 	{
-		msg_print("...Ничего не происходит!");
+		msg_print("...п²п╦я┤п╣пЁп╬ п╫п╣ п©я─п╬п╦я│я┘п╬п╢п╦я┌!");
 		return;
 	}
 
@@ -34,7 +34,7 @@ void do_cmd_go_up(void)
 	p_ptr->energy_use = 100;
 
 	/* Success */
-	message(MSG_STAIRS, 0, "Вы входите в лабиринт лестниц вверх.");
+	message(MSG_STAIRS, 0, "п▓я▀ п╡я┘п╬п╢п╦я┌п╣ п╡ п╩п╟п╠п╦я─п╦п╫я┌ п╩п╣я│я┌п╫п╦я├ п╡п╡п╣я─я┘.");
 
 	/* Create a way back */
 	p_ptr->create_down_stair = TRUE;
@@ -55,7 +55,7 @@ void do_cmd_go_down(void)
 	/* Verify stairs */
 	if (cave_feat[p_ptr->py][p_ptr->px] != FEAT_MORE)
 	{
-		msg_print("Здесь нет лестницы вниз.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╣я┌ п╩п╣я│я┌п╫п╦я├я▀ п╡п╫п╦п╥.");
 		return;
 	}
 
@@ -63,7 +63,7 @@ void do_cmd_go_down(void)
 	p_ptr->energy_use = 100;
 
 	/* Success */
-	message(MSG_STAIRS, 0, "Вы входите в лабиринт лестниц вниз.");
+	message(MSG_STAIRS, 0, "п▓я▀ п╡я┘п╬п╢п╦я┌п╣ п╡ п╩п╟п╠п╦я─п╦п╫я┌ п╩п╣я│я┌п╫п╦я├ п╡п╫п╦п╥.");
 
 	/* Create a way back */
 	p_ptr->create_up_stair = TRUE;
@@ -272,23 +272,23 @@ static void chest_trap(int y, int x, s16b o_idx)
 	/* Lose strength */
 	if (trap & (CHEST_LOSE_STR))
 	{
-		msg_print("Вы укололись маленьким шипом!");
-		take_hit(damroll(1, 4), "ядовитый шип");
+		msg_print("п▓я▀ я┐п╨п╬п╩п╬п╩п╦я│я▄ п╪п╟п╩п╣п╫я▄п╨п╦п╪ я┬п╦п©п╬п╪!");
+		take_hit(damroll(1, 4), "я▐п╢п╬п╡п╦я┌я▀п╧ я┬п╦п©");
 		(void)do_dec_stat(A_STR);
 	}
 
 	/* Lose constitution */
 	if (trap & (CHEST_LOSE_CON))
 	{
-		msg_print("Вы укололись маленьким шипом!");
-		take_hit(damroll(1, 4), "ядовитый шип");
+		msg_print("п▓я▀ я┐п╨п╬п╩п╬п╩п╦я│я▄ п╪п╟п╩п╣п╫я▄п╨п╦п╪ я┬п╦п©п╬п╪!");
+		take_hit(damroll(1, 4), "я▐п╢п╬п╡п╦я┌я▀п╧ я┬п╦п©");
 		(void)do_dec_stat(A_CON);
 	}
 
 	/* Poison */
 	if (trap & (CHEST_POISON))
 	{
-		msg_print("Вас окружает облако зеленого газа!");
+		msg_print("п▓п╟я│ п╬п╨я─я┐п╤п╟п╣я┌ п╬п╠п╩п╟п╨п╬ п╥п╣п╩п╣п╫п╬пЁп╬ пЁп╟п╥п╟!");
 		if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
 		{
 			(void)set_poisoned(p_ptr->poisoned + 10 + randint(20));
@@ -298,7 +298,7 @@ static void chest_trap(int y, int x, s16b o_idx)
 	/* Paralyze */
 	if (trap & (CHEST_PARALYZE))
 	{
-		msg_print("Вас окружает облако желтого газа!");
+		msg_print("п▓п╟я│ п╬п╨я─я┐п╤п╟п╣я┌ п╬п╠п╩п╟п╨п╬ п╤п╣п╩я┌п╬пЁп╬ пЁп╟п╥п╟!");
 		if (!p_ptr->free_act)
 		{
 			(void)set_paralyzed(p_ptr->paralyzed + 10 + randint(20));
@@ -309,7 +309,7 @@ static void chest_trap(int y, int x, s16b o_idx)
 	if (trap & (CHEST_SUMMON))
 	{
 		int num = 2 + randint(3);
-		msg_print("Вас окружает облако дыма!");
+		msg_print("п▓п╟я│ п╬п╨я─я┐п╤п╟п╣я┌ п╬п╠п╩п╟п╨п╬ п╢я▀п╪п╟!");
 		for (i = 0; i < num; i++)
 		{
 			(void)summon_specific(y, x, p_ptr->depth, 0);
@@ -319,10 +319,10 @@ static void chest_trap(int y, int x, s16b o_idx)
 	/* Explode */
 	if (trap & (CHEST_EXPLODE))
 	{
-		msg_print("Внезапно происходит взрыв!");
-		msg_print("Все содержимое сундука уничтожено!");
+		msg_print("п▓п╫п╣п╥п╟п©п╫п╬ п©я─п╬п╦я│я┘п╬п╢п╦я┌ п╡п╥я─я▀п╡!");
+		msg_print("п▓я│п╣ я│п╬п╢п╣я─п╤п╦п╪п╬п╣ я│я┐п╫п╢я┐п╨п╟ я┐п╫п╦я┤я┌п╬п╤п╣п╫п╬!");
 		o_ptr->pval = 0;
-		take_hit(damroll(5, 8), "взорвавшийся сундук");
+		take_hit(damroll(5, 8), "п╡п╥п╬я─п╡п╟п╡я┬п╦п╧я│я▐ я│я┐п╫п╢я┐п╨");
 	}
 }
 
@@ -367,7 +367,7 @@ static bool do_cmd_open_chest(int y, int x, s16b o_idx)
 		/* Success -- May still have traps */
 		if (rand_int(100) < j)
 		{
-			msg_print("Вы подобрали отмычку.");
+			msg_print("п▓я▀ п©п╬п╢п╬п╠я─п╟п╩п╦ п╬я┌п╪я▀я┤п╨я┐.");
 			gain_exp(1);
 			flag = TRUE;
 		}
@@ -378,7 +378,7 @@ static bool do_cmd_open_chest(int y, int x, s16b o_idx)
 			/* We may continue repeating */
 			more = TRUE;
 			if (flush_failure) flush();
-			message(MSG_LOCKPICK_FAIL, 0, "Вы не смогли подобрать отмычку.");
+			message(MSG_LOCKPICK_FAIL, 0, "п▓я▀ п╫п╣ я│п╪п╬пЁп╩п╦ п©п╬п╢п╬п╠я─п╟я┌я▄ п╬я┌п╪я▀я┤п╨я┐.");
 		}
 	}
 
@@ -429,25 +429,25 @@ static bool do_cmd_disarm_chest(int y, int x, s16b o_idx)
 	/* Must find the trap first. */
 	if (!object_known_p(o_ptr))
 	{
-		msg_print("Вы не видите здесь ловушек.");
+		msg_print("п▓я▀ п╫п╣ п╡п╦п╢п╦я┌п╣ п╥п╢п╣я│я▄ п╩п╬п╡я┐я┬п╣п╨.");
 	}
 
 	/* Already disarmed/unlocked */
 	else if (o_ptr->pval <= 0)
 	{
-		msg_print("Вы уже обезвредили ловушки.");
+		msg_print("п▓я▀ я┐п╤п╣ п╬п╠п╣п╥п╡я─п╣п╢п╦п╩п╦ п╩п╬п╡я┐я┬п╨п╦.");
 	}
 
 	/* No traps to find. */
 	else if (!chest_traps[o_ptr->pval])
 	{
-		msg_print("В этом сундуке нет ловушки.");
+		msg_print("п▓ я█я┌п╬п╪ я│я┐п╫п╢я┐п╨п╣ п╫п╣я┌ п╩п╬п╡я┐я┬п╨п╦.");
 	}
 
 	/* Success (get a lot of experience) */
 	else if (rand_int(100) < j)
 	{
-		msg_print("Вы обезвредили ловушки сундука.");
+		msg_print("п▓я▀ п╬п╠п╣п╥п╡я─п╣п╢п╦п╩п╦ п╩п╬п╡я┐я┬п╨п╦ я│я┐п╫п╢я┐п╨п╟.");
 		gain_exp(o_ptr->pval);
 		o_ptr->pval = (0 - o_ptr->pval);
 	}
@@ -458,13 +458,13 @@ static bool do_cmd_disarm_chest(int y, int x, s16b o_idx)
 		/* We may keep trying */
 		more = TRUE;
 		if (flush_failure) flush();
-		msg_print("У вас не получилось обезвредить сундук.");
+		msg_print("пё п╡п╟я│ п╫п╣ п©п╬п╩я┐я┤п╦п╩п╬я│я▄ п╬п╠п╣п╥п╡я─п╣п╢п╦я┌я▄ я│я┐п╫п╢я┐п╨.");
 	}
 
 	/* Failure -- Set off the trap */
 	else
 	{
-		msg_print("Вы включили ловушку!");
+		msg_print("п▓я▀ п╡п╨п╩я▌я┤п╦п╩п╦ п╩п╬п╡я┐я┬п╨я┐!");
 		chest_trap(y, x, o_idx);
 	}
 
@@ -613,7 +613,7 @@ static bool do_cmd_open_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
-		msg_print("Здесь ничего нет.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╦я┤п╣пЁп╬ п╫п╣я┌.");
 
 		/* Nope */
 		return (FALSE);
@@ -624,7 +624,7 @@ static bool do_cmd_open_test(int y, int x)
 	      (cave_feat[y][x] <= FEAT_DOOR_TAIL)))
 	{
 		/* Message */
-		message(MSG_NOTHING_TO_OPEN, 0, "Здесь нечего открывать.");
+		message(MSG_NOTHING_TO_OPEN, 0, "п≈п╢п╣я│я▄ п╫п╣я┤п╣пЁп╬ п╬я┌п╨я─я▀п╡п╟я┌я▄.");
 
 		/* Nope */
 		return (FALSE);
@@ -657,7 +657,7 @@ static bool do_cmd_open_aux(int y, int x)
 	if (cave_feat[y][x] >= FEAT_DOOR_HEAD + 0x08)
 	{
 		/* Stuck */
-		msg_print("Эта дверь заколочена.");
+		msg_print("п╜я┌п╟ п╢п╡п╣я─я▄ п╥п╟п╨п╬п╩п╬я┤п╣п╫п╟.");
 	}
 
 	/* Locked door */
@@ -683,7 +683,7 @@ static bool do_cmd_open_aux(int y, int x)
 		if (rand_int(100) < j)
 		{
 			/* Message */
-			message(MSG_OPENDOOR, 0, "Вы подобрали отмычку.");
+			message(MSG_OPENDOOR, 0, "п▓я▀ п©п╬п╢п╬п╠я─п╟п╩п╦ п╬я┌п╪я▀я┤п╨я┐.");
 
 			/* Open the door */
 			cave_set_feat(y, x, FEAT_OPEN);
@@ -702,7 +702,7 @@ static bool do_cmd_open_aux(int y, int x)
 			if (flush_failure) flush();
 
 			/* Message */
-			message(MSG_LOCKPICK_FAIL, 0, "Вы не смогли подобрать отмычку.");
+			message(MSG_LOCKPICK_FAIL, 0, "п▓я▀ п╫п╣ я│п╪п╬пЁп╩п╦ п©п╬п╢п╬п╠я─п╟я┌я▄ п╬я┌п╪я▀я┤п╨я┐.");
 
 			/* We may keep trying */
 			more = TRUE;
@@ -807,7 +807,7 @@ void do_cmd_open(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
-		msg_print("На пути монстр!");
+		msg_print("п²п╟ п©я┐я┌п╦ п╪п╬п╫я│я┌я─!");
 
 		/* Attack */
 		py_attack(y, x);
@@ -841,7 +841,7 @@ static bool do_cmd_close_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
-		msg_print("Здесь ничего нет.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╦я┤п╣пЁп╬ п╫п╣я┌.");
 
 		/* Nope */
 		return (FALSE);
@@ -852,7 +852,7 @@ static bool do_cmd_close_test(int y, int x)
 	    (cave_feat[y][x] != FEAT_BROKEN))
 	{
 		/* Message */
-		msg_print("Здесь нечего закрывать.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╣я┤п╣пЁп╬ п╥п╟п╨я─я▀п╡п╟я┌я▄.");
 
 		/* Nope */
 		return (FALSE);
@@ -883,7 +883,7 @@ static bool do_cmd_close_aux(int y, int x)
 	if (cave_feat[y][x] == FEAT_BROKEN)
 	{
 		/* Message */
-		msg_print("Эта дверь выбита.");
+		msg_print("п╜я┌п╟ п╢п╡п╣я─я▄ п╡я▀п╠п╦я┌п╟.");
 	}
 
 	/* Open door */
@@ -965,7 +965,7 @@ void do_cmd_close(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
-		msg_print("На пути монстр!");
+		msg_print("п²п╟ п©я┐я┌п╦ п╪п╬п╫я│я┌я─!");
 
 		/* Attack */
 		py_attack(y, x);
@@ -993,7 +993,7 @@ static bool do_cmd_tunnel_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
-		msg_print("Здесь ничего нет.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╦я┤п╣пЁп╬ п╫п╣я┌.");
 
 		/* Nope */
 		return (FALSE);
@@ -1003,7 +1003,7 @@ static bool do_cmd_tunnel_test(int y, int x)
 	if (cave_floor_bold(y, x))
 	{
 		/* Message */
-		msg_print("Здесь некуда копать.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╣п╨я┐п╢п╟ п╨п╬п©п╟я┌я▄.");
 
 		/* Nope */
 		return (FALSE);
@@ -1073,7 +1073,7 @@ static bool do_cmd_tunnel_aux(int y, int x)
 	/* Titanium */
 	if (cave_feat[y][x] >= FEAT_PERM_EXTRA)
 	{
-		msg_print("Через такой камень копать нельзя.");
+		msg_print("п╖п╣я─п╣п╥ я┌п╟п╨п╬п╧ п╨п╟п╪п╣п╫я▄ п╨п╬п©п╟я┌я▄ п╫п╣п╩я▄п╥я▐.");
 	}
 
 	/* Granite */
@@ -1082,14 +1082,14 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		/* Tunnel */
 		if ((p_ptr->skill_dig > 40 + rand_int(1600)) && twall(y, x))
 		{
-			msg_print("Вы выкопали туннель.");
+			msg_print("п▓я▀ п╡я▀п╨п╬п©п╟п╩п╦ я┌я┐п╫п╫п╣п╩я▄.");
 		}
 
 		/* Keep trying */
 		else
 		{
 			/* We may continue tunelling */
-			msg_print("Вы копаете гранитную стену.");
+			msg_print("п▓я▀ п╨п╬п©п╟п╣я┌п╣ пЁя─п╟п╫п╦я┌п╫я┐я▌ я│я┌п╣п╫я┐.");
 			more = TRUE;
 		}
 	}
@@ -1135,14 +1135,14 @@ static bool do_cmd_tunnel_aux(int y, int x)
 				place_gold(y, x);
 
 				/* Message */
-				msg_print("Вы что-то нашли!");
+				msg_print("п▓я▀ я┤я┌п╬-я┌п╬ п╫п╟я┬п╩п╦!");
 			}
 
 			/* Found nothing */
 			else
 			{
 				/* Message */
-				msg_print("Вы выкопали туннель.");
+				msg_print("п▓я▀ п╡я▀п╨п╬п©п╟п╩п╦ я┌я┐п╫п╫п╣п╩я▄.");
 			}
 		}
 
@@ -1150,7 +1150,7 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		else if (hard)
 		{
 			/* Message, continue digging */
-			msg_print("Вы копаете кварцевую жилу.");
+			msg_print("п▓я▀ п╨п╬п©п╟п╣я┌п╣ п╨п╡п╟я─я├п╣п╡я┐я▌ п╤п╦п╩я┐.");
 			more = TRUE;
 		}
 
@@ -1158,7 +1158,7 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		else
 		{
 			/* Message, continue digging */
-			msg_print("Вы копаете магматическую жилу.");
+			msg_print("п▓я▀ п╨п╬п©п╟п╣я┌п╣ п╪п╟пЁп╪п╟я┌п╦я┤п╣я│п╨я┐я▌ п╤п╦п╩я┐.");
 			more = TRUE;
 		}
 	}
@@ -1170,7 +1170,7 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		if ((p_ptr->skill_dig > rand_int(200)) && twall(y, x))
 		{
 			/* Message */
-			msg_print("Вы раскидали мусор.");
+			msg_print("п▓я▀ я─п╟я│п╨п╦п╢п╟п╩п╦ п╪я┐я│п╬я─.");
 
 			/* Hack -- place an object */
 			if (rand_int(100) < 10)
@@ -1181,7 +1181,7 @@ static bool do_cmd_tunnel_aux(int y, int x)
 				/* Observe new object */
 				if (player_can_see_bold(y, x))
 				{
-					msg_print("Вы что-то нашли!");
+					msg_print("п▓я▀ я┤я┌п╬-я┌п╬ п╫п╟я┬п╩п╦!");
 				}
 			}
 		}
@@ -1189,7 +1189,7 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		else
 		{
 			/* Message, keep digging */
-			msg_print("Вы копаете мусор.");
+			msg_print("п▓я▀ п╨п╬п©п╟п╣я┌п╣ п╪я┐я│п╬я─.");
 			more = TRUE;
 		}
 	}
@@ -1200,14 +1200,14 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		/* Tunnel */
 		if ((p_ptr->skill_dig > 30 + rand_int(1200)) && twall(y, x))
 		{
-			msg_print("Вы выкопали туннель.");
+			msg_print("п▓я▀ п╡я▀п╨п╬п©п╟п╩п╦ я┌я┐п╫п╫п╣п╩я▄.");
 		}
 
 		/* Keep trying */
 		else
 		{
 			/* We may continue tunelling */
-			msg_print("Вы копаете гранитную стену.");
+			msg_print("п▓я▀ п╨п╬п©п╟п╣я┌п╣ пЁя─п╟п╫п╦я┌п╫я┐я▌ я│я┌п╣п╫я┐.");
 			more = TRUE;
 
 			/* Occasional Search XXX XXX */
@@ -1221,14 +1221,14 @@ static bool do_cmd_tunnel_aux(int y, int x)
 		/* Tunnel */
 		if ((p_ptr->skill_dig > 30 + rand_int(1200)) && twall(y, x))
 		{
-			msg_print("Вы выкопали туннель.");
+			msg_print("п▓я▀ п╡я▀п╨п╬п©п╟п╩п╦ я┌я┐п╫п╫п╣п╩я▄.");
 		}
 
 		/* Keep trying */
 		else
 		{
 			/* We may continue tunelling */
-			msg_print("Вы копаете дверь.");
+			msg_print("п▓я▀ п╨п╬п©п╟п╣я┌п╣ п╢п╡п╣я─я▄.");
 			more = TRUE;
 		}
 	}
@@ -1292,7 +1292,7 @@ void do_cmd_tunnel(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
-		msg_print("На пути монстр!");
+		msg_print("п²п╟ п©я┐я┌п╦ п╪п╬п╫я│я┌я─!");
 
 		/* Attack */
 		py_attack(y, x);
@@ -1319,7 +1319,7 @@ static bool do_cmd_disarm_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
-		msg_print("Здесь ничего нет.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╦я┤п╣пЁп╬ п╫п╣я┌.");
 
 		/* Nope */
 		return (FALSE);
@@ -1330,7 +1330,7 @@ static bool do_cmd_disarm_test(int y, int x)
 	      (cave_feat[y][x] <= FEAT_TRAP_TAIL)))
 	{
 		/* Message */
-		msg_print("Здесь нечего обезвреживать.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╣я┤п╣пЁп╬ п╬п╠п╣п╥п╡я─п╣п╤п╦п╡п╟я┌я▄.");
 
 		/* Nope */
 		return (FALSE);
@@ -1386,7 +1386,7 @@ static bool do_cmd_disarm_aux(int y, int x)
 	if (rand_int(100) < j)
 	{
 		/* Message */
-		msg_format("Вы обезвредили ловушку (%s).", name);
+		msg_format("п▓я▀ п╬п╠п╣п╥п╡я─п╣п╢п╦п╩п╦ п╩п╬п╡я┐я┬п╨я┐ (%s).", name);
 
 		/* Reward */
 		gain_exp(power);
@@ -1405,7 +1405,7 @@ static bool do_cmd_disarm_aux(int y, int x)
 		if (flush_failure) flush();
 
 		/* Message */
-		msg_format("Вы не смогли обезвредить ловушку (%s).", name);
+		msg_format("п▓я▀ п╫п╣ я│п╪п╬пЁп╩п╦ п╬п╠п╣п╥п╡я─п╣п╢п╦я┌я▄ п╩п╬п╡я┐я┬п╨я┐ (%s).", name);
 
 		/* We may keep trying */
 		more = TRUE;
@@ -1415,7 +1415,7 @@ static bool do_cmd_disarm_aux(int y, int x)
 	else
 	{
 		/* Message */
-		msg_format("Вы попали в ловушку (%s)!", name);
+		msg_format("п▓я▀ п©п╬п©п╟п╩п╦ п╡ п╩п╬п╡я┐я┬п╨я┐ (%s)!", name);
 
 		/* Hit the trap */
 		hit_trap(y, x);
@@ -1504,7 +1504,7 @@ void do_cmd_disarm(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
-		msg_print("На пути монстр!");
+		msg_print("п²п╟ п©я┐я┌п╦ п╪п╬п╫я│я┌я─!");
 
 		/* Attack */
 		py_attack(y, x);
@@ -1538,7 +1538,7 @@ static bool do_cmd_bash_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
-		msg_print("Здесь ничего нет.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╦я┤п╣пЁп╬ п╫п╣я┌.");
 
 		/* Nope */
 		return (FALSE);
@@ -1549,7 +1549,7 @@ static bool do_cmd_bash_test(int y, int x)
 	      (cave_feat[y][x] <= FEAT_DOOR_TAIL)))
 	{
 		/* Message */
-		msg_print("Здесь нечего выбивать.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╣я┤п╣пЁп╬ п╡я▀п╠п╦п╡п╟я┌я▄.");
 
 		/* Nope */
 		return (FALSE);
@@ -1579,7 +1579,7 @@ static bool do_cmd_bash_aux(int y, int x)
 
 
 	/* Message */
-	msg_print("Вы врезаетесь в дверь!");
+	msg_print("п▓я▀ п╡я─п╣п╥п╟п╣я┌п╣я│я▄ п╡ п╢п╡п╣я─я▄!");
 
 	/* Hack -- Bash power based on strength */
 	/* (Ranges from 3 to 20 to 100 to 200) */
@@ -1610,7 +1610,7 @@ static bool do_cmd_bash_aux(int y, int x)
 		}
 
 		/* Message */
-		message(MSG_OPENDOOR, 0, "Дверь выламывается!");
+		message(MSG_OPENDOOR, 0, "п■п╡п╣я─я▄ п╡я▀п╩п╟п╪я▀п╡п╟п╣я┌я│я▐!");
 
 		/* Update the visuals */
 		p_ptr->update |= (PU_UPDATE_VIEW | PU_MONSTERS);
@@ -1621,7 +1621,7 @@ static bool do_cmd_bash_aux(int y, int x)
 	         p_ptr->lev)
 	{
 		/* Message */
-		msg_print("Дверь держит крепко.");
+		msg_print("п■п╡п╣я─я▄ п╢п╣я─п╤п╦я┌ п╨я─п╣п©п╨п╬.");
 
 		/* Allow repeated bashing */
 		more = TRUE;
@@ -1631,7 +1631,7 @@ static bool do_cmd_bash_aux(int y, int x)
 	else
 	{
 		/* Message */
-		msg_print("У вас заболела голова!");
+		msg_print("пё п╡п╟я│ п╥п╟п╠п╬п╩п╣п╩п╟ пЁп╬п╩п╬п╡п╟!");
 
 		/* Hack -- Lose balance ala paralysis */
 		(void)set_paralyzed(p_ptr->paralyzed + 2 + rand_int(2));
@@ -1702,7 +1702,7 @@ void do_cmd_bash(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
-		msg_print("На пути монстр!");
+		msg_print("п²п╟ п©я┐я┌п╦ п╪п╬п╫я│я┌я─!");
 
 		/* Attack */
 		py_attack(y, x);
@@ -1832,7 +1832,7 @@ void do_cmd_alter(void)
 	else
 	{
 		/* Oops */
-		msg_print("Вы поворачиваетесь вокруг.");
+		msg_print("п▓я▀ п©п╬п╡п╬я─п╟я┤п╦п╡п╟п╣я┌п╣я│я▄ п╡п╬п╨я─я┐пЁ.");
 	}
 
 	/* Cancel repetition unless we can continue */
@@ -1882,7 +1882,7 @@ static bool do_cmd_spike_test(int y, int x)
 	if (!(cave_info[y][x] & (CAVE_MARK)))
 	{
 		/* Message */
-		msg_print("Здесь ничего нет.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╦я┤п╣пЁп╬ п╫п╣я┌.");
 
 		/* Nope */
 		return (FALSE);
@@ -1893,7 +1893,7 @@ static bool do_cmd_spike_test(int y, int x)
 	      (cave_feat[y][x] <= FEAT_DOOR_TAIL)))
 	{
 		/* Message */
-		msg_print("Здесь нечего клинить.");
+		msg_print("п≈п╢п╣я│я▄ п╫п╣я┤п╣пЁп╬ п╨п╩п╦п╫п╦я┌я▄.");
 
 		/* Nope */
 		return (FALSE);
@@ -1918,7 +1918,7 @@ void do_cmd_spike(void)
 	if (!get_spike(&item))
 	{
 		/* Message */
-		msg_print("У вас нет шипов!");
+		msg_print("пё п╡п╟я│ п╫п╣я┌ я┬п╦п©п╬п╡!");
 
 		/* Done */
 		return;
@@ -1953,7 +1953,7 @@ void do_cmd_spike(void)
 	if (cave_m_idx[y][x] > 0)
 	{
 		/* Message */
-		msg_print("На пути монстр!");
+		msg_print("п²п╟ п©я┐я┌п╦ п╪п╬п╫я│я┌я─!");
 
 		/* Attack */
 		py_attack(y, x);
@@ -1966,7 +1966,7 @@ void do_cmd_spike(void)
 		if (!do_cmd_spike_test(y, x)) return;
 
 		/* Successful jamming */
-		msg_print("Вы заклиниваете дверь шипом.");
+		msg_print("п▓я▀ п╥п╟п╨п╩п╦п╫п╦п╡п╟п╣я┌п╣ п╢п╡п╣я─я▄ я┬п╦п©п╬п╪.");
 
 		/* Convert "locked" to "stuck" XXX XXX XXX */
 		if (cave_feat[y][x] < FEAT_DOOR_HEAD + 0x08)
@@ -2010,7 +2010,7 @@ static bool do_cmd_walk_test(int y, int x)
 		if (cave_feat[y][x] == FEAT_RUBBLE)
 		{
 			/* Message */
-			msg_print("Вы уперлись в кучу мусора!");
+			msg_print("п▓я▀ я┐п©п╣я─п╩п╦я│я▄ п╡ п╨я┐я┤я┐ п╪я┐я│п╬я─п╟!");
 		}
 
 		/* Door */
@@ -2020,14 +2020,14 @@ static bool do_cmd_walk_test(int y, int x)
 			if (easy_alter) return (TRUE);
 
 			/* Message */
-			msg_print("Вы уперлись в дверь!");
+			msg_print("п▓я▀ я┐п©п╣я─п╩п╦я│я▄ п╡ п╢п╡п╣я─я▄!");
 		}
 
 		/* Wall */
 		else
 		{
 			/* Message */
-			msg_print("Вы уперлись в стену!");
+			msg_print("п▓я▀ я┐п©п╣я─п╩п╦я│я▄ п╡ я│я┌п╣п╫я┐!");
 		}
 
 		/* Nope */
@@ -2126,7 +2126,7 @@ void do_cmd_run(void)
 	/* Hack XXX XXX XXX */
 	if (p_ptr->confused)
 	{
-		msg_print("Вы контужены и не можете бежать!");
+		msg_print("п▓я▀ п╨п╬п╫я┌я┐п╤п╣п╫я▀ п╦ п╫п╣ п╪п╬п╤п╣я┌п╣ п╠п╣п╤п╟я┌я▄!");
 		return;
 	}
 
@@ -2230,7 +2230,7 @@ void do_cmd_rest(void)
 	/* Prompt for time if needed */
 	if (p_ptr->command_arg <= 0)
 	{
-		cptr p = "Отдыхать (0-9999, '*' для HP/SP, '&' по необх.): ";
+		cptr p = "п·я┌п╢я▀я┘п╟я┌я▄ (0-9999, '*' п╢п╩я▐ HP/SP, '&' п©п╬ п╫п╣п╬п╠я┘.): ";
 
 		char out_val[5];
 
@@ -2406,7 +2406,7 @@ void do_cmd_fire(void)
 	/* Require a usable launcher */
 	if (!j_ptr->tval || !p_ptr->ammo_tval)
 	{
-		msg_print("Вам не из чего стрелять.");
+		msg_print("п▓п╟п╪ п╫п╣ п╦п╥ я┤п╣пЁп╬ я│я┌я─п╣п╩я▐я┌я▄.");
 		return;
 	}
 
@@ -2415,8 +2415,8 @@ void do_cmd_fire(void)
 	item_tester_tval = p_ptr->ammo_tval;
 
 	/* Get an item */
-	q = "Выстрелить каким предметом? ";
-	s = "Вам нечем стрелять.";
+	q = "п▓я▀я│я┌я─п╣п╩п╦я┌я▄ п╨п╟п╨п╦п╪ п©я─п╣п╢п╪п╣я┌п╬п╪? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣п╪ я│я┌я─п╣п╩я▐я┌я▄.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the object */
@@ -2568,7 +2568,7 @@ void do_cmd_fire(void)
 				bool fear = FALSE;
 
 				/* Assume a default death */
-				cptr note_dies = " погибает.";
+				cptr note_dies = " п©п╬пЁп╦п╠п╟п╣я┌.";
 
 				/* Some monsters get "destroyed" */
 				if ((r_ptr->flags3 & (RF3_DEMON)) ||
@@ -2577,9 +2577,9 @@ void do_cmd_fire(void)
 				    (strchr("Evg", r_ptr->d_char)))
 				{
 					/* Special note at death */
-					if (!m_ptr->ml) note_dies = " уничтожено.";
-					else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " уничтожена." :
-						r_ptr->flags1 & RF1_MALE ? " уничтожен." : " уничтожено.");
+					if (!m_ptr->ml) note_dies = " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╬.";
+					else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╟." :
+						r_ptr->flags1 & RF1_MALE ? " я┐п╫п╦я┤я┌п╬п╤п╣п╫." : " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╬.");
 				}
 
 
@@ -2587,7 +2587,7 @@ void do_cmd_fire(void)
 				if (!visible)
 				{
 					/* Invisible monster */
-					msg_format("%s попадает во что-то.", o_name);
+					msg_format("%s п©п╬п©п╟п╢п╟п╣я┌ п╡п╬ я┤я┌п╬-я┌п╬.", o_name);
 				}
 
 				/* Handle visible monster */
@@ -2599,7 +2599,7 @@ void do_cmd_fire(void)
 					monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
 
 					/* Message */
-					msg_format("%s попадает в %s.", o_name, m_name);
+					msg_format("%s п©п╬п©п╟п╢п╟п╣я┌ п╡ %s.", o_name, m_name);
 
 					/* Hack -- Track this monster race */
 					if (m_ptr->ml) monster_race_track(m_ptr->r_idx);
@@ -2618,7 +2618,7 @@ void do_cmd_fire(void)
 				/* Complex message */
 				if (p_ptr->wizard)
 				{
-					msg_format("Вы наносите %d (из %d) урона.",
+					msg_format("п▓я▀ п╫п╟п╫п╬я│п╦я┌п╣ %d (п╦п╥ %d) я┐я─п╬п╫п╟.",
 					           tdam, m_ptr->hp);
 				}
 
@@ -2644,7 +2644,7 @@ void do_cmd_fire(void)
 
 						/* Message */
 						message_format(MSG_FLEE, m_ptr->r_idx,
-						               "%^s бежит в ужасе!", m_name);
+						               "%^s п╠п╣п╤п╦я┌ п╡ я┐п╤п╟я│п╣!", m_name);
 					}
 				}
 			}
@@ -2700,8 +2700,8 @@ void do_cmd_throw(void)
 
 
 	/* Get an item */
-	q = "Бросить какой предмет? ";
-	s = "Вам нечего бросать.";
+	q = "п▒я─п╬я│п╦я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ п╠я─п╬я│п╟я┌я▄.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the object */
@@ -2851,7 +2851,7 @@ void do_cmd_throw(void)
 				bool fear = FALSE;
 
 				/* Assume a default death */
-				cptr note_dies = " погибает.";
+				cptr note_dies = " п©п╬пЁп╦п╠п╟п╣я┌.";
 
 				/* Some monsters get "destroyed" */
 				if ((r_ptr->flags3 & (RF3_DEMON)) ||
@@ -2860,9 +2860,9 @@ void do_cmd_throw(void)
 				    (strchr("Evg", r_ptr->d_char)))
 				{
 					/* Special note at death */
-					if (!m_ptr->ml) note_dies = " уничтожено.";
-					else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " уничтожена." :
-						r_ptr->flags1 & RF1_MALE ? " уничтожен." : " уничтожено.");
+					if (!m_ptr->ml) note_dies = " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╬.";
+					else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╟." :
+						r_ptr->flags1 & RF1_MALE ? " я┐п╫п╦я┤я┌п╬п╤п╣п╫." : " я┐п╫п╦я┤я┌п╬п╤п╣п╫п╬.");
 				}
 
 
@@ -2870,7 +2870,7 @@ void do_cmd_throw(void)
 				if (!visible)
 				{
 					/* Invisible monster */
-					msg_format("%s попадает во что-то.", o_name);
+					msg_format("%s п©п╬п©п╟п╢п╟п╣я┌ п╡п╬ я┤я┌п╬-я┌п╬.", o_name);
 				}
 
 				/* Handle visible monster */
@@ -2882,7 +2882,7 @@ void do_cmd_throw(void)
 					monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
 
 					/* Message */
-					msg_format("%s попадает в %s.", o_name, m_name);
+					msg_format("%s п©п╬п©п╟п╢п╟п╣я┌ п╡ %s.", o_name, m_name);
 
 					/* Hack -- Track this monster race */
 					if (m_ptr->ml) monster_race_track(m_ptr->r_idx);
@@ -2901,7 +2901,7 @@ void do_cmd_throw(void)
 				/* Complex message */
 				if (p_ptr->wizard)
 				{
-					msg_format("Вы наносите %d (из %d) урона.",
+					msg_format("п▓я▀ п╫п╟п╫п╬я│п╦я┌п╣ %d (п╦п╥ %d) я┐я─п╬п╫п╟.",
 					           tdam, m_ptr->hp);
 				}
 
@@ -2927,7 +2927,7 @@ void do_cmd_throw(void)
 
 						/* Message */
 						message_format(MSG_FLEE, m_ptr->r_idx,
-						               "%^s бежит в ужасе!", m_name);
+						               "%^s п╠п╣п╤п╦я┌ п╡ я┐п╤п╟я│п╣!", m_name);
 					}
 				}
 			}

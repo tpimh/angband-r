@@ -36,7 +36,7 @@ void do_cmd_inven(void)
 	item_tester_full = FALSE;
 
 	/* Prompt for a command */
-	prt("(Инвентарь) Команда: ", 0, 0);
+	prt("(п≤п╫п╡п╣п╫я┌п╟я─я▄) п п╬п╪п╟п╫п╢п╟: ", 0, 0);
 
 	/* Hack -- Get a new command */
 	p_ptr->command_new = inkey();
@@ -82,7 +82,7 @@ void do_cmd_equip(void)
 	item_tester_full = FALSE;
 
 	/* Prompt for a command */
-	prt("(Экипировка) Команда: ", 0, 0);
+	prt("(п╜п╨п╦п©п╦я─п╬п╡п╨п╟) п п╬п╪п╟п╫п╢п╟: ", 0, 0);
 
 	/* Hack -- Get a new command */
 	p_ptr->command_new = inkey();
@@ -143,8 +143,8 @@ void do_cmd_wield(void)
 	item_tester_hook = item_tester_hook_wear;
 
 	/* Get an item */
-	q = "Надеть/взять в руки какой предмет? ";
-	s = "У вас нет ничего, что можно надеть или взять в руки.";
+	q = "п²п╟п╢п╣я┌я▄/п╡п╥я▐я┌я▄ п╡ я─я┐п╨п╦ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п╫п╦я┤п╣пЁп╬, я┤я┌п╬ п╪п╬п╤п╫п╬ п╫п╟п╢п╣я┌я▄ п╦п╩п╦ п╡п╥я▐я┌я▄ п╡ я─я┐п╨п╦.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -170,11 +170,11 @@ void do_cmd_wield(void)
 		int rod = object_desc(o_name, sizeof(o_name), &inventory[slot], FALSE, 0, PAD_IMEN);
 
 		/* Message */
-		msg_format("Похоже, что ваш%s %s проклят%s.",
+		msg_format("п÷п╬я┘п╬п╤п╣, я┤я┌п╬ п╡п╟я┬%s %s п©я─п╬п╨п╩я▐я┌%s.",
 		           o_name,
-		           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+		           (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╣" : "п╦"),
 		           describe_use(slot),
-		           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+		           (rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀"));
 
 		/* Cancel the command */
 		return;
@@ -229,19 +229,19 @@ void do_cmd_wield(void)
 	/* Where is the item now */
 	if (slot == INVEN_WIELD)
 	{
-		act = "Вы сражаетесь";
+		act = "п▓я▀ я│я─п╟п╤п╟п╣я┌п╣я│я▄";
 	}
 	else if (slot == INVEN_BOW)
 	{
-		act = "Вы стреляете";
+		act = "п▓я▀ я│я┌я─п╣п╩я▐п╣я┌п╣";
 	}
 	else if (slot == INVEN_LITE)
 	{
-		act = "Ваш источник света:";
+		act = "п▓п╟я┬ п╦я│я┌п╬я┤п╫п╦п╨ я│п╡п╣я┌п╟:";
 	}
 	else
 	{
-		act = "Вы одели";
+		act = "п▓я▀ п╬п╢п╣п╩п╦";
 	}
 
 	/* Describe the result */
@@ -255,9 +255,9 @@ void do_cmd_wield(void)
 	if (cursed_p(o_ptr))
 	{
 		/* Warn the player */
-		msg_format("Черт! Он%s жутко холодн%s!",
-			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"),
-			(rod == ROD_M ? "ый" : rod == ROD_F ? "ая" : rod == ROD_N ? "ое" : "ые"));
+		msg_format("п╖п╣я─я┌! п·п╫%s п╤я┐я┌п╨п╬ я┘п╬п╩п╬п╢п╫%s!",
+			(rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "п╦"),
+			(rod == ROD_M ? "я▀п╧" : rod == ROD_F ? "п╟я▐" : rod == ROD_N ? "п╬п╣" : "я▀п╣"));
 
 		/* Remove special inscription, if any */
 		if (o_ptr->discount >= INSCRIP_NULL) o_ptr->discount = 0;
@@ -299,8 +299,8 @@ void do_cmd_takeoff(void)
 
 
 	/* Get an item */
-	q = "Снять какой предмет? ";
-	s = "Вам нечего снимать с себя.";
+	q = "п║п╫я▐я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ я│п╫п╦п╪п╟я┌я▄ я│ я│п╣п╠я▐.";
 	if (!get_item(&item, q, s, (USE_EQUIP))) return;
 
 	/* Get the item (in the pack) */
@@ -320,7 +320,7 @@ void do_cmd_takeoff(void)
 	if (cursed_p(o_ptr))
 	{
 		/* Oops */
-		msg_print("Хм. Похоже, этот предмет проклят.");
+		msg_print("п╔п╪. п÷п╬я┘п╬п╤п╣, я█я┌п╬я┌ п©я─п╣п╢п╪п╣я┌ п©я─п╬п╨п╩я▐я┌.");
 
 		/* Nope */
 		return;
@@ -348,8 +348,8 @@ void do_cmd_drop(void)
 
 
 	/* Get an item */
-	q = "Бросить какой предмет? ";
-	s = "Вам нечего бросать.";
+	q = "п▒я─п╬я│п╦я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ п╠я─п╬я│п╟я┌я▄.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN))) return;
 
 	/* Get the item (in the pack) */
@@ -374,7 +374,7 @@ void do_cmd_drop(void)
 	if ((item >= INVEN_WIELD) && cursed_p(o_ptr))
 	{
 		/* Oops */
-		msg_print("Хм. Похоже, этот предмет проклят.");
+		msg_print("п╔п╪. п÷п╬я┘п╬п╤п╣, я█я┌п╬я┌ п©я─п╣п╢п╪п╣я┌ п©я─п╬п╨п╩я▐я┌.");
 
 		/* Nope */
 		return;
@@ -407,8 +407,8 @@ void do_cmd_destroy(void)
 
 
 	/* Get an item */
-	q = "Уничтожить какой предмет? ";
-	s = "Вам нечего уничтожать.";
+	q = "пёп╫п╦я┤я┌п╬п╤п╦я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ я┐п╫п╦я┤я┌п╬п╤п╟я┌я▄.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -438,7 +438,7 @@ void do_cmd_destroy(void)
 	/* Verify destruction */
 	if (verify_destroy)
 	{
-		strnfmt(out_val, sizeof(out_val), "Действительно уничтожить %s? ", o_name);
+		strnfmt(out_val, sizeof(out_val), "п■п╣п╧я│я┌п╡п╦я┌п╣п╩я▄п╫п╬ я┐п╫п╦я┤я┌п╬п╤п╦я┌я▄ %s? ", o_name);
 		if (!get_check(out_val)) return;
 	}
 
@@ -449,7 +449,7 @@ void do_cmd_destroy(void)
 	if (artifact_p(o_ptr))
 	{
 		/* Message */
-		msg_format("Вы не можете уничтожить %s.", o_name);
+		msg_format("п▓я▀ п╫п╣ п╪п╬п╤п╣я┌п╣ я┐п╫п╦я┤я┌п╬п╤п╦я┌я▄ %s.", o_name);
 
 		/* Don't mark id'ed objects */
 		if (object_known_p(o_ptr)) return;
@@ -482,7 +482,7 @@ void do_cmd_destroy(void)
 	}
 
 	/* Message */
-	msg_format("Вы уничтожили %s.", o_name);
+	msg_format("п▓я▀ я┐п╫п╦я┤я┌п╬п╤п╦п╩п╦ %s.", o_name);
 
 	/* Reduce the charges of rods/wands/staves */
 	reduce_charges(o_ptr, amt);
@@ -518,8 +518,8 @@ void do_cmd_observe(void)
 
 
 	/* Get an item */
-	q = "Исследовать какой предмет? ";
-	s = "Вам нечего исследовать.";
+	q = "п≤я│я│п╩п╣п╢п╬п╡п╟я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ п╦я│я│п╩п╣п╢п╬п╡п╟я┌я▄.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -554,8 +554,8 @@ void do_cmd_uninscribe(void)
 
 
 	/* Get an item */
-	q = "Стереть надпись с какого предмета? ";
-	s = "Вам неоткуда стирать надписи.";
+	q = "п║я┌п╣я─п╣я┌я▄ п╫п╟п╢п©п╦я│я▄ я│ п╨п╟п╨п╬пЁп╬ п©я─п╣п╢п╪п╣я┌п╟? ";
+	s = "п▓п╟п╪ п╫п╣п╬я┌п╨я┐п╢п╟ я│я┌п╦я─п╟я┌я▄ п╫п╟п╢п©п╦я│п╦.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -573,12 +573,12 @@ void do_cmd_uninscribe(void)
 	/* Nothing to remove */
 	if (!o_ptr->note)
 	{
-		msg_print("На этом предмете ничего не написано.");
+		msg_print("п²п╟ я█я┌п╬п╪ п©я─п╣п╢п╪п╣я┌п╣ п╫п╦я┤п╣пЁп╬ п╫п╣ п╫п╟п©п╦я│п╟п╫п╬.");
 		return;
 	}
 
 	/* Message */
-	msg_print("Надпись стерта.");
+	msg_print("п²п╟п╢п©п╦я│я▄ я│я┌п╣я─я┌п╟.");
 
 	/* Remove the inscription */
 	o_ptr->note = 0;
@@ -608,8 +608,8 @@ void do_cmd_inscribe(void)
 
 
 	/* Get an item */
-	q = "Надписать какой предмет? ";
-	s = "Вам нечего надписывать.";
+	q = "п²п╟п╢п©п╦я│п╟я┌я▄ п╨п╟п╨п╬п╧ п©я─п╣п╢п╪п╣я┌? ";
+	s = "п▓п╟п╪ п╫п╣я┤п╣пЁп╬ п╫п╟п╢п©п╦я│я▀п╡п╟я┌я▄.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -628,7 +628,7 @@ void do_cmd_inscribe(void)
 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
 
 	/* Message */
-	msg_format("Надписывается %s.", o_name);
+	msg_format("п²п╟п╢п©п╦я│я▀п╡п╟п╣я┌я│я▐ %s.", o_name);
 	message_flush();
 
 	/* Start with nothing */
@@ -642,7 +642,7 @@ void do_cmd_inscribe(void)
 	}
 
 	/* Get a new inscription (possibly empty) */
-	if (get_string("Надпись: ", tmp, sizeof(tmp)))
+	if (get_string("п²п╟п╢п©п╦я│я▄: ", tmp, sizeof(tmp)))
 	{
 		/* Save the inscription */
 		o_ptr->note = quark_add(tmp);
@@ -695,8 +695,8 @@ static void do_cmd_refill_lamp(void)
 	item_tester_hook = item_tester_refill_lantern;
 
 	/* Get an item */
-	q = "Заполнить каким источником масла? ";
-	s = "У вас нет источников масла.";
+	q = "п≈п╟п©п╬п╩п╫п╦я┌я▄ п╨п╟п╨п╦п╪ п╦я│я┌п╬я┤п╫п╦п╨п╬п╪ п╪п╟я│п╩п╟? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п╦я│я┌п╬я┤п╫п╦п╨п╬п╡ п╪п╟я│п╩п╟.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -722,13 +722,13 @@ static void do_cmd_refill_lamp(void)
 	j_ptr->pval += o_ptr->pval;
 
 	/* Message */
-	msg_print("Вы заправляете свою лампу.");
+	msg_print("п▓я▀ п╥п╟п©я─п╟п╡п╩я▐п╣я┌п╣ я│п╡п╬я▌ п╩п╟п╪п©я┐.");
 
 	/* Comment */
 	if (j_ptr->pval >= FUEL_LAMP)
 	{
 		j_ptr->pval = FUEL_LAMP;
-		msg_print("Ваша лампа полна.");
+		msg_print("п▓п╟я┬п╟ п╩п╟п╪п©п╟ п©п╬п╩п╫п╟.");
 	}
 
 	/* Refilled from a latern */
@@ -837,8 +837,8 @@ static void do_cmd_refill_torch(void)
 	item_tester_hook = item_tester_refill_torch;
 
 	/* Get an item */
-	q = "Добавить какой факел? ";
-	s = "У вас нет лишних факелов.";
+	q = "п■п╬п╠п╟п╡п╦я┌я▄ п╨п╟п╨п╬п╧ я└п╟п╨п╣п╩? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п╩п╦я┬п╫п╦я┘ я└п╟п╨п╣п╩п╬п╡.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -864,19 +864,19 @@ static void do_cmd_refill_torch(void)
 	j_ptr->pval += o_ptr->pval + 5;
 
 	/* Message */
-	msg_print("Вы соединяете факелы.");
+	msg_print("п▓я▀ я│п╬п╣п╢п╦п╫я▐п╣я┌п╣ я└п╟п╨п╣п╩я▀.");
 
 	/* Over-fuel message */
 	if (j_ptr->pval >= FUEL_TORCH)
 	{
 		j_ptr->pval = FUEL_TORCH;
-		msg_print("Ваш факел полностью заполнен.");
+		msg_print("п▓п╟я┬ я└п╟п╨п╣п╩ п©п╬п╩п╫п╬я│я┌я▄я▌ п╥п╟п©п╬п╩п╫п╣п╫.");
 	}
 
 	/* Refuel message */
 	else
 	{
-		msg_print("Ваш факел вспыхивает ярче.");
+		msg_print("п▓п╟я┬ я└п╟п╨п╣п╩ п╡я│п©я▀я┘п╦п╡п╟п╣я┌ я▐я─я┤п╣.");
 	}
 
 	/* Decrease the item (from the pack) */
@@ -918,7 +918,7 @@ void do_cmd_refill(void)
 	/* It is nothing */
 	if (o_ptr->tval != TV_LITE)
 	{
-		msg_print("Вы не несете источника света.");
+		msg_print("п▓я▀ п╫п╣ п╫п╣я│п╣я┌п╣ п╦я│я┌п╬я┤п╫п╦п╨п╟ я│п╡п╣я┌п╟.");
 	}
 
 	/* It's a lamp */
@@ -936,7 +936,7 @@ void do_cmd_refill(void)
 	/* No torch to refill */
 	else
 	{
-		msg_print("Ваш источник света нельзя заправить.");
+		msg_print("п▓п╟я┬ п╦я│я┌п╬я┤п╫п╦п╨ я│п╡п╣я┌п╟ п╫п╣п╩я▄п╥я▐ п╥п╟п©я─п╟п╡п╦я┌я▄.");
 	}
 }
 
@@ -953,13 +953,13 @@ void do_cmd_target(void)
 	/* Target set */
 	if (target_set_interactive(TARGET_KILL))
 	{
-		msg_print("Цель задана.");
+		msg_print("п╕п╣п╩я▄ п╥п╟п╢п╟п╫п╟.");
 	}
 
 	/* Target aborted */
 	else
 	{
-		msg_print("Цель отменена.");
+		msg_print("п╕п╣п╩я▄ п╬я┌п╪п╣п╫п╣п╫п╟.");
 	}
 }
 
@@ -973,7 +973,7 @@ void do_cmd_look(void)
 	/* Look around */
 	if (target_set_interactive(TARGET_LOOK))
 	{
-		msg_print("Цель задана.");
+		msg_print("п╕п╣п╩я▄ п╥п╟п╢п╟п╫п╟.");
 	}
 }
 
@@ -1005,28 +1005,28 @@ void do_cmd_locate(void)
 		/* Describe the location */
 		if ((y2 == y1) && (x2 == x1))
 		{
-			strnfmt(tmp_val, sizeof(tmp_val), "(текущий)");
+			strnfmt(tmp_val, sizeof(tmp_val), "(я┌п╣п╨я┐я┴п╦п╧)");
 		}
 		else
 		{
 			strnfmt(tmp_val, sizeof(tmp_val), "%s%s",
-			        ((y2 < y1) ? "С" : (y2 > y1) ? "Ю" : ""),
-			        ((x2 < x1) ? "З" : (x2 > x1) ? "В" : ""));
+			        ((y2 < y1) ? "п║" : (y2 > y1) ? "п╝" : ""),
+			        ((x2 < x1) ? "п≈" : (x2 > x1) ? "п▓" : ""));
 		}
 
 		/* Prepare to ask which way to look */
 		strnfmt(out_val, sizeof(out_val),
-		        "Сектор карты [%d,%d] %s%s.  Направление?",
-		        (y2 / PANEL_HGT), (x2 / PANEL_WID), tmp_val, !((y2 == y1) && (x2 == x1)) ? " от текущего" : "");
+		        "п║п╣п╨я┌п╬я─ п╨п╟я─я┌я▀ [%d,%d] %s%s.  п²п╟п©я─п╟п╡п╩п╣п╫п╦п╣?",
+		        (y2 / PANEL_HGT), (x2 / PANEL_WID), tmp_val, !((y2 == y1) && (x2 == x1)) ? " п╬я┌ я┌п╣п╨я┐я┴п╣пЁп╬" : "");
 
 		/* More detail */
 		if (center_player)
 		{
 			strnfmt(out_val, sizeof(out_val),
-		        	"Сектор карты [%d(%02d),%d(%02d)] %s%s. Направление?",
+		        	"п║п╣п╨я┌п╬я─ п╨п╟я─я┌я▀ [%d(%02d),%d(%02d)] %s%s. п²п╟п©я─п╟п╡п╩п╣п╫п╦п╣?",
 		        	(y2 / PANEL_HGT), (y2 % PANEL_HGT),
 		        	(x2 / PANEL_WID), (x2 % PANEL_WID), tmp_val,
-		        	 !((y2 == y1) && (x2 == x1)) ? " от текущего" : "");
+		        	 !((y2 == y1) && (x2 == x1)) ? " п╬я┌ я┌п╣п╨я┐я┴п╣пЁп╬" : "");
 		}
 
 		/* Assume no direction */
@@ -1044,7 +1044,7 @@ void do_cmd_locate(void)
 			dir = target_dir(command);
 
 			/* Error */
-			if (!dir) bell("Неправильное направление!");
+			if (!dir) bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╬п╣ п╫п╟п©я─п╟п╡п╩п╣п╫п╦п╣!");
 		}
 
 		/* No direction */
@@ -1072,101 +1072,101 @@ void do_cmd_locate(void)
  */
 static cptr ident_info[] =
 {
-	" :Темная клетка",
-	"!:Напиток (или масло)",
-	"\":Амулет",
-	"#:Стена или секретная дверь",
-	"$:Сокровища (золото или драгоценности)",
-	"%:Минеральная жила",
+	" :п╒п╣п╪п╫п╟я▐ п╨п╩п╣я┌п╨п╟",
+	"!:п²п╟п©п╦я┌п╬п╨ (п╦п╩п╦ п╪п╟я│п╩п╬)",
+	"\":п░п╪я┐п╩п╣я┌",
+	"#:п║я┌п╣п╫п╟ п╦п╩п╦ я│п╣п╨я─п╣я┌п╫п╟я▐ п╢п╡п╣я─я▄",
+	"$:п║п╬п╨я─п╬п╡п╦я┴п╟ (п╥п╬п╩п╬я┌п╬ п╦п╩п╦ п╢я─п╟пЁп╬я├п╣п╫п╫п╬я│я┌п╦)",
+	"%:п°п╦п╫п╣я─п╟п╩я▄п╫п╟я▐ п╤п╦п╩п╟",
 	/* "&:unused", */
-	"':Открытая дверь",
-	"(:Мягкие доспехи",
-	"):Щит",
-	"*:Жила с сокровищем",
-	"+:Закрытая дверь",
-	",:Еда или грибы",
-	"-:Палочка (или жезл)",
-	".:Пол",
-	"/:Прочее оружие (секиры и т.п.)",
+	"':п·я┌п╨я─я▀я┌п╟я▐ п╢п╡п╣я─я▄",
+	"(:п°я▐пЁп╨п╦п╣ п╢п╬я│п©п╣я┘п╦",
+	"):п╘п╦я┌",
+	"*:п√п╦п╩п╟ я│ я│п╬п╨я─п╬п╡п╦я┴п╣п╪",
+	"+:п≈п╟п╨я─я▀я┌п╟я▐ п╢п╡п╣я─я▄",
+	",:п∙п╢п╟ п╦п╩п╦ пЁя─п╦п╠я▀",
+	"-:п÷п╟п╩п╬я┤п╨п╟ (п╦п╩п╦ п╤п╣п╥п╩)",
+	".:п÷п╬п╩",
+	"/:п÷я─п╬я┤п╣п╣ п╬я─я┐п╤п╦п╣ (я│п╣п╨п╦я─я▀ п╦ я┌.п©.)",
 	/* "0:unused", */
-	"1:Вход в Главный Магазин",
-	"2:Вход в Магазин Доспехов",
-	"3:Вход в Оружейную",
-	"4:Вход в Храм",
-	"5:Вход в Магазин Алхимика",
-	"6:Вход в Магазин Магии",
-	"7:Вход на Черный Рынок",
-	"8:Вход домой",
+	"1:п▓я┘п╬п╢ п╡ п⌠п╩п╟п╡п╫я▀п╧ п°п╟пЁп╟п╥п╦п╫",
+	"2:п▓я┘п╬п╢ п╡ п°п╟пЁп╟п╥п╦п╫ п■п╬я│п©п╣я┘п╬п╡",
+	"3:п▓я┘п╬п╢ п╡ п·я─я┐п╤п╣п╧п╫я┐я▌",
+	"4:п▓я┘п╬п╢ п╡ п╔я─п╟п╪",
+	"5:п▓я┘п╬п╢ п╡ п°п╟пЁп╟п╥п╦п╫ п░п╩я┘п╦п╪п╦п╨п╟",
+	"6:п▓я┘п╬п╢ п╡ п°п╟пЁп╟п╥п╦п╫ п°п╟пЁп╦п╦",
+	"7:п▓я┘п╬п╢ п╫п╟ п╖п╣я─п╫я▀п╧ п═я▀п╫п╬п╨",
+	"8:п▓я┘п╬п╢ п╢п╬п╪п╬п╧",
 	/* "9:unused", */
-	"::Мусор",
-	";:Руна защиты",
-	"<:Лестница вверх",
-	"=:Кольцо",
-	">:Лестница вниз",
-	"?:Свиток",
-	"@:Вы",
-	"A:Ангел",
-	"B:Птица",
-	"C:Собака",
-	"D:Древний Дракон/Змей",
-	"E:Элементаль",
-	"F:Стрекоза",
-	"G:Привидение",
-	"H:Гибрид",
-	"I:Насекомое",
-	"J:Змея",
-	"K:Жучок",
-	"L:Лич",
-	"M:Гидра",
+	"::п°я┐я│п╬я─",
+	";:п═я┐п╫п╟ п╥п╟я┴п╦я┌я▀",
+	"<:п⌡п╣я│я┌п╫п╦я├п╟ п╡п╡п╣я─я┘",
+	"=:п п╬п╩я▄я├п╬",
+	">:п⌡п╣я│я┌п╫п╦я├п╟ п╡п╫п╦п╥",
+	"?:п║п╡п╦я┌п╬п╨",
+	"@:п▓я▀",
+	"A:п░п╫пЁп╣п╩",
+	"B:п÷я┌п╦я├п╟",
+	"C:п║п╬п╠п╟п╨п╟",
+	"D:п■я─п╣п╡п╫п╦п╧ п■я─п╟п╨п╬п╫/п≈п╪п╣п╧",
+	"E:п╜п╩п╣п╪п╣п╫я┌п╟п╩я▄",
+	"F:п║я┌я─п╣п╨п╬п╥п╟",
+	"G:п÷я─п╦п╡п╦п╢п╣п╫п╦п╣",
+	"H:п⌠п╦п╠я─п╦п╢",
+	"I:п²п╟я│п╣п╨п╬п╪п╬п╣",
+	"J:п≈п╪п╣я▐",
+	"K:п√я┐я┤п╬п╨",
+	"L:п⌡п╦я┤",
+	"M:п⌠п╦п╢я─п╟",
 	/* "N:unused", */
-	"O:Огр",
-	"P:Гигант",
-	"Q:Квулсхулг (пульсирующий холмик)",
-	"R:Рептилия/Амфибия",
-	"S:Паук/Скорпион/Клещ",
-	"T:Тролль",
-	"U:Большой Демон",
-	"V:Вампир",
-	"W:Умертвие/Призрак и др.",
-	"X:Хорн/Харен и др.",
-	"Y:Йети",
-	"Z:Гончая Эфира",
-	"[:Твердые доспехи",
-	"\\:Тупое оружие (дубина, кнут и т.п.)",
-	"]:Разные доспехи",
-	"^:Ловушка",
-	"_:Посох",
+	"O:п·пЁя─",
+	"P:п⌠п╦пЁп╟п╫я┌",
+	"Q:п п╡я┐п╩я│я┘я┐п╩пЁ (п©я┐п╩я▄я│п╦я─я┐я▌я┴п╦п╧ я┘п╬п╩п╪п╦п╨)",
+	"R:п═п╣п©я┌п╦п╩п╦я▐/п░п╪я└п╦п╠п╦я▐",
+	"S:п÷п╟я┐п╨/п║п╨п╬я─п©п╦п╬п╫/п п╩п╣я┴",
+	"T:п╒я─п╬п╩п╩я▄",
+	"U:п▒п╬п╩я▄я┬п╬п╧ п■п╣п╪п╬п╫",
+	"V:п▓п╟п╪п©п╦я─",
+	"W:пёп╪п╣я─я┌п╡п╦п╣/п÷я─п╦п╥я─п╟п╨ п╦ п╢я─.",
+	"X:п╔п╬я─п╫/п╔п╟я─п╣п╫ п╦ п╢я─.",
+	"Y:п≥п╣я┌п╦",
+	"Z:п⌠п╬п╫я┤п╟я▐ п╜я└п╦я─п╟",
+	"[:п╒п╡п╣я─п╢я▀п╣ п╢п╬я│п©п╣я┘п╦",
+	"\\:п╒я┐п©п╬п╣ п╬я─я┐п╤п╦п╣ (п╢я┐п╠п╦п╫п╟, п╨п╫я┐я┌ п╦ я┌.п©.)",
+	"]:п═п╟п╥п╫я▀п╣ п╢п╬я│п©п╣я┘п╦",
+	"^:п⌡п╬п╡я┐я┬п╨п╟",
+	"_:п÷п╬я│п╬я┘",
 	/* "`:unused", */
-	"a:Муравей",
-	"b:Летучая мышь",
-	"c:Гусеница",
-	"d:Дракон",
-	"e:Летающий Глаз",
-	"f:Кошка",
-	"g:Голем",
-	"h:Хоббит/Эльф/Гном",
-	"i:Скользкое существо",
-	"j:Желе",
-	"k:Кобольд",
-	"l:Вошь",
-	"m:Плесень",
-	"n:Нага",
-	"o:Орк",
-	"p:Человек",
-	"q:Четвероногое",
-	"r:Крыса",
-	"s:Скелет",
-	"t:Горожанин",
-	"u:Малый Демон",
-	"v:Вихрь",
-	"w:Черви",
+	"a:п°я┐я─п╟п╡п╣п╧",
+	"b:п⌡п╣я┌я┐я┤п╟я▐ п╪я▀я┬я▄",
+	"c:п⌠я┐я│п╣п╫п╦я├п╟",
+	"d:п■я─п╟п╨п╬п╫",
+	"e:п⌡п╣я┌п╟я▌я┴п╦п╧ п⌠п╩п╟п╥",
+	"f:п п╬я┬п╨п╟",
+	"g:п⌠п╬п╩п╣п╪",
+	"h:п╔п╬п╠п╠п╦я┌/п╜п╩я▄я└/п⌠п╫п╬п╪",
+	"i:п║п╨п╬п╩я▄п╥п╨п╬п╣ я│я┐я┴п╣я│я┌п╡п╬",
+	"j:п√п╣п╩п╣",
+	"k:п п╬п╠п╬п╩я▄п╢",
+	"l:п▓п╬я┬я▄",
+	"m:п÷п╩п╣я│п╣п╫я▄",
+	"n:п²п╟пЁп╟",
+	"o:п·я─п╨",
+	"p:п╖п╣п╩п╬п╡п╣п╨",
+	"q:п╖п╣я┌п╡п╣я─п╬п╫п╬пЁп╬п╣",
+	"r:п я─я▀я│п╟",
+	"s:п║п╨п╣п╩п╣я┌",
+	"t:п⌠п╬я─п╬п╤п╟п╫п╦п╫",
+	"u:п°п╟п╩я▀п╧ п■п╣п╪п╬п╫",
+	"v:п▓п╦я┘я─я▄",
+	"w:п╖п╣я─п╡п╦",
 	/* "x:unused", */
-	"y:Йик",
-	"z:Зомби/Мумия",
-	"{:Чем стреляют (стрела/болт/...)",
-	"|:Клинок (меч, кинжал и т.п.)",
-	"}:Из чего стреляют (лук/арбалет/праща)",
-	"~:Прочий предмет",
+	"y:п≥п╦п╨",
+	"z:п≈п╬п╪п╠п╦/п°я┐п╪п╦я▐",
+	"{:п╖п╣п╪ я│я┌я─п╣п╩я▐я▌я┌ (я│я┌я─п╣п╩п╟/п╠п╬п╩я┌/...)",
+	"|:п п╩п╦п╫п╬п╨ (п╪п╣я┤, п╨п╦п╫п╤п╟п╩ п╦ я┌.п©.)",
+	"}:п≤п╥ я┤п╣пЁп╬ я│я┌я─п╣п╩я▐я▌я┌ (п╩я┐п╨/п╟я─п╠п╟п╩п╣я┌/п©я─п╟я┴п╟)",
+	"~:п÷я─п╬я┤п╦п╧ п©я─п╣п╢п╪п╣я┌",
 	NULL
 };
 
@@ -1298,7 +1298,7 @@ void do_cmd_query_symbol(void)
 
 
 	/* Get a character, or abort */
-	if (!get_com("Введите символ: ", &sym)) return;
+	if (!get_com("п▓п╡п╣п╢п╦я┌п╣ я│п╦п╪п╡п╬п╩: ", &sym)) return;
 
 	/* Find that character info, and describe it */
 	for (i = 0; ident_info[i]; ++i)
@@ -1310,17 +1310,17 @@ void do_cmd_query_symbol(void)
 	if (sym == KTRL('A'))
 	{
 		all = TRUE;
-		strcpy(buf, "Полный список монстров.");
+		strcpy(buf, "п÷п╬п╩п╫я▀п╧ я│п©п╦я│п╬п╨ п╪п╬п╫я│я┌я─п╬п╡.");
 	}
 	else if (sym == KTRL('U'))
 	{
 		all = uniq = TRUE;
-		strcpy(buf, "Список уникальных монстров.");
+		strcpy(buf, "п║п©п╦я│п╬п╨ я┐п╫п╦п╨п╟п╩я▄п╫я▀я┘ п╪п╬п╫я│я┌я─п╬п╡.");
 	}
 	else if (sym == KTRL('N'))
 	{
 		all = norm = TRUE;
-		strcpy(buf, "Список неуникальных монстров.");
+		strcpy(buf, "п║п©п╦я│п╬п╨ п╫п╣я┐п╫п╦п╨п╟п╩я▄п╫я▀я┘ п╪п╬п╫я│я┌я─п╬п╡.");
 	}
 	else if (ident_info[i])
 	{
@@ -1328,7 +1328,7 @@ void do_cmd_query_symbol(void)
 	}
 	else
 	{
-		strnfmt(buf, sizeof(buf), "%c - %s.", sym, "Неизвестный символ.");
+		strnfmt(buf, sizeof(buf), "%c - %s.", sym, "п²п╣п╦п╥п╡п╣я│я┌п╫я▀п╧ я│п╦п╪п╡п╬п╩.");
 	}
 
 	/* Display the result */
@@ -1368,7 +1368,7 @@ void do_cmd_query_symbol(void)
 
 
 	/* Prompt */
-	put_str("Просмотреть детали? (k/p/y/n): ", 0, 40);
+	put_str("п÷я─п╬я│п╪п╬я┌я─п╣я┌я▄ п╢п╣я┌п╟п╩п╦? (k/p/y/n): ", 0, 40);
 
 	/* Query */
 	query = inkey();
@@ -1431,7 +1431,7 @@ void do_cmd_query_symbol(void)
 		roff_top(r_idx);
 
 		/* Hack -- Complete the prompt */
-		Term_addstr(-1, TERM_WHITE, " [(r)подробнее, ESC]");
+		Term_addstr(-1, TERM_WHITE, " [(r)п©п╬п╢я─п╬п╠п╫п╣п╣, ESC]");
 
 		/* Interact */
 		while (1)
@@ -1446,7 +1446,7 @@ void do_cmd_query_symbol(void)
 				screen_roff(who[i]);
 
 				/* Hack -- Complete the prompt (again) */
-				Term_addstr(-1, TERM_WHITE, " [(r)подробнее, ESC]");
+				Term_addstr(-1, TERM_WHITE, " [(r)п©п╬п╢я─п╬п╠п╫п╣п╣, ESC]");
 			}
 
 			/* Command */

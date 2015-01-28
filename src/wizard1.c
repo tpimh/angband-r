@@ -69,45 +69,45 @@ typedef struct
  */
 static const grouper group_item[] =
 {
-	{ TV_SHOT,		"Боеприпасы" },
+	{ TV_SHOT,		"п▒п╬п╣п©я─п╦п©п╟я│я▀" },
 	{ TV_ARROW,		  NULL },
 	{ TV_BOLT,		  NULL },
 
-	{ TV_BOW,		"Луки" },
+	{ TV_BOW,		"п⌡я┐п╨п╦" },
 
-	{ TV_SWORD,		"Оружие" },
+	{ TV_SWORD,		"п·я─я┐п╤п╦п╣" },
 	{ TV_POLEARM,	  NULL },
 	{ TV_HAFTED,	  NULL },
 	{ TV_DIGGING,	  NULL },
 
-	{ TV_SOFT_ARMOR,	"Доспехи (тело)" },
+	{ TV_SOFT_ARMOR,	"п■п╬я│п©п╣я┘п╦ (я┌п╣п╩п╬)" },
 	{ TV_HARD_ARMOR,	  NULL },
 	{ TV_DRAG_ARMOR,	  NULL },
 
-	{ TV_CLOAK,		"Доспехи (проч)" },
+	{ TV_CLOAK,		"п■п╬я│п©п╣я┘п╦ (п©я─п╬я┤)" },
 	{ TV_SHIELD,	  NULL },
 	{ TV_HELM,		  NULL },
 	{ TV_CROWN,		  NULL },
 	{ TV_GLOVES,	  NULL },
 	{ TV_BOOTS,		  NULL },
 
-	{ TV_AMULET,	"Амулеты" },
-	{ TV_RING,		"Кольца" },
+	{ TV_AMULET,	"п░п╪я┐п╩п╣я┌я▀" },
+	{ TV_RING,		"п п╬п╩я▄я├п╟" },
 
-	{ TV_SCROLL,	"Свитки" },
-	{ TV_POTION,	"Зелья" },
-	{ TV_FOOD,		"Еда" },
+	{ TV_SCROLL,	"п║п╡п╦я┌п╨п╦" },
+	{ TV_POTION,	"п≈п╣п╩я▄я▐" },
+	{ TV_FOOD,		"п∙п╢п╟" },
 
-	{ TV_ROD,		"Жезлы" },
-	{ TV_WAND,		"Палочки" },
-	{ TV_STAFF,		"Посохи" },
+	{ TV_ROD,		"п√п╣п╥п╩я▀" },
+	{ TV_WAND,		"п÷п╟п╩п╬я┤п╨п╦" },
+	{ TV_STAFF,		"п÷п╬я│п╬я┘п╦" },
 
-	{ TV_MAGIC_BOOK,	"Книги (Маг)" },
-	{ TV_PRAYER_BOOK,	"Книги (Священник)" },
+	{ TV_MAGIC_BOOK,	"п п╫п╦пЁп╦ (п°п╟пЁ)" },
+	{ TV_PRAYER_BOOK,	"п п╫п╦пЁп╦ (п║п╡я▐я┴п╣п╫п╫п╦п╨)" },
 
-	{ TV_CHEST,		"Сундуки" },
+	{ TV_CHEST,		"п║я┐п╫п╢я┐п╨п╦" },
 
-	{ TV_SPIKE,		"Прочее" },
+	{ TV_SPIKE,		"п÷я─п╬я┤п╣п╣" },
 	{ TV_LITE,		  NULL },
 	{ TV_FLASK,		  NULL },
 	{ TV_JUNK,		  NULL },
@@ -244,16 +244,16 @@ static void spoil_obj_desc(cptr fname)
 	/* Oops */
 	if (!fff)
 	{
-		msg_print("Невозможно создать спойлер.");
+		msg_print("п²п╣п╡п╬п╥п╪п╬п╤п╫п╬ я│п╬п╥п╢п╟я┌я▄ я│п©п╬п╧п╩п╣я─.");
 		return;
 	}
 
 
 	/* Header */
-	fprintf(fff, "Файл спойлера -- Основные предметы (%s)\n\n\n", VERSION_STRING);
+	fprintf(fff, "п╓п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟ -- п·я│п╫п╬п╡п╫я▀п╣ п©я─п╣п╢п╪п╣я┌я▀ (%s)\n\n\n", VERSION_STRING);
 
 	/* More Header */
-	fprintf(fff, format, "Описание   ", "Ур/Бр ", "Вес", "Ур.", "Цена");
+	fprintf(fff, format, "п·п©п╦я│п╟п╫п╦п╣   ", "пёя─/п▒я─ ", "п▓п╣я│", "пёя─.", "п╕п╣п╫п╟");
 	fprintf(fff, format, "----------------------------------------",
 	        "------", "---", "---", "----");
 
@@ -333,12 +333,12 @@ static void spoil_obj_desc(cptr fname)
 	/* Check for errors */
 	if (ferror(fff) || my_fclose(fff))
 	{
-		msg_print("Не удалось закрыть файл спойлера.");
+		msg_print("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╥п╟п╨я─я▀я┌я▄ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 		return;
 	}
 
 	/* Message */
-	msg_print("Успешно создан файл спойлера.");
+	msg_print("пёя│п©п╣я┬п╫п╬ я│п╬п╥п╢п╟п╫ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 }
 
 
@@ -355,26 +355,26 @@ static void spoil_obj_desc(cptr fname)
  */
 static const grouper group_artifact[] =
 {
-	{ TV_SWORD,         "Клинки" },
-	{ TV_POLEARM,       "Прочее оружие" },
-	{ TV_HAFTED,        "Тупое оружие" },
-	{ TV_BOW,           "Луки" },
-	{ TV_DIGGING,       "Копание" },
+	{ TV_SWORD,         "п п╩п╦п╫п╨п╦" },
+	{ TV_POLEARM,       "п÷я─п╬я┤п╣п╣ п╬я─я┐п╤п╦п╣" },
+	{ TV_HAFTED,        "п╒я┐п©п╬п╣ п╬я─я┐п╤п╦п╣" },
+	{ TV_BOW,           "п⌡я┐п╨п╦" },
+	{ TV_DIGGING,       "п п╬п©п╟п╫п╦п╣" },
 
-	{ TV_SOFT_ARMOR,    "Доспехи" },
+	{ TV_SOFT_ARMOR,    "п■п╬я│п©п╣я┘п╦" },
 	{ TV_HARD_ARMOR,    NULL },
 	{ TV_DRAG_ARMOR,    NULL },
 
-	{ TV_CLOAK,         "Плащи" },
-	{ TV_SHIELD,        "Щиты" },
-	{ TV_HELM,          "Шлемы/Короны" },
+	{ TV_CLOAK,         "п÷п╩п╟я┴п╦" },
+	{ TV_SHIELD,        "п╘п╦я┌я▀" },
+	{ TV_HELM,          "п╗п╩п╣п╪я▀/п п╬я─п╬п╫я▀" },
 	{ TV_CROWN,         NULL },
-	{ TV_GLOVES,        "Перчатки" },
-	{ TV_BOOTS,         "Ботинки" },
+	{ TV_GLOVES,        "п÷п╣я─я┤п╟я┌п╨п╦" },
+	{ TV_BOOTS,         "п▒п╬я┌п╦п╫п╨п╦" },
 
-	{ TV_LITE,          "Свет" },
-	{ TV_AMULET,        "Амулеты" },
-	{ TV_RING,          "Кольца" },
+	{ TV_LITE,          "п║п╡п╣я┌" },
+	{ TV_AMULET,        "п░п╪я┐п╩п╣я┌я▀" },
+	{ TV_RING,          "п п╬п╩я▄я├п╟" },
 
 	{ 0, NULL }
 };
@@ -448,7 +448,7 @@ static void spoil_artifact(cptr fname)
 	/* Oops */
 	if (!fff)
 	{
-		msg_print("Невозможно создать спойлер.");
+		msg_print("п²п╣п╡п╬п╥п╪п╬п╤п╫п╬ я│п╬п╥п╢п╟я┌я▄ я│п©п╬п╧п╩п╣я─.");
 		return;
 	}
 
@@ -460,7 +460,7 @@ static void spoil_artifact(cptr fname)
 	object_info_out_flags = object_flags;
 
 	/* Dump the header */
-	spoiler_underline(format("Спойлер артефактов для %s %s",
+	spoiler_underline(format("п║п©п╬п╧п╩п╣я─ п╟я─я┌п╣я└п╟п╨я┌п╬п╡ п╢п╩я▐ %s %s",
 	                         VERSION_NAME, VERSION_STRING), '=');
 
 	/* List the artifacts by tval */
@@ -505,7 +505,7 @@ static void spoil_artifact(cptr fname)
 			 * Determine the minimum depth an artifact can appear, its rarity,
 			 * its weight, and its value in gold pieces.
 			 */
-			text_out(format("\nУровень %u, редкость %u, %d.%d фнт, стоит %ld\n",
+			text_out(format("\nпёя─п╬п╡п╣п╫я▄ %u, я─п╣п╢п╨п╬я│я┌я▄ %u, %d.%d я└п╫я┌, я│я┌п╬п╦я┌ %ld\n",
 			                a_ptr->level, a_ptr->rarity, (a_ptr->weight / 10),
 			                (a_ptr->weight % 10), ((long)a_ptr->cost)));
 
@@ -517,12 +517,12 @@ static void spoil_artifact(cptr fname)
 	/* Check for errors */
 	if (ferror(fff) || my_fclose(fff))
 	{
-		msg_print("Не удалось закрыть файл спойлера.");
+		msg_print("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╥п╟п╨я─я▀я┌я▄ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 		return;
 	}
 
 	/* Message */
-	msg_print("Успешно создан файл спойлера.");
+	msg_print("пёя│п©п╣я┬п╫п╬ я│п╬п╥п╢п╟п╫ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 }
 
 
@@ -562,18 +562,18 @@ static void spoil_mon_desc(cptr fname)
 	/* Oops */
 	if (!fff)
 	{
-		msg_print("Невозможно создать файл спойлера.");
+		msg_print("п²п╣п╡п╬п╥п╪п╬п╤п╫п╬ я│п╬п╥п╢п╟я┌я▄ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 		return;
 	}
 
 	/* Dump the header */
-	fprintf(fff, "Спойлер монстров для %s версия %s\n",
+	fprintf(fff, "п║п©п╬п╧п╩п╣я─ п╪п╬п╫я│я┌я─п╬п╡ п╢п╩я▐ %s п╡п╣я─я│п╦я▐ %s\n",
 	        VERSION_NAME, VERSION_STRING);
 	fprintf(fff, "------------------------------------------\n\n");
 
 	/* Dump the header */
 	fprintf(fff, "%-40.40s%4s%4s%6s%8s%4s  %11.11s\n",
-	        "Назв", "Ур.", "Ред", "Ско", "Зд", "Бр", "Картинка");
+	        "п²п╟п╥п╡", "пёя─.", "п═п╣п╢", "п║п╨п╬", "п≈п╢", "п▒я─", "п п╟я─я┌п╦п╫п╨п╟");
 	fprintf(fff, "%-40.40s%4s%4s%6s%8s%4s  %11.11s\n",
 	        "----", "---", "---", "---", "--", "--", "--------");
 
@@ -609,11 +609,11 @@ static void spoil_mon_desc(cptr fname)
 		/* Get the "name" */
 		if (r_ptr->flags1 & (RF1_QUESTOR))
 		{
-			strnfmt(nam, sizeof(nam), "[К] %s", rname);
+			strnfmt(nam, sizeof(nam), "[п ] %s", rname);
 		}
 		else if (r_ptr->flags1 & (RF1_UNIQUE))
 		{
-			strnfmt(nam, sizeof(nam), "[У] %s", rname);
+			strnfmt(nam, sizeof(nam), "[пё] %s", rname);
 		}
 		else
 		{
@@ -672,12 +672,12 @@ static void spoil_mon_desc(cptr fname)
 	/* Check for errors */
 	if (ferror(fff) || my_fclose(fff))
 	{
-		msg_print("Не удалось закрыть файл спойлера.");
+		msg_print("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╥п╟п╨я─я▀я┌я▄ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 		return;
 	}
 
 	/* Worked */
-	msg_print("Успешно создан файл спойлера.");
+	msg_print("пёя│п©п╣я┬п╫п╬ я│п╬п╥п╢п╟п╫ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 }
 
 
@@ -712,7 +712,7 @@ static void spoil_mon_info(cptr fname)
 	/* Oops */
 	if (!fff)
 	{
-		msg_print("Не удалось создать файл спойлера.");
+		msg_print("п²п╣ я┐п╢п╟п╩п╬я│я▄ я│п╬п╥п╢п╟я┌я▄ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 		return;
 	}
 
@@ -721,7 +721,7 @@ static void spoil_mon_info(cptr fname)
 	text_out_file = fff;
 
 	/* Dump the header */
-	strnfmt(buf, sizeof(buf), "Спойлер монстров для %s версия %s\n",
+	strnfmt(buf, sizeof(buf), "п║п©п╬п╧п╩п╣я─ п╪п╬п╫я│я┌я─п╬п╡ п╢п╩я▐ %s п╡п╣я─я│п╦я▐ %s\n",
 	        VERSION_NAME, VERSION_STRING);
 	text_out(buf);
 	text_out("------------------------------------------\n\n");
@@ -757,11 +757,11 @@ static void spoil_mon_info(cptr fname)
 		/* Prefix */
 		if (r_ptr->flags1 & RF1_QUESTOR)
 		{
-			text_out("[К] ");
+			text_out("[п ] ");
 		}
 		else if (r_ptr->flags1 & RF1_UNIQUE)
 		{
-			text_out("[У] ");
+			text_out("[пё] ");
 		}
 		else
 		{
@@ -790,41 +790,41 @@ static void spoil_mon_info(cptr fname)
 		text_out(buf);
 
 		/* Level */
-		sprintf(buf, "Ур.:%d  ", r_ptr->level);
+		sprintf(buf, "пёя─.:%d  ", r_ptr->level);
 		text_out(buf);
 
 		/* Rarity */
-		sprintf(buf, "Ред:%d  ", r_ptr->rarity);
+		sprintf(buf, "п═п╣п╢:%d  ", r_ptr->rarity);
 		text_out(buf);
 
 		/* Speed */
 		if (r_ptr->speed >= 110)
 		{
-			sprintf(buf, "Ско:+%d  ", (r_ptr->speed - 110));
+			sprintf(buf, "п║п╨п╬:+%d  ", (r_ptr->speed - 110));
 		}
 		else
 		{
-			sprintf(buf, "Ско:-%d  ", (110 - r_ptr->speed));
+			sprintf(buf, "п║п╨п╬:-%d  ", (110 - r_ptr->speed));
 		}
 		text_out(buf);
 
 		/* Hitpoints */
 		if ((r_ptr->flags1 & RF1_FORCE_MAXHP) || (r_ptr->hside == 1))
 		{
-			sprintf(buf, "Зд:%d  ", r_ptr->hdice * r_ptr->hside);
+			sprintf(buf, "п≈п╢:%d  ", r_ptr->hdice * r_ptr->hside);
 		}
 		else
 		{
-			sprintf(buf, "Зд:%dd%d  ", r_ptr->hdice, r_ptr->hside);
+			sprintf(buf, "п≈п╢:%dd%d  ", r_ptr->hdice, r_ptr->hside);
 		}
 		text_out(buf);
 
 		/* Armor Class */
-		sprintf(buf, "Бр:%d  ", r_ptr->ac);
+		sprintf(buf, "п▒я─:%d  ", r_ptr->ac);
 		text_out(buf);
 
 		/* Experience */
-		sprintf(buf, "Опы:%ld\n", (long)(r_ptr->mexp));
+		sprintf(buf, "п·п©я▀:%ld\n", (long)(r_ptr->mexp));
 		text_out(buf);
 
 		/* Describe */
@@ -840,11 +840,11 @@ static void spoil_mon_info(cptr fname)
 	/* Check for errors */
 	if (ferror(fff) || my_fclose(fff))
 	{
-		msg_print("Не удалось закрыть файл спойлера.");
+		msg_print("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╥п╟п╨я─я▀я┌я▄ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 		return;
 	}
 
-	msg_print("Успешно создан файл спойлера.");
+	msg_print("пёя│п©п╣я┬п╫п╬ я│п╬п╥п╢п╟п╫ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.");
 }
 
 
@@ -868,16 +868,16 @@ void do_cmd_spoilers(void)
 		Term_clear();
 
 		/* Info */
-		prt("Создать файл спойлера.", 2, 0);
+		prt("п║п╬п╥п╢п╟я┌я▄ я└п╟п╧п╩ я│п©п╬п╧п╩п╣я─п╟.", 2, 0);
 
 		/* Prompt for a file */
-		prt("(1) Краткая информация об объектах (obj-desc.spo)", 5, 5);
-		prt("(2) Краткая информация об артефактах (artifact.spo)", 6, 5);
-		prt("(3) Краткая информация о монстрах (mon-desc.spo)", 7, 5);
-		prt("(4) Полная информация о монстрах (mon-info.spo)", 8, 5);
+		prt("(1) п я─п╟я┌п╨п╟я▐ п╦п╫я└п╬я─п╪п╟я├п╦я▐ п╬п╠ п╬п╠я┼п╣п╨я┌п╟я┘ (obj-desc.spo)", 5, 5);
+		prt("(2) п я─п╟я┌п╨п╟я▐ п╦п╫я└п╬я─п╪п╟я├п╦я▐ п╬п╠ п╟я─я┌п╣я└п╟п╨я┌п╟я┘ (artifact.spo)", 6, 5);
+		prt("(3) п я─п╟я┌п╨п╟я▐ п╦п╫я└п╬я─п╪п╟я├п╦я▐ п╬ п╪п╬п╫я│я┌я─п╟я┘ (mon-desc.spo)", 7, 5);
+		prt("(4) п÷п╬п╩п╫п╟я▐ п╦п╫я└п╬я─п╪п╟я├п╦я▐ п╬ п╪п╬п╫я│я┌я─п╟я┘ (mon-info.spo)", 8, 5);
 
 		/* Prompt */
-		prt("Команда: ", 12, 0);
+		prt("п п╬п╪п╟п╫п╢п╟: ", 12, 0);
 
 		/* Get a choice */
 		ch = inkey();
@@ -915,7 +915,7 @@ void do_cmd_spoilers(void)
 		/* Oops */
 		else
 		{
-			bell("Неправильная команда!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 		}
 
 		/* Flush messages */

@@ -739,7 +739,7 @@ static int get_player_choice(birth_menu *choices, int num, int def,
 			}
 			else
 			{
-				bell("Неправильный ответ!");
+				bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╬я┌п╡п╣я┌!");
 			}
 		}
 
@@ -810,7 +810,7 @@ static int get_player_choice(birth_menu *choices, int num, int def,
 		}
 
 		/* Invalid input */
-		else bell("Неправильный ответ!");
+		else bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╬я┌п╡п╣я┌!");
 
 		/* If choice is off screen, move it to the top */
 		if ((cur < top) || (cur > top + hgt)) top = cur;
@@ -842,11 +842,11 @@ static void race_aux_hook(birth_menu r_str)
 		Term_putstr(RACE_AUX_COL, TABLE_ROW + i, -1, TERM_WHITE, s);
 	}
 
-	strnfmt(s, sizeof(s), "Здоровье   : %d ", p_info[race].r_mhp);
+	strnfmt(s, sizeof(s), "п≈п╢п╬я─п╬п╡я▄п╣   : %d ", p_info[race].r_mhp);
 	Term_putstr(RACE_AUX_COL, TABLE_ROW + A_MAX, -1, TERM_WHITE, s);
-	strnfmt(s, sizeof(s), "Опыт       : %d%% ", p_info[race].r_exp);
+	strnfmt(s, sizeof(s), "п·п©я▀я┌       : %d%% ", p_info[race].r_exp);
 	Term_putstr(RACE_AUX_COL, TABLE_ROW + A_MAX + 1, -1, TERM_WHITE, s);
-	strnfmt(s, sizeof(s), "Инфразрение: %d фт ", p_info[race].infra * 10);
+	strnfmt(s, sizeof(s), "п≤п╫я└я─п╟п╥я─п╣п╫п╦п╣: %d я└я┌ ", p_info[race].infra * 10);
 	Term_putstr(RACE_AUX_COL, TABLE_ROW + A_MAX + 2, -1, TERM_WHITE, s);
 }
 
@@ -863,7 +863,7 @@ static bool get_player_race(void)
 
 	/* Extra info */
 	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW,
-	            "Ваша раса определяет различные возможности и бонусы.");
+	            "п▓п╟я┬п╟ я─п╟я│п╟ п╬п©я─п╣п╢п╣п╩я▐п╣я┌ я─п╟п╥п╩п╦я┤п╫я▀п╣ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌п╦ п╦ п╠п╬п╫я┐я│я▀.");
 
 	/* Tabulate races */
 	for (i = 0; i < z_info->p_max; i++)
@@ -914,9 +914,9 @@ static void class_aux_hook(birth_menu c_str)
 		Term_putstr(CLASS_AUX_COL, TABLE_ROW + i, -1, TERM_WHITE, s);
 	}
 
-	strnfmt(s, sizeof(s), "Здоровье  : +%d ", c_info[class_idx].c_mhp);
+	strnfmt(s, sizeof(s), "п≈п╢п╬я─п╬п╡я▄п╣  : +%d ", c_info[class_idx].c_mhp);
 	Term_putstr(CLASS_AUX_COL, TABLE_ROW + A_MAX, -1, TERM_WHITE, s);
-	strnfmt(s, sizeof(s), "Опыт      : +%d%% ", c_info[class_idx].c_exp);
+	strnfmt(s, sizeof(s), "п·п©я▀я┌      : +%d%% ", c_info[class_idx].c_exp);
 	Term_putstr(CLASS_AUX_COL, TABLE_ROW + A_MAX + 1, -1, TERM_WHITE, s);
 }
 
@@ -933,9 +933,9 @@ static bool get_player_class(void)
 
 	/* Extra info */
 	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW,
-	            "Ваш класс определяет ваши способности и бонусы.");
+	            "п▓п╟я┬ п╨п╩п╟я│я│ п╬п©я─п╣п╢п╣п╩я▐п╣я┌ п╡п╟я┬п╦ я│п©п╬я│п╬п╠п╫п╬я│я┌п╦ п╦ п╠п╬п╫я┐я│я▀.");
 	Term_putstr(QUESTION_COL, QUESTION_ROW + 1, -1, TERM_YELLOW,
-	            "Затемненные пункты рекомендуются только опытным игрокам.");
+	            "п≈п╟я┌п╣п╪п╫п╣п╫п╫я▀п╣ п©я┐п╫п╨я┌я▀ я─п╣п╨п╬п╪п╣п╫п╢я┐я▌я┌я│я▐ я┌п╬п╩я▄п╨п╬ п╬п©я▀я┌п╫я▀п╪ п╦пЁя─п╬п╨п╟п╪.");
 
 	/* Tabulate classes */
 	for (i = 0; i < z_info->c_max; i++)
@@ -976,7 +976,7 @@ static bool get_player_sex(void)
 
 	/* Extra info */
 	Term_putstr(QUESTION_COL, QUESTION_ROW, -1, TERM_YELLOW,
-	            "Ваш пол не имеет заметных эффектов в игре.");
+	            "п▓п╟я┬ п©п╬п╩ п╫п╣ п╦п╪п╣п╣я┌ п╥п╟п╪п╣я┌п╫я▀я┘ я█я└я└п╣п╨я┌п╬п╡ п╡ п╦пЁя─п╣.");
 
 	/* Tabulate genders */
 	for (i = 0; i < MAX_SEXES; i++)
@@ -1023,22 +1023,22 @@ static bool player_birth_aux_1(void)
 
 	/* Display some helpful information */
 	text_out_c(TERM_L_BLUE,
-	           "Создайте героя с помощью следующих меню:\n\n");
-	text_out("Используйте ");
-	text_out_c(TERM_L_GREEN, "курсорные клавиши");
-	text_out(" для прокрутки меню, ");
+	           "п║п╬п╥п╢п╟п╧я┌п╣ пЁп╣я─п╬я▐ я│ п©п╬п╪п╬я┴я▄я▌ я│п╩п╣п╢я┐я▌я┴п╦я┘ п╪п╣п╫я▌:\n\n");
+	text_out("п≤я│п©п╬п╩я▄п╥я┐п╧я┌п╣ ");
+	text_out_c(TERM_L_GREEN, "п╨я┐я─я│п╬я─п╫я▀п╣ п╨п╩п╟п╡п╦я┬п╦");
+	text_out(" п╢п╩я▐ п©я─п╬п╨я─я┐я┌п╨п╦ п╪п╣п╫я▌, ");
 	text_out_c(TERM_L_GREEN, "Enter");
-	text_out(" для выбора, '");
+	text_out(" п╢п╩я▐ п╡я▀п╠п╬я─п╟, '");
 	text_out_c(TERM_L_GREEN, "*");
-	text_out("' для случайного выбора, '");
+	text_out("' п╢п╩я▐ я│п╩я┐я┤п╟п╧п╫п╬пЁп╬ п╡я▀п╠п╬я─п╟, '");
 	text_out_c(TERM_L_GREEN, "ESC");
-	text_out("' - начать сначала, '");
+	text_out("' - п╫п╟я┤п╟я┌я▄ я│п╫п╟я┤п╟п╩п╟, '");
 	text_out_c(TERM_L_GREEN, "=");
-	text_out("' - опции рождения, '");
+	text_out("' - п╬п©я├п╦п╦ я─п╬п╤п╢п╣п╫п╦я▐, '");
 	text_out_c(TERM_L_GREEN, "?");
-	text_out("' - справка, '");
+	text_out("' - я│п©я─п╟п╡п╨п╟, '");
 	text_out_c(TERM_L_GREEN, "Ctrl-X");
-	text_out("' для выхода.");
+	text_out("' п╢п╩я▐ п╡я▀я┘п╬п╢п╟.");
 
 	/* Reset text_out() indentation */
 	text_out_indent = 0;
@@ -1178,7 +1178,7 @@ static bool player_birth_aux_2(void)
 		if (cost > 48)
 		{
 			/* Warning */
-			bell("Слишком большие показатели!");
+			bell("п║п╩п╦я┬п╨п╬п╪ п╠п╬п╩я▄я┬п╦п╣ п©п╬п╨п╟п╥п╟я┌п╣п╩п╦!");
 
 			/* Reduce stat */
 			stats[stat]--;
@@ -1206,7 +1206,7 @@ static bool player_birth_aux_2(void)
 		display_player(0);
 
 		/* Display the costs header */
-		put_str("Цена", row - 1, col + 32);
+		put_str("п╕п╣п╫п╟", row - 1, col + 32);
 
 		/* Display the costs */
 		for (i = 0; i < A_MAX; i++)
@@ -1218,7 +1218,7 @@ static bool player_birth_aux_2(void)
 
 
 		/* Prompt XXX XXX XXX */
-		strnfmt(buf, sizeof(buf), "Общая цена %2d/48.  2/8 - движение, 4/6 - изменение, 'Enter' - принять.", cost);
+		strnfmt(buf, sizeof(buf), "п·п╠я┴п╟я▐ я├п╣п╫п╟ %2d/48.  2/8 - п╢п╡п╦п╤п╣п╫п╦п╣, 4/6 - п╦п╥п╪п╣п╫п╣п╫п╦п╣, 'Enter' - п©я─п╦п╫я▐я┌я▄.", cost);
 		prt(buf, 0, 0);
 
 		/* Place cursor just after cost of current stat */
@@ -1310,16 +1310,16 @@ static bool player_birth_aux_3(void)
 
 		/* Extra info */
 		Term_putstr(5, 10, -1, TERM_WHITE,
-		            "Автороллер автоматически генерирует героя, который удовлетворяет");
+		            "п░п╡я┌п╬я─п╬п╩п╩п╣я─ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦ пЁп╣п╫п╣я─п╦я─я┐п╣я┌ пЁп╣я─п╬я▐, п╨п╬я┌п╬я─я▀п╧ я┐п╢п╬п╡п╩п╣я┌п╡п╬я─я▐п╣я┌");
 		Term_putstr(5, 11, -1, TERM_WHITE,
-		            "заданным значениям показателей.");
+		            "п╥п╟п╢п╟п╫п╫я▀п╪ п╥п╫п╟я┤п╣п╫п╦я▐п╪ п©п╬п╨п╟п╥п╟я┌п╣п╩п╣п╧.");
 		Term_putstr(5, 12, -1, TERM_WHITE,
-		            "Показатели зависят друг от друга, и вы не сможете достичь");
+		            "п÷п╬п╨п╟п╥п╟я┌п╣п╩п╦ п╥п╟п╡п╦я│я▐я┌ п╢я─я┐пЁ п╬я┌ п╢я─я┐пЁп╟, п╦ п╡я▀ п╫п╣ я│п╪п╬п╤п╣я┌п╣ п╢п╬я│я┌п╦я┤я▄");
 		Term_putstr(5, 13, -1, TERM_WHITE,
-		            "идеального (и даже просто высокого) уровня для всех показателей!");
+		            "п╦п╢п╣п╟п╩я▄п╫п╬пЁп╬ (п╦ п╢п╟п╤п╣ п©я─п╬я│я┌п╬ п╡я▀я│п╬п╨п╬пЁп╬) я┐я─п╬п╡п╫я▐ п╢п╩я▐ п╡я│п╣я┘ п©п╬п╨п╟п╥п╟я┌п╣п╩п╣п╧!");
 
 		/* Prompt for the minimum stats */
-		put_str("Введите минимум для: ", 15, 2);
+		put_str("п▓п╡п╣п╢п╦я┌п╣ п╪п╦п╫п╦п╪я┐п╪ п╢п╩я▐: ", 15, 2);
 
 		/* Output the maximum stats */
 		for (i = 0; i < A_MAX; i++)
@@ -1342,13 +1342,13 @@ static bool player_birth_aux_3(void)
 			/* Above 18 */
 			if (m > 18)
 			{
-				strnfmt(inp, sizeof(inp), "(Макс. 18/%02d):", (m - 18));
+				strnfmt(inp, sizeof(inp), "(п°п╟п╨я│. 18/%02d):", (m - 18));
 			}
 
 			/* From 3 to 18 */
 			else
 			{
-				strnfmt(inp, sizeof(inp), "(Макс. %2d):", m);
+				strnfmt(inp, sizeof(inp), "(п°п╟п╨я│. %2d):", m);
 			}
 
 			/* Prepare a prompt */
@@ -1415,13 +1415,13 @@ static bool player_birth_aux_3(void)
 			Term_clear();
 
 			/* Label */
-			put_str("Предел", 2, col+5);
+			put_str("п÷я─п╣п╢п╣п╩", 2, col+5);
 
 			/* Label */
-			put_str(" Част.", 2, col+13);
+			put_str(" п╖п╟я│я┌.", 2, col+13);
 
 			/* Label */
-			put_str("Попыт.", 2, col+24);
+			put_str("п÷п╬п©я▀я┌.", 2, col+24);
 
 			/* Put the minimal stats */
 			for (i = 0; i < A_MAX; i++)
@@ -1438,10 +1438,10 @@ static bool player_birth_aux_3(void)
 			last_round = auto_round;
 
 			/* Label count */
-			put_str("Попыт:", 10, col+13);
+			put_str("п÷п╬п©я▀я┌:", 10, col+13);
 
 			/* Indicate the state */
-			put_str("(ESC для остановки)", 12, col+13);
+			put_str("(ESC п╢п╩я▐ п╬я│я┌п╟п╫п╬п╡п╨п╦)", 12, col+13);
 
 			/* Auto-roll */
 			while (1)
@@ -1501,7 +1501,7 @@ static bool player_birth_aux_3(void)
 						/* Never happened */
 						else
 						{
-							c_put_str(TERM_RED, "(НЕТ)", 3+i, col+13);
+							c_put_str(TERM_RED, "(п²п∙п╒)", 3+i, col+13);
 						}
 					}
 
@@ -1566,9 +1566,9 @@ static bool player_birth_aux_3(void)
 			/* Prepare a prompt (must squeeze everything in) */
 			Term_gotoxy(2, 23);
 			Term_addch(TERM_WHITE, b1);
-			Term_addstr(-1, TERM_WHITE, "'r' - другой");
-			if (prev) Term_addstr(-1, TERM_WHITE, ", 'p' - предыдущий");
-			Term_addstr(-1, TERM_WHITE, ", 'Enter' - принять");
+			Term_addstr(-1, TERM_WHITE, "'r' - п╢я─я┐пЁп╬п╧");
+			if (prev) Term_addstr(-1, TERM_WHITE, ", 'p' - п©я─п╣п╢я▀п╢я┐я┴п╦п╧");
+			Term_addstr(-1, TERM_WHITE, ", 'Enter' - п©я─п╦п╫я▐я┌я▄");
 			Term_addch(TERM_WHITE, b2);
 
 			/* Prompt and get a command */
@@ -1601,7 +1601,7 @@ static bool player_birth_aux_3(void)
 			}
 
 			/* Warning */
-			bell("Неправильная команда автороллера!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟ п╟п╡я┌п╬я─п╬п╩п╩п╣я─п╟!");
 		}
 
 		/* Are we done? */
@@ -1630,7 +1630,7 @@ static bool player_birth_aux_3(void)
 static bool player_birth_aux(void)
 {
 	char ch;
-	cptr prompt = "['Q' для выхода, 'S' сначала, любую другую для продолжения]";
+	cptr prompt = "['Q' п╢п╩я▐ п╡я▀я┘п╬п╢п╟, 'S' я│п╫п╟я┤п╟п╩п╟, п╩я▌п╠я┐я▌ п╢я─я┐пЁя┐я▌ п╢п╩я▐ п©я─п╬п╢п╬п╩п╤п╣п╫п╦я▐]";
 
 	/* Ask questions */
 	if (!player_birth_aux_1()) return (FALSE);

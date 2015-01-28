@@ -29,7 +29,7 @@ static void output_list(cptr list[], int n)
 		{
 			/* if (n > 2) text_out(","); */
 
-			text_out(" и ");
+			text_out(" п╦ ");
 		}
 	}
 }
@@ -64,12 +64,12 @@ static bool describe_stats(const object_type *o_ptr, u32b f1)
 	if (!pval) return (FALSE);
 
 	/* Collect stat bonuses */
-	if (f1 & (TR1_STR)) descs[cnt++] = "силу";
-	if (f1 & (TR1_INT)) descs[cnt++] = "интеллект";
-	if (f1 & (TR1_WIS)) descs[cnt++] = "мудрость";
-	if (f1 & (TR1_DEX)) descs[cnt++] = "ловкость";
-	if (f1 & (TR1_CON)) descs[cnt++] = "телосложение";
-	if (f1 & (TR1_CHR)) descs[cnt++] = "обаяние";
+	if (f1 & (TR1_STR)) descs[cnt++] = "я│п╦п╩я┐";
+	if (f1 & (TR1_INT)) descs[cnt++] = "п╦п╫я┌п╣п╩п╩п╣п╨я┌";
+	if (f1 & (TR1_WIS)) descs[cnt++] = "п╪я┐п╢я─п╬я│я┌я▄";
+	if (f1 & (TR1_DEX)) descs[cnt++] = "п╩п╬п╡п╨п╬я│я┌я▄";
+	if (f1 & (TR1_CON)) descs[cnt++] = "я┌п╣п╩п╬я│п╩п╬п╤п╣п╫п╦п╣";
+	if (f1 & (TR1_CHR)) descs[cnt++] = "п╬п╠п╟я▐п╫п╦п╣";
 
 	/* Skip */
 	if (cnt == 0) return (FALSE);
@@ -77,19 +77,19 @@ static bool describe_stats(const object_type *o_ptr, u32b f1)
 	/* Shorten to "all stats", if appropriate. */
 	if (cnt == A_MAX)
 	{
-		text_out(format("%s %s все ваши показатели", mest, (o_ptr->pval > 0 ? "увеличивает" : "уменьшает")));
+		text_out(format("%s %s п╡я│п╣ п╡п╟я┬п╦ п©п╬п╨п╟п╥п╟я┌п╣п╩п╦", mest, (o_ptr->pval > 0 ? "я┐п╡п╣п╩п╦я┤п╦п╡п╟п╣я┌" : "я┐п╪п╣п╫я▄я┬п╟п╣я┌")));
 	}
 	else
 	{
-		text_out(format("%s %s ваш%s ", mest, (o_ptr->pval > 0 ? "увеличивает" : "уменьшает"), (cnt > 1 ? "и" :
-						(f1 & (TR1_INT) ? "" : f1 & (TR1_CHR | TR1_CON) ? "е" : "у"))));
+		text_out(format("%s %s п╡п╟я┬%s ", mest, (o_ptr->pval > 0 ? "я┐п╡п╣п╩п╦я┤п╦п╡п╟п╣я┌" : "я┐п╪п╣п╫я▄я┬п╟п╣я┌"), (cnt > 1 ? "п╦" :
+						(f1 & (TR1_INT) ? "" : f1 & (TR1_CHR | TR1_CON) ? "п╣" : "я┐"))));
 
 		/* Output list */
 		output_list(descs, cnt);
 	}
 
 	/* Output end */
-	text_out(format(" на %i.  ", pval));
+	text_out(format(" п╫п╟ %i.  ", pval));
 
 	/* We found something */
 	return (TRUE);
@@ -106,26 +106,26 @@ static bool describe_secondary(const object_type *o_ptr, u32b f1)
 	int pval = (o_ptr->pval > 0 ? o_ptr->pval : -o_ptr->pval);
 
 	/* Collect */
-	if (f1 & (TR1_STEALTH)) descs[cnt++] = "скрытность";
-	if (f1 & (TR1_SEARCH))  descs[cnt++] = "способность к поиску";
-	if (f1 & (TR1_INFRA))   descs[cnt++] = "способность к инфразрению";
-	if (f1 & (TR1_TUNNEL))  descs[cnt++] = "способность к копанию";
-	if (f1 & (TR1_SPEED))   descs[cnt++] = "скорость";
-	if (f1 & (TR1_BLOWS))   descs[cnt++] = "скорость атаки";
-	if (f1 & (TR1_SHOTS))   descs[cnt++] = "скорость стрельбы";
-	if (f1 & (TR1_MIGHT))   descs[cnt++] = "силу стрельбы";
+	if (f1 & (TR1_STEALTH)) descs[cnt++] = "я│п╨я─я▀я┌п╫п╬я│я┌я▄";
+	if (f1 & (TR1_SEARCH))  descs[cnt++] = "я│п©п╬я│п╬п╠п╫п╬я│я┌я▄ п╨ п©п╬п╦я│п╨я┐";
+	if (f1 & (TR1_INFRA))   descs[cnt++] = "я│п©п╬я│п╬п╠п╫п╬я│я┌я▄ п╨ п╦п╫я└я─п╟п╥я─п╣п╫п╦я▌";
+	if (f1 & (TR1_TUNNEL))  descs[cnt++] = "я│п©п╬я│п╬п╠п╫п╬я│я┌я▄ п╨ п╨п╬п©п╟п╫п╦я▌";
+	if (f1 & (TR1_SPEED))   descs[cnt++] = "я│п╨п╬я─п╬я│я┌я▄";
+	if (f1 & (TR1_BLOWS))   descs[cnt++] = "я│п╨п╬я─п╬я│я┌я▄ п╟я┌п╟п╨п╦";
+	if (f1 & (TR1_SHOTS))   descs[cnt++] = "я│п╨п╬я─п╬я│я┌я▄ я│я┌я─п╣п╩я▄п╠я▀";
+	if (f1 & (TR1_MIGHT))   descs[cnt++] = "я│п╦п╩я┐ я│я┌я─п╣п╩я▄п╠я▀";
 
 	/* Skip */
 	if (!cnt) return (FALSE);
 
 	/* Start */
-	text_out(format("%s %s ваш%s ", mest, (o_ptr->pval > 0 ? "увеличивает" : "уменьшает"), (cnt > 1 ? "и" : "у")));
+	text_out(format("%s %s п╡п╟я┬%s ", mest, (o_ptr->pval > 0 ? "я┐п╡п╣п╩п╦я┤п╦п╡п╟п╣я┌" : "я┐п╪п╣п╫я▄я┬п╟п╣я┌"), (cnt > 1 ? "п╦" : "я┐")));
 
 	/* Output list */
 	output_list(descs, cnt);
 
 	/* Output end */
-	text_out(format(" на %i.  ", pval));
+	text_out(format(" п╫п╟ %i.  ", pval));
 
 	/* We found something */
 	return (TRUE);
@@ -144,36 +144,36 @@ static bool describe_slay(const object_type *o_ptr, u32b f1)
 	(void)o_ptr;
 
 	/* Collect brands */
-	if (f1 & (TR1_SLAY_ANIMAL)) slays[slcnt++] = "животных";
-	if (f1 & (TR1_SLAY_ORC))    slays[slcnt++] = "орков";
-	if (f1 & (TR1_SLAY_TROLL))  slays[slcnt++] = "троллей";
-	if (f1 & (TR1_SLAY_GIANT))  slays[slcnt++] = "гигантов";
+	if (f1 & (TR1_SLAY_ANIMAL)) slays[slcnt++] = "п╤п╦п╡п╬я┌п╫я▀я┘";
+	if (f1 & (TR1_SLAY_ORC))    slays[slcnt++] = "п╬я─п╨п╬п╡";
+	if (f1 & (TR1_SLAY_TROLL))  slays[slcnt++] = "я┌я─п╬п╩п╩п╣п╧";
+	if (f1 & (TR1_SLAY_GIANT))  slays[slcnt++] = "пЁп╦пЁп╟п╫я┌п╬п╡";
 
 	/* Dragon slay/execute */
 	if (f1 & TR1_KILL_DRAGON)
-		execs[excnt++] = "драконов";
+		execs[excnt++] = "п╢я─п╟п╨п╬п╫п╬п╡";
 	else if (f1 & TR1_SLAY_DRAGON)
-		slays[slcnt++] = "драконов";
+		slays[slcnt++] = "п╢я─п╟п╨п╬п╫п╬п╡";
 
 	/* Demon slay/execute */
 	if (f1 & TR1_KILL_DEMON)
-		execs[excnt++] = "демонов";
+		execs[excnt++] = "п╢п╣п╪п╬п╫п╬п╡";
 	else if (f1 & TR1_SLAY_DEMON)
-		slays[slcnt++] = "демонов";
+		slays[slcnt++] = "п╢п╣п╪п╬п╫п╬п╡";
 
 	/* Undead slay/execute */
 	if (f1 & TR1_KILL_UNDEAD)
-		execs[excnt++] = "живых мертвецов";
+		execs[excnt++] = "п╤п╦п╡я▀я┘ п╪п╣я─я┌п╡п╣я├п╬п╡";
 	else if (f1 & TR1_SLAY_UNDEAD)
-		slays[slcnt++] = "живых мертвецов";
+		slays[slcnt++] = "п╤п╦п╡я▀я┘ п╪п╣я─я┌п╡п╣я├п╬п╡";
 
-	if (f1 & (TR1_SLAY_EVIL)) slays[slcnt++] = "всех злых существ";
+	if (f1 & (TR1_SLAY_EVIL)) slays[slcnt++] = "п╡я│п╣я┘ п╥п╩я▀я┘ я│я┐я┴п╣я│я┌п╡";
 
 	/* Describe */
 	if (slcnt)
 	{
 		/* Output intro */
-		text_out(format("%s истребля%cт ", mest, (rod == ROD_X ? 'ю' : 'е')));
+		text_out(format("%s п╦я│я┌я─п╣п╠п╩я▐%cя┌ ", mest, (rod == ROD_X ? 'я▌' : 'п╣')));
 
 		/* Output list */
 		output_list(slays, slcnt);
@@ -185,10 +185,10 @@ static bool describe_slay(const object_type *o_ptr, u32b f1)
 	if (excnt)
 	{
 		/* Output intro */
-		if (slcnt) text_out(format(", и особенно смертел%s против ",
-			(rod == ROD_M ? "ен" : rod == ROD_F ? "ьна" : rod == ROD_N ? "ьно" : "ьны")));
-		else text_out(format("%s особенно смертел%s против ", mest,
-			(rod == ROD_M ? "ен" : rod == ROD_F ? "ьна" : rod == ROD_N ? "ьно" : "ьны")));
+		if (slcnt) text_out(format(", п╦ п╬я│п╬п╠п╣п╫п╫п╬ я│п╪п╣я─я┌п╣п╩%s п©я─п╬я┌п╦п╡ ",
+			(rod == ROD_M ? "п╣п╫" : rod == ROD_F ? "я▄п╫п╟" : rod == ROD_N ? "я▄п╫п╬" : "я▄п╫я▀")));
+		else text_out(format("%s п╬я│п╬п╠п╣п╫п╫п╬ я│п╪п╣я─я┌п╣п╩%s п©я─п╬я┌п╦п╡ ", mest,
+			(rod == ROD_M ? "п╣п╫" : rod == ROD_F ? "я▄п╫п╟" : rod == ROD_N ? "я▄п╫п╬" : "я▄п╫я▀")));
 
 		/* Output list */
 		output_list(execs, excnt);
@@ -214,15 +214,15 @@ static bool describe_brand(const object_type *o_ptr, u32b f1)
 	(void)o_ptr;
 
 	/* Collect brands */
-	if (f1 & (TR1_BRAND_ACID)) descs[cnt++] = "кислотой";
-	if (f1 & (TR1_BRAND_ELEC)) descs[cnt++] = "электричеством";
-	if (f1 & (TR1_BRAND_FIRE)) descs[cnt++] = "огнем";
-	if (f1 & (TR1_BRAND_COLD)) descs[cnt++] = "холодом";
-	if (f1 & (TR1_BRAND_POIS)) descs[cnt++] = "ядом";
+	if (f1 & (TR1_BRAND_ACID)) descs[cnt++] = "п╨п╦я│п╩п╬я┌п╬п╧";
+	if (f1 & (TR1_BRAND_ELEC)) descs[cnt++] = "я█п╩п╣п╨я┌я─п╦я┤п╣я│я┌п╡п╬п╪";
+	if (f1 & (TR1_BRAND_FIRE)) descs[cnt++] = "п╬пЁп╫п╣п╪";
+	if (f1 & (TR1_BRAND_COLD)) descs[cnt++] = "я┘п╬п╩п╬п╢п╬п╪";
+	if (f1 & (TR1_BRAND_POIS)) descs[cnt++] = "я▐п╢п╬п╪";
 
 	/* Describe brands */
-	output_desc_list(format("%s заклеймен%s ", mest,
-		(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы")), descs, cnt);
+	output_desc_list(format("%s п╥п╟п╨п╩п╣п╧п╪п╣п╫%s ", mest,
+		(rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "я▀")), descs, cnt);
 
 	/* We are done here */
 	return (cnt ? TRUE : FALSE);
@@ -243,13 +243,13 @@ static bool describe_immune(const object_type *o_ptr, u32b f2)
 	(void)o_ptr;
 
 	/* Collect immunities */
-	if (f2 & (TR2_IM_ACID)) descs[cnt++] = "кислоте";
-	if (f2 & (TR2_IM_ELEC)) descs[cnt++] = "молнии";
-	if (f2 & (TR2_IM_FIRE)) descs[cnt++] = "огню";
-	if (f2 & (TR2_IM_COLD)) descs[cnt++] = "холоду";
+	if (f2 & (TR2_IM_ACID)) descs[cnt++] = "п╨п╦я│п╩п╬я┌п╣";
+	if (f2 & (TR2_IM_ELEC)) descs[cnt++] = "п╪п╬п╩п╫п╦п╦";
+	if (f2 & (TR2_IM_FIRE)) descs[cnt++] = "п╬пЁп╫я▌";
+	if (f2 & (TR2_IM_COLD)) descs[cnt++] = "я┘п╬п╩п╬п╢я┐";
 
 	/* Describe immunities */
-	output_desc_list(format("%s предоставляет иммунитет к ", mest), descs, cnt);
+	output_desc_list(format("%s п©я─п╣п╢п╬я│я┌п╟п╡п╩я▐п╣я┌ п╦п╪п╪я┐п╫п╦я┌п╣я┌ п╨ ", mest), descs, cnt);
 
 	/* We are done here */
 	return (cnt ? TRUE : FALSE);
@@ -269,30 +269,30 @@ static bool describe_resist(const object_type *o_ptr, u32b f2, u32b f3)
 
 	/* Collect resistances */
 	if ((f2 & (TR2_RES_ACID)) && !(f2 & (TR2_IM_ACID)))
-		vp[vn++] = "кислоте";
+		vp[vn++] = "п╨п╦я│п╩п╬я┌п╣";
 	if ((f2 & (TR2_RES_ELEC)) && !(f2 & (TR2_IM_ELEC)))
-		vp[vn++] = "молнии";
+		vp[vn++] = "п╪п╬п╩п╫п╦п╦";
 	if ((f2 & (TR2_RES_FIRE)) && !(f2 & (TR2_IM_FIRE)))
-		vp[vn++] = "огню";
+		vp[vn++] = "п╬пЁп╫я▌";
 	if ((f2 & (TR2_RES_COLD)) && !(f2 & (TR2_IM_COLD)))
-		vp[vn++] = "холоду";
+		vp[vn++] = "я┘п╬п╩п╬п╢я┐";
 
-	if (f2 & (TR2_RES_POIS))  vp[vn++] = "яду";
-	if (f2 & (TR2_RES_FEAR))  vp[vn++] = "страху";
-	if (f2 & (TR2_RES_LITE))  vp[vn++] = "свету";
-	if (f2 & (TR2_RES_DARK))  vp[vn++] = "темноте";
-	if (f2 & (TR2_RES_BLIND)) vp[vn++] = "слепоте";
-	if (f2 & (TR2_RES_CONFU)) vp[vn++] = "контузии";
-	if (f2 & (TR2_RES_SOUND)) vp[vn++] = "звуку";
-	if (f2 & (TR2_RES_SHARD)) vp[vn++] = "осколкам";
-	if (f2 & (TR2_RES_NEXUS)) vp[vn++] = "пространственным атакам" ;
-	if (f2 & (TR2_RES_NETHR)) vp[vn++] = "могильной силе";
-	if (f2 & (TR2_RES_CHAOS)) vp[vn++] = "хаосу";
-	if (f2 & (TR2_RES_DISEN)) vp[vn++] = "антимагии";
-	if (f3 & (TR3_HOLD_LIFE)) vp[vn++] = "высасыванию жизни";
+	if (f2 & (TR2_RES_POIS))  vp[vn++] = "я▐п╢я┐";
+	if (f2 & (TR2_RES_FEAR))  vp[vn++] = "я│я┌я─п╟я┘я┐";
+	if (f2 & (TR2_RES_LITE))  vp[vn++] = "я│п╡п╣я┌я┐";
+	if (f2 & (TR2_RES_DARK))  vp[vn++] = "я┌п╣п╪п╫п╬я┌п╣";
+	if (f2 & (TR2_RES_BLIND)) vp[vn++] = "я│п╩п╣п©п╬я┌п╣";
+	if (f2 & (TR2_RES_CONFU)) vp[vn++] = "п╨п╬п╫я┌я┐п╥п╦п╦";
+	if (f2 & (TR2_RES_SOUND)) vp[vn++] = "п╥п╡я┐п╨я┐";
+	if (f2 & (TR2_RES_SHARD)) vp[vn++] = "п╬я│п╨п╬п╩п╨п╟п╪";
+	if (f2 & (TR2_RES_NEXUS)) vp[vn++] = "п©я─п╬я│я┌я─п╟п╫я│я┌п╡п╣п╫п╫я▀п╪ п╟я┌п╟п╨п╟п╪" ;
+	if (f2 & (TR2_RES_NETHR)) vp[vn++] = "п╪п╬пЁп╦п╩я▄п╫п╬п╧ я│п╦п╩п╣";
+	if (f2 & (TR2_RES_CHAOS)) vp[vn++] = "я┘п╟п╬я│я┐";
+	if (f2 & (TR2_RES_DISEN)) vp[vn++] = "п╟п╫я┌п╦п╪п╟пЁп╦п╦";
+	if (f3 & (TR3_HOLD_LIFE)) vp[vn++] = "п╡я▀я│п╟я│я▀п╡п╟п╫п╦я▌ п╤п╦п╥п╫п╦";
 
 	/* Describe resistances */
-	output_desc_list(format("%s предоставляет сопротивление к ", mest), vp, vn);
+	output_desc_list(format("%s п©я─п╣п╢п╬я│я┌п╟п╡п╩я▐п╣я┌ я│п╬п©я─п╬я┌п╦п╡п╩п╣п╫п╦п╣ п╨ ", mest), vp, vn);
 
 	/* We are done here */
 	return (vn ? TRUE : FALSE);
@@ -311,16 +311,16 @@ static bool describe_ignores(const object_type *o_ptr, u32b f3)
 	(void)o_ptr;
 
 	/* Collect the ignores */
-	if (f3 & (TR3_IGNORE_ACID)) list[n++] = "кислотой";
-	if (f3 & (TR3_IGNORE_ELEC)) list[n++] = "электричеством";
-	if (f3 & (TR3_IGNORE_FIRE)) list[n++] = "огнем";
-	if (f3 & (TR3_IGNORE_COLD)) list[n++] = "холодом";
+	if (f3 & (TR3_IGNORE_ACID)) list[n++] = "п╨п╦я│п╩п╬я┌п╬п╧";
+	if (f3 & (TR3_IGNORE_ELEC)) list[n++] = "я█п╩п╣п╨я┌я─п╦я┤п╣я│я┌п╡п╬п╪";
+	if (f3 & (TR3_IGNORE_FIRE)) list[n++] = "п╬пЁп╫п╣п╪";
+	if (f3 & (TR3_IGNORE_COLD)) list[n++] = "я┘п╬п╩п╬п╢п╬п╪";
 
 	/* Describe ignores */
 	if (n == 4)
-		text_out(format("%s не поврежда%cтся элементами.  ", mest, (rod == ROD_X ? 'ю' : 'е')));
+		text_out(format("%s п╫п╣ п©п╬п╡я─п╣п╤п╢п╟%cя┌я│я▐ я█п╩п╣п╪п╣п╫я┌п╟п╪п╦.  ", mest, (rod == ROD_X ? 'я▌' : 'п╣')));
 	else
-		output_desc_list(format("%s не поврежда%cтся ", mest, (rod == ROD_X ? 'ю' : 'е')), list, n);
+		output_desc_list(format("%s п╫п╣ п©п╬п╡я─п╣п╤п╢п╟%cя┌я│я▐ ", mest, (rod == ROD_X ? 'я▌' : 'п╣')), list, n);
 
 	return ((n > 0) ? TRUE : FALSE);
 }
@@ -338,23 +338,23 @@ static bool describe_sustains(const object_type *o_ptr, u32b f2)
 	(void)o_ptr;
 
 	/* Collect the sustains */
-	if (f2 & (TR2_SUST_STR)) list[n++] = "силу";
-	if (f2 & (TR2_SUST_INT)) list[n++] = "интеллект";
-	if (f2 & (TR2_SUST_WIS)) list[n++] = "мудрость";
-	if (f2 & (TR2_SUST_DEX)) list[n++] = "ловкость";
-	if (f2 & (TR2_SUST_CON)) list[n++] = "телосложение";
-	if (f2 & (TR2_SUST_CHR)) list[n++] = "обаяние";
+	if (f2 & (TR2_SUST_STR)) list[n++] = "я│п╦п╩я┐";
+	if (f2 & (TR2_SUST_INT)) list[n++] = "п╦п╫я┌п╣п╩п╩п╣п╨я┌";
+	if (f2 & (TR2_SUST_WIS)) list[n++] = "п╪я┐п╢я─п╬я│я┌я▄";
+	if (f2 & (TR2_SUST_DEX)) list[n++] = "п╩п╬п╡п╨п╬я│я┌я▄";
+	if (f2 & (TR2_SUST_CON)) list[n++] = "я┌п╣п╩п╬я│п╩п╬п╤п╣п╫п╦п╣";
+	if (f2 & (TR2_SUST_CHR)) list[n++] = "п╬п╠п╟я▐п╫п╦п╣";
 
 	if (!n)
 		return FALSE;
 
 	/* Describe immunities */
 	if (n == A_MAX)
-		text_out(format("%s закрепляет все ваши показатели.  ", mest));
+		text_out(format("%s п╥п╟п╨я─п╣п©п╩я▐п╣я┌ п╡я│п╣ п╡п╟я┬п╦ п©п╬п╨п╟п╥п╟я┌п╣п╩п╦.  ", mest));
 	else
 	{
-		text_out(format("%s закрепляет ваш%s ", mest, (n > 1 ? "и" :
-			(f2 & (TR2_SUST_INT) ? "" : f2 & (TR2_SUST_CHR | TR2_SUST_CON) ? "е" : "у")
+		text_out(format("%s п╥п╟п╨я─п╣п©п╩я▐п╣я┌ п╡п╟я┬%s ", mest, (n > 1 ? "п╦" :
+			(f2 & (TR2_SUST_INT) ? "" : f2 & (TR2_SUST_CHR | TR2_SUST_CON) ? "п╣" : "я┐")
 			)));
 		output_list(list, n);
 		text_out(". ");
@@ -376,13 +376,13 @@ static bool describe_misc_magic(const object_type *o_ptr, u32b f3)
 	bool something = FALSE;
 
 	/* Collect stuff which can't be categorized */
-	if (f3 & (TR3_BLESSED))     good[gc++] = "имеет Божье благословление";
-	if (f3 & (TR3_IMPACT))      good[gc++] = "вызывает землетрясения при ударе";
-	if (f3 & (TR3_SLOW_DIGEST)) good[gc++] = "замедляет пищеварение";
-	if (f3 & (TR3_FEATHER))     good[gc++] = "заставляет вас падать медленнее";
+	if (f3 & (TR3_BLESSED))     good[gc++] = "п╦п╪п╣п╣я┌ п▒п╬п╤я▄п╣ п╠п╩п╟пЁп╬я│п╩п╬п╡п╩п╣п╫п╦п╣";
+	if (f3 & (TR3_IMPACT))      good[gc++] = "п╡я▀п╥я▀п╡п╟п╣я┌ п╥п╣п╪п╩п╣я┌я─я▐я│п╣п╫п╦я▐ п©я─п╦ я┐п╢п╟я─п╣";
+	if (f3 & (TR3_SLOW_DIGEST)) good[gc++] = "п╥п╟п╪п╣п╢п╩я▐п╣я┌ п©п╦я┴п╣п╡п╟я─п╣п╫п╦п╣";
+	if (f3 & (TR3_FEATHER))     good[gc++] = "п╥п╟я│я┌п╟п╡п╩я▐п╣я┌ п╡п╟я│ п©п╟п╢п╟я┌я▄ п╪п╣п╢п╩п╣п╫п╫п╣п╣";
 	if (((o_ptr->tval == TV_LITE) && artifact_p(o_ptr)) || (f3 & (TR3_LITE)))
-		good[gc++] = "освещает подземелье вокруг вас";
-	if (f3 & (TR3_REGEN))       good[gc++] = "ускоряет вашу регенерацию";
+		good[gc++] = "п╬я│п╡п╣я┴п╟п╣я┌ п©п╬п╢п╥п╣п╪п╣п╩я▄п╣ п╡п╬п╨я─я┐пЁ п╡п╟я│";
+	if (f3 & (TR3_REGEN))       good[gc++] = "я┐я│п╨п╬я─я▐п╣я┌ п╡п╟я┬я┐ я─п╣пЁп╣п╫п╣я─п╟я├п╦я▌";
 
 	/* Describe */
 	output_desc_list(format("%s ", mest), good, gc);
@@ -392,28 +392,28 @@ static bool describe_misc_magic(const object_type *o_ptr, u32b f3)
 
 	/* Collect granted powers */
 	gc = 0;
-	if (f3 & (TR3_FREE_ACT))  good[gc++] = "иммунитет к параличу";
-	if (f3 & (TR3_TELEPATHY)) good[gc++] = "силу телепатии";
-	if (f3 & (TR3_SEE_INVIS)) good[gc++] = "возможность видеть невидимое";
+	if (f3 & (TR3_FREE_ACT))  good[gc++] = "п╦п╪п╪я┐п╫п╦я┌п╣я┌ п╨ п©п╟я─п╟п╩п╦я┤я┐";
+	if (f3 & (TR3_TELEPATHY)) good[gc++] = "я│п╦п╩я┐ я┌п╣п╩п╣п©п╟я┌п╦п╦";
+	if (f3 & (TR3_SEE_INVIS)) good[gc++] = "п╡п╬п╥п╪п╬п╤п╫п╬я│я┌я▄ п╡п╦п╢п╣я┌я▄ п╫п╣п╡п╦п╢п╦п╪п╬п╣";
 
 	/* Collect penalties */
-	if (f3 & (TR3_AGGRAVATE)) bad[bc++] = "привлекает монстров к вам";
-	if (f3 & (TR3_DRAIN_EXP)) bad[bc++] = "высасывает опыт";
-	if (f3 & (TR3_TELEPORT))  bad[bc++] = "вызывает случайную телепортацию";
+	if (f3 & (TR3_AGGRAVATE)) bad[bc++] = "п©я─п╦п╡п╩п╣п╨п╟п╣я┌ п╪п╬п╫я│я┌я─п╬п╡ п╨ п╡п╟п╪";
+	if (f3 & (TR3_DRAIN_EXP)) bad[bc++] = "п╡я▀я│п╟я│я▀п╡п╟п╣я┌ п╬п©я▀я┌";
+	if (f3 & (TR3_TELEPORT))  bad[bc++] = "п╡я▀п╥я▀п╡п╟п╣я┌ я│п╩я┐я┤п╟п╧п╫я┐я▌ я┌п╣п╩п╣п©п╬я─я┌п╟я├п╦я▌";
 
 	/* Deal with cursed stuff */
 	if (cursed_p(o_ptr))
 	{
-		if (f3 & (TR3_PERMA_CURSE)) bad[bc++] = "обладает неснимаемым проклятьем";
-		else if (f3 & (TR3_HEAVY_CURSE)) bad[bc++] = "обладает тяжелым проклятьем";
-		else if (object_known_p(o_ptr)) bad[bc++] = "обладает проклятьем";
+		if (f3 & (TR3_PERMA_CURSE)) bad[bc++] = "п╬п╠п╩п╟п╢п╟п╣я┌ п╫п╣я│п╫п╦п╪п╟п╣п╪я▀п╪ п©я─п╬п╨п╩я▐я┌я▄п╣п╪";
+		else if (f3 & (TR3_HEAVY_CURSE)) bad[bc++] = "п╬п╠п╩п╟п╢п╟п╣я┌ я┌я▐п╤п╣п╩я▀п╪ п©я─п╬п╨п╩я▐я┌я▄п╣п╪";
+		else if (object_known_p(o_ptr)) bad[bc++] = "п╬п╠п╩п╟п╢п╟п╣я┌ п©я─п╬п╨п╩я▐я┌я▄п╣п╪";
 	}
 
 	/* Describe */
 	if (gc)
 	{
 		/* Output intro */
-		text_out(format("%s дает вам ", mest));
+		text_out(format("%s п╢п╟п╣я┌ п╡п╟п╪ ", mest));
 
 		/* Output list */
 		output_list(good, gc);
@@ -425,7 +425,7 @@ static bool describe_misc_magic(const object_type *o_ptr, u32b f3)
 	if (bc)
 	{
 		/* Output intro */
-		if (gc) text_out(", но также ");
+		if (gc) text_out(", п╫п╬ я┌п╟п╨п╤п╣ ");
 		else text_out(format("%s ", mest));
 
 		/* Output list */
@@ -451,7 +451,7 @@ static bool describe_activation(const object_type *o_ptr, u32b f3)
 	/* Check for the activation flag */
 	if (f3 & TR3_ACTIVATE)
 	{
-		text_out(format("%s активируется для ", mest));
+		text_out(format("%s п╟п╨я┌п╦п╡п╦я─я┐п╣я┌я│я▐ п╢п╩я▐ ", mest));
 		describe_item_activation(o_ptr);
 		text_out(".  ");
 
@@ -475,7 +475,7 @@ bool object_info_out(const object_type *o_ptr)
 	/* Description */
 	rod = object_desc(o_name, 80, o_ptr, TRUE, 3, PAD_IMEN);
 	
-	strcpy(mest, rod == ROD_M ? "Он" : rod == ROD_F ? "Она" : rod == ROD_N ? "Оно" : "Они");
+	strcpy(mest, rod == ROD_M ? "п·п╫" : rod == ROD_F ? "п·п╫п╟" : rod == ROD_N ? "п·п╫п╬" : "п·п╫п╦");
 
 	/* Grab the object flags */
 	object_info_out_flags(o_ptr, &f1, &f2, &f3);
@@ -500,7 +500,7 @@ bool object_info_out(const object_type *o_ptr)
 		if (something && text_out_hook == text_out_to_screen)
 			text_out("\n\n   ");
 
-		text_out(format("%s может имень скрытые возможности.", mest));
+		text_out(format("%s п╪п╬п╤п╣я┌ п╦п╪п╣п╫я▄ я│п╨я─я▀я┌я▀п╣ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌п╦.", mest));
 		something = TRUE;
 	}
 
@@ -526,7 +526,7 @@ static bool screen_out_head(const object_type *o_ptr)
 	/* Description */
 	rod = object_desc(o_name, name_size, o_ptr, TRUE, 3, PAD_IMEN);
 	
-	strcpy(mest, rod == ROD_M ? "Он" : rod == ROD_F ? "Она" : rod == ROD_N ? "Оно" : "Они");
+	strcpy(mest, rod == ROD_M ? "п·п╫" : rod == ROD_F ? "п·п╫п╟" : rod == ROD_N ? "п·п╫п╬" : "п·п╫п╦");
 
 	/* Print, in colour */
 	text_out_c(TERM_YELLOW, format("%^s\n\n   ", o_name));
@@ -590,12 +590,12 @@ void object_info_screen(const object_type *o_ptr)
 	{
 		if (has_info)
 			text_out("\n\n   ");
-		text_out("Этот предмет не был идентифицирован.");
+		text_out("п╜я┌п╬я┌ п©я─п╣п╢п╪п╣я┌ п╫п╣ п╠я▀п╩ п╦п╢п╣п╫я┌п╦я└п╦я├п╦я─п╬п╡п╟п╫.");
 		has_info = TRUE;
 	}
 	else if (!has_description && !has_info)
 	{
-		text_out("Вы не видите ничего особенного.");
+		text_out("п▓я▀ п╫п╣ п╡п╦п╢п╦я┌п╣ п╫п╦я┤п╣пЁп╬ п╬я│п╬п╠п╣п╫п╫п╬пЁп╬.");
 	}
 	
 	/* Descriptions end with "\n\n   ", other info does not */
@@ -611,7 +611,7 @@ void object_info_screen(const object_type *o_ptr)
 		text_out("\n\n");
 	}
 	
-	text_out_c(TERM_L_BLUE, "[Нажмите любую клавишу для продолжения]\n");
+	text_out_c(TERM_L_BLUE, "[п²п╟п╤п╪п╦я┌п╣ п╩я▌п╠я┐я▌ п╨п╩п╟п╡п╦я┬я┐ п╢п╩я▐ п©я─п╬п╢п╬п╩п╤п╣п╫п╦я▐]\n");
 
 	/* Wait for input */
 	(void)inkey();

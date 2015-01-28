@@ -597,7 +597,7 @@ static errr rd_store(int n)
 	/* Paranoia */
 	if (own >= z_info->b_max)
 	{
-		note("Неправильный продавец!");
+		note("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п©я─п╬п╢п╟п╡п╣я├!");
 		return (-1);
 	}
 
@@ -618,7 +618,7 @@ static errr rd_store(int n)
 		/* Read the item */
 		if (rd_item(i_ptr))
 		{
-			note("Ошибка чтения предмета");
+			note("п·я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п©я─п╣п╢п╪п╣я┌п╟");
 			return (-1);
 		}
 
@@ -887,7 +887,7 @@ static errr rd_player_spells(void)
 		rd_u16b(&tmp16u);
 		if (tmp16u > PY_MAX_SPELLS)
 		{
-			note(format("Слишком много заклинаний (%d).", tmp16u));
+			note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╧ (%d).", tmp16u));
 			return (-1);
 		}
 
@@ -955,7 +955,7 @@ static errr rd_extra(void)
 	/* Verify player race */
 	if (p_ptr->prace >= z_info->p_max)
 	{
-		note(format("Неправильная раса (%d).", p_ptr->prace));
+		note(format("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ я─п╟я│п╟ (%d).", p_ptr->prace));
 		return (-1);
 	}
 
@@ -965,7 +965,7 @@ static errr rd_extra(void)
 	/* Verify player class */
 	if (p_ptr->pclass >= z_info->c_max)
 	{
-		note(format("Неправильный класс (%d).", p_ptr->pclass));
+		note(format("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╨п╩п╟я│я│ (%d).", p_ptr->pclass));
 		return (-1);
 	}
 
@@ -1000,7 +1000,7 @@ static errr rd_extra(void)
 	/* Verify player level */
 	if ((p_ptr->lev < 1) || (p_ptr->lev > PY_MAX_LEVEL))
 	{
-		note(format("Неправильный уровень игрока (%d).", p_ptr->lev));
+		note(format("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ я┐я─п╬п╡п╣п╫я▄ п╦пЁя─п╬п╨п╟ (%d).", p_ptr->lev));
 		return (-1);
 	}
 
@@ -1111,7 +1111,7 @@ static errr rd_extra(void)
 	/* Incompatible save files */
 	if (tmp16u > PY_MAX_LEVEL)
 	{
-		note(format("Слишком много (%u) описаний здоровья!", tmp16u));
+		note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ (%u) п╬п©п╦я│п╟п╫п╦п╧ п╥п╢п╬я─п╬п╡я▄я▐!", tmp16u));
 		return (-1);
 	}
 
@@ -1160,7 +1160,7 @@ static errr rd_randarts(void)
 		/* Check for incompatible randart version */
 		if (randart_version != RANDART_VERSION)
 		{
-			note(format("Несовместимая версия случайных артефактов!"));
+			note(format("п²п╣я│п╬п╡п╪п╣я│я┌п╦п╪п╟я▐ п╡п╣я─я│п╦я▐ я│п╩я┐я┤п╟п╧п╫я▀я┘ п╟я─я┌п╣я└п╟п╨я┌п╬п╡!"));
 			return (-1);
 		}
 
@@ -1178,7 +1178,7 @@ static errr rd_randarts(void)
 			/* Incompatible save files */
 			if (artifact_count > z_info->a_max)
 			{
-				note(format("Слишком много (%u) случайных артефактов!", artifact_count));
+				note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ (%u) я│п╩я┐я┤п╟п╧п╫я▀я┘ п╟я─я┌п╣я└п╟п╨я┌п╬п╡!", artifact_count));
 				return (-1);
 			}
 
@@ -1266,7 +1266,7 @@ static errr rd_randarts(void)
 
 #else /* GJW_RANDART */
 
-	note("Случайные артефакты запрещены.");
+	note("п║п╩я┐я┤п╟п╧п╫я▀п╣ п╟я─я┌п╣я└п╟п╨я┌я▀ п╥п╟п©я─п╣я┴п╣п╫я▀.");
 	return (-1);
 
 #endif /* GJW_RANDART */
@@ -1308,7 +1308,7 @@ static errr rd_inventory(void)
 		/* Read the item */
 		if (rd_item(i_ptr))
 		{
-			note("Ошибка чтения предмета");
+			note("п·я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п©я─п╣п╢п╪п╣я┌п╟");
 			return (-1);
 		}
 
@@ -1335,7 +1335,7 @@ static errr rd_inventory(void)
 		else if (p_ptr->inven_cnt == INVEN_PACK)
 		{
 			/* Oops */
-			note("Слишком много предметов в инвентаре!");
+			note("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ п©я─п╣п╢п╪п╣я┌п╬п╡ п╡ п╦п╫п╡п╣п╫я┌п╟я─п╣!");
 
 			/* Fail */
 			return (-1);
@@ -1445,7 +1445,7 @@ static errr rd_dungeon(void)
 	/* Ignore illegal dungeons */
 	if ((depth < 0) || (depth >= MAX_DEPTH))
 	{
-		note(format("Неправильная глубина (%d)", depth));
+		note(format("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ пЁп╩я┐п╠п╦п╫п╟ (%d)", depth));
 		return (0);
 	}
 
@@ -1453,7 +1453,7 @@ static errr rd_dungeon(void)
 	if ((ymax != DUNGEON_HGT) || (xmax != DUNGEON_WID))
 	{
 		/* XXX XXX XXX */
-		note(format("Неправильный размер подземелья (%d,%d).", ymax, xmax));
+		note(format("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ я─п╟п╥п╪п╣я─ п©п╬п╢п╥п╣п╪п╣п╩я▄я▐ (%d,%d).", ymax, xmax));
 		return (0);
 	}
 
@@ -1461,7 +1461,7 @@ static errr rd_dungeon(void)
 	if ((px < 0) || (px >= DUNGEON_WID) ||
 	    (py < 0) || (py >= DUNGEON_HGT))
 	{
-		note(format("Неправильное местоположение игрока (%d,%d).", py, px));
+		note(format("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╬п╣ п╪п╣я│я┌п╬п©п╬п╩п╬п╤п╣п╫п╦п╣ п╦пЁя─п╬п╨п╟ (%d,%d).", py, px));
 		return (1);
 	}
 
@@ -1531,7 +1531,7 @@ static errr rd_dungeon(void)
 	/* Place player in dungeon */
 	if (!player_place(py, px))
 	{
-		note(format("Не удалось разместить героя (%d,%d)!", py, px));
+		note(format("п²п╣ я┐п╢п╟п╩п╬я│я▄ я─п╟п╥п╪п╣я│я┌п╦я┌я▄ пЁп╣я─п╬я▐ (%d,%d)!", py, px));
 		return (-1);
 	}
 
@@ -1544,7 +1544,7 @@ static errr rd_dungeon(void)
 	/* Verify maximum */
 	if (limit > z_info->o_max)
 	{
-		note(format("Слишком много (%d) предметов!", limit));
+		note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ (%d) п©я─п╣п╢п╪п╣я┌п╬п╡!", limit));
 		return (-1);
 	}
 
@@ -1567,7 +1567,7 @@ static errr rd_dungeon(void)
 		/* Read the item */
 		if (rd_item(i_ptr))
 		{
-			note("Ошибка чтения предмета");
+			note("п·я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п©я─п╣п╢п╪п╣я┌п╟");
 			return (-1);
 		}
 
@@ -1577,7 +1577,7 @@ static errr rd_dungeon(void)
 		/* Paranoia */
 		if (o_idx != i)
 		{
-			note(format("Не удалось разместить предмет %d!", i));
+			note(format("п²п╣ я┐п╢п╟п╩п╬я│я▄ я─п╟п╥п╪п╣я│я┌п╦я┌я▄ п©я─п╣п╢п╪п╣я┌ %d!", i));
 			return (-1);
 		}
 
@@ -1612,7 +1612,7 @@ static errr rd_dungeon(void)
 	/* Hack -- verify */
 	if (limit > z_info->m_max)
 	{
-		note(format("Слишком много (%d) монстров!", limit));
+		note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ (%d) п╪п╬п╫я│я┌я─п╬п╡!", limit));
 		return (-1);
 	}
 
@@ -1636,7 +1636,7 @@ static errr rd_dungeon(void)
 		/* Place monster in dungeon */
 		if (monster_place(n_ptr->fy, n_ptr->fx, n_ptr) != i)
 		{
-			note(format("Не удалось разместить монстра %d", i));
+			note(format("п²п╣ я┐п╢п╟п╩п╬я│я▄ я─п╟п╥п╪п╣я│я┌п╦я┌я▄ п╪п╬п╫я│я┌я─п╟ %d", i));
 			return (-1);
 		}
 	}
@@ -1660,7 +1660,7 @@ static errr rd_dungeon(void)
 		/* Verify monster index */
 		if (o_ptr->held_m_idx > z_info->m_max)
 		{
-			note("Неправильный индекс монстра");
+			note("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╦п╫п╢п╣п╨я│ п╪п╬п╫я│я┌я─п╟");
 			return (-1);
 		}
 
@@ -1706,7 +1706,7 @@ static errr rd_savefile_new_aux(void)
 
 
 	/* Mention the savefile version */
-	note(format("Загрузка сохраненной игры версии %d.%d.%d...",
+	note(format("п≈п╟пЁя─я┐п╥п╨п╟ я│п╬я┘я─п╟п╫п╣п╫п╫п╬п╧ п╦пЁя─я▀ п╡п╣я─я│п╦п╦ %d.%d.%d...",
 	            sf_major, sf_minor, sf_patch));
 
 	/* Strip the version bytes */
@@ -1743,17 +1743,17 @@ static errr rd_savefile_new_aux(void)
 
 	/* Read RNG state */
 	rd_randomizer();
-	if (arg_fiddle) note("Загружен генератор случайных чисел");
+	if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫ пЁп╣п╫п╣я─п╟я┌п╬я─ я│п╩я┐я┤п╟п╧п╫я▀я┘ я┤п╦я│п╣п╩");
 
 
 	/* Then the options */
 	rd_options();
-	if (arg_fiddle) note("Загружены опции");
+	if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫я▀ п╬п©я├п╦п╦");
 
 
 	/* Then the "messages" */
 	rd_messages();
-	if (arg_fiddle) note("Загружены сообщения");
+	if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫я▀ я│п╬п╬п╠я┴п╣п╫п╦я▐");
 
 
 	/* Monster Memory */
@@ -1762,7 +1762,7 @@ static errr rd_savefile_new_aux(void)
 	/* Incompatible save files */
 	if (tmp16u > z_info->r_max)
 	{
-		note(format("Слишком много (%u) рас монстров!", tmp16u));
+		note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ (%u) я─п╟я│ п╪п╬п╫я│я┌я─п╬п╡!", tmp16u));
 		return (-1);
 	}
 
@@ -1772,7 +1772,7 @@ static errr rd_savefile_new_aux(void)
 		/* Read the lore */
 		rd_lore(i);
 	}
-	if (arg_fiddle) note("Загружена память монстров");
+	if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫п╟ п©п╟п╪я▐я┌я▄ п╪п╬п╫я│я┌я─п╬п╡");
 
 
 	/* Object Memory */
@@ -1781,7 +1781,7 @@ static errr rd_savefile_new_aux(void)
 	/* Incompatible save files */
 	if (tmp16u > z_info->k_max)
 	{
-		note(format("Слишком много (%u) видов предметов!", tmp16u));
+		note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ (%u) п╡п╦п╢п╬п╡ п©я─п╣п╢п╪п╣я┌п╬п╡!", tmp16u));
 		return (-1);
 	}
 
@@ -1797,7 +1797,7 @@ static errr rd_savefile_new_aux(void)
 		k_ptr->aware = (tmp8u & 0x01) ? TRUE: FALSE;
 		k_ptr->tried = (tmp8u & 0x02) ? TRUE: FALSE;
 	}
-	if (arg_fiddle) note("Загружена память предметов");
+	if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫п╟ п©п╟п╪я▐я┌я▄ п©я─п╣п╢п╪п╣я┌п╬п╡");
 
 
 	/* Load the Quests */
@@ -1806,7 +1806,7 @@ static errr rd_savefile_new_aux(void)
 	/* Incompatible save files */
 	if (tmp16u > MAX_Q_IDX)
 	{
-		note(format("Слишком много (%u) квестов!", tmp16u));
+		note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ (%u) п╨п╡п╣я│я┌п╬п╡!", tmp16u));
 		return (-1);
 	}
 
@@ -1819,7 +1819,7 @@ static errr rd_savefile_new_aux(void)
 		rd_byte(&tmp8u);
 		rd_byte(&tmp8u);
 	}
-	if (arg_fiddle) note("Загружены специальные квесты");
+	if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫я▀ я│п©п╣я├п╦п╟п╩я▄п╫я▀п╣ п╨п╡п╣я│я┌я▀");
 
 
 	/* Load the Artifacts */
@@ -1828,7 +1828,7 @@ static errr rd_savefile_new_aux(void)
 	/* Incompatible save files */
 	if (tmp16u > z_info->a_max)
 	{
-		note(format("Слишком много (%u) артефактов!", tmp16u));
+		note(format("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ (%u) п╟я─я┌п╣я└п╟п╨я┌п╬п╡!", tmp16u));
 		return (-1);
 	}
 
@@ -1841,19 +1841,19 @@ static errr rd_savefile_new_aux(void)
 		rd_byte(&tmp8u);
 		rd_byte(&tmp8u);
 	}
-	if (arg_fiddle) note("Загружены артефакты");
+	if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫я▀ п╟я─я┌п╣я└п╟п╨я┌я▀");
 
 
 	/* Read the extra stuff */
 	if (rd_extra()) return (-1);
-	if (arg_fiddle) note("Загружена дополнительная информация");
+	if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫п╟ п╢п╬п©п╬п╩п╫п╦я┌п╣п╩я▄п╫п╟я▐ п╦п╫я└п╬я─п╪п╟я├п╦я▐");
 
 
 	/* Read random artifacts */
 	if (adult_rand_artifacts)
 	{
 		if (rd_randarts()) return (-1);
-		if (arg_fiddle) note("Загружены случайные артефакты");
+		if (arg_fiddle) note("п≈п╟пЁя─я┐п╤п╣п╫я▀ я│п╩я┐я┤п╟п╧п╫я▀п╣ п╟я─я┌п╣я└п╟п╨я┌я▀");
 	}
 
 
@@ -1871,7 +1871,7 @@ static errr rd_savefile_new_aux(void)
 	/* Read the inventory */
 	if (rd_inventory())
 	{
-		note("Не удалось прочитать инвентарь");
+		note("п²п╣ я┐п╢п╟п╩п╬я│я▄ п©я─п╬я┤п╦я┌п╟я┌я▄ п╦п╫п╡п╣п╫я┌п╟я─я▄");
 		return (-1);
 	}
 
@@ -1888,10 +1888,10 @@ static errr rd_savefile_new_aux(void)
 	if (!p_ptr->is_dead)
 	{
 		/* Dead players have no dungeon */
-		note("Восстановления подземелья...");
+		note("п▓п╬я│я│я┌п╟п╫п╬п╡п╩п╣п╫п╦я▐ п©п╬п╢п╥п╣п╪п╣п╩я▄я▐...");
 		if (rd_dungeon())
 		{
-			note("Ошибка чтения подземелья");
+			note("п·я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п©п╬п╢п╥п╣п╪п╣п╩я▄я▐");
 			return (-1);
 		}
 
@@ -1909,7 +1909,7 @@ static errr rd_savefile_new_aux(void)
 	/* Verify */
 	if (o_v_check != n_v_check)
 	{
-		note("Несовпадение контрольной суммы!");
+		note("п²п╣я│п╬п╡п©п╟п╢п╣п╫п╦п╣ п╨п╬п╫я┌я─п╬п╩я▄п╫п╬п╧ я│я┐п╪п╪я▀!");
 		return (-1);
 	}
 
@@ -1922,7 +1922,7 @@ static errr rd_savefile_new_aux(void)
 	/* Verify */
 	if (o_x_check != n_x_check)
 	{
-		note("Несовпадение кодированной контрольной суммы!");
+		note("п²п╣я│п╬п╡п©п╟п╢п╣п╫п╦п╣ п╨п╬п╢п╦я─п╬п╡п╟п╫п╫п╬п╧ п╨п╬п╫я┌я─п╬п╩я▄п╫п╬п╧ я│я┐п╪п╪я▀!");
 		return (-1);
 	}
 
@@ -1995,7 +1995,7 @@ bool load_player(void)
 	struct stat	statbuf;
 #endif /* VERIFY_TIMESTAMP */
 
-	cptr what = "неизвестная ошибка";
+	cptr what = "п╫п╣п╦п╥п╡п╣я│я┌п╫п╟я▐ п╬я┬п╦п╠п╨п╟";
 
 
 	/* Paranoia */
@@ -2021,7 +2021,7 @@ bool load_player(void)
 	if (fd < 0)
 	{
 		/* Give a message */
-		msg_print("Сохраненная игра не существует.");
+		msg_print("п║п╬я┘я─п╟п╫п╣п╫п╫п╟я▐ п╦пЁя─п╟ п╫п╣ я│я┐я┴п╣я│я┌п╡я┐п╣я┌.");
 		message_flush();
 
 		/* Allow this */
@@ -2061,7 +2061,7 @@ bool load_player(void)
 			my_fclose(fkk);
 
 			/* Message */
-			msg_print("Сохраненная игра уже используется.");
+			msg_print("п║п╬я┘я─п╟п╫п╣п╫п╫п╟я▐ п╦пЁя─п╟ я┐п╤п╣ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐.");
 			message_flush();
 
 			/* Oops */
@@ -2103,7 +2103,7 @@ bool load_player(void)
 		if (fd < 0) err = -1;
 
 		/* Message (below) */
-		if (err) what = "Не удалось открыть сохраненную игру";
+		if (err) what = "п²п╣ я┐п╢п╟п╩п╬я│я▄ п╬я┌п╨я─я▀я┌я▄ я│п╬я┘я─п╟п╫п╣п╫п╫я┐я▌ п╦пЁя─я┐";
 	}
 
 	/* Process file */
@@ -2127,7 +2127,7 @@ bool load_player(void)
 		if (fd_read(fd, (char*)(vvv), sizeof(vvv))) err = -1;
 
 		/* What */
-		if (err) what = "Не удалось прочитать сохраненную игру";
+		if (err) what = "п²п╣ я┐п╢п╟п╩п╬я│я▄ п©я─п╬я┤п╦я┌п╟я┌я▄ я│п╬я┘я─п╟п╫п╣п╫п╫я┐я▌ п╦пЁя─я┐";
 
 		/* Close the file */
 		fd_close(fd);
@@ -2148,12 +2148,12 @@ bool load_player(void)
 		if (older_than(OLD_VERSION_MAJOR, OLD_VERSION_MINOR, OLD_VERSION_PATCH))
 		{
 			err = -1;
-			what = "Сохраненная игра слишком стара";
+			what = "п║п╬я┘я─п╟п╫п╣п╫п╫п╟я▐ п╦пЁя─п╟ я│п╩п╦я┬п╨п╬п╪ я│я┌п╟я─п╟";
 		}
 		else if (!older_than(VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH + 1))
 		{
 			err = -1;
-			what = "Сохраненная игра из будущего";
+			what = "п║п╬я┘я─п╟п╫п╣п╫п╫п╟я▐ п╦пЁя─п╟ п╦п╥ п╠я┐п╢я┐я┴п╣пЁп╬";
 		}
 		else
 		{
@@ -2161,7 +2161,7 @@ bool load_player(void)
 			err = rd_savefile();
 
 			/* Message (below) */
-			if (err) what = "Не удалось понять сохраненную игру";
+			if (err) what = "п²п╣ я┐п╢п╟п╩п╬я│я▄ п©п╬п╫я▐я┌я▄ я│п╬я┘я─п╟п╫п╣п╫п╫я┐я▌ п╦пЁя─я┐";
 		}
 	}
 
@@ -2172,7 +2172,7 @@ bool load_player(void)
 		if (!turn) err = -1;
 
 		/* Message (below) */
-		if (err) what = "ошибка сохраненной игры";
+		if (err) what = "п╬я┬п╦п╠п╨п╟ я│п╬я┘я─п╟п╫п╣п╫п╫п╬п╧ п╦пЁя─я▀";
 	}
 
 #ifdef VERIFY_TIMESTAMP
@@ -2184,7 +2184,7 @@ bool load_player(void)
 		    sf_when < (statbuf.st_ctime - 100))
 		{
 			/* Message */
-			what = "неправильное время";
+			what = "п╫п╣п©я─п╟п╡п╦п╩я▄п╫п╬п╣ п╡я─п╣п╪я▐";
 
 			/* Oops */
 			err = -1;
@@ -2202,7 +2202,7 @@ bool load_player(void)
 		    (version_patch != sf_patch))
 		{
 			/* Message */
-			msg_format("Конвертирована сохраненная игра версии %d.%d.%d.",
+			msg_format("п п╬п╫п╡п╣я─я┌п╦я─п╬п╡п╟п╫п╟ я│п╬я┘я─п╟п╫п╣п╫п╫п╟я▐ п╦пЁя─п╟ п╡п╣я─я│п╦п╦ %d.%d.%d.",
 			           sf_major, sf_minor, sf_patch);
 			message_flush();
 		}
@@ -2273,7 +2273,7 @@ bool load_player(void)
 
 
 	/* Message */
-	msg_format("Ошибка (%s) чтения версии %d.%d.%d.",
+	msg_format("п·я┬п╦п╠п╨п╟ (%s) я┤я┌п╣п╫п╦я▐ п╡п╣я─я│п╦п╦ %d.%d.%d.",
 	           what, sf_major, sf_minor, sf_patch);
 	message_flush();
 

@@ -67,11 +67,11 @@ Changes in Angband 3.0.4:
 - Rods of Recall, Perception, Curing, Healing, Restoration, and Speed
   will not be destroyed by electricity.
 - Made Raal's Tome of Destruction more, and Kelek's Grimoire of Power
-  less common. (Timo Pietil‰)
+  less common. (Timo Pietil√§)
 - Heavy crossbows no longer can get the 'of the Haradrim' suffix and
   'light crossbows of the Haradrim' get a smaller damage bonus. (Timo
-  Pietil‰)
-- Removed fire brand from ammo 'of Holy Might'. (Timo Pietil‰)
+  Pietil√§)
+- Removed fire brand from ammo 'of Holy Might'. (Timo Pietil√§)
 - Give the short range teleport effect from gravity attacks on monsters
   an additional 1 in 3 chance to teleport the monster away.  This should
   make abusing the Rift spell a bit harder.

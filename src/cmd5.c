@@ -126,8 +126,8 @@ void print_spells(const byte *spells, int num, int y, int x)
 
 	/* Title the list */
 	prt("", y, x);
-	put_str("Название", y, x + 5);
-	put_str("Ур Мана Сбой Инфо", y, x + 35);
+	put_str("п²п╟п╥п╡п╟п╫п╦п╣", y, x + 5);
+	put_str("пёя─ п°п╟п╫п╟ п║п╠п╬п╧ п≤п╫я└п╬", y, x + 35);
 
 	/* Dump the spells */
 	for (i = 0; i < num; i++)
@@ -141,7 +141,7 @@ void print_spells(const byte *spells, int num, int y, int x)
 		/* Skip illegible spells */
 		if (s_ptr->slevel >= 99)
 		{
-			strnfmt(out_val, sizeof(out_val), "  %c) %-30s", I2A(i), "(нельзя)");
+			strnfmt(out_val, sizeof(out_val), "  %c) %-30s", I2A(i), "(п╫п╣п╩я▄п╥я▐)");
 			c_prt(TERM_L_DARK, out_val, y + i + 1, x);
 			continue;
 		}
@@ -155,25 +155,25 @@ void print_spells(const byte *spells, int num, int y, int x)
 		/* Analyze the spell */
 		if (p_ptr->spell_flags[spell] & PY_SPELL_FORGOTTEN)
 		{
-			comment = " забыто";
+			comment = " п╥п╟п╠я▀я┌п╬";
 			line_attr = TERM_YELLOW;
 		}
 		else if (!(p_ptr->spell_flags[spell] & PY_SPELL_LEARNED))
 		{
 			if (s_ptr->slevel <= p_ptr->lev)
 			{
-				comment = " неизвестно";
+				comment = " п╫п╣п╦п╥п╡п╣я│я┌п╫п╬";
 				line_attr = TERM_L_BLUE;
 			}
 			else
 			{
-				comment = " сложно";
+				comment = " я│п╩п╬п╤п╫п╬";
 				line_attr = TERM_RED;
 			}
 		}
 		else if (!(p_ptr->spell_flags[spell] & PY_SPELL_WORKED))
 		{
-			comment = " не испытано";
+			comment = " п╫п╣ п╦я│п©я▀я┌п╟п╫п╬";
 			line_attr = TERM_L_GREEN;
 		}
 
@@ -343,8 +343,8 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 
 	/* Build a prompt (accept all spells) */
 	strnfmt(out_val, 78, (cp_ptr->spell_book == TV_MAGIC_BOOK) ?
-		"(Заклинания %c-%c, *=список, ESC=выход) %s какое заклинание? " :
-		"(Молитвы %c-%c, *=список, ESC=выход) %s какую молитву? ",
+		"(п≈п╟п╨п╩п╦п╫п╟п╫п╦я▐ %c-%c, *=я│п©п╦я│п╬п╨, ESC=п╡я▀я┘п╬п╢) %s п╨п╟п╨п╬п╣ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣? " :
+		"(п°п╬п╩п╦я┌п╡я▀ %c-%c, *=я│п©п╦я│п╬п╨, ESC=п╡я▀я┘п╬п╢) %s п╨п╟п╨я┐я▌ п╪п╬п╩п╦я┌п╡я┐? ",
 		I2A(0), I2A(num-1), prompt);
 
 	/* Get a spell from the user */
@@ -393,7 +393,7 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 		/* Totally Illegal */
 		if ((i < 0) || (i >= num))
 		{
-			bell("Неправильное заклинание!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╬п╣ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣!");
 			continue;
 		}
 
@@ -403,11 +403,11 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 		/* Require "okay" spells */
 		if (!spell_okay(spell, known))
 		{
-			bell("Неправильное заклинание!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╬п╣ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣!");
 			
 			msg_format((cp_ptr->spell_book == TV_MAGIC_BOOK) ?
-				"Вы не можете колдовать это заклинание." :
-				"Вы не можете читать эту молитву.");
+				"п▓я▀ п╫п╣ п╪п╬п╤п╣я┌п╣ п╨п╬п╩п╢п╬п╡п╟я┌я▄ я█я┌п╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣." :
+				"п▓я▀ п╫п╣ п╪п╬п╤п╣я┌п╣ я┤п╦я┌п╟я┌я▄ я█я┌я┐ п╪п╬п╩п╦я┌п╡я┐.");
 			continue;
 		}
 
@@ -420,7 +420,7 @@ static int get_spell(const object_type *o_ptr, cptr prompt, bool known)
 			s_ptr = &mp_ptr->info[spell];
 
 			/* Prompt */
-			strnfmt(tmp_val, 78, "%^s %s (%d мана, %d%% сбой)? ",
+			strnfmt(tmp_val, 78, "%^s %s (%d п╪п╟п╫п╟, %d%% я│п╠п╬п╧)? ",
 			        prompt, get_spell_name(cp_ptr->spell_book, spell),
 			        s_ptr->smana, spell_chance(spell));
 
@@ -487,7 +487,7 @@ void do_cmd_browse_aux(const object_type *o_ptr)
 	print_spells(spells, num, 1, 20);
 
 	/* Prompt for a command */
-	put_str("(Просмотр) Команда: ", 0, 0);
+	put_str("(п÷я─п╬я│п╪п╬я┌я─) п п╬п╪п╟п╫п╢п╟: ", 0, 0);
 
 	/* Hack -- Get a new command */
 	p_ptr->command_new = inkey();
@@ -525,7 +525,7 @@ void do_cmd_browse(void)
 	/* Warriors are illiterate */
 	if (!cp_ptr->spell_book)
 	{
-		msg_print("Вы не умеете читать!");
+		msg_print("п▓я▀ п╫п╣ я┐п╪п╣п╣я┌п╣ я┤п╦я┌п╟я┌я▄!");
 		return;
 	}
 
@@ -551,8 +551,8 @@ void do_cmd_browse(void)
 	item_tester_tval = cp_ptr->spell_book;
 
 	/* Get an item */
-	q = "Просмотреть какую книгу? ";
-	s = "У вас нет подходящих книг.";
+	q = "п÷я─п╬я│п╪п╬я┌я─п╣я┌я▄ п╨п╟п╨я┐я▌ п╨п╫п╦пЁя┐? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п©п╬п╢я┘п╬п╢я▐я┴п╦я┘ п╨п╫п╦пЁ.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -590,26 +590,26 @@ void do_cmd_study(void)
 
 	if (!cp_ptr->spell_book)
 	{
-		msg_print("Вы не умеете читать!");
+		msg_print("п▓я▀ п╫п╣ я┐п╪п╣п╣я┌п╣ я┤п╦я┌п╟я┌я▄!");
 		return;
 	}
 
 	if (p_ptr->blind || no_lite())
 	{
-		msg_print("Вы ничего не видите!");
+		msg_print("п▓я▀ п╫п╦я┤п╣пЁп╬ п╫п╣ п╡п╦п╢п╦я┌п╣!");
 		return;
 	}
 
 	if (p_ptr->confused)
 	{
-		msg_print("Вы контужены!");
+		msg_print("п▓я▀ п╨п╬п╫я┌я┐п╤п╣п╫я▀!");
 		return;
 	}
 
 	if (!(p_ptr->new_spells))
 	{
-		msg_format("Вы не можете учить новые %s!",
-			(cp_ptr->spell_book == TV_MAGIC_BOOK) ? "заклинания" : "молитвы");
+		msg_format("п▓я▀ п╫п╣ п╪п╬п╤п╣я┌п╣ я┐я┤п╦я┌я▄ п╫п╬п╡я▀п╣ %s!",
+			(cp_ptr->spell_book == TV_MAGIC_BOOK) ? "п╥п╟п╨п╩п╦п╫п╟п╫п╦я▐" : "п╪п╬п╩п╦я┌п╡я▀");
 		return;
 	}
 
@@ -618,8 +618,8 @@ void do_cmd_study(void)
 	item_tester_tval = cp_ptr->spell_book;
 
 	/* Get an item */
-	q = "Учить из какой книги? ";
-	s = "У вас нет подходящих книг.";
+	q = "пёя┤п╦я┌я▄ п╦п╥ п╨п╟п╨п╬п╧ п╨п╫п╦пЁп╦? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п©п╬п╢я┘п╬п╢я▐я┴п╦я┘ п╨п╫п╦пЁ.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -646,7 +646,7 @@ void do_cmd_study(void)
 	if (cp_ptr->flags & CF_CHOOSE_SPELLS)
 	{
 		/* Ask for a spell */
-		spell = get_spell(o_ptr, "Учить", FALSE);
+		spell = get_spell(o_ptr, "пёя┤п╦я┌я▄", FALSE);
 
 		/* Allow cancel */
 		if (spell == -1) return;
@@ -683,8 +683,8 @@ void do_cmd_study(void)
 	if (spell < 0)
 	{
 		/* Message */
-		msg_format("Вы не можете учить %s из этой книги.", (cp_ptr->spell_book == TV_MAGIC_BOOK) ?
-			"заклинания" : "молитвы");
+		msg_format("п▓я▀ п╫п╣ п╪п╬п╤п╣я┌п╣ я┐я┤п╦я┌я▄ %s п╦п╥ я█я┌п╬п╧ п╨п╫п╦пЁп╦.", (cp_ptr->spell_book == TV_MAGIC_BOOK) ?
+			"п╥п╟п╨п╩п╦п╫п╟п╫п╦я▐" : "п╪п╬п╩п╦я┌п╡я▀");
 
 		/* Abort */
 		return;
@@ -708,8 +708,8 @@ void do_cmd_study(void)
 	p_ptr->spell_order[i] = spell;
 
 	/* Mention the result */
-	message_format(MSG_STUDY, 0, "Вы выучили %s - %s.",
-	           (cp_ptr->spell_book == TV_MAGIC_BOOK) ? "заклинание" : "молитву",
+	message_format(MSG_STUDY, 0, "п▓я▀ п╡я▀я┐я┤п╦п╩п╦ %s - %s.",
+	           (cp_ptr->spell_book == TV_MAGIC_BOOK) ? "п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣" : "п╪п╬п╩п╦я┌п╡я┐",
 	           get_spell_name(cp_ptr->spell_book, spell));
 
 	/* One less spell available */
@@ -719,10 +719,10 @@ void do_cmd_study(void)
 	if (p_ptr->new_spells)
 	{
 		/* Message */
-		msg_format("Вы можете выучить еще %d %s.",
+		msg_format("п▓я▀ п╪п╬п╤п╣я┌п╣ п╡я▀я┐я┤п╦я┌я▄ п╣я┴п╣ %d %s.",
 		           p_ptr->new_spells,
-		           (cp_ptr->spell_book == TV_MAGIC_BOOK) ? ((p_ptr->new_spells != 1) ? "заклинаний" : "заклинание") :
-		           					   ((p_ptr->new_spells != 1) ? "молитв" : "молитву"));
+		           (cp_ptr->spell_book == TV_MAGIC_BOOK) ? ((p_ptr->new_spells != 1) ? "п╥п╟п╨п╩п╦п╫п╟п╫п╦п╧" : "п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣") :
+		           					   ((p_ptr->new_spells != 1) ? "п╪п╬п╩п╦я┌п╡" : "п╪п╬п╩п╦я┌п╡я┐"));
 	}
 
 	/* Redraw Study Status */
@@ -752,21 +752,21 @@ void do_cmd_cast(void)
 	/* Require spell ability */
 	if (cp_ptr->spell_book != TV_MAGIC_BOOK)
 	{
-		msg_print("Вы не умеете колдовать!");
+		msg_print("п▓я▀ п╫п╣ я┐п╪п╣п╣я┌п╣ п╨п╬п╩п╢п╬п╡п╟я┌я▄!");
 		return;
 	}
 
 	/* Require lite */
 	if (p_ptr->blind || no_lite())
 	{
-		msg_print("Вы ничего не видите!");
+		msg_print("п▓я▀ п╫п╦я┤п╣пЁп╬ п╫п╣ п╡п╦п╢п╦я┌п╣!");
 		return;
 	}
 
 	/* Not when confused */
 	if (p_ptr->confused)
 	{
-		msg_print("Вы контужены!");
+		msg_print("п▓я▀ п╨п╬п╫я┌я┐п╤п╣п╫я▀!");
 		return;
 	}
 
@@ -775,8 +775,8 @@ void do_cmd_cast(void)
 	item_tester_tval = cp_ptr->spell_book;
 
 	/* Get an item */
-	q = "Использовать какую книгу? ";
-	s = "У вас нет подходящих книг!";
+	q = "п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╨п╟п╨я┐я▌ п╨п╫п╦пЁя┐? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п©п╬п╢я┘п╬п╢я▐я┴п╦я┘ п╨п╫п╦пЁ!";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -800,11 +800,11 @@ void do_cmd_cast(void)
 
 
 	/* Ask for a spell */
-	spell = get_spell(o_ptr, "Колдовать", TRUE);
+	spell = get_spell(o_ptr, "п п╬п╩п╢п╬п╡п╟я┌я▄", TRUE);
 
 	if (spell < 0)
 	{
-		if (spell == -2) msg_print("Вы не знаете ни одного заклинания из этой книги.");
+		if (spell == -2) msg_print("п▓я▀ п╫п╣ п╥п╫п╟п╣я┌п╣ п╫п╦ п╬п╢п╫п╬пЁп╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦я▐ п╦п╥ я█я┌п╬п╧ п╨п╫п╦пЁп╦.");
 		return;
 	}
 
@@ -817,13 +817,13 @@ void do_cmd_cast(void)
 	if (s_ptr->smana > p_ptr->csp)
 	{
 		/* Warning */
-		msg_print("У вас не хватает маны для этого заклинания.");
+		msg_print("пё п╡п╟я│ п╫п╣ я┘п╡п╟я┌п╟п╣я┌ п╪п╟п╫я▀ п╢п╩я▐ я█я┌п╬пЁп╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦я▐.");
 
 		/* Flush input */
 		flush();
 
 		/* Verify */
-		if (!get_check("Все равно попытаться? ")) return;
+		if (!get_check("п▓я│п╣ я─п╟п╡п╫п╬ п©п╬п©я▀я┌п╟я┌я▄я│я▐? ")) return;
 	}
 
 
@@ -834,7 +834,7 @@ void do_cmd_cast(void)
 	if (rand_int(100) < chance)
 	{
 		if (flush_failure) flush();
-		msg_print("У вас не получилось заклинание!");
+		msg_print("пё п╡п╟я│ п╫п╣ п©п╬п╩я┐я┤п╦п╩п╬я│я▄ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣!");
 	}
 
 	/* Process spell */
@@ -879,7 +879,7 @@ void do_cmd_cast(void)
 		p_ptr->csp_frac = 0;
 
 		/* Message */
-		msg_print("Вы слабеете от усилий!");
+		msg_print("п▓я▀ я│п╩п╟п╠п╣п╣я┌п╣ п╬я┌ я┐я│п╦п╩п╦п╧!");
 
 		/* Hack -- Bypass free action */
 		(void)set_paralyzed(p_ptr->paralyzed + randint(5 * oops + 1));
@@ -890,7 +890,7 @@ void do_cmd_cast(void)
 			bool perm = (rand_int(100) < 25);
 
 			/* Message */
-			msg_print("Вы повредили свое здоровье!");
+			msg_print("п▓я▀ п©п╬п╡я─п╣п╢п╦п╩п╦ я│п╡п╬п╣ п╥п╢п╬я─п╬п╡я▄п╣!");
 
 			/* Reduce constitution */
 			(void)dec_stat(A_CON, 15 + randint(10), perm);
@@ -922,21 +922,21 @@ void do_cmd_pray(void)
 	/* Must use prayer books */
 	if (cp_ptr->spell_book != TV_PRAYER_BOOK)
 	{
-		msg_print("Молитесь!");
+		msg_print("п°п╬п╩п╦я┌п╣я│я▄!");
 		return;
 	}
 
 	/* Must have lite */
 	if (p_ptr->blind || no_lite())
 	{
-		msg_print("Вы ничего не видите!");
+		msg_print("п▓я▀ п╫п╦я┤п╣пЁп╬ п╫п╣ п╡п╦п╢п╦я┌п╣!");
 		return;
 	}
 
 	/* Must not be confused */
 	if (p_ptr->confused)
 	{
-		msg_print("Вы контужены!");
+		msg_print("п▓я▀ п╨п╬п╫я┌я┐п╤п╣п╫я▀!");
 		return;
 	}
 
@@ -945,8 +945,8 @@ void do_cmd_pray(void)
 	item_tester_tval = cp_ptr->spell_book;
 
 	/* Get an item */
-	q = "Использовать какую книгу? ";
-	s = "У вас нет подходящих книг!";
+	q = "п≤я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╨п╟п╨я┐я▌ п╨п╫п╦пЁя┐? ";
+	s = "пё п╡п╟я│ п╫п╣я┌ п©п╬п╢я┘п╬п╢я▐я┴п╦я┘ п╨п╫п╦пЁ!";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -969,11 +969,11 @@ void do_cmd_pray(void)
 
 
 	/* Choose a spell */
-	spell = get_spell(o_ptr, "Прочитать", TRUE);
+	spell = get_spell(o_ptr, "п÷я─п╬я┤п╦я┌п╟я┌я▄", TRUE);
 
 	if (spell < 0)
 	{
-		if (spell == -2) msg_print("Вы не знаете ни одной молитвы из этой книги.");
+		if (spell == -2) msg_print("п▓я▀ п╫п╣ п╥п╫п╟п╣я┌п╣ п╫п╦ п╬п╢п╫п╬п╧ п╪п╬п╩п╦я┌п╡я▀ п╦п╥ я█я┌п╬п╧ п╨п╫п╦пЁп╦.");
 		return;
 	}
 
@@ -986,13 +986,13 @@ void do_cmd_pray(void)
 	if (s_ptr->smana > p_ptr->csp)
 	{
 		/* Warning */
-		msg_print("У вас не хватает маны для этой молитвы.");
+		msg_print("пё п╡п╟я│ п╫п╣ я┘п╡п╟я┌п╟п╣я┌ п╪п╟п╫я▀ п╢п╩я▐ я█я┌п╬п╧ п╪п╬п╩п╦я┌п╡я▀.");
 
 		/* Flush input */
 		flush();
 
 		/* Verify */
-		if (!get_check("Все равно попытаться? ")) return;
+		if (!get_check("п▓я│п╣ я─п╟п╡п╫п╬ п©п╬п©я▀я┌п╟я┌я▄я│я▐? ")) return;
 	}
 
 
@@ -1003,7 +1003,7 @@ void do_cmd_pray(void)
 	if (rand_int(100) < chance)
 	{
 		if (flush_failure) flush();
-		msg_print("У вас не получилось сконцентрироваться!");
+		msg_print("пё п╡п╟я│ п╫п╣ п©п╬п╩я┐я┤п╦п╩п╬я│я▄ я│п╨п╬п╫я├п╣п╫я┌я─п╦я─п╬п╡п╟я┌я▄я│я▐!");
 	}
 
 	/* Success */
@@ -1048,7 +1048,7 @@ void do_cmd_pray(void)
 		p_ptr->csp_frac = 0;
 
 		/* Message */
-		msg_print("Вы слабеете от усилий!");
+		msg_print("п▓я▀ я│п╩п╟п╠п╣п╣я┌п╣ п╬я┌ я┐я│п╦п╩п╦п╧!");
 
 		/* Hack -- Bypass free action */
 		(void)set_paralyzed(p_ptr->paralyzed + randint(5 * oops + 1));
@@ -1059,7 +1059,7 @@ void do_cmd_pray(void)
 			bool perm = (rand_int(100) < 25);
 
 			/* Message */
-			msg_print("Вы повредили свое здоровье!");
+			msg_print("п▓я▀ п©п╬п╡я─п╣п╢п╦п╩п╦ я│п╡п╬п╣ п╥п╢п╬я─п╬п╡я▄п╣!");
 
 			/* Reduce constitution */
 			(void)dec_stat(A_CON, 15 + randint(10), perm);

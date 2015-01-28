@@ -2823,7 +2823,7 @@ static void msg_flush(int x)
 	byte a = TERM_L_BLUE;
 
 	/* Pause for response */
-	Term_putstr(x, 0, -1, a, "-далее-");
+	Term_putstr(x, 0, -1, a, "-п╢п╟п╩п╣п╣-");
 
 	if (!auto_more)
 	{
@@ -2835,7 +2835,7 @@ static void msg_flush(int x)
 			if (quick_messages) break;
 			if ((ch == ESCAPE) || (ch == ' ')) break;
 			if ((ch == '\n') || (ch == '\r')) break;
-			bell("Неправильный ответ на запрос -далее-!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╬я┌п╡п╣я┌ п╫п╟ п╥п╟п©я─п╬я│ -п╢п╟п╩п╣п╣-!");
 		}
 	}
 
@@ -3539,7 +3539,7 @@ bool askfor_aux(char *buf, size_t len)
 				}
 				else
 				{
-					bell("Неправильная клавиша!");
+					bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╩п╟п╡п╦я┬п╟!");
 				}
 				break;
 			}
@@ -3629,7 +3629,7 @@ s16b get_quantity(cptr prompt, int max)
 		if (!prompt)
 		{
 			/* Build a prompt */
-			sprintf(tmp, "Количество (0-%d): ", max);
+			sprintf(tmp, "п п╬п╩п╦я┤п╣я│я┌п╡п╬ (0-%d): ", max);
 
 			/* Use that prompt */
 			prompt = tmp;
@@ -3694,7 +3694,7 @@ bool get_check(cptr prompt)
 		if (quick_messages) break;
 		if (ch == ESCAPE) break;
 		if (strchr("YyNn", ch)) break;
-		bell("Неправильный ответ!");
+		bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╬я┌п╡п╣я┌!");
 	}
 
 	/* Erase the prompt */
@@ -3747,7 +3747,7 @@ bool get_com(cptr prompt, char *command)
 void pause_line(int row)
 {
 	prt("", row, 0);
-	put_str("[Нажмите любую клавишу]", row, 23);
+	put_str("[п²п╟п╤п╪п╦я┌п╣ п╩я▌п╠я┐я▌ п╨п╩п╟п╡п╦я┬я┐]", row, 23);
 	(void)inkey();
 	prt("", row, 0);
 }
@@ -3856,7 +3856,7 @@ void request_command(bool shopping)
 			p_ptr->command_arg = 0;
 
 			/* Begin the input */
-			prt("Повторять: ", 0, 0);
+			prt("п÷п╬п╡я┌п╬я─я▐я┌я▄: ", 0, 0);
 
 			/* Get a command count */
 			while (1)
@@ -3871,7 +3871,7 @@ void request_command(bool shopping)
 					p_ptr->command_arg = p_ptr->command_arg / 10;
 
 					/* Show current count */
-					prt(format("Повторять: %d", p_ptr->command_arg), 0, 0);
+					prt(format("п÷п╬п╡я┌п╬я─я▐я┌я▄: %d", p_ptr->command_arg), 0, 0);
 				}
 
 				/* Actual numeric data */
@@ -3881,7 +3881,7 @@ void request_command(bool shopping)
 					if (p_ptr->command_arg >= 1000)
 					{
 						/* Warn */
-						bell("Неправильное количество!");
+						bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╬п╣ п╨п╬п╩п╦я┤п╣я│я┌п╡п╬!");
 
 						/* Limit */
 						p_ptr->command_arg = 9999;
@@ -3895,7 +3895,7 @@ void request_command(bool shopping)
 					}
 
 					/* Show current count */
-					prt(format("Повторять: %d", p_ptr->command_arg), 0, 0);
+					prt(format("п÷п╬п╡я┌п╬я─я▐я┌я▄: %d", p_ptr->command_arg), 0, 0);
 				}
 
 				/* Exit on "unusable" input */
@@ -3922,14 +3922,14 @@ void request_command(bool shopping)
 				p_ptr->command_arg = old_arg;
 
 				/* Show current count */
-				prt(format("Повторять: %d", p_ptr->command_arg), 0, 0);
+				prt(format("п÷п╬п╡я┌п╬я─я▐я┌я▄: %d", p_ptr->command_arg), 0, 0);
 			}
 
 			/* Hack -- white-space means "enter command now" */
 			if ((ch == ' ') || (ch == '\n') || (ch == '\r'))
 			{
 				/* Get a real command */
-				if (!get_com("Команда: ", &ch))
+				if (!get_com("п п╬п╪п╟п╫п╢п╟: ", &ch))
 				{
 					/* Clear count */
 					p_ptr->command_arg = 0;
@@ -3945,7 +3945,7 @@ void request_command(bool shopping)
 		if (ch == '\\')
 		{
 			/* Get a real command */
-			(void)get_com("Команда: ", &ch);
+			(void)get_com("п п╬п╪п╟п╫п╢п╟: ", &ch);
 
 			/* Hack -- bypass keymaps */
 			if (!inkey_next) inkey_next = "";
@@ -3956,7 +3956,7 @@ void request_command(bool shopping)
 		if (ch == '^')
 		{
 			/* Get a new command and controlify it */
-			if (get_com("Символ: ", &ch)) ch = KTRL(ch);
+			if (get_com("п║п╦п╪п╡п╬п╩: ", &ch)) ch = KTRL(ch);
 		}
 
 
@@ -4042,7 +4042,7 @@ void request_command(bool shopping)
 			if ((s[1] == p_ptr->command_cmd) || (s[1] == '*'))
 			{
 				/* Hack -- Verify command */
-				if (!get_check("Уверены? "))
+				if (!get_check("пёп╡п╣я─п╣п╫я▀? "))
 				{
 					/* Hack -- Use "newline" */
 					p_ptr->command_cmd = '\n';
@@ -4111,26 +4111,26 @@ bool is_a_vowel(int ch)
 		case 'I':
 		case 'O':
 		case 'U':
-		case 'а':
-		case 'е':
-		case 'и':
-		case 'о':
-		case 'у':
-		case 'э':
-		case 'ё':
-		case 'ы':
-		case 'ю':
-		case 'я':
-		case 'А':
-		case 'Е':
-		case 'И':
-		case 'О':
-		case 'У':
-		case 'Э':
-		case 'Ё':
-		case 'Ы':
-		case 'Ю':
-		case 'Я':
+		case 'п╟':
+		case 'п╣':
+		case 'п╦':
+		case 'п╬':
+		case 'я┐':
+		case 'я█':
+		case 'я▒':
+		case 'я▀':
+		case 'я▌':
+		case 'я▐':
+		case 'п░':
+		case 'п∙':
+		case 'п≤':
+		case 'п·':
+		case 'пё':
+		case 'п╜':
+		case 'п│':
+		case 'п╚':
+		case 'п╝':
+		case 'п╞':
 		return (TRUE);
 	}
 
@@ -4502,8 +4502,8 @@ void build_gamma_table(int gamma)
  \
 } while (0)
 
-/* Для заданного падежа и числа разворачивает символы
- * русской морфологии. Возвращает род.
+/* п■п╩я▐ п╥п╟п╢п╟п╫п╫п╬пЁп╬ п©п╟п╢п╣п╤п╟ п╦ я┤п╦я│п╩п╟ я─п╟п╥п╡п╬я─п╟я┤п╦п╡п╟п╣я┌ я│п╦п╪п╡п╬п╩я▀
+ * я─я┐я│я│п╨п╬п╧ п╪п╬я─я└п╬п╩п╬пЁп╦п╦. п▓п╬п╥п╡я─п╟я┴п╟п╣я┌ я─п╬п╢.
  */
 int expand_rus_codes(char *d, char *s, int pad, int chsl, int num)
 {
@@ -4513,7 +4513,7 @@ int expand_rus_codes(char *d, char *s, int pad, int chsl, int num)
 	/* Copy the string */
 	for (; *s; s++)
 	{
-		/* Знаки чередующ. гласных */
+		/* п≈п╫п╟п╨п╦ я┤п╣я─п╣п╢я┐я▌я┴. пЁп╩п╟я│п╫я▀я┘ */
 		if (*s == '*' && a_isalpha(*(s+1)))
 		{
 			if ((pad != PAD_IMEN && pad != PAD_VINIT) || chsl != 0)
@@ -4535,17 +4535,17 @@ int expand_rus_codes(char *d, char *s, int pad, int chsl, int num)
 				s++;
 		}
 		
-		/* Знак окончания */
+		/* п≈п╫п╟п╨ п╬п╨п╬п╫я┤п╟п╫п╦я▐ */
 		else if (*s == '$' && a_isalpha(*(s+1)))
 		{
 			s++;
 			
-			/* Существительное */
+			/* п║я┐я┴п╣я│я┌п╡п╦я┌п╣п╩я▄п╫п╬п╣ */
 			if (*s == 'N')
 			{
 				s++;
 				
-				/* 1-ое склонение */
+				/* 1-п╬п╣ я│п╨п╩п╬п╫п╣п╫п╦п╣ */
 				if (*s == '1')
 				{
 					char cf;
@@ -4555,19 +4555,19 @@ int expand_rus_codes(char *d, char *s, int pad, int chsl, int num)
 					
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, chsl ? (cf == 'T' ? "ы" : "и") : (cf == 'N' ? "я" : "а")); break;
-						case PAD_RODIT:  object_desc_str_macro(t, chsl ? (cf == 'N' ? "ь" : "") : (cf == 'T' ? "ы" : "и")); break;
-						case PAD_DAT:    object_desc_str_macro(t, chsl ? (cf == 'N' ? "ям" : "ам") : "е"); break;
-						case PAD_VINIT:  object_desc_str_macro(t, chsl ? (cf == 'T' ? "ы" : "и") : (cf == 'N' ? "ю" : "у")); break;
-						case PAD_TVORIT: object_desc_str_macro(t, chsl ? (cf == 'N' ? "ями" : "ами") : (cf == 'N' ? "ей" : "ой")); break;
-						case PAD_PREDL:  object_desc_str_macro(t, chsl ? (cf == 'N' ? "ях" : "ах") : "е"); break;
+						case PAD_IMEN:   object_desc_str_macro(t, chsl ? (cf == 'T' ? "я▀" : "п╦") : (cf == 'N' ? "я▐" : "п╟")); break;
+						case PAD_RODIT:  object_desc_str_macro(t, chsl ? (cf == 'N' ? "я▄" : "") : (cf == 'T' ? "я▀" : "п╦")); break;
+						case PAD_DAT:    object_desc_str_macro(t, chsl ? (cf == 'N' ? "я▐п╪" : "п╟п╪") : "п╣"); break;
+						case PAD_VINIT:  object_desc_str_macro(t, chsl ? (cf == 'T' ? "я▀" : "п╦") : (cf == 'N' ? "я▌" : "я┐")); break;
+						case PAD_TVORIT: object_desc_str_macro(t, chsl ? (cf == 'N' ? "я▐п╪п╦" : "п╟п╪п╦") : (cf == 'N' ? "п╣п╧" : "п╬п╧")); break;
+						case PAD_PREDL:  object_desc_str_macro(t, chsl ? (cf == 'N' ? "я▐я┘" : "п╟я┘") : "п╣"); break;
 					}
 					
 					chsl = oldchsl;
 					rod = ROD_F;
 				}
 
-				/* 2-ое склонение */
+				/* 2-п╬п╣ я│п╨п╩п╬п╫п╣п╫п╦п╣ */
 				else if (*s == '2')
 				{
 					char cf;
@@ -4577,20 +4577,20 @@ int expand_rus_codes(char *d, char *s, int pad, int chsl, int num)
 					
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, chsl ? (cf == 'E' ? "я" : cf == 'F' ? "и" : "а") : ""); break;
+						case PAD_IMEN:   object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐" : cf == 'F' ? "п╦" : "п╟") : ""); break;
 						case PAD_RODIT:
 						{
-							object_desc_str_macro(t, chsl ? ((cf == 'A' || cf == 'F') ? "ов" :
-								(cf == 'B' ? "ев" : ((cf == 'C' || cf == 'E') ? "ей" : ""))) : "а");
-							/* копья */
-							if (*(t-2) == 'ь' && cf == 'D')
-								*(t-1) = 'я';
+							object_desc_str_macro(t, chsl ? ((cf == 'A' || cf == 'F') ? "п╬п╡" :
+								(cf == 'B' ? "п╣п╡" : ((cf == 'C' || cf == 'E') ? "п╣п╧" : ""))) : "п╟");
+							/* п╨п╬п©я▄я▐ */
+							if (*(t-2) == 'я▄' && cf == 'D')
+								*(t-1) = 'я▐';
 							break;
 						}
-						case PAD_DAT:    object_desc_str_macro(t, chsl ? (cf == 'E' ? "ям" : "ам") : (cf == 'E' ? "ю" : "у")); break;
-						case PAD_VINIT:  object_desc_str_macro(t, chsl ? (cf == 'E' ? "я" : cf == 'F' ? "и" : "а") : ""); break;
-						case PAD_TVORIT: object_desc_str_macro(t, chsl ? (cf == 'E' ? "ями" : "ами") : (cf == 'E' || (*(t-1) == 'ь' && cf == 'D') ? "ем" : "ом")); break;
-						case PAD_PREDL:  object_desc_str_macro(t, chsl ? (cf == 'E' ? "ях" : "ах") : "е"); break;
+						case PAD_DAT:    object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐п╪" : "п╟п╪") : (cf == 'E' ? "я▌" : "я┐")); break;
+						case PAD_VINIT:  object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐" : cf == 'F' ? "п╦" : "п╟") : ""); break;
+						case PAD_TVORIT: object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐п╪п╦" : "п╟п╪п╦") : (cf == 'E' || (*(t-1) == 'я▄' && cf == 'D') ? "п╣п╪" : "п╬п╪")); break;
+						case PAD_PREDL:  object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐я┘" : "п╟я┘") : "п╣"); break;
 					}
 					
 					chsl = oldchsl;
@@ -4601,19 +4601,19 @@ int expand_rus_codes(char *d, char *s, int pad, int chsl, int num)
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, chsl ? "и" : "ь"); break;
-						case PAD_RODIT:  object_desc_str_macro(t, chsl ? "ей" : "и"); break;
-						case PAD_DAT:    object_desc_str_macro(t, chsl ? "ям" : "и"); break;
-						case PAD_VINIT:  object_desc_str_macro(t, chsl ? "и" : "ь"); break;
-						case PAD_TVORIT: object_desc_str_macro(t, chsl ? "ями" : "ью"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, chsl ? "ях" : "и"); break;
+						case PAD_IMEN:   object_desc_str_macro(t, chsl ? "п╦" : "я▄"); break;
+						case PAD_RODIT:  object_desc_str_macro(t, chsl ? "п╣п╧" : "п╦"); break;
+						case PAD_DAT:    object_desc_str_macro(t, chsl ? "я▐п╪" : "п╦"); break;
+						case PAD_VINIT:  object_desc_str_macro(t, chsl ? "п╦" : "я▄"); break;
+						case PAD_TVORIT: object_desc_str_macro(t, chsl ? "я▐п╪п╦" : "я▄я▌"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, chsl ? "я▐я┘" : "п╦"); break;
 					}
 					rod = ROD_F;
 				}
 
 			}
 
-			/* Прилагательное */
+			/* п÷я─п╦п╩п╟пЁп╟я┌п╣п╩я▄п╫п╬п╣ */
 			else if (*s == 'A')
 			{
 				char cf;
@@ -4621,57 +4621,57 @@ int expand_rus_codes(char *d, char *s, int pad, int chsl, int num)
 				s++;
 				cf = *(s+1);
 				
-				/* Мн.ч. */
+				/* п°п╫.я┤. */
 				if (num % 10 != 1 || num / 10 == 1)
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "ие" : "ые"); break;
-						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "их" : "ых"); break;
-						case PAD_DAT:    object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "им" : "ым"); break;
-						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "их" : "ых"); break;
-						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "ими" : "ыми"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "их" : "ых"); break;
+						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦п╣" : "я▀п╣"); break;
+						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦я┘" : "я▀я┘"); break;
+						case PAD_DAT:    object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦п╪" : "я▀п╪"); break;
+						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦я┘" : "я▀я┘"); break;
+						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦п╪п╦" : "я▀п╪п╦"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦я┘" : "я▀я┘"); break;
 					}
 				}
 				
-				/* М.р. */
+				/* п°.я─. */
 				else if (*s == 'M')
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'M') ? "ий" : (((cf == 'U' || cf == 'N') ? "ой" : "ый"))); break;
-						case PAD_RODIT:  object_desc_str_macro(t, "ого"); break;
-						case PAD_DAT:    object_desc_str_macro(t, "ому"); break;
-						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'M') ? "ий" : (((cf == 'U' || cf == 'N') ? "ой" : "ый"))); break;
-						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "им" : "ым"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, "ом"); break;
+						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'M') ? "п╦п╧" : (((cf == 'U' || cf == 'N') ? "п╬п╧" : "я▀п╧"))); break;
+						case PAD_RODIT:  object_desc_str_macro(t, "п╬пЁп╬"); break;
+						case PAD_DAT:    object_desc_str_macro(t, "п╬п╪я┐"); break;
+						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'M') ? "п╦п╧" : (((cf == 'U' || cf == 'N') ? "п╬п╧" : "я▀п╧"))); break;
+						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦п╪" : "я▀п╪"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, "п╬п╪"); break;
 					}
 				}
-				/* Ж.р. */
+				/* п√.я─. */
 				else if (*s == 'F')
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, "ая"); break;
-						case PAD_RODIT:  object_desc_str_macro(t, "ой"); break;
-						case PAD_DAT:    object_desc_str_macro(t, "ой"); break;
-						case PAD_VINIT:  object_desc_str_macro(t, "ую"); break;
-						case PAD_TVORIT: object_desc_str_macro(t, "ой"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, "ой"); break;
+						case PAD_IMEN:   object_desc_str_macro(t, "п╟я▐"); break;
+						case PAD_RODIT:  object_desc_str_macro(t, "п╬п╧"); break;
+						case PAD_DAT:    object_desc_str_macro(t, "п╬п╧"); break;
+						case PAD_VINIT:  object_desc_str_macro(t, "я┐я▌"); break;
+						case PAD_TVORIT: object_desc_str_macro(t, "п╬п╧"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, "п╬п╧"); break;
 					}
 				}
-				/* С.р. */
+				/* п║.я─. */
 				else if (*s == 'N')
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'O' ? "ее" : "ое")); break;
-						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'O' ? "его" : "ого")); break;
-						case PAD_DAT:    object_desc_str_macro(t, (cf == 'O' ? "ему" : "ому")); break;
-						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'O' ? "ее" : "ое")); break;
-						case PAD_TVORIT: object_desc_str_macro(t, "им"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'O' ? "ем" : "ом")); break;
+						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'O' ? "п╣п╣" : "п╬п╣")); break;
+						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'O' ? "п╣пЁп╬" : "п╬пЁп╬")); break;
+						case PAD_DAT:    object_desc_str_macro(t, (cf == 'O' ? "п╣п╪я┐" : "п╬п╪я┐")); break;
+						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'O' ? "п╣п╣" : "п╬п╣")); break;
+						case PAD_TVORIT: object_desc_str_macro(t, "п╦п╪"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'O' ? "п╣п╪" : "п╬п╪")); break;
 					}
 				}
 				
@@ -4692,7 +4692,7 @@ int expand_rus_codes(char *d, char *s, int pad, int chsl, int num)
 }
 
 
-/* Аналогично для одушевленного */
+/* п░п╫п╟п╩п╬пЁп╦я┤п╫п╬ п╢п╩я▐ п╬п╢я┐я┬п╣п╡п╩п╣п╫п╫п╬пЁп╬ */
 int expand_rus_codes2(char *d, char *s, int pad, int chsl, int num)
 {
 	int rod = ROD_M;
@@ -4701,7 +4701,7 @@ int expand_rus_codes2(char *d, char *s, int pad, int chsl, int num)
 	/* Copy the string */
 	for (; *s; s++)
 	{
-		/* Знаки чередующ. гласных */
+		/* п≈п╫п╟п╨п╦ я┤п╣я─п╣п╢я┐я▌я┴. пЁп╩п╟я│п╫я▀я┘ */
 		if (*s == '*')
 		{
 			if (pad != PAD_IMEN || chsl != 0)
@@ -4723,17 +4723,17 @@ int expand_rus_codes2(char *d, char *s, int pad, int chsl, int num)
 				s++;
 		}
 		
-		/* Знак окончания */
+		/* п≈п╫п╟п╨ п╬п╨п╬п╫я┤п╟п╫п╦я▐ */
 		else if (*s == '$')
 		{
 			s++;
 			
-			/* Существительное */
+			/* п║я┐я┴п╣я│я┌п╡п╦я┌п╣п╩я▄п╫п╬п╣ */
 			if (*s == 'N')
 			{
 				s++;
 				
-				/* 1-ое склонение */
+				/* 1-п╬п╣ я│п╨п╩п╬п╫п╣п╫п╦п╣ */
 				if (*s == '1')
 				{
 					char cf;
@@ -4749,19 +4749,19 @@ int expand_rus_codes2(char *d, char *s, int pad, int chsl, int num)
 					
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, chsl ? (cf == 'T' ? "ы" : "и") : (cf == 'N' ? "я" : "а")); break;
-						case PAD_RODIT:  object_desc_str_macro(t, chsl ? (cf == 'N' ? "ь" : "") : (cf == 'T' ? "ы" : "и")); break;
-						case PAD_DAT:    object_desc_str_macro(t, chsl ? (cf == 'N' ? "ям" : "ам") : "е"); break;
-						case PAD_VINIT:  object_desc_str_macro(t, chsl ? (cf == 'T' ? "ы" : "и") : (cf == 'N' ? "ю" : "у")); break;
-						case PAD_TVORIT: object_desc_str_macro(t, chsl ? (cf == 'N' ? "ями" : "ами") : (cf == 'N' ? "ей" : "ой")); break;
-						case PAD_PREDL:  object_desc_str_macro(t, chsl ? (cf == 'N' ? "ях" : "ах") : "е"); break;
+						case PAD_IMEN:   object_desc_str_macro(t, chsl ? (cf == 'T' ? "я▀" : "п╦") : (cf == 'N' ? "я▐" : "п╟")); break;
+						case PAD_RODIT:  object_desc_str_macro(t, chsl ? (cf == 'N' ? "я▄" : "") : (cf == 'T' ? "я▀" : "п╦")); break;
+						case PAD_DAT:    object_desc_str_macro(t, chsl ? (cf == 'N' ? "я▐п╪" : "п╟п╪") : "п╣"); break;
+						case PAD_VINIT:  object_desc_str_macro(t, chsl ? (cf == 'T' ? "я▀" : "п╦") : (cf == 'N' ? "я▌" : "я┐")); break;
+						case PAD_TVORIT: object_desc_str_macro(t, chsl ? (cf == 'N' ? "я▐п╪п╦" : "п╟п╪п╦") : (cf == 'N' ? "п╣п╧" : "п╬п╧")); break;
+						case PAD_PREDL:  object_desc_str_macro(t, chsl ? (cf == 'N' ? "я▐я┘" : "п╟я┘") : "п╣"); break;
 					}
 					
 					chsl = oldchsl;
 					rod = ROD_F;
 				}
 
-				/* 2-ое склонение */
+				/* 2-п╬п╣ я│п╨п╩п╬п╫п╣п╫п╦п╣ */
 				else if (*s == '2')
 				{
 					char cf;
@@ -4774,20 +4774,20 @@ int expand_rus_codes2(char *d, char *s, int pad, int chsl, int num)
 					
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, chsl ? (cf == 'E' ? "я" : cf == 'F' ? "и" : "а") : ""); break;
+						case PAD_IMEN:   object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐" : cf == 'F' ? "п╦" : "п╟") : ""); break;
 						case PAD_RODIT:
 						{
-							object_desc_str_macro(t, chsl ? ((cf == 'A' || cf == 'F') ? "ов" :
-								(cf == 'B' ? "ев" : ((cf == 'C' || cf == 'E') ? "ей" : ""))) : "а"); /* <- XXX! */
-							/* копья */
-							if (*(t-2) == 'ь' && cf == 'D')
-								*(t-1) = 'я';
+							object_desc_str_macro(t, chsl ? ((cf == 'A' || cf == 'F') ? "п╬п╡" :
+								(cf == 'B' ? "п╣п╡" : ((cf == 'C' || cf == 'E') ? "п╣п╧" : ""))) : "п╟"); /* <- XXX! */
+							/* п╨п╬п©я▄я▐ */
+							if (*(t-2) == 'я▄' && cf == 'D')
+								*(t-1) = 'я▐';
 							break;
 						}
-						case PAD_DAT:    object_desc_str_macro(t, chsl ? (cf == 'E' ? "ям" : "ам") : (cf == 'E' ? "ю" : "у")); break;
-						case PAD_VINIT:  object_desc_str_macro(t, chsl ? (cf == 'E' ? "ев" : "ов") : (cf == 'E' ? "я" : (cf == 'D' ? "о" : "а"))); break;
-						case PAD_TVORIT: object_desc_str_macro(t, chsl ? (cf == 'E' ? "ями" : "ами") : (cf == 'E' ? "ем" : "ом")); break;
-						case PAD_PREDL:  object_desc_str_macro(t, chsl ? (cf == 'E' ? "ях" : "ах") : "е"); break;
+						case PAD_DAT:    object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐п╪" : "п╟п╪") : (cf == 'E' ? "я▌" : "я┐")); break;
+						case PAD_VINIT:  object_desc_str_macro(t, chsl ? (cf == 'E' ? "п╣п╡" : "п╬п╡") : (cf == 'E' ? "я▐" : (cf == 'D' ? "п╬" : "п╟"))); break;
+						case PAD_TVORIT: object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐п╪п╦" : "п╟п╪п╦") : (cf == 'E' ? "п╣п╪" : "п╬п╪")); break;
+						case PAD_PREDL:  object_desc_str_macro(t, chsl ? (cf == 'E' ? "я▐я┘" : "п╟я┘") : "п╣"); break;
 					}
 					
 					chsl = oldchsl;
@@ -4798,19 +4798,19 @@ int expand_rus_codes2(char *d, char *s, int pad, int chsl, int num)
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, chsl ? "и" : "ь"); break;
-						case PAD_RODIT:  object_desc_str_macro(t, chsl ? "ей" : "и"); break;
-						case PAD_DAT:    object_desc_str_macro(t, chsl ? "ям" : "и"); break;
-						case PAD_VINIT:  object_desc_str_macro(t, chsl ? "и" : "ь"); break;
-						case PAD_TVORIT: object_desc_str_macro(t, chsl ? "ями" : "ью"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, chsl ? "ях" : "и"); break;
+						case PAD_IMEN:   object_desc_str_macro(t, chsl ? "п╦" : "я▄"); break;
+						case PAD_RODIT:  object_desc_str_macro(t, chsl ? "п╣п╧" : "п╦"); break;
+						case PAD_DAT:    object_desc_str_macro(t, chsl ? "я▐п╪" : "п╦"); break;
+						case PAD_VINIT:  object_desc_str_macro(t, chsl ? "п╦" : "я▄"); break;
+						case PAD_TVORIT: object_desc_str_macro(t, chsl ? "я▐п╪п╦" : "я▄я▌"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, chsl ? "я▐я┘" : "п╦"); break;
 					}
 					rod = ROD_F;
 				}
 
 			}
 
-			/* Прилагательное */
+			/* п÷я─п╦п╩п╟пЁп╟я┌п╣п╩я▄п╫п╬п╣ */
 			else if (*s == 'A')
 			{
 				char cf;
@@ -4818,59 +4818,59 @@ int expand_rus_codes2(char *d, char *s, int pad, int chsl, int num)
 				s++;
 				cf = *(s+1);
 				
-				/* Мн.ч. */
+				/* п°п╫.я┤. */
 				if ((num % 10 != 1 || num / 10 == 1) || cf == 'V')
 				{
 					if (cf == 'V')
 						cf = 'T';
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "ие" : "ые"); break;
-						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "их" : "ых"); break;
-						case PAD_DAT:    object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "им" : "ым"); break;
-						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "их" : "ых"); break;
-						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "ими" : "ыми"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "их" : "ых"); break;
+						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦п╣" : "я▀п╣"); break;
+						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦я┘" : "я▀я┘"); break;
+						case PAD_DAT:    object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦п╪" : "я▀п╪"); break;
+						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦я┘" : "я▀я┘"); break;
+						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦п╪п╦" : "я▀п╪п╦"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'M' || cf == 'N') ? "п╦я┘" : "я▀я┘"); break;
 					}
 				}
 				
-				/* М.р. */
+				/* п°.я─. */
 				else if (*s == 'M')
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'M' || cf == 'O') ? "ий" : (((cf == 'U' || cf == 'N') ? "ой" : "ый"))); break;
-						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'O' ? "его" : "ого")); break;
-						case PAD_DAT:    object_desc_str_macro(t, (cf == 'O' ? "ему" : "ому")); break;
-						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'O' ? "его" : "ого")); break;
-						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'M' || cf == 'N' || cf == 'O') ? "им" : "ым"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'O' ? "ем" : "ом")); break;
+						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'M' || cf == 'O') ? "п╦п╧" : (((cf == 'U' || cf == 'N') ? "п╬п╧" : "я▀п╧"))); break;
+						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'O' ? "п╣пЁп╬" : "п╬пЁп╬")); break;
+						case PAD_DAT:    object_desc_str_macro(t, (cf == 'O' ? "п╣п╪я┐" : "п╬п╪я┐")); break;
+						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'O' ? "п╣пЁп╬" : "п╬пЁп╬")); break;
+						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'M' || cf == 'N' || cf == 'O') ? "п╦п╪" : "я▀п╪"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'O' ? "п╣п╪" : "п╬п╪")); break;
 					}
 				}
-				/* Ж.р. */
+				/* п√.я─. */
 				else if (*s == 'F')
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'O' ? "яя" : "ая")); break;
-						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'O' ? "ей" : "ой")); break;
-						case PAD_DAT:    object_desc_str_macro(t, (cf == 'O' ? "ей" : "ой")); break;
-						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'O' ? "юю" : "ую")); break;
-						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'O' ? "ей" : "ой")); break;
-						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'O' ? "ей" : "ой")); break;
+						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'O' ? "я▐я▐" : "п╟я▐")); break;
+						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'O' ? "п╣п╧" : "п╬п╧")); break;
+						case PAD_DAT:    object_desc_str_macro(t, (cf == 'O' ? "п╣п╧" : "п╬п╧")); break;
+						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'O' ? "я▌я▌" : "я┐я▌")); break;
+						case PAD_TVORIT: object_desc_str_macro(t, (cf == 'O' ? "п╣п╧" : "п╬п╧")); break;
+						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'O' ? "п╣п╧" : "п╬п╧")); break;
 					}
 				}
-				/* С.р. */
+				/* п║.я─. */
 				else if (*s == 'N')
 				{
 					switch (pad)
 					{
-						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'O' ? "ее" : "ое")); break;
-						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'O' ? "его" : "ого")); break;
-						case PAD_DAT:    object_desc_str_macro(t, (cf == 'O' ? "ему" : "ому")); break;
-						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'O' ? "ее" : "ое")); break;
-						case PAD_TVORIT: object_desc_str_macro(t, "им"); break;
-						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'O' ? "ем" : "ом")); break;
+						case PAD_IMEN:   object_desc_str_macro(t, (cf == 'O' ? "п╣п╣" : "п╬п╣")); break;
+						case PAD_RODIT:  object_desc_str_macro(t, (cf == 'O' ? "п╣пЁп╬" : "п╬пЁп╬")); break;
+						case PAD_DAT:    object_desc_str_macro(t, (cf == 'O' ? "п╣п╪я┐" : "п╬п╪я┐")); break;
+						case PAD_VINIT:  object_desc_str_macro(t, (cf == 'O' ? "п╣п╣" : "п╬п╣")); break;
+						case PAD_TVORIT: object_desc_str_macro(t, "п╦п╪"); break;
+						case PAD_PREDL:  object_desc_str_macro(t, (cf == 'O' ? "п╣п╪" : "п╬п╪")); break;
 					}
 				}
 				

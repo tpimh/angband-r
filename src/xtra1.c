@@ -151,13 +151,13 @@ static void prt_title(void)
 	/* Wizard */
 	if (p_ptr->wizard)
 	{
-		p = "[=-ВОЛШЕБ-=]";
+		p = "[=-п▓п·п⌡п╗п∙п▒-=]";
 	}
 
 	/* Winner */
 	else if (p_ptr->total_winner || (p_ptr->lev > PY_MAX_LEVEL))
 	{
-		p = "*ПОБЕДИТЕЛЬ*";
+		p = "*п÷п·п▒п∙п■п≤п╒п∙п⌡п╛*";
 	}
 
 	/* Normal */
@@ -181,12 +181,12 @@ static void prt_level(void)
 
 	if (p_ptr->lev >= p_ptr->max_lev)
 	{
-		put_str("УРОВЕНЬ", ROW_LEVEL, 0);
+		put_str("пёп═п·п▓п∙п²п╛", ROW_LEVEL, 0);
 		c_put_str(TERM_L_GREEN, tmp, ROW_LEVEL, COL_LEVEL + 7);
 	}
 	else
 	{
-		put_str("Уровень", ROW_LEVEL, 0);
+		put_str("пёя─п╬п╡п╣п╫я▄", ROW_LEVEL, 0);
 		c_put_str(TERM_YELLOW, tmp, ROW_LEVEL, COL_LEVEL + 7);
 	}
 }
@@ -203,12 +203,12 @@ static void prt_exp(void)
 
 	if (p_ptr->exp >= p_ptr->max_exp)
 	{
-		put_str("ОПЫТ", ROW_EXP, 0);
+		put_str("п·п÷п╚п╒", ROW_EXP, 0);
 		c_put_str(TERM_L_GREEN, out_val, ROW_EXP, COL_EXP + 4);
 	}
 	else
 	{
-		put_str("Опыт", ROW_EXP, 0);
+		put_str("п·п©я▀я┌", ROW_EXP, 0);
 		c_put_str(TERM_YELLOW, out_val, ROW_EXP, COL_EXP + 4);
 	}
 }
@@ -271,7 +271,7 @@ static void prt_ac(void)
 {
 	char tmp[32];
 
-	put_str("Броня ", ROW_AC, COL_AC);
+	put_str("п▒я─п╬п╫я▐ ", ROW_AC, COL_AC);
 	sprintf(tmp, "%5d", p_ptr->dis_ac + p_ptr->dis_to_a);
 	c_put_str(TERM_L_GREEN, tmp, ROW_AC, COL_AC + 7);
 }
@@ -287,7 +287,7 @@ static void prt_hp(void)
 	byte color;
 
 
-	put_str("ЗДОР. ", ROW_MAXHP, COL_MAXHP);
+	put_str("п≈п■п·п═. ", ROW_MAXHP, COL_MAXHP);
 
 	sprintf(tmp, "%5d", p_ptr->mhp);
 	color = TERM_L_GREEN;
@@ -295,7 +295,7 @@ static void prt_hp(void)
 	c_put_str(color, tmp, ROW_MAXHP, COL_MAXHP + 7);
 
 
-	put_str("Здор. ", ROW_CURHP, COL_CURHP);
+	put_str("п≈п╢п╬я─. ", ROW_CURHP, COL_CURHP);
 
 	sprintf(tmp, "%5d", p_ptr->chp);
 
@@ -329,7 +329,7 @@ static void prt_sp(void)
 	if (!cp_ptr->spell_book) return;
 
 
-	put_str("МАНА   ", ROW_MAXSP, COL_MAXSP);
+	put_str("п°п░п²п░   ", ROW_MAXSP, COL_MAXSP);
 
 	sprintf(tmp, "%5d", p_ptr->msp);
 	color = TERM_L_GREEN;
@@ -337,7 +337,7 @@ static void prt_sp(void)
 	c_put_str(color, tmp, ROW_MAXSP, COL_MAXSP + 7);
 
 
-	put_str("Мана   ", ROW_CURSP, COL_CURSP);
+	put_str("п°п╟п╫п╟   ", ROW_CURSP, COL_CURSP);
 
 	sprintf(tmp, "%5d", p_ptr->csp);
 
@@ -368,15 +368,15 @@ static void prt_depth(void)
 
 	if (!p_ptr->depth)
 	{
-		strcpy(depths, "Город");
+		strcpy(depths, "п⌠п╬я─п╬п╢");
 	}
 	else if (depth_in_feet)
 	{
-		sprintf(depths, "%d фт", p_ptr->depth * 50);
+		sprintf(depths, "%d я└я┌", p_ptr->depth * 50);
 	}
 	else
 	{
-		sprintf(depths, "Ур %d", p_ptr->depth);
+		sprintf(depths, "пёя─ %d", p_ptr->depth);
 	}
 
 	/* Right-Adjust the "depth", and clear old values */
@@ -392,19 +392,19 @@ static void prt_hunger(void)
 	/* Fainting / Starving */
 	if (p_ptr->food < PY_FOOD_FAINT)
 	{
-		c_put_str(TERM_RED, "Ослаб ", ROW_HUNGRY, COL_HUNGRY);
+		c_put_str(TERM_RED, "п·я│п╩п╟п╠ ", ROW_HUNGRY, COL_HUNGRY);
 	}
 
 	/* Weak */
 	else if (p_ptr->food < PY_FOOD_WEAK)
 	{
-		c_put_str(TERM_ORANGE, "Ослаб ", ROW_HUNGRY, COL_HUNGRY);
+		c_put_str(TERM_ORANGE, "п·я│п╩п╟п╠ ", ROW_HUNGRY, COL_HUNGRY);
 	}
 
 	/* Hungry */
 	else if (p_ptr->food < PY_FOOD_ALERT)
 	{
-		c_put_str(TERM_YELLOW, "Голодн", ROW_HUNGRY, COL_HUNGRY);
+		c_put_str(TERM_YELLOW, "п⌠п╬п╩п╬п╢п╫", ROW_HUNGRY, COL_HUNGRY);
 	}
 
 	/* Normal */
@@ -416,13 +416,13 @@ static void prt_hunger(void)
 	/* Full */
 	else if (p_ptr->food < PY_FOOD_MAX)
 	{
-		c_put_str(TERM_L_GREEN, "Сытый ", ROW_HUNGRY, COL_HUNGRY);
+		c_put_str(TERM_L_GREEN, "п║я▀я┌я▀п╧ ", ROW_HUNGRY, COL_HUNGRY);
 	}
 
 	/* Gorged */
 	else
 	{
-		c_put_str(TERM_GREEN, "Объелс", ROW_HUNGRY, COL_HUNGRY);
+		c_put_str(TERM_GREEN, "п·п╠я┼п╣п╩я│", ROW_HUNGRY, COL_HUNGRY);
 	}
 }
 
@@ -434,7 +434,7 @@ static void prt_blind(void)
 {
 	if (p_ptr->blind)
 	{
-		c_put_str(TERM_ORANGE, "Ослеп", ROW_BLIND, COL_BLIND);
+		c_put_str(TERM_ORANGE, "п·я│п╩п╣п©", ROW_BLIND, COL_BLIND);
 	}
 	else
 	{
@@ -450,7 +450,7 @@ static void prt_confused(void)
 {
 	if (p_ptr->confused)
 	{
-		c_put_str(TERM_ORANGE, "Контужен", ROW_CONFUSED, COL_CONFUSED);
+		c_put_str(TERM_ORANGE, "п п╬п╫я┌я┐п╤п╣п╫", ROW_CONFUSED, COL_CONFUSED);
 	}
 	else
 	{
@@ -466,7 +466,7 @@ static void prt_afraid(void)
 {
 	if (p_ptr->afraid)
 	{
-		c_put_str(TERM_ORANGE, "Испуг ", ROW_AFRAID, COL_AFRAID);
+		c_put_str(TERM_ORANGE, "п≤я│п©я┐пЁ ", ROW_AFRAID, COL_AFRAID);
 	}
 	else
 	{
@@ -482,7 +482,7 @@ static void prt_poisoned(void)
 {
 	if (p_ptr->poisoned)
 	{
-		c_put_str(TERM_ORANGE, "Отравлен", ROW_POISONED, COL_POISONED);
+		c_put_str(TERM_ORANGE, "п·я┌я─п╟п╡п╩п╣п╫", ROW_POISONED, COL_POISONED);
 	}
 	else
 	{
@@ -510,7 +510,7 @@ static void prt_state(void)
 	{
 		attr = TERM_RED;
 
-		strcpy(text, "Паралич!  ");
+		strcpy(text, "п÷п╟я─п╟п╩п╦я┤!  ");
 	}
 
 	/* Resting */
@@ -520,7 +520,7 @@ static void prt_state(void)
 		int n = p_ptr->resting;
 
 		/* Start with "Rest" */
-		strcpy(text, "Отдых     ");
+		strcpy(text, "п·я┌п╢я▀я┘     ");
 
 		/* Extensive (timed) rest */
 		if (n >= 1000)
@@ -583,18 +583,18 @@ static void prt_state(void)
 	{
 		if (p_ptr->command_rep > 999)
 		{
-			sprintf(text, "Пвт. %3d00", p_ptr->command_rep / 100);
+			sprintf(text, "п÷п╡я┌. %3d00", p_ptr->command_rep / 100);
 		}
 		else
 		{
-			sprintf(text, "Повтор %3d", p_ptr->command_rep);
+			sprintf(text, "п÷п╬п╡я┌п╬я─ %3d", p_ptr->command_rep);
 		}
 	}
 
 	/* Searching */
 	else if (p_ptr->searching)
 	{
-		strcpy(text, "Поиск     ");
+		strcpy(text, "п÷п╬п╦я│п╨     ");
 	}
 
 	/* Nothing interesting */
@@ -625,14 +625,14 @@ static void prt_speed(void)
 	if (i > 110)
 	{
 		attr = TERM_L_GREEN;
-		sprintf(buf, "Быст (+%d)", (i - 110));
+		sprintf(buf, "п▒я▀я│я┌ (+%d)", (i - 110));
 	}
 
 	/* Slow */
 	else if (i < 110)
 	{
 		attr = TERM_L_UMBER;
-		sprintf(buf, "Медл (-%d)", (110 - i));
+		sprintf(buf, "п°п╣п╢п╩ (-%d)", (110 - i));
 	}
 
 	/* Display the speed */
@@ -644,7 +644,7 @@ static void prt_study(void)
 {
 	if (p_ptr->new_spells)
 	{
-		put_str("Обуч ", ROW_STUDY, COL_STUDY);
+		put_str("п·п╠я┐я┤ ", ROW_STUDY, COL_STUDY);
 	}
 	else
 	{
@@ -659,31 +659,31 @@ static void prt_cut(void)
 
 	if (c > 1000)
 	{
-		c_put_str(TERM_L_RED, "Смертел.раны", ROW_CUT, COL_CUT);
+		c_put_str(TERM_L_RED, "п║п╪п╣я─я┌п╣п╩.я─п╟п╫я▀", ROW_CUT, COL_CUT);
 	}
 	else if (c > 200)
 	{
-		c_put_str(TERM_RED, "Глубок. раны", ROW_CUT, COL_CUT);
+		c_put_str(TERM_RED, "п⌠п╩я┐п╠п╬п╨. я─п╟п╫я▀", ROW_CUT, COL_CUT);
 	}
 	else if (c > 100)
 	{
-		c_put_str(TERM_RED, "Страшн. раны  ", ROW_CUT, COL_CUT);
+		c_put_str(TERM_RED, "п║я┌я─п╟я┬п╫. я─п╟п╫я▀  ", ROW_CUT, COL_CUT);
 	}
 	else if (c > 50)
 	{
-		c_put_str(TERM_ORANGE, "Тяжелые раны", ROW_CUT, COL_CUT);
+		c_put_str(TERM_ORANGE, "п╒я▐п╤п╣п╩я▀п╣ я─п╟п╫я▀", ROW_CUT, COL_CUT);
 	}
 	else if (c > 25)
 	{
-		c_put_str(TERM_ORANGE, "Средние раны", ROW_CUT, COL_CUT);
+		c_put_str(TERM_ORANGE, "п║я─п╣п╢п╫п╦п╣ я─п╟п╫я▀", ROW_CUT, COL_CUT);
 	}
 	else if (c > 10)
 	{
-		c_put_str(TERM_YELLOW, "Легкие раны ", ROW_CUT, COL_CUT);
+		c_put_str(TERM_YELLOW, "п⌡п╣пЁп╨п╦п╣ я─п╟п╫я▀ ", ROW_CUT, COL_CUT);
 	}
 	else if (c)
 	{
-		c_put_str(TERM_YELLOW, "Царапина    ", ROW_CUT, COL_CUT);
+		c_put_str(TERM_YELLOW, "п╕п╟я─п╟п©п╦п╫п╟    ", ROW_CUT, COL_CUT);
 	}
 	else
 	{
@@ -699,15 +699,15 @@ static void prt_stun(void)
 
 	if (s > 100)
 	{
-		c_put_str(TERM_RED, "Без сознания", ROW_STUN, COL_STUN);
+		c_put_str(TERM_RED, "п▒п╣п╥ я│п╬п╥п╫п╟п╫п╦я▐", ROW_STUN, COL_STUN);
 	}
 	else if (s > 50)
 	{
-		c_put_str(TERM_ORANGE, "Тяж. оглушен", ROW_STUN, COL_STUN);
+		c_put_str(TERM_ORANGE, "п╒я▐п╤. п╬пЁп╩я┐я┬п╣п╫", ROW_STUN, COL_STUN);
 	}
 	else if (s)
 	{
-		c_put_str(TERM_ORANGE, "Оглушен     ", ROW_STUN, COL_STUN);
+		c_put_str(TERM_ORANGE, "п·пЁп╩я┐я┬п╣п╫     ", ROW_STUN, COL_STUN);
 	}
 	else
 	{
@@ -1291,8 +1291,8 @@ static void calc_spells(void)
 			p_ptr->spell_flags[j] &= ~PY_SPELL_LEARNED;
 
 			/* Message */
-			msg_format("Вы забыли %s - %s.",
-				   (cp_ptr->spell_book == TV_MAGIC_BOOK ? "заклинание" : "молитву"),
+			msg_format("п▓я▀ п╥п╟п╠я▀п╩п╦ %s - %s.",
+				   (cp_ptr->spell_book == TV_MAGIC_BOOK ? "п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣" : "п╪п╬п╩п╦я┌п╡я┐"),
 			           get_spell_name(cp_ptr->spell_book, j));
 
 			/* One more can be learned */
@@ -1323,8 +1323,8 @@ static void calc_spells(void)
 			p_ptr->spell_flags[j] &= ~PY_SPELL_LEARNED;
 
 			/* Message */
-			msg_format("Вы забыли %s - %s.",
-				   (cp_ptr->spell_book == TV_MAGIC_BOOK ? "заклинание" : "молитву"),
+			msg_format("п▓я▀ п╥п╟п╠я▀п╩п╦ %s - %s.",
+				   (cp_ptr->spell_book == TV_MAGIC_BOOK ? "п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣" : "п╪п╬п╩п╦я┌п╡я┐"),
 			           get_spell_name(cp_ptr->spell_book, j));
 
 			/* One more can be learned */
@@ -1360,8 +1360,8 @@ static void calc_spells(void)
 			/* Known once more */
 			p_ptr->spell_flags[j] |= PY_SPELL_LEARNED;
 
-			msg_format("Вы вспомнили %s - %s.",
-				   (cp_ptr->spell_book == TV_MAGIC_BOOK ? "заклинание" : "молитву"),
+			msg_format("п▓я▀ п╡я│п©п╬п╪п╫п╦п╩п╦ %s - %s.",
+				   (cp_ptr->spell_book == TV_MAGIC_BOOK ? "п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣" : "п╪п╬п╩п╦я┌п╡я┐"),
 			           get_spell_name(cp_ptr->spell_book, j));
 
 			/* One less can be learned */
@@ -1402,11 +1402,11 @@ static void calc_spells(void)
 		if (p_ptr->new_spells)
 		{
 			/* Message */
-			msg_format("Вы можете выучить %d %s.",
+			msg_format("п▓я▀ п╪п╬п╤п╣я┌п╣ п╡я▀я┐я┤п╦я┌я▄ %d %s.",
 			           p_ptr->new_spells,
 			           (p_ptr->new_spells > 1 ?
-			           (cp_ptr->spell_book == TV_MAGIC_BOOK ? "заклинаний" : "молитв") :
-			            (cp_ptr->spell_book == TV_MAGIC_BOOK ? "заклинание" : "молитву")));
+			           (cp_ptr->spell_book == TV_MAGIC_BOOK ? "п╥п╟п╨п╩п╦п╫п╟п╫п╦п╧" : "п╪п╬п╩п╦я┌п╡") :
+			            (cp_ptr->spell_book == TV_MAGIC_BOOK ? "п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣" : "п╪п╬п╩п╦я┌п╡я┐")));
 		}
 
 		/* Redraw Study Status */
@@ -1537,11 +1537,11 @@ static void calc_mana(void)
 		/* Message */
 		if (p_ptr->cumber_glove)
 		{
-			msg_print("Вы плохо колдуете в перчатках.");
+			msg_print("п▓я▀ п©п╩п╬я┘п╬ п╨п╬п╩п╢я┐п╣я┌п╣ п╡ п©п╣я─я┤п╟я┌п╨п╟я┘.");
 		}
 		else
 		{
-			msg_print("Вы начинаете колдовать лучше без перчаток.");
+			msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ п╨п╬п╩п╢п╬п╡п╟я┌я▄ п╩я┐я┤я┬п╣ п╠п╣п╥ п©п╣я─я┤п╟я┌п╬п╨.");
 		}
 	}
 
@@ -1552,11 +1552,11 @@ static void calc_mana(void)
 		/* Message */
 		if (p_ptr->cumber_armor)
 		{
-			msg_print("Вес ваших доспехов стесняет ваши движения.");
+			msg_print("п▓п╣я│ п╡п╟я┬п╦я┘ п╢п╬я│п©п╣я┘п╬п╡ я│я┌п╣я│п╫я▐п╣я┌ п╡п╟я┬п╦ п╢п╡п╦п╤п╣п╫п╦я▐.");
 		}
 		else
 		{
-			msg_print("Вы можете двигаться более свободно.");
+			msg_print("п▓я▀ п╪п╬п╤п╣я┌п╣ п╢п╡п╦пЁп╟я┌я▄я│я▐ п╠п╬п╩п╣п╣ я│п╡п╬п╠п╬п╢п╫п╬.");
 		}
 	}
 }
@@ -2555,18 +2555,18 @@ static void calc_bonuses(void)
 	if (old_heavy_shoot != p_ptr->heavy_shoot)
 	{
 		/* Message */
-		/* По всей видимости имеет смысл только для арбалетов */
+		/* п÷п╬ п╡я│п╣п╧ п╡п╦п╢п╦п╪п╬я│я┌п╦ п╦п╪п╣п╣я┌ я│п╪я▀я│п╩ я┌п╬п╩я▄п╨п╬ п╢п╩я▐ п╟я─п╠п╟п╩п╣я┌п╬п╡ */
 		if (p_ptr->heavy_shoot)
 		{
-			msg_print("Вам трудно поднять такой тяжелый арбалет.");
+			msg_print("п▓п╟п╪ я┌я─я┐п╢п╫п╬ п©п╬п╢п╫я▐я┌я▄ я┌п╟п╨п╬п╧ я┌я▐п╤п╣п╩я▀п╧ п╟я─п╠п╟п╩п╣я┌.");
 		}
 		else if (inventory[INVEN_BOW].k_idx)
 		{
-			msg_print("Вам больше не трудно поднимать арбалет.");
+			msg_print("п▓п╟п╪ п╠п╬п╩я▄я┬п╣ п╫п╣ я┌я─я┐п╢п╫п╬ п©п╬п╢п╫п╦п╪п╟я┌я▄ п╟я─п╠п╟п╩п╣я┌.");
 		}
 		else
 		{
-			msg_print("Вы с облегчением отложили ваш тяжелый арбалет.");
+			msg_print("п▓я▀ я│ п╬п╠п╩п╣пЁя┤п╣п╫п╦п╣п╪ п╬я┌п╩п╬п╤п╦п╩п╦ п╡п╟я┬ я┌я▐п╤п╣п╩я▀п╧ п╟я─п╠п╟п╩п╣я┌.");
 		}
 	}
 
@@ -2576,15 +2576,15 @@ static void calc_bonuses(void)
 		/* Message */
 		if (p_ptr->heavy_wield)
 		{
-			msg_print("Вам трудно поднимать такое тяжелое оружие.");
+			msg_print("п▓п╟п╪ я┌я─я┐п╢п╫п╬ п©п╬п╢п╫п╦п╪п╟я┌я▄ я┌п╟п╨п╬п╣ я┌я▐п╤п╣п╩п╬п╣ п╬я─я┐п╤п╦п╣.");
 		}
 		else if (inventory[INVEN_WIELD].k_idx)
 		{
-			msg_print("Вам больше не трудно поднимать оружие.");
+			msg_print("п▓п╟п╪ п╠п╬п╩я▄я┬п╣ п╫п╣ я┌я─я┐п╢п╫п╬ п©п╬п╢п╫п╦п╪п╟я┌я▄ п╬я─я┐п╤п╦п╣.");
 		}
 		else
 		{
-			msg_print("Вы с облегчением отложили ваше тяжелое оружие.");	
+			msg_print("п▓я▀ я│ п╬п╠п╩п╣пЁя┤п╣п╫п╦п╣п╪ п╬я┌п╩п╬п╤п╦п╩п╦ п╡п╟я┬п╣ я┌я▐п╤п╣п╩п╬п╣ п╬я─я┐п╤п╦п╣.");	
 		}
 	}
 
@@ -2594,15 +2594,15 @@ static void calc_bonuses(void)
 		/* Message */
 		if (p_ptr->icky_wield)
 		{
-			msg_print("Вы чувствуете себя неуютно с этим оружием.");
+			msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╫п╣я┐я▌я┌п╫п╬ я│ я█я┌п╦п╪ п╬я─я┐п╤п╦п╣п╪.");
 		}
 		else if (inventory[INVEN_WIELD].k_idx)
 		{
-			msg_print("Вы перестаете чувствовать себя неуютно с этим оружием.");
+			msg_print("п▓я▀ п©п╣я─п╣я│я┌п╟п╣я┌п╣ я┤я┐п╡я│я┌п╡п╬п╡п╟я┌я▄ я│п╣п╠я▐ п╫п╣я┐я▌я┌п╫п╬ я│ я█я┌п╦п╪ п╬я─я┐п╤п╦п╣п╪.");
 		}
 		else
 		{
-			msg_print("Вы перестаете чувствовать себя неуютно, отложив оружие.");
+			msg_print("п▓я▀ п©п╣я─п╣я│я┌п╟п╣я┌п╣ я┤я┐п╡я│я┌п╡п╬п╡п╟я┌я▄ я│п╣п╠я▐ п╫п╣я┐я▌я┌п╫п╬, п╬я┌п╩п╬п╤п╦п╡ п╬я─я┐п╤п╦п╣.");
 		}
 	}
 }

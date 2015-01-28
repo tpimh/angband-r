@@ -170,7 +170,7 @@ void compact_monsters(int size)
 
 
 	/* Message (only if compacting) */
-	if (size) msg_print("Удаление избыточных монстров...");
+	if (size) msg_print("пёп╢п╟п╩п╣п╫п╦п╣ п╦п╥п╠я▀я┌п╬я┤п╫я▀я┘ п╪п╬п╫я│я┌я─п╬п╡...");
 
 
 	/* Compact at least 'size' objects */
@@ -333,7 +333,7 @@ s16b mon_pop(void)
 
 
 	/* Warn the player (except during dungeon creation) */
-	if (character_dungeon) msg_print("Слишком много монстров!");
+	if (character_dungeon) msg_print("п║п╩п╦я┬п╨п╬п╪ п╪п╫п╬пЁп╬ п╪п╬п╫я│я┌я─п╬п╡!");
 
 	/* Try not to crash */
 	return (0);
@@ -657,8 +657,8 @@ void display_monlist(void)
 	}
 }
 
-/* Буквы "неодушевленных" в языковом смысле монстров (Вы бьете гриба - нельзя,
- * нужно Вы бьете гриб).
+/* п▒я┐п╨п╡я▀ "п╫п╣п╬п╢я┐я┬п╣п╡п╩п╣п╫п╫я▀я┘" п╡ я▐п╥я▀п╨п╬п╡п╬п╪ я│п╪я▀я│п╩п╣ п╪п╬п╫я│я┌я─п╬п╡ (п▓я▀ п╠я▄п╣я┌п╣ пЁя─п╦п╠п╟ - п╫п╣п╩я▄п╥я▐,
+ * п╫я┐п╤п╫п╬ п▓я▀ п╠я▄п╣я┌п╣ пЁя─п╦п╠).
  */
 #define NEODUSH_MONSTRY ",s"
 
@@ -752,66 +752,66 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode, i
 			{
 				switch (pad)
 				{
-					case PAD_IMEN: res = "оно"; break;
-					case PAD_RODIT: res = "его"; break;
-					case PAD_DAT: res = "нему"; break;
-					case PAD_VINIT: res = "его"; break;
-					case PAD_TVORIT: res = "им"; break;
-					case PAD_PREDL: res = "нем"; break;
+					case PAD_IMEN: res = "п╬п╫п╬"; break;
+					case PAD_RODIT: res = "п╣пЁп╬"; break;
+					case PAD_DAT: res = "п╫п╣п╪я┐"; break;
+					case PAD_VINIT: res = "п╣пЁп╬"; break;
+					case PAD_TVORIT: res = "п╦п╪"; break;
+					case PAD_PREDL: res = "п╫п╣п╪"; break;
 				}
 				break;
 			}
-			case 0x01: res = "ему"; break;
-			case 0x02: res = "его"; break;
-			case 0x03: res = "себя"; break;
-			case 0x04: res = "что-то"; break;
-			case 0x05: res = "что-то"; break;
-			case 0x06: res = "чей-то"; break;
-			case 0x07: res = "себя"; break;
+			case 0x01: res = "п╣п╪я┐"; break;
+			case 0x02: res = "п╣пЁп╬"; break;
+			case 0x03: res = "я│п╣п╠я▐"; break;
+			case 0x04: res = "я┤я┌п╬-я┌п╬"; break;
+			case 0x05: res = "я┤я┌п╬-я┌п╬"; break;
+			case 0x06: res = "я┤п╣п╧-я┌п╬"; break;
+			case 0x07: res = "я│п╣п╠я▐"; break;
 
 			/* Male (assume human if vague) */
 			case 0x10:
 			{
 				switch (pad)
 				{
-					case PAD_IMEN: res = "он"; break;
-					case PAD_RODIT: res = "его"; break;
-					case PAD_DAT: res = "нему"; break;
-					case PAD_VINIT: res = "его"; break;
-					case PAD_TVORIT: res = "им"; break;
-					case PAD_PREDL: res = "нем"; break;
+					case PAD_IMEN: res = "п╬п╫"; break;
+					case PAD_RODIT: res = "п╣пЁп╬"; break;
+					case PAD_DAT: res = "п╫п╣п╪я┐"; break;
+					case PAD_VINIT: res = "п╣пЁп╬"; break;
+					case PAD_TVORIT: res = "п╦п╪"; break;
+					case PAD_PREDL: res = "п╫п╣п╪"; break;
 				}
 				break;
 			}
-			case 0x11: res = "ему"; break;
-			case 0x12: res = "его"; break;
-			case 0x13: res = "себя"; break;
-			case 0x14: res = "кто-то"; break;
-			case 0x15: res = "кто-то"; break;
-			case 0x16: res = "чей-то"; break;
-			case 0x17: res = "себя"; break;
+			case 0x11: res = "п╣п╪я┐"; break;
+			case 0x12: res = "п╣пЁп╬"; break;
+			case 0x13: res = "я│п╣п╠я▐"; break;
+			case 0x14: res = "п╨я┌п╬-я┌п╬"; break;
+			case 0x15: res = "п╨я┌п╬-я┌п╬"; break;
+			case 0x16: res = "я┤п╣п╧-я┌п╬"; break;
+			case 0x17: res = "я│п╣п╠я▐"; break;
 
 			/* Female (assume human if vague) */
 			case 0x20:
 			{
 				switch (pad)
 				{
-					case PAD_IMEN: res = "она"; break;
-					case PAD_RODIT: res = "ее"; break;
-					case PAD_DAT: res = "ней"; break;
-					case PAD_VINIT: res = "ее"; break;
-					case PAD_TVORIT: res = "ей"; break;
-					case PAD_PREDL: res = "ней"; break;
+					case PAD_IMEN: res = "п╬п╫п╟"; break;
+					case PAD_RODIT: res = "п╣п╣"; break;
+					case PAD_DAT: res = "п╫п╣п╧"; break;
+					case PAD_VINIT: res = "п╣п╣"; break;
+					case PAD_TVORIT: res = "п╣п╧"; break;
+					case PAD_PREDL: res = "п╫п╣п╧"; break;
 				}
 				break;
 			}
-			case 0x21: res = "ей"; break;
-			case 0x22: res = "ее"; break;
-			case 0x23: res = "себя"; break;
-			case 0x24: res = "кто-то"; break;
-			case 0x25: res = "кто-то"; break;
-			case 0x26: res = "чей-то"; break;
-			case 0x27: res = "себя"; break;
+			case 0x21: res = "п╣п╧"; break;
+			case 0x22: res = "п╣п╣"; break;
+			case 0x23: res = "я│п╣п╠я▐"; break;
+			case 0x24: res = "п╨я┌п╬-я┌п╬"; break;
+			case 0x25: res = "п╨я┌п╬-я┌п╬"; break;
+			case 0x26: res = "я┤п╣п╧-я┌п╬"; break;
+			case 0x27: res = "я│п╣п╠я▐"; break;
 		}
 
 		/* Copy the result */
@@ -823,9 +823,9 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode, i
 	else if ((mode & 0x02) && (mode & 0x01))
 	{
 		/* The monster is visible, so use its gender */
-		if (r_ptr->flags1 & (RF1_FEMALE)) my_strcpy(desc, "себя", max);
-		else if (r_ptr->flags1 & (RF1_MALE)) my_strcpy(desc, "себя", max);
-		else my_strcpy(desc, "себя", max);
+		if (r_ptr->flags1 & (RF1_FEMALE)) my_strcpy(desc, "я│п╣п╠я▐", max);
+		else if (r_ptr->flags1 & (RF1_MALE)) my_strcpy(desc, "я│п╣п╠я▐", max);
+		else my_strcpy(desc, "я│п╣п╠я▐", max);
 	}
 
 
@@ -872,11 +872,11 @@ void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode, i
 		if (!panel_contains(m_ptr->fy, m_ptr->fx))
 		{
 			/* Append special notation */
-			my_strcat(desc, " (за экраном)", max);
+			my_strcat(desc, " (п╥п╟ я█п╨я─п╟п╫п╬п╪)", max);
 		}
 	}
 	
-	/* Хак - для и.п. перекидывает первую букву в заглавную */
+	/* п╔п╟п╨ - п╢п╩я▐ п╦.п©. п©п╣я─п╣п╨п╦п╢я▀п╡п╟п╣я┌ п©п╣я─п╡я┐я▌ п╠я┐п╨п╡я┐ п╡ п╥п╟пЁп╩п╟п╡п╫я┐я▌ */
 	if (pad == PAD_IMEN)
 		desc[0] = a_toupper(desc[0]);
 }
@@ -1583,7 +1583,7 @@ static bool place_monster_one(int y, int x, int r_idx, bool slp)
 		if (r_ptr->flags1 & (RF1_UNIQUE))
 		{
 			/* Message for cheaters */
-			if (cheat_hear) msg_format("Глубокий уникальный (%s).", name);
+			if (cheat_hear) msg_format("п⌠п╩я┐п╠п╬п╨п╦п╧ я┐п╫п╦п╨п╟п╩я▄п╫я▀п╧ (%s).", name);
 
 			/* Boost rating by twice delta-depth */
 			rating += (r_ptr->level - p_ptr->depth) * 2;
@@ -1593,7 +1593,7 @@ static bool place_monster_one(int y, int x, int r_idx, bool slp)
 		else
 		{
 			/* Message for cheaters */
-			if (cheat_hear) msg_format("Глубокий монстр (%s).", name);
+			if (cheat_hear) msg_format("п⌠п╩я┐п╠п╬п╨п╦п╧ п╪п╬п╫я│я┌я─ (%s).", name);
 
 			/* Boost rating by delta-depth */
 			rating += (r_ptr->level - p_ptr->depth);
@@ -1604,7 +1604,7 @@ static bool place_monster_one(int y, int x, int r_idx, bool slp)
 	else if (r_ptr->flags1 & (RF1_UNIQUE))
 	{
 		/* Unique monsters induce message */
-		if (cheat_hear) msg_format("Уникальный монстр (%s).", name);
+		if (cheat_hear) msg_format("пёп╫п╦п╨п╟п╩я▄п╫я▀п╧ п╪п╬п╫я│я┌я─ (%s).", name);
 	}
 
 
@@ -2017,7 +2017,7 @@ bool alloc_monster(int dis, bool slp)
 	{
 		if (cheat_xtra || cheat_hear)
 		{
-			msg_print("Невозможно создать нового монстра.");
+			msg_print("п²п╣п╡п╬п╥п╪п╬п╤п╫п╬ я│п╬п╥п╢п╟я┌я▄ п╫п╬п╡п╬пЁп╬ п╪п╬п╫я│я┌я─п╟.");
 		}
 
 		return FALSE;
@@ -2307,8 +2307,8 @@ void message_pain(int m_idx, int dam)
 	/* Notice non-damage */
 	if (dam == 0)
 	{
-		msg_format("%^s не задет%s.", m_name,
-			(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о"));
+		msg_format("%^s п╫п╣ п╥п╟п╢п╣я┌%s.", m_name,
+			(r_ptr->flags1 & RF1_FEMALE ? "п╟" : r_ptr->flags1 & RF1_MALE ? "" : "п╬"));
 		return;
 	}
 
@@ -2323,76 +2323,76 @@ void message_pain(int m_idx, int dam)
 	if (strchr("jmvQ", r_ptr->d_char))
 	{
 		if (percentage > 95)
-			msg_format("%^s не замечает атаки.", m_name);
+			msg_format("%^s п╫п╣ п╥п╟п╪п╣я┤п╟п╣я┌ п╟я┌п╟п╨п╦.", m_name);
 		else if (percentage > 75)
-			msg_format("%^s дергается.", m_name);
+			msg_format("%^s п╢п╣я─пЁп╟п╣я┌я│я▐.", m_name);
 		else if (percentage > 50)
-			msg_format("%^s пульсирует.", m_name);
+			msg_format("%^s п©я┐п╩я▄я│п╦я─я┐п╣я┌.", m_name);
 		else if (percentage > 35)
-			msg_format("%^s извивается от боли.", m_name);
+			msg_format("%^s п╦п╥п╡п╦п╡п╟п╣я┌я│я▐ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 20)
-			msg_format("%^s бьется в конвульсиях.", m_name);
+			msg_format("%^s п╠я▄п╣я┌я│я▐ п╡ п╨п╬п╫п╡я┐п╩я▄я│п╦я▐я┘.", m_name);
 		else if (percentage > 10)
-			msg_format("%^s бьется в агонии.", m_name);
+			msg_format("%^s п╠я▄п╣я┌я│я▐ п╡ п╟пЁп╬п╫п╦п╦.", m_name);
 		else
-			msg_format("%^s слабо дергается.", m_name);
+			msg_format("%^s я│п╩п╟п╠п╬ п╢п╣я─пЁп╟п╣я┌я│я▐.", m_name);
 	}
 
 	/* Dogs and Hounds */
 	else if (strchr("CZ", r_ptr->d_char))
 	{
 		if (percentage > 95)
-			msg_format("%^s не замечает атаки.", m_name);
+			msg_format("%^s п╫п╣ п╥п╟п╪п╣я┤п╟п╣я┌ п╟я┌п╟п╨п╦.", m_name);
 		else if (percentage > 75)
-			msg_format("%^s рычит от боли.", m_name);
+			msg_format("%^s я─я▀я┤п╦я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 50)
-			msg_format("%^s лает от боли.", m_name);
+			msg_format("%^s п╩п╟п╣я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 35)
-			msg_format("%^s воет от боли.", m_name);
+			msg_format("%^s п╡п╬п╣я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 20)
-			msg_format("%^s воет в агонии.", m_name);
+			msg_format("%^s п╡п╬п╣я┌ п╡ п╟пЁп╬п╫п╦п╦.", m_name);
 		else if (percentage > 10)
-			msg_format("%^s бьется в агонии.", m_name);
+			msg_format("%^s п╠я▄п╣я┌я│я▐ п╡ п╟пЁп╬п╫п╦п╦.", m_name);
 		else
-			msg_format("%^s слабо скулит.", m_name);
+			msg_format("%^s я│п╩п╟п╠п╬ я│п╨я┐п╩п╦я┌.", m_name);
 	}
 
 	/* One type of monsters (ignore,squeal,shriek) */
 	else if (strchr("FIKMRSXabclqrst", r_ptr->d_char))
 	{
 		if (percentage > 95)
-			msg_format("%^s игнорирует атаку.", m_name);
+			msg_format("%^s п╦пЁп╫п╬я─п╦я─я┐п╣я┌ п╟я┌п╟п╨я┐.", m_name);
 		else if (percentage > 75)
-			msg_format("%^s пыхтит от боли.", m_name);
+			msg_format("%^s п©я▀я┘я┌п╦я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 50)
-			msg_format("%^s шипит от боли.", m_name);
+			msg_format("%^s я┬п╦п©п╦я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 35)
-			msg_format("%^s вопит от боли.", m_name);
+			msg_format("%^s п╡п╬п©п╦я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 20)
-			msg_format("%^s вопит в агонии.", m_name);
+			msg_format("%^s п╡п╬п©п╦я┌ п╡ п╟пЁп╬п╫п╦п╦.", m_name);
 		else if (percentage > 10)
-			msg_format("%^s бьется в агонии.", m_name);
+			msg_format("%^s п╠я▄п╣я┌я│я▐ п╡ п╟пЁп╬п╫п╦п╦.", m_name);
 		else
-			msg_format("%^s слабо кричит.", m_name);
+			msg_format("%^s я│п╩п╟п╠п╬ п╨я─п╦я┤п╦я┌.", m_name);
 	}
 
 	/* Another type of monsters (shrug,cry,scream) */
 	else
 	{
 		if (percentage > 95)
-			msg_format("%^s не замечает атаки.", m_name);
+			msg_format("%^s п╫п╣ п╥п╟п╪п╣я┤п╟п╣я┌ п╟я┌п╟п╨п╦.", m_name);
 		else if (percentage > 75)
-			msg_format("%^s пыхтит от боли.", m_name);
+			msg_format("%^s п©я▀я┘я┌п╦я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 50)
-			msg_format("%^s кричит от боли.", m_name);
+			msg_format("%^s п╨я─п╦я┤п╦я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 35)
-			msg_format("%^s вопит от боли.", m_name);
+			msg_format("%^s п╡п╬п©п╦я┌ п╬я┌ п╠п╬п╩п╦.", m_name);
 		else if (percentage > 20)
-			msg_format("%^s вопит в агонии.", m_name);
+			msg_format("%^s п╡п╬п©п╦я┌ п╡ п╟пЁп╬п╫п╦п╦.", m_name);
 		else if (percentage > 10)
-			msg_format("%^s бьется в агонии.", m_name);
+			msg_format("%^s п╠я▄п╣я┌я│я▐ п╡ п╟пЁп╬п╫п╦п╦.", m_name);
 		else
-			msg_format("%^s слабо кричит.", m_name);
+			msg_format("%^s я│п╩п╟п╠п╬ п╨я─п╦я┤п╦я┌.", m_name);
 	}
 }
 

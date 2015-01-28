@@ -32,7 +32,7 @@ bool set_blind(int v)
 	{
 		if (!p_ptr->blind)
 		{
-			msg_print("Вы ослепли!");
+			msg_print("п▓я▀ п╬я│п╩п╣п©п╩п╦!");
 			notice = TRUE;
 		}
 	}
@@ -42,7 +42,7 @@ bool set_blind(int v)
 	{
 		if (p_ptr->blind)
 		{
-			msg_print("Вы снова видите.");
+			msg_print("п▓я▀ я│п╫п╬п╡п╟ п╡п╦п╢п╦я┌п╣.");
 			notice = TRUE;
 		}
 	}
@@ -91,7 +91,7 @@ bool set_confused(int v)
 	{
 		if (!p_ptr->confused)
 		{
-			msg_print("Вы контужены!");
+			msg_print("п▓я▀ п╨п╬п╫я┌я┐п╤п╣п╫я▀!");
 			notice = TRUE;
 		}
 	}
@@ -101,7 +101,7 @@ bool set_confused(int v)
 	{
 		if (p_ptr->confused)
 		{
-			msg_print("Вы больше не контужены.");
+			msg_print("п▓я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ п╨п╬п╫я┌я┐п╤п╣п╫я▀.");
 			notice = TRUE;
 		}
 	}
@@ -141,7 +141,7 @@ bool set_poisoned(int v)
 	{
 		if (!p_ptr->poisoned)
 		{
-			msg_print("Вы отравлены!");
+			msg_print("п▓я▀ п╬я┌я─п╟п╡п╩п╣п╫я▀!");
 			notice = TRUE;
 		}
 	}
@@ -151,7 +151,7 @@ bool set_poisoned(int v)
 	{
 		if (p_ptr->poisoned)
 		{
-			msg_print("Вы больше не отравлены.");
+			msg_print("п▓я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ п╬я┌я─п╟п╡п╩п╣п╫я▀.");
 			notice = TRUE;
 		}
 	}
@@ -191,7 +191,7 @@ bool set_afraid(int v)
 	{
 		if (!p_ptr->afraid)
 		{
-			msg_print("Вы напуганы!");
+			msg_print("п▓я▀ п╫п╟п©я┐пЁп╟п╫я▀!");
 			notice = TRUE;
 		}
 	}
@@ -201,7 +201,7 @@ bool set_afraid(int v)
 	{
 		if (p_ptr->afraid)
 		{
-			msg_print("Вы чувствуете себя храбрее.");
+			msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ я┘я─п╟п╠я─п╣п╣.");
 			notice = TRUE;
 		}
 	}
@@ -241,7 +241,7 @@ bool set_paralyzed(int v)
 	{
 		if (!p_ptr->paralyzed)
 		{
-			msg_print("Вы парализованы!");
+			msg_print("п▓я▀ п©п╟я─п╟п╩п╦п╥п╬п╡п╟п╫я▀!");
 			notice = TRUE;
 		}
 	}
@@ -251,7 +251,7 @@ bool set_paralyzed(int v)
 	{
 		if (p_ptr->paralyzed)
 		{
-			msg_print("Вы снова можете двигаться.");
+			msg_print("п▓я▀ я│п╫п╬п╡п╟ п╪п╬п╤п╣я┌п╣ п╢п╡п╦пЁп╟я┌я▄я│я▐.");
 			notice = TRUE;
 		}
 	}
@@ -294,7 +294,7 @@ bool set_image(int v)
 	{
 		if (!p_ptr->image)
 		{
-			msg_print("Вы галлюцинируете!");
+			msg_print("п▓я▀ пЁп╟п╩п╩я▌я├п╦п╫п╦я─я┐п╣я┌п╣!");
 			notice = TRUE;
 		}
 	}
@@ -304,7 +304,7 @@ bool set_image(int v)
 	{
 		if (p_ptr->image)
 		{
-			msg_print("Вы снова можете ясно видеть.");
+			msg_print("п▓я▀ я│п╫п╬п╡п╟ п╪п╬п╤п╣я┌п╣ я▐я│п╫п╬ п╡п╦п╢п╣я┌я▄.");
 			notice = TRUE;
 		}
 	}
@@ -347,7 +347,7 @@ bool set_fast(int v)
 	{
 		if (!p_ptr->fast)
 		{
-			msg_print("Вы начинаете двигаться быстрее!");
+			msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ п╢п╡п╦пЁп╟я┌я▄я│я▐ п╠я▀я│я┌я─п╣п╣!");
 			notice = TRUE;
 		}
 	}
@@ -357,7 +357,7 @@ bool set_fast(int v)
 	{
 		if (p_ptr->fast)
 		{
-			msg_print("Вы снова замедлились.");
+			msg_print("п▓я▀ я│п╫п╬п╡п╟ п╥п╟п╪п╣п╢п╩п╦п╩п╦я│я▄.");
 			notice = TRUE;
 		}
 	}
@@ -397,7 +397,7 @@ bool set_slow(int v)
 	{
 		if (!p_ptr->slow)
 		{
-			msg_print("Вы начинаете двигаться медленнее!");
+			msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ п╢п╡п╦пЁп╟я┌я▄я│я▐ п╪п╣п╢п╩п╣п╫п╫п╣п╣!");
 			notice = TRUE;
 		}
 	}
@@ -407,7 +407,7 @@ bool set_slow(int v)
 	{
 		if (p_ptr->slow)
 		{
-			msg_print("Вы снова ускорились.");
+			msg_print("п▓я▀ я│п╫п╬п╡п╟ я┐я│п╨п╬я─п╦п╩п╦я│я▄.");
 			notice = TRUE;
 		}
 	}
@@ -447,7 +447,7 @@ bool set_shield(int v)
 	{
 		if (!p_ptr->shield)
 		{
-			msg_print("Вокруг вас формируется волшебный щит!");
+			msg_print("п▓п╬п╨я─я┐пЁ п╡п╟я│ я└п╬я─п╪п╦я─я┐п╣я┌я│я▐ п╡п╬п╩я┬п╣п╠п╫я▀п╧ я┴п╦я┌!");
 			notice = TRUE;
 		}
 	}
@@ -457,7 +457,7 @@ bool set_shield(int v)
 	{
 		if (p_ptr->shield)
 		{
-			msg_print("Ваш волшебный щит исчезает.");
+			msg_print("п▓п╟я┬ п╡п╬п╩я┬п╣п╠п╫я▀п╧ я┴п╦я┌ п╦я│я┤п╣п╥п╟п╣я┌.");
 			notice = TRUE;
 		}
 	}
@@ -498,7 +498,7 @@ bool set_blessed(int v)
 	{
 		if (!p_ptr->blessed)
 		{
-			msg_print("Вы чувствуете себя правым!");
+			msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п©я─п╟п╡я▀п╪!");
 			notice = TRUE;
 		}
 	}
@@ -508,7 +508,7 @@ bool set_blessed(int v)
 	{
 		if (p_ptr->blessed)
 		{
-			msg_print("Действие молитвы закончилось.");
+			msg_print("п■п╣п╧я│я┌п╡п╦п╣ п╪п╬п╩п╦я┌п╡я▀ п╥п╟п╨п╬п╫я┤п╦п╩п╬я│я▄.");
 			notice = TRUE;
 		}
 	}
@@ -548,7 +548,7 @@ bool set_hero(int v)
 	{
 		if (!p_ptr->hero)
 		{
-			msg_print("Вы чувствуете себя героем!");
+			msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ пЁп╣я─п╬п╣п╪!");
 			notice = TRUE;
 		}
 	}
@@ -558,7 +558,7 @@ bool set_hero(int v)
 	{
 		if (p_ptr->hero)
 		{
-			msg_print("Героизм кончился.");
+			msg_print("п⌠п╣я─п╬п╦п╥п╪ п╨п╬п╫я┤п╦п╩я│я▐.");
 			notice = TRUE;
 		}
 	}
@@ -598,7 +598,7 @@ bool set_shero(int v)
 	{
 		if (!p_ptr->shero)
 		{
-			msg_print("Вы чувствуете себя машиной убийства!");
+			msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╪п╟я┬п╦п╫п╬п╧ я┐п╠п╦п╧я│я┌п╡п╟!");
 			notice = TRUE;
 		}
 	}
@@ -608,7 +608,7 @@ bool set_shero(int v)
 	{
 		if (p_ptr->shero)
 		{
-			msg_print("Ярость проходит.");
+			msg_print("п╞я─п╬я│я┌я▄ п©я─п╬я┘п╬п╢п╦я┌.");
 			notice = TRUE;
 		}
 	}
@@ -648,7 +648,7 @@ bool set_protevil(int v)
 	{
 		if (!p_ptr->protevil)
 		{
-			msg_print("Вы чувствуете себя защищенным от зла!");
+			msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╥п╟я┴п╦я┴п╣п╫п╫я▀п╪ п╬я┌ п╥п╩п╟!");
 			notice = TRUE;
 		}
 	}
@@ -658,7 +658,7 @@ bool set_protevil(int v)
 	{
 		if (p_ptr->protevil)
 		{
-			msg_print("Вы больше не чувствуете себя защищенным от зла.");
+			msg_print("п▓я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╥п╟я┴п╦я┴п╣п╫п╫я▀п╪ п╬я┌ п╥п╩п╟.");
 			notice = TRUE;
 		}
 	}
@@ -695,7 +695,7 @@ bool set_invuln(int v)
 	{
 		if (!p_ptr->invuln)
 		{
-			msg_print("Вы чувствуете себя неуязвимым!");
+			msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╫п╣я┐я▐п╥п╡п╦п╪я▀п╪!");
 			notice = TRUE;
 		}
 	}
@@ -705,7 +705,7 @@ bool set_invuln(int v)
 	{
 		if (p_ptr->invuln)
 		{
-			msg_print("Вы снова уязвимы.");
+			msg_print("п▓я▀ я│п╫п╬п╡п╟ я┐я▐п╥п╡п╦п╪я▀.");
 			notice = TRUE;
 		}
 	}
@@ -748,7 +748,7 @@ bool set_tim_invis(int v)
 	{
 		if (!p_ptr->tim_invis)
 		{
-			msg_print("Ваши глаза становятся очень чувствительными!");
+			msg_print("п▓п╟я┬п╦ пЁп╩п╟п╥п╟ я│я┌п╟п╫п╬п╡я▐я┌я│я▐ п╬я┤п╣п╫я▄ я┤я┐п╡я│я┌п╡п╦я┌п╣п╩я▄п╫я▀п╪п╦!");
 			notice = TRUE;
 		}
 	}
@@ -758,7 +758,7 @@ bool set_tim_invis(int v)
 	{
 		if (p_ptr->tim_invis)
 		{
-			msg_print("Ваши глаза становятся менее чувствительными.");
+			msg_print("п▓п╟я┬п╦ пЁп╩п╟п╥п╟ я│я┌п╟п╫п╬п╡я▐я┌я│я▐ п╪п╣п╫п╣п╣ я┤я┐п╡я│я┌п╡п╦я┌п╣п╩я▄п╫я▀п╪п╦.");
 			notice = TRUE;
 		}
 	}
@@ -804,7 +804,7 @@ bool set_tim_infra(int v)
 	{
 		if (!p_ptr->tim_infra)
 		{
-			msg_print("Ваши глаза начинают светиться!");
+			msg_print("п▓п╟я┬п╦ пЁп╩п╟п╥п╟ п╫п╟я┤п╦п╫п╟я▌я┌ я│п╡п╣я┌п╦я┌я▄я│я▐!");
 			notice = TRUE;
 		}
 	}
@@ -814,7 +814,7 @@ bool set_tim_infra(int v)
 	{
 		if (p_ptr->tim_infra)
 		{
-			msg_print("Ваши глаза прекращают светиться.");
+			msg_print("п▓п╟я┬п╦ пЁп╩п╟п╥п╟ п©я─п╣п╨я─п╟я┴п╟я▌я┌ я│п╡п╣я┌п╦я┌я▄я│я▐.");
 			notice = TRUE;
 		}
 	}
@@ -857,7 +857,7 @@ bool set_oppose_acid(int v)
 	{
 		if (!p_ptr->oppose_acid && !p_ptr->immune_acid)
 		{
-			msg_print("Вы начинаете сопротивляться кислоте!");
+			msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ п╨п╦я│п╩п╬я┌п╣!");
 			notice = TRUE;
 		}
 	}
@@ -867,7 +867,7 @@ bool set_oppose_acid(int v)
 	{
 		if (p_ptr->oppose_acid && !p_ptr->immune_acid)
 		{
-			msg_print("Вы прекращаете сопротивляться кислоте.");
+			msg_print("п▓я▀ п©я─п╣п╨я─п╟я┴п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ п╨п╦я│п╩п╬я┌п╣.");
 			notice = TRUE;
 		}
 	}
@@ -904,7 +904,7 @@ bool set_oppose_elec(int v)
 	{
 		if (!p_ptr->oppose_elec && !p_ptr->immune_elec)
 		{
-			msg_print("Вы начинаете сопротивляться молнии!");
+			msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ п╪п╬п╩п╫п╦п╦!");
 			notice = TRUE;
 		}
 	}
@@ -914,7 +914,7 @@ bool set_oppose_elec(int v)
 	{
 		if (p_ptr->oppose_elec && !p_ptr->immune_elec)
 		{
-			msg_print("Вы прекращаете сопротивляться молнии.");
+			msg_print("п▓я▀ п©я─п╣п╨я─п╟я┴п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ п╪п╬п╩п╫п╦п╦.");
 			notice = TRUE;
 		}
 	}
@@ -951,7 +951,7 @@ bool set_oppose_fire(int v)
 	{
 		if (!p_ptr->oppose_fire && !p_ptr->immune_fire)
 		{
-			msg_print("Вы начинаете сопротивляться огню!");
+			msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ п╬пЁп╫я▌!");
 			notice = TRUE;
 		}
 	}
@@ -961,7 +961,7 @@ bool set_oppose_fire(int v)
 	{
 		if (p_ptr->oppose_fire && !p_ptr->immune_fire)
 		{
-			msg_print("Вы прекращаете сопротивляться огню.");
+			msg_print("п▓я▀ п©я─п╣п╨я─п╟я┴п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ п╬пЁп╫я▌.");
 			notice = TRUE;
 		}
 	}
@@ -998,7 +998,7 @@ bool set_oppose_cold(int v)
 	{
 		if (!p_ptr->oppose_cold && !p_ptr->immune_cold)
 		{
-			msg_print("Вы начинаете сопротивляться холоду!");
+			msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ я┘п╬п╩п╬п╢я┐!");
 			notice = TRUE;
 		}
 	}
@@ -1008,7 +1008,7 @@ bool set_oppose_cold(int v)
 	{
 		if (p_ptr->oppose_cold && !p_ptr->immune_cold)
 		{
-			msg_print("Вы прекращаете сопротивляться холоду.");
+			msg_print("п▓я▀ п©я─п╣п╨я─п╟я┴п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ я┘п╬п╩п╬п╢я┐.");
 			notice = TRUE;
 		}
 	}
@@ -1045,7 +1045,7 @@ bool set_oppose_pois(int v)
 	{
 		if (!p_ptr->oppose_pois)
 		{
-			msg_print("Вы начинаете сопротивляться яду!");
+			msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ я▐п╢я┐!");
 			notice = TRUE;
 		}
 	}
@@ -1055,7 +1055,7 @@ bool set_oppose_pois(int v)
 	{
 		if (p_ptr->oppose_pois)
 		{
-			msg_print("Вы прекращаете сопротивляться яду.");
+			msg_print("п▓я▀ п©я─п╣п╨я─п╟я┴п╟п╣я┌п╣ я│п╬п©я─п╬я┌п╦п╡п╩я▐я┌я▄я│я▐ я▐п╢я┐.");
 			notice = TRUE;
 		}
 	}
@@ -1148,21 +1148,21 @@ bool set_stun(int v)
 			/* Stun */
 			case 1:
 			{
-				msg_print("Вы оглушены.");
+				msg_print("п▓я▀ п╬пЁп╩я┐я┬п╣п╫я▀.");
 				break;
 			}
 
 			/* Heavy stun */
 			case 2:
 			{
-				msg_print("Вы сильно оглушены.");
+				msg_print("п▓я▀ я│п╦п╩я▄п╫п╬ п╬пЁп╩я┐я┬п╣п╫я▀.");
 				break;
 			}
 
 			/* Knocked out */
 			case 3:
 			{
-				msg_print("Вы потеряли сознание.");
+				msg_print("п▓я▀ п©п╬я┌п╣я─я▐п╩п╦ я│п╬п╥п╫п╟п╫п╦п╣.");
 				break;
 			}
 		}
@@ -1180,7 +1180,7 @@ bool set_stun(int v)
 			/* None */
 			case 0:
 			{
-				msg_print("Вы больше не оглушены.");
+				msg_print("п▓я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ п╬пЁп╩я┐я┬п╣п╫я▀.");
 				if (disturb_state) disturb(0, 0);
 				break;
 			}
@@ -1332,49 +1332,49 @@ bool set_cut(int v)
 			/* Graze */
 			case 1:
 			{
-				msg_print("Вы получили царапину.");
+				msg_print("п▓я▀ п©п╬п╩я┐я┤п╦п╩п╦ я├п╟я─п╟п©п╦п╫я┐.");
 				break;
 			}
 
 			/* Light cut */
 			case 2:
 			{
-				msg_print("Вы получили легкое ранение.");
+				msg_print("п▓я▀ п©п╬п╩я┐я┤п╦п╩п╦ п╩п╣пЁп╨п╬п╣ я─п╟п╫п╣п╫п╦п╣.");
 				break;
 			}
 
 			/* Bad cut */
 			case 3:
 			{
-				msg_print("Вы получили среднее ранение.");
+				msg_print("п▓я▀ п©п╬п╩я┐я┤п╦п╩п╦ я│я─п╣п╢п╫п╣п╣ я─п╟п╫п╣п╫п╦п╣.");
 				break;
 			}
 
 			/* Nasty cut */
 			case 4:
 			{
-				msg_print("Вы получили тяжелое ранение.");
+				msg_print("п▓я▀ п©п╬п╩я┐я┤п╦п╩п╦ я┌я▐п╤п╣п╩п╬п╣ я─п╟п╫п╣п╫п╦п╣.");
 				break;
 			}
 
 			/* Severe cut */
 			case 5:
 			{
-				msg_print("Вы получили страшное ранение.");
+				msg_print("п▓я▀ п©п╬п╩я┐я┤п╦п╩п╦ я│я┌я─п╟я┬п╫п╬п╣ я─п╟п╫п╣п╫п╦п╣.");
 				break;
 			}
 
 			/* Deep gash */
 			case 6:
 			{
-				msg_print("Вы получили глубокие раны.");
+				msg_print("п▓я▀ п©п╬п╩я┐я┤п╦п╩п╦ пЁп╩я┐п╠п╬п╨п╦п╣ я─п╟п╫я▀.");
 				break;
 			}
 
 			/* Mortal wound */
 			case 7:
 			{
-				msg_print("Вы получили смертельные раны.");
+				msg_print("п▓я▀ п©п╬п╩я┐я┤п╦п╩п╦ я│п╪п╣я─я┌п╣п╩я▄п╫я▀п╣ я─п╟п╫я▀.");
 				break;
 			}
 		}
@@ -1392,7 +1392,7 @@ bool set_cut(int v)
 			/* None */
 			case 0:
 			{
-				msg_print("Вы больше не истекаете кровью.");
+				msg_print("п▓я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ п╦я│я┌п╣п╨п╟п╣я┌п╣ п╨я─п╬п╡я▄я▌.");
 				if (disturb_state) disturb(0, 0);
 				break;
 			}
@@ -1537,35 +1537,35 @@ bool set_food(int v)
 			/* Weak */
 			case 1:
 			{
-				msg_print("Вы все еще слабы.");
+				msg_print("п▓я▀ п╡я│п╣ п╣я┴п╣ я│п╩п╟п╠я▀.");
 				break;
 			}
 
 			/* Hungry */
 			case 2:
 			{
-				msg_print("Вы все еще голодны.");
+				msg_print("п▓я▀ п╡я│п╣ п╣я┴п╣ пЁп╬п╩п╬п╢п╫я▀.");
 				break;
 			}
 
 			/* Normal */
 			case 3:
 			{
-				msg_print("Вы больше не голодны.");
+				msg_print("п▓я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ пЁп╬п╩п╬п╢п╫я▀.");
 				break;
 			}
 
 			/* Full */
 			case 4:
 			{
-				msg_print("Вы наелись!");
+				msg_print("п▓я▀ п╫п╟п╣п╩п╦я│я▄!");
 				break;
 			}
 
 			/* Bloated */
 			case 5:
 			{
-				msg_print("Вы объелись!");
+				msg_print("п▓я▀ п╬п╠я┼п╣п╩п╦я│я▄!");
 				break;
 			}
 		}
@@ -1583,35 +1583,35 @@ bool set_food(int v)
 			/* Fainting / Starving */
 			case 0:
 			{
-				msg_print("Вы начинаете падать от голода!");
+				msg_print("п▓я▀ п╫п╟я┤п╦п╫п╟п╣я┌п╣ п©п╟п╢п╟я┌я▄ п╬я┌ пЁп╬п╩п╬п╢п╟!");
 				break;
 			}
 
 			/* Weak */
 			case 1:
 			{
-				msg_print("Вы ослабеваете от голода!");
+				msg_print("п▓я▀ п╬я│п╩п╟п╠п╣п╡п╟п╣я┌п╣ п╬я┌ пЁп╬п╩п╬п╢п╟!");
 				break;
 			}
 
 			/* Hungry */
 			case 2:
 			{
-				msg_print("Вы проголодались.");
+				msg_print("п▓я▀ п©я─п╬пЁп╬п╩п╬п╢п╟п╩п╦я│я▄.");
 				break;
 			}
 
 			/* Normal */
 			case 3:
 			{
-				msg_print("Вы больше не чувствуете себя сытым.");
+				msg_print("п▓я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ я│я▀я┌я▀п╪.");
 				break;
 			}
 
 			/* Full */
 			case 4:
 			{
-				msg_print("Лишняя еда вышла.");
+				msg_print("п⌡п╦я┬п╫я▐я▐ п╣п╢п╟ п╡я▀я┬п╩п╟.");
 				break;
 			}
 		}
@@ -1708,7 +1708,7 @@ void check_experience(void)
 		if (p_ptr->lev > p_ptr->max_lev) p_ptr->max_lev = p_ptr->lev;
 
 		/* Message */
-		message_format(MSG_LEVEL, p_ptr->lev, "Добро пожаловать на уровень %d.", p_ptr->lev);
+		message_format(MSG_LEVEL, p_ptr->lev, "п■п╬п╠я─п╬ п©п╬п╤п╟п╩п╬п╡п╟я┌я▄ п╫п╟ я┐я─п╬п╡п╣п╫я▄ %d.", p_ptr->lev);
 
 		/* Update some stuff */
 		p_ptr->update |= (PU_BONUS | PU_HP | PU_MANA | PU_SPELLS);
@@ -1798,18 +1798,18 @@ static int get_coin_type(const monster_race *r_ptr)
 	if (r_ptr->d_char == '$')
 	{
 		/* Look for textual clues */
-		if (strstr(name, " медных ")) return (3);
-		if (strstr(name, " серебряных ")) return (6);
-		if (strstr(name, " золотых ")) return (11);
-		if (strstr(name, " мифриловых ")) return (17);
-		if (strstr(name, " адамантовых ")) return (18);
+		if (strstr(name, " п╪п╣п╢п╫я▀я┘ ")) return (3);
+		if (strstr(name, " я│п╣я─п╣п╠я─я▐п╫я▀я┘ ")) return (6);
+		if (strstr(name, " п╥п╬п╩п╬я┌я▀я┘ ")) return (11);
+		if (strstr(name, " п╪п╦я└я─п╦п╩п╬п╡я▀я┘ ")) return (17);
+		if (strstr(name, " п╟п╢п╟п╪п╟п╫я┌п╬п╡я▀я┘ ")) return (18);
 
 		/* Look for textual clues */
-		if (strstr(name, "медн")) return (3);
-		if (strstr(name, "серебрян")) return (6);
-		if (strstr(name, "золот")) return (11);
-		if (strstr(name, "мифрилов")) return (17);
-		if (strstr(name, "адамантов")) return (18);
+		if (strstr(name, "п╪п╣п╢п╫")) return (3);
+		if (strstr(name, "я│п╣я─п╣п╠я─я▐п╫")) return (6);
+		if (strstr(name, "п╥п╬п╩п╬я┌")) return (11);
+		if (strstr(name, "п╪п╦я└я─п╦п╩п╬п╡")) return (17);
+		if (strstr(name, "п╟п╢п╟п╪п╟п╫я┌п╬п╡")) return (18);
 	}
 
 	/* Assume nothing */
@@ -1841,7 +1841,7 @@ static void build_quest_stairs(int y, int x)
 	delete_object(y, x);
 
 	/* Explain the staircase */
-	msg_print("Появляется волшебная лестница...");
+	msg_print("п÷п╬я▐п╡п╩я▐п╣я┌я│я▐ п╡п╬п╩я┬п╣п╠п╫п╟я▐ п╩п╣я│я┌п╫п╦я├п╟...");
 
 	/* Create stairs down */
 	cave_set_feat(y, x, FEAT_MORE);
@@ -2062,9 +2062,9 @@ void monster_death(int m_idx)
 		p_ptr->redraw |= (PR_TITLE);
 
 		/* Congratulations */
-		msg_print("*** ПОЗДРАВЛЯЕМ ***");
-		msg_print("Вы выиграли игру!");
-		msg_print("Вы можете прекратить (убить себя), когда будете готовы.");
+		msg_print("*** п÷п·п≈п■п═п░п▓п⌡п╞п∙п° ***");
+		msg_print("п▓я▀ п╡я▀п╦пЁя─п╟п╩п╦ п╦пЁя─я┐!");
+		msg_print("п▓я▀ п╪п╬п╤п╣я┌п╣ п©я─п╣п╨я─п╟я┌п╦я┌я▄ (я┐п╠п╦я┌я▄ я│п╣п╠я▐), п╨п╬пЁп╢п╟ п╠я┐п╢п╣я┌п╣ пЁп╬я┌п╬п╡я▀.");
 	}
 }
 
@@ -2133,7 +2133,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		else if (!m_ptr->ml)
 		{
 			monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
-			message_format(MSG_KILL, m_ptr->r_idx, "Вы убили %s.", m_name);
+			message_format(MSG_KILL, m_ptr->r_idx, "п▓я▀ я┐п╠п╦п╩п╦ %s.", m_name);
 		}
 
 		/* Death by Physical attack -- non-living monster */
@@ -2143,14 +2143,14 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		         (strchr("Evg", r_ptr->d_char)))
 		{
 			monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
-			message_format(MSG_KILL, m_ptr->r_idx, "Вы уничтожили %s.", m_name);
+			message_format(MSG_KILL, m_ptr->r_idx, "п▓я▀ я┐п╫п╦я┤я┌п╬п╤п╦п╩п╦ %s.", m_name);
 		}
 
 		/* Death by Physical attack -- living monster */
 		else
 		{
 			monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
-			message_format(MSG_KILL, m_ptr->r_idx, "Вы убили %s.", m_name);
+			message_format(MSG_KILL, m_ptr->r_idx, "п▓я▀ я┐п╠п╦п╩п╦ %s.", m_name);
 		}
 
 		/* Player level */
@@ -2425,7 +2425,7 @@ static void look_mon_desc(char *buf, size_t max, int m_idx)
 	monster_race *r_ptr = &r_info[m_ptr->r_idx];
 
 	bool living = TRUE;
-	char *okn = (r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о");
+	char *okn = (r_ptr->flags1 & RF1_FEMALE ? "п╟" : r_ptr->flags1 & RF1_MALE ? "" : "п╬");
 
 
 	/* Determine if the monster is "living" (vs "undead") */
@@ -2438,7 +2438,7 @@ static void look_mon_desc(char *buf, size_t max, int m_idx)
 	if (m_ptr->hp >= m_ptr->maxhp)
 	{
 		/* No damage */
-		my_strcpy(buf, format((living ? "не ранен%s" : "не поврежден%s"), okn), max);
+		my_strcpy(buf, format((living ? "п╫п╣ я─п╟п╫п╣п╫%s" : "п╫п╣ п©п╬п╡я─п╣п╤п╢п╣п╫%s"), okn), max);
 	}
 	else
 	{
@@ -2446,19 +2446,19 @@ static void look_mon_desc(char *buf, size_t max, int m_idx)
 		int perc = 100L * m_ptr->hp / m_ptr->maxhp;
 
 		if (perc >= 60)
-			my_strcpy(buf, format((living ? "легко ранен%s" : "легко поврежден%s"), okn), max);
+			my_strcpy(buf, format((living ? "п╩п╣пЁп╨п╬ я─п╟п╫п╣п╫%s" : "п╩п╣пЁп╨п╬ п©п╬п╡я─п╣п╤п╢п╣п╫%s"), okn), max);
 		else if (perc >= 25)
-			my_strcpy(buf, format((living ? "ранен%s" : "поврежден%s"), okn), max);
+			my_strcpy(buf, format((living ? "я─п╟п╫п╣п╫%s" : "п©п╬п╡я─п╣п╤п╢п╣п╫%s"), okn), max);
 		else if (perc >= 10)
-			my_strcpy(buf, format((living ? "тяжело ранен%s" : "сильно поврежден%s"), okn), max);
+			my_strcpy(buf, format((living ? "я┌я▐п╤п╣п╩п╬ я─п╟п╫п╣п╫%s" : "я│п╦п╩я▄п╫п╬ п©п╬п╡я─п╣п╤п╢п╣п╫%s"), okn), max);
 		else
-			my_strcpy(buf, format((living ? "почти мертв%s" : "почти уничтожен%s"), okn), max);
+			my_strcpy(buf, format((living ? "п©п╬я┤я┌п╦ п╪п╣я─я┌п╡%s" : "п©п╬я┤я┌п╦ я┐п╫п╦я┤я┌п╬п╤п╣п╫%s"), okn), max);
 	}
 
-	if (m_ptr->csleep) my_strcat(buf, format(", спит", okn), max);
-	if (m_ptr->confused) my_strcat(buf, format(", контужен%s", okn), max);
-	if (m_ptr->monfear) my_strcat(buf, format(", напуган%s", okn), max);
-	if (m_ptr->stunned) my_strcat(buf, format(", оглушен%s", okn), max);
+	if (m_ptr->csleep) my_strcat(buf, format(", я│п©п╦я┌", okn), max);
+	if (m_ptr->confused) my_strcat(buf, format(", п╨п╬п╫я┌я┐п╤п╣п╫%s", okn), max);
+	if (m_ptr->monfear) my_strcat(buf, format(", п╫п╟п©я┐пЁп╟п╫%s", okn), max);
+	if (m_ptr->stunned) my_strcat(buf, format(", п╬пЁп╩я┐я┬п╣п╫%s", okn), max);
 }
 
 
@@ -3045,7 +3045,7 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 		boring = TRUE;
 
 		/* Default */
-		s1 = "Вы видите: ";
+		s1 = "п▓я▀ п╡п╦п╢п╦я┌п╣: ";
 		s2 = "";
 		s3 = "";
 
@@ -3054,17 +3054,17 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 		if (cave_m_idx[y][x] < 0)
 		{
 			/* Description */
-			s1 = "Вы видите ";
+			s1 = "п▓я▀ п╡п╦п╢п╦я┌п╣ ";
 
 			/* Preposition */
-			s2 = "под собой: ";
+			s2 = "п©п╬п╢ я│п╬п╠п╬п╧: ";
 		}
 
 
 		/* Hack -- hallucination */
 		if (p_ptr->image)
 		{
-			cptr name = "что-то странное";
+			cptr name = "я┤я┌п╬-я┌п╬ я│я┌я─п╟п╫п╫п╬п╣";
 
 			/* Display a message */
 			if (p_ptr->wizard)
@@ -3185,10 +3185,10 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 				if ((query == ' ') && !(mode & (TARGET_LOOK))) break;
 
 				/* Change the intro */
-				s2 = "под ним ";
+				s2 = "п©п╬п╢ п╫п╦п╪ ";
 
 				/* Hack -- take account of gender */
-				if (r_ptr->flags1 & (RF1_FEMALE)) s2 = "под ней ";
+				if (r_ptr->flags1 & (RF1_FEMALE)) s2 = "п©п╬п╢ п╫п╣п╧ ";
 
 				/* Scan all objects being carried */
 				for (this_o_idx = m_ptr->hold_o_idx; this_o_idx; this_o_idx = next_o_idx)
@@ -3230,14 +3230,14 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 					if ((query == ' ') && !(mode & (TARGET_LOOK))) break;
 
 					/* Change the intro */
-					s2 = "также несет ";
+					s2 = "я┌п╟п╨п╤п╣ п╫п╣я│п╣я┌ ";
 				}
 
 				/* Double break */
 				if (this_o_idx) break;
 
 				/* Use a preposition */
-				/* s2 = "на: "; */
+				/* s2 = "п╫п╟: "; */
 			}
 		}
 
@@ -3270,13 +3270,13 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 					if (p_ptr->wizard)
 					{
 						strnfmt(out_val, sizeof(out_val),
-						        "%s%s%sкучу из %d предметов [r,%s] (%d:%d)",
+						        "%s%s%sп╨я┐я┤я┐ п╦п╥ %d п©я─п╣п╢п╪п╣я┌п╬п╡ [r,%s] (%d:%d)",
 						        s1, s2, s3, floor_num, info, y, x);
 					}
 					else
 					{
 						strnfmt(out_val, sizeof(out_val),
-						        "%s%s%sкучу из %d предметов [r,%s]",
+						        "%s%s%sп╨я┐я┤я┐ п╦п╥ %d п©я─п╣п╢п╪п╣я┌п╬п╡ [r,%s]",
 						        s1, s2, s3, floor_num, info);
 					}
 
@@ -3315,10 +3315,10 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 				if ((query == ' ') && !(mode & (TARGET_LOOK))) break;
 
 				/* Change the intro */
-				s1 = "Она находится ";
+				s1 = "п·п╫п╟ п╫п╟я┘п╬п╢п╦я┌я│я▐ ";
 
 				/* Preposition */
-				s2 = "на: ";
+				s2 = "п╫п╟: ";
 			}
 		}
 
@@ -3372,14 +3372,14 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 				if ((query == ' ') && !(mode & (TARGET_LOOK))) break;
 
 				/* Change the intro */
-				s1 = (rod == ROD_M ? "Он находится " : rod == ROD_F ? "Она находится " :
-					rod == ROD_N ? "Оно находится " : "Они находятся ");
+				s1 = (rod == ROD_M ? "п·п╫ п╫п╟я┘п╬п╢п╦я┌я│я▐ " : rod == ROD_F ? "п·п╫п╟ п╫п╟я┘п╬п╢п╦я┌я│я▐ " :
+					rod == ROD_N ? "п·п╫п╬ п╫п╟я┘п╬п╢п╦я┌я│я▐ " : "п·п╫п╦ п╫п╟я┘п╬п╢я▐я┌я│я▐ ");
 
 				/* Plurals */
-				if (o_ptr->number != 1) s1 = "Они находятся ";
+				if (o_ptr->number != 1) s1 = "п·п╫п╦ п╫п╟я┘п╬п╢я▐я┌я│я▐ ";
 
 				/* Preposition */
-				s2 = "на: ";
+				s2 = "п╫п╟: ";
 			}
 		}
 
@@ -3403,10 +3403,10 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 			cptr name = f_name + f_info[feat].name;
 
 			/* Hack -- handle unknown grids */
-			if (feat == FEAT_NONE) name = "неизвестная клетка";
+			if (feat == FEAT_NONE) name = "п╫п╣п╦п╥п╡п╣я│я┌п╫п╟я▐ п╨п╩п╣я┌п╨п╟";
 
 			/* Pick a prefix */
-			if (*s2 && (feat >= FEAT_DOOR_HEAD)) s2 = "в: ";
+			if (*s2 && (feat >= FEAT_DOOR_HEAD)) s2 = "п╡: ";
 
 			/* Pick proper indefinite article */
 			// s3 = (is_a_vowel(name[0])) ? "an " : "a ";
@@ -3414,7 +3414,7 @@ static int target_set_interactive_aux(int y, int x, int mode, cptr info)
 			/* Hack -- special introduction for store doors */
 			if ((feat >= FEAT_SHOP_HEAD) && (feat <= FEAT_SHOP_TAIL))
 			{
-				s3 = "вход в ";
+				s3 = "п╡я┘п╬п╢ п╡ ";
 			}
 
 			/* Display a message */
@@ -3537,13 +3537,13 @@ bool target_set_interactive(int mode)
 			/* Allow target */
 			if ((cave_m_idx[y][x] > 0) && target_able(cave_m_idx[y][x]))
 			{
-				strcpy(info, "q,t,p,o,+,-,<напр>");
+				strcpy(info, "q,t,p,o,+,-,<п╫п╟п©я─>");
 			}
 
 			/* Dis-allow target */
 			else
 			{
-				strcpy(info, "q,p,o,+,-,<напр>");
+				strcpy(info, "q,p,o,+,-,<п╫п╟п©я─>");
 			}
 
 			/* Describe and Prompt */
@@ -3628,7 +3628,7 @@ bool target_set_interactive(int mode)
 					}
 					else
 					{
-						bell("Неправильная цель!");
+						bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ я├п╣п╩я▄!");
 					}
 					break;
 				}
@@ -3639,7 +3639,7 @@ bool target_set_interactive(int mode)
 					d = target_dir(query);
 
 					/* Oops */
-					if (!d) bell("Неправильная команда!");
+					if (!d) bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 
 					break;
 				}
@@ -3690,7 +3690,7 @@ bool target_set_interactive(int mode)
 		else
 		{
 			/* Default prompt */
-			strcpy(info, "q,t,p,m,+,-,<напр>");
+			strcpy(info, "q,t,p,m,+,-,<п╫п╟п©я─>");
 
 			/* Describe and Prompt (enable "TARGET_LOOK") */
 			query = target_set_interactive_aux(y, x, mode | TARGET_LOOK, info);
@@ -3781,7 +3781,7 @@ bool target_set_interactive(int mode)
 					d = target_dir(query);
 
 					/* Oops */
-					if (!d) bell("Неправильная команда!");
+					if (!d) bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 
 					break;
 				}
@@ -3909,11 +3909,11 @@ bool get_aim_dir(int *dp)
 		/* Choose a prompt */
 		if (!target_okay())
 		{
-			p = "Направление ('*' для выбора цели, Escape)? ";
+			p = "п²п╟п©я─п╟п╡п╩п╣п╫п╦п╣ ('*' п╢п╩я▐ п╡я▀п╠п╬я─п╟ я├п╣п╩п╦, Escape)? ";
 		}
 		else
 		{
-			p = "Направление ('5' для подтвержд., '*' для другой цели, Escape)? ";
+			p = "п²п╟п©я─п╟п╡п╩п╣п╫п╦п╣ ('5' п╢п╩я▐ п©п╬п╢я┌п╡п╣я─п╤п╢., '*' п╢п╩я▐ п╢я─я┐пЁп╬п╧ я├п╣п╩п╦, Escape)? ";
 		}
 
 		/* Get a command (or Cancel) */
@@ -3948,7 +3948,7 @@ bool get_aim_dir(int *dp)
 		}
 
 		/* Error */
-		if (!dir) bell("Неправильное направление!");
+		if (!dir) bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╬п╣ п╫п╟п©я─п╟п╡п╩п╣п╫п╦п╣!");
 	}
 
 	/* No direction */
@@ -3968,7 +3968,7 @@ bool get_aim_dir(int *dp)
 	if (p_ptr->command_dir != dir)
 	{
 		/* Warn the user */
-		msg_print("Вы контужены.");
+		msg_print("п▓я▀ п╨п╬п╫я┌я┐п╤п╣п╫я▀.");
 	}
 
 	/* Save direction */
@@ -4028,7 +4028,7 @@ bool get_rep_dir(int *dp)
 	while (!dir)
 	{
 		/* Choose a prompt */
-		p = "Направление (Escape для отмены)? ";
+		p = "п²п╟п©я─п╟п╡п╩п╣п╫п╦п╣ (Escape п╢п╩я▐ п╬я┌п╪п╣п╫я▀)? ";
 
 		/* Get a command (or Cancel) */
 		if (!get_com(p, &ch)) break;
@@ -4037,7 +4037,7 @@ bool get_rep_dir(int *dp)
 		dir = target_dir(ch);
 
 		/* Oops */
-		if (!dir) bell("Неправильное направление!");
+		if (!dir) bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╬п╣ п╫п╟п©я─п╟п╡п╩п╣п╫п╦п╣!");
 	}
 
 	/* Aborted */
@@ -4087,7 +4087,7 @@ bool confuse_dir(int *dp)
 	if ((*dp) != dir)
 	{
 		/* Warn the user */
-		msg_print("Вы контужены.");
+		msg_print("п▓я▀ п╨п╬п╫я┌я┐п╤п╣п╫я▀.");
 
 		/* Save direction */
 		(*dp) = dir;

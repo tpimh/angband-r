@@ -1921,13 +1921,13 @@ void display_map(int *cy, int *cx)
 void do_cmd_view_map(void)
 {
 	int cy, cx;
-	cptr prompt = "Нажмите любую клавишу";
+	cptr prompt = "п²п╟п╤п╪п╦я┌п╣ п╩я▌п╠я┐я▌ п╨п╩п╟п╡п╦я┬я┐";
 	
 	/* Save screen */
 	screen_save();
 
 	/* Note */
-	prt("Ждите...", 0, 0);
+	prt("п√п╢п╦я┌п╣...", 0, 0);
 
 	/* Flush */
 	Term_fresh();

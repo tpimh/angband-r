@@ -252,7 +252,7 @@ void do_cmd_change_name(void)
 	cptr p;
 
 	/* Prompt */
-	p = "['c' сменить имя, 'f' вывод в файл, 'h' сменить режим, или ESC]";
+	p = "['c' я│п╪п╣п╫п╦я┌я▄ п╦п╪я▐, 'f' п╡я▀п╡п╬п╢ п╡ я└п╟п╧п╩, 'h' я│п╪п╣п╫п╦я┌я▄ я─п╣п╤п╦п╪, п╦п╩п╦ ESC]";
 
 	/* Save screen */
 	screen_save();
@@ -285,17 +285,17 @@ void do_cmd_change_name(void)
 
 			strnfmt(ftmp, sizeof(ftmp), "%s.txt", op_ptr->base_name);
 
-			if (get_string("Имя файла: ", ftmp, sizeof(ftmp)))
+			if (get_string("п≤п╪я▐ я└п╟п╧п╩п╟: ", ftmp, sizeof(ftmp)))
 			{
 				if (ftmp[0] && (ftmp[0] != ' '))
 				{
 					if (file_character(ftmp, FALSE))
 					{
-						msg_print("Не получилось вывести информацию о герое!");
+						msg_print("п²п╣ п©п╬п╩я┐я┤п╦п╩п╬я│я▄ п╡я▀п╡п╣я│я┌п╦ п╦п╫я└п╬я─п╪п╟я├п╦я▌ п╬ пЁп╣я─п╬п╣!");
 					}
 					else
 					{
-						msg_print("Информация о герое выведена в файл.");
+						msg_print("п≤п╫я└п╬я─п╪п╟я├п╦я▐ п╬ пЁп╣я─п╬п╣ п╡я▀п╡п╣п╢п╣п╫п╟ п╡ я└п╟п╧п╩.");
 					}
 				}
 			}
@@ -310,7 +310,7 @@ void do_cmd_change_name(void)
 		/* Oops */
 		else
 		{
-			bell("Неправильная команда!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 		}
 
 		/* Flush messages */
@@ -418,11 +418,11 @@ void do_cmd_messages(void)
 		}
 
 		/* Display header XXX XXX XXX */
-		prt(format("Список сообщений (%d-%d из %d), смещение %d",
+		prt(format("п║п©п╦я│п╬п╨ я│п╬п╬п╠я┴п╣п╫п╦п╧ (%d-%d п╦п╥ %d), я│п╪п╣я┴п╣п╫п╦п╣ %d",
 		           i, i + j - 1, n, q), 0, 0);
 
 		/* Display prompt (not very informative) */
-		prt("[Нажмите 'p' для более старых, 'n' для более новых, или ESC]", hgt - 1, 0);
+		prt("[п²п╟п╤п╪п╦я┌п╣ 'p' п╢п╩я▐ п╠п╬п╩п╣п╣ я│я┌п╟я─я▀я┘, 'n' п╢п╩я▐ п╠п╬п╩п╣п╣ п╫п╬п╡я▀я┘, п╦п╩п╦ ESC]", hgt - 1, 0);
 
 		/* Get a command */
 		ch = inkey();
@@ -580,10 +580,10 @@ static void do_cmd_pref_file_hack(int row)
 	char ftmp[80];
 
 	/* Prompt */
-	prt("Команда: Загрузить пользовательский prf-файл", row, 0);
+	prt("п п╬п╪п╟п╫п╢п╟: п≈п╟пЁя─я┐п╥п╦я┌я▄ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄я│п╨п╦п╧ prf-я└п╟п╧п╩", row, 0);
 
 	/* Prompt */
-	prt("Файл: ", row + 2, 0);
+	prt("п╓п╟п╧п╩: ", row + 2, 0);
 
 	/* Default filename */
 	strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -595,12 +595,12 @@ static void do_cmd_pref_file_hack(int row)
 	if (process_pref_file(ftmp))
 	{
 		/* Mention failure */
-		msg_format("Не удалось загрузить '%s'!", ftmp);
+		msg_format("п²п╣ я┐п╢п╟п╩п╬я│я▄ п╥п╟пЁя─я┐п╥п╦я┌я▄ '%s'!", ftmp);
 	}
 	else
 	{
 		/* Mention success */
-		msg_format("Загружен '%s'.", ftmp);
+		msg_format("п≈п╟пЁя─я┐п╤п╣п╫ '%s'.", ftmp);
 	}
 }
 
@@ -640,7 +640,7 @@ static void do_cmd_options_aux(int page, cptr info)
 	while (TRUE)
 	{
 		/* Prompt XXX XXX XXX */
-		strnfmt(buf, sizeof(buf), "%s (RET вперед, y/n установка, ESC выход, ? справка) ", info);
+		strnfmt(buf, sizeof(buf), "%s (RET п╡п©п╣я─п╣п╢, y/n я┐я│я┌п╟п╫п╬п╡п╨п╟, ESC п╡я▀я┘п╬п╢, ? я│п©я─п╟п╡п╨п╟) ", info);
 		prt(buf, 0, 0);
 
 		/* Display the options */
@@ -654,7 +654,7 @@ static void do_cmd_options_aux(int page, cptr info)
 			/* Display the option text */
 			strnfmt(buf, sizeof(buf), "%-48s: %s  (%s)",
 			        option_desc[opt[i]],
-			        op_ptr->opt[opt[i]] ? "да " : "нет",
+			        op_ptr->opt[opt[i]] ? "п╢п╟ " : "п╫п╣я┌",
 			        option_text[opt[i]]);
 			c_prt(a, buf, i + 2, 0);
 		}
@@ -740,7 +740,7 @@ static void do_cmd_options_aux(int page, cptr info)
 
 			default:
 			{
-				bell("Неправильная команда!");
+				bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 				break;
 			}
 		}
@@ -777,7 +777,7 @@ static void do_cmd_options_win(void)
 	while (1)
 	{
 		/* Prompt */
-		prt("Флаги окна (<стрелки> для движения, 't' для переключения, или ESC)", 0, 0);
+		prt("п╓п╩п╟пЁп╦ п╬п╨п╫п╟ (<я│я┌я─п╣п╩п╨п╦> п╢п╩я▐ п╢п╡п╦п╤п╣п╫п╦я▐, 't' п╢п╩я▐ п©п╣я─п╣п╨п╩я▌я┤п╣п╫п╦я▐, п╦п╩п╦ ESC)", 0, 0);
 
 		/* Display the windows */
 		for (j = 0; j < ANGBAND_TERM_MAX; j++)
@@ -804,7 +804,7 @@ static void do_cmd_options_win(void)
 			if (i == y) a = TERM_L_BLUE;
 
 			/* Unused option */
-			if (!str) str = "(Не используется)";
+			if (!str) str = "(п²п╣ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐)";
 
 			/* Flag name */
 			Term_putstr(0, i + 5, -1, a, str);
@@ -842,7 +842,7 @@ static void do_cmd_options_win(void)
 			/* Hack -- ignore the main window */
 			if (x == 0)
 			{
-				bell("Нельзя задавать флаги главного окна!");
+				bell("п²п╣п╩я▄п╥я▐ п╥п╟п╢п╟п╡п╟я┌я▄ я└п╩п╟пЁп╦ пЁп╩п╟п╡п╫п╬пЁп╬ п╬п╨п╫п╟!");
 			}
 
 			/* Toggle flag (off) */
@@ -874,7 +874,7 @@ static void do_cmd_options_win(void)
 		/* Oops */
 		else
 		{
-			bell("Неправильная команда!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 		}
 	}
 
@@ -1030,30 +1030,30 @@ void do_cmd_options(void)
 		Term_clear();
 
 		/* Why are we here */
-		prt(format("Опции %s", VERSION_NAME), 2, 0);
+		prt(format("п·п©я├п╦п╦ %s", VERSION_NAME), 2, 0);
 
 		/* Give some choices */
-		prt("(1) Интерфейс", 4, 5);
-		prt("(2) Беспокойство", 5, 5);
-		prt("(3) Игра", 6, 5);
-		prt("(4) Эффективность", 7, 5);
-		prt("(5) Дисплей", 8, 5);
-		prt("(6) Опции рождения", 9, 5);
-		prt("(7) Опции читов", 10, 5);
+		prt("(1) п≤п╫я┌п╣я─я└п╣п╧я│", 4, 5);
+		prt("(2) п▒п╣я│п©п╬п╨п╬п╧я│я┌п╡п╬", 5, 5);
+		prt("(3) п≤пЁя─п╟", 6, 5);
+		prt("(4) п╜я└я└п╣п╨я┌п╦п╡п╫п╬я│я┌я▄", 7, 5);
+		prt("(5) п■п╦я│п©п╩п╣п╧", 8, 5);
+		prt("(6) п·п©я├п╦п╦ я─п╬п╤п╢п╣п╫п╦я▐", 9, 5);
+		prt("(7) п·п©я├п╦п╦ я┤п╦я┌п╬п╡", 10, 5);
 
 		/* Window flags */
-		prt("(W) Флаги окон", 12, 5);
+		prt("(W) п╓п╩п╟пЁп╦ п╬п╨п╬п╫", 12, 5);
 
 		/* Load and Append */
-		prt("(L) Загрузить пользовательский prf-файл", 14, 5);
-		prt("(A) Вывести опции в файл", 15, 5);
+		prt("(L) п≈п╟пЁя─я┐п╥п╦я┌я▄ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄я│п╨п╦п╧ prf-я└п╟п╧п╩", 14, 5);
+		prt("(A) п▓я▀п╡п╣я│я┌п╦ п╬п©я├п╦п╦ п╡ я└п╟п╧п╩", 15, 5);
 
 		/* Special choices */
-		prt("(D) Основная задержка", 17, 5);
-		prt("(H) Предупреждение о низком здоровье", 18, 5);
+		prt("(D) п·я│п╫п╬п╡п╫п╟я▐ п╥п╟п╢п╣я─п╤п╨п╟", 17, 5);
+		prt("(H) п÷я─п╣п╢я┐п©я─п╣п╤п╢п╣п╫п╦п╣ п╬ п╫п╦п╥п╨п╬п╪ п╥п╢п╬я─п╬п╡я▄п╣", 18, 5);
 
 		/* Prompt */
-		prt("Команда: ", 20, 0);
+		prt("п п╬п╪п╟п╫п╢п╟: ", 20, 0);
 
 		/* Get command */
 		ch = inkey();
@@ -1064,43 +1064,43 @@ void do_cmd_options(void)
 		/* General Options */
 		else if (ch == '1')
 		{
-			do_cmd_options_aux(0, "Интерфейс");
+			do_cmd_options_aux(0, "п≤п╫я┌п╣я─я└п╣п╧я│");
 		}
 
 		/* Disturbance Options */
 		else if (ch == '2')
 		{
-			do_cmd_options_aux(1, "Беспокойство");
+			do_cmd_options_aux(1, "п▒п╣я│п©п╬п╨п╬п╧я│я┌п╡п╬");
 		}
 
 		/* Inventory Options */
 		else if (ch == '3')
 		{
-			do_cmd_options_aux(2, "Игра");
+			do_cmd_options_aux(2, "п≤пЁя─п╟");
 		}
 
 		/* Efficiency Options */
 		else if (ch == '4')
 		{
-			do_cmd_options_aux(3, "Эффективность");
+			do_cmd_options_aux(3, "п╜я└я└п╣п╨я┌п╦п╡п╫п╬я│я┌я▄");
 		}
 
 		/* Display Options */
 		else if (ch == '5')
 		{
-			do_cmd_options_aux(4, "Дисплей");
+			do_cmd_options_aux(4, "п■п╦я│п©п╩п╣п╧");
 		}
 
 		/* Birth Options */
 		else if (ch == '6')
 		{
-			do_cmd_options_aux(5, "Опции рождения");
+			do_cmd_options_aux(5, "п·п©я├п╦п╦ я─п╬п╤п╢п╣п╫п╦я▐");
 		}
 
 		/* Cheating Options */
 		else if (ch == '7')
 		{
-			do_cmd_options_aux(6, "Опции читов");
+			do_cmd_options_aux(6, "п·п©я├п╦п╦ я┤п╦я┌п╬п╡");
 		}
 
 		/* Window flags */
@@ -1122,10 +1122,10 @@ void do_cmd_options(void)
 			char ftmp[80];
 
 			/* Prompt */
-			prt("Команда: Вывести опции в файл", 20, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п▓я▀п╡п╣я│я┌п╦ п╬п©я├п╦п╦ п╡ я└п╟п╧п╩", 20, 0);
 
 			/* Prompt */
-			prt("Файл: ", 21, 0);
+			prt("п╓п╟п╧п╩: ", 21, 0);
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -1137,12 +1137,12 @@ void do_cmd_options(void)
 			if (option_dump(ftmp))
 			{
 				/* Failure */
-				msg_print("Не удалось!");
+				msg_print("п²п╣ я┐п╢п╟п╩п╬я│я▄!");
 			}
 			else
 			{
 				/* Success */
-				msg_print("Сделано.");
+				msg_print("п║п╢п╣п╩п╟п╫п╬.");
 			}
 		}
 
@@ -1150,21 +1150,21 @@ void do_cmd_options(void)
 		else if ((ch == 'D') || (ch == 'd'))
 		{
 			/* Prompt */
-			prt("Команда: Основная задержка", 20, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п·я│п╫п╬п╡п╫п╟я▐ п╥п╟п╢п╣я─п╤п╨п╟", 20, 0);
 
 			/* Get a new value */
 			while (1)
 			{
 				char cx;
 				int msec = op_ptr->delay_factor * op_ptr->delay_factor;
-				prt(format("Текущая основная задержка: %d (%d мсек)",
+				prt(format("п╒п╣п╨я┐я┴п╟я▐ п╬я│п╫п╬п╡п╫п╟я▐ п╥п╟п╢п╣я─п╤п╨п╟: %d (%d п╪я│п╣п╨)",
 				           op_ptr->delay_factor, msec), 22, 0);
-				prt("Новая задержка (0-9 или ESC для принятия): ", 21, 0);
+				prt("п²п╬п╡п╟я▐ п╥п╟п╢п╣я─п╤п╨п╟ (0-9 п╦п╩п╦ ESC п╢п╩я▐ п©я─п╦п╫я▐я┌п╦я▐): ", 21, 0);
 
 				cx = inkey();
 				if (cx == ESCAPE) break;
 				if (isdigit((unsigned char)cx)) op_ptr->delay_factor = D2I(cx);
-				else bell("Неправильная команда!");
+				else bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 			}
 		}
 
@@ -1172,20 +1172,20 @@ void do_cmd_options(void)
 		else if ((ch == 'H') || (ch == 'h'))
 		{
 			/* Prompt */
-			prt("Команда: Предупреждение о низком здоровье", 20, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п÷я─п╣п╢я┐п©я─п╣п╤п╢п╣п╫п╦п╣ п╬ п╫п╦п╥п╨п╬п╪ п╥п╢п╬я─п╬п╡я▄п╣", 20, 0);
 
 			/* Get a new value */
 			while (1)
 			{
 				char cx;
-				prt(format("Предупреждение на: %2d%%",
+				prt(format("п÷я─п╣п╢я┐п©я─п╣п╤п╢п╣п╫п╦п╣ п╫п╟: %2d%%",
 				           op_ptr->hitpoint_warn * 10), 22, 0);
-				prt("Новое значение (0-9 или ESC для принятия): ", 21, 0);
+				prt("п²п╬п╡п╬п╣ п╥п╫п╟я┤п╣п╫п╦п╣ (0-9 п╦п╩п╦ ESC п╢п╩я▐ п©я─п╦п╫я▐я┌п╦я▐): ", 21, 0);
 
 				cx = inkey();
 				if (cx == ESCAPE) break;
 				if (isdigit((unsigned char)cx)) op_ptr->hitpoint_warn = D2I(cx);
-				else bell("Неправильная команда!");
+				else bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 			}
 		}
 
@@ -1193,7 +1193,7 @@ void do_cmd_options(void)
 		else
 		{
 			/* Oops */
-			bell("Неправильная команда!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 		}
 
 		/* Flush messages */
@@ -1520,11 +1520,11 @@ void do_cmd_macros(void)
 		Term_clear();
 
 		/* Describe */
-		prt("Работа с макросами", 2, 0);
+		prt("п═п╟п╠п╬я┌п╟ я│ п╪п╟п╨я─п╬я│п╟п╪п╦", 2, 0);
 
 
 		/* Describe that action */
-		prt("Текущее действие показано ниже:", 20, 0);
+		prt("п╒п╣п╨я┐я┴п╣п╣ п╢п╣п╧я│я┌п╡п╦п╣ п©п╬п╨п╟п╥п╟п╫п╬ п╫п╦п╤п╣:", 20, 0);
 
 		/* Analyze the current action */
 		ascii_to_text(tmp, sizeof(tmp), macro_buffer);
@@ -1534,21 +1534,21 @@ void do_cmd_macros(void)
 
 
 		/* Selections */
-		prt("(1) Загрузить пользовательский prf-файл", 4, 5);
+		prt("(1) п≈п╟пЁя─я┐п╥п╦я┌я▄ п©п╬п╩я▄п╥п╬п╡п╟я┌п╣п╩я▄я│п╨п╦п╧ prf-я└п╟п╧п╩", 4, 5);
 #ifdef ALLOW_MACROS
-		prt("(2) Вывести макросы в файл", 5, 5);
-		prt("(3) Вывести макрос", 6, 5);
-		prt("(4) Создать макрос", 7, 5);
-		prt("(5) Удалить макрос", 8, 5);
-		prt("(6) Вывести карты клавиш в файл", 9, 5);
-		prt("(7) Вывести карту клавиш", 10, 5);
-		prt("(8) Создать карту клавиш", 11, 5);
-		prt("(9) Удалить карту клавиш", 12, 5);
-		prt("(0) Новое действие", 13, 5);
+		prt("(2) п▓я▀п╡п╣я│я┌п╦ п╪п╟п╨я─п╬я│я▀ п╡ я└п╟п╧п╩", 5, 5);
+		prt("(3) п▓я▀п╡п╣я│я┌п╦ п╪п╟п╨я─п╬я│", 6, 5);
+		prt("(4) п║п╬п╥п╢п╟я┌я▄ п╪п╟п╨я─п╬я│", 7, 5);
+		prt("(5) пёп╢п╟п╩п╦я┌я▄ п╪п╟п╨я─п╬я│", 8, 5);
+		prt("(6) п▓я▀п╡п╣я│я┌п╦ п╨п╟я─я┌я▀ п╨п╩п╟п╡п╦я┬ п╡ я└п╟п╧п╩", 9, 5);
+		prt("(7) п▓я▀п╡п╣я│я┌п╦ п╨п╟я─я┌я┐ п╨п╩п╟п╡п╦я┬", 10, 5);
+		prt("(8) п║п╬п╥п╢п╟я┌я▄ п╨п╟я─я┌я┐ п╨п╩п╟п╡п╦я┬", 11, 5);
+		prt("(9) пёп╢п╟п╩п╦я┌я▄ п╨п╟я─я┌я┐ п╨п╩п╟п╡п╦я┬", 12, 5);
+		prt("(0) п²п╬п╡п╬п╣ п╢п╣п╧я│я┌п╡п╦п╣", 13, 5);
 #endif /* ALLOW_MACROS */
 
 		/* Prompt */
-		prt("Команда: ", 16, 0);
+		prt("п п╬п╪п╟п╫п╢п╟: ", 16, 0);
 
 		/* Get a command */
 		ch = inkey();
@@ -1571,10 +1571,10 @@ void do_cmd_macros(void)
 			char ftmp[80];
 
 			/* Prompt */
-			prt("Команда: Вывести макросы в файл", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п▓я▀п╡п╣я│я┌п╦ п╪п╟п╨я─п╬я│я▀ п╡ я└п╟п╧п╩", 16, 0);
 
 			/* Prompt */
-			prt("Файл: ", 18, 0);
+			prt("п╓п╟п╧п╩: ", 18, 0);
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -1586,7 +1586,7 @@ void do_cmd_macros(void)
 			(void)macro_dump(ftmp);
 
 			/* Prompt */
-			msg_print("Макросы выведены в файл.");
+			msg_print("п°п╟п╨я─п╬я│я▀ п╡я▀п╡п╣п╢п╣п╫я▀ п╡ я└п╟п╧п╩.");
 		}
 
 		/* Query a macro */
@@ -1595,10 +1595,10 @@ void do_cmd_macros(void)
 			int k;
 
 			/* Prompt */
-			prt("Команда: Вывести макрос", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п▓я▀п╡п╣я│я┌п╦ п╪п╟п╨я─п╬я│", 16, 0);
 
 			/* Prompt */
-			prt("Кнопка: ", 18, 0);
+			prt("п п╫п╬п©п╨п╟: ", 18, 0);
 
 			/* Get a macro trigger */
 			do_cmd_macro_aux(pat);
@@ -1610,7 +1610,7 @@ void do_cmd_macros(void)
 			if (k < 0)
 			{
 				/* Prompt */
-				msg_print("Макросов не найдено.");
+				msg_print("п°п╟п╨я─п╬я│п╬п╡ п╫п╣ п╫п╟п╧п╢п╣п╫п╬.");
 			}
 
 			/* Found one */
@@ -1626,7 +1626,7 @@ void do_cmd_macros(void)
 				prt(tmp, 22, 0);
 
 				/* Prompt */
-				msg_print("Найден макрос.");
+				msg_print("п²п╟п╧п╢п╣п╫ п╪п╟п╨я─п╬я│.");
 			}
 		}
 
@@ -1634,10 +1634,10 @@ void do_cmd_macros(void)
 		else if (ch == '4')
 		{
 			/* Prompt */
-			prt("Команда: Создать макрос", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п║п╬п╥п╢п╟я┌я▄ п╪п╟п╨я─п╬я│", 16, 0);
 
 			/* Prompt */
-			prt("Кнопка: ", 18, 0);
+			prt("п п╫п╬п©п╨п╟: ", 18, 0);
 
 			/* Get a macro trigger */
 			do_cmd_macro_aux(pat);
@@ -1646,7 +1646,7 @@ void do_cmd_macros(void)
 			clear_from(20);
 
 			/* Prompt */
-			prt("Действие: ", 20, 0);
+			prt("п■п╣п╧я│я┌п╡п╦п╣: ", 20, 0);
 
 			/* Convert to text */
 			ascii_to_text(tmp, sizeof(tmp), macro_buffer);
@@ -1661,7 +1661,7 @@ void do_cmd_macros(void)
 				macro_add(pat, macro_buffer);
 
 				/* Prompt */
-				msg_print("Макрос добавлен.");
+				msg_print("п°п╟п╨я─п╬я│ п╢п╬п╠п╟п╡п╩п╣п╫.");
 			}
 		}
 
@@ -1669,10 +1669,10 @@ void do_cmd_macros(void)
 		else if (ch == '5')
 		{
 			/* Prompt */
-			prt("Команда: Удалить макрос", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: пёп╢п╟п╩п╦я┌я▄ п╪п╟п╨я─п╬я│", 16, 0);
 
 			/* Prompt */
-			prt("Кнопка: ", 18, 0);
+			prt("п п╫п╬п©п╨п╟: ", 18, 0);
 
 			/* Get a macro trigger */
 			do_cmd_macro_aux(pat);
@@ -1681,7 +1681,7 @@ void do_cmd_macros(void)
 			macro_add(pat, pat);
 
 			/* Prompt */
-			msg_print("Макрос удален");
+			msg_print("п°п╟п╨я─п╬я│ я┐п╢п╟п╩п╣п╫");
 		}
 
 		/* Save keymaps */
@@ -1690,10 +1690,10 @@ void do_cmd_macros(void)
 			char ftmp[80];
 
 			/* Prompt */
-			prt("Команда: Вывести карты клавиш в файл", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п▓я▀п╡п╣я│я┌п╦ п╨п╟я─я┌я▀ п╨п╩п╟п╡п╦я┬ п╡ я└п╟п╧п╩", 16, 0);
 
 			/* Prompt */
-			prt("Файл: ", 18, 0);
+			prt("п╓п╟п╧п╩: ", 18, 0);
 
 			/* Default filename */
 			strnfmt(ftmp, sizeof(ftmp), "%s.prf", op_ptr->base_name);
@@ -1705,7 +1705,7 @@ void do_cmd_macros(void)
 			(void)keymap_dump(ftmp);
 
 			/* Prompt */
-			msg_print("Карты клавиш выведены в файл.");
+			msg_print("п п╟я─я┌я▀ п╨п╩п╟п╡п╦я┬ п╡я▀п╡п╣п╢п╣п╫я▀ п╡ я└п╟п╧п╩.");
 		}
 
 		/* Query a keymap */
@@ -1714,10 +1714,10 @@ void do_cmd_macros(void)
 			cptr act;
 
 			/* Prompt */
-			prt("Команда: Вывести карту клавиш", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п▓я▀п╡п╣я│я┌п╦ п╨п╟я─я┌я┐ п╨п╩п╟п╡п╦я┬", 16, 0);
 
 			/* Prompt */
-			prt("Кнопка: ", 18, 0);
+			prt("п п╫п╬п©п╨п╟: ", 18, 0);
 
 			/* Get a keymap trigger */
 			do_cmd_macro_aux_keymap(pat);
@@ -1729,7 +1729,7 @@ void do_cmd_macros(void)
 			if (!act)
 			{
 				/* Prompt */
-				msg_print("Карт клавиш не найдено.");
+				msg_print("п п╟я─я┌ п╨п╩п╟п╡п╦я┬ п╫п╣ п╫п╟п╧п╢п╣п╫п╬.");
 			}
 
 			/* Found one */
@@ -1745,7 +1745,7 @@ void do_cmd_macros(void)
 				prt(tmp, 22, 0);
 
 				/* Prompt */
-				msg_print("Найдена карта клавиш.");
+				msg_print("п²п╟п╧п╢п╣п╫п╟ п╨п╟я─я┌п╟ п╨п╩п╟п╡п╦я┬.");
 			}
 		}
 
@@ -1753,10 +1753,10 @@ void do_cmd_macros(void)
 		else if (ch == '8')
 		{
 			/* Prompt */
-			prt("Команда: Создать карту клавиш", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п║п╬п╥п╢п╟я┌я▄ п╨п╟я─я┌я┐ п╨п╩п╟п╡п╦я┬", 16, 0);
 
 			/* Prompt */
-			prt("Кнопка: ", 18, 0);
+			prt("п п╫п╬п©п╨п╟: ", 18, 0);
 
 			/* Get a keymap trigger */
 			do_cmd_macro_aux_keymap(pat);
@@ -1765,7 +1765,7 @@ void do_cmd_macros(void)
 			clear_from(20);
 
 			/* Prompt */
-			prt("Действие: ", 20, 0);
+			prt("п■п╣п╧я│я┌п╡п╦п╣: ", 20, 0);
 
 			/* Convert to text */
 			ascii_to_text(tmp, sizeof(tmp), macro_buffer);
@@ -1783,7 +1783,7 @@ void do_cmd_macros(void)
 				keymap_act[mode][(byte)(pat[0])] = string_make(macro_buffer);
 
 				/* Prompt */
-				msg_print("Карта клавиш добавлена.");
+				msg_print("п п╟я─я┌п╟ п╨п╩п╟п╡п╦я┬ п╢п╬п╠п╟п╡п╩п╣п╫п╟.");
 			}
 		}
 
@@ -1791,10 +1791,10 @@ void do_cmd_macros(void)
 		else if (ch == '9')
 		{
 			/* Prompt */
-			prt("Команда: Удалить карту клавиш", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: пёп╢п╟п╩п╦я┌я▄ п╨п╟я─я┌я┐ п╨п╩п╟п╡п╦я┬", 16, 0);
 
 			/* Prompt */
-			prt("Кнопка: ", 18, 0);
+			prt("п п╫п╬п©п╨п╟: ", 18, 0);
 
 			/* Get a keymap trigger */
 			do_cmd_macro_aux_keymap(pat);
@@ -1806,14 +1806,14 @@ void do_cmd_macros(void)
 			keymap_act[mode][(byte)(pat[0])] = NULL;
 
 			/* Prompt */
-			msg_print("Карта клавиш удалена.");
+			msg_print("п п╟я─я┌п╟ п╨п╩п╟п╡п╦я┬ я┐п╢п╟п╩п╣п╫п╟.");
 		}
 
 		/* Enter a new action */
 		else if (ch == '0')
 		{
 			/* Prompt */
-			prt("Команда: Новое действие", 16, 0);
+			prt("п п╬п╪п╟п╫п╢п╟: п²п╬п╡п╬п╣ п╢п╣п╧я│я┌п╡п╦п╣", 16, 0);
 
 			/* Go to the correct location */
 			Term_gotoxy(0, 22);
@@ -1835,7 +1835,7 @@ void do_cmd_macros(void)
 		else
 		{
 			/* Oops */
-			bell("Неправильная команда!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 		}
 
 		/* Flush messages */
@@ -1879,7 +1879,7 @@ void do_cmd_visuals(void)
 		Term_clear();
 
 		/* Ask for a choice */
-		prt("Работа с визуальными определениями", 2, 0);
+		prt("п═п╟п╠п╬я┌п╟ я│ п╡п╦п╥я┐п╟п╩я▄п╫я▀п╪п╦ п╬п©я─п╣п╢п╣п╩п╣п╫п╦я▐п╪п╦", 2, 0);
 
 		/* Give some choices */
 		prt("(1) Load a user pref file", 4, 5);
@@ -2564,7 +2564,7 @@ void do_cmd_colors(void)
 		Term_clear();
 
 		/* Ask for a choice */
-		prt("Работа с цветами", 2, 0);
+		prt("п═п╟п╠п╬я┌п╟ я│ я├п╡п╣я┌п╟п╪п╦", 2, 0);
 
 		/* Give some choices */
 		prt("(1) Load a user pref file", 4, 5);
@@ -2775,13 +2775,13 @@ void do_cmd_note(void)
 	strcpy(tmp, "");
 
 	/* Input */
-	if (!get_string("Заметки: ", tmp, sizeof(tmp))) return;
+	if (!get_string("п≈п╟п╪п╣я┌п╨п╦: ", tmp, sizeof(tmp))) return;
 
 	/* Ignore empty notes */
 	if (!tmp[0] || (tmp[0] == ' ')) return;
 
 	/* Add the note to the message recall */
-	msg_format("Заметки: %s", tmp);
+	msg_format("п≈п╟п╪п╣я┌п╨п╦: %s", tmp);
 }
 
 
@@ -2791,7 +2791,7 @@ void do_cmd_note(void)
 void do_cmd_version(void)
 {
 	/* Silly message */
-	msg_format("Вы играете в %s версии %s.  Введите '?' для дальнейшей информации.",
+	msg_format("п▓я▀ п╦пЁя─п╟п╣я┌п╣ п╡ %s п╡п╣я─я│п╦п╦ %s.  п▓п╡п╣п╢п╦я┌п╣ '?' п╢п╩я▐ п╢п╟п╩я▄п╫п╣п╧я┬п╣п╧ п╦п╫я└п╬я─п╪п╟я├п╦п╦.",
 	           VERSION_NAME, VERSION_STRING);
 }
 
@@ -2802,17 +2802,17 @@ void do_cmd_version(void)
  */
 static cptr do_cmd_feeling_text[11] =
 {
-	"Похоже на любой другой уровень.",
-	"Вы чувствуете, что в этом уровне есть что-то необычное.",
-	"У вас превосходное предчувствие об этом уровне.",
-	"У вас отличное предчувствие...",
-	"У вас очень хорошее предчувствие...",
-	"У вас хорошее предчувствие...",
-	"У вас неплохое предчувствие...",
-	"У вас приличное предчувствие...",
-	"Вам нравится это место...",
-	"Этот уровень не так уж плох...",
-	"Какое скучное место..."
+	"п÷п╬я┘п╬п╤п╣ п╫п╟ п╩я▌п╠п╬п╧ п╢я─я┐пЁп╬п╧ я┐я─п╬п╡п╣п╫я▄.",
+	"п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣, я┤я┌п╬ п╡ я█я┌п╬п╪ я┐я─п╬п╡п╫п╣ п╣я│я┌я▄ я┤я┌п╬-я┌п╬ п╫п╣п╬п╠я▀я┤п╫п╬п╣.",
+	"пё п╡п╟я│ п©я─п╣п╡п╬я│я┘п╬п╢п╫п╬п╣ п©я─п╣п╢я┤я┐п╡я│я┌п╡п╦п╣ п╬п╠ я█я┌п╬п╪ я┐я─п╬п╡п╫п╣.",
+	"пё п╡п╟я│ п╬я┌п╩п╦я┤п╫п╬п╣ п©я─п╣п╢я┤я┐п╡я│я┌п╡п╦п╣...",
+	"пё п╡п╟я│ п╬я┤п╣п╫я▄ я┘п╬я─п╬я┬п╣п╣ п©я─п╣п╢я┤я┐п╡я│я┌п╡п╦п╣...",
+	"пё п╡п╟я│ я┘п╬я─п╬я┬п╣п╣ п©я─п╣п╢я┤я┐п╡я│я┌п╡п╦п╣...",
+	"пё п╡п╟я│ п╫п╣п©п╩п╬я┘п╬п╣ п©я─п╣п╢я┤я┐п╡я│я┌п╡п╦п╣...",
+	"пё п╡п╟я│ п©я─п╦п╩п╦я┤п╫п╬п╣ п©я─п╣п╢я┤я┐п╡я│я┌п╡п╦п╣...",
+	"п▓п╟п╪ п╫я─п╟п╡п╦я┌я│я▐ я█я┌п╬ п╪п╣я│я┌п╬...",
+	"п╜я┌п╬я┌ я┐я─п╬п╡п╣п╫я▄ п╫п╣ я┌п╟п╨ я┐п╤ п©п╩п╬я┘...",
+	"п п╟п╨п╬п╣ я│п╨я┐я┤п╫п╬п╣ п╪п╣я│я┌п╬..."
 };
 
 
@@ -2828,7 +2828,7 @@ void do_cmd_feeling(void)
 	/* No useful feeling in town */
 	if (!p_ptr->depth)
 	{
-		msg_print("Похоже на обычный город.");
+		msg_print("п÷п╬я┘п╬п╤п╣ п╫п╟ п╬п╠я▀я┤п╫я▀п╧ пЁп╬я─п╬п╢.");
 		return;
 	}
 
@@ -2934,7 +2934,7 @@ void do_cmd_load_screen(void)
 
 
 	/* Message */
-	msg_print("Дамп экрана загружен.");
+	msg_print("п■п╟п╪п© я█п╨я─п╟п╫п╟ п╥п╟пЁя─я┐п╤п╣п╫.");
 	message_flush();
 
 
@@ -2952,10 +2952,10 @@ void do_cmd_save_screen(void)
 
 	/* Ask for a file */
 	strcpy(tmp_val, "dump.html");
-	if (!get_string("Файл: ", tmp_val, sizeof(tmp_val))) return;
+	if (!get_string("п╓п╟п╧п╩: ", tmp_val, sizeof(tmp_val))) return;
 	
 	html_screenshot(tmp_val);
-	msg_print("Снимок экрана сохранен.");
+	msg_print("п║п╫п╦п╪п╬п╨ я█п╨я─п╟п╫п╟ я│п╬я┘я─п╟п╫п╣п╫.");
 }
 
 
@@ -3088,7 +3088,7 @@ static void do_cmd_knowledge_artifacts(void)
 	my_fclose(fff);
 
 	/* Display the file contents */
-	show_file(file_name, "Известные (или утерянные) артефакты", 0, 0);
+	show_file(file_name, "п≤п╥п╡п╣я│я┌п╫я▀п╣ (п╦п╩п╦ я┐я┌п╣я─я▐п╫п╫я▀п╣) п╟я─я┌п╣я└п╟п╨я┌я▀", 0, 0);
 
 	/* Remove the file */
 	fd_kill(file_name);
@@ -3158,7 +3158,7 @@ static void do_cmd_knowledge_uniques(void)
 		/* Print a message */
 		fprintf(fff, "     %-30s : %s\n",
 			    rname,
-			    (dead ? "мертв" : "жив"));
+			    (dead ? "п╪п╣я─я┌п╡" : "п╤п╦п╡"));
 	}
 
 	/* Free the "who" array */
@@ -3168,7 +3168,7 @@ static void do_cmd_knowledge_uniques(void)
 	my_fclose(fff);
 
 	/* Construct header line */
-	strnfmt(header, sizeof(header), "Уникальные монстры: %d известно, %d убито", n, killed);
+	strnfmt(header, sizeof(header), "пёп╫п╦п╨п╟п╩я▄п╫я▀п╣ п╪п╬п╫я│я┌я─я▀: %d п╦п╥п╡п╣я│я┌п╫п╬, %d я┐п╠п╦я┌п╬", n, killed);
 
 	/* Display the file contents */
 	show_file(file_name, header, 0, 0);
@@ -3230,7 +3230,7 @@ static void do_cmd_knowledge_objects(void)
 	my_fclose(fff);
 
 	/* Display the file contents */
-	show_file(file_name, "Известные предметы", 0, 0);
+	show_file(file_name, "п≤п╥п╡п╣я│я┌п╫я▀п╣ п©я─п╣п╢п╪п╣я┌я▀", 0, 0);
 
 	/* Remove the file */
 	fd_kill(file_name);
@@ -3305,7 +3305,7 @@ static void do_cmd_knowledge_kills(void)
 	my_fclose(fff);
 
 	/* Display the file contents */
-	show_file(file_name, "Уничтоженные существа", 0, 0);
+	show_file(file_name, "пёп╫п╦я┤я┌п╬п╤п╣п╫п╫я▀п╣ я│я┐я┴п╣я│я┌п╡п╟", 0, 0);
 
 	/* Remove the file */
 	fd_kill(file_name);
@@ -3335,17 +3335,17 @@ void do_cmd_knowledge(void)
 		Term_clear();
 
 		/* Ask for a choice */
-		prt("Показать знания", 2, 0);
+		prt("п÷п╬п╨п╟п╥п╟я┌я▄ п╥п╫п╟п╫п╦я▐", 2, 0);
 
 		/* Give some choices */
-		prt("(1) Артефакты", 4, 5);
-		prt("(2) Уникальные монстры", 5, 5);
-		prt("(3) Предметы", 6, 5);
-		prt("(4) Рекорды", 7, 5);
-		prt("(5) Уничтоженные существа", 8, 5);
+		prt("(1) п░я─я┌п╣я└п╟п╨я┌я▀", 4, 5);
+		prt("(2) пёп╫п╦п╨п╟п╩я▄п╫я▀п╣ п╪п╬п╫я│я┌я─я▀", 5, 5);
+		prt("(3) п÷я─п╣п╢п╪п╣я┌я▀", 6, 5);
+		prt("(4) п═п╣п╨п╬я─п╢я▀", 7, 5);
+		prt("(5) пёп╫п╦я┤я┌п╬п╤п╣п╫п╫я▀п╣ я│я┐я┴п╣я│я┌п╡п╟", 8, 5);
 
 		/* Prompt */
-		prt("Команда: ", 10, 0);
+		prt("п п╬п╪п╟п╫п╢п╟: ", 10, 0);
 
 		/* Prompt */
 		ch = inkey();
@@ -3386,7 +3386,7 @@ void do_cmd_knowledge(void)
 		/* Unknown option */
 		else
 		{
-			bell("Неправильная команда!");
+			bell("п²п╣п©я─п╟п╡п╦п╩я▄п╫п╟я▐ п╨п╬п╪п╟п╫п╢п╟!");
 		}
 
 		/* Flush messages */

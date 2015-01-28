@@ -93,7 +93,7 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_WEAKNESS:
 		{
-			take_hit(damroll(6, 6), "отравленная еда");
+			take_hit(damroll(6, 6), "п╬я┌я─п╟п╡п╩п╣п╫п╫п╟я▐ п╣п╢п╟");
 			(void)do_dec_stat(A_STR);
 			*ident = TRUE;
 			break;
@@ -101,7 +101,7 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_SICKNESS:
 		{
-			take_hit(damroll(6, 6), "отравленная еда");
+			take_hit(damroll(6, 6), "п╬я┌я─п╟п╡п╩п╣п╫п╫п╟я▐ п╣п╢п╟");
 			(void)do_dec_stat(A_CON);
 			*ident = TRUE;
 			break;
@@ -109,7 +109,7 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_STUPIDITY:
 		{
-			take_hit(damroll(8, 8), "отравленная еда");
+			take_hit(damroll(8, 8), "п╬я┌я─п╟п╡п╩п╣п╫п╫п╟я▐ п╣п╢п╟");
 			(void)do_dec_stat(A_INT);
 			*ident = TRUE;
 			break;
@@ -117,7 +117,7 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_NAIVETY:
 		{
-			take_hit(damroll(8, 8), "отравленная еда");
+			take_hit(damroll(8, 8), "п╬я┌я─п╟п╡п╩п╣п╫п╫п╟я▐ п╣п╢п╟");
 			(void)do_dec_stat(A_WIS);
 			*ident = TRUE;
 			break;
@@ -125,7 +125,7 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_UNHEALTH:
 		{
-			take_hit(damroll(10, 10), "отравленная еда");
+			take_hit(damroll(10, 10), "п╬я┌я─п╟п╡п╩п╣п╫п╫п╟я▐ п╣п╢п╟");
 			(void)do_dec_stat(A_CON);
 			*ident = TRUE;
 			break;
@@ -133,7 +133,7 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 
 		case SV_FOOD_DISEASE:
 		{
-			take_hit(damroll(10, 10), "отравленная еда");
+			take_hit(damroll(10, 10), "п╬я┌я─п╟п╡п╩п╣п╫п╫п╟я▐ п╣п╢п╟");
 			(void)do_dec_stat(A_STR);
 			*ident = TRUE;
 			break;
@@ -198,14 +198,14 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 		case SV_FOOD_JERKY:
 		case SV_FOOD_SLIME_MOLD:
 		{
-			msg_print("Вкусно!");
+			msg_print("п▓п╨я┐я│п╫п╬!");
 			*ident = TRUE;
 			break;
 		}
 
 		case SV_FOOD_WAYBREAD:
 		{
-			msg_print("Очень вкусно!");
+			msg_print("п·я┤п╣п╫я▄ п╡п╨я┐я│п╫п╬!");
 			(void)set_poisoned(0);
 			(void)hp_player(damroll(4, 8));
 			*ident = TRUE;
@@ -215,7 +215,7 @@ static bool eat_food(object_type *o_ptr, bool *ident)
 		case SV_FOOD_PINT_OF_ALE:
 		case SV_FOOD_PINT_OF_WINE:
 		{
-			msg_print("Вкусно!");
+			msg_print("п▓п╨я┐я│п╫п╬!");
 			*ident = TRUE;
 			break;
 		}
@@ -237,7 +237,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 		case SV_POTION_APPLE_JUICE:
 		case SV_POTION_SLIME_MOLD:
 		{
-			msg_print("Вы утолили жажду.");
+			msg_print("п▓я▀ я┐я┌п╬п╩п╦п╩п╦ п╤п╟п╤п╢я┐.");
 			*ident = TRUE;
 			break;
 		}
@@ -250,7 +250,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_SALT_WATER:
 		{
-			msg_print("Вя-а-а! Вас стошнило!");
+			msg_print("п▓я▐-п╟-п╟! п▓п╟я│ я│я┌п╬я┬п╫п╦п╩п╬!");
 			(void)set_food(PY_FOOD_STARVE - 1);
 			(void)set_poisoned(0);
 			(void)set_paralyzed(p_ptr->paralyzed + 4);
@@ -310,7 +310,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 		{
 			if (!p_ptr->hold_life && (p_ptr->exp > 0))
 			{
-				msg_print("Ваша жизнь меркнет.");
+				msg_print("п▓п╟я┬п╟ п╤п╦п╥п╫я▄ п╪п╣я─п╨п╫п╣я┌.");
 				lose_exp(p_ptr->exp / 4);
 				*ident = TRUE;
 			}
@@ -319,8 +319,8 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_RUINATION:
 		{
-			msg_print("Ваши нервы и мускулы кажутся слабыми и безжизненными!");
-			take_hit(damroll(10, 10), "зельем Ослабевания");
+			msg_print("п▓п╟я┬п╦ п╫п╣я─п╡я▀ п╦ п╪я┐я│п╨я┐п╩я▀ п╨п╟п╤я┐я┌я│я▐ я│п╩п╟п╠я▀п╪п╦ п╦ п╠п╣п╥п╤п╦п╥п╫п╣п╫п╫я▀п╪п╦!");
+			take_hit(damroll(10, 10), "п╥п╣п╩я▄п╣п╪ п·я│п╩п╟п╠п╣п╡п╟п╫п╦я▐");
 			(void)dec_stat(A_DEX, 25, TRUE);
 			(void)dec_stat(A_WIS, 25, TRUE);
 			(void)dec_stat(A_CON, 25, TRUE);
@@ -369,8 +369,8 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_DETONATIONS:
 		{
-			msg_print("Массивные взрывы сотрясают ваше тело!");
-			take_hit(damroll(50, 20), "зельем взрыва");
+			msg_print("п°п╟я│я│п╦п╡п╫я▀п╣ п╡п╥я─я▀п╡я▀ я│п╬я┌я─я▐я│п╟я▌я┌ п╡п╟я┬п╣ я┌п╣п╩п╬!");
+			take_hit(damroll(50, 20), "п╥п╣п╩я▄п╣п╪ п╡п╥я─я▀п╡п╟");
 			(void)set_stun(p_ptr->stun + 75);
 			(void)set_cut(p_ptr->cut + 5000);
 			*ident = TRUE;
@@ -379,8 +379,8 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_DEATH:
 		{
-			msg_print("Чувство Смерти протекает сквозь вас...");
-			take_hit(5000, "зельем Смерти");
+			msg_print("п╖я┐п╡я│я┌п╡п╬ п║п╪п╣я─я┌п╦ п©я─п╬я┌п╣п╨п╟п╣я┌ я│п╨п╡п╬п╥я▄ п╡п╟я│...");
+			take_hit(5000, "п╥п╣п╩я▄п╣п╪ п║п╪п╣я─я┌п╦");
 			*ident = TRUE;
 			break;
 		}
@@ -520,7 +520,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_LIFE:
 		{
-			msg_print("Чуство Жизни протекает в вас!");
+			msg_print("п╖я┐я│я┌п╡п╬ п√п╦п╥п╫п╦ п©я─п╬я┌п╣п╨п╟п╣я┌ п╡ п╡п╟я│!");
 			restore_level();
 			(void)set_poisoned(0);
 			(void)set_blind(0);
@@ -550,7 +550,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 			{
 				p_ptr->csp = p_ptr->msp;
 				p_ptr->csp_frac = 0;
-				msg_print("Ваша голова проясняется.");
+				msg_print("п▓п╟я┬п╟ пЁп╬п╩п╬п╡п╟ п©я─п╬я▐я│п╫я▐п╣я┌я│я▐.");
 				p_ptr->redraw |= (PR_MANA);
 				p_ptr->window |= (PW_PLAYER_0 | PW_PLAYER_1);
 				*ident = TRUE;
@@ -649,7 +649,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_ENLIGHTENMENT:
 		{
-			msg_print("Изображение подземелья формируется у вас в голове...");
+			msg_print("п≤п╥п╬п╠я─п╟п╤п╣п╫п╦п╣ п©п╬п╢п╥п╣п╪п╣п╩я▄я▐ я└п╬я─п╪п╦я─я┐п╣я┌я│я▐ я┐ п╡п╟я│ п╡ пЁп╬п╩п╬п╡п╣...");
 			wiz_lite();
 			*ident = TRUE;
 			break;
@@ -657,7 +657,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_STAR_ENLIGHTENMENT:
 		{
-			msg_print("Вы чувствуете себя просвещенным...");
+			msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п©я─п╬я│п╡п╣я┴п╣п╫п╫я▀п╪...");
 			message_flush();
 			wiz_lite();
 			(void)do_inc_stat(A_INT);
@@ -676,7 +676,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 
 		case SV_POTION_SELF_KNOWLEDGE:
 		{
-			msg_print("Вы познаете себя немного лучше...");
+			msg_print("п▓я▀ п©п╬п╥п╫п╟п╣я┌п╣ я│п╣п╠я▐ п╫п╣п╪п╫п╬пЁп╬ п╩я┐я┤я┬п╣...");
 			message_flush();
 			self_knowledge();
 			*ident = TRUE;
@@ -689,7 +689,7 @@ static bool quaff_potion(object_type *o_ptr, bool *ident)
 			{
 				s32b ee = (p_ptr->exp / 2) + 10;
 				if (ee > 100000L) ee = 100000L;
-				msg_print("Вы чувствуете себя более опытным.");
+				msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╠п╬п╩п╣п╣ п╬п©я▀я┌п╫я▀п╪.");
 				gain_exp(ee);
 				*ident = TRUE;
 			}
@@ -726,7 +726,7 @@ static bool read_scroll(object_type *o_ptr, bool *ident)
 
 		case SV_SCROLL_AGGRAVATE_MONSTER:
 		{
-			msg_print("Вы слышите громкий противный звук.");
+			msg_print("п▓я▀ я│п╩я▀я┬п╦я┌п╣ пЁя─п╬п╪п╨п╦п╧ п©я─п╬я┌п╦п╡п╫я▀п╧ п╥п╡я┐п╨.");
 			aggravate_monsters(0);
 			*ident = TRUE;
 			break;
@@ -820,7 +820,7 @@ static bool read_scroll(object_type *o_ptr, bool *ident)
 		{
 			if (remove_curse())
 			{
-				msg_print("Вы чувствуете, как кто-то присматривает за вами.");
+				msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣, п╨п╟п╨ п╨я┌п╬-я┌п╬ п©я─п╦я│п╪п╟я┌я─п╦п╡п╟п╣я┌ п╥п╟ п╡п╟п╪п╦.");
 				*ident = TRUE;
 			}
 			break;
@@ -948,7 +948,7 @@ static bool read_scroll(object_type *o_ptr, bool *ident)
 		{
 			if (p_ptr->confusing == 0)
 			{
-				msg_print("Ваши руки начинают светиться.");
+				msg_print("п▓п╟я┬п╦ я─я┐п╨п╦ п╫п╟я┤п╦п╫п╟я▌я┌ я│п╡п╣я┌п╦я┌я▄я│я▐.");
 				p_ptr->confusing = TRUE;
 				*ident = TRUE;
 			}
@@ -1087,7 +1087,7 @@ static bool use_staff(object_type *o_ptr, bool *ident)
 			{
 				if (!p_ptr->blind)
 				{
-					msg_print("Посох светится синим светом...");
+					msg_print("п÷п╬я│п╬я┘ я│п╡п╣я┌п╦я┌я│я▐ я│п╦п╫п╦п╪ я│п╡п╣я┌п╬п╪...");
 				}
 				*ident = TRUE;
 			}
@@ -1098,7 +1098,7 @@ static bool use_staff(object_type *o_ptr, bool *ident)
 		{
 			if (!p_ptr->blind)
 			{
-				msg_print("Конец посоха ярко вспыхивает...");
+				msg_print("п п╬п╫п╣я├ п©п╬я│п╬я┘п╟ я▐я─п╨п╬ п╡я│п©я▀я┘п╦п╡п╟п╣я┌...");
 			}
 			for (k = 0; k < 8; k++) lite_line(ddd[k]);
 			*ident = TRUE;
@@ -1188,7 +1188,7 @@ static bool use_staff(object_type *o_ptr, bool *ident)
 				p_ptr->csp = p_ptr->msp;
 				p_ptr->csp_frac = 0;
 				*ident = TRUE;
-				msg_print("Ваша голова проясняется.");
+				msg_print("п▓п╟я┬п╟ пЁп╬п╩п╬п╡п╟ п©я─п╬я▐я│п╫я▐п╣я┌я│я▐.");
 				p_ptr->redraw |= (PR_MANA);
 				p_ptr->window |= (PW_PLAYER_0 | PW_PLAYER_1);
 			}
@@ -1314,7 +1314,7 @@ static bool aim_wand(object_type *o_ptr, bool *ident)
 	if ((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE))
 	{
 		if (flush_failure) flush();
-		msg_print("Вы не смогли использовать палочку.");
+		msg_print("п▓я▀ п╫п╣ я│п╪п╬пЁп╩п╦ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п©п╟п╩п╬я┤п╨я┐.");
 		return (FALSE);
 	}
 
@@ -1322,7 +1322,7 @@ static bool aim_wand(object_type *o_ptr, bool *ident)
 	if (o_ptr->pval <= 0)
 	{
 		if (flush_failure) flush();
-		msg_print("В палочке кончились заряды.");
+		msg_print("п▓ п©п╟п╩п╬я┤п╨п╣ п╨п╬п╫я┤п╦п╩п╦я│я▄ п╥п╟я─я▐п╢я▀.");
 		o_ptr->ident |= (IDENT_EMPTY);
 		p_ptr->notice |= (PN_COMBINE | PN_REORDER);
 		p_ptr->window |= (PW_INVEN);
@@ -1387,7 +1387,7 @@ static bool aim_wand(object_type *o_ptr, bool *ident)
 
 		case SV_WAND_LITE:
 		{
-			msg_print("Появляется коридор синего мерцающего света.");
+			msg_print("п÷п╬я▐п╡п╩я▐п╣я┌я│я▐ п╨п╬я─п╦п╢п╬я─ я│п╦п╫п╣пЁп╬ п╪п╣я─я├п╟я▌я┴п╣пЁп╬ я│п╡п╣я┌п╟.");
 			lite_line(dir);
 			*ident = TRUE;
 			break;
@@ -1612,7 +1612,7 @@ static bool zap_rod(object_type *o_ptr, bool *ident)
 	if ((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE))
 	{
 		if (flush_failure) flush();
-		msg_print("Вы не смогли использовать жезл.");
+		msg_print("п▓я▀ п╫п╣ я│п╪п╬пЁп╩п╦ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╤п╣п╥п╩.");
 		return FALSE;
 	}
 
@@ -1622,9 +1622,9 @@ static bool zap_rod(object_type *o_ptr, bool *ident)
 		if (flush_failure) flush();
 		
 		if (o_ptr->number == 1)
-			msg_print("Жезл все еще заряжается.");
+			msg_print("п√п╣п╥п╩ п╡я│п╣ п╣я┴п╣ п╥п╟я─я▐п╤п╟п╣я┌я│я▐.");
 		else
-			msg_print("Все жезлы все еще заряжаются.");
+			msg_print("п▓я│п╣ п╤п╣п╥п╩я▀ п╡я│п╣ п╣я┴п╣ п╥п╟я─я▐п╤п╟я▌я┌я│я▐.");
 
 		return FALSE;
 	}
@@ -1748,7 +1748,7 @@ static bool zap_rod(object_type *o_ptr, bool *ident)
 
 		case SV_ROD_LITE:
 		{
-			msg_print("Появляется коридор синего мерцающего света.");
+			msg_print("п÷п╬я▐п╡п╩я▐п╣я┌я│я▐ п╨п╬я─п╦п╢п╬я─ я│п╦п╫п╣пЁп╬ п╪п╣я─я├п╟я▌я┴п╣пЁп╬ я│п╡п╣я┌п╟.");
 			lite_line(dir);
 			*ident = TRUE;
 			break;
@@ -1863,13 +1863,13 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 	/* Check the recharge */
 	if (o_ptr->timeout)
 	{
-		msg_format("Он%s светится и затухает...",
-			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"));
+		msg_format("п·п╫%s я│п╡п╣я┌п╦я┌я│я▐ п╦ п╥п╟я┌я┐я┘п╟п╣я┌...",
+			(rod == ROD_M ? "" : rod == ROD_F ? "п╟" : rod == ROD_N ? "п╬" : "п╦"));
 		return FALSE;
 	}
 
 	/* Activate the artifact */
-	message(MSG_ZAP, 0, "Вы активируете его...");
+	message(MSG_ZAP, 0, "п▓я▀ п╟п╨я┌п╦п╡п╦я─я┐п╣я┌п╣ п╣пЁп╬...");
 
 	/* Artifacts */
 	if (o_ptr->name1)
@@ -1880,21 +1880,21 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 		{
 			case ACT_ILLUMINATION:
 			{
-				msg_format("%s озаряется чистым светом...", o_name);
+				msg_format("%s п╬п╥п╟я─я▐п╣я┌я│я▐ я┤п╦я│я┌я▀п╪ я│п╡п╣я┌п╬п╪...", o_name);
 				lite_area(damroll(2, 15), 3);
 				break;
 			}
 
 			case ACT_MAGIC_MAP:
 			{
-				msg_format("%s ярко сверкает...", o_name);
+				msg_format("%s я▐я─п╨п╬ я│п╡п╣я─п╨п╟п╣я┌...", o_name);
 				map_area();
 				break;
 			}
 
 			case ACT_CLAIRVOYANCE:
 			{
-				msg_format("%s светится глубоким зеленым...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ пЁп╩я┐п╠п╬п╨п╦п╪ п╥п╣п╩п╣п╫я▀п╪...", o_name);
 				wiz_lite();
 				(void)detect_traps();
 				(void)detect_doors();
@@ -1904,7 +1904,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_PROT_EVIL:
 			{
-				msg_format("%s издает протяжный стон...", o_name);
+				msg_format("%s п╦п╥п╢п╟п╣я┌ п©я─п╬я┌я▐п╤п╫я▀п╧ я│я┌п╬п╫...", o_name);
 				k = 3 * p_ptr->lev;
 				(void)set_protevil(p_ptr->protevil + randint(25) + k);
 				break;
@@ -1912,14 +1912,14 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_DISP_EVIL:
 			{
-				msg_format("%s заполняет подземелье добром...", o_name);
+				msg_format("%s п╥п╟п©п╬п╩п╫я▐п╣я┌ п©п╬п╢п╥п╣п╪п╣п╩я▄п╣ п╢п╬п╠я─п╬п╪...", o_name);
 				dispel_evil(p_ptr->lev * 5);
 				break;
 			}
 
 			case ACT_HASTE2:
 			{
-				msg_format("%s ярко светится...", o_name);
+				msg_format("%s я▐я─п╨п╬ я│п╡п╣я┌п╦я┌я│я▐...", o_name);
 				if (!p_ptr->fast)
 				{
 					(void)set_fast(randint(75) + 75);
@@ -1933,7 +1933,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FIRE3:
 			{
-				msg_format("%s светится глубоким красным...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ пЁп╩я┐п╠п╬п╨п╦п╪ п╨я─п╟я│п╫я▀п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_FIRE, dir, 120, 3);
 				break;
@@ -1941,7 +1941,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST5:
 			{
-				msg_format("%s светится ярко-белым...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я▐я─п╨п╬-п╠п╣п╩я▀п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_COLD, dir, 200, 3);
 				break;
@@ -1949,7 +1949,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_ELEC2:
 			{
-				msg_format("%s светится глубоким синим...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ пЁп╩я┐п╠п╬п╨п╦п╪ я│п╦п╫п╦п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_ELEC, dir, 250, 3);
 				break;
@@ -1957,7 +1957,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_BIZZARE:
 			{
-				msg_format("%s светится черным...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я┤п╣я─п╫я▀п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				ring_of_power(dir);
 				break;
@@ -1966,14 +1966,14 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_STAR_BALL:
 			{
-				msg_format("%s окружается молнией...", o_name);
+				msg_format("%s п╬п╨я─я┐п╤п╟п╣я┌я│я▐ п╪п╬п╩п╫п╦п╣п╧...", o_name);
 				for (i = 0; i < 8; i++) fire_ball(GF_ELEC, ddd[i], 150, 3);
 				break;
 			}
 
 			case ACT_RAGE_BLESS_RESIST:
 			{
-				msg_format("%s светится всеми цветами...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ п╡я│п╣п╪п╦ я├п╡п╣я┌п╟п╪п╦...", o_name);
 				(void)hp_player(30);
 				(void)set_afraid(0);
 				(void)set_shero(p_ptr->shero + randint(50) + 50);
@@ -1988,8 +1988,8 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_HEAL2:
 			{
-				msg_format("%s светится ярким белым...", o_name);
-				msg_print("Вы чувствуете себя намного лучше...");
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я▐я─п╨п╦п╪ п╠п╣п╩я▀п╪...", o_name);
+				msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я│п╣п╠я▐ п╫п╟п╪п╫п╬пЁп╬ п╩я┐я┤я┬п╣...");
 				(void)hp_player(1000);
 				(void)set_cut(0);
 				break;
@@ -1997,37 +1997,37 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_PHASE:
 			{
-				msg_format("%s искривляет пространство вокруг вас...", o_name);
+				msg_format("%s п╦я│п╨я─п╦п╡п╩я▐п╣я┌ п©я─п╬я│я┌я─п╟п╫я│я┌п╡п╬ п╡п╬п╨я─я┐пЁ п╡п╟я│...", o_name);
 				teleport_player(10);
 				break;
 			}
 
 			case ACT_BANISHMENT:
 			{
-				msg_format("%s светится угрожающим синим...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я┐пЁя─п╬п╤п╟я▌я┴п╦п╪ я│п╦п╫п╦п╪...", o_name);
 				if (!banishment()) return FALSE;
 				break;
 			}
 
 			case ACT_TRAP_DOOR_DEST:
 			{
-				msg_format("%s светится ярко-красным...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я▐я─п╨п╬-п╨я─п╟я│п╫я▀п╪...", o_name);
 				destroy_doors_touch();
 				break;
 			}
 
 			case ACT_DETECT:
 			{
-				msg_format("%s светится лучистым белым...", o_name);
-				msg_print("Изображение формируется в вашей голове...");
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ п╩я┐я┤п╦я│я┌я▀п╪ п╠п╣п╩я▀п╪...", o_name);
+				msg_print("п≤п╥п╬п╠я─п╟п╤п╣п╫п╦п╣ я└п╬я─п╪п╦я─я┐п╣я┌я│я▐ п╡ п╡п╟я┬п╣п╧ пЁп╬п╩п╬п╡п╣...");
 				detect_all();
 				break;
 			}
 
 			case ACT_HEAL1:
 			{
-				msg_format("%s светится спокойным синим...", o_name);
-				msg_print("Вы чувствуете теплое покалывание...");
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я│п©п╬п╨п╬п╧п╫я▀п╪ я│п╦п╫п╦п╪...", o_name);
+				msg_print("п▓я▀ я┤я┐п╡я│я┌п╡я┐п╣я┌п╣ я┌п╣п©п╩п╬п╣ п©п╬п╨п╟п╩я▀п╡п╟п╫п╦п╣...");
 				(void)hp_player(500);
 				(void)set_cut(0);
 				break;
@@ -2035,7 +2035,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_RESIST:
 			{
-				msg_format("%s светится цветами радуги...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я├п╡п╣я┌п╟п╪п╦ я─п╟п╢я┐пЁп╦...", o_name);
 				(void)set_oppose_acid(p_ptr->oppose_acid + randint(20) + 20);
 				(void)set_oppose_elec(p_ptr->oppose_elec + randint(20) + 20);
 				(void)set_oppose_fire(p_ptr->oppose_fire + randint(20) + 20);
@@ -2046,35 +2046,35 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_SLEEP:
 			{
-				msg_format("%s светится ярко-синим...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я▐я─п╨п╬-я│п╦п╫п╦п╪...", o_name);
 				sleep_monsters_touch();
 				break;
 			}
 
 			case ACT_RECHARGE1:
 			{
-				msg_format("%s светится ярко-желтым...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я▐я─п╨п╬-п╤п╣п╩я┌я▀п╪...", o_name);
 				recharge(60);
 				break;
 			}
 
 			case ACT_TELEPORT:
 			{
-				msg_format("%s распрямляет пространство вокруг вас...", o_name);
+				msg_format("%s я─п╟я│п©я─я▐п╪п╩я▐п╣я┌ п©я─п╬я│я┌я─п╟п╫я│я┌п╡п╬ п╡п╬п╨я─я┐пЁ п╡п╟я│...", o_name);
 				teleport_player(100);
 				break;
 			}
 
 			case ACT_RESTORE_LIFE:
 			{
-				msg_format("%s светится спокойным красным...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я│п©п╬п╨п╬п╧п╫я▀п╪ п╨я─п╟я│п╫я▀п╪...", o_name);
 				restore_level();
 				break;
 			}
 
 			case ACT_MISSILE:
 			{
-				msg_format("%s ярко горит...", o_name);
+				msg_format("%s я▐я─п╨п╬ пЁп╬я─п╦я┌...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_MISSILE, dir, damroll(2, 6));
 				break;
@@ -2082,7 +2082,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FIRE1:
 			{
-				msg_format("%s покрывается пламенем...", o_name);
+				msg_format("%s п©п╬п╨я─я▀п╡п╟п╣я┌я│я▐ п©п╩п╟п╪п╣п╫п╣п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_FIRE, dir, damroll(9, 8));
 				break;
@@ -2090,7 +2090,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST1:
 			{
-				msg_format("%s излучает холод...", o_name);
+				msg_format("%s п╦п╥п╩я┐я┤п╟п╣я┌ я┘п╬п╩п╬п╢...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_COLD, dir, damroll(6, 8));
 				break;
@@ -2098,7 +2098,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_LIGHTNING_BOLT:
 			{
-				msg_format("%s сыплет искрамиs...", o_name);
+				msg_format("%s я│я▀п©п╩п╣я┌ п╦я│п╨я─п╟п╪п╦s...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_ELEC, dir, damroll(4, 8));
 				break;
@@ -2106,7 +2106,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_ACID1:
 			{
-				msg_format("%s покрывается кислотой...", o_name);
+				msg_format("%s п©п╬п╨я─я▀п╡п╟п╣я┌я│я▐ п╨п╦я│п╩п╬я┌п╬п╧...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_ACID, dir, damroll(5, 8));
 				break;
@@ -2114,7 +2114,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_ARROW:
 			{
-				msg_format("%s покрывается шипами...", o_name);
+				msg_format("%s п©п╬п╨я─я▀п╡п╟п╣я┌я│я▐ я┬п╦п©п╟п╪п╦...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_ARROW, dir, 150);
 				break;
@@ -2122,7 +2122,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_HASTE1:
 			{
-				msg_format("%s светится ярко-зеленым...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я▐я─п╨п╬-п╥п╣п╩п╣п╫я▀п╪...", o_name);
 				if (!p_ptr->fast)
 				{
 					(void)set_fast(randint(20) + 20);
@@ -2136,7 +2136,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_REM_FEAR_POIS:
 			{
-				msg_format("%s вспыхивает синим...", o_name);
+				msg_format("%s п╡я│п©я▀я┘п╦п╡п╟п╣я┌ я│п╦п╫п╦п╪...", o_name);
 				(void)set_afraid(0);
 				(void)set_poisoned(0);
 				break;
@@ -2144,7 +2144,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_STINKING_CLOUD:
 			{
-				msg_format("%s светится ядовито-зеленым...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я▐п╢п╬п╡п╦я┌п╬-п╥п╣п╩п╣п╫я▀п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_POIS, dir, 12, 3);
 				break;
@@ -2152,7 +2152,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST2:
 			{
-				msg_format("%s покрывается инеем...", o_name);
+				msg_format("%s п©п╬п╨я─я▀п╡п╟п╣я┌я│я▐ п╦п╫п╣п╣п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_COLD, dir, 48, 2);
 				break;
@@ -2160,7 +2160,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST4:
 			{
-				msg_format("%s горит бледно-синим...", o_name);
+				msg_format("%s пЁп╬я─п╦я┌ п╠п╩п╣п╢п╫п╬-я│п╦п╫п╦п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_COLD, dir, damroll(12, 8));
 				break;
@@ -2168,7 +2168,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FROST3:
 			{
-				msg_format("%s светится насыщенным синим...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ п╫п╟я│я▀я┴п╣п╫п╫я▀п╪ я│п╦п╫п╦п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_COLD, dir, 100, 2);
 				break;
@@ -2176,7 +2176,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FIRE2:
 			{
-				msg_format("%s пылает огнем...", o_name);
+				msg_format("%s п©я▀п╩п╟п╣я┌ п╬пЁп╫п╣п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_ball(GF_FIRE, dir, 72, 2);
 				break;
@@ -2184,7 +2184,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_DRAIN_LIFE2:
 			{
-				msg_format("%s светится черным...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я┤п╣я─п╫я▀п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				drain_life(dir, 120);
 				break;
@@ -2192,7 +2192,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_STONE_TO_MUD:
 			{
-				msg_format("%s пульсирует...", o_name);
+				msg_format("%s п©я┐п╩я▄я│п╦я─я┐п╣я┌...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				wall_to_mud(dir);
 				break;
@@ -2200,14 +2200,14 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_MASS_BANISHMENT:
 			{
-				msg_format("%s издает протяжную ноту...", o_name);
+				msg_format("%s п╦п╥п╢п╟п╣я┌ п©я─п╬я┌я▐п╤п╫я┐я▌ п╫п╬я┌я┐...", o_name);
 				(void)mass_banishment();
 				break;
 			}
 
 			case ACT_CURE_WOUNDS:
 			{
-				msg_format("%s светится глубоким фиолетовым...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ пЁп╩я┐п╠п╬п╨п╦п╪ я└п╦п╬п╩п╣я┌п╬п╡я▀п╪...", o_name);
 				hp_player(damroll(4, 8));
 				(void)set_cut((p_ptr->cut / 2) - 50);
 				break;
@@ -2215,7 +2215,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_TELE_AWAY:
 			{
-				msg_format("%s вспыхивает глубоким красным...", o_name);
+				msg_format("%s п╡я│п©я▀я┘п╦п╡п╟п╣я┌ пЁп╩я┐п╠п╬п╨п╦п╪ п╨я─п╟я│п╫я▀п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				teleport_monster(dir);
 				break;
@@ -2223,14 +2223,14 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_WOR:
 			{
-				msg_format("%s светится мягким белым...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ п╪я▐пЁп╨п╦п╪ п╠п╣п╩я▀п╪...", o_name);
 				set_recall();
 				break;
 			}
 
 			case ACT_CONFUSE:
 			{
-				msg_format("%s светится странными цветами...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ я│я┌я─п╟п╫п╫я▀п╪п╦ я├п╡п╣я┌п╟п╪п╦...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				confuse_monster(dir, 20);
 				break;
@@ -2238,21 +2238,21 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_IDENTIFY:
 			{
-				msg_format("%s вспыхивает желтым...", o_name);
+				msg_format("%s п╡я│п©я▀я┘п╦п╡п╟п╣я┌ п╤п╣п╩я┌я▀п╪...", o_name);
 				if (!ident_spell()) return FALSE;
 				break;
 			}
 
 			case ACT_PROBE:
 			{
-				msg_format("%s ярко загорается...", o_name);
+				msg_format("%s я▐я─п╨п╬ п╥п╟пЁп╬я─п╟п╣я┌я│я▐...", o_name);
 				probing();
 				break;
 			}
 
 			case ACT_DRAIN_LIFE1:
 			{
-				msg_format("%s горит белым...", o_name);
+				msg_format("%s пЁп╬я─п╦я┌ п╠п╣п╩я▀п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				drain_life(dir, 90);
 				break;
@@ -2260,21 +2260,21 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_FIREBRAND:
 			{
-				msg_format("%s светится огненно-красным...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ п╬пЁп╫п╣п╫п╫п╬-п╨я─п╟я│п╫я▀п╪...", o_name);
 				(void)brand_bolts();
 				break;
 			}
 
 			case ACT_STARLIGHT:
 			{
-				msg_format("%s вспыхивает светом тысячи звезд...", o_name);
+				msg_format("%s п╡я│п©я▀я┘п╦п╡п╟п╣я┌ я│п╡п╣я┌п╬п╪ я┌я▀я│я▐я┤п╦ п╥п╡п╣п╥п╢...", o_name);
 				for (k = 0; k < 8; k++) strong_lite_line(ddd[k]);
 				break;
 			}
 
 			case ACT_MANA_BOLT:
 			{
-				msg_format("%s светится белым...", o_name);
+				msg_format("%s я│п╡п╣я┌п╦я┌я│я▐ п╠п╣п╩я▀п╪...", o_name);
 				if (!get_aim_dir(&dir)) return FALSE;
 				fire_bolt(GF_MANA, dir, damroll(12, 8));
 				break;
@@ -2282,7 +2282,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case ACT_BERSERKER:
 			{
-				msg_format("%s горит яростью...", o_name);
+				msg_format("%s пЁп╬я─п╦я┌ я▐я─п╬я│я┌я▄я▌...", o_name);
 				set_shero(p_ptr->shero + randint(50) + 50);
 				break;
 			}
@@ -2313,7 +2313,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 		{
 			case SV_DRAGON_BLUE:
 			{
-				msg_print("Вы дышите молнией.");
+				msg_print("п▓я▀ п╢я▀я┬п╦я┌п╣ п╪п╬п╩п╫п╦п╣п╧.");
 				fire_ball(GF_ELEC, dir, 100, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2321,7 +2321,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case SV_DRAGON_WHITE:
 			{
-				msg_print("Вы дышите холодом.");
+				msg_print("п▓я▀ п╢я▀я┬п╦я┌п╣ я┘п╬п╩п╬п╢п╬п╪.");
 				fire_ball(GF_COLD, dir, 110, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2329,7 +2329,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case SV_DRAGON_BLACK:
 			{
-				msg_print("Вы дышите кислотой.");
+				msg_print("п▓я▀ п╢я▀я┬п╦я┌п╣ п╨п╦я│п╩п╬я┌п╬п╧.");
 				fire_ball(GF_ACID, dir, 130, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2337,7 +2337,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case SV_DRAGON_GREEN:
 			{
-				msg_print("Вы дышите ядовитым газом.");
+				msg_print("п▓я▀ п╢я▀я┬п╦я┌п╣ я▐п╢п╬п╡п╦я┌я▀п╪ пЁп╟п╥п╬п╪.");
 				fire_ball(GF_POIS, dir, 150, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2345,7 +2345,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case SV_DRAGON_RED:
 			{
-				msg_print("Вы дышите огнем.");
+				msg_print("п▓я▀ п╢я▀я┬п╦я┌п╣ п╬пЁп╫п╣п╪.");
 				fire_ball(GF_FIRE, dir, 200, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2354,11 +2354,11 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_MULTIHUED:
 			{
 				chance = rand_int(5);
-				msg_format("Вы дышите %s.",
-				           ((chance == 1) ? "молнией" :
-				            ((chance == 2) ? "холодом" :
-				             ((chance == 3) ? "кислотой" :
-				              ((chance == 4) ? "ядовитым газом" : "огнем")))));
+				msg_format("п▓я▀ п╢я▀я┬п╦я┌п╣ %s.",
+				           ((chance == 1) ? "п╪п╬п╩п╫п╦п╣п╧" :
+				            ((chance == 2) ? "я┘п╬п╩п╬п╢п╬п╪" :
+				             ((chance == 3) ? "п╨п╦я│п╩п╬я┌п╬п╧" :
+				              ((chance == 4) ? "я▐п╢п╬п╡п╦я┌я▀п╪ пЁп╟п╥п╬п╪" : "п╬пЁп╫п╣п╪")))));
 				fire_ball(((chance == 1) ? GF_ELEC :
 				           ((chance == 2) ? GF_COLD :
 				            ((chance == 3) ? GF_ACID :
@@ -2370,7 +2370,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case SV_DRAGON_BRONZE:
 			{
-				msg_print("Вы дышите контузией.");
+				msg_print("п▓я▀ п╢я▀я┬п╦я┌п╣ п╨п╬п╫я┌я┐п╥п╦п╣п╧.");
 				fire_ball(GF_CONFUSION, dir, 120, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2378,7 +2378,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case SV_DRAGON_GOLD:
 			{
-				msg_print("Вы дышите звуком.");
+				msg_print("п▓я▀ п╢я▀я┬п╦я┌п╣ п╥п╡я┐п╨п╬п╪.");
 				fire_ball(GF_SOUND, dir, 130, 2);
 				o_ptr->timeout = rand_int(450) + 450;
 				break;
@@ -2387,8 +2387,8 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_CHAOS:
 			{
 				chance = rand_int(2);
-				msg_format("Вы дышите %s.",
-				           ((chance == 1 ? "хаосом" : "антимагией")));
+				msg_format("п▓я▀ п╢я▀я┬п╦я┌п╣ %s.",
+				           ((chance == 1 ? "я┘п╟п╬я│п╬п╪" : "п╟п╫я┌п╦п╪п╟пЁп╦п╣п╧")));
 				fire_ball((chance == 1 ? GF_CHAOS : GF_DISENCHANT),
 				          dir, 220, 2);
 				o_ptr->timeout = rand_int(300) + 300;
@@ -2398,8 +2398,8 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_LAW:
 			{
 				chance = rand_int(2);
-				msg_format("Вы дышите %s.",
-				           ((chance == 1 ? "звуком" : "осколками")));
+				msg_format("п▓я▀ п╢я▀я┬п╦я┌п╣ %s.",
+				           ((chance == 1 ? "п╥п╡я┐п╨п╬п╪" : "п╬я│п╨п╬п╩п╨п╟п╪п╦")));
 				fire_ball((chance == 1 ? GF_SOUND : GF_SHARD),
 				          dir, 230, 2);
 				o_ptr->timeout = rand_int(300) + 300;
@@ -2409,10 +2409,10 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_BALANCE:
 			{
 				chance = rand_int(4);
-				msg_format("Вы дышите %s.",
-				           ((chance == 1) ? "хаосом" :
-				            ((chance == 2) ? "антимагией" :
-				             ((chance == 3) ? "звуком" : "осколками"))));
+				msg_format("п▓я▀ п╢я▀я┬п╦я┌п╣ %s.",
+				           ((chance == 1) ? "я┘п╟п╬я│п╬п╪" :
+				            ((chance == 2) ? "п╟п╫я┌п╦п╪п╟пЁп╦п╣п╧" :
+				             ((chance == 3) ? "п╥п╡я┐п╨п╬п╪" : "п╬я│п╨п╬п╩п╨п╟п╪п╦"))));
 				fire_ball(((chance == 1) ? GF_CHAOS :
 				           ((chance == 2) ? GF_DISENCHANT :
 				            ((chance == 3) ? GF_SOUND : GF_SHARD))),
@@ -2424,8 +2424,8 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 			case SV_DRAGON_SHINING:
 			{
 				chance = rand_int(2);
-				msg_format("Вы дышите %s.",
-				           ((chance == 0 ? "светом" : "темнотой")));
+				msg_format("п▓я▀ п╢я▀я┬п╦я┌п╣ %s.",
+				           ((chance == 0 ? "я│п╡п╣я┌п╬п╪" : "я┌п╣п╪п╫п╬я┌п╬п╧")));
 				fire_ball((chance == 0 ? GF_LITE : GF_DARK), dir, 200, 2);
 				o_ptr->timeout = rand_int(300) + 300;
 				break;
@@ -2433,7 +2433,7 @@ static bool activate_object(object_type *o_ptr, bool *ident)
 
 			case SV_DRAGON_POWER:
 			{
-				msg_print("Вы дышите элементами.");
+				msg_print("п▓я▀ п╢я▀я┬п╦я┌п╣ я█п╩п╣п╪п╣п╫я┌п╟п╪п╦.");
 				fire_ball(GF_MISSILE, dir, 300, 2);
 				o_ptr->timeout = rand_int(300) + 300;
 				break;
@@ -2560,56 +2560,56 @@ bool use_object(object_type *o_ptr, bool *ident)
 
 static cptr act_description[ACT_MAX] =
 {
-	"освещения",
-	"волшебной картографии",
-	"ясновидения",
-	"защиты от зла",
-	"уничтожения зла (x5)",
-	"исцеления (500)",
-	"исцеления (1000)",
-	"лечения ран (4d7)",
-	"ускорения (20+d20 ходов)",
-	"ускорения (75+d75 ходов)",
-	"огненной стрелы (9d8)",
-	"огненного шара (72)",
-	"большого огненного шара (120)",
-	"ледяной стрелы (6d8)",
-	"ледяного шара (48)",
-	"ледяного шара (100)",
-	"ледяной стрелы (12d8)",
-	"большого ледяного шара (200)",
-	"кислотной стрелы (5d8)",
-	"перезарядки I",
-	"усыпления II",
-	"удара молнией (4d8)",
-	"большой шаровой молнии (250)",
-	"изгнания",
-	"массового изгнания",
-	"идентификации",
-	"высасывания жизни (90)",
-	"высасывания жизни (120)",
-	"странных вещей",
-	"звездного шара (150)",
-	"ярости, благословления и сопротивления",
-	"фазовой двери",
-	"разрушения дверей и ловушек",
-	"поиска",
-	"сопротивления (20+d20 ходов)",
-	"телепортации",
-	"восстановления жизни",
-	"волшебной стрелы (2d6)",
-	"большой волшебной стрелы (150)",
-	"снятия страха и лечения яда",
-	"ядовитого облака (12)",
-	"плавки камня",
-	"телепортации монстра",
-	"Слова Возвращения",
-	"контузии монстра",
-	"зондирования",
-	"огненного клейма болтов",
-	"звездного света (10d8)",
-	"стрелы маны (12d8)",
-	"ярости (50+d50 ходов)"
+	"п╬я│п╡п╣я┴п╣п╫п╦я▐",
+	"п╡п╬п╩я┬п╣п╠п╫п╬п╧ п╨п╟я─я┌п╬пЁя─п╟я└п╦п╦",
+	"я▐я│п╫п╬п╡п╦п╢п╣п╫п╦я▐",
+	"п╥п╟я┴п╦я┌я▀ п╬я┌ п╥п╩п╟",
+	"я┐п╫п╦я┤я┌п╬п╤п╣п╫п╦я▐ п╥п╩п╟ (x5)",
+	"п╦я│я├п╣п╩п╣п╫п╦я▐ (500)",
+	"п╦я│я├п╣п╩п╣п╫п╦я▐ (1000)",
+	"п╩п╣я┤п╣п╫п╦я▐ я─п╟п╫ (4d7)",
+	"я┐я│п╨п╬я─п╣п╫п╦я▐ (20+d20 я┘п╬п╢п╬п╡)",
+	"я┐я│п╨п╬я─п╣п╫п╦я▐ (75+d75 я┘п╬п╢п╬п╡)",
+	"п╬пЁп╫п╣п╫п╫п╬п╧ я│я┌я─п╣п╩я▀ (9d8)",
+	"п╬пЁп╫п╣п╫п╫п╬пЁп╬ я┬п╟я─п╟ (72)",
+	"п╠п╬п╩я▄я┬п╬пЁп╬ п╬пЁп╫п╣п╫п╫п╬пЁп╬ я┬п╟я─п╟ (120)",
+	"п╩п╣п╢я▐п╫п╬п╧ я│я┌я─п╣п╩я▀ (6d8)",
+	"п╩п╣п╢я▐п╫п╬пЁп╬ я┬п╟я─п╟ (48)",
+	"п╩п╣п╢я▐п╫п╬пЁп╬ я┬п╟я─п╟ (100)",
+	"п╩п╣п╢я▐п╫п╬п╧ я│я┌я─п╣п╩я▀ (12d8)",
+	"п╠п╬п╩я▄я┬п╬пЁп╬ п╩п╣п╢я▐п╫п╬пЁп╬ я┬п╟я─п╟ (200)",
+	"п╨п╦я│п╩п╬я┌п╫п╬п╧ я│я┌я─п╣п╩я▀ (5d8)",
+	"п©п╣я─п╣п╥п╟я─я▐п╢п╨п╦ I",
+	"я┐я│я▀п©п╩п╣п╫п╦я▐ II",
+	"я┐п╢п╟я─п╟ п╪п╬п╩п╫п╦п╣п╧ (4d8)",
+	"п╠п╬п╩я▄я┬п╬п╧ я┬п╟я─п╬п╡п╬п╧ п╪п╬п╩п╫п╦п╦ (250)",
+	"п╦п╥пЁп╫п╟п╫п╦я▐",
+	"п╪п╟я│я│п╬п╡п╬пЁп╬ п╦п╥пЁп╫п╟п╫п╦я▐",
+	"п╦п╢п╣п╫я┌п╦я└п╦п╨п╟я├п╦п╦",
+	"п╡я▀я│п╟я│я▀п╡п╟п╫п╦я▐ п╤п╦п╥п╫п╦ (90)",
+	"п╡я▀я│п╟я│я▀п╡п╟п╫п╦я▐ п╤п╦п╥п╫п╦ (120)",
+	"я│я┌я─п╟п╫п╫я▀я┘ п╡п╣я┴п╣п╧",
+	"п╥п╡п╣п╥п╢п╫п╬пЁп╬ я┬п╟я─п╟ (150)",
+	"я▐я─п╬я│я┌п╦, п╠п╩п╟пЁп╬я│п╩п╬п╡п╩п╣п╫п╦я▐ п╦ я│п╬п©я─п╬я┌п╦п╡п╩п╣п╫п╦я▐",
+	"я└п╟п╥п╬п╡п╬п╧ п╢п╡п╣я─п╦",
+	"я─п╟п╥я─я┐я┬п╣п╫п╦я▐ п╢п╡п╣я─п╣п╧ п╦ п╩п╬п╡я┐я┬п╣п╨",
+	"п©п╬п╦я│п╨п╟",
+	"я│п╬п©я─п╬я┌п╦п╡п╩п╣п╫п╦я▐ (20+d20 я┘п╬п╢п╬п╡)",
+	"я┌п╣п╩п╣п©п╬я─я┌п╟я├п╦п╦",
+	"п╡п╬я│я│я┌п╟п╫п╬п╡п╩п╣п╫п╦я▐ п╤п╦п╥п╫п╦",
+	"п╡п╬п╩я┬п╣п╠п╫п╬п╧ я│я┌я─п╣п╩я▀ (2d6)",
+	"п╠п╬п╩я▄я┬п╬п╧ п╡п╬п╩я┬п╣п╠п╫п╬п╧ я│я┌я─п╣п╩я▀ (150)",
+	"я│п╫я▐я┌п╦я▐ я│я┌я─п╟я┘п╟ п╦ п╩п╣я┤п╣п╫п╦я▐ я▐п╢п╟",
+	"я▐п╢п╬п╡п╦я┌п╬пЁп╬ п╬п╠п╩п╟п╨п╟ (12)",
+	"п©п╩п╟п╡п╨п╦ п╨п╟п╪п╫я▐",
+	"я┌п╣п╩п╣п©п╬я─я┌п╟я├п╦п╦ п╪п╬п╫я│я┌я─п╟",
+	"п║п╩п╬п╡п╟ п▓п╬п╥п╡я─п╟я┴п╣п╫п╦я▐",
+	"п╨п╬п╫я┌я┐п╥п╦п╦ п╪п╬п╫я│я┌я─п╟",
+	"п╥п╬п╫п╢п╦я─п╬п╡п╟п╫п╦я▐",
+	"п╬пЁп╫п╣п╫п╫п╬пЁп╬ п╨п╩п╣п╧п╪п╟ п╠п╬п╩я┌п╬п╡",
+	"п╥п╡п╣п╥п╢п╫п╬пЁп╬ я│п╡п╣я┌п╟ (10d8)",
+	"я│я┌я─п╣п╩я▀ п╪п╟п╫я▀ (12d8)",
+	"я▐я─п╬я│я┌п╦ (50+d50 я┘п╬п╢п╬п╡)"
 };
 
 
@@ -2640,11 +2640,11 @@ void describe_item_activation(const object_type *o_ptr)
 
 		/* Output the number of turns */
 		if (a_ptr->time && a_ptr->randtime)
-			text_out(format(" каждые %d+d%d ходов", a_ptr->time, a_ptr->randtime));
+			text_out(format(" п╨п╟п╤п╢я▀п╣ %d+d%d я┘п╬п╢п╬п╡", a_ptr->time, a_ptr->randtime));
 		else if (a_ptr->time)
-			text_out(format(" каждые %d ходов", a_ptr->time));
+			text_out(format(" п╨п╟п╤п╢я▀п╣ %d я┘п╬п╢п╬п╡", a_ptr->time));
 		else if (a_ptr->randtime)
-			text_out(format(" каждые d%d ходов", a_ptr->randtime));
+			text_out(format(" п╨п╟п╤п╢я▀п╣ d%d я┘п╬п╢п╬п╡", a_ptr->randtime));
 
 		return;
 	}
@@ -2657,67 +2657,67 @@ void describe_item_activation(const object_type *o_ptr)
 	{
 		case SV_DRAGON_BLUE:
 		{
-			text_out("дыхания молнией (100) каждые 450+d450 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ п╪п╬п╩п╫п╦п╣п╧ (100) п╨п╟п╤п╢я▀п╣ 450+d450 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_WHITE:
 		{
-			text_out("дыхания холодом (110) каждые 450+d450 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ я┘п╬п╩п╬п╢п╬п╪ (110) п╨п╟п╤п╢я▀п╣ 450+d450 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_BLACK:
 		{
-			text_out("дыхания кислотой (130) каждые 450+d450 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ п╨п╦я│п╩п╬я┌п╬п╧ (130) п╨п╟п╤п╢я▀п╣ 450+d450 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_GREEN:
 		{
-			text_out("дыхания ядовитым газом (150) каждые 450+d450 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ я▐п╢п╬п╡п╦я┌я▀п╪ пЁп╟п╥п╬п╪ (150) п╨п╟п╤п╢я▀п╣ 450+d450 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_RED:
 		{
-			text_out("дыхания огнем (200) каждые 450+d450 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ п╬пЁп╫п╣п╪ (200) п╨п╟п╤п╢я▀п╣ 450+d450 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_MULTIHUED:
 		{
-			text_out("дыхания низшими элементами (250) каждые 225+d225 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ п╫п╦п╥я┬п╦п╪п╦ я█п╩п╣п╪п╣п╫я┌п╟п╪п╦ (250) п╨п╟п╤п╢я▀п╣ 225+d225 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_BRONZE:
 		{
-			text_out("дыхания контузией (120) каждые 450+d450 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ п╨п╬п╫я┌я┐п╥п╦п╣п╧ (120) п╨п╟п╤п╢я▀п╣ 450+d450 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_GOLD:
 		{
-			text_out("дыхания звуком (130) каждые 450+d450 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ п╥п╡я┐п╨п╬п╪ (130) п╨п╟п╤п╢я▀п╣ 450+d450 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_CHAOS:
 		{
-			text_out("дыхания хаосом/антимагией (220) каждые 300+d300 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ я┘п╟п╬я│п╬п╪/п╟п╫я┌п╦п╪п╟пЁп╦п╣п╧ (220) п╨п╟п╤п╢я▀п╣ 300+d300 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_LAW:
 		{
-			text_out("дыхания звуком/осколками (230) каждые 300+d300 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ п╥п╡я┐п╨п╬п╪/п╬я│п╨п╬п╩п╨п╟п╪п╦ (230) п╨п╟п╤п╢я▀п╣ 300+d300 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_BALANCE:
 		{
-			text_out("дыхания элементами баланса (250) каждые 300+d300 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ я█п╩п╣п╪п╣п╫я┌п╟п╪п╦ п╠п╟п╩п╟п╫я│п╟ (250) п╨п╟п╤п╢я▀п╣ 300+d300 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_SHINING:
 		{
-			text_out("дыхания светом/темнотой (200) каждые 300+d300 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ я│п╡п╣я┌п╬п╪/я┌п╣п╪п╫п╬я┌п╬п╧ (200) п╨п╟п╤п╢я▀п╣ 300+d300 я┘п╬п╢п╬п╡");
 			break;
 		}
 		case SV_DRAGON_POWER:
 		{
-			text_out("дыхания элементами (300) каждые 300+d300 ходов");
+			text_out("п╢я▀я┘п╟п╫п╦я▐ я█п╩п╣п╪п╣п╫я┌п╟п╪п╦ (300) п╨п╟п╤п╢я▀п╣ 300+d300 я┘п╬п╢п╬п╡");
 			break;
 		}
 	}
