@@ -10,6 +10,8 @@
 
 #include "angband.h"
 
+#ifndef USE_SCRIPT
+
 #include "script.h"
 
 static bool eat_food(object_type *o_ptr, bool *ident)
@@ -1638,7 +1640,6 @@ static bool zap_rod(object_type *o_ptr, bool *ident)
 		case SV_ROD_DETECT_TRAP:
 		{
 			if (detect_traps()) *ident = TRUE;
-			o_ptr->pval = 50;
 			break;
 		}
 
@@ -2722,3 +2723,11 @@ void describe_item_activation(const object_type *o_ptr)
 	}
 }
 
+
+#else
+
+#ifdef MACINTOSH
+static int i = 0;
+#endif
+
+#endif /* USE_SCRIPT */

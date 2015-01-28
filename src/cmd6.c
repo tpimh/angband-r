@@ -161,7 +161,7 @@ void do_cmd_quaff_potion(void)
 
 	/* Get an item */
 	q = "Выпить какой напиток? ";
-	s = "У вас нечего пьянствовать.";
+	s = "Вам нечего выпивать.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -379,15 +379,6 @@ void do_cmd_use_staff(void)
 		o_ptr = &o_list[0 - item];
 	}
 
-
-	/* Mega-Hack -- refuse to use a pile from the ground */
-	if ((item < 0) && (o_ptr->number > 1))
-	{
-		msg_print("Вы должны сначала поднять посохи.");
-		return;
-	}
-
-
 	/* Take a turn */
 	p_ptr->energy_use = 100;
 
@@ -529,15 +520,6 @@ void do_cmd_aim_wand(void)
 		o_ptr = &o_list[0 - item];
 	}
 
-
-	/* Mega-Hack -- refuse to aim a pile from the ground */
-	if ((item < 0) && (o_ptr->number > 1))
-	{
-		msg_print("Вы должны сначала поднять палочки.");
-		return;
-	}
-
-
 	/* Aim the wand */
 	if (!use_object(o_ptr, &ident)) return;
 
@@ -616,14 +598,6 @@ void do_cmd_zap_rod(void)
 	else
 	{
 		o_ptr = &o_list[0 - item];
-	}
-
-
-	/* Mega-Hack -- refuse to zap a pile from the ground */
-	if ((item < 0) && (o_ptr->number > 1))
-	{
-		msg_print("Вы должны сначала поднять жезлы.");
-		return;
 	}
 
 	/* Zap the rod */

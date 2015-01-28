@@ -62,7 +62,7 @@
 
 # Version stamp (required)
 
-V:3.0.4
+V:3.0.5
 
 
 N:0:Воин
@@ -445,8 +445,8 @@ E:70:37:1:1
 F:PSEUDO_ID_HEAVY | PSEUDO_ID_IMPROV
 T:Галлант
 T:Хранитель
-T:Защитник
 T:Охранник
+T:Защитник
 T:Страж
 T:Рыцарь
 T:Князь

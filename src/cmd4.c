@@ -3168,7 +3168,7 @@ static void do_cmd_knowledge_uniques(void)
 	my_fclose(fff);
 
 	/* Construct header line */
-	sprintf(header, "Уникальные монстры: %d известно, %d убито", n, killed);
+	strnfmt(header, sizeof(header), "Уникальные монстры: %d известно, %d убито", n, killed);
 
 	/* Display the file contents */
 	show_file(file_name, header, 0, 0);

@@ -49,7 +49,7 @@ local adj_con_fix =
 function poison_damage_hook()
 	if player.poisoned > 0 then
 		-- Take damage
-		take_hit(1, "poison")
+		take_hit(1, "отравлением")
 
 		-- Reduce poison effect over time
 		-- Note: +1 because of Lua's 1-based arrays

@@ -29,6 +29,6 @@ void luaU_print (const Proto* Main);
 
 /* a multiple of PI for testing native format */
 /* multiplying by 1E7 gives non-trivial integer values */
-#define	TEST_NUMBER	((lua_Number)3.14159265358979323846E7)
+#define	TEST_NUMBER	3
 
 #endif

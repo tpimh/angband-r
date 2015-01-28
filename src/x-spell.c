@@ -11,6 +11,8 @@
 
 #include "angband.h"
 
+#ifndef USE_SCRIPT
+
 #define SPELL_MAGIC_MISSILE             0
 #define SPELL_DETECT_MONSTERS           1
 #define SPELL_PHASE_DOOR                2
@@ -1704,3 +1706,5 @@ bool cast_spell(int tval, int index)
 		return cast_priest_spell(index);
 	}
 }
+
+#endif /* USE_SCRIPT */

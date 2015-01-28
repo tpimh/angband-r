@@ -266,14 +266,7 @@
 #endif /* USE_SOUND */
 
 #include <commdlg.h>
-
-/*
- * HTML-Help requires htmlhelp.h and htmlhelp.lib from Microsoft's
- * HTML Workshop < msdn.microsoft.com/workshop/author/htmlhelp/ >.
- */
-#ifdef HTML_HELP
-#include <htmlhelp.h>
-#endif /* HTML_HELP */
+#include <shellapi.h>
 
 /*
  * Include the support for loading bitmaps
@@ -2322,9 +2315,38 @@ static errr Term_text_win(int x, int y, int n, byte a, cptr s)
 		/* Dump each character */
 		for (i = 0; i < n; i++)
 		{
-			/* Dump the text */
-			ExtTextOut(hdc, rc.left, rc.top, 0, &rc,
-			           s+i, 1, NULL);
+			/* Мега-Хак -- перекодировка CP1251 в KOI8-R на лету */
+			cptr win2koi[] = {
+				0xe1, 0xe2, 0xf7, 0xe7, 0xe4, 0xe5, 0xf6, 0xfa,		/* А..З */
+				0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, 0xef, 0xf0,		/* И..П */
+				0xf2, 0xf3, 0xf4, 0xf5, 0xe6, 0xe8, 0xe3, 0xfe,		/* Р..Ч */
+				0xfb, 0xfd, 0xff, 0xf9, 0xf8, 0xfc, 0xe0, 0xf1,		/* Ш..Я */
+				0xc1, 0xc2, 0xd7, 0xc7, 0xc4, 0xc5, 0xd6, 0xda,		/* а..з */
+				0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 0xd0,		/* и..п */
+				0xd2, 0xd3, 0xd4, 0xd5, 0xc6, 0xc8, 0xc3, 0xde,		/* р..ч */
+				0xdb, 0xdd, 0xdf, 0xd9, 0xd8, 0xdc, 0xc0, 0xd1		/* щ..я */
+			};
+			
+			byte str[2] = "";
+
+			str[0] = (byte)*(s+i);
+			
+			if (str[0] < 0xc0)
+			{
+				/* Dump the text */
+				ExtTextOut(hdc, rc.left, rc.top, 0, &rc,
+				           str, 1, NULL);
+			}
+			else
+			{
+				str[0] = win2koi[str[0] - 0xc0];
+				
+				/* Dump the text */
+				ExtTextOut(hdc, rc.left, rc.top, 0, &rc,
+				           str, 1, NULL);
+			}
+				
+				
 
 			/* Advance */
 			rc.left += td->tile_wid;
@@ -3315,19 +3337,7 @@ static void display_help(cptr filename)
 
 	if (check_file(tmp))
 	{
-#ifdef HTML_HELP
-
-		HtmlHelp(data[0].w, tmp, HH_DISPLAY_TOPIC, 0);
-
-#else /* HTML_HELP */
-
-		char buf[1024];
-
-		sprintf(buf, "winhelp.exe %s", tmp);
-		WinExec(buf, SW_NORMAL);
-
-#endif /* HTML_HELP */
-
+		ShellExecute(data[0].w, "open", tmp, NULL, NULL, SW_SHOWNORMAL);
 	}
 	else
 	{

@@ -157,6 +157,7 @@ bool make_attack_normal(int m_idx)
 	{
 		bool visible = FALSE;
 		bool obvious = FALSE;
+		bool do_break = FALSE;
 
 		int power = 0;
 		int damage = 0;
@@ -479,6 +480,7 @@ bool make_attack_normal(int m_idx)
 					break;
 				}
 
+
 				case RBE_UN_POWER:
 				{
 					int drained = 0;
@@ -498,29 +500,30 @@ bool make_attack_normal(int m_idx)
 						/* Skip non-objects */
 						if (!o_ptr->k_idx) continue;
 
-						/* В Angband 3.0.4 жезлы также могут быть опустошены,
-						 * но, по мнению подавляющего большинства в rec.games.roguelike.angband,
-						 * это делает игру практически нереальной (вместе с уязвимыми к электричеству
-						 * жезлами. Вероятно, Роберт изменит это в следующей версии. Пока пусть
-						 * будет как было.
-						 */
-
-						/* Drain charged wands/staffs */
-						if (((o_ptr->tval == TV_STAFF) ||
-						     (o_ptr->tval == TV_WAND)) &&
-						    (o_ptr->pval > 0))
+						/* Drain charged wands/staves */
+						if ((o_ptr->tval == TV_STAFF) ||
+						    (o_ptr->tval == TV_WAND))
 						{
-							/* Calculate healed hitpoints */
-							int heal = rlev * o_ptr->pval * o_ptr->number;
+							/* Charged? */
+							if (o_ptr->pval)
+							{
+								drained = o_ptr->pval;
+
+								/* Uncharge */
+								o_ptr->pval = 0;
+							}
+						}
+
+						if (drained)
+						{
+							int heal = rlev * drained;
+
+							msg_print("Энергия вытекает из вашего рюкзака!");
+
+							obvious = TRUE;
 
 							/* Don't heal more than max hp */
 							heal = MIN(heal, m_ptr->maxhp - m_ptr->hp);
-
-							/* Message */
-							msg_print("Энергия вытекает из вашего рюкзака!");
-
-							/* Obvious */
-							obvious = TRUE;
 
 							/* Heal */
 							m_ptr->hp += heal;
@@ -528,9 +531,6 @@ bool make_attack_normal(int m_idx)
 							/* Redraw (later) if needed */
 							if (p_ptr->health_who == m_idx)
 								p_ptr->redraw |= (PR_HEALTH);
-
-							/* Uncharge */
-							o_ptr->pval = 0;
 
 							/* Combine / Reorder the pack */
 							p_ptr->notice |= (PN_COMBINE | PN_REORDER);
@@ -1029,7 +1029,18 @@ bool make_attack_normal(int m_idx)
 					take_hit(damage, ddesc);
 
 					/* Radius 8 earthquake centered at the monster */
-					if (damage > 23) earthquake(m_ptr->fy, m_ptr->fx, 8);
+					if (damage > 23)
+					{
+						int px_old = p_ptr->px;
+						int py_old = p_ptr->py;
+
+						earthquake(m_ptr->fy, m_ptr->fx, 8);
+
+						/* Stop the blows if the player is pushed away */
+						if ((px_old != p_ptr->px) ||
+						    (py_old != p_ptr->py))
+						    do_break = TRUE;
+					}
 
 					break;
 				}
@@ -1289,6 +1300,8 @@ bool make_attack_normal(int m_idx)
 				}
 			}
 		}
+		
+		if (do_break) break;
 	}
 
 

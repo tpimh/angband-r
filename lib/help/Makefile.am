@@ -3,7 +3,7 @@
 angband_files = \
   help.hlp attack.txt birth.txt command.txt \
   dungeon.txt general.txt option.txt playing.txt \
-  version.txt
+  version.txt faq.txt
 
 EXTRA_DIST = \
   $(angband_files)

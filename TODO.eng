@@ -45,3 +45,6 @@
 - Improve the savefile handling of the monster recall.
 - Assign graphical tiles to the new monsters and objects.
 - Add new room types.
+- Allow monsters to recover from stunning/confusion/fear even if the player
+  is not in detection range or LOS.
+- Slowing and hasting monsters should only have a temporary effect.

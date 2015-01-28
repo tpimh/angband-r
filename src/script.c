@@ -289,21 +289,21 @@ static bool call_hook(cptr hook, cptr fmt, cptr ret, ...)
 /*
  * Callback for using an object
  */
-//bool use_object(object_type *o_ptr, bool *ident)
-//{
-//	bool used_up = FALSE;
-//
-//	if (!call_hook("use_object", "(O)", "bb",
-//	               o_ptr,
-//	               ident, &used_up))
-//	{
-//		/* Error */
-//		*ident = FALSE;
-//		used_up = FALSE;
-//	}
-//
-//	return (used_up);
-//}
+bool use_object(object_type *o_ptr, bool *ident)
+{
+	bool used_up = FALSE;
+
+	if (!call_hook("use_object", "(O)", "bb",
+	               o_ptr,
+	               ident, &used_up))
+	{
+		/* Error */
+		*ident = FALSE;
+		used_up = FALSE;
+	}
+
+	return (used_up);
+}
 
 
 int get_spell_index(const object_type *o_ptr, int index)
@@ -322,81 +322,81 @@ int get_spell_index(const object_type *o_ptr, int index)
 }
 
 
-//cptr get_spell_name(int tval, int index)
-//{
-//	static char buffer[80];
-//	cptr name;
-//
-//	/* Erase the buffer */
-//	buffer[0] = '\0';
-//
-//	if (!call_hook("get_spell_name", "(d,d)", "s",
-//	               tval, index,
-//	               &name))
-//	{
-//		/* Error */
-//		return "";
-//	}
-//
-//	/* Get a copy of the name */
-//	my_strcpy(buffer, name, sizeof(buffer));
-//
-//	/* Return the result */
-//	return (buffer);
-//}
+cptr get_spell_name(int tval, int index)
+{
+	static char buffer[80];
+	cptr name;
+
+	/* Erase the buffer */
+	buffer[0] = '\0';
+
+	if (!call_hook("get_spell_name", "(d,d)", "s",
+	               tval, index,
+	               &name))
+	{
+		/* Error */
+		return "";
+	}
+
+	/* Get a copy of the name */
+	my_strcpy(buffer, name, sizeof(buffer));
+
+	/* Return the result */
+	return (buffer);
+}
 
 
-//cptr get_spell_info(int tval, int index)
-//{
-//	static char buffer[80];
-//	cptr info;
-//
-//	/* Erase the buffer */
-//	buffer[0] = '\0';
-//
-//	if (!call_hook("get_spell_info", "(d,d)", "s",
-//	               tval, index,
-//	               &info))
-//	{
-//		/* Error */
-//		return "";
-//	}
-//
-//	/* Get a copy of the info */
-//	my_strcpy(buffer, info, sizeof(buffer));
-//
-//	/* Return the result */
-//	return (buffer);
-//}
+cptr get_spell_info(int tval, int index)
+{
+	static char buffer[80];
+	cptr info;
+
+	/* Erase the buffer */
+	buffer[0] = '\0';
+
+	if (!call_hook("get_spell_info", "(d,d)", "s",
+	               tval, index,
+	               &info))
+	{
+		/* Error */
+		return "";
+	}
+
+	/* Get a copy of the info */
+	my_strcpy(buffer, info, sizeof(buffer));
+
+	/* Return the result */
+	return (buffer);
+}
 
 
-//bool cast_spell(int tval, int index)
-//{
-//	bool result = FALSE;
-//
-//	if (!call_hook("cast_spell", "(d,d)", "b",
-//	               tval, index,
-//	               &result))
-//	{
-//		/* Error */
-//		return FALSE;
-//	}
-//
-//	return (result);
-//}
+bool cast_spell(int tval, int index)
+{
+	bool result = FALSE;
+
+	if (!call_hook("cast_spell", "(d,d)", "b",
+	               tval, index,
+	               &result))
+	{
+		/* Error */
+		return FALSE;
+	}
+
+	return (result);
+}
 
 
-//void describe_item_activation(const object_type *o_ptr)
-//{
-//	cptr desc = NULL;
-//
-//	if (call_hook("describe_item_activation", "(O)", "s",
-//	              o_ptr,
-//	              &desc))
-//	{
-//		if (desc) text_out(desc);
-//	}
-//}
+void describe_item_activation(const object_type *o_ptr)
+{
+	cptr desc = NULL;
+
+	if (call_hook("describe_item_activation", "(O)", "s",
+	              o_ptr,
+	              &desc))
+	{
+		if (desc) text_out(desc);
+	}
+}
 
 
 /*
@@ -472,19 +472,6 @@ void player_turn_hook(void)
 {
 	call_hook("player_turn", "", "");
 }
-
-
-void game_turn_hook(void)
-{
-	call_hook("game_turn", "", "");
-}
-
-
-void process_world_hook(void)
-{
-	call_hook("process_world", "", "");
-}
-
 
 bool process_command_hook(int command)
 {

@@ -75,7 +75,7 @@ typedef unsigned char lu_byte;
 
 /* type to ensure maximum alignment */
 #ifndef LUSER_ALIGNMENT_T
-typedef union { double u; void *s; long l; } L_Umaxalign;
+typedef union { void *s; long l; } L_Umaxalign;
 #else
 typedef LUSER_ALIGNMENT_T L_Umaxalign;
 #endif

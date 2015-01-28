@@ -204,8 +204,7 @@ size_t vstrnfmt(char *buf, size_t max, cptr fmt, va_list vp)
 	char tmp[1024];
 
 
-	/* Mega-Hack -- treat "illegal" length as "infinite" */
-	if (!max) max = 32767;
+	if (!max) quit("Called vstrnfmt() with empty buffer!");
 
 	/* Mega-Hack -- treat "no format" as "empty string" */
 	if (!fmt) fmt = "";
@@ -537,7 +536,7 @@ size_t vstrnfmt(char *buf, size_t max, cptr fmt, va_list vp)
 			for (q = 0; tmp[q]; q++)
 			{
 				/* Notice first non-space */
-				if (!isspace(tmp[q]))
+				if (!isspace((byte)tmp[q]))
 				{
 					/* Capitalize if possible */
 					if (a_islower(tmp[q]))

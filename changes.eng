@@ -1,3 +1,50 @@
+Changes in Angband 3.0.5:
+- Summoned creatures appear near the caster now instead of near the
+  player.
+- Made rods of detection invulnerable to electric attacks.
+- Restored the old behavior of the Glyph of Warding to protect against
+  direct melee attacks when standing on it.
+- Rods can no longer be drained by monsters.
+- The minor vault "Interlock" had switched height and width definitions,
+  causing it to be created in a chaotic state. (Werner Baer)
+- Spells that prompt the user for an item (identify, enchantment,
+  recharging) or an monster letter (banishment) no longer use mana if
+  canceled.
+- The order of mage spells in the books in the non-Lua version is now
+  the same as in the Lua version.
+- Give energy to monsters and the player at the end of the game turn
+  instead of at the start.  This prevents various odd effects when
+  loading a saved game. (reported by Phil)
+- The activation descriptions for rings were missing with Lua scripting
+  turned off. (Jeff Greene)
+- The SHATTER (earthquake) attack of monsters can cause the player to be
+  pushed into another position.  Processing of the remaining blows of
+  the monster should stop in that case. Otherwise the player could get
+  hit "through a wall" that was created by the earthquake. (Jeff Greene)
+- Removed the autoroller delay.
+- Cleaned up the paragraph handling in the object descriptions.
+  (Hallvard B Furuseth)
+- "It cannot be harmed by acid and fire" should be "... acid *or* fire".
+  (Hallvard B Furuseth)
+- Piles of wands, staves, and rods can be used from the ground without
+  picking them up first.
+- Fixed a problem in the Unix/Linux makefiles.  The POSIX standard
+  doesn't allow a dot instead of a colon as separator for the chown
+  parameters.
+- Removed an accidental use of floating point code that prevented
+  Angband from running on old machines without an FPU.
+- Removed unnecessary event handlers that negativly affected performance.
+- The "pseudo graphics" used by the (n)curses version didn't support
+  terrain lightning correctly.
+- The window resize control was sometimes overwritten with a black tile
+  in the OS X version.
+- Removed the warning message about missing preferences from the OS X
+  version.  The first thing a new player sees after starting Angband
+  shouldn't be a "scary" message.
+- Added a Windows helpfile created by Jordan Hobbs.
+- Added project files for building Angband with MS Visual C++ 7.1.
+  (Tasha Jessup)
+
 Changes in Angband 3.0.4:
 - Made the water vortex immune to water-based attacks.
 - Chaos resistance protects against confusion by chaos based attacks.
@@ -36,6 +83,9 @@ Changes in Angband 3.0.4:
 - Removed the old haggling code.  The auto-haggling code is now
   permanently active and will give the normal price of items without the
   10% "sales tax".
+- Replaced the old screendump code with HTML screendump code that
+  handles graphics, bigscreen, bigtile, and other display oddities much
+  better. (based on the htmldump-patch by Darkgod).
 - Added support for artifact and ego-item descriptions. (with help from
   Hallvard B Furuseth)
 - Added artifact descriptions.  The texts are mainly taken from OAngband
@@ -49,6 +99,7 @@ Changes in Angband 3.0.4:
 - Added new 8x8 tiles and tile definitions provided by "Dawnmist".
 - Added the player's maximum depth in the dungeon to the character
   display and the dump.
+- Removed several broken tile definitions for the 32x32 tiles.
 - Use the proper monster flags instead of workarounds for various
   resists and immunities.  This also allows the reporting of these flags
   in the monster recall and the spoilers. (pointed out by Leon Marrick)
@@ -102,6 +153,8 @@ Changes in Angband 3.0.4:
   turned on. (reported by Eddie Grove)
 - Rods and staves of probing are no longer automatically identified when
   used without a monster nearby. (reported by "someog")
+- Prevent the player from being hit multiple times by area effect spells
+  and breaths that can blink the player (nexus, gravity).
 - The player can now get a level feeling when entering level 1 without
   spending 1000 game turns in town first. (Tom Houser)
 - Branding ammo or weapons will now automatically try to combine and
@@ -123,8 +176,10 @@ Changes in Angband 3.0.4:
 - Improved the output of item and monster descriptions in spoilers and
   character dumps.  In some cases punctuation and spaces were wrapped to
   the next line.
+- The basic object spoilers only reported the prices for unidentified
+  items.  (reported by Hugo Kornelis)
 - Only print the "You feel (less) resistant to ..." messages when not
-  immune to the specific element. (reported by "greenemail")
+  immune to the specific element. (reported by Jeff Greene)
 - The cursor keys in the X11 ports behave the same way now, no matter if
   num-lock is on or off.
 - Change colors in main-gcu.c. This is Dominik Grzelak's patch to change
@@ -142,7 +197,7 @@ Changes in Angband 3.0.4:
   ftp://clockwork.dementia.org/angband/Extra/graf-32x32-304.zip
 - Removed the hackish 'Show scores' menu entry from the Windows version.
   Use the new knowledge menu entry instead.
-- Applied lot's of Mac specific patches by "pelpel".
+- Applied lots of Mac specific patches by "pelpel".
 - Allow initialization of the game to continue, even if the
   lib/data/*.raw files can't be written.  In that case the data parsed
   from the lib/edit/*.txt files stays in memory and is used instead of
@@ -152,6 +207,11 @@ Changes in Angband 3.0.4:
 - Increased the data-type of the shopkeeper purse limit from signed
   16 bit to signed 32 bit.  This will allow shopkeepers with a higher
   limit than 32768 gold to be added.
+- Added a compile time option to store the savefiles and scores in the
+  player's home directory (under ~/.angband/Angband/) on multi-user
+  machines.
+- Use a different delay function in the DOS version that works around
+  the restricted 55ms resolution on Windows 2000 and XP.
 
 Changes in Angband 3.0.3:
 - Reduced the size of the 32x32 tiles bitmap.  The smaller bitmap should

@@ -697,11 +697,6 @@ bool make_attack_spell(int m_idx)
 
 	bool no_innate = FALSE;
 
-	/* Target player */
-	int x = px;
-	int y = py;
-
-
 	/* Summon count */
 	int count = 0;
 
@@ -2003,7 +1998,7 @@ bool make_attack_spell(int m_idx)
 			summon_kin_type = r_ptr->d_char;
 			for (k = 0; k < 6; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_KIN);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_KIN);
 			}
 			if (blind && count)
 			{
@@ -2020,7 +2015,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает великих демонов!", m_name);
 			for (k = 0; k < 8; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_HI_DEMON);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_DEMON);
 			}
 			if (blind && count)
 			{
@@ -2037,7 +2032,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает подмогу!", m_name);
 			for (k = 0; k < 1; k++)
 			{
-				count += summon_specific(y, x, rlev, 0);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, 0);
 			}
 			if (blind && count)
 			{
@@ -2054,7 +2049,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает монстров!", m_name);
 			for (k = 0; k < 8; k++)
 			{
-				count += summon_specific(y, x, rlev, 0);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, 0);
 			}
 			if (blind && count)
 			{
@@ -2071,7 +2066,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает животных!", m_name);
 			for (k = 0; k < 6; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_ANIMAL);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_ANIMAL);
 			}
 			if (blind && count)
 			{
@@ -2088,7 +2083,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает пауков!", m_name);
 			for (k = 0; k < 6; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_SPIDER);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_SPIDER);
 			}
 			if (blind && count)
 			{
@@ -2105,7 +2100,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает гончих эфира!", m_name);
 			for (k = 0; k < 6; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_HOUND);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HOUND);
 			}
 			if (blind && count)
 			{
@@ -2122,7 +2117,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает гидр!", m_name);
 			for (k = 0; k < 6; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_HYDRA);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HYDRA);
 			}
 			if (blind && count)
 			{
@@ -2139,7 +2134,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает ангела!", m_name);
 			for (k = 0; k < 1; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_ANGEL);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_ANGEL);
 			}
 			if (blind && count)
 			{
@@ -2156,7 +2151,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает подмогу из ада!", m_name);
 			for (k = 0; k < 1; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_DEMON);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_DEMON);
 			}
 			if (blind && count)
 			{
@@ -2173,7 +2168,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает подмогу из могилы!", m_name);
 			for (k = 0; k < 1; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_UNDEAD);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_UNDEAD);
 			}
 			if (blind && count)
 			{
@@ -2190,7 +2185,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает дракона!", m_name);
 			for (k = 0; k < 1; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_DRAGON);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_DRAGON);
 			}
 			if (blind && count)
 			{
@@ -2207,7 +2202,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает живых мертвецов!", m_name);
 			for (k = 0; k < 8; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_HI_UNDEAD);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_UNDEAD);
 			}
 			if (blind && count)
 			{
@@ -2224,7 +2219,7 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает древних драконов!", m_name);
 			for (k = 0; k < 8; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_HI_DRAGON);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_DRAGON);
 			}
 			if (blind && count)
 			{
@@ -2241,11 +2236,11 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает Девятерых Кольценосцев!", m_name);
 			for (k = 0; k < 8; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_WRAITH);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_WRAITH);
 			}
 			for (k = 0; k < 8; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_HI_UNDEAD);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_UNDEAD);
 			}
 			if (blind && count)
 			{
@@ -2262,11 +2257,11 @@ bool make_attack_spell(int m_idx)
 			else msg_format("%^s вызывает легендарных оппонентов!", m_name);
 			for (k = 0; k < 8; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_UNIQUE);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_UNIQUE);
 			}
 			for (k = 0; k < 8; k++)
 			{
-				count += summon_specific(y, x, rlev, SUMMON_HI_UNDEAD);
+				count += summon_specific(m_ptr->fy, m_ptr->fx, rlev, SUMMON_HI_UNDEAD);
 			}
 			if (blind && count)
 			{
@@ -3797,14 +3792,8 @@ static void process_monster(int m_idx)
 		}
 
 
-		/*
-		 * Hack -- check for Glyph of Warding
-		 *
-		 * Monsters may attack the player, but not move onto a glyph.
-		 */
-		if (do_move &&
-		    (cave_feat[ny][nx] == FEAT_GLYPH) &&
-		    (cave_m_idx[ny][nx] == 0))
+		/* Hack -- check for Glyph of Warding */
+		if (do_move && (cave_feat[ny][nx] == FEAT_GLYPH))
 		{
 			/* Assume no move allowed */
 			do_move = FALSE;

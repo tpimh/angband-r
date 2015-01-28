@@ -1,4 +1,4 @@
-# File: font-gcu.prf
+# File: font-win.prf
 
 #
 # This file is used by Angband (when it was compiled using "main-win.c")
@@ -11,8 +11,6 @@
 # one special wall type, so we have to use special "colors".
 #
 
-# For NCurses with font which supports nice block graphics. -AU-
-# Remove or edit this file if it doesn't work.
 
 ### Terrain features ###
 

@@ -596,7 +596,8 @@ void display_monlist(void)
 		r_ptr = &r_info[m_ptr->r_idx];
 
 		/* Get the monster name */
-		m_name = r_name + r_ptr->name;
+		expand_rus_codes2(buf, r_name + r_ptr->name, PAD_IMEN, 0, 1);
+		m_name = buf;
 
 		/* Obtain the length of the description */
 		n = strlen(m_name);
