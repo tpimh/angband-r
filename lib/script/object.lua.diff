@@ -1,0 +1,584 @@
+17c17
+< 		msg_print("That tastes good.")
+---
+> 		msg_print("Вкусно!")
+20c20
+< 		msg_print("That tastes good.")
+---
+> 		msg_print("Очень вкусно!")
+46c46
+< 		take_hit(damroll(10, 10), "poisonous food")
+---
+> 		take_hit(damroll(10, 10), "отравленной едой")
+50c50
+< 		take_hit(damroll(10, 10), "poisonous food")
+---
+> 		take_hit(damroll(10, 10), "отравленной едой")
+54c54
+< 		take_hit(damroll(8, 8), "poisonous food")
+---
+> 		take_hit(damroll(8, 8), "отравленной едой")
+58c58
+< 		take_hit(damroll(8, 8), "poisonous food")
+---
+> 		take_hit(damroll(8, 8), "отравленной едой")
+62c62
+< 		take_hit(damroll(6, 6), "poisonous food")
+---
+> 		take_hit(damroll(6, 6), "отравленной едой")
+66c66
+< 		take_hit(damroll(6, 6), "poisonous food")
+---
+> 		take_hit(damroll(6, 6), "отравленной едой")
+120c120
+< 		msg_print("You feel less thirsty.")
+---
+> 		msg_print("Вы утолили жажду.")
+125c125
+< 		msg_print("The potion makes you vomit!")
+---
+> 		msg_print("Вя-а-а! Вас стошнило!")
+156c156
+< 			msg_print("You feel your memories fade.")
+---
+> 			msg_print("Ваша жизнь меркнет.")
+161,162c161,162
+< 		msg_print("Your nerves and muscles feel weak and lifeless!")
+< 		take_hit(damroll(10, 10), "a potion of Ruination")
+---
+> 		msg_print("Ваши нервы и мускулы кажутся слабыми и безжизненными!")
+> 		take_hit(damroll(10, 10), "зельем Ослабевания")
+183,184c183,184
+< 		msg_print("Massive explosions rupture your body!")
+< 		take_hit(damroll(50, 20), "a potion of Detonation")
+---
+> 		msg_print("Массивные взрывы сотрясают ваше тело!")
+> 		take_hit(damroll(50, 20), "зельем взрыва")
+189,190c189,190
+< 		msg_print("A feeling of Death flows through your body.")
+< 		take_hit(5000, "a potion of Death")
+---
+> 		msg_print("Вы чувствуете в себе Смерть...")
+> 		take_hit(5000, "зельем Смерти")
+259c259
+< 		msg_print("You feel life flow through your body!")
+---
+> 		msg_print("Вы чувствуете в себе жизнь!")
+284c284
+< 			msg_print("Your feel your head clear.")
+---
+> 			msg_print("В вашей голове проясняется.")
+323c323
+< 		msg_print("An image of your surroundings forms in your mind...")
+---
+> 		msg_print("Изображение подземелья формируется у вас в голове...")
+327c327
+< 		msg_print("You begin to feel more enlightened...")
+---
+> 		msg_print("Вы чувствуете себя просвещенным...")
+342c342
+< 		msg_print("You begin to know yourself a little better...")
+---
+> 		msg_print("Вы познаете себя немного лучше...")
+350c350
+< 			msg_print("You feel more experienced.")
+---
+> 			msg_print("Вы чувствуете себя более опытным.")
+375c375
+< 		msg_print("There is a high pitched humming noise.")
+---
+> 		msg_print("Вы слышите громкий противный звук.")
+416c416
+< 			msg_print("You feel as if someone is watching over you.")
+---
+> 			msg_print("Вы чувствуете, как кто-то присматривает за вами.")
+467c467
+< 			msg_print("Your hands begin to glow.")
+---
+> 			msg_print("Ваши руки начинают светиться.")
+530c530
+< 				msg_print("The staff glows blue for a moment...")
+---
+> 				msg_print("Посох светится синим светом...")
+536c536
+< 			msg_print("The end of the staff glows brightly...")
+---
+> 			msg_print("Конец посоха ярко вспыхивает...")
+580c580
+< 			msg_print("Your feel your head clear.")
+---
+> 			msg_print("В вашей голове проясняется.")
+663c663
+< 		msg_print("You failed to use the wand properly.")
+---
+> 		msg_print("Вы не смогли использовать палочку.")
+670c670
+< 		msg_print("The wand has no charges left.")
+---
+> 		msg_print("В палочке кончились заряды.")
+703c703
+< 			msg_print("A line of blue shimmering light appears.")
+---
+> 			msg_print("Появляется коридор синего мерцающего света.")
+826c826
+< 		msg_print("You failed to use the rod properly.")
+---
+> 		msg_print("Вы не смогли использовать жезл.")
+835c835
+< 			msg_print("The rod is still charging.")
+---
+> 			msg_print("Жезл все еще заряжается.")
+837c837
+< 			msg_print("The rods are all still charging.")
+---
+> 			msg_print("Все жезлы все еще заряжаются.")
+899c899
+< 			msg_print("A line of blue shimmering light appears.")
+---
+> 			msg_print("Появляется коридор синего мерцающего света.")
+949a950,952
+> 	-- Get the basic name of the object
+> 	local o_name = angband.object_desc(object, 0, 0)
+> 
+952c955
+< 		msg_print("It whines, glows and fades...")
+---
+> 		msg_print(string.format("%s светится и затухает.", o_name))
+956c959
+< 	message(MSG_ZAP, 0, "You activate it...")
+---
+> 	message(MSG_ZAP, 0, "Вы активируете его...")
+962,964d964
+< 		-- Get the basic name of the object
+< 		local o_name = angband.object_desc(object, 0, 0)
+< 
+966c966
+< 			msg_print(string.format("The %s wells with clear light...", o_name))
+---
+> 			msg_print(string.format("%s озаряется чистым светом...", o_name))
+969c969
+< 			msg_print(string.format("The %s shines brightly...", o_name))
+---
+> 			msg_print(string.format("%s ярко сверкает...", o_name))
+972c972
+< 			msg_print(string.format("The %s glows a deep green...", o_name))
+---
+> 			msg_print(string.format("%s светится глубоким зеленым...", o_name))
+978c978
+< 			msg_print(string.format("The %s lets out a shrill wail...", o_name))
+---
+> 			msg_print(string.format("%s издает протяжный стон...", o_name))
+981c981
+< 			msg_print(string.format("The %s floods the area with goodness...", o_name))
+---
+> 			msg_print(string.format("%s заполняет подземелье добром...", o_name))
+984c984
+< 			msg_print(string.format("The %s glows brightly...", o_name))
+---
+> 			msg_print(string.format("%s ярко светится...", o_name))
+991c991
+< 			msg_print(string.format("The %s glows deep red...", o_name))
+---
+> 			msg_print(string.format("%s светится глубоким красным...", o_name))
+996c996
+< 			msg_print(string.format("The %s glows bright white...", o_name))
+---
+> 			msg_print(string.format("%s светится ярко-белым...", o_name))
+1001c1001
+< 			msg_print(string.format("The %s glows deep blue...", o_name))
+---
+> 			msg_print(string.format("%s светится глубоким синим...", o_name))
+1006c1006
+< 			msg_print(string.format("The %s glows intensely black...", o_name))
+---
+> 			msg_print(string.format("%s светится черным...", o_name))
+1011c1011
+< 			msg_print(string.format("Your %s is surrounded by lightning...", o_name))
+---
+> 			msg_print(string.format("%s окружается молнией...", o_name))
+1014c1014
+< 			msg_print(string.format("Your %s glows many colours...", o_name))
+---
+> 			msg_print(string.format("%s светится всеми цветами...", o_name))
+1025,1026c1025,1026
+< 			msg_print(string.format("Your %s glows a bright white...", o_name))
+< 			msg_print("You feel much better...")
+---
+> 			msg_print(string.format("%s светится ярким белым...", o_name))
+> 			msg_print("Вы чувствуете себя намного лучше...")
+1030c1030
+< 			msg_print(string.format("Your %s twists space around you...", o_name))
+---
+> 			msg_print(string.format("%s искривляет пространство вокруг вас...", o_name))
+1033c1033
+< 			msg_print(string.format("Your %s glows deep blue...", o_name))
+---
+> 			msg_print(string.format("%s светится угрожающим синим...", o_name))
+1036c1036
+< 			msg_print(string.format("Your %s glows bright red...", o_name))
+---
+> 			msg_print(string.format("%s светится ярко-красным...", o_name))
+1039,1040c1039,1040
+< 			msg_print(string.format("Your %s glows bright white...", o_name))
+< 			msg_print("An image forms in your mind...")
+---
+> 			msg_print(string.format("%s светится лучистым белым...", o_name))
+> 			msg_print("Изображение формируется в вашей голове...")
+1043,1044c1043,1044
+< 			msg_print(string.format("Your %s glows deep blue...", o_name))
+< 			msg_print("You feel a warm tingling inside...")
+---
+> 			msg_print(string.format("%s светится спокойным синим...", o_name))
+> 			msg_print("Вы чувствуете теплое покалывание...")
+1048c1048
+< 			msg_print(string.format("Your %s glows many colours...", o_name))
+---
+> 			msg_print(string.format("%s светится цветами радуги...", o_name))
+1055c1055
+< 			msg_print(string.format("Your %s glows deep blue...", o_name))
+---
+> 			msg_print(string.format("%s светится ярко-синим...", o_name))
+1058c1058
+< 			msg_print(string.format("Your %s glows bright yellow...", o_name))
+---
+> 			msg_print(string.format("%s светится ярко-желтым...", o_name))
+1061c1061
+< 			msg_print(string.format("Your %s twists space around you...", o_name))
+---
+> 			msg_print(string.format("%s распрямляет пространство вокруг вас...", o_name))
+1064c1064
+< 			msg_print(string.format("Your %s glows a deep red...", o_name))
+---
+> 			msg_print(string.format("%s светится спокойным красным...", o_name))
+1067c1067
+< 			msg_print(string.format("Your %s glows extremely brightly...", o_name))
+---
+> 			msg_print(string.format("%s ярко горит...", o_name))
+1072c1072
+< 			msg_print(string.format("Your %s is covered in fire...", o_name))
+---
+> 			msg_print(string.format("%s покрывается пламенем...", o_name))
+1077c1077
+< 			msg_print(string.format("Your %s is covered in frost...", o_name))
+---
+> 			msg_print(string.format("%s излучает холод...", o_name))
+1082c1082
+< 			msg_print(string.format("Your %s is covered in sparks...", o_name))
+---
+> 			msg_print(string.format("%s сыплет искрами...", o_name))
+1087c1087
+< 			msg_print(string.format("Your %s is covered in acid...", o_name))
+---
+> 			msg_print(string.format("%s покрывается кислотой...", o_name))
+1092c1092
+< 			msg_print(string.format("Your %s grows magical spikes...", o_name))
+---
+> 			msg_print(string.format("%s покрывается шипами...", o_name))
+1097c1097
+< 			msg_print(string.format("Your %s glows bright green...", o_name))
+---
+> 			msg_print(string.format("%s светится ярко-зеленым...", o_name))
+1104c1104
+< 			msg_print(string.format("Your %s glows deep blue...", o_name))
+---
+> 			msg_print(string.format("%s вспыхивает синим...", o_name))
+1108c1108
+< 			msg_print(string.format("Your %s throbs deep green...", o_name))
+---
+> 			msg_print(string.format("%s светится ядовито-зеленым...", o_name))
+1113c1113
+< 			msg_print(string.format("Your %s is covered in frost...", o_name))
+---
+> 			msg_print(string.format("%s покрывается инеем...", o_name))
+1118c1118
+< 			msg_print(string.format("Your %s glows a pale blue...", o_name))
+---
+> 			msg_print(string.format("%s горит бледно-синим...", o_name))
+1123c1123
+< 			msg_print(string.format("Your %s glows a intense blue...", o_name))
+---
+> 			msg_print(string.format("%s светится насыщенным синим...", o_name))
+1128c1128
+< 			msg_print(string.format("Your %s rages in fire...", o_name))
+---
+> 			msg_print(string.format("%s пылает огнем...", o_name))
+1133c1133
+< 			msg_print(string.format("Your %s glows black...", o_name))
+---
+> 			msg_print(string.format("%s светится черным...", o_name))
+1138c1138
+< 			msg_print(string.format("Your %s pulsates...", o_name))
+---
+> 			msg_print(string.format("%s пульсирует...", o_name))
+1143c1143
+< 			msg_print(string.format("Your %s lets out a long, shrill note...", o_name))
+---
+> 			msg_print(string.format("%s издает протяжную ноту...", o_name))
+1146c1146
+< 			msg_print(string.format("Your %s radiates deep purple...", o_name))
+---
+> 			msg_print(string.format("%s светится глубоким фиолетовым...", o_name))
+1150c1150
+< 			msg_print(string.format("Your %s glows deep red...", o_name))
+---
+> 			msg_print(string.format("%s вспыхивает глубоким красным...", o_name))
+1155c1155
+< 			msg_print(string.format("Your %s glows soft white...", o_name))
+---
+> 			msg_print(string.format("%s светится мягким белым...", o_name))
+1158c1158
+< 			msg_print(string.format("Your %s glows in scintillating colours...", o_name))
+---
+> 			msg_print(string.format("%s светится странными цветами...", o_name))
+1163c1163
+< 			msg_print(string.format("Your %s glows yellow...", o_name))
+---
+> 			msg_print(string.format("%s вспыхивает желтым...", o_name))
+1166c1166
+< 			msg_print(string.format("Your %s glows brightly...", o_name))
+---
+> 			msg_print(string.format("%s ярко загорается...", o_name))
+1169c1169
+< 			msg_print(string.format("Your %s glows white...", o_name))
+---
+> 			msg_print(string.format("%s горит белым...", o_name))
+1174c1174
+< 			msg_print(string.format("Your %s glows deep red...", o_name))
+---
+> 			msg_print(string.format("%s светится огненно-красным...", o_name))
+1177c1177
+< 			msg_print(string.format("Your %s glows with the light of a thousand stars...", o_name))
+---
+> 			msg_print(string.format("%s вспыхивает светом тысячи звезд...", o_name))
+1180c1180
+< 			msg_print(string.format("Your %s glows white...", o_name))
+---
+> 			msg_print(string.format("%s светится белым...", o_name))
+1185c1185
+< 			msg_print(string.format("Your %s glows in anger...", o_name))
+---
+> 			msg_print(string.format("%s горит яростью...", o_name))
+1211c1211
+< 			msg_print("You breathe lightning.")
+---
+> 			msg_print("Вы дышите молнией.")
+1215c1215
+< 			msg_print("You breathe frost.")
+---
+> 			msg_print("Вы дышите холодом.")
+1219c1219
+< 			msg_print("You breathe acid.")
+---
+> 			msg_print("Вы дышите кислотой.")
+1223c1223
+< 			msg_print("You breathe poison gas.")
+---
+> 			msg_print("Вы дышите ядовитым газом.")
+1227c1227
+< 			msg_print("You breathe fire.")
+---
+> 			msg_print("Вы дышите огнем.")
+1232c1232
+< 			local name = {"fire", "lightning", "frost", "acid", "poison gas"}
+---
+> 			local name = {"огнем", "молнией", "холодом", "кислотой", "ядовитым газом"}
+1234c1234
+< 			msg_print(string.format("You breathe %s.", name[chance]))
+---
+> 			msg_print(string.format("Вы дышите %s.", name[chance]))
+1238c1238
+< 			msg_print("You breathe confusion.")
+---
+> 			msg_print("Вы дышите контузией.")
+1242c1242
+< 			msg_print("You breathe sound.")
+---
+> 			msg_print("Вы дышите звуком.")
+1247c1247
+< 			local name = {"disenchantment", "chaos"}
+---
+> 			local name = {"антимагией", "хаосом"}
+1249c1249
+< 			msg_print(string.format("You breathe %s.", name[chance]))
+---
+> 			msg_print(string.format("Вы дышите %s.", name[chance]))
+1254c1254
+< 			local name = {"shards", "sound"}
+---
+> 			local name = {"осколками", "звуком"}
+1256c1256
+< 			msg_print(string.format("You breathe %s.", name[chance]))
+---
+> 			msg_print(string.format("Вы дышите %s.", name[chance]))
+1261c1261
+< 			local name = {"shards", "sound", "chaos", "disenchantment"}
+---
+> 			local name = {"осколками", "звуком", "хаосом", "антимагией"}
+1263c1263
+< 			msg_print(string.format("You breathe %s.", name[chance]))
+---
+> 			msg_print(string.format("Вы дышите %s.", name[chance]))
+1268c1268
+< 			local name = {"light", "darkness"}
+---
+> 			local name = {"светом", "темнотой"}
+1270c1270
+< 			msg_print(string.format("You breathe %s.", name[chance]))
+---
+> 			msg_print(string.format("Вы дышите %s.", name[chance]))
+1274c1274
+< 			msg_print("You breathe the elements.")
+---
+> 			msg_print("Вы дышите элементами.")
+1349,1398c1349,1398
+< 			"illumination",
+< 			"magic mapping",
+< 			"clairvoyance",
+< 			"protection from evil",
+< 			"dispel evil (x5)",
+< 			"heal (500)",
+< 			"heal (1000)",
+< 			"cure wounds (4d7)",
+< 			"haste self (20+d20 turns)",
+< 			"haste self (75+d75 turns)",
+< 			"fire bolt (9d8)",
+< 			"fire ball (72)",
+< 			"large fire ball (120)",
+< 			"frost bolt (6d8)",
+< 			"frost ball (48)",
+< 			"frost ball (100)",
+< 			"frost bolt (12d8)",
+< 			"large frost ball (200)",
+< 			"acid bolt (5d8)",
+< 			"recharge item I",
+< 			"sleep II",
+< 			"lightning bolt (4d8)",
+< 			"large lightning ball (250)",
+< 			"banishment",
+< 			"mass banishment",
+< 			"identify",
+< 			"drain life (90)",
+< 			"drain life (120)",
+< 			"bizarre things",
+< 			"star ball (150)",
+< 			"berserk rage, bless, and resistance",
+< 			"phase door",
+< 			"door and trap destruction",
+< 			"detection",
+< 			"resistance (20+d20 turns)",
+< 			"teleport",
+< 			"restore life levels",
+< 			"magic missile (2d6)",
+< 			"a magical arrow (150)",
+< 			"remove fear and cure poison",
+< 			"stinking cloud (12)",
+< 			"stone to mud",
+< 			"teleport away",
+< 			"word of recall",
+< 			"confuse monster",
+< 			"probing",
+< 			"fire branding of bolts",
+< 			"starlight (10d8)",
+< 			"mana bolt (12d8)",
+< 			"berserk rage (50+d50 turns)"}
+---
+> 			"освещения",
+> 			"волшебной картографии",
+> 			"ясновидения",
+> 			"защиты от зла",
+> 			"уничтожения зла (x5)",
+> 			"исцеления (500)",
+> 			"исцеления (1000)",
+> 			"лечения ран (4d7)",
+> 			"ускорения (20+d20 ходов)",
+> 			"ускорения (75+d75 ходов)",
+> 			"огненной стрелы (9d8)",
+> 			"огненного шара (72)",
+> 			"большого огненного шара (120)",
+> 			"ледяной стрелы (6d8)",
+> 			"ледяного шара (48)",
+> 			"ледяного шара (100)",
+> 			"ледяной стрелы (12d8)",
+> 			"большого ледяного шара (200)",
+> 			"кислотной стрелы (5d8)",
+> 			"перезарядки I",
+> 			"усыпления II",
+> 			"удара молнией (4d8)",
+> 			"большой шаровой молнии (250)",
+> 			"изгнания",
+> 			"массового изгнания",
+> 			"идентификации",
+> 			"высасывания жизни (90)",
+> 			"высасывания жизни (120)",
+> 			"странных вещей",
+> 			"звездного шара (150)",
+> 			"ярости, благословления и сопротивления",
+> 			"фазовой двери",
+> 			"разрушения дверей и ловушек",
+> 			"поиска",
+> 			"сопротивления (20+d20 ходов)",
+> 			"телепортации",
+> 			"восстановления жизни",
+> 			"волшебной стрелы (2d6)",
+> 			"большой волшебной стрелы (150)",
+> 			"снятия страха и лечения яда",
+> 			"ядовитого облака (12)",
+> 			"плавки камня",
+> 			"телепортации монстра",
+> 			"Слова Возвращения",
+> 			"контузии монстра",
+> 			"зондирования",
+> 			"огненного клейма болтов",
+> 			"звездного света (10d8)",
+> 			"стрелы маны (12d8)",
+> 			"ярости (50+d50 ходов)"}
+1410c1410
+< 			description = string.format("%s every %d+d%d turns", description, artifact.time, artifact.randtime)
+---
+> 			description = string.format("%s каждые %d+d%d ходов", description, artifact.time, artifact.randtime)
+1412c1412
+< 			description = string.format("%s every %d turns", description, artifact.time)
+---
+> 			description = string.format("%s каждые %d ходов", description, artifact.time)
+1414c1414
+< 			description = string.format("%s every d%d turns", description, artifact.randtime)
+---
+> 			description = string.format("%s каждые d%d ходов", description, artifact.randtime)
+1423,1435c1423,1435
+< 			[SV_DRAGON_BLUE] = "breathe lightning (100) every 450+d450 turns",
+< 			[SV_DRAGON_WHITE] = "breathe frost (110) every 450+d450 turns",
+< 			[SV_DRAGON_BLACK] = "breathe acid (130) every 450+d450 turns",
+< 			[SV_DRAGON_GREEN] = "breathe poison gas (150) every 450+d450 turns",
+< 			[SV_DRAGON_RED] = "breathe fire (200) every 450+d450 turns",
+< 			[SV_DRAGON_MULTIHUED] = "breathe multi-hued (250) every 225+d225 turns",
+< 			[SV_DRAGON_BRONZE] = "breathe confusion (120) every 450+d450 turns",
+< 			[SV_DRAGON_GOLD] = "breathe sound (130) every 450+d450 turns",
+< 			[SV_DRAGON_CHAOS] = "breathe chaos/disenchant (220) every 300+d300 turns",
+< 			[SV_DRAGON_LAW] = "breathe sound/shards (230) every 300+d300 turns",
+< 			[SV_DRAGON_BALANCE] = "breathe balance (250) every 300+d300 turns",
+< 			[SV_DRAGON_SHINING] = "breathe light/darkness (200) every 300+d300 turns",
+< 			[SV_DRAGON_POWER] = "breathe the elements (300) every 300+d300 turns",
+---
+> 			[SV_DRAGON_BLUE] = "дыхания молнией (100) каждые 450+d450 ходов",
+> 			[SV_DRAGON_WHITE] = "дыхания холодом (110) каждые 450+d450 ходов",
+> 			[SV_DRAGON_BLACK] = "дыхания кислотой (130) каждые 450+d450 ходов",
+> 			[SV_DRAGON_GREEN] = "дыхания ядовитым газом (150) каждые 450+d450 ходов",
+> 			[SV_DRAGON_RED] = "дыхания огнем (200) каждые 450+d450 ходов",
+> 			[SV_DRAGON_MULTIHUED] = "дыхания низшими элементами (250) каждые 225+d225 ходов",
+> 			[SV_DRAGON_BRONZE] = "дыхания контузией (120) каждые 450+d450 ходов",
+> 			[SV_DRAGON_GOLD] = "дыхания звуком (130) каждые 450+d450 ходов",
+> 			[SV_DRAGON_CHAOS] = "дыхания хаосом/антимагией (220) каждые 300+d300 ходов",
+> 			[SV_DRAGON_LAW] = "дыхания звуком/осколками (230) каждые 300+d300 ходов",
+> 			[SV_DRAGON_BALANCE] = "дыхания элементами баланса (250) каждые 300+d300 ходов",
+> 			[SV_DRAGON_SHINING] = "дыхания светом/темнотой (200) каждые 300+d300 ходов",
+> 			[SV_DRAGON_POWER] = "дыхания элементами (300) каждые 300+d300 ходов"
+1444,1447c1444,1447
+< 			[SV_RING_ACID] = "acid resistance (20+d20 turns) and acid ball (70) every 50+d50 turns",
+< 			[SV_RING_FLAMES] = "fire resistance (20+d20 turns) and fire ball (80) every 50+d50 turns",
+< 			[SV_RING_ICE] = "cold resistance (20+d20 turns) and cold ball (75) every 50+d50 turns",
+< 			[SV_RING_LIGHTNING] = "electricity resistance (20+d20 turns) and electricity ball (85) every 50+d50 turns"}
+---
+> 			[SV_RING_ACID] = "сопротивления кислоте (20+d20 ходов) и кислотного шара (70) каждые 50+d50 ходов",
+> 			[SV_RING_FLAMES] = "сопротивления огню (20+d20 ходов) и огненного шара (80) каждые 50+d50 ходов",
+> 			[SV_RING_ICE] = "сопротивления холоду (20+d20 ходов) и ледяного шара (75) каждые 50+d50 ходов",
+> 			[SV_RING_LIGHTNING] = "сопротивления электричеству (20+d20 ходов) и шаровой молнии (85) каждые 50+d50 ходов"}
