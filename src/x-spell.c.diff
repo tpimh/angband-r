@@ -1,0 +1,1025 @@
+16,22d15
+< 
+< /*
+<  * Maximum number of spells per realm
+<  */
+< #define BOOKS_PER_REALM 10
+< 
+< 
+164a158,169
+> #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+> #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+> 
+> #define BOOK(a, b, c, d, e, f, g, h, i) \
+> { \
+> 	(BOOK1(a) | BOOK1(b) | BOOK1(c) | BOOK1(d) | BOOK1(e) | \
+> 	 BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+> 	(BOOK2(a) | BOOK2(b) | BOOK2(c) | BOOK2(d) | BOOK2(e) | \
+> 	 BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+> }
+> 
+> 
+168c173
+< static const s16b spell_list[2][BOOKS_PER_REALM][SPELLS_PER_BOOK] =
+---
+> static const u32b spell_flags[2][10][2] =
+170d174
+< 	/* Mage spells */
+172,287c176,273
+< 		/* Magic for Beginners */
+< 		{
+< 			SPELL_MAGIC_MISSILE,
+< 			SPELL_DETECT_MONSTERS,
+< 			SPELL_PHASE_DOOR,
+< 			SPELL_LIGHT_AREA,
+< 			SPELL_TREASURE_DETECTION,
+< 			SPELL_CURE_LIGHT_WOUNDS,
+< 			SPELL_OBJECT_DETECTION,
+< 			SPELL_FIND_TRAPS_DOORS,
+< 			SPELL_STINKING_CLOUD,
+< 		},
+< 
+< 		/* Conjurings and Tricks */
+< 		{
+< 			SPELL_CONFUSE_MONSTER,
+< 			SPELL_LIGHTNING_BOLT,
+< 			SPELL_TRAP_DOOR_DESTRUCTION,
+< 			SPELL_CURE_POISON,
+< 			SPELL_SLEEP_MONSTER,
+< 			SPELL_TELEPORT_SELF,
+< 			SPELL_SPEAR_OF_LIGHT,
+< 			SPELL_FROST_BOLT,
+< 			SPELL_WONDER,
+< 		},
+< 
+< 		/* Incantations and Illusions */
+< 		{
+< 			SPELL_SATISFY_HUNGER,
+< 			SPELL_RECHARGE_ITEM_I,
+< 			SPELL_TURN_STONE_TO_MUD,
+< 			SPELL_FIRE_BOLT,
+< 			SPELL_POLYMORPH_OTHER,
+< 			SPELL_IDENTIFY,
+< 			SPELL_DETECT_INVISIBLE,
+< 			SPELL_ACID_BOLT,
+< 			SPELL_SLOW_MONSTER,
+< 		},
+< 
+< 		/* Sorcery and Evocations */
+< 		{
+< 			SPELL_FROST_BALL,
+< 			SPELL_TELEPORT_OTHER,
+< 			SPELL_HASTE_SELF,
+< 			SPELL_MASS_SLEEP,
+< 			SPELL_FIRE_BALL,
+< 			SPELL_DETECT_ENCHANTMENT,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Resistances of Scarabtarices */
+< 		{
+< 			SPELL_RESIST_COLD,
+< 			SPELL_RESIST_FIRE,
+< 			SPELL_RESIST_POISON,
+< 			SPELL_RESISTANCE,
+< 			SPELL_SHIELD,
+< 			-1,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Raal's Tome of Destruction */
+< 		{
+< 			SPELL_SHOCK_WAVE,
+< 			SPELL_EXPLOSION,
+< 			SPELL_CLOUD_KILL,
+< 			SPELL_ACID_BALL,
+< 			SPELL_ICE_STORM,
+< 			SPELL_METEOR_SWARM,
+< 			SPELL_RIFT,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Mordenkainen's Escapes */
+< 		{
+< 			SPELL_DOOR_CREATION,
+< 			SPELL_STAIR_CREATION,
+< 			SPELL_TELEPORT_LEVEL,
+< 			SPELL_WORD_OF_RECALL,
+< 			SPELL_RUNE_OF_PROTECTION,
+< 			-1,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Tenser's transformations */
+< 		{
+< 			SPELL_HEROISM,
+< 			SPELL_BERSERKER,
+< 			SPELL_ENCHANT_ARMOR,
+< 			SPELL_ENCHANT_WEAPON,
+< 			SPELL_RECHARGE_ITEM_II,
+< 			SPELL_ELEMENTAL_BRAND,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Kelek's Grimoire of Power */
+< 		{
+< 			SPELL_EARTHQUAKE,
+< 			SPELL_BEDLAM,
+< 			SPELL_REND_SOUL,
+< 			SPELL_BANISHMENT,
+< 			SPELL_WORD_OF_DESTRUCTION,
+< 			SPELL_MASS_BANISHMENT,
+< 			SPELL_CHAOS_STRIKE,
+< 			SPELL_MANA_STORM,
+< 			-1,
+< 		},
+---
+> 	/* Magic for Beginners */
+> 	BOOK(SPELL_MAGIC_MISSILE,
+> 	     SPELL_DETECT_MONSTERS,
+> 	     SPELL_PHASE_DOOR,
+> 	     SPELL_LIGHT_AREA,
+> 	     SPELL_TREASURE_DETECTION,
+> 	     SPELL_CURE_LIGHT_WOUNDS,
+> 	     SPELL_OBJECT_DETECTION,
+> 	     SPELL_FIND_TRAPS_DOORS,
+> 	     SPELL_STINKING_CLOUD),
+> 
+> 	/* Conjurings and Tricks */
+> 	BOOK(SPELL_CONFUSE_MONSTER,
+> 	     SPELL_LIGHTNING_BOLT,
+> 	     SPELL_TRAP_DOOR_DESTRUCTION,
+> 	     SPELL_CURE_POISON,
+> 	     SPELL_SLEEP_MONSTER,
+> 	     SPELL_TELEPORT_SELF,
+> 	     SPELL_SPEAR_OF_LIGHT,
+> 	     SPELL_FROST_BOLT,
+> 	     SPELL_WONDER),
+> 
+> 	/* Incantations and Illusions */
+> 	BOOK(SPELL_SATISFY_HUNGER,
+> 	     SPELL_RECHARGE_ITEM_I,
+> 	     SPELL_TURN_STONE_TO_MUD,
+> 	     SPELL_FIRE_BOLT,
+> 	     SPELL_POLYMORPH_OTHER,
+> 	     SPELL_IDENTIFY,
+> 	     SPELL_DETECT_INVISIBLE,
+> 	     SPELL_ACID_BOLT,
+> 	     SPELL_SLOW_MONSTER),
+> 
+> 	/* Sorcery and Evocations */
+> 	BOOK(SPELL_FROST_BALL,
+> 	     SPELL_TELEPORT_OTHER,
+> 	     SPELL_HASTE_SELF,
+> 	     SPELL_MASS_SLEEP,
+> 	     SPELL_FIRE_BALL,
+> 	     SPELL_DETECT_ENCHANTMENT,
+> 	     -1,
+> 	     -1,
+> 	     -1),
+> 
+> 	/* Resistances of Scarabtarices */
+> 	BOOK(SPELL_RESIST_COLD,
+> 	     SPELL_RESIST_FIRE,
+> 	     SPELL_RESIST_POISON,
+> 	     SPELL_RESISTANCE,
+> 	     SPELL_SHIELD,
+> 	     -1,
+> 	     -1,
+> 	     -1,
+> 	     -1),
+> 
+> 	/* Raal's Tome of Destruction */
+> 	BOOK(SPELL_SHOCK_WAVE,
+> 	     SPELL_EXPLOSION,
+> 	     SPELL_CLOUD_KILL,
+> 	     SPELL_ACID_BALL,
+> 	     SPELL_ICE_STORM,
+> 	     SPELL_METEOR_SWARM,
+> 	     SPELL_RIFT,
+> 	     -1,
+> 	     -1),
+> 
+> 	/* Mordenkainen's Escapes */
+> 	BOOK(SPELL_DOOR_CREATION,
+> 	     SPELL_STAIR_CREATION,
+> 	     SPELL_TELEPORT_LEVEL,
+> 	     SPELL_WORD_OF_RECALL,
+> 	     SPELL_RUNE_OF_PROTECTION,
+> 	     -1,
+> 	     -1,
+> 	     -1,
+> 	     -1),
+> 
+> 	/* Tenser's transformations */
+> 	BOOK(SPELL_HEROISM,
+> 	     SPELL_BERSERKER,
+> 	     SPELL_ENCHANT_ARMOR,
+> 	     SPELL_ENCHANT_WEAPON,
+> 	     SPELL_RECHARGE_ITEM_II,
+> 	     SPELL_ELEMENTAL_BRAND,
+> 	     -1,
+> 	     -1,
+> 	     -1),
+> 
+> 	/* Kelek's Grimoire of Power */
+> 	BOOK(SPELL_EARTHQUAKE,
+> 	     SPELL_BEDLAM,
+> 	     SPELL_REND_SOUL,
+> 	     SPELL_BANISHMENT,
+> 	     SPELL_WORD_OF_DESTRUCTION,
+> 	     SPELL_MASS_BANISHMENT,
+> 	     SPELL_CHAOS_STRIKE,
+> 	     SPELL_MANA_STORM,
+> 	     -1),
+290d275
+< 	/* Priest spells */
+292,407c277,358
+< 		/* Beginners Handbook */
+< 		{
+< 			PRAYER_DETECT_EVIL,
+< 			PRAYER_CURE_LIGHT_WOUNDS,
+< 			PRAYER_BLESS,
+< 			PRAYER_REMOVE_FEAR,
+< 			PRAYER_CALL_LIGHT,
+< 			PRAYER_FIND_TRAPS,
+< 			PRAYER_DETECT_DOORS_STAIRS,
+< 			PRAYER_SLOW_POISON,
+< 			-1,
+< 		},
+< 
+< 		/* Words of Wisdom */
+< 		{
+< 			PRAYER_SCARE_MONSTER,
+< 			PRAYER_PORTAL,
+< 			PRAYER_CURE_SERIOUS_WOUNDS,
+< 			PRAYER_CHANT,
+< 			PRAYER_SANCTUARY,
+< 			PRAYER_SATISFY_HUNGER,
+< 			PRAYER_REMOVE_CURSE,
+< 			PRAYER_RESIST_HEAT_COLD,
+< 			-1,
+< 		},
+< 
+< 		/* Chants and Blessings */
+< 		{
+< 			PRAYER_NEUTRALIZE_POISON,
+< 			PRAYER_ORB_OF_DRAINING,
+< 			PRAYER_CURE_CRITICAL_WOUNDS,
+< 			PRAYER_SENSE_INVISIBLE,
+< 			PRAYER_PROTECTION_FROM_EVIL,
+< 			PRAYER_EARTHQUAKE,
+< 			PRAYER_SENSE_SURROUNDINGS,
+< 			PRAYER_CURE_MORTAL_WOUNDS,
+< 			PRAYER_TURN_UNDEAD,
+< 		},
+< 
+< 		/* Exorcism and Dispelling */
+< 		{
+< 			PRAYER_PRAYER,
+< 			PRAYER_DISPEL_UNDEAD,
+< 			PRAYER_HEAL,
+< 			PRAYER_DISPEL_EVIL,
+< 			PRAYER_GLYPH_OF_WARDING,
+< 			PRAYER_HOLY_WORD,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Ethereal openings */
+< 		{
+< 			PRAYER_BLINK,
+< 			PRAYER_TELEPORT_SELF,
+< 			PRAYER_TELEPORT_OTHER,
+< 			PRAYER_TELEPORT_LEVEL,
+< 			PRAYER_WORD_OF_RECALL,
+< 			PRAYER_ALTER_REALITY,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Godly Insights */
+< 		{
+< 			PRAYER_DETECT_MONSTERS,
+< 			PRAYER_DETECTION,
+< 			PRAYER_PERCEPTION,
+< 			PRAYER_PROBING,
+< 			PRAYER_CLAIRVOYANCE,
+< 			-1,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Purifications and Healing */
+< 		{
+< 			PRAYER_CURE_SERIOUS_WOUNDS2,
+< 			PRAYER_CURE_MORTAL_WOUNDS2,
+< 			PRAYER_HEALING,
+< 			PRAYER_RESTORATION,
+< 			PRAYER_REMEMBRANCE,
+< 			-1,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Holy Infusions */
+< 		{
+< 			PRAYER_UNBARRING_WAYS,
+< 			PRAYER_RECHARGING,
+< 			PRAYER_DISPEL_CURSE,
+< 			PRAYER_ENCHANT_WEAPON,
+< 			PRAYER_ENCHANT_ARMOUR,
+< 			PRAYER_ELEMENTAL_BRAND,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		},
+< 
+< 		/* Wrath of God */
+< 		{
+< 			PRAYER_DISPEL_UNDEAD2,
+< 			PRAYER_DISPEL_EVIL2,
+< 			PRAYER_BANISH_EVIL,
+< 			PRAYER_WORD_OF_DESTRUCTION,
+< 			PRAYER_ANNIHILATION,
+< 			-1,
+< 			-1,
+< 			-1,
+< 			-1,
+< 		}
+---
+> 		/*** Priest spell books ***/
+> 		BOOK(PRAYER_DETECT_EVIL,
+> 			 PRAYER_CURE_LIGHT_WOUNDS,
+> 			 PRAYER_BLESS,
+> 			 PRAYER_REMOVE_FEAR,
+> 			 PRAYER_CALL_LIGHT,
+> 			 PRAYER_FIND_TRAPS,
+> 			 PRAYER_DETECT_DOORS_STAIRS,
+> 			 PRAYER_SLOW_POISON,
+> 			 -1),
+> 		BOOK(PRAYER_SCARE_MONSTER,
+> 			 PRAYER_PORTAL,
+> 			 PRAYER_CURE_SERIOUS_WOUNDS,
+> 			 PRAYER_CHANT,
+> 			 PRAYER_SANCTUARY,
+> 			 PRAYER_SATISFY_HUNGER,
+> 			 PRAYER_REMOVE_CURSE,
+> 			 PRAYER_RESIST_HEAT_COLD,
+> 			 -1),
+> 		BOOK(PRAYER_NEUTRALIZE_POISON,
+> 			 PRAYER_ORB_OF_DRAINING,
+> 			 PRAYER_CURE_CRITICAL_WOUNDS,
+> 			 PRAYER_SENSE_INVISIBLE,
+> 			 PRAYER_PROTECTION_FROM_EVIL,
+> 			 PRAYER_EARTHQUAKE,
+> 			 PRAYER_SENSE_SURROUNDINGS,
+> 			 PRAYER_CURE_MORTAL_WOUNDS,
+> 			 PRAYER_TURN_UNDEAD),
+> 		BOOK(PRAYER_PRAYER,
+> 			 PRAYER_DISPEL_UNDEAD,
+> 			 PRAYER_HEAL,
+> 			 PRAYER_DISPEL_EVIL,
+> 			 PRAYER_GLYPH_OF_WARDING,
+> 			 PRAYER_HOLY_WORD,
+> 			 -1,
+> 			 -1,
+> 			 -1),
+> 		BOOK(PRAYER_BLINK,
+> 			 PRAYER_TELEPORT_SELF,
+> 			 PRAYER_TELEPORT_OTHER,
+> 			 PRAYER_TELEPORT_LEVEL,
+> 			 PRAYER_WORD_OF_RECALL,
+> 			 PRAYER_ALTER_REALITY,
+> 			 -1,
+> 			 -1,
+> 			 -1),
+> 		BOOK(PRAYER_DETECT_MONSTERS,
+> 			 PRAYER_DETECTION,
+> 			 PRAYER_PERCEPTION,
+> 			 PRAYER_PROBING,
+> 			 PRAYER_CLAIRVOYANCE,
+> 			 -1,
+> 			 -1,
+> 			 -1,
+> 			 -1),
+> 		BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+> 			 PRAYER_CURE_MORTAL_WOUNDS2,
+> 			 PRAYER_HEALING,
+> 			 PRAYER_RESTORATION,
+> 			 PRAYER_REMEMBRANCE,
+> 			 -1,
+> 			 -1,
+> 			 -1,
+> 			 -1),
+> 		BOOK(PRAYER_UNBARRING_WAYS,
+> 			 PRAYER_RECHARGING,
+> 			 PRAYER_DISPEL_CURSE,
+> 			 PRAYER_ENCHANT_WEAPON,
+> 			 PRAYER_ENCHANT_ARMOUR,
+> 			 PRAYER_ELEMENTAL_BRAND,
+> 			 -1,
+> 			 -1,
+> 			 -1),
+> 		BOOK(PRAYER_DISPEL_UNDEAD2,
+> 			 PRAYER_DISPEL_EVIL2,
+> 			 PRAYER_BANISH_EVIL,
+> 			 PRAYER_WORD_OF_DESTRUCTION,
+> 			 PRAYER_ANNIHILATION,
+> 			 -1,
+> 			 -1,
+> 			 -1,
+> 			 -1)
+420,483c371,434
+< 	  "Magic Missile",
+< 	  "Detect Monsters",
+< 	  "Phase Door",
+< 	  "Light Area",
+< 	  "Find Hidden Traps/Doors",
+< 	  "Cure Light Wounds",
+< 	  "Detect Treasure",
+< 	  "Detect Objects",
+< 	  "Identify",
+< 	  "Detect Invisible",
+< 	  "Detect Enchantment",
+< 	  "Stinking Cloud",
+< 	  "Lightning Bolt",
+< 	  "Confuse Monster",
+< 	  "Sleep Monster",
+< 	  "Wonder",
+< 	  "Frost Bolt",
+< 	  "Acid Bolt",
+< 	  "Fire Bolt",
+< 	  "Trap/Door Destruction",
+< 	  "Spear of Light",
+< 	  "Turn Stone to Mud",
+< 	  "Door Creation",
+< 	  "Earthquake",
+< 	  "Stair Creation",
+< 	  "Cure Poison",
+< 	  "Satisfy Hunger",
+< 	  "Heroism",
+< 	  "Berserker",
+< 	  "Haste Self",
+< 	  "Teleport Self",
+< 	  "Slow Monster",
+< 	  "Teleport Other",
+< 	  "Teleport Level",
+< 	  "Word of Recall",
+< 	  "Polymorph Other",
+< 	  "Shock Wave",
+< 	  "Explosion",
+< 	  "Cloudkill",
+< 	  "Mass Sleep",
+< 	  "Bedlam",
+< 	  "Rend Soul",
+< 	  "Word of Destruction",
+< 	  "Chaos Strike",
+< 	  "Resist Cold",
+< 	  "Resist Fire",
+< 	  "Resist Poison",
+< 	  "Resistance",
+< 	  "Shield",
+< 	  "Rune of Protection",
+< 	  "Lesser Recharging",
+< 	  "Enchant Armor",
+< 	  "Enchant Weapon",
+< 	  "Greater Recharging",
+< 	  "Elemental Brand",
+< 	  "Frost Ball",
+< 	  "Acid Ball",
+< 	  "Fire Ball",
+< 	  "Ice Storm",
+< 	  "Banishment",
+< 	  "Meteor Swarm",
+< 	  "Mass Banishment",
+< 	  "Rift",
+< 	  "Mana Storm"
+---
+> 	  "Волшебная Стрела",
+> 	  "Поиск Монстров",
+> 	  "Фазовая Дверь",
+> 	  "Освещение",
+> 	  "Поиск Ловушек/Дверей",
+> 	  "Лечение Легких Ран",
+> 	  "Поиск Сокровищ",
+> 	  "Поиск Объектов",
+> 	  "Идентификация",
+> 	  "Поиск Невидимого",
+> 	  "Поиск Чар",
+> 	  "Вонючее Облако",
+> 	  "Удар Молнии",
+> 	  "Контузия Монстра",
+> 	  "Усыпление Монстра",
+> 	  "Чудо",
+> 	  "Ледяная Стрела",
+> 	  "Кислотная Стрела",
+> 	  "Огненная Стрела",
+> 	  "Разрушение Ловушки/Двери",
+> 	  "Копье Света",
+> 	  "Плавка Камня",
+> 	  "Создание Дверей",
+> 	  "Землетрясение",
+> 	  "Создание Лестниц",
+> 	  "Лечение Яда",
+> 	  "Удовлетворение Голода",
+> 	  "Героизм",
+> 	  "Ярость",
+> 	  "Ускорение",
+> 	  "Телепортация",
+> 	  "Замедление Монстра",
+> 	  "Телепортация Монстра",
+> 	  "Межуровневая Телепортация",
+> 	  "Слово Возвращения",
+> 	  "Трансформация",
+> 	  "Ударная Волна",
+> 	  "Взрыв",
+> 	  "Ядовитое Облако",
+> 	  "Массовое Усыпление",
+> 	  "Бедлам",
+> 	  "Пытка Души",
+> 	  "Слово Разрушения",
+> 	  "Удар Хаоса",
+> 	  "Сопротивление Холоду",
+> 	  "Сопротивление Огню",
+> 	  "Сопротивление Яду",
+> 	  "Сопротивление",
+> 	  "Щит",
+> 	  "Руна Защиты",
+> 	  "Малая Перезарядка",
+> 	  "Зачарование Доспехов",
+> 	  "Зачарование Оружия",
+> 	  "Большая Перезарядка",
+> 	  "Клеймо Элементов",
+> 	  "Ледяной Шар",
+> 	  "Кислотный Шар",
+> 	  "Огненный Шар",
+> 	  "Ледяной Шторм",
+> 	  "Изгнание",
+> 	  "Поток Метеоров",
+> 	  "Массовое Изгнание",
+> 	  "Сдвиг",
+> 	  "Шторм Маны"
+491,498c442,449
+< 		"Detect Evil",
+< 		"Cure Light Wounds",
+< 		"Bless",
+< 		"Remove Fear",
+< 		"Call Light",
+< 		"Find Traps",
+< 		"Detect Doors/Stairs",
+< 		"Slow Poison",
+---
+> 		"Поиск Зла",
+> 		"Лечение Легких Ран",
+> 		"Благословление",
+> 		"Снятие Страха",
+> 		"Призвать Свет",
+> 		"Поиск Ловушек",
+> 		"Поиск Дверей/Лестниц",
+> 		"Замедление Яда",
+501,508c452,459
+< 		"Scare Monster",
+< 		"Portal",
+< 		"Cure Serious Wounds",
+< 		"Chant",
+< 		"Sanctuary",
+< 		"Satisfy Hunger",
+< 		"Remove Curse",
+< 		"Resist Heat and Cold",
+---
+> 		"Устрашение Монстра",
+> 		"Портал",
+> 		"Лечение Серьезных Ран",
+> 		"Пение",
+> 		"Убежище",
+> 		"Удовлетворение Голода",
+> 		"Снятие Заклятий",
+> 		"Сопротивление Огню и Холоду",
+511,519c462,470
+< 		"Neutralize Poison",
+< 		"Orb of Draining",
+< 		"Cure Critical Wounds",
+< 		"Sense Invisible",
+< 		"Protection from Evil",
+< 		"Earthquake",
+< 		"Sense Surroundings",
+< 		"Cure Mortal Wounds",
+< 		"Turn Undead",
+---
+> 		"Нейтрализация Яда",
+> 		"Святой Огонь", /* Orb of Draining - huh? */
+> 		"Лечение Критических Ран",
+> 		"Чувствовать Невидимое",
+> 		"Защита от Зла",
+> 		"Землетрясение",
+> 		"Чувствовать Окружающее",
+> 		"Лечение Смертельных Ран",
+> 		"Устрашение Мертвецов",
+522,527c473,478
+< 		"Prayer",
+< 		"Dispel Undead",
+< 		"Heal",
+< 		"Dispel Evil",
+< 		"Glyph of Warding",
+< 		"Holy Word",
+---
+> 		"Молитва",
+> 		"Уничтожение Мертвецов",
+> 		"Исцеление",
+> 		"Уничтожение Зла",
+> 		"Руна Охраны",
+> 		"Священное Слово",
+530,534c481,485
+< 		"Detect Monsters",
+< 		"Detection",
+< 		"Perception",
+< 		"Probing",
+< 		"Clairvoyance",
+---
+> 		"Поиск Монстров",
+> 		"Поиск",
+> 		"Восприятие",
+> 		"Анализ Монстра",
+> 		"Ясновидение",
+537,541c488,492
+< 		"Cure Serious Wounds",
+< 		"Cure Mortal Wounds",
+< 		"Healing",
+< 		"Restoration",
+< 		"Remembrance",
+---
+> 		"Лечение Серьезных Ран",
+> 		"Лечение Смертельных Ран",
+> 		"Исцеление",
+> 		"Восстановление",
+> 		"Воспоминания",
+544,548c495,499
+< 		"Dispel Undead",
+< 		"Dispel Evil",
+< 		"Banish Evil",
+< 		"Word of Destruction",
+< 		"Annihilation",
+---
+> 		"Уничтожение Мертвецов",
+> 		"Уничтожение Зла",
+> 		"Изгнание Зла",
+> 		"Слово Разрушения",
+> 		"Аннигиляция",
+551,556c502,507
+< 		"Unbarring Ways",
+< 		"Recharging",
+< 		"Dispel Curse",
+< 		"Enchant Weapon",
+< 		"Enchant Armour",
+< 		"Elemental Brand",
+---
+> 		"Открытые Пути",
+> 		"Перезарядка",
+> 		"Сокрушение Проклятий",
+> 		"Зачарование Оружия",
+> 		"Зачарование Доспехов",
+> 		"Клеймо Элементов",
+559,564c510,515
+< 		"Blink",
+< 		"Teleport Self",
+< 		"Teleport Other",
+< 		"Teleport Level",
+< 		"Word of Recall",
+< 		"Alter Reality",
+---
+> 		"Скачок",
+> 		"Телепортация",
+> 		"Телепортация Монстра",
+> 		"Межуровневая Телепортация",
+> 		"Слово Возвращения",
+> 		"Изменение Мира",
+574a526
+> #ifndef USE_SCRIPT
+586,588d537
+< 	/* Check bounds */
+< 	if ((index < 0) || (index >= SPELLS_PER_BOOK)) return (-1);
+< 	if ((sval < 0) || (sval >= BOOKS_PER_REALM)) return (-1);
+596c545,561
+< 	return spell_list[spell_type][sval][index];
+---
+> 	/* Extract spells */
+> 	for (spell = 0; spell < PY_MAX_SPELLS; spell++)
+> 	{
+> 		/* Check for this spell */
+> 		if ((spell < 32) ?
+> 		    (spell_flags[spell_type][sval][0] & (1L << spell)) :
+> 		    (spell_flags[spell_type][sval][1] & (1L << (spell - 32))))
+> 		{
+> 			/* Found it */
+> 			if (index == num) return (spell);
+> 
+> 			num++;
+> 		}
+> 	}
+> 
+> 	/* No spell */
+> 	return (-1);
+598a564
+> #endif /* USE_SCRIPT */
+625c591
+< 			sprintf(p, " dam %dd4", 3 + ((plev - 1) / 5));
+---
+> 			sprintf(p, " урон %dd4", 3 + ((plev - 1) / 5));
+628c594
+< 			sprintf(p, " range 10");
+---
+> 			sprintf(p, " рад. 10");
+631c597
+< 			sprintf(p, " heal 2d8");
+---
+> 			sprintf(p, " леч. 2d8");
+634c600
+< 			sprintf(p, " dam %d", 10 + (plev / 2));
+---
+> 			sprintf(p, " урон %d", 10 + (plev / 2));
+637c603
+< 			sprintf(p, " dam %dd6", (3 + ((plev - 5) / 6)));
+---
+> 			sprintf(p, " урон %dd6", (3 + ((plev - 5) / 6)));
+640c606
+< 			sprintf(p, " dam %dd8", (5 + ((plev - 5) / 4)));
+---
+> 			sprintf(p, " урон %dd8", (5 + ((plev - 5) / 4)));
+643c609
+< 			sprintf(p, " dam %dd8", (8 + ((plev - 5) / 4)));
+---
+> 			sprintf(p, " урон %dd8", (8 + ((plev - 5) / 4)));
+646c612
+< 			sprintf(p, " dam %dd8", (6 + ((plev - 5) / 4)));
+---
+> 			sprintf(p, " урон %dd8", (6 + ((plev - 5) / 4)));
+649c615
+< 			sprintf(p, " dam 6d8");
+---
+> 			sprintf(p, " урон 6d8");
+652c618
+< 			sprintf(p, " dur 25+d25");
+---
+> 			sprintf(p, " время 25+d25");
+655c621
+< 			sprintf(p, " dur 25+d25");
+---
+> 			sprintf(p, " время 25+d25");
+658c624
+< 			sprintf(p, " dur %d+d20", plev);
+---
+> 			sprintf(p, " время %d+d20", plev);
+661c627
+< 			sprintf(p, " range %d", plev * 5);
+---
+> 			sprintf(p, " рад. %d", plev * 5);
+664c630
+< 			sprintf(p, " dam %d", 10 + plev);
+---
+> 			sprintf(p, " урон %d", 10 + plev);
+667c633
+< 			sprintf(p, " dam %d", 20 + plev * 2);
+---
+> 			sprintf(p, " урон %d", 20 + plev * 2);
+670c636
+< 			sprintf(p, " dam %d", 40 + (plev / 2));
+---
+> 			sprintf(p, " урон %d", 40 + (plev / 2));
+673c639
+< 			sprintf(p, " dam 11d%d", plev);
+---
+> 			sprintf(p, " урон 11d%d", plev);
+676c642
+< 			sprintf(p, " dam 13d%d", plev);
+---
+> 			sprintf(p, " урон 13d%d", plev);
+679c645
+< 			sprintf(p, " dur 20+d20");
+---
+> 			sprintf(p, " время 20+d20");
+682c648
+< 			sprintf(p, " dur 20+d20");
+---
+> 			sprintf(p, " время 20+d20");
+685c651
+< 			sprintf(p, " dur 20+d20");
+---
+> 			sprintf(p, " время 20+d20");
+688c654
+< 			sprintf(p, " dur 20+d20");
+---
+> 			sprintf(p, " время 20+d20");
+691c657
+< 			sprintf(p, " dur 30+d20");
+---
+> 			sprintf(p, " время 30+d20");
+694c660
+< 			sprintf(p, " dam %d", 30 + plev);
+---
+> 			sprintf(p, " урон %d", 30 + plev);
+697c663
+< 			sprintf(p, " dam %d", 40 + plev);
+---
+> 			sprintf(p, " урон %d", 40 + plev);
+700c666
+< 			sprintf(p, " dam %d", 55 + plev);
+---
+> 			sprintf(p, " урон %d", 55 + plev);
+703c669
+< 			sprintf(p, " dam %d", 50 + (plev * 2));
+---
+> 			sprintf(p, " урон %d", 50 + (plev * 2));
+706c672
+< 			sprintf(p, " dam %dx%d", 30 + plev / 2, 2 + plev / 20);
+---
+> 			sprintf(p, " урон %dx%d", 30 + plev / 2, 2 + plev / 20);
+709c675
+< 			sprintf(p, " dam 40+%dd7", plev);
+---
+> 			sprintf(p, " урон 40+%dd7", plev);
+712c678
+< 			sprintf(p, " dam %d", 300 + plev * 2);
+---
+> 			sprintf(p, " урон %d", 300 + plev * 2);
+726c692
+< 				strcpy(p, " heal 2d10");
+---
+> 				strcpy(p, " леч. 2d10");
+729c695
+< 				strcpy(p, " dur 12+d12");
+---
+> 				strcpy(p, " время 12+d12");
+732c698
+< 				sprintf(p, " range %d", 3 * plev);
+---
+> 				sprintf(p, " рад. %d", 3 * plev);
+735c701
+< 				strcpy(p, " heal 4d10");
+---
+> 				strcpy(p, " леч. 4d10");
+738c704
+< 				strcpy(p, " dur 24+d24");
+---
+> 				strcpy(p, " время 24+d24");
+741c707
+< 				strcpy(p, " dur 10+d10");
+---
+> 				strcpy(p, " время 10+d10");
+744c710
+< 				sprintf(p, " %d+3d6", plev +
+---
+> 				sprintf(p, " урон %d+3d6", plev +
+748c714
+< 				strcpy(p, " heal 6d10");
+---
+> 				strcpy(p, " леч. 6d10");
+751c717
+< 				strcpy(p, " dur 24+d24");
+---
+> 				strcpy(p, " время 24+d24");
+754c720
+< 				sprintf(p, " dur %d+d25", 3 * plev);
+---
+> 				sprintf(p, " время %d+d25", 3 * plev);
+757c723
+< 				strcpy(p, " heal 8d10");
+---
+> 				strcpy(p, " леч. 8d10");
+760c726
+< 				strcpy(p, " dur 48+d48");
+---
+> 				strcpy(p, " время 48+d48");
+763c729
+< 				sprintf(p, " dam d%d", 3 * plev);
+---
+> 				sprintf(p, " урон d%d", 3 * plev);
+766c732
+< 				strcpy(p, " heal 300");
+---
+> 				strcpy(p, " леч. 300");
+769c735
+< 				sprintf(p, " dam d%d", 3 * plev);
+---
+> 				sprintf(p, " урон d%d", 3 * plev);
+772c738
+< 				strcpy(p, " heal 1000");
+---
+> 				strcpy(p, " леч. 1000");
+775c741
+< 				strcpy(p, " heal 4d10");
+---
+> 				strcpy(p, " леч. 4d10");
+778c744
+< 				strcpy(p, " heal 8d10");
+---
+> 				strcpy(p, " леч. 8d10");
+781c747
+< 				strcpy(p, " heal 2000");
+---
+> 				strcpy(p, " леч. 2000");
+784c750
+< 				sprintf(p, " dam d%d", 4 * plev);
+---
+> 				sprintf(p, " урон d%d", 4 * plev);
+787c753
+< 				sprintf(p, " dam d%d", 4 * plev);
+---
+> 				sprintf(p, " урон d%d", 4 * plev);
+790c756
+< 				strcpy(p, " dam 200");
+---
+> 				strcpy(p, " урон 200");
+793c759
+< 				strcpy(p, " range 10");
+---
+> 				strcpy(p, " рад. 10");
+796c762
+< 				sprintf(p, " range %d", 8 * plev);
+---
+> 				sprintf(p, " рад. %d", 8 * plev);
+828c794
+< 		msg_print("You feel a surge of power!");
+---
+> 		msg_print("Вы чувствуете волну мощи!");
+991c957
+< 			msg_print("A line of blue shimmering light appears.");
+---
+> 			msg_print("Появляется коридор синего мерцающего света.");
+1019c985,986
+< 			return recharge(2 + plev / 5);
+---
+> 			(void)recharge(2 + plev / 5);
+> 			break;
+1038c1005,1006
+< 			return ident_spell();
+---
+> 			(void)ident_spell();
+> 			break;
+1071c1039,1040
+< 			return recharge(50 + plev);
+---
+> 			recharge(50 + plev);
+> 			break;
+1103c1072
+< 			return banishment();
+---
+> 			(void)banishment();
+1224c1193,1194
+< 			return brand_ammo();
+---
+> 			(void)brand_ammo();
+> 			break;
+1308c1278,1279
+< 			return enchant_spell(0, 0, rand_int(3) + plev / 20);
+---
+> 			(void)enchant_spell(0, 0, rand_int(3) + plev / 20);
+> 			break;
+1313,1314c1284,1286
+< 			return enchant_spell(rand_int(4) + plev / 20,
+< 			                     rand_int(4) + plev / 20, 0);
+---
+> 			(void)enchant_spell(rand_int(4) + plev / 20,
+> 			                    rand_int(4) + plev / 20, 0);
+> 			break;
+1553c1525,1526
+< 			return ident_spell();
+---
+> 			(void)ident_spell();
+> 			break;
+1624c1597
+< 				msg_print("The power of your god banishes evil!");
+---
+> 				msg_print("Сила Бога изгоняет зло!");
+1650c1623,1624
+< 			return recharge(15);
+---
+> 			(void)recharge(15);
+> 			break;
+1661c1635,1636
+< 			return enchant_spell(rand_int(4) + 1, rand_int(4) + 1, 0);
+---
+> 			(void)enchant_spell(rand_int(4) + 1, rand_int(4) + 1, 0);
+> 			break;
+1666c1641,1642
+< 			return enchant_spell(0, 0, rand_int(3) + 2);
+---
+> 			(void)enchant_spell(0, 0, rand_int(3) + 2);
+> 			break;
+1708c1684
+< 			msg_print("The world changes!");
+---
+> 			msg_print("Мир изменяется!");

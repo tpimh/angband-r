@@ -1,0 +1,535 @@
+255c255
+< 	p = "['c' to change name, 'f' to file, 'h' to change mode, or ESC]";
+---
+> 	p = "['c' сменить имя, 'f' вывод в файл, 'h' сменить режим, или ESC]";
+288c288
+< 			if (get_string("File name: ", ftmp, sizeof(ftmp)))
+---
+> 			if (get_string("Имя файла: ", ftmp, sizeof(ftmp)))
+294c294
+< 						msg_print("Character dump failed!");
+---
+> 						msg_print("Не получилось вывести информацию о герое!");
+298c298
+< 						msg_print("Character dump successful.");
+---
+> 						msg_print("Информация о герое выведена в файл.");
+313c313
+< 			bell("Illegal command for change name!");
+---
+> 			bell("Неправильная команда!");
+421c421
+< 		prt(format("Message Recall (%d-%d of %d), Offset %d",
+---
+> 		prt(format("Список сообщений (%d-%d из %d), смещение %d",
+425c425
+< 		prt("[Press 'p' for older, 'n' for newer, ..., or ESCAPE]", hgt - 1, 0);
+---
+> 		prt("[Нажмите 'p' для более старых, 'n' для более новых, или ESC]", hgt - 1, 0);
+583c583
+< 	prt("Command: Load a user pref file", row, 0);
+---
+> 	prt("Команда: Загрузить пользовательский prf-файл", row, 0);
+586c586
+< 	prt("File: ", row + 2, 0);
+---
+> 	prt("Файл: ", row + 2, 0);
+598c598
+< 		msg_format("Failed to load '%s'!", ftmp);
+---
+> 		msg_format("Не удалось загрузить '%s'!", ftmp);
+603c603
+< 		msg_format("Loaded '%s'.", ftmp);
+---
+> 		msg_format("Загружен '%s'.", ftmp);
+643c643
+< 		strnfmt(buf, sizeof(buf), "%s (RET to advance, y/n to set, ESC to accept, ? for help) ", info);
+---
+> 		strnfmt(buf, sizeof(buf), "%s (RET вперед, y/n установка, ESC выход, ? справка) ", info);
+657c657
+< 			        op_ptr->opt[opt[i]] ? "yes" : "no ",
+---
+> 			        op_ptr->opt[opt[i]] ? "да " : "нет",
+743c743
+< 				bell("Illegal command for normal options!");
+---
+> 				bell("Неправильная команда!");
+780c780
+< 		prt("Window flags (<dir> to move, 't' to toggle, or ESC)", 0, 0);
+---
+> 		prt("Флаги окна (<стрелки> для движения, 't' для переключения, или ESC)", 0, 0);
+807c807
+< 			if (!str) str = "(Unused option)";
+---
+> 			if (!str) str = "(Не используется)";
+845c845
+< 				bell("Cannot set main window flags!");
+---
+> 				bell("Нельзя задавать флаги главного окна!");
+877c877
+< 			bell("Illegal command for window options!");
+---
+> 			bell("Неправильная команда!");
+1033c1033
+< 		prt(format("%s options", VERSION_NAME), 2, 0);
+---
+> 		prt(format("Опции %s", VERSION_NAME), 2, 0);
+1036,1042c1036,1042
+< 		prt("(1) User Interface Options", 4, 5);
+< 		prt("(2) Disturbance Options", 5, 5);
+< 		prt("(3) Game-Play Options", 6, 5);
+< 		prt("(4) Efficiency Options", 7, 5);
+< 		prt("(5) Display Options", 8, 5);
+< 		prt("(6) Birth Options", 9, 5);
+< 		prt("(7) Cheat Options", 10, 5);
+---
+> 		prt("(1) Интерфейс", 4, 5);
+> 		prt("(2) Беспокойство", 5, 5);
+> 		prt("(3) Игра", 6, 5);
+> 		prt("(4) Эффективность", 7, 5);
+> 		prt("(5) Дисплей", 8, 5);
+> 		prt("(6) Опции рождения", 9, 5);
+> 		prt("(7) Опции читов", 10, 5);
+1045c1045
+< 		prt("(W) Window flags", 12, 5);
+---
+> 		prt("(W) Флаги окон", 12, 5);
+1048,1049c1048,1049
+< 		prt("(L) Load a user pref file", 14, 5);
+< 		prt("(A) Append options to a file", 15, 5);
+---
+> 		prt("(L) Загрузить пользовательский prf-файл", 14, 5);
+> 		prt("(A) Вывести опции в файл", 15, 5);
+1052,1053c1052,1053
+< 		prt("(D) Base Delay Factor", 17, 5);
+< 		prt("(H) Hitpoint Warning", 18, 5);
+---
+> 		prt("(D) Основная задержка", 17, 5);
+> 		prt("(H) Предупреждение о низком здоровье", 18, 5);
+1056c1056
+< 		prt("Command: ", 20, 0);
+---
+> 		prt("Команда: ", 20, 0);
+1067c1067
+< 			do_cmd_options_aux(0, "User Interface Options");
+---
+> 			do_cmd_options_aux(0, "Интерфейс");
+1073c1073
+< 			do_cmd_options_aux(1, "Disturbance Options");
+---
+> 			do_cmd_options_aux(1, "Беспокойство");
+1079c1079
+< 			do_cmd_options_aux(2, "Game-Play Options");
+---
+> 			do_cmd_options_aux(2, "Игра");
+1085c1085
+< 			do_cmd_options_aux(3, "Efficiency Options");
+---
+> 			do_cmd_options_aux(3, "Эффективность");
+1091c1091
+< 			do_cmd_options_aux(4, "Display Options");
+---
+> 			do_cmd_options_aux(4, "Дисплей");
+1097c1097
+< 			do_cmd_options_aux(5, "Birth Options");
+---
+> 			do_cmd_options_aux(5, "Опции рождения");
+1103c1103
+< 			do_cmd_options_aux(6, "Cheat Options");
+---
+> 			do_cmd_options_aux(6, "Опции читов");
+1125c1125
+< 			prt("Command: Append options to a file", 20, 0);
+---
+> 			prt("Команда: Вывести опции в файл", 20, 0);
+1128c1128
+< 			prt("File: ", 21, 0);
+---
+> 			prt("Файл: ", 21, 0);
+1140c1140
+< 				msg_print("Failed!");
+---
+> 				msg_print("Не удалось!");
+1145c1145
+< 				msg_print("Done.");
+---
+> 				msg_print("Сделано.");
+1153c1153
+< 			prt("Command: Base Delay Factor", 20, 0);
+---
+> 			prt("Команда: Основная задержка", 20, 0);
+1160c1160
+< 				prt(format("Current base delay factor: %d (%d msec)",
+---
+> 				prt(format("Текущая основная задержка: %d (%d мсек)",
+1162c1162
+< 				prt("New base delay factor (0-9 or ESC to accept): ", 21, 0);
+---
+> 				prt("Новая задержка (0-9 или ESC для принятия): ", 21, 0);
+1167c1167
+< 				else bell("Illegal delay factor!");
+---
+> 				else bell("Неправильная команда!");
+1175c1175
+< 			prt("Command: Hitpoint Warning", 20, 0);
+---
+> 			prt("Команда: Предупреждение о низком здоровье", 20, 0);
+1181c1181
+< 				prt(format("Current hitpoint warning: %2d%%",
+---
+> 				prt(format("Предупреждение на: %2d%%",
+1183c1183
+< 				prt("New hitpoint warning (0-9 or ESC to accept): ", 21, 0);
+---
+> 				prt("Новое значение (0-9 или ESC для принятия): ", 21, 0);
+1188c1188
+< 				else bell("Illegal hitpoint warning!");
+---
+> 				else bell("Неправильная команда!");
+1196c1196
+< 			bell("Illegal command for options!");
+---
+> 			bell("Неправильная команда!");
+1523c1523
+< 		prt("Interact with Macros", 2, 0);
+---
+> 		prt("Работа с макросами", 2, 0);
+1527c1527
+< 		prt("Current action (if any) shown below:", 20, 0);
+---
+> 		prt("Текущее действие показано ниже:", 20, 0);
+1537c1537
+< 		prt("(1) Load a user pref file", 4, 5);
+---
+> 		prt("(1) Загрузить пользовательский prf-файл", 4, 5);
+1539,1547c1539,1547
+< 		prt("(2) Append macros to a file", 5, 5);
+< 		prt("(3) Query a macro", 6, 5);
+< 		prt("(4) Create a macro", 7, 5);
+< 		prt("(5) Remove a macro", 8, 5);
+< 		prt("(6) Append keymaps to a file", 9, 5);
+< 		prt("(7) Query a keymap", 10, 5);
+< 		prt("(8) Create a keymap", 11, 5);
+< 		prt("(9) Remove a keymap", 12, 5);
+< 		prt("(0) Enter a new action", 13, 5);
+---
+> 		prt("(2) Вывести макросы в файл", 5, 5);
+> 		prt("(3) Вывести макрос", 6, 5);
+> 		prt("(4) Создать макрос", 7, 5);
+> 		prt("(5) Удалить макрос", 8, 5);
+> 		prt("(6) Вывести карты клавиш в файл", 9, 5);
+> 		prt("(7) Вывести карту клавиш", 10, 5);
+> 		prt("(8) Создать карту клавиш", 11, 5);
+> 		prt("(9) Удалить карту клавиш", 12, 5);
+> 		prt("(0) Новое действие", 13, 5);
+1551c1551
+< 		prt("Command: ", 16, 0);
+---
+> 		prt("Команда: ", 16, 0);
+1574c1574
+< 			prt("Command: Append macros to a file", 16, 0);
+---
+> 			prt("Команда: Вывести макросы в файл", 16, 0);
+1577c1577
+< 			prt("File: ", 18, 0);
+---
+> 			prt("Файл: ", 18, 0);
+1589c1589
+< 			msg_print("Appended macros.");
+---
+> 			msg_print("Макросы выведены в файл.");
+1598c1598
+< 			prt("Command: Query a macro", 16, 0);
+---
+> 			prt("Команда: Вывести макрос", 16, 0);
+1601c1601
+< 			prt("Trigger: ", 18, 0);
+---
+> 			prt("Кнопка: ", 18, 0);
+1613c1613
+< 				msg_print("Found no macro.");
+---
+> 				msg_print("Макросов не найдено.");
+1629c1629
+< 				msg_print("Found a macro.");
+---
+> 				msg_print("Найден макрос.");
+1637c1637
+< 			prt("Command: Create a macro", 16, 0);
+---
+> 			prt("Команда: Создать макрос", 16, 0);
+1640c1640
+< 			prt("Trigger: ", 18, 0);
+---
+> 			prt("Кнопка: ", 18, 0);
+1649c1649
+< 			prt("Action: ", 20, 0);
+---
+> 			prt("Действие: ", 20, 0);
+1664c1664
+< 				msg_print("Added a macro.");
+---
+> 				msg_print("Макрос добавлен.");
+1672c1672
+< 			prt("Command: Remove a macro", 16, 0);
+---
+> 			prt("Команда: Удалить макрос", 16, 0);
+1675c1675
+< 			prt("Trigger: ", 18, 0);
+---
+> 			prt("Кнопка: ", 18, 0);
+1684c1684
+< 			msg_print("Removed a macro.");
+---
+> 			msg_print("Макрос удален");
+1693c1693
+< 			prt("Command: Append keymaps to a file", 16, 0);
+---
+> 			prt("Команда: Вывести карты клавиш в файл", 16, 0);
+1696c1696
+< 			prt("File: ", 18, 0);
+---
+> 			prt("Файл: ", 18, 0);
+1708c1708
+< 			msg_print("Appended keymaps.");
+---
+> 			msg_print("Карты клавиш выведены в файл.");
+1717c1717
+< 			prt("Command: Query a keymap", 16, 0);
+---
+> 			prt("Команда: Вывести карту клавиш", 16, 0);
+1720c1720
+< 			prt("Keypress: ", 18, 0);
+---
+> 			prt("Кнопка: ", 18, 0);
+1732c1732
+< 				msg_print("Found no keymap.");
+---
+> 				msg_print("Карт клавиш не найдено.");
+1748c1748
+< 				msg_print("Found a keymap.");
+---
+> 				msg_print("Найдена карта клавиш.");
+1756c1756
+< 			prt("Command: Create a keymap", 16, 0);
+---
+> 			prt("Команда: Создать карту клавиш", 16, 0);
+1759c1759
+< 			prt("Keypress: ", 18, 0);
+---
+> 			prt("Кнопка: ", 18, 0);
+1768c1768
+< 			prt("Action: ", 20, 0);
+---
+> 			prt("Действие: ", 20, 0);
+1786c1786
+< 				msg_print("Added a keymap.");
+---
+> 				msg_print("Карта клавиш добавлена.");
+1794c1794
+< 			prt("Command: Remove a keymap", 16, 0);
+---
+> 			prt("Команда: Удалить карту клавиш", 16, 0);
+1797c1797
+< 			prt("Keypress: ", 18, 0);
+---
+> 			prt("Кнопка: ", 18, 0);
+1809c1809
+< 			msg_print("Removed a keymap.");
+---
+> 			msg_print("Карта клавиш удалена.");
+1816c1816
+< 			prt("Command: Enter a new action", 16, 0);
+---
+> 			prt("Команда: Новое действие", 16, 0);
+1838c1838
+< 			bell("Illegal command for macros!");
+---
+> 			bell("Неправильная команда!");
+1882c1882
+< 		prt("Interact with Visuals", 2, 0);
+---
+> 		prt("Работа с визуальными определениями", 2, 0);
+2211a2212,2214
+> 
+> 				Term_graphics = TRUE;
+> 
+2220a2224,2225
+> 				
+> 				Term_graphics = FALSE;
+2226d2230
+< 				Term_putch(43, 20, ca, cc);
+2227a2232,2235
+> 				Term_graphics = TRUE;
+> 				
+> 				Term_putch(43, 20, ca, cc);
+> 				
+2234a2243,2244
+> 				
+> 				Term_graphics = FALSE;
+2282a2293,2295
+> 
+> 				Term_graphics = TRUE;
+> 
+2291a2305,2306
+> 				
+> 				Term_graphics = FALSE;
+2296a2312,2314
+> 
+> 				Term_graphics = TRUE;
+> 
+2305a2324,2325
+> 				
+> 				Term_graphics = FALSE;
+2353a2374,2376
+> 
+> 				Term_graphics = TRUE;
+> 
+2362a2386,2387
+> 				
+> 				Term_graphics = FALSE;
+2367a2393,2395
+> 
+> 				Term_graphics = TRUE;
+> 
+2376a2405,2406
+> 				
+> 				Term_graphics = FALSE;
+2424a2455,2457
+> 
+> 				Term_graphics = TRUE;
+> 
+2433a2467,2468
+> 				
+> 				Term_graphics = FALSE;
+2438a2474,2476
+> 
+> 				Term_graphics = TRUE;
+> 
+2448a2487,2488
+> 				Term_graphics = FALSE;
+> 				
+2527c2567
+< 		prt("Interact with Colors", 2, 0);
+---
+> 		prt("Работа с цветами", 2, 0);
+2738c2778
+< 	if (!get_string("Note: ", tmp, sizeof(tmp))) return;
+---
+> 	if (!get_string("Заметки: ", tmp, sizeof(tmp))) return;
+2744c2784
+< 	msg_format("Note: %s", tmp);
+---
+> 	msg_format("Заметки: %s", tmp);
+2754c2794
+< 	msg_format("You are playing %s %s.  Type '?' for more info.",
+---
+> 	msg_format("Вы играете в %s версии %s.  Введите '?' для дальнейшей информации.",
+2765,2775c2805,2815
+< 	"Looks like any other level.",
+< 	"You feel there is something special about this level.",
+< 	"You have a superb feeling about this level.",
+< 	"You have an excellent feeling...",
+< 	"You have a very good feeling...",
+< 	"You have a good feeling...",
+< 	"You feel strangely lucky...",
+< 	"You feel your luck is turning...",
+< 	"You like the look of this place...",
+< 	"This level can't be all bad...",
+< 	"What a boring place..."
+---
+> 	"Похоже на любой другой уровень.",
+> 	"Вы чувствуете, что в этом уровне есть что-то необычное.",
+> 	"У вас превосходное предчувствие об этом уровне.",
+> 	"У вас отличное предчувствие...",
+> 	"У вас очень хорошее предчувствие...",
+> 	"У вас хорошее предчувствие...",
+> 	"У вас неплохое предчувствие...",
+> 	"У вас приличное предчувствие...",
+> 	"Вам нравится это место...",
+> 	"Этот уровень не так уж плох...",
+> 	"Какое скучное место..."
+2791c2831
+< 		msg_print("Looks like a typical town.");
+---
+> 		msg_print("Похоже на обычный город.");
+2897c2937
+< 	msg_print("Screen dump loaded.");
+---
+> 	msg_print("Дамп экрана загружен.");
+2915,2916c2955,2956
+< 	if (!get_string("File: ", tmp_val, sizeof(tmp_val))) return;
+< 
+---
+> 	if (!get_string("Файл: ", tmp_val, sizeof(tmp_val))) return;
+> 	
+2918c2958
+< 	msg_print("Dump saved.");
+---
+> 	msg_print("Снимок экрана сохранен.");
+3041c3081
+< 		fprintf(fff, "     The %s\n", o_name);
+---
+> 		fprintf(fff, "     %s\n", o_name);
+3051c3091
+< 	show_file(file_name, "Known (or lost) artifacts", 0, 0);
+---
+> 	show_file(file_name, "Известные (или утерянные) артефакты", 0, 0);
+3110a3151
+> 		char rname[80];
+3113a3155,3156
+> 		
+> 		expand_rus_codes2(rname, (r_name + r_ptr->name), PAD_IMEN, 0, 1);
+3116,3118c3159,3161
+< 		fprintf(fff, "     %-30s is %s\n",
+< 			    (r_name + r_ptr->name),
+< 			    (dead ? "dead" : "alive"));
+---
+> 		fprintf(fff, "     %-30s : %s\n",
+> 			    rname,
+> 			    (dead ? "мертв" : "жив"));
+3128c3171
+< 	strnfmt(header, sizeof(header), "Uniques: %d known, %d killed", n, killed);
+---
+> 	strnfmt(header, sizeof(header), "Уникальные монстры: %d известно, %d убито", n, killed);
+3190c3233
+< 	show_file(file_name, "Known Objects", 0, 0);
+---
+> 	show_file(file_name, "Известные предметы", 0, 0);
+3247a3291,3294
+> 		char rname[80];
+> 
+> 		expand_rus_codes2(rname, (r_name + r_ptr->name), PAD_IMEN, 0, 1);
+> 		rname[0] = a_toupper(rname[0]);
+3251c3298
+< 		        (r_name + r_ptr->name), l_ptr->pkills);
+---
+> 		        rname, l_ptr->pkills);
+3261c3308
+< 	show_file(file_name, "Kill counts", 0, 0);
+---
+> 	show_file(file_name, "Уничтоженные существа", 0, 0);
+3291c3338
+< 		prt("Display current knowledge", 2, 0);
+---
+> 		prt("Показать знания", 2, 0);
+3294,3298c3341,3345
+< 		prt("(1) Display known artifacts", 4, 5);
+< 		prt("(2) Display known uniques", 5, 5);
+< 		prt("(3) Display known objects", 6, 5);
+< 		prt("(4) Display hall of fame", 7, 5);
+< 		prt("(5) Display kill counts", 8, 5);
+---
+> 		prt("(1) Артефакты", 4, 5);
+> 		prt("(2) Уникальные монстры", 5, 5);
+> 		prt("(3) Предметы", 6, 5);
+> 		prt("(4) Рекорды", 7, 5);
+> 		prt("(5) Уничтоженные существа", 8, 5);
+3301c3348
+< 		prt("Command: ", 10, 0);
+---
+> 		prt("Команда: ", 10, 0);
+3342c3389
+< 			bell("Illegal command for knowledge!");
+---
+> 			bell("Неправильная команда!");

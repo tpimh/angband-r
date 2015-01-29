@@ -1,0 +1,299 @@
+173c173
+< 	if (size) msg_print("Compacting monsters...");
+---
+> 	if (size) msg_print("Удаление избыточных монстров...");
+336c336
+< 	if (character_dungeon) msg_print("Too many monsters!");
+---
+> 	if (character_dungeon) msg_print("Слишком много монстров!");
+599c599,600
+< 		m_name = r_name + r_ptr->name;
+---
+> 		expand_rus_codes2(buf, r_name + r_ptr->name, PAD_IMEN, 0, 1);
+> 		m_name = buf;
+658a660,663
+> /* Буквы "неодушевленных" в языковом смысле монстров (Вы бьете гриба - нельзя,
+>  * нужно Вы бьете гриб).
+>  */
+> #define NEODUSH_MONSTRY ",s"
+707c712
+< void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode)
+---
+> void monster_desc(char *desc, size_t max, const monster_type *m_ptr, int mode, int pad)
+746,753c751,770
+< 			case 0x00: res = "it"; break;
+< 			case 0x01: res = "it"; break;
+< 			case 0x02: res = "its"; break;
+< 			case 0x03: res = "itself"; break;
+< 			case 0x04: res = "something"; break;
+< 			case 0x05: res = "something"; break;
+< 			case 0x06: res = "something's"; break;
+< 			case 0x07: res = "itself"; break;
+---
+> 			case 0x00:
+> 			{
+> 				switch (pad)
+> 				{
+> 					case PAD_IMEN: res = "оно"; break;
+> 					case PAD_RODIT: res = "его"; break;
+> 					case PAD_DAT: res = "нему"; break;
+> 					case PAD_VINIT: res = "его"; break;
+> 					case PAD_TVORIT: res = "им"; break;
+> 					case PAD_PREDL: res = "нем"; break;
+> 				}
+> 				break;
+> 			}
+> 			case 0x01: res = "ему"; break;
+> 			case 0x02: res = "его"; break;
+> 			case 0x03: res = "себя"; break;
+> 			case 0x04: res = "что-то"; break;
+> 			case 0x05: res = "что-то"; break;
+> 			case 0x06: res = "чей-то"; break;
+> 			case 0x07: res = "себя"; break;
+756,763c773,792
+< 			case 0x10: res = "he"; break;
+< 			case 0x11: res = "him"; break;
+< 			case 0x12: res = "his"; break;
+< 			case 0x13: res = "himself"; break;
+< 			case 0x14: res = "someone"; break;
+< 			case 0x15: res = "someone"; break;
+< 			case 0x16: res = "someone's"; break;
+< 			case 0x17: res = "himself"; break;
+---
+> 			case 0x10:
+> 			{
+> 				switch (pad)
+> 				{
+> 					case PAD_IMEN: res = "он"; break;
+> 					case PAD_RODIT: res = "его"; break;
+> 					case PAD_DAT: res = "нему"; break;
+> 					case PAD_VINIT: res = "его"; break;
+> 					case PAD_TVORIT: res = "им"; break;
+> 					case PAD_PREDL: res = "нем"; break;
+> 				}
+> 				break;
+> 			}
+> 			case 0x11: res = "ему"; break;
+> 			case 0x12: res = "его"; break;
+> 			case 0x13: res = "себя"; break;
+> 			case 0x14: res = "кто-то"; break;
+> 			case 0x15: res = "кто-то"; break;
+> 			case 0x16: res = "чей-то"; break;
+> 			case 0x17: res = "себя"; break;
+766,773c795,814
+< 			case 0x20: res = "she"; break;
+< 			case 0x21: res = "her"; break;
+< 			case 0x22: res = "her"; break;
+< 			case 0x23: res = "herself"; break;
+< 			case 0x24: res = "someone"; break;
+< 			case 0x25: res = "someone"; break;
+< 			case 0x26: res = "someone's"; break;
+< 			case 0x27: res = "herself"; break;
+---
+> 			case 0x20:
+> 			{
+> 				switch (pad)
+> 				{
+> 					case PAD_IMEN: res = "она"; break;
+> 					case PAD_RODIT: res = "ее"; break;
+> 					case PAD_DAT: res = "ней"; break;
+> 					case PAD_VINIT: res = "ее"; break;
+> 					case PAD_TVORIT: res = "ей"; break;
+> 					case PAD_PREDL: res = "ней"; break;
+> 				}
+> 				break;
+> 			}
+> 			case 0x21: res = "ей"; break;
+> 			case 0x22: res = "ее"; break;
+> 			case 0x23: res = "себя"; break;
+> 			case 0x24: res = "кто-то"; break;
+> 			case 0x25: res = "кто-то"; break;
+> 			case 0x26: res = "чей-то"; break;
+> 			case 0x27: res = "себя"; break;
+785,787c826,828
+< 		if (r_ptr->flags1 & (RF1_FEMALE)) my_strcpy(desc, "herself", max);
+< 		else if (r_ptr->flags1 & (RF1_MALE)) my_strcpy(desc, "himself", max);
+< 		else my_strcpy(desc, "itself", max);
+---
+> 		if (r_ptr->flags1 & (RF1_FEMALE)) my_strcpy(desc, "себя", max);
+> 		else if (r_ptr->flags1 & (RF1_MALE)) my_strcpy(desc, "себя", max);
+> 		else my_strcpy(desc, "себя", max);
+798c839,842
+< 			my_strcpy(desc, name, max);
+---
+> 			if (strchr(NEODUSH_MONSTRY, r_ptr->d_char))
+> 				expand_rus_codes(desc, name, pad, 0, 1);
+> 			else
+> 				expand_rus_codes2(desc, name, pad, 0, 1);
+804,805d847
+< 			/* XXX Check plurality for "some" */
+< 
+807,808c849,852
+< 			my_strcpy(desc, is_a_vowel(name[0]) ? "an " : "a ", max);
+< 			my_strcat(desc, name, max);
+---
+> 			if (strchr(NEODUSH_MONSTRY, r_ptr->d_char))
+> 				expand_rus_codes(desc, name, pad, 0, 1);
+> 			else
+> 				expand_rus_codes2(desc, name, pad, 0, 1);
+815,816c859,862
+< 			my_strcpy(desc, "the ", max);
+< 			my_strcat(desc, name, max);
+---
+> 			if (strchr(NEODUSH_MONSTRY, r_ptr->d_char))
+> 				expand_rus_codes(desc, name, pad, 0, 1);
+> 			else
+> 				expand_rus_codes2(desc, name, pad, 0, 1);
+822,825c868
+< 			/* XXX Check for trailing "s" */
+< 
+< 			/* Simply append "apostrophe" and "s" */
+< 			my_strcat(desc, "'s", max);
+---
+> 			/* nothing for russian */
+832c875
+< 			my_strcat(desc, " (offscreen)", max);
+---
+> 			my_strcat(desc, " (за экраном)", max);
+834a878,881
+> 	
+> 	/* Хак - для и.п. перекидывает первую букву в заглавную */
+> 	if (pad == PAD_IMEN)
+> 		desc[0] = a_toupper(desc[0]);
+1539c1586
+< 			if (cheat_hear) msg_format("Deep Unique (%s).", name);
+---
+> 			if (cheat_hear) msg_format("Глубокий уникальный (%s).", name);
+1549c1596
+< 			if (cheat_hear) msg_format("Deep Monster (%s).", name);
+---
+> 			if (cheat_hear) msg_format("Глубокий монстр (%s).", name);
+1560c1607
+< 		if (cheat_hear) msg_format("Unique (%s).", name);
+---
+> 		if (cheat_hear) msg_format("Уникальный монстр (%s).", name);
+1973c2020
+< 			msg_print("Warning! Could not allocate a new monster.");
+---
+> 			msg_print("Невозможно создать нового монстра.");
+2258c2305
+< 	monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 	monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+2263c2310,2311
+< 		msg_format("%^s is unharmed.", m_name);
+---
+> 		msg_format("%^s не задет%s.", m_name,
+> 			(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о"));
+2278c2326
+< 			msg_format("%^s barely notices.", m_name);
+---
+> 			msg_format("%^s не замечает атаки.", m_name);
+2280c2328
+< 			msg_format("%^s flinches.", m_name);
+---
+> 			msg_format("%^s дергается.", m_name);
+2282c2330
+< 			msg_format("%^s squelches.", m_name);
+---
+> 			msg_format("%^s пульсирует.", m_name);
+2284c2332
+< 			msg_format("%^s quivers in pain.", m_name);
+---
+> 			msg_format("%^s извивается от боли.", m_name);
+2286c2334
+< 			msg_format("%^s writhes about.", m_name);
+---
+> 			msg_format("%^s бьется в конвульсиях.", m_name);
+2288c2336
+< 			msg_format("%^s writhes in agony.", m_name);
+---
+> 			msg_format("%^s бьется в агонии.", m_name);
+2290c2338
+< 			msg_format("%^s jerks limply.", m_name);
+---
+> 			msg_format("%^s слабо дергается.", m_name);
+2297c2345
+< 			msg_format("%^s shrugs off the attack.", m_name);
+---
+> 			msg_format("%^s не замечает атаки.", m_name);
+2299c2347
+< 			msg_format("%^s snarls with pain.", m_name);
+---
+> 			msg_format("%^s рычит от боли.", m_name);
+2301c2349
+< 			msg_format("%^s yelps in pain.", m_name);
+---
+> 			msg_format("%^s лает от боли.", m_name);
+2303c2351
+< 			msg_format("%^s howls in pain.", m_name);
+---
+> 			msg_format("%^s воет от боли.", m_name);
+2305c2353
+< 			msg_format("%^s howls in agony.", m_name);
+---
+> 			msg_format("%^s воет в агонии.", m_name);
+2307c2355
+< 			msg_format("%^s writhes in agony.", m_name);
+---
+> 			msg_format("%^s бьется в агонии.", m_name);
+2309c2357
+< 			msg_format("%^s yelps feebly.", m_name);
+---
+> 			msg_format("%^s слабо скулит.", m_name);
+2316c2364
+< 			msg_format("%^s ignores the attack.", m_name);
+---
+> 			msg_format("%^s игнорирует атаку.", m_name);
+2318c2366
+< 			msg_format("%^s grunts with pain.", m_name);
+---
+> 			msg_format("%^s пыхтит от боли.", m_name);
+2320c2368
+< 			msg_format("%^s squeals in pain.", m_name);
+---
+> 			msg_format("%^s шипит от боли.", m_name);
+2322c2370
+< 			msg_format("%^s shrieks in pain.", m_name);
+---
+> 			msg_format("%^s вопит от боли.", m_name);
+2324c2372
+< 			msg_format("%^s shrieks in agony.", m_name);
+---
+> 			msg_format("%^s вопит в агонии.", m_name);
+2326c2374
+< 			msg_format("%^s writhes in agony.", m_name);
+---
+> 			msg_format("%^s бьется в агонии.", m_name);
+2328c2376
+< 			msg_format("%^s cries out feebly.", m_name);
+---
+> 			msg_format("%^s слабо кричит.", m_name);
+2335c2383
+< 			msg_format("%^s shrugs off the attack.", m_name);
+---
+> 			msg_format("%^s не замечает атаки.", m_name);
+2337c2385
+< 			msg_format("%^s grunts with pain.", m_name);
+---
+> 			msg_format("%^s пыхтит от боли.", m_name);
+2339c2387
+< 			msg_format("%^s cries out in pain.", m_name);
+---
+> 			msg_format("%^s кричит от боли.", m_name);
+2341c2389
+< 			msg_format("%^s screams in pain.", m_name);
+---
+> 			msg_format("%^s вопит от боли.", m_name);
+2343c2391
+< 			msg_format("%^s screams in agony.", m_name);
+---
+> 			msg_format("%^s вопит в агонии.", m_name);
+2345c2393
+< 			msg_format("%^s writhes in agony.", m_name);
+---
+> 			msg_format("%^s бьется в агонии.", m_name);
+2347c2395
+< 			msg_format("%^s cries out feebly.", m_name);
+---
+> 			msg_format("%^s слабо кричит.", m_name);

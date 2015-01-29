@@ -1,0 +1,223 @@
+129,130c129,130
+< 	put_str("Name", y, x + 5);
+< 	put_str("Lv Mana Fail Info", y, x + 35);
+---
+> 	put_str("Название", y, x + 5);
+> 	put_str("Ур Мана Сбой Инфо", y, x + 35);
+144c144
+< 			strnfmt(out_val, sizeof(out_val), "  %c) %-30s", I2A(i), "(illegible)");
+---
+> 			strnfmt(out_val, sizeof(out_val), "  %c) %-30s", I2A(i), "(нельзя)");
+158c158
+< 			comment = " forgotten";
+---
+> 			comment = " забыто";
+165c165
+< 				comment = " unknown";
+---
+> 				comment = " неизвестно";
+170c170
+< 				comment = " difficult";
+---
+> 				comment = " сложно";
+176c176
+< 			comment = " untried";
+---
+> 			comment = " не испытано";
+293,294d292
+< 	cptr p = ((cp_ptr->spell_book == TV_MAGIC_BOOK) ? "spell" : "prayer");
+< 
+347,348c345,348
+< 	strnfmt(out_val, 78, "(%^ss %c-%c, *=List, ESC=exit) %^s which %s? ",
+< 	        p, I2A(0), I2A(num - 1), prompt, p);
+---
+> 	strnfmt(out_val, 78, (cp_ptr->spell_book == TV_MAGIC_BOOK) ?
+> 		"(Заклинания %c-%c, *=список, ESC=выход) %s какое заклинание? " :
+> 		"(Молитвы %c-%c, *=список, ESC=выход) %s какую молитву? ",
+> 		I2A(0), I2A(num-1), prompt);
+385c385
+< 		verify = (isupper((unsigned char)choice) ? TRUE : FALSE);
+---
+> 		verify = (a_isupper((unsigned char)choice) ? TRUE : FALSE);
+388c388
+< 		choice = tolower((unsigned char)choice);
+---
+> 		choice = a_tolower((unsigned char)choice);
+391c391
+< 		i = (islower((unsigned char)choice) ? A2I(choice) : -1);
+---
+> 		i = (a_islower((unsigned char)choice) ? A2I(choice) : -1);
+396c396
+< 			bell("Illegal spell choice!");
+---
+> 			bell("Неправильное заклинание!");
+406,407c406,410
+< 			bell("Illegal spell choice!");
+< 			msg_format("You may not %s that %s.", prompt, p);
+---
+> 			bell("Неправильное заклинание!");
+> 			
+> 			msg_format((cp_ptr->spell_book == TV_MAGIC_BOOK) ?
+> 				"Вы не можете колдовать это заклинание." :
+> 				"Вы не можете читать эту молитву.");
+420c423
+< 			strnfmt(tmp_val, 78, "%^s %s (%d mana, %d%% fail)? ",
+---
+> 			strnfmt(tmp_val, 78, "%^s %s (%d мана, %d%% сбой)? ",
+487c490
+< 	put_str("(Browsing) Command: ", 0, 0);
+---
+> 	put_str("(Просмотр) Команда: ", 0, 0);
+525c528
+< 		msg_print("You cannot read books!");
+---
+> 		msg_print("Вы не умеете читать!");
+551,552c554,555
+< 	q = "Browse which book? ";
+< 	s = "You have no books that you can read.";
+---
+> 	q = "Просмотреть какую книгу? ";
+> 	s = "У вас нет подходящих книг.";
+583,584d585
+< 	cptr p = ((cp_ptr->spell_book == TV_MAGIC_BOOK) ? "spell" : "prayer");
+< 
+592c593
+< 		msg_print("You cannot read books!");
+---
+> 		msg_print("Вы не умеете читать!");
+598c599
+< 		msg_print("You cannot see!");
+---
+> 		msg_print("Вы ничего не видите!");
+604c605
+< 		msg_print("You are too confused!");
+---
+> 		msg_print("Вы контужены!");
+610c611,612
+< 		msg_format("You cannot learn any new %ss!", p);
+---
+> 		msg_format("Вы не можете учить новые %s!",
+> 			(cp_ptr->spell_book == TV_MAGIC_BOOK) ? "заклинания" : "молитвы");
+619,620c621,622
+< 	q = "Study which book? ";
+< 	s = "You have no books that you can read.";
+---
+> 	q = "Учить из какой книги? ";
+> 	s = "У вас нет подходящих книг.";
+647c649
+< 		spell = get_spell(o_ptr, "study", FALSE);
+---
+> 		spell = get_spell(o_ptr, "Учить", FALSE);
+684c686,687
+< 		msg_format("You cannot learn any %ss in that book.", p);
+---
+> 		msg_format("Вы не можете учить %s из этой книги.", (cp_ptr->spell_book == TV_MAGIC_BOOK) ?
+> 			"заклинания" : "молитвы");
+708,709c711,713
+< 	message_format(MSG_STUDY, 0, "You have learned the %s of %s.",
+< 	           p, get_spell_name(cp_ptr->spell_book, spell));
+---
+> 	message_format(MSG_STUDY, 0, "Вы выучили %s - %s.",
+> 	           (cp_ptr->spell_book == TV_MAGIC_BOOK) ? "заклинание" : "молитву",
+> 	           get_spell_name(cp_ptr->spell_book, spell));
+718,720c722,725
+< 		msg_format("You can learn %d more %s%s.",
+< 		           p_ptr->new_spells, p,
+< 		           (p_ptr->new_spells != 1) ? "s" : "");
+---
+> 		msg_format("Вы можете выучить еще %d %s.",
+> 		           p_ptr->new_spells,
+> 		           (cp_ptr->spell_book == TV_MAGIC_BOOK) ? ((p_ptr->new_spells != 1) ? "заклинаний" : "заклинание") :
+> 		           					   ((p_ptr->new_spells != 1) ? "молитв" : "молитву"));
+750c755
+< 		msg_print("You cannot cast spells!");
+---
+> 		msg_print("Вы не умеете колдовать!");
+757c762
+< 		msg_print("You cannot see!");
+---
+> 		msg_print("Вы ничего не видите!");
+764c769
+< 		msg_print("You are too confused!");
+---
+> 		msg_print("Вы контужены!");
+773,774c778,779
+< 	q = "Use which book? ";
+< 	s = "You have no spell books!";
+---
+> 	q = "Использовать какую книгу? ";
+> 	s = "У вас нет подходящих книг!";
+798c803
+< 	spell = get_spell(o_ptr, "cast", TRUE);
+---
+> 	spell = get_spell(o_ptr, "Колдовать", TRUE);
+802c807
+< 		if (spell == -2) msg_print("You don't know any spells in that book.");
+---
+> 		if (spell == -2) msg_print("Вы не знаете ни одного заклинания из этой книги.");
+815c820
+< 		msg_print("You do not have enough mana to cast this spell.");
+---
+> 		msg_print("У вас не хватает маны для этого заклинания.");
+821c826
+< 		if (!get_check("Attempt it anyway? ")) return;
+---
+> 		if (!get_check("Все равно попытаться? ")) return;
+832c837
+< 		msg_print("You failed to get the spell off!");
+---
+> 		msg_print("У вас не получилось заклинание!");
+877c882
+< 		msg_print("You faint from the effort!");
+---
+> 		msg_print("Вы слабеете от усилий!");
+888c893
+< 			msg_print("You have damaged your health!");
+---
+> 			msg_print("Вы повредили свое здоровье!");
+920c925
+< 		msg_print("Pray hard enough and your prayers may be answered.");
+---
+> 		msg_print("Молитесь!");
+927c932
+< 		msg_print("You cannot see!");
+---
+> 		msg_print("Вы ничего не видите!");
+934c939
+< 		msg_print("You are too confused!");
+---
+> 		msg_print("Вы контужены!");
+943,944c948,949
+< 	q = "Use which book? ";
+< 	s = "You have no prayer books!";
+---
+> 	q = "Использовать какую книгу? ";
+> 	s = "У вас нет подходящих книг!";
+967c972
+< 	spell = get_spell(o_ptr, "recite", TRUE);
+---
+> 	spell = get_spell(o_ptr, "Прочитать", TRUE);
+971c976
+< 		if (spell == -2) msg_print("You don't know any prayers in that book.");
+---
+> 		if (spell == -2) msg_print("Вы не знаете ни одной молитвы из этой книги.");
+984c989
+< 		msg_print("You do not have enough mana to recite this prayer.");
+---
+> 		msg_print("У вас не хватает маны для этой молитвы.");
+990c995
+< 		if (!get_check("Attempt it anyway? ")) return;
+---
+> 		if (!get_check("Все равно попытаться? ")) return;
+1001c1006
+< 		msg_print("You failed to concentrate hard enough!");
+---
+> 		msg_print("У вас не получилось сконцентрироваться!");
+1046c1051
+< 		msg_print("You faint from the effort!");
+---
+> 		msg_print("Вы слабеете от усилий!");
+1057c1062
+< 			msg_print("You have damaged your health!");
+---
+> 			msg_print("Вы повредили свое здоровье!");

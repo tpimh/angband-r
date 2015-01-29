@@ -1,0 +1,568 @@
+628d627
+< 
+693c692
+< void object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int mode)
+---
+> int object_desc(char *buf, size_t max, const object_type *o_ptr, int pref, int mode, int pad)
+729a729,730
+> 	
+> 	int chsl = 0, rod = ROD_M;
+833c834
+< 			basenm = (flavor ? "& # Amulet~" : "& Amulet~");
+---
+> 			basenm = (flavor ? "& # амулет$N2A" : "& амулет$N2A");
+847c848
+< 			basenm = (flavor ? "& # Ring~" : "& Ring~");
+---
+> 			basenm = (flavor ? "& # кол\\ь|ец*о$N2D" : "& кол\\ь|ец*о$N2D");
+858c859
+< 			basenm = (flavor ? "& # Staff~" : "& Staff~");
+---
+> 			basenm = (flavor ? "& # посох$N2A" : "& посох$N2A");
+869c870
+< 			basenm = (flavor ? "& # Wand~" : "& Wand~");
+---
+> 			basenm = (flavor ? "& # палоч|ек$N1M" : "& палоч|ек$N1M");
+880c881
+< 			basenm = (flavor ? "& # Rod~" : "& Rod~");
+---
+> 			basenm = (flavor ? "& # жезл$N2A" : "& жезл$N2A");
+891c892
+< 			basenm = (flavor ? "& Scroll~ titled \"#\"" : "& Scroll~");
+---
+> 			basenm = (flavor ? "& свит*ок$N2A \"#\"" : "& свит*ок$N2A");
+902c903
+< 			basenm = (flavor ? "& # Potion~" : "& Potion~");
+---
+> 			basenm = (flavor ? "& # напит*ок$N2A" : "& напит*ок$N2A");
+916c917
+< 			basenm = (flavor ? "& # Mushroom~" : "& Mushroom~");
+---
+> 			basenm = (flavor ? "& # гриб$N2A" : "& гриб$N2A");
+925c926
+< 			basenm = "& Book~ of Magic Spells #";
+---
+> 			basenm = "& книг$N1M заклинаний #";
+933c934
+< 			basenm = "& Holy Book~ of Prayers #";
+---
+> 			basenm = "& молитвенник$N2A #";
+941c942
+< 			return;
+---
+> 			return rod;
+947,948c948,949
+< 			my_strcpy(buf, "(nothing)", max);
+< 			return;
+---
+> 			my_strcpy(buf, "(пусто)", max);
+> 			return ROD_N;
+977c978,980
+< 			object_desc_str_macro(t, "no more ");
+---
+> 			object_desc_str_macro(t, "нет больше ");
+> 			chsl = 1;
+> 			pad = PAD_RODIT;
+982a986,987
+> 			int des = o_ptr->number / 10, ed = o_ptr->number % 10, oldpad = pad;
+> 			
+984a990,1002
+> 			
+> 			pad = PAD_RODIT;
+> 			chsl = 1;
+> 			
+> 			if (ed == 1 && des % 10 != 1)
+> 			{
+> 				chsl = 0;
+> 				pad = oldpad;
+> 			}
+> 			if (ed >= 2 && ed <= 4 && des % 10 != 1)
+> 			{
+> 				chsl = 0;
+> 			}
+988,1003c1006,1021
+< 		else if (known && artifact_p(o_ptr))
+< 		{
+< 			object_desc_str_macro(t, "The ");
+< 		}
+< 
+< 		/* Hack -- A single one, and next character will be a vowel */
+< 		else if ((*s == '#') ? is_a_vowel(modstr[0]) : is_a_vowel(*s))
+< 		{
+< 			object_desc_str_macro(t, "an ");
+< 		}
+< 
+< 		/* A single one, and next character will be a non-vowel */
+< 		else
+< 		{
+< 			object_desc_str_macro(t, "a ");
+< 		}
+---
+> //		else if (known && artifact_p(o_ptr))
+> //		{
+> //			object_desc_str_macro(t, "The ");
+> //		}
+> 
+> //		/* Hack -- A single one, and next character will be a vowel */
+> //		else if ((*s == '#') ? is_a_vowel(modstr[0]) : is_a_vowel(*s))
+> //		{
+> //			object_desc_str_macro(t, "an ");
+> //		}
+> 
+> //		/* A single one, and next character will be a non-vowel */
+> //		else
+> //		{
+> //			object_desc_str_macro(t, "a ");
+> //		}
+1018c1036,1038
+< 			object_desc_str_macro(t, "no more ");
+---
+> 			object_desc_str_macro(t, "нет больше ");
+> 			chsl = 1;
+> 			pad = PAD_RODIT;
+1023a1044,1045
+> 			int des = o_ptr->number / 10, ed = o_ptr->number % 10, oldpad = pad;
+> 			
+1025a1048,1060
+> 			
+> 			pad = PAD_RODIT;
+> 			chsl = 1;
+> 			
+> 			if (ed == 1 && des % 10 != 1)
+> 			{
+> 				chsl = 0;
+> 				pad = oldpad;
+> 			}
+> 			if (ed >= 2 && ed <= 4 && des % 10 != 1)
+> 			{
+> 				chsl = 0;
+> 			}
+1028,1032c1063,1067
+< 		/* Hack -- The only one of its kind */
+< 		else if (known && artifact_p(o_ptr))
+< 		{
+< 			object_desc_str_macro(t, "The ");
+< 		}
+---
+> //		/* Hack -- The only one of its kind */
+> //		else if (known && artifact_p(o_ptr))
+> //		{
+> //			object_desc_str_macro(t, "The ");
+> //		}
+1048,1063d1082
+< 		/* Pluralizer */
+< 		if (*s == '~')
+< 		{
+< 			/* Add a plural if needed */
+< 			if ((o_ptr->number != 1) && !(known && artifact_p(o_ptr)))
+< 			{
+< 				char k = t[-1];
+< 
+< 				/* Hack -- "Cutlass-es" and "Torch-es" */
+< 				if ((k == 's') || (k == 'h')) *t++ = 'e';
+< 
+< 				/* Add an 's' */
+< 				*t++ = 's';
+< 			}
+< 		}
+< 
+1065c1084
+< 		else if (*s == '#')
+---
+> 		if (*s == '#')
+1083c1102
+< 		object_desc_str_macro(t, " of ");
+---
+> 		object_desc_str_macro(t, " ");
+1129c1148
+< 			tail = " (empty)";
+---
+> 			tail = " (пустой)";
+1137c1156
+< 				tail = " (disarmed)";
+---
+> 				tail = " (обезврежен)";
+1141c1160
+< 				tail = " (unlocked)";
+---
+> 				tail = " (взломан)";
+1153c1172
+< 					tail = " (Locked)";
+---
+> 					tail = " (запертый)";
+1158c1177
+< 					tail = " (Poison Needle)";
+---
+> 					tail = " (ядовитый шип)";
+1163c1182
+< 					tail = " (Poison Needle)";
+---
+> 					tail = " (ядовитый шип)";
+1168c1187
+< 					tail = " (Gas Trap)";
+---
+> 					tail = " (газовая ловушка)";
+1173c1192
+< 					tail = " (Gas Trap)";
+---
+> 					tail = " (газовая ловушка)";
+1178c1197
+< 					tail = " (Explosion Device)";
+---
+> 					tail = " (взрывчатое устройство)";
+1183c1202
+< 					tail = " (Summoning Runes)";
+---
+> 					tail = " (руны вызова)";
+1188c1207
+< 					tail = " (Multiple Traps)";
+---
+> 					tail = " (несколько ловушек)";
+1332c1351
+< 		object_desc_str_macro(t, " (with ");
+---
+> 		object_desc_str_macro(t, " (с ");
+1334c1353
+< 		object_desc_str_macro(t, " turns of light)");
+---
+> 		object_desc_str_macro(t, " ходами света)");
+1361c1380
+< 			tail = " to stealth";
+---
+> 			tail = " к скрытности";
+1368c1387
+< 			tail = " to searching";
+---
+> 			tail = " к поиску";
+1375c1394
+< 			tail = " to infravision";
+---
+> 			tail = " к инфразрению";
+1384c1403
+< 			tail = " to digging";
+---
+> 			tail = " к копанию";
+1393c1412
+< 			tail = " to speed";
+---
+> 			tail = " к скорости";
+1400,1403c1419
+< 			tail = " attack";
+< 
+< 			/* Add "attacks" */
+< 			if (ABS(o_ptr->pval) != 1) tail2 = "s";
+---
+> 			tail = " атакам";
+1439c1455
+< 		object_desc_str_macro(t, " charge");
+---
+> 		object_desc_str_macro(t, " заряд");
+1442c1458
+< 			object_desc_chr_macro(t, 's');
+---
+> 			object_desc_str_macro(t, "ов");
+1471c1487
+< 				object_desc_str_macro(t, " charging)");
+---
+> 				object_desc_str_macro(t, " зарядка)");
+1476c1492
+< 				object_desc_str_macro(t, " (charging)");
+---
+> 				object_desc_str_macro(t, " (зарядка)");
+1485c1501
+< 		object_desc_str_macro(t, " (charging)");
+---
+> 		object_desc_str_macro(t, " (зарядка)");
+1515c1531
+< 		v = "cursed";
+---
+> 		v = "проклятый";
+1521c1537
+< 		v = "empty";
+---
+> 		v = "пусто";
+1527c1543
+< 		v = "tried";
+---
+> 		v = "испробовано";
+1535c1551
+< 		object_desc_str_macro(q, "% off");
+---
+> 		object_desc_str_macro(q, "% скидка");
+1587a1604,1630
+> 	
+> 	/* Мега-Хак: для артефактов убеждаемся, что все слова с большой буквы;
+> 	 * разворачиваем морфологию
+> 	 */
+> 	{
+> 		int i;
+> 		char tmpbuf[250];
+> 		rod = expand_rus_codes(tmpbuf, buf, pad, chsl, o_ptr->number);
+> 		strcpy(buf, tmpbuf);
+> 		
+> 		if (artifact_p(o_ptr) && known)
+> 		{
+> 			for (i = 0; i < strlen(buf); i++)
+> 			{
+> 				if (buf[i] == '(' || buf[i] == '{')
+> 					break;
+> 				if (!i || buf[i-1] == ' ')
+> 					buf[i] = a_toupper(buf[i]);
+> 			}
+> 		}
+> 		
+> 		/* Хак - для и.п. перекидывает первую букву в заглавную */
+> 		if (pad == PAD_IMEN)
+> 			buf[0] = a_toupper(buf[0]);
+> 	}
+> 	
+> 	return (chsl ? ROD_X : rod);
+1606c1649
+< 	object_desc(buf, max, i_ptr, pref, mode);
+---
+> 	object_desc(buf, max, i_ptr, pref, mode, PAD_IMEN);
+1657c1700
+< 	i = (islower((unsigned char)c) ? A2I(c) : -1);
+---
+> 	i = (a_islower((unsigned char)c) ? A2I(c) : -1);
+1680c1723
+< 	i = (islower((unsigned char)c) ? A2I(c) : -1) + INVEN_WIELD;
+---
+> 	i = (a_islower((unsigned char)c) ? A2I(c) : -1) + INVEN_WIELD;
+1783,1795c1826,1838
+< 		case INVEN_WIELD: p = "Wielding"; break;
+< 		case INVEN_BOW:   p = "Shooting"; break;
+< 		case INVEN_LEFT:  p = "On left hand"; break;
+< 		case INVEN_RIGHT: p = "On right hand"; break;
+< 		case INVEN_NECK:  p = "Around neck"; break;
+< 		case INVEN_LITE:  p = "Light source"; break;
+< 		case INVEN_BODY:  p = "On body"; break;
+< 		case INVEN_OUTER: p = "About body"; break;
+< 		case INVEN_ARM:   p = "On arm"; break;
+< 		case INVEN_HEAD:  p = "On head"; break;
+< 		case INVEN_HANDS: p = "On hands"; break;
+< 		case INVEN_FEET:  p = "On feet"; break;
+< 		default:          p = "In pack"; break;
+---
+> 		case INVEN_WIELD: p = "В руках"; break;
+> 		case INVEN_BOW:   p = "Стрельба"; break;
+> 		case INVEN_LEFT:  p = "На левой руке"; break;
+> 		case INVEN_RIGHT: p = "На прав. руке"; break;
+> 		case INVEN_NECK:  p = "На шее"; break;
+> 		case INVEN_LITE:  p = "Свет"; break;
+> 		case INVEN_BODY:  p = "На теле"; break;
+> 		case INVEN_OUTER: p = "Накинуто"; break;
+> 		case INVEN_ARM:   p = "Щит"; break;
+> 		case INVEN_HEAD:  p = "На голове"; break;
+> 		case INVEN_HANDS: p = "На руках"; break;
+> 		case INVEN_FEET:  p = "На ногах"; break;
+> 		default:          p = "В рюкзаке"; break;
+1805c1848
+< 			p = "Just lifting";
+---
+> 			p = "Едва подняли";
+1816c1859
+< 			p = "Just holding";
+---
+> 			p = "Едва подняли";
+1835,1847c1878,1890
+< 		case INVEN_WIELD: p = "attacking monsters with"; break;
+< 		case INVEN_BOW:   p = "shooting missiles with"; break;
+< 		case INVEN_LEFT:  p = "wearing on your left hand"; break;
+< 		case INVEN_RIGHT: p = "wearing on your right hand"; break;
+< 		case INVEN_NECK:  p = "wearing around your neck"; break;
+< 		case INVEN_LITE:  p = "using to light the way"; break;
+< 		case INVEN_BODY:  p = "wearing on your body"; break;
+< 		case INVEN_OUTER: p = "wearing on your back"; break;
+< 		case INVEN_ARM:   p = "wearing on your arm"; break;
+< 		case INVEN_HEAD:  p = "wearing on your head"; break;
+< 		case INVEN_HANDS: p = "wearing on your hands"; break;
+< 		case INVEN_FEET:  p = "wearing on your feet"; break;
+< 		default:          p = "carrying in your pack"; break;
+---
+> 		case INVEN_WIELD: p = "атакуете монстров с помощью:"; break;
+> 		case INVEN_BOW:   p = "стреляете с помощью:"; break;
+> 		case INVEN_LEFT:  p = "носите на левой руке:"; break;
+> 		case INVEN_RIGHT: p = "носите на правой руке:"; break;
+> 		case INVEN_NECK:  p = "носите на шее:"; break;
+> 		case INVEN_LITE:  p = "используете для освещения:"; break;
+> 		case INVEN_BODY:  p = "носите на теле:"; break;
+> 		case INVEN_OUTER: p = "носите на спине:"; break;
+> 		case INVEN_ARM:   p = "носите на руке:"; break;
+> 		case INVEN_HEAD:  p = "носите на голове:"; break;
+> 		case INVEN_HANDS: p = "носите на руках:"; break;
+> 		case INVEN_FEET:  p = "носите на ногах:"; break;
+> 		default:          p = "носите в рюкзаке:"; break;
+1857c1900
+< 			p = "just lifting";
+---
+> 			p = "едва смогли поднять";
+1868c1911
+< 			p = "just holding";
+---
+> 			p = "едва смогли поднять";
+2015c2058
+< 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+2033c2076
+< 			sprintf(tmp_val, "%3d.%1d lb", wgt / 10, wgt % 10);
+---
+> 			sprintf(tmp_val, "%3d.%1d фнт", wgt / 10, wgt % 10);
+2085c2128
+< 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+2111c2154
+< 			sprintf(tmp_val, "%3d.%1d lb", wgt / 10, wgt % 10);
+---
+> 			sprintf(tmp_val, "%3d.%1d фнт", wgt / 10, wgt % 10);
+2178c2221
+< 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+2233c2276
+< 			sprintf(tmp_val, "%3d.%1d lb", wgt / 10, wgt % 10);
+---
+> 			sprintf(tmp_val, "%3d.%1d фнт", wgt / 10, wgt % 10);
+2283c2326
+< 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+2356c2399
+< 			sprintf(tmp_val, "%3d.%d lb", wgt / 10, wgt % 10);
+---
+> 			sprintf(tmp_val, "%3d.%d фнт", wgt / 10, wgt % 10);
+2403c2446
+< 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+2458c2501
+< 			sprintf(tmp_val, "%3d.%1d lb", wgt / 10, wgt % 10);
+---
+> 			sprintf(tmp_val, "%3d.%1d фнт", wgt / 10, wgt % 10);
+2534c2577
+< 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+2580c2623
+< 			if (!verify_item("Really try", item)) return (FALSE);
+---
+> 			if (!verify_item("Действительно", item)) return (FALSE);
+2964c3007
+< 			sprintf(out_val, "Inven:");
+---
+> 			sprintf(out_val, "Инвен:");
+2978c3021
+< 			if (!p_ptr->command_see) strcat(out_val, " * to see,");
+---
+> 			if (!p_ptr->command_see) strcat(out_val, " * для просм.,");
+2981c3024
+< 			if (use_equip) strcat(out_val, " / for Equip,");
+---
+> 			if (use_equip) strcat(out_val, " / для экипировки,");
+2984c3027
+< 			if (allow_floor) strcat(out_val, " - for floor,");
+---
+> 			if (allow_floor) strcat(out_val, " - для пола,");
+2994c3037
+< 			sprintf(out_val, "Equip:");
+---
+> 			sprintf(out_val, "Экип.:");
+3008c3051
+< 			if (!p_ptr->command_see) strcat(out_val, " * to see,");
+---
+> 			if (!p_ptr->command_see) strcat(out_val, " * для просм.,");
+3011c3054
+< 			if (use_inven) strcat(out_val, " / for Inven,");
+---
+> 			if (use_inven) strcat(out_val, " / для инвен.,");
+3014c3057
+< 			if (allow_floor) strcat(out_val, " - for floor,");
+---
+> 			if (allow_floor) strcat(out_val, " - для пола,");
+3024c3067
+< 			sprintf(out_val, "Floor:");
+---
+> 			sprintf(out_val, "Пол:");
+3037c3080
+< 			if (!p_ptr->command_see) strcat(out_val, " * to see,");
+---
+> 			if (!p_ptr->command_see) strcat(out_val, " * для просм.,");
+3040c3083
+< 			if (use_inven) strcat(out_val, " / for Inven,");
+---
+> 			if (use_inven) strcat(out_val, " / для инвен.,");
+3043c3086
+< 			else if (use_equip) strcat(out_val, " / for Equip,");
+---
+> 			else if (use_equip) strcat(out_val, " / для экипировки,");
+3112c3155
+< 					bell("Cannot switch item selector!");
+---
+> 					bell("Нельзя выбрать это!");
+3135c3178
+< 					bell("Cannot select floor!");
+---
+> 					bell("Нельзя выбрать на полу!");
+3215c3258
+< 					bell("Illegal object choice (tag)!");
+---
+> 					bell("Неправильный выбор предмета!");
+3222c3265
+< 					bell("Illegal object choice (tag)!");
+---
+> 					bell("Неправильный выбор предмета!");
+3229c3272
+< 					bell("Illegal object choice (tag)!");
+---
+> 					bell("Неправильный выбор предмета!");
+3255c3298
+< 						bell("Illegal object choice (default)!");
+---
+> 						bell("Неправильный выбор предмета!");
+3267c3310
+< 						bell("Illegal object choice (default)!");
+---
+> 						bell("Неправильный выбор предмета!");
+3279c3322
+< 						bell("Illegal object choice (default)!");
+---
+> 						bell("Неправильный выбор предмета!");
+3289c3332
+< 					bell("Illegal object choice (default)!");
+---
+> 					bell("Неправильный выбор предмета!");
+3312c3355
+< 				verify = (isupper((unsigned char)which) ? TRUE : FALSE);
+---
+> 				verify = (a_isupper((unsigned char)which) ? TRUE : FALSE);
+3315c3358
+< 				which = tolower((unsigned char)which);
+---
+> 				which = a_tolower((unsigned char)which);
+3324c3367
+< 						bell("Illegal object choice (inven)!");
+---
+> 						bell("Неправильный выбор предмета!");
+3336c3379
+< 						bell("Illegal object choice (equip)!");
+---
+> 						bell("Неправильный выбор предмета!");
+3344c3387,3388
+< 					k = (islower((unsigned char)which) ? A2I(which) : -1);
+---
+> 					k = (a_islower((unsigned char)which) ? A2I(which) : -1);
+> 
+3348c3392
+< 						bell("Illegal object choice (floor)!");
+---
+> 						bell("Неправильный выбор предмета!");
+3359c3403
+< 					bell("Illegal object choice (normal)!");
+---
+> 					bell("Неправильный выбор предмета!");
+3364c3408
+< 				if (verify && !verify_item("Try", k))
+---
+> 				if (verify && !verify_item("Использовать", k))

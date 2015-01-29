@@ -1,0 +1,70 @@
+78,79c78,79
+< 	q = "Eat which item? ";
+< 	s = "You have nothing to eat.";
+---
+> 	q = "Съесть какой предмет? ";
+> 	s = "У вас нет ничего съедобного.";
+163,164c163,164
+< 	q = "Quaff which potion? ";
+< 	s = "You have no potions to quaff.";
+---
+> 	q = "Выпить какой напиток? ";
+> 	s = "Вам нечего выпивать.";
+250c250
+< 		msg_print("You can't see anything.");
+---
+> 		msg_print("Вы ничего не видите.");
+255c255
+< 		msg_print("You have no light to read by.");
+---
+> 		msg_print("У вас нет света для чтения.");
+260c260
+< 		msg_print("You are too confused!");
+---
+> 		msg_print("Вы контужены!");
+269,270c269,270
+< 	q = "Read which scroll? ";
+< 	s = "You have no scrolls to read.";
+---
+> 	q = "Прочитать какой свиток? ";
+> 	s = "У вас нет свитков для чтения.";
+366,367c366,367
+< 	q = "Use which staff? ";
+< 	s = "You have no staff to use.";
+---
+> 	q = "Использовать какой посох? ";
+> 	s = "У вас нет посохов для использования.";
+410c410
+< 		msg_print("You failed to use the staff properly.");
+---
+> 		msg_print("Вам не удалось использовать посох.");
+418c418
+< 		msg_print("The staff has no charges left.");
+---
+> 		msg_print("В посохе кончились заряды.");
+507,508c507,508
+< 	q = "Aim which wand? ";
+< 	s = "You have no wand to aim.";
+---
+> 	q = "Направить какую палочку? ";
+> 	s = "У вас нет палочек.";
+572c572
+<  * Hack -- rods of perception can be "cancelled"
+---
+>  * Hack -- rods of perception/banishment can be "cancelled"
+587,588c587,588
+< 	q = "Zap which rod? ";
+< 	s = "You have no rod to zap.";
+---
+> 	q = "Использовать какой жезл? ";
+> 	s = "У вас нет жезлов.";
+670,671c670,671
+< 	q = "Activate which item? ";
+< 	s = "You have nothing to activate.";
+---
+> 	q = "Активировать какой предмет? ";
+> 	s = "Вам нечего активировать.";
+715c715
+< 		msg_print("You failed to activate it properly.");
+---
+> 		msg_print("У вас не получилось активировать предмет.");

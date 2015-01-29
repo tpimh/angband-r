@@ -1,0 +1,496 @@
+35c35
+< 			msg_print("You are blind!");
+---
+> 			msg_print("Вы ослепли!");
+45c45
+< 			msg_print("You can see again.");
+---
+> 			msg_print("Вы снова видите.");
+94c94
+< 			msg_print("You are confused!");
+---
+> 			msg_print("Вы контужены!");
+104c104
+< 			msg_print("You feel less confused now.");
+---
+> 			msg_print("Вы больше не контужены.");
+144c144
+< 			msg_print("You are poisoned!");
+---
+> 			msg_print("Вы отравлены!");
+154c154
+< 			msg_print("You are no longer poisoned.");
+---
+> 			msg_print("Вы больше не отравлены.");
+194c194
+< 			msg_print("You are terrified!");
+---
+> 			msg_print("Вы напуганы!");
+204c204
+< 			msg_print("You feel bolder now.");
+---
+> 			msg_print("Вы чувствуете себя храбрее.");
+244c244
+< 			msg_print("You are paralyzed!");
+---
+> 			msg_print("Вы парализованы!");
+254c254
+< 			msg_print("You can move again.");
+---
+> 			msg_print("Вы снова можете двигаться.");
+297c297
+< 			msg_print("You feel drugged!");
+---
+> 			msg_print("Вы галлюцинируете!");
+307c307
+< 			msg_print("You can see clearly again.");
+---
+> 			msg_print("Вы снова можете ясно видеть.");
+350c350
+< 			msg_print("You feel yourself moving faster!");
+---
+> 			msg_print("Вы начинаете двигаться быстрее!");
+360c360
+< 			msg_print("You feel yourself slow down.");
+---
+> 			msg_print("Вы снова замедлились.");
+400c400
+< 			msg_print("You feel yourself moving slower!");
+---
+> 			msg_print("Вы начинаете двигаться медленнее!");
+410c410
+< 			msg_print("You feel yourself speed up.");
+---
+> 			msg_print("Вы снова ускорились.");
+450c450
+< 			msg_print("A mystic shield forms around your body!");
+---
+> 			msg_print("Вокруг вас формируется волшебный щит!");
+460c460
+< 			msg_print("Your mystic shield crumbles away.");
+---
+> 			msg_print("Ваш волшебный щит исчезает.");
+501c501
+< 			msg_print("You feel righteous!");
+---
+> 			msg_print("Вы чувствуете себя правым!");
+511c511
+< 			msg_print("The prayer has expired.");
+---
+> 			msg_print("Действие молитвы закончилось.");
+551c551
+< 			msg_print("You feel like a hero!");
+---
+> 			msg_print("Вы чувствуете себя героем!");
+561c561
+< 			msg_print("The heroism wears off.");
+---
+> 			msg_print("Героизм кончился.");
+601c601
+< 			msg_print("You feel like a killing machine!");
+---
+> 			msg_print("Вы чувствуете себя машиной убийства!");
+611c611
+< 			msg_print("You feel less Berserk.");
+---
+> 			msg_print("Ярость проходит.");
+651c651
+< 			msg_print("You feel safe from evil!");
+---
+> 			msg_print("Вы чувствуете себя защищенным от зла!");
+661c661
+< 			msg_print("You no longer feel safe from evil.");
+---
+> 			msg_print("Вы больше не чувствуете себя защищенным от зла.");
+698c698
+< 			msg_print("You feel invulnerable!");
+---
+> 			msg_print("Вы чувствуете себя неуязвимым!");
+708c708
+< 			msg_print("You feel vulnerable once more.");
+---
+> 			msg_print("Вы снова уязвимы.");
+751c751
+< 			msg_print("Your eyes feel very sensitive!");
+---
+> 			msg_print("Ваши глаза становятся очень чувствительными!");
+761c761
+< 			msg_print("Your eyes feel less sensitive.");
+---
+> 			msg_print("Ваши глаза становятся менее чувствительными.");
+807c807
+< 			msg_print("Your eyes begin to tingle!");
+---
+> 			msg_print("Ваши глаза начинают светиться!");
+817c817
+< 			msg_print("Your eyes stop tingling.");
+---
+> 			msg_print("Ваши глаза прекращают светиться.");
+860c860
+< 			msg_print("You feel resistant to acid!");
+---
+> 			msg_print("Вы начинаете сопротивляться кислоте!");
+870c870
+< 			msg_print("You feel less resistant to acid.");
+---
+> 			msg_print("Вы прекращаете сопротивляться кислоте.");
+907c907
+< 			msg_print("You feel resistant to electricity!");
+---
+> 			msg_print("Вы начинаете сопротивляться молнии!");
+917c917
+< 			msg_print("You feel less resistant to electricity.");
+---
+> 			msg_print("Вы прекращаете сопротивляться молнии.");
+954c954
+< 			msg_print("You feel resistant to fire!");
+---
+> 			msg_print("Вы начинаете сопротивляться огню!");
+964c964
+< 			msg_print("You feel less resistant to fire.");
+---
+> 			msg_print("Вы прекращаете сопротивляться огню.");
+1001c1001
+< 			msg_print("You feel resistant to cold!");
+---
+> 			msg_print("Вы начинаете сопротивляться холоду!");
+1011c1011
+< 			msg_print("You feel less resistant to cold.");
+---
+> 			msg_print("Вы прекращаете сопротивляться холоду.");
+1048c1048
+< 			msg_print("You feel resistant to poison!");
+---
+> 			msg_print("Вы начинаете сопротивляться яду!");
+1058c1058
+< 			msg_print("You feel less resistant to poison.");
+---
+> 			msg_print("Вы прекращаете сопротивляться яду.");
+1151c1151
+< 				msg_print("You have been stunned.");
+---
+> 				msg_print("Вы оглушены.");
+1158c1158
+< 				msg_print("You have been heavily stunned.");
+---
+> 				msg_print("Вы сильно оглушены.");
+1165c1165
+< 				msg_print("You have been knocked out.");
+---
+> 				msg_print("Вы потеряли сознание.");
+1183c1183
+< 				msg_print("You are no longer stunned.");
+---
+> 				msg_print("Вы больше не оглушены.");
+1335c1335
+< 				msg_print("You have been given a graze.");
+---
+> 				msg_print("Вы получили царапину.");
+1342c1342
+< 				msg_print("You have been given a light cut.");
+---
+> 				msg_print("Вы получили легкое ранение.");
+1349c1349
+< 				msg_print("You have been given a bad cut.");
+---
+> 				msg_print("Вы получили среднее ранение.");
+1356c1356
+< 				msg_print("You have been given a nasty cut.");
+---
+> 				msg_print("Вы получили тяжелое ранение.");
+1363c1363
+< 				msg_print("You have been given a severe cut.");
+---
+> 				msg_print("Вы получили страшное ранение.");
+1370c1370
+< 				msg_print("You have been given a deep gash.");
+---
+> 				msg_print("Вы получили глубокие раны.");
+1377c1377
+< 				msg_print("You have been given a mortal wound.");
+---
+> 				msg_print("Вы получили смертельные раны.");
+1395c1395
+< 				msg_print("You are no longer bleeding.");
+---
+> 				msg_print("Вы больше не истекаете кровью.");
+1540c1540
+< 				msg_print("You are still weak.");
+---
+> 				msg_print("Вы все еще слабы.");
+1547c1547
+< 				msg_print("You are still hungry.");
+---
+> 				msg_print("Вы все еще голодны.");
+1554c1554
+< 				msg_print("You are no longer hungry.");
+---
+> 				msg_print("Вы больше не голодны.");
+1561c1561
+< 				msg_print("You are full!");
+---
+> 				msg_print("Вы наелись!");
+1568c1568
+< 				msg_print("You have gorged yourself!");
+---
+> 				msg_print("Вы объелись!");
+1586c1586
+< 				msg_print("You are getting faint from hunger!");
+---
+> 				msg_print("Вы начинаете падать от голода!");
+1593c1593
+< 				msg_print("You are getting weak from hunger!");
+---
+> 				msg_print("Вы ослабеваете от голода!");
+1600c1600
+< 				msg_print("You are getting hungry.");
+---
+> 				msg_print("Вы проголодались.");
+1607c1607
+< 				msg_print("You are no longer full.");
+---
+> 				msg_print("Вы больше не чувствуете себя сытым.");
+1614c1614
+< 				msg_print("You are no longer gorged.");
+---
+> 				msg_print("Лишняя еда вышла.");
+1711c1711
+< 		message_format(MSG_LEVEL, p_ptr->lev, "Welcome to level %d.", p_ptr->lev);
+---
+> 		message_format(MSG_LEVEL, p_ptr->lev, "Добро пожаловать на уровень %d.", p_ptr->lev);
+1801,1805c1801,1805
+< 		if (strstr(name, " copper ")) return (3);
+< 		if (strstr(name, " silver ")) return (6);
+< 		if (strstr(name, " gold ")) return (11);
+< 		if (strstr(name, " mithril ")) return (17);
+< 		if (strstr(name, " adamantite ")) return (18);
+---
+> 		if (strstr(name, " медных ")) return (3);
+> 		if (strstr(name, " серебряных ")) return (6);
+> 		if (strstr(name, " золотых ")) return (11);
+> 		if (strstr(name, " мифриловых ")) return (17);
+> 		if (strstr(name, " адамантовых ")) return (18);
+1808,1812c1808,1812
+< 		if (strstr(name, "Copper ")) return (3);
+< 		if (strstr(name, "Silver ")) return (6);
+< 		if (strstr(name, "Gold ")) return (11);
+< 		if (strstr(name, "Mithril ")) return (17);
+< 		if (strstr(name, "Adamantite ")) return (18);
+---
+> 		if (strstr(name, "медн")) return (3);
+> 		if (strstr(name, "серебрян")) return (6);
+> 		if (strstr(name, "золот")) return (11);
+> 		if (strstr(name, "мифрилов")) return (17);
+> 		if (strstr(name, "адамантов")) return (18);
+1844c1844
+< 	msg_print("A magical staircase appears...");
+---
+> 	msg_print("Появляется волшебная лестница...");
+2065,2067c2065,2067
+< 		msg_print("*** CONGRATULATIONS ***");
+< 		msg_print("You have won the game!");
+< 		msg_print("You may retire (commit suicide) when you are ready.");
+---
+> 		msg_print("*** ПОЗДРАВЛЯЕМ ***");
+> 		msg_print("Вы выиграли игру!");
+> 		msg_print("Вы можете прекратить (убить себя), когда будете готовы.");
+2124c2124
+< 		monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 		monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+2135c2135,2136
+< 			message_format(MSG_KILL, m_ptr->r_idx, "You have killed %s.", m_name);
+---
+> 			monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
+> 			message_format(MSG_KILL, m_ptr->r_idx, "Вы убили %s.", m_name);
+2144c2145,2146
+< 			message_format(MSG_KILL, m_ptr->r_idx, "You have destroyed %s.", m_name);
+---
+> 			monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
+> 			message_format(MSG_KILL, m_ptr->r_idx, "Вы уничтожили %s.", m_name);
+2150c2152,2153
+< 			message_format(MSG_KILL, m_ptr->r_idx, "You have slain %s.", m_name);
+---
+> 			monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
+> 			message_format(MSG_KILL, m_ptr->r_idx, "Вы убили %s.", m_name);
+2424a2428
+> 	char *okn = (r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о");
+2437c2441
+< 		my_strcpy(buf, (living ? "unhurt" : "undamaged"), max);
+---
+> 		my_strcpy(buf, format((living ? "не ранен%s" : "не поврежден%s"), okn), max);
+2445c2449
+< 			my_strcpy(buf, (living ? "somewhat wounded" : "somewhat damaged"), max);
+---
+> 			my_strcpy(buf, format((living ? "легко ранен%s" : "легко поврежден%s"), okn), max);
+2447c2451
+< 			my_strcpy(buf, (living ? "wounded" : "damaged"), max);
+---
+> 			my_strcpy(buf, format((living ? "ранен%s" : "поврежден%s"), okn), max);
+2449c2453
+< 			my_strcpy(buf, (living ? "badly wounded" : "badly damaged"), max);
+---
+> 			my_strcpy(buf, format((living ? "тяжело ранен%s" : "сильно поврежден%s"), okn), max);
+2451c2455
+< 			my_strcpy(buf, (living ? "almost dead" : "almost destroyed"), max);
+---
+> 			my_strcpy(buf, format((living ? "почти мертв%s" : "почти уничтожен%s"), okn), max);
+2454,2457c2458,2461
+< 	if (m_ptr->csleep) my_strcat(buf, ", asleep", max);
+< 	if (m_ptr->confused) my_strcat(buf, ", confused", max);
+< 	if (m_ptr->monfear) my_strcat(buf, ", afraid", max);
+< 	if (m_ptr->stunned) my_strcat(buf, ", stunned", max);
+---
+> 	if (m_ptr->csleep) my_strcat(buf, format(", спит", okn), max);
+> 	if (m_ptr->confused) my_strcat(buf, format(", контужен%s", okn), max);
+> 	if (m_ptr->monfear) my_strcat(buf, format(", напуган%s", okn), max);
+> 	if (m_ptr->stunned) my_strcat(buf, format(", оглушен%s", okn), max);
+3044c3048
+< 		s1 = "You see ";
+---
+> 		s1 = "Вы видите: ";
+3053c3057
+< 			s1 = "You are ";
+---
+> 			s1 = "Вы видите ";
+3056c3060
+< 			s2 = "on ";
+---
+> 			s2 = "под собой: ";
+3063c3067
+< 			cptr name = "something strange";
+---
+> 			cptr name = "что-то странное";
+3106c3110
+< 				monster_desc(m_name, sizeof(m_name), m_ptr, 0x08);
+---
+> 				monster_desc(m_name, sizeof(m_name), m_ptr, 0x08, PAD_IMEN);
+3184c3188
+< 				s1 = "It is ";
+---
+> 				s2 = "под ним ";
+3187,3191c3191
+< 				if (r_ptr->flags1 & (RF1_FEMALE)) s1 = "She is ";
+< 				else if (r_ptr->flags1 & (RF1_MALE)) s1 = "He is ";
+< 
+< 				/* Use a preposition */
+< 				s2 = "carrying ";
+---
+> 				if (r_ptr->flags1 & (RF1_FEMALE)) s2 = "под ней ";
+3207c3207
+< 					object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 					object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_VINIT);
+3233c3233
+< 					s2 = "also carrying ";
+---
+> 					s2 = "также несет ";
+3240c3240
+< 				s2 = "on ";
+---
+> 				/* s2 = "на: "; */
+3273c3273
+< 						        "%s%s%sa pile of %d objects [r,%s] (%d:%d)",
+---
+> 						        "%s%s%sкучу из %d предметов [r,%s] (%d:%d)",
+3279c3279
+< 						        "%s%s%sa pile of %d objects [r,%s]",
+---
+> 						        "%s%s%sкучу из %d предметов [r,%s]",
+3318c3318
+< 				s1 = "It is ";
+---
+> 				s1 = "Она находится ";
+3321c3321
+< 				s2 = "on ";
+---
+> 				s2 = "на: ";
+3342a3343
+> 				int rod;
+3348c3349
+< 				object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 				rod = object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_VINIT);
+3374c3375,3376
+< 				s1 = "It is ";
+---
+> 				s1 = (rod == ROD_M ? "Он находится " : rod == ROD_F ? "Она находится " :
+> 					rod == ROD_N ? "Оно находится " : "Они находятся ");
+3377c3379
+< 				if (o_ptr->number != 1) s1 = "They are ";
+---
+> 				if (o_ptr->number != 1) s1 = "Они находятся ";
+3380c3382
+< 				s2 = "on ";
+---
+> 				s2 = "на: ";
+3404c3406
+< 			if (feat == FEAT_NONE) name = "unknown grid";
+---
+> 			if (feat == FEAT_NONE) name = "неизвестная клетка";
+3407c3409
+< 			if (*s2 && (feat >= FEAT_DOOR_HEAD)) s2 = "in ";
+---
+> 			if (*s2 && (feat >= FEAT_DOOR_HEAD)) s2 = "в: ";
+3410c3412
+< 			s3 = (is_a_vowel(name[0])) ? "an " : "a ";
+---
+> 			// s3 = (is_a_vowel(name[0])) ? "an " : "a ";
+3415c3417
+< 				s3 = "the entrance to the ";
+---
+> 				s3 = "вход в ";
+3433a3436
+> 
+3537c3540
+< 				strcpy(info, "q,t,p,o,+,-,<dir>");
+---
+> 				strcpy(info, "q,t,p,o,+,-,<напр>");
+3543c3546
+< 				strcpy(info, "q,p,o,+,-,<dir>");
+---
+> 				strcpy(info, "q,p,o,+,-,<напр>");
+3628c3631
+< 						bell("Illegal target!");
+---
+> 						bell("Неправильная цель!");
+3639c3642
+< 					if (!d) bell("Illegal command for target mode!");
+---
+> 					if (!d) bell("Неправильная команда!");
+3690c3693
+< 			strcpy(info, "q,t,p,m,+,-,<dir>");
+---
+> 			strcpy(info, "q,t,p,m,+,-,<напр>");
+3781c3784
+< 					if (!d) bell("Illegal command for target mode!");
+---
+> 					if (!d) bell("Неправильная команда!");
+3909c3912
+< 			p = "Direction ('*' to choose a target, Escape to cancel)? ";
+---
+> 			p = "Направление ('*' для выбора цели, Escape)? ";
+3913c3916
+< 			p = "Direction ('5' for target, '*' to re-target, Escape to cancel)? ";
+---
+> 			p = "Направление ('5' для подтвержд., '*' для другой цели, Escape)? ";
+3948c3951
+< 		if (!dir) bell("Illegal aim direction!");
+---
+> 		if (!dir) bell("Неправильное направление!");
+3968c3971
+< 		msg_print("You are confused.");
+---
+> 		msg_print("Вы контужены.");
+4028c4031
+< 		p = "Direction (Escape to cancel)? ";
+---
+> 		p = "Направление (Escape для отмены)? ";
+4037c4040
+< 		if (!dir) bell("Illegal repeatable direction!");
+---
+> 		if (!dir) bell("Неправильное направление!");
+4087c4090
+< 		msg_print("You are confused.");
+---
+> 		msg_print("Вы контужены.");

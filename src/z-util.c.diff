@@ -1,0 +1,83 @@
+41,42c41,42
+< 		ch1 = toupper(*s1);
+< 		ch2 = toupper(*s2);
+---
+> 		ch1 = a_toupper(*s1);
+> 		ch2 = a_toupper(*s2);
+69,70c69,70
+< 		z1 = toupper((unsigned char)*s1);
+< 		z2 = toupper((unsigned char)*s2);
+---
+> 		z1 = a_toupper((unsigned char)*s1);
+> 		z2 = a_toupper((unsigned char)*s2);
+258a259,294
+> /* Replaces for buggy WinBlows! */
+> int a_toupper(int c)
+> {
+> #ifdef WINDOWS
+> 	if (c >= 'а' && c <= 'я')
+> 		return c - 32;
+> 	else if ((unsigned char)c >= 128)
+> 		return c;
+> 	else
+> #endif
+> 		return toupper(c);
+> }
+> 
+> int a_tolower(int c)
+> {
+> #ifdef WINDOWS
+> 	if (c >= 'А' && c <= 'Я')
+> 		return c + 32;
+> 	else if ((unsigned char)c >= 128)
+> 		return c;
+> 	else
+> #endif
+> 		return tolower(c);
+> }
+> 
+> int a_isupper(int c)
+> {
+> #ifdef WINDOWS
+> 	if (c >= 'А' && c <= 'Я')
+> 		return TRUE;
+> 	else if ((unsigned char)c >= 128)
+> 		return FALSE;
+> 	else
+> #endif
+> 		return isupper(c);
+> }
+259a296,306
+> int a_islower(int c)
+> {
+> #ifdef WINDOWS
+> 	if (c >= 'а' && c <= 'я')
+> 		return TRUE;
+> 	else if ((unsigned char)c >= 128)
+> 		return FALSE;
+> 	else
+> #endif
+> 		return islower(c);
+> }
+260a308,328
+> int a_isalpha(int c)
+> {
+> #ifdef WINDOWS
+> 	if ((c >= 'А' && c <= 'Я') || (c >= 'а' && c <= 'я'))
+> 		return TRUE;
+> 	else if ((unsigned char)c >= 128)
+> 		return FALSE;
+> 	else
+> #endif
+> 		return isalpha(c);
+> }
+> 	
+> int a_isprint(int c)
+> {
+> #ifdef WINDOWS
+> 	if ((unsigned char)c >= 128 && (unsigned char)c <= 255)
+> 		return TRUE;
+> 	else
+> #endif
+> 		return isprint(c);
+> }

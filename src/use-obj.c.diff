@@ -1,0 +1,652 @@
+13d12
+< 
+97c96
+< 			take_hit(damroll(6, 6), "poisonous food");
+---
+> 			take_hit(damroll(6, 6), "отравленная еда");
+105c104
+< 			take_hit(damroll(6, 6), "poisonous food");
+---
+> 			take_hit(damroll(6, 6), "отравленная еда");
+113c112
+< 			take_hit(damroll(8, 8), "poisonous food");
+---
+> 			take_hit(damroll(8, 8), "отравленная еда");
+121c120
+< 			take_hit(damroll(8, 8), "poisonous food");
+---
+> 			take_hit(damroll(8, 8), "отравленная еда");
+129c128
+< 			take_hit(damroll(10, 10), "poisonous food");
+---
+> 			take_hit(damroll(10, 10), "отравленная еда");
+137c136
+< 			take_hit(damroll(10, 10), "poisonous food");
+---
+> 			take_hit(damroll(10, 10), "отравленная еда");
+202c201
+< 			msg_print("That tastes good.");
+---
+> 			msg_print("Вкусно!");
+209c208
+< 			msg_print("That tastes good.");
+---
+> 			msg_print("Очень вкусно!");
+219c218
+< 			msg_print("That tastes good.");
+---
+> 			msg_print("Вкусно!");
+241c240
+< 			msg_print("You feel less thirsty.");
+---
+> 			msg_print("Вы утолили жажду.");
+254c253
+< 			msg_print("The potion makes you vomit!");
+---
+> 			msg_print("Вя-а-а! Вас стошнило!");
+314c313
+< 				msg_print("You feel your memories fade.");
+---
+> 				msg_print("Ваша жизнь меркнет.");
+323,324c322,323
+< 			msg_print("Your nerves and muscles feel weak and lifeless!");
+< 			take_hit(damroll(10, 10), "a potion of Ruination");
+---
+> 			msg_print("Ваши нервы и мускулы кажутся слабыми и безжизненными!");
+> 			take_hit(damroll(10, 10), "зельем Ослабевания");
+373,374c372,373
+< 			msg_print("Massive explosions rupture your body!");
+< 			take_hit(damroll(50, 20), "a potion of Detonation");
+---
+> 			msg_print("Массивные взрывы сотрясают ваше тело!");
+> 			take_hit(damroll(50, 20), "зельем взрыва");
+383,384c382,383
+< 			msg_print("A feeling of Death flows through your body.");
+< 			take_hit(5000, "a potion of Death");
+---
+> 			msg_print("Чувство Смерти протекает сквозь вас...");
+> 			take_hit(5000, "зельем Смерти");
+524c523
+< 			msg_print("You feel life flow through your body!");
+---
+> 			msg_print("Чуство Жизни протекает в вас!");
+554c553
+< 				msg_print("Your feel your head clear.");
+---
+> 				msg_print("Ваша голова проясняется.");
+653c652
+< 			msg_print("An image of your surroundings forms in your mind...");
+---
+> 			msg_print("Изображение подземелья формируется у вас в голове...");
+661c660
+< 			msg_print("You begin to feel more enlightened...");
+---
+> 			msg_print("Вы чувствуете себя просвещенным...");
+680c679
+< 			msg_print("You begin to know yourself a little better...");
+---
+> 			msg_print("Вы познаете себя немного лучше...");
+693c692
+< 				msg_print("You feel more experienced.");
+---
+> 				msg_print("Вы чувствуете себя более опытным.");
+730c729
+< 			msg_print("There is a high pitched humming noise.");
+---
+> 			msg_print("Вы слышите громкий противный звук.");
+824c823
+< 				msg_print("You feel as if someone is watching over you.");
+---
+> 				msg_print("Вы чувствуете, как кто-то присматривает за вами.");
+952c951
+< 				msg_print("Your hands begin to glow.");
+---
+> 				msg_print("Ваши руки начинают светиться.");
+1091c1090
+< 					msg_print("The staff glows blue for a moment...");
+---
+> 					msg_print("Посох светится синим светом...");
+1102c1101
+< 				msg_print("The end of the staff glows brightly...");
+---
+> 				msg_print("Конец посоха ярко вспыхивает...");
+1192c1191
+< 				msg_print("Your feel your head clear.");
+---
+> 				msg_print("Ваша голова проясняется.");
+1318c1317
+< 		msg_print("You failed to use the wand properly.");
+---
+> 		msg_print("Вы не смогли использовать палочку.");
+1326c1325
+< 		msg_print("The wand has no charges left.");
+---
+> 		msg_print("В палочке кончились заряды.");
+1391c1390
+< 			msg_print("A line of blue shimmering light appears.");
+---
+> 			msg_print("Появляется коридор синего мерцающего света.");
+1616c1615
+< 		msg_print("You failed to use the rod properly.");
+---
+> 		msg_print("Вы не смогли использовать жезл.");
+1624c1623
+< 
+---
+> 		
+1626c1625
+< 			msg_print("The rod is still charging");
+---
+> 			msg_print("Жезл все еще заряжается.");
+1628c1627
+< 			msg_print("The rods are all still charging");
+---
+> 			msg_print("Все жезлы все еще заряжаются.");
+1632a1632
+> 
+1635a1636
+> 
+1750c1751
+< 			msg_print("A line of blue shimmering light appears.");
+---
+> 			msg_print("Появляется коридор синего мерцающего света.");
+1856c1857,1858
+< 	int k, dir, i, chance;
+---
+> 	int k, dir, i, chance, rod;
+> 	char o_name[80];
+1857a1860,1861
+> 	/* Get the basic name of the object */
+> 	rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0, PAD_IMEN);
+1862c1866,1867
+< 		msg_print("It whines, glows and fades...");
+---
+> 		msg_format("Он%s светится и затухает...",
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"));
+1867c1872
+< 	message(MSG_ZAP, 0, "You activate it...");
+---
+> 	message(MSG_ZAP, 0, "Вы активируете его...");
+1873,1876d1877
+< 		char o_name[80];
+< 
+< 		/* Get the basic name of the object */
+< 		object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
+1882c1883
+< 				msg_format("The %s wells with clear light...", o_name);
+---
+> 				msg_format("%s озаряется чистым светом...", o_name);
+1889c1890
+< 				msg_format("The %s shines brightly...", o_name);
+---
+> 				msg_format("%s ярко сверкает...", o_name);
+1896c1897
+< 				msg_format("The %s glows a deep green...", o_name);
+---
+> 				msg_format("%s светится глубоким зеленым...", o_name);
+1906c1907
+< 				msg_format("The %s lets out a shrill wail...", o_name);
+---
+> 				msg_format("%s издает протяжный стон...", o_name);
+1914c1915
+< 				msg_format("The %s floods the area with goodness...", o_name);
+---
+> 				msg_format("%s заполняет подземелье добром...", o_name);
+1921c1922
+< 				msg_format("The %s glows brightly...", o_name);
+---
+> 				msg_format("%s ярко светится...", o_name);
+1935c1936
+< 				msg_format("The %s glows deep red...", o_name);
+---
+> 				msg_format("%s светится глубоким красным...", o_name);
+1943c1944
+< 				msg_format("The %s glows bright white...", o_name);
+---
+> 				msg_format("%s светится ярко-белым...", o_name);
+1951c1952
+< 				msg_format("The %s glows deep blue...", o_name);
+---
+> 				msg_format("%s светится глубоким синим...", o_name);
+1959c1960
+< 				msg_format("The %s glows intensely black...", o_name);
+---
+> 				msg_format("%s светится черным...", o_name);
+1968c1969
+< 				msg_format("Your %s is surrounded by lightning...", o_name);
+---
+> 				msg_format("%s окружается молнией...", o_name);
+1975c1976
+< 				msg_format("Your %s glows many colours...", o_name);
+---
+> 				msg_format("%s светится всеми цветами...", o_name);
+1990,1991c1991,1992
+< 				msg_format("Your %s glows a bright white...", o_name);
+< 				msg_print("You feel much better...");
+---
+> 				msg_format("%s светится ярким белым...", o_name);
+> 				msg_print("Вы чувствуете себя намного лучше...");
+1999c2000
+< 				msg_format("Your %s twists space around you...", o_name);
+---
+> 				msg_format("%s искривляет пространство вокруг вас...", o_name);
+2006c2007
+< 				msg_format("Your %s glows deep blue...", o_name);
+---
+> 				msg_format("%s светится угрожающим синим...", o_name);
+2013c2014
+< 				msg_format("Your %s glows bright red...", o_name);
+---
+> 				msg_format("%s светится ярко-красным...", o_name);
+2020,2021c2021,2022
+< 				msg_format("Your %s glows bright white...", o_name);
+< 				msg_print("An image forms in your mind...");
+---
+> 				msg_format("%s светится лучистым белым...", o_name);
+> 				msg_print("Изображение формируется в вашей голове...");
+2028,2029c2029,2030
+< 				msg_format("Your %s glows deep blue...", o_name);
+< 				msg_print("You feel a warm tingling inside...");
+---
+> 				msg_format("%s светится спокойным синим...", o_name);
+> 				msg_print("Вы чувствуете теплое покалывание...");
+2037c2038
+< 				msg_format("Your %s glows many colours...", o_name);
+---
+> 				msg_format("%s светится цветами радуги...", o_name);
+2048c2049
+< 				msg_format("Your %s glows deep blue...", o_name);
+---
+> 				msg_format("%s светится ярко-синим...", o_name);
+2055c2056
+< 				msg_format("Your %s glows bright yellow...", o_name);
+---
+> 				msg_format("%s светится ярко-желтым...", o_name);
+2062c2063
+< 				msg_format("Your %s twists space around you...", o_name);
+---
+> 				msg_format("%s распрямляет пространство вокруг вас...", o_name);
+2069c2070
+< 				msg_format("Your %s glows a deep red...", o_name);
+---
+> 				msg_format("%s светится спокойным красным...", o_name);
+2076c2077
+< 				msg_format("Your %s glows extremely brightly...", o_name);
+---
+> 				msg_format("%s ярко горит...", o_name);
+2084c2085
+< 				msg_format("Your %s is covered in fire...", o_name);
+---
+> 				msg_format("%s покрывается пламенем...", o_name);
+2092c2093
+< 				msg_format("Your %s is covered in frost...", o_name);
+---
+> 				msg_format("%s излучает холод...", o_name);
+2100c2101
+< 				msg_format("Your %s is covered in sparks...", o_name);
+---
+> 				msg_format("%s сыплет искрамиs...", o_name);
+2108c2109
+< 				msg_format("Your %s is covered in acid...", o_name);
+---
+> 				msg_format("%s покрывается кислотой...", o_name);
+2116c2117
+< 				msg_format("Your %s grows magical spikes...", o_name);
+---
+> 				msg_format("%s покрывается шипами...", o_name);
+2124c2125
+< 				msg_format("Your %s glows bright green...", o_name);
+---
+> 				msg_format("%s светится ярко-зеленым...", o_name);
+2138c2139
+< 				msg_format("Your %s glows deep blue...", o_name);
+---
+> 				msg_format("%s вспыхивает синим...", o_name);
+2146c2147
+< 				msg_format("Your %s throbs deep green...", o_name);
+---
+> 				msg_format("%s светится ядовито-зеленым...", o_name);
+2154c2155
+< 				msg_format("Your %s is covered in frost...", o_name);
+---
+> 				msg_format("%s покрывается инеем...", o_name);
+2162c2163
+< 				msg_format("Your %s glows a pale blue...", o_name);
+---
+> 				msg_format("%s горит бледно-синим...", o_name);
+2170c2171
+< 				msg_format("Your %s glows a intense blue...", o_name);
+---
+> 				msg_format("%s светится насыщенным синим...", o_name);
+2178c2179
+< 				msg_format("Your %s rages in fire...", o_name);
+---
+> 				msg_format("%s пылает огнем...", o_name);
+2186c2187
+< 				msg_format("Your %s glows black...", o_name);
+---
+> 				msg_format("%s светится черным...", o_name);
+2194c2195
+< 				msg_format("Your %s pulsates...", o_name);
+---
+> 				msg_format("%s пульсирует...", o_name);
+2202c2203
+< 				msg_format("Your %s lets out a long, shrill note...", o_name);
+---
+> 				msg_format("%s издает протяжную ноту...", o_name);
+2209c2210
+< 				msg_format("Your %s radiates deep purple...", o_name);
+---
+> 				msg_format("%s светится глубоким фиолетовым...", o_name);
+2217c2218
+< 				msg_format("Your %s glows deep red...", o_name);
+---
+> 				msg_format("%s вспыхивает глубоким красным...", o_name);
+2225c2226
+< 				msg_format("Your %s glows soft white...", o_name);
+---
+> 				msg_format("%s светится мягким белым...", o_name);
+2232c2233
+< 				msg_format("Your %s glows in scintillating colours...", o_name);
+---
+> 				msg_format("%s светится странными цветами...", o_name);
+2240c2241
+< 				msg_format("Your %s glows yellow...", o_name);
+---
+> 				msg_format("%s вспыхивает желтым...", o_name);
+2247c2248
+< 				msg_format("Your %s glows brightly...", o_name);
+---
+> 				msg_format("%s ярко загорается...", o_name);
+2254c2255
+< 				msg_format("Your %s glows white...", o_name);
+---
+> 				msg_format("%s горит белым...", o_name);
+2262c2263
+< 				msg_format("Your %s glows deep red...", o_name);
+---
+> 				msg_format("%s светится огненно-красным...", o_name);
+2269c2270
+< 				msg_format("Your %s glows with the light of a thousand stars...", o_name);
+---
+> 				msg_format("%s вспыхивает светом тысячи звезд...", o_name);
+2276c2277
+< 				msg_format("Your %s glows white...", o_name);
+---
+> 				msg_format("%s светится белым...", o_name);
+2284c2285
+< 				msg_format("Your %s glows in anger...", o_name);
+---
+> 				msg_format("%s горит яростью...", o_name);
+2315c2316
+< 				msg_print("You breathe lightning.");
+---
+> 				msg_print("Вы дышите молнией.");
+2323c2324
+< 				msg_print("You breathe frost.");
+---
+> 				msg_print("Вы дышите холодом.");
+2331c2332
+< 				msg_print("You breathe acid.");
+---
+> 				msg_print("Вы дышите кислотой.");
+2339c2340
+< 				msg_print("You breathe poison gas.");
+---
+> 				msg_print("Вы дышите ядовитым газом.");
+2347c2348
+< 				msg_print("You breathe fire.");
+---
+> 				msg_print("Вы дышите огнем.");
+2356,2360c2357,2361
+< 				msg_format("You breathe %s.",
+< 				           ((chance == 1) ? "lightning" :
+< 				            ((chance == 2) ? "frost" :
+< 				             ((chance == 3) ? "acid" :
+< 				              ((chance == 4) ? "poison gas" : "fire")))));
+---
+> 				msg_format("Вы дышите %s.",
+> 				           ((chance == 1) ? "молнией" :
+> 				            ((chance == 2) ? "холодом" :
+> 				             ((chance == 3) ? "кислотой" :
+> 				              ((chance == 4) ? "ядовитым газом" : "огнем")))));
+2372c2373
+< 				msg_print("You breathe confusion.");
+---
+> 				msg_print("Вы дышите контузией.");
+2380c2381
+< 				msg_print("You breathe sound.");
+---
+> 				msg_print("Вы дышите звуком.");
+2389,2390c2390,2391
+< 				msg_format("You breathe %s.",
+< 				           ((chance == 1 ? "chaos" : "disenchantment")));
+---
+> 				msg_format("Вы дышите %s.",
+> 				           ((chance == 1 ? "хаосом" : "антимагией")));
+2400,2401c2401,2402
+< 				msg_format("You breathe %s.",
+< 				           ((chance == 1 ? "sound" : "shards")));
+---
+> 				msg_format("Вы дышите %s.",
+> 				           ((chance == 1 ? "звуком" : "осколками")));
+2411,2414c2412,2415
+< 				msg_format("You breathe %s.",
+< 				           ((chance == 1) ? "chaos" :
+< 				            ((chance == 2) ? "disenchantment" :
+< 				             ((chance == 3) ? "sound" : "shards"))));
+---
+> 				msg_format("Вы дышите %s.",
+> 				           ((chance == 1) ? "хаосом" :
+> 				            ((chance == 2) ? "антимагией" :
+> 				             ((chance == 3) ? "звуком" : "осколками"))));
+2426,2427c2427,2428
+< 				msg_format("You breathe %s.",
+< 				           ((chance == 0 ? "light" : "darkness")));
+---
+> 				msg_format("Вы дышите %s.",
+> 				           ((chance == 0 ? "светом" : "темнотой")));
+2435c2436
+< 				msg_print("You breathe the elements.");
+---
+> 				msg_print("Вы дышите элементами.");
+2562,2611c2563,2612
+< 	"illumination",
+< 	"magic mapping",
+< 	"clairvoyance",
+< 	"protection from evil",
+< 	"dispel evil (x5)",
+< 	"heal (500)",
+< 	"heal (1000)",
+< 	"cure wounds (4d7)",
+< 	"haste self (20+d20 turns)",
+< 	"haste self (75+d75 turns)",
+< 	"fire bolt (9d8)",
+< 	"fire ball (72)",
+< 	"large fire ball (120)",
+< 	"frost bolt (6d8)",
+< 	"frost ball (48)",
+< 	"frost ball (100)",
+< 	"frost bolt (12d8)",
+< 	"large frost ball (200)",
+< 	"acid bolt (5d8)",
+< 	"recharge item I",
+< 	"sleep II",
+< 	"lightning bolt (4d8)",
+< 	"large lightning ball (250)",
+< 	"banishment",
+< 	"mass banishment",
+< 	"identify",
+< 	"drain life (90)",
+< 	"drain life (120)",
+< 	"bizarre things",
+< 	"star ball (150)",
+< 	"berserk rage, bless, and resistance",
+< 	"phase door",
+< 	"door and trap destruction",
+< 	"detection",
+< 	"resistance (20+d20 turns)",
+< 	"teleport",
+< 	"restore life levels",
+< 	"magic missile (2d6)",
+< 	"a magical arrow (150)",
+< 	"remove fear and cure poison",
+< 	"stinking cloud (12)",
+< 	"stone to mud",
+< 	"teleport away",
+< 	"word of recall",
+< 	"confuse monster",
+< 	"probing",
+< 	"fire branding of bolts",
+< 	"starlight (10d8)",
+< 	"mana bolt (12d8)",
+< 	"berserk rage (50+d50 turns)"
+---
+> 	"освещения",
+> 	"волшебной картографии",
+> 	"ясновидения",
+> 	"защиты от зла",
+> 	"уничтожения зла (x5)",
+> 	"исцеления (500)",
+> 	"исцеления (1000)",
+> 	"лечения ран (4d7)",
+> 	"ускорения (20+d20 ходов)",
+> 	"ускорения (75+d75 ходов)",
+> 	"огненной стрелы (9d8)",
+> 	"огненного шара (72)",
+> 	"большого огненного шара (120)",
+> 	"ледяной стрелы (6d8)",
+> 	"ледяного шара (48)",
+> 	"ледяного шара (100)",
+> 	"ледяной стрелы (12d8)",
+> 	"большого ледяного шара (200)",
+> 	"кислотной стрелы (5d8)",
+> 	"перезарядки I",
+> 	"усыпления II",
+> 	"удара молнией (4d8)",
+> 	"большой шаровой молнии (250)",
+> 	"изгнания",
+> 	"массового изгнания",
+> 	"идентификации",
+> 	"высасывания жизни (90)",
+> 	"высасывания жизни (120)",
+> 	"странных вещей",
+> 	"звездного шара (150)",
+> 	"ярости, благословления и сопротивления",
+> 	"фазовой двери",
+> 	"разрушения дверей и ловушек",
+> 	"поиска",
+> 	"сопротивления (20+d20 ходов)",
+> 	"телепортации",
+> 	"восстановления жизни",
+> 	"волшебной стрелы (2d6)",
+> 	"большой волшебной стрелы (150)",
+> 	"снятия страха и лечения яда",
+> 	"ядовитого облака (12)",
+> 	"плавки камня",
+> 	"телепортации монстра",
+> 	"Слова Возвращения",
+> 	"контузии монстра",
+> 	"зондирования",
+> 	"огненного клейма болтов",
+> 	"звездного света (10d8)",
+> 	"стрелы маны (12d8)",
+> 	"ярости (50+d50 ходов)"
+2642c2643
+< 			text_out(format(" every %d+d%d turns", a_ptr->time, a_ptr->randtime));
+---
+> 			text_out(format(" каждые %d+d%d ходов", a_ptr->time, a_ptr->randtime));
+2644c2645
+< 			text_out(format(" every %d turns", a_ptr->time));
+---
+> 			text_out(format(" каждые %d ходов", a_ptr->time));
+2646,2678c2647
+< 			text_out(format(" every d%d turns", a_ptr->randtime));
+< 
+< 		return;
+< 	}
+< 
+< 	/* Ring activations */
+< 	if (o_ptr->tval == TV_RING)
+< 	{
+< 		/* Branch on the sub-type */
+< 		switch (o_ptr->sval)
+< 		{
+< 			case SV_RING_ACID:
+< 			{
+< 				text_out("acid resistance (20+d20 turns) and acid ball (70) every 50+d50 turns");
+< 				break;
+< 			}
+< 			case SV_RING_FLAMES:
+< 			{
+< 				text_out("fire resistance (20+d20 turns) and fire ball (80) every 50+d50 turns");
+< 				break;
+< 			}
+< 			case SV_RING_ICE:
+< 			{
+< 				text_out("cold resistance (20+d20 turns) and cold ball (75) every 50+d50 turns");
+< 				break;
+< 			}
+< 
+< 			case SV_RING_LIGHTNING:
+< 			{
+< 				text_out("electricity resistance (20+d20 turns) and electricity ball (85) every 50+d50 turns");
+< 				break;
+< 			}
+< 		}
+---
+> 			text_out(format(" каждые d%d ходов", a_ptr->randtime));
+2691c2660
+< 			text_out("breathe lightning (100) every 450+d450 turns");
+---
+> 			text_out("дыхания молнией (100) каждые 450+d450 ходов");
+2696c2665
+< 			text_out("breathe frost (110) every 450+d450 turns");
+---
+> 			text_out("дыхания холодом (110) каждые 450+d450 ходов");
+2701c2670
+< 			text_out("breathe acid (130) every 450+d450 turns");
+---
+> 			text_out("дыхания кислотой (130) каждые 450+d450 ходов");
+2706c2675
+< 			text_out("breathe poison gas (150) every 450+d450 turns");
+---
+> 			text_out("дыхания ядовитым газом (150) каждые 450+d450 ходов");
+2711c2680
+< 			text_out("breathe fire (200) every 450+d450 turns");
+---
+> 			text_out("дыхания огнем (200) каждые 450+d450 ходов");
+2716c2685
+< 			text_out("breathe multi-hued (250) every 225+d225 turns");
+---
+> 			text_out("дыхания низшими элементами (250) каждые 225+d225 ходов");
+2721c2690
+< 			text_out("breathe confusion (120) every 450+d450 turns");
+---
+> 			text_out("дыхания контузией (120) каждые 450+d450 ходов");
+2726c2695
+< 			text_out("breathe sound (130) every 450+d450 turns");
+---
+> 			text_out("дыхания звуком (130) каждые 450+d450 ходов");
+2731c2700
+< 			text_out("breathe chaos/disenchant (220) every 300+d300 turns");
+---
+> 			text_out("дыхания хаосом/антимагией (220) каждые 300+d300 ходов");
+2736c2705
+< 			text_out("breathe sound/shards (230) every 300+d300 turns");
+---
+> 			text_out("дыхания звуком/осколками (230) каждые 300+d300 ходов");
+2741c2710
+< 			text_out("breathe balance (250) every 300+d300 turns");
+---
+> 			text_out("дыхания элементами баланса (250) каждые 300+d300 ходов");
+2746c2715
+< 			text_out("breathe light/darkness (200) every 300+d300 turns");
+---
+> 			text_out("дыхания светом/темнотой (200) каждые 300+d300 ходов");
+2751c2720
+< 			text_out("breathe the elements (300) every 300+d300 turns");
+---
+> 			text_out("дыхания элементами (300) каждые 300+d300 ходов");
+2755a2725
+> 

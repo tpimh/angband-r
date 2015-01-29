@@ -1,0 +1,828 @@
+44c44
+< 			msg_print("You feel a little better.");
+---
+> 			msg_print("Вы чувствуете себя немного лучше.");
+50c50
+< 			msg_print("You feel better.");
+---
+> 			msg_print("Вы чувствете себя лучше.");
+56c56
+< 			msg_print("You feel much better.");
+---
+> 			msg_print("Вы чувствуете себя намного лучше.");
+62c62
+< 			msg_print("You feel very good.");
+---
+> 			msg_print("Вы чувствуете себя очень хорошо.");
+86c86
+< 		msg_print("The object resists the spell.");
+---
+> 		msg_print("Предмет сопротивляется заклинанию.");
+102,107c102,107
+< 	"strong",
+< 	"smart",
+< 	"wise",
+< 	"dextrous",
+< 	"healthy",
+< 	"cute"
+---
+> 	"сильным",
+> 	"умным",
+> 	"мудрым",
+> 	"ловким",
+> 	"здоровым",
+> 	"красивым"
+116,121c116,121
+< 	"weak",
+< 	"stupid",
+< 	"naive",
+< 	"clumsy",
+< 	"sickly",
+< 	"ugly"
+---
+> 	"слабым",
+> 	"глупым",
+> 	"наивным",
+> 	"неуклюжим",
+> 	"болезненным",
+> 	"уродливым"
+147c147
+< 		msg_format("You feel very %s for a moment, but the feeling passes.",
+---
+> 		msg_format("Вы чувствуете себя очень %s, но чувство проходит.",
+158c158
+< 		msg_format("You feel very %s.", desc_stat_neg[stat]);
+---
+> 		msg_format("Вы чувствуете себя очень %s.", desc_stat_neg[stat]);
+178c178
+< 		msg_format("You feel less %s.", desc_stat_neg[stat]);
+---
+> 		msg_format("Вы чувствуете себя не таким %s.", desc_stat_neg[stat]);
+203c203
+< 		msg_format("You feel very %s!", desc_stat_pos[stat]);
+---
+> 		msg_format("Вы чувствуете себя очень %s!", desc_stat_pos[stat]);
+213c213
+< 		msg_format("You feel less %s.", desc_stat_neg[stat]);
+---
+> 		msg_format("Вы чувствуете себя не таким %s.", desc_stat_neg[stat]);
+373c373
+< 		msg_print("You feel your life energies returning.");
+---
+> 		msg_print("Вы чувствуете, как жизнь возвращается к вам.");
+436c436
+< 		info[i++] = "You cannot see.";
+---
+> 		info[i++] = "Вы ничего не видите.";
+440c440
+< 		info[i++] = "You are confused.";
+---
+> 		info[i++] = "Вы контужены.";
+444c444
+< 		info[i++] = "You are terrified.";
+---
+> 		info[i++] = "Вы напуганы.";
+448c448
+< 		info[i++] = "You are bleeding.";
+---
+> 		info[i++] = "Вы истекаете кровью.";
+452c452
+< 		info[i++] = "You are stunned.";
+---
+> 		info[i++] = "Вы оглушены.";
+456c456
+< 		info[i++] = "You are poisoned.";
+---
+> 		info[i++] = "Вы отравлены.";
+460c460
+< 		info[i++] = "You are hallucinating.";
+---
+> 		info[i++] = "Вы галлюцинируете.";
+465c465
+< 		info[i++] = "You aggravate monsters.";
+---
+> 		info[i++] = "Вы привлекаете монстров.";
+469c469
+< 		info[i++] = "Your position is very uncertain.";
+---
+> 		info[i++] = "Ваше положение неустойчиво.";
+474c474
+< 		info[i++] = "You feel righteous.";
+---
+> 		info[i++] = "Вы чувствуете себя правым.";
+478c478
+< 		info[i++] = "You feel heroic.";
+---
+> 		info[i++] = "Вы чувствуете себя героем.";
+482c482
+< 		info[i++] = "You are in a battle rage.";
+---
+> 		info[i++] = "Вы в ярости боя.";
+486c486
+< 		info[i++] = "You are protected from evil.";
+---
+> 		info[i++] = "Вы защищены от зла.";
+490c490
+< 		info[i++] = "You are protected by a mystic shield.";
+---
+> 		info[i++] = "Вы защищены магическим щитом.";
+494c494
+< 		info[i++] = "You are temporarily invulnerable.";
+---
+> 		info[i++] = "Вы временно неуязвимы.";
+498c498
+< 		info[i++] = "Your hands are glowing dull red.";
+---
+> 		info[i++] = "Ваши руки светятся бледно-красным светом.";
+502c502
+< 		info[i++] = "You are looking around very carefully.";
+---
+> 		info[i++] = "Вы смотрите вокруг очень тщательно.";
+506c506
+< 		info[i++] = "You can learn some spells/prayers.";
+---
+> 		info[i++] = "Вы можете учить новые заклинания или молитвы.";
+510c510
+< 		info[i++] = "You will soon be recalled.";
+---
+> 		info[i++] = "Вы скоро будете возвращены.";
+514c514
+< 		info[i++] = "Your eyes are sensitive to infrared light.";
+---
+> 		info[i++] = "Ваши глаза чувствительны к инфракрасному свету.";
+519c519
+< 		info[i++] = "Your appetite is small.";
+---
+> 		info[i++] = "У вас плохой аппетит.";
+523c523
+< 		info[i++] = "You land gently.";
+---
+> 		info[i++] = "Вы приземляетесь мягко.";
+527c527
+< 		info[i++] = "You are glowing with light.";
+---
+> 		info[i++] = "Вы светитесь.";
+531c531
+< 		info[i++] = "You regenerate quickly.";
+---
+> 		info[i++] = "Вы быстро регенерируете.";
+535c535
+< 		info[i++] = "You have ESP.";
+---
+> 		info[i++] = "Вы обладаете телепатией.";
+539c539
+< 		info[i++] = "You can see invisible creatures.";
+---
+> 		info[i++] = "Вы можете видеть невидимых монстров.";
+543c543
+< 		info[i++] = "You have free action.";
+---
+> 		info[i++] = "Вы обладаете иммунитетом к параличу.";
+547c547
+< 		info[i++] = "You have a firm hold on your life force.";
+---
+> 		info[i++] = "Вы крепко держитесь за свою жизнь.";
+552c552
+< 		info[i++] = "You are completely immune to acid.";
+---
+> 		info[i++] = "У вас есть полный иммунитет к кислоте.";
+556c556
+< 		info[i++] = "You resist acid exceptionally well.";
+---
+> 		info[i++] = "Вы сопротивляетесь кислоте исключительно хорошо.";
+560c560
+< 		info[i++] = "You are resistant to acid.";
+---
+> 		info[i++] = "Вы сопротивляетесь кислоте.";
+565c565
+< 		info[i++] = "You are completely immune to lightning.";
+---
+> 		info[i++] = "У вас есть полный иммунитет к молнии.";
+569c569
+< 		info[i++] = "You resist lightning exceptionally well.";
+---
+> 		info[i++] = "Вы сопротивляетесь молнии исключительно хорошо.";
+573c573
+< 		info[i++] = "You are resistant to lightning.";
+---
+> 		info[i++] = "Вы сопротивляетесь молнии.";
+578c578
+< 		info[i++] = "You are completely immune to fire.";
+---
+> 		info[i++] = "У вас есть полный иммунитет к огню.";
+582c582
+< 		info[i++] = "You resist fire exceptionally well.";
+---
+> 		info[i++] = "Вы сопротивляетесь огню исключительно хорошо.";
+586c586
+< 		info[i++] = "You are resistant to fire.";
+---
+> 		info[i++] = "Вы сопротивляетесь огню.";
+591c591
+< 		info[i++] = "You are completely immune to cold.";
+---
+> 		info[i++] = "У вас есть полный иммунитет к холоду.";
+595c595
+< 		info[i++] = "You resist cold exceptionally well.";
+---
+> 		info[i++] = "Вы сопротивляетесь холоду исключительно хорошо.";
+599c599
+< 		info[i++] = "You are resistant to cold.";
+---
+> 		info[i++] = "Вы сопротивляетесь холоду.";
+604c604
+< 		info[i++] = "You resist poison exceptionally well.";
+---
+> 		info[i++] = "Вы сопротивляетесь яду исключительно хорошо.";
+608c608
+< 		info[i++] = "You are resistant to poison.";
+---
+> 		info[i++] = "Вы сопротивляетесь яду.";
+613c613
+< 		info[i++] = "You are completely fearless.";
+---
+> 		info[i++] = "Вы полностью бесстрашны.";
+618c618
+< 		info[i++] = "You are resistant to bright light.";
+---
+> 		info[i++] = "Вы сопротивляетесь яркому свету.";
+622c622
+< 		info[i++] = "You are resistant to darkness.";
+---
+> 		info[i++] = "Вы сопротивляетесь темноте.";
+626c626
+< 		info[i++] = "Your eyes are resistant to blindness.";
+---
+> 		info[i++] = "Ваши глаза защищены от слепоты.";
+630c630
+< 		info[i++] = "You are resistant to confusion.";
+---
+> 		info[i++] = "Вы сопротивляетесь контузии.";
+634c634
+< 		info[i++] = "You are resistant to sonic attacks.";
+---
+> 		info[i++] = "Вы сопротивляетесь звуковым атакам.";
+638c638
+< 		info[i++] = "You are resistant to blasts of shards.";
+---
+> 		info[i++] = "Вы сопротивляетесь взрывам осколков.";
+642c642
+< 		info[i++] = "You are resistant to nexus attacks.";
+---
+> 		info[i++] = "Вы сопротивляетесь пространственным атакам.";
+646c646
+< 		info[i++] = "You are resistant to nether forces.";
+---
+> 		info[i++] = "Вы сопротивляетесь могильным силам.";
+650c650
+< 		info[i++] = "You are resistant to chaos.";
+---
+> 		info[i++] = "Вы сопротивляетесь хаосу.";
+654c654
+< 		info[i++] = "You are resistant to disenchantment.";
+---
+> 		info[i++] = "Вы сопротивляетесь антимагии.";
+659c659
+< 		info[i++] = "Your strength is sustained.";
+---
+> 		info[i++] = "Ваша сила не может быть снижена.";
+663c663
+< 		info[i++] = "Your intelligence is sustained.";
+---
+> 		info[i++] = "Ваш интеллект не может быть снижен.";
+667c667
+< 		info[i++] = "Your wisdom is sustained.";
+---
+> 		info[i++] = "Ваша мудрость не может быть снижена.";
+671c671
+< 		info[i++] = "Your constitution is sustained.";
+---
+> 		info[i++] = "Ваше телосложение не может быть снижена.";
+675c675
+< 		info[i++] = "Your dexterity is sustained.";
+---
+> 		info[i++] = "Ваша ловкость не может быть снижена.";
+679c679
+< 		info[i++] = "Your charisma is sustained.";
+---
+> 		info[i++] = "Ваше обаяние не может быть снижено.";
+684c684
+< 		info[i++] = "Your strength is affected by your equipment.";
+---
+> 		info[i++] = "На вашу силу воздействуют надетые на вас вещи.";
+688c688
+< 		info[i++] = "Your intelligence is affected by your equipment.";
+---
+> 		info[i++] = "На ваш интеллект воздействуют надетые на вас вещи.";
+692c692
+< 		info[i++] = "Your wisdom is affected by your equipment.";
+---
+> 		info[i++] = "На вашу мудрость воздействуют надетые на вас вещи.";
+696c696
+< 		info[i++] = "Your dexterity is affected by your equipment.";
+---
+> 		info[i++] = "На вашу ловкость воздействуют надетые на вас вещи.";
+700c700
+< 		info[i++] = "Your constitution is affected by your equipment.";
+---
+> 		info[i++] = "На ваше телосложение воздействуют надетые на вас вещи.";
+704c704
+< 		info[i++] = "Your charisma is affected by your equipment.";
+---
+> 		info[i++] = "На ваше обаяние воздействуют надетые на вас вещи.";
+709c709
+< 		info[i++] = "Your stealth is affected by your equipment.";
+---
+> 		info[i++] = "На вашу скрытность воздействуют надетые на вас вещи.";
+713c713
+< 		info[i++] = "Your searching ability is affected by your equipment.";
+---
+> 		info[i++] = "На ваши способности к поиску воздействуют надетые на вас вещи.";
+717c717
+< 		info[i++] = "Your infravision is affected by your equipment.";
+---
+> 		info[i++] = "На ваше инфракрасное зрение воздействуют надетые на вас вещи.";
+721c721
+< 		info[i++] = "Your digging ability is affected by your equipment.";
+---
+> 		info[i++] = "На ваши навыки копания воздействуют надетые на вас вещи.";
+725c725
+< 		info[i++] = "Your speed is affected by your equipment.";
+---
+> 		info[i++] = "На вашу скорость воздействуют надетые на вас вещи.";
+729c729
+< 		info[i++] = "Your attack speed is affected by your equipment.";
+---
+> 		info[i++] = "На вашу скорость атаки воздействуют надетые на вас вещи.";
+733c733
+< 		info[i++] = "Your shooting speed is affected by your equipment.";
+---
+> 		info[i++] = "На вашу скорость стрельбы воздействуют надетые на вас вещи.";
+737c737
+< 		info[i++] = "Your shooting might is affected by your equipment.";
+---
+> 		info[i++] = "На вашу силу стрельбы воздействуют надетые на вас вещи.";
+750c750
+< 			info[i++] = "Your weapon melts your foes.";
+---
+> 			info[i++] = "Ваше оружие плавит врагов.";
+754c754
+< 			info[i++] = "Your weapon shocks your foes.";
+---
+> 			info[i++] = "Ваше оружие бьет током врагов.";
+758c758
+< 			info[i++] = "Your weapon burns your foes.";
+---
+> 			info[i++] = "Ваше оружие сжигает врагов.";
+762c762
+< 			info[i++] = "Your weapon freezes your foes.";
+---
+> 			info[i++] = "Ваше оружие замораживает врагов.";
+766c766
+< 			info[i++] = "Your weapon poisons your foes.";
+---
+> 			info[i++] = "Ваше оружие отравляет врагов.";
+772c772
+< 			info[i++] = "Your weapon strikes at animals with extra force.";
+---
+> 			info[i++] = "Ваше оружие бьет животных с особой силой.";
+776c776
+< 			info[i++] = "Your weapon strikes at evil with extra force.";
+---
+> 			info[i++] = "Ваше оружие бьет зло с особой силой.";
+780c780
+< 			info[i++] = "Your weapon strikes at undead with holy wrath.";
+---
+> 			info[i++] = "Ваше оружие атакует живых мертвецов с праведным гневом.";
+784c784
+< 			info[i++] = "Your weapon strikes at demons with holy wrath.";
+---
+> 			info[i++] = "Ваше оружие атакует демонов с праведным гневом.";
+788c788
+< 			info[i++] = "Your weapon is especially deadly against orcs.";
+---
+> 			info[i++] = "Ваше оружие особенно смертельно против орков.";
+792c792
+< 			info[i++] = "Your weapon is especially deadly against trolls.";
+---
+> 			info[i++] = "Ваше оружие особенно смертельно против троллей.";
+796c796
+< 			info[i++] = "Your weapon is especially deadly against giants.";
+---
+> 			info[i++] = "Ваше оружие особенно смертельно против гигантов.";
+800c800
+< 			info[i++] = "Your weapon is especially deadly against dragons.";
+---
+> 			info[i++] = "Ваше оружие особенно смертельно против драконов.";
+806c806
+< 			info[i++] = "Your weapon is a great bane of dragons.";
+---
+> 			info[i++] = "Ваше оружие - великое лихо драконов.";
+810c810
+< 			info[i++] = "Your weapon is a great bane of demons.";
+---
+> 			info[i++] = "Ваше оружие - великое лихо демонов.";
+814c814
+< 			info[i++] = "Your weapon is a great bane of undead.";
+---
+> 			info[i++] = "Ваше оружие - великое лихо живых мертвецов.";
+821c821
+< 			info[i++] = "Your weapon has been blessed by the gods.";
+---
+> 			info[i++] = "Ваше оружие благословлено богами.";
+827c827
+< 			info[i++] = "Your weapon can induce earthquakes.";
+---
+> 			info[i++] = "Ваше оружие может вызывать землетрясения.";
+840c840
+< 	prt("     Your Attributes:", 1, 0);
+---
+> 	prt("     Ваши атрибуты:", 1, 0);
+851c851
+< 			prt("-- more --", k, 0);
+---
+> 			prt("-- далее --", k, 0);
+858c858
+< 			prt("     Your Attributes:", 1, 0);
+---
+> 			prt("     Ваши атрибуты:", 1, 0);
+866c866
+< 	prt("[Press any key to continue]", k, 0);
+---
+> 	prt("[Нажмите любую клавишу]", k, 0);
+936c936
+< 		msg_print("Nothing happens.");
+---
+> 		msg_print("Ничего не происходит.");
+950c950
+< 			 if (get_check("Reset recall depth? "))
+---
+> 			 if (get_check("Сбросить глубину возвращения? "))
+955c955
+< 		msg_print("The air about you becomes charged...");
+---
+> 		msg_print("Воздух вокруг вас заряжается...");
+962c962
+< 		msg_print("A tension leaves the air around you...");
+---
+> 		msg_print("Напряжение покидает воздух вокруг вас...");
+1011c1011
+< 		msg_print("You sense the presence of traps!");
+---
+> 		msg_print("Вы чувствуете присутствие ловушек!");
+1065c1065
+< 		msg_print("You sense the presence of doors!");
+---
+> 		msg_print("Вы чувствуете присутствие дверей!");
+1109c1109
+< 		msg_print("You sense the presence of stairs!");
+---
+> 		msg_print("Вы чувствуете присутствие лестниц!");
+1161c1161
+< 		msg_print("You sense the presence of buried treasure!");
+---
+> 		msg_print("Вы чувствуете присутствие закопанных сокровищ!");
+1215c1215
+< 		msg_print("You sense the presence of treasure!");
+---
+> 		msg_print("Вы чувствуете присутствие сокровищ!");
+1268c1268
+< 		msg_print("You sense the presence of objects!");
+---
+> 		msg_print("Вы чувствуете присутствие предметов!");
+1335c1335
+< 		msg_print("You sense the presence of magic objects!");
+---
+> 		msg_print("Вы чувствуете присутствие магических предметов!");
+1390c1390
+< 		msg_print("You sense the presence of monsters!");
+---
+> 		msg_print("Вы чувствуете присутствие монстров!");
+1456c1456
+< 		msg_print("You sense the presence of invisible creatures!");
+---
+> 		msg_print("Вы чувствуете присутствие невидимых существ!");
+1523c1523
+< 		msg_print("You sense the presence of evil creatures!");
+---
+> 		msg_print("Вы чувствуете присутствие злых существ!");
+1566c1566
+< 		msg_print("The object resists the spell.");
+---
+> 		msg_print("Предмет сопротивляется заклинанию.");
+1728c1728
+< 					msg_print("The curse is broken!");
+---
+> 					msg_print("Проклятье снято!");
+1756c1756
+< 					msg_print("The curse is broken!");
+---
+> 					msg_print("Проклятье снято!");
+1784c1784
+< 					msg_print("The curse is broken!");
+---
+> 					msg_print("Проклятье снято!");
+1835,1836c1835,1836
+< 	q = "Enchant which item? ";
+< 	s = "You have nothing to enchant.";
+---
+> 	q = "Зачаровать какой предмет? ";
+> 	s = "Вам нечего зачаровывать.";
+1853c1853
+< 	object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
+---
+> 	object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0, PAD_IMEN);
+1856,1858c1856,1858
+< 	msg_format("%s %s glow%s brightly!",
+< 	           ((item >= 0) ? "Your" : "The"), o_name,
+< 	           ((o_ptr->number > 1) ? "" : "s"));
+---
+> 	msg_format("%s ярко свет%cтся!",
+> 	           o_name,
+> 	           ((o_ptr->number > 1) ? 'я' : 'и'));
+1872c1872
+< 		msg_print("The enchantment failed.");
+---
+> 		msg_print("Зачарование не удалось.");
+1900,1901c1900,1901
+< 	q = "Identify which item? ";
+< 	s = "You have nothing to identify.";
+---
+> 	q = "Идентифицировать какой предмет? ";
+> 	s = "Вам нечего идентифицировать.";
+1931c1931
+< 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+1936,1937c1936,1937
+< 		msg_format("%^s: %s (%c).",
+< 		           describe_use(item), o_name, index_to_label(item));
+---
+> 		msg_format("Вы используете: %s (%c).",
+> 		         /* describe_use(item), */ o_name, index_to_label(item));
+1941c1941
+< 		msg_format("In your pack: %s (%c).",
+---
+> 		msg_format("В рюкзаке: %s (%c).",
+1946c1946
+< 		msg_format("On the ground: %s.",
+---
+> 		msg_format("На земле: %s.",
+1976,1977c1976,1977
+< 	q = "Identify which item? ";
+< 	s = "You have nothing to identify.";
+---
+> 	q = "Идентифицировать какой предмет? ";
+> 	s = "Вам нечего идентифицировать.";
+2013c2013
+< 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+2018,2019c2018,2019
+< 		msg_format("%^s: %s (%c).",
+< 		           describe_use(item), o_name, index_to_label(item));
+---
+> 		msg_format("Вы используете: %s (%c).",
+> 		          /* describe_use(item), */ o_name, index_to_label(item));
+2023c2023
+< 		msg_format("In your pack: %s (%c).",
+---
+> 		msg_format("В рюкзаке: %s (%c).",
+2028c2028
+< 		msg_format("On the ground: %s.",
+---
+> 		msg_format("На земле: %s.",
+2098,2099c2098,2099
+< 	q = "Recharge which item? ";
+< 	s = "You have nothing to recharge.";
+---
+> 	q = "Перезарядить какой предмет? ";
+> 	s = "Вам нечего перезаряжать.";
+2120c2120
+< 
+---
+> 	
+2125,2126c2125,2126
+< 		msg_print("There is a bright flash of light.");
+< 
+---
+> 		msg_print("Вы видите яркую вспышку.");
+> 		
+2134c2134
+< 
+---
+> 		
+2143c2143
+< 
+---
+> 	
+2149c2149
+< 
+---
+> 		
+2152c2152
+< 
+---
+> 		
+2159c2159
+< 
+---
+> 		
+2338,2339c2338,2339
+< 	if (speed) msg_print("You feel a sudden stirring nearby!");
+< 	else if (sleep) msg_print("You hear a sudden stirring in the distance!");
+---
+> 	if (speed) msg_print("Вы слышите шум поблизости!");
+> 	else if (sleep) msg_print("Вы слышите шум вдали!");
+2355c2355
+< 	if (!get_com("Choose a monster race (by symbol) to banish: ", &typ))
+---
+> 	if (!get_com("Введите символ монстров для изгнания: ", &typ))
+2377c2377
+< 		take_hit(randint(4), "the strain of casting Banishment");
+---
+> 		take_hit(randint(4), "напряжение Изгнания");
+2414c2414
+< 		take_hit(randint(3), "the strain of casting Mass Banishment");
+---
+> 		take_hit(randint(3), "напряжение Массового Изгнания");
+2452c2452
+< 			if (!probe) msg_print("Probing...");
+---
+> 			if (!probe) msg_print("Анализ...");
+2455c2455
+< 			monster_desc(m_name, sizeof(m_name), m_ptr, 0x04);
+---
+> 			monster_desc(m_name, sizeof(m_name), m_ptr, 0x04, PAD_IMEN);
+2458c2458
+< 			msg_format("%^s has %d hit points.", m_name, m_ptr->hp);
+---
+> 			msg_format("%^s имеет %d здоровья.", m_name, m_ptr->hp);
+2471c2471
+< 		msg_print("That's all.");
+---
+> 		msg_print("И все.");
+2501c2501
+< 		msg_print("The ground shakes for a moment.");
+---
+> 		msg_print("Земля вздрагивает и вскоре затихает.");
+2584c2584
+< 		msg_print("There is a searing blast of light!");
+---
+> 		msg_print("Вы видите ослепительную вспышку!");
+2642c2642
+< 		msg_print("The ground shakes for a moment.");
+---
+> 		msg_print("Земля вздрагивает и вскоре затихает.");
+2721c2721
+< 				msg_print("The cave ceiling collapses!");
+---
+> 				msg_print("Потолок пещеры обрушивается!");
+2726c2726
+< 				msg_print("The cave floor twists in an unnatural way!");
+---
+> 				msg_print("Пол пещеры неестественно изгибается!");
+2731,2732c2731,2732
+< 				msg_print("The cave quakes!");
+< 				msg_print("You are pummeled with debris!");
+---
+> 				msg_print("Пещера трясется!");
+> 				msg_print("Вы осыпаны обломками!");
+2741c2741
+< 			msg_print("You are severely crushed!");
+---
+> 			msg_print("Вас сильно придавило!");
+2753c2753
+< 					msg_print("You nimbly dodge the blast!");
+---
+> 					msg_print("Вы уворачиваетесь от камней!");
+2759c2759
+< 					msg_print("You are bashed by rubble!");
+---
+> 					msg_print("Вы завалены камнями!");
+2766c2766
+< 					msg_print("You are crushed between the floor and ceiling!");
+---
+> 					msg_print("Вы придавлены между полом и потолком!");
+2778c2778
+< 		if (damage) take_hit(damage, "an earthquake");
+---
+> 		if (damage) take_hit(damage, "землетрясение");
+2838c2838
+< 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 					monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+2841c2841
+< 					msg_format("%^s wails out in pain!", m_name);
+---
+> 					msg_format("%^s воет от боли!", m_name);
+2856c2856
+< 						msg_format("%^s is embedded in the rock!", m_name);
+---
+> 						msg_format("%^s замуровывается камнями!", m_name);
+3034c3034
+< 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 					monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+3037c3037
+< 					msg_format("%^s wakes up.", m_name);
+---
+> 					msg_format("%^s просыпается.", m_name);
+3218c3218
+< 		msg_print("You are surrounded by a white light.");
+---
+> 		msg_print("Вы окружены белым светом.");
+3246c3246
+< 		msg_print("Darkness surrounds you.");
+---
+> 		msg_print("Тьма окружает вас.");
+3544a3545,3546
+> 	int rod;
+> 	
+3554c3556
+< 	object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3);
+---
+> 	rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3, PAD_VINIT);
+3560,3561c3562,3564
+< 		msg_format("A %s tries to %s, but your %s resists the effects!",
+< 		           "terrible black aura", "surround your armor", o_name);
+---
+> 		msg_format("Ужасная черная аура пытается окружить ваши доспехи, "
+> 			"но ваш%s %s сопротивляется эффекту!",
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"), o_name);
+3568c3571,3573
+< 		msg_format("A terrible black aura blasts your %s!", o_name);
+---
+> 		msg_format("Ужасная черная аура разрушает ваш%s %s!",
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "у" : rod == ROD_N ? "е" : "и"),
+> 			o_name);
+3607a3613,3614
+> 	
+> 	int rod;
+3618c3625
+< 	object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3);
+---
+> 	rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3, PAD_VINIT);
+3624,3625c3631,3633
+< 		msg_format("A %s tries to %s, but your %s resists the effects!",
+< 		           "terrible black aura", "surround your weapon", o_name);
+---
+> 		msg_format("Ужасная черная аура пытается окружить ваше оружие, "
+> 			"но ваш%s %s сопротивляется эффекту!",
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"), o_name);
+3632c3640,3642
+< 		msg_format("A terrible black aura blasts your %s!", o_name);
+---
+> 		msg_format("Ужасная черная аура разрушает ваш%s %s!",
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "у" : rod == ROD_N ? "е" : "и"),
+> 			o_name);
+3678c3688
+< 		cptr act = "magical";
+---
+> 		cptr act = "Волшебная";
+3681c3691
+< 		object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
+---
+> 		int rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0, PAD_VINIT);
+3687c3697
+< 				act = "fiery";
+---
+> 				act = "Огненная";
+3691c3701
+< 				act = "frosty";
+---
+> 				act = "Холодная";
+3695c3705
+< 				act = "sickly";
+---
+> 				act = "Болезненная";
+3700c3710,3712
+< 		msg_format("A %s aura surrounds the %s.", act, o_name);
+---
+> 		msg_format("%s аура окружает ваш%s %s.", act,
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "у" : rod == ROD_N ? "е" : "и"),
+> 			o_name);
+3717c3729
+< 		msg_print("The Branding failed.");
+---
+> 		msg_print("Пометка не удалась.");
+3777,3778c3789,3790
+< 	q = "Brand which kind of ammunition? ";
+< 	s = "You have nothing to brand.";
+---
+> 	q = "Пометить какую амуницию? ";
+> 	s = "У вас нет амуниции для пометки.";
+3825,3826c3837,3838
+< 	q = "Brand which bolts? ";
+< 	s = "You have no bolts to brand.";
+---
+> 	q = "Пометить какие болты? ";
+> 	s = "У вас нет болтов для пометки.";
+3861c3873
+< 			msg_print("You are surrounded by a malignant aura.");
+---
+> 			msg_print("Вы окружены темной аурой.");
+3882c3894
+< 			msg_print("You are surrounded by a powerful aura.");
+---
+> 			msg_print("Вы окружены мощной аурой.");

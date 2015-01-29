@@ -1,0 +1,301 @@
+60c60
+< 			msg_print("It was a good hit!");
+---
+> 			msg_print("Хороший выстрел!");
+65c65
+< 			msg_print("It was a great hit!");
+---
+> 			msg_print("Отличный выстрел!");
+70c70
+< 			msg_print("It was a superb hit!");
+---
+> 			msg_print("Превосходный выстрел!");
+99c99
+< 			msg_print("It was a good hit!");
+---
+> 			msg_print("Хороший удар!");
+104c104
+< 			msg_print("It was a great hit!");
+---
+> 			msg_print("Отличный удар!");
+109c109
+< 			msg_print("It was a superb hit!");
+---
+> 			msg_print("Превосходный удар!");
+114c114
+< 			msg_print("It was a *GREAT* hit!");
+---
+> 			msg_print("*ОТЛИЧНЫЙ* удар!");
+119c119
+< 			msg_print("It was a *SUPERB* hit!");
+---
+> 			msg_print("*ПРЕВОСХОДНЫЙ* удар!");
+433c433
+< 					msg_print("You have found a trap.");
+---
+> 					msg_print("Вы нашли ловушку.");
+443c443
+< 					msg_print("You have found a secret door.");
+---
+> 					msg_print("Вы нашли скрытую дверь.");
+468c468
+< 						msg_print("You have discovered a trap on the chest!");
+---
+> 						msg_print("Вы нашли ловушку на сундуке!");
+537c537
+< 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+540c540
+< 	msg_format("You have %s (%c).", o_name, index_to_label(slot));
+---
+> 	msg_format("У вас: %s (%c).", o_name, index_to_label(slot));
+576c576
+< 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 		object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_VINIT);
+588,589c588,589
+< 			msg_format("You have found %ld gold pieces worth of %s.",
+< 			           (long)o_ptr->pval, o_name);
+---
+> 			msg_format("Вы нашли %s на общую сумму %ld золота.",
+> 			           o_name, (long)o_ptr->pval);
+658c658
+< 			msg_format("You see %s.", o_name);
+---
+> 			msg_format("Вы видите %s.", o_name);
+667c667,668
+< 			msg_format("You have no room for %s.", o_name);
+---
+> 			object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_RODIT);
+> 			msg_format("У вас нет места для %s.", o_name);
+677c678
+< 			strnfmt(out_val, sizeof(out_val), "Pick up %s? ", o_name);
+---
+> 			strnfmt(out_val, sizeof(out_val), "Взять %s? ", o_name);
+698c699
+< 				object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 				object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_VINIT);
+701c702
+< 				msg_format("You see %s.", o_name);
+---
+> 				msg_format("Вы видите %s.", o_name);
+708c709
+< 				msg_format("You see a pile of %d objects.", not_pickup);
+---
+> 				msg_format("Вы видите кучу из %d предметов.", not_pickup);
+725c726
+< 				object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 				object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_RODIT);
+728c729
+< 				msg_format("You have no room for %s.", o_name);
+---
+> 				msg_format("У вас нет места для %s.", o_name);
+735c736
+< 				msg_print("You have no room for any of the objects on the floor.");
+---
+> 				msg_print("У вас нет места для предметов на полу.");
+753c754
+< 			q = "Get which item? ";
+---
+> 			q = "Поднять какой предмет? ";
+782c783
+< 	cptr name = "a trap";
+---
+> 	cptr name = "ловушкой";
+793c794
+< 			msg_print("You fall through a trap door!");
+---
+> 			msg_print("Вы падаете в люк!");
+796c797
+< 				msg_print("You float gently down to the next level.");
+---
+> 				msg_print("Вы плавно опускаетесь на следующий уровень.");
+815c816
+< 			msg_print("You fall into a pit!");
+---
+> 			msg_print("Вы падаете в яму!");
+818c819
+< 				msg_print("You float gently to the bottom of the pit.");
+---
+> 				msg_print("Вы плавно опускаетесь на дно ямы.");
+830c831
+< 			msg_print("You fall into a spiked pit!");
+---
+> 			msg_print("Вы падаете в яму с шипами!");
+834,835c835,836
+< 				msg_print("You float gently to the floor of the pit.");
+< 				msg_print("You carefully avoid touching the spikes.");
+---
+> 				msg_print("Вы плавно опускаетесь на дно ямы.");
+> 				msg_print("Вы не задеваете шипы.");
+846c847
+< 					msg_print("You are impaled!");
+---
+> 					msg_print("Вы поранились на шипах!");
+860c861
+< 			msg_print("You fall into a spiked pit!");
+---
+> 			msg_print("Вы падаете в яму с шипами!");
+864,865c865,866
+< 				msg_print("You float gently to the floor of the pit.");
+< 				msg_print("You carefully avoid touching the spikes.");
+---
+> 				msg_print("Вы плавно опускаетесь на дно ямы.");
+> 				msg_print("Вы не задеваете шипы.");
+876c877
+< 					msg_print("You are impaled on poisonous spikes!");
+---
+> 					msg_print("Вы поранились на отравленных шипах!");
+883c884
+< 						msg_print("The poison does not affect you!");
+---
+> 						msg_print("Яд не действует на вас!");
+901c902
+< 			msg_print("You are enveloped in a cloud of smoke!");
+---
+> 			msg_print("Вас обволакивает облако дыма!");
+914c915
+< 			msg_print("You hit a teleport trap!");
+---
+> 			msg_print("Вы попали в телепортационную ловушку!");
+921c922
+< 			msg_print("You are enveloped in flames!");
+---
+> 			msg_print("Вас обволакивают языки пламени!");
+923c924
+< 			fire_dam(dam, "a fire trap");
+---
+> 			fire_dam(dam, "огненной ловушкой");
+929c930
+< 			msg_print("You are splashed with acid!");
+---
+> 			msg_print("Вы обрызганы кислотой!");
+931c932
+< 			acid_dam(dam, "an acid trap");
+---
+> 			acid_dam(dam, "кислотной ловушкой");
+939c940
+< 				msg_print("A small dart hits you!");
+---
+> 				msg_print("В вас попадает маленький дротик!");
+946c947
+< 				msg_print("A small dart barely misses you.");
+---
+> 				msg_print("Вы успели увернуться от маленького дротика.");
+955c956
+< 				msg_print("A small dart hits you!");
+---
+> 				msg_print("В вас попадает маленький дротик!");
+962c963
+< 				msg_print("A small dart barely misses you.");
+---
+> 				msg_print("Вы успели увернуться от маленького дротика.");
+971c972
+< 				msg_print("A small dart hits you!");
+---
+> 				msg_print("В вас попадает маленький дротик!");
+978c979
+< 				msg_print("A small dart barely misses you.");
+---
+> 				msg_print("Вы успели увернуться от маленького дротика.");
+987c988
+< 				msg_print("A small dart hits you!");
+---
+> 				msg_print("В вас попадает маленький дротик!");
+994c995
+< 				msg_print("A small dart barely misses you.");
+---
+> 				msg_print("Вы успели увернуться от маленького дротика.");
+1001c1002
+< 			msg_print("You are surrounded by a black gas!");
+---
+> 			msg_print("Вы окружены облаком черного газа!");
+1011c1012
+< 			msg_print("You are surrounded by a gas of scintillating colors!");
+---
+> 			msg_print("Вы окружены облаком газа странных цветов!");
+1021c1022
+< 			msg_print("You are surrounded by a pungent green gas!");
+---
+> 			msg_print("Вы окружены облаком зеленого газа!");
+1031c1032
+< 			msg_print("You are surrounded by a strange white mist!");
+---
+> 			msg_print("Вы окружены странным облаком белого тумана!");
+1080c1081
+< 	monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 	monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
+1094c1095
+< 		msg_format("You are too afraid to attack %s!", m_name);
+---
+> 		msg_format("Вы боитесь атаковать %s!", m_name);
+1116c1117
+< 			message_format(MSG_HIT, m_ptr->r_idx, "You hit %s.", m_name);
+---
+> 			message_format(MSG_HIT, m_ptr->r_idx, "Вы бьете %s.", m_name);
+1140c1141
+< 				msg_format("You do %d (out of %d) damage.", k, m_ptr->hp);
+---
+> 				msg_format("Вы наносите %d (из %d) урона.", k, m_ptr->hp);
+1153c1154,1156
+< 				msg_print("Your hands stop glowing.");
+---
+> 				msg_print("Ваши руки перестают светиться.");
+> 
+> 				monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+1163c1166,1167
+< 					msg_format("%^s is unaffected.", m_name);
+---
+> 					msg_format("%^s не воздействован%s.", m_name,
+> 						(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о"));
+1167c1171,1172
+< 					msg_format("%^s is unaffected.", m_name);
+---
+> 					msg_format("%^s не воздействован%s.", m_name,
+> 						(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о"));
+1171c1176,1177
+< 					msg_format("%^s appears confused.", m_name);
+---
+> 					msg_format("%^s контужен%s.", m_name,
+> 						(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о"));
+1181c1187
+< 			message_format(MSG_MISS, m_ptr->r_idx, "You miss %s.", m_name);
+---
+> 			message_format(MSG_MISS, m_ptr->r_idx, "Вы не попали в %s.", m_name);
+1190c1196,1197
+< 		message_format(MSG_FLEE, m_ptr->r_idx, "%^s flees in terror!", m_name);
+---
+> 		monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+> 		message_format(MSG_FLEE, m_ptr->r_idx, "%^s бежит в ужасе!", m_name);
+1266c1273
+< 				message(MSG_HITWALL, 0, "You feel a pile of rubble blocking your way.");
+---
+> 				message(MSG_HITWALL, 0, "Вы чувствуете кучу мусора на пути.");
+1274c1281
+< 				message(MSG_HITWALL, 0, "You feel a door blocking your way.");
+---
+> 				message(MSG_HITWALL, 0, "Вы чувствуете дверь на пути.");
+1282c1289
+< 				message(MSG_HITWALL, 0, "You feel a wall blocking your way.");
+---
+> 				message(MSG_HITWALL, 0, "Вы чувствуете стену на пути.");
+1294c1301
+< 				message(MSG_HITWALL, 0, "There is a pile of rubble blocking your way.");
+---
+> 				message(MSG_HITWALL, 0, "Вы уперлись в кучу мусора.");
+1300c1307
+< 				message(MSG_HITWALL, 0, "There is a door blocking your way.");
+---
+> 				message(MSG_HITWALL, 0, "Вы уперлись в дверь.");
+1306c1313
+< 				message(MSG_HITWALL, 0, "There is a wall blocking your way.");
+---
+> 				message(MSG_HITWALL, 0, "Вы уперлись в стену.");
+1362c1369
+< 			msg_print("You found a trap!");
+---
+> 			msg_print("Вы попали в ловушку!");

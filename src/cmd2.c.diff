@@ -1,0 +1,382 @@
+22c22
+< 		msg_print("I see no up staircase here.");
+---
+> 		msg_print("Здесь нет лестницы вверх.");
+29c29
+< 		msg_print("Nothing happens!");
+---
+> 		msg_print("...Ничего не происходит!");
+37c37
+< 	message(MSG_STAIRS, 0, "You enter a maze of up staircases.");
+---
+> 	message(MSG_STAIRS, 0, "Вы входите в лабиринт лестниц вверх.");
+58c58
+< 		msg_print("I see no down staircase here.");
+---
+> 		msg_print("Здесь нет лестницы вниз.");
+66c66
+< 	message(MSG_STAIRS, 0, "You enter a maze of down staircases.");
+---
+> 	message(MSG_STAIRS, 0, "Вы входите в лабиринт лестниц вниз.");
+275,276c275,276
+< 		msg_print("A small needle has pricked you!");
+< 		take_hit(damroll(1, 4), "a poison needle");
+---
+> 		msg_print("Вы укололись маленьким шипом!");
+> 		take_hit(damroll(1, 4), "ядовитый шип");
+283,284c283,284
+< 		msg_print("A small needle has pricked you!");
+< 		take_hit(damroll(1, 4), "a poison needle");
+---
+> 		msg_print("Вы укололись маленьким шипом!");
+> 		take_hit(damroll(1, 4), "ядовитый шип");
+291c291
+< 		msg_print("A puff of green gas surrounds you!");
+---
+> 		msg_print("Вас окружает облако зеленого газа!");
+301c301
+< 		msg_print("A puff of yellow gas surrounds you!");
+---
+> 		msg_print("Вас окружает облако желтого газа!");
+312c312
+< 		msg_print("You are enveloped in a cloud of smoke!");
+---
+> 		msg_print("Вас окружает облако дыма!");
+322,323c322,323
+< 		msg_print("There is a sudden explosion!");
+< 		msg_print("Everything inside the chest is destroyed!");
+---
+> 		msg_print("Внезапно происходит взрыв!");
+> 		msg_print("Все содержимое сундука уничтожено!");
+325c325
+< 		take_hit(damroll(5, 8), "an exploding chest");
+---
+> 		take_hit(damroll(5, 8), "взорвавшийся сундук");
+370c370
+< 			msg_print("You have picked the lock.");
+---
+> 			msg_print("Вы подобрали отмычку.");
+381c381
+< 			message(MSG_LOCKPICK_FAIL, 0, "You failed to pick the lock.");
+---
+> 			message(MSG_LOCKPICK_FAIL, 0, "Вы не смогли подобрать отмычку.");
+432c432
+< 		msg_print("I don't see any traps.");
+---
+> 		msg_print("Вы не видите здесь ловушек.");
+438c438
+< 		msg_print("The chest is not trapped.");
+---
+> 		msg_print("Вы уже обезвредили ловушки.");
+444c444
+< 		msg_print("The chest is not trapped.");
+---
+> 		msg_print("В этом сундуке нет ловушки.");
+450c450
+< 		msg_print("You have disarmed the chest.");
+---
+> 		msg_print("Вы обезвредили ловушки сундука.");
+461c461
+< 		msg_print("You failed to disarm the chest.");
+---
+> 		msg_print("У вас не получилось обезвредить сундук.");
+467c467
+< 		msg_print("You set off a trap!");
+---
+> 		msg_print("Вы включили ловушку!");
+616c616
+< 		msg_print("You see nothing there.");
+---
+> 		msg_print("Здесь ничего нет.");
+627c627
+< 		message(MSG_NOTHING_TO_OPEN, 0, "You see nothing there to open.");
+---
+> 		message(MSG_NOTHING_TO_OPEN, 0, "Здесь нечего открывать.");
+660c660
+< 		msg_print("The door appears to be stuck.");
+---
+> 		msg_print("Эта дверь заколочена.");
+686c686
+< 			message(MSG_OPENDOOR, 0, "You have picked the lock.");
+---
+> 			message(MSG_OPENDOOR, 0, "Вы подобрали отмычку.");
+705c705
+< 			message(MSG_LOCKPICK_FAIL, 0, "You failed to pick the lock.");
+---
+> 			message(MSG_LOCKPICK_FAIL, 0, "Вы не смогли подобрать отмычку.");
+810c810
+< 		msg_print("There is a monster in the way!");
+---
+> 		msg_print("На пути монстр!");
+844c844
+< 		msg_print("You see nothing there.");
+---
+> 		msg_print("Здесь ничего нет.");
+855c855
+< 		msg_print("You see nothing there to close.");
+---
+> 		msg_print("Здесь нечего закрывать.");
+886c886
+< 		msg_print("The door appears to be broken.");
+---
+> 		msg_print("Эта дверь выбита.");
+968c968
+< 		msg_print("There is a monster in the way!");
+---
+> 		msg_print("На пути монстр!");
+996c996
+< 		msg_print("You see nothing there.");
+---
+> 		msg_print("Здесь ничего нет.");
+1006c1006
+< 		msg_print("You see nothing there to tunnel.");
+---
+> 		msg_print("Здесь некуда копать.");
+1076c1076
+< 		msg_print("This seems to be permanent rock.");
+---
+> 		msg_print("Через такой камень копать нельзя.");
+1085c1085
+< 			msg_print("You have finished the tunnel.");
+---
+> 			msg_print("Вы выкопали туннель.");
+1092c1092
+< 			msg_print("You tunnel into the granite wall.");
+---
+> 			msg_print("Вы копаете гранитную стену.");
+1138c1138
+< 				msg_print("You have found something!");
+---
+> 				msg_print("Вы что-то нашли!");
+1145c1145
+< 				msg_print("You have finished the tunnel.");
+---
+> 				msg_print("Вы выкопали туннель.");
+1153c1153
+< 			msg_print("You tunnel into the quartz vein.");
+---
+> 			msg_print("Вы копаете кварцевую жилу.");
+1161c1161
+< 			msg_print("You tunnel into the magma vein.");
+---
+> 			msg_print("Вы копаете магматическую жилу.");
+1173c1173
+< 			msg_print("You have removed the rubble.");
+---
+> 			msg_print("Вы раскидали мусор.");
+1184c1184
+< 					msg_print("You have found something!");
+---
+> 					msg_print("Вы что-то нашли!");
+1192c1192
+< 			msg_print("You dig in the rubble.");
+---
+> 			msg_print("Вы копаете мусор.");
+1203c1203
+< 			msg_print("You have finished the tunnel.");
+---
+> 			msg_print("Вы выкопали туннель.");
+1210c1210
+< 			msg_print("You tunnel into the granite wall.");
+---
+> 			msg_print("Вы копаете гранитную стену.");
+1224c1224
+< 			msg_print("You have finished the tunnel.");
+---
+> 			msg_print("Вы выкопали туннель.");
+1231c1231
+< 			msg_print("You tunnel into the door.");
+---
+> 			msg_print("Вы копаете дверь.");
+1295c1295
+< 		msg_print("There is a monster in the way!");
+---
+> 		msg_print("На пути монстр!");
+1322c1322
+< 		msg_print("You see nothing there.");
+---
+> 		msg_print("Здесь ничего нет.");
+1333c1333
+< 		msg_print("You see nothing there to disarm.");
+---
+> 		msg_print("Здесь нечего обезвреживать.");
+1389c1389
+< 		msg_format("You have disarmed the %s.", name);
+---
+> 		msg_format("Вы обезвредили ловушку (%s).", name);
+1408c1408
+< 		msg_format("You failed to disarm the %s.", name);
+---
+> 		msg_format("Вы не смогли обезвредить ловушку (%s).", name);
+1418c1418
+< 		msg_format("You set off the %s!", name);
+---
+> 		msg_format("Вы попали в ловушку (%s)!", name);
+1507c1507
+< 		msg_print("There is a monster in the way!");
+---
+> 		msg_print("На пути монстр!");
+1541c1541
+< 		msg_print("You see nothing there.");
+---
+> 		msg_print("Здесь ничего нет.");
+1552c1552
+< 		msg_print("You see nothing there to bash.");
+---
+> 		msg_print("Здесь нечего выбивать.");
+1582c1582
+< 	msg_print("You smash into the door!");
+---
+> 	msg_print("Вы врезаетесь в дверь!");
+1613c1613
+< 		message(MSG_OPENDOOR, 0, "The door crashes open!");
+---
+> 		message(MSG_OPENDOOR, 0, "Дверь выламывается!");
+1624c1624
+< 		msg_print("The door holds firm.");
+---
+> 		msg_print("Дверь держит крепко.");
+1634c1634
+< 		msg_print("You are off-balance.");
+---
+> 		msg_print("У вас заболела голова!");
+1705c1705
+< 		msg_print("There is a monster in the way!");
+---
+> 		msg_print("На пути монстр!");
+1835c1835
+< 		msg_print("You spin around.");
+---
+> 		msg_print("Вы поворачиваетесь вокруг.");
+1885c1885
+< 		msg_print("You see nothing there.");
+---
+> 		msg_print("Здесь ничего нет.");
+1896c1896
+< 		msg_print("You see nothing there to spike.");
+---
+> 		msg_print("Здесь нечего клинить.");
+1921c1921
+< 		msg_print("You have no spikes!");
+---
+> 		msg_print("У вас нет шипов!");
+1956c1956
+< 		msg_print("There is a monster in the way!");
+---
+> 		msg_print("На пути монстр!");
+1969c1969
+< 		msg_print("You jam the door with a spike.");
+---
+> 		msg_print("Вы заклиниваете дверь шипом.");
+2013c2013
+< 			msg_print("There is a pile of rubble in the way!");
+---
+> 			msg_print("Вы уперлись в кучу мусора!");
+2023c2023
+< 			msg_print("There is a door in the way!");
+---
+> 			msg_print("Вы уперлись в дверь!");
+2030c2030
+< 			msg_print("There is a wall in the way!");
+---
+> 			msg_print("Вы уперлись в стену!");
+2129c2129
+< 		msg_print("You are too confused!");
+---
+> 		msg_print("Вы контужены и не можете бежать!");
+2233c2233
+< 		cptr p = "Rest (0-9999, '*' for HP/SP, '&' as needed): ";
+---
+> 		cptr p = "Отдыхать (0-9999, '*' для HP/SP, '&' по необх.): ";
+2409c2409
+< 		msg_print("You have nothing to fire with.");
+---
+> 		msg_print("Вам не из чего стрелять.");
+2418,2419c2418,2419
+< 	q = "Fire which item? ";
+< 	s = "You have nothing to fire.";
+---
+> 	q = "Выстрелить каким предметом? ";
+> 	s = "Вам нечем стрелять.";
+2467c2467
+< 	object_desc(o_name, sizeof(o_name), i_ptr, FALSE, 3);
+---
+> 	object_desc(o_name, sizeof(o_name), i_ptr, FALSE, 3, PAD_IMEN);
+2571c2571
+< 				cptr note_dies = " dies.";
+---
+> 				cptr note_dies = " погибает.";
+2580c2580,2582
+< 					note_dies = " is destroyed.";
+---
+> 					if (!m_ptr->ml) note_dies = " уничтожено.";
+> 					else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " уничтожена." :
+> 						r_ptr->flags1 & RF1_MALE ? " уничтожен." : " уничтожено.");
+2588c2590
+< 					msg_format("The %s finds a mark.", o_name);
+---
+> 					msg_format("%s попадает во что-то.", o_name);
+2597c2599
+< 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 					monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
+2600c2602
+< 					msg_format("The %s hits %s.", o_name, m_name);
+---
+> 					msg_format("%s попадает в %s.", o_name, m_name);
+2619c2621
+< 					msg_format("You do %d (out of %d) damage.",
+---
+> 					msg_format("Вы наносите %d (из %d) урона.",
+2641c2643
+< 						monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 						monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+2645c2647
+< 						               "%^s flees in terror!", m_name);
+---
+> 						               "%^s бежит в ужасе!", m_name);
+2701,2702c2703,2704
+< 	q = "Throw which item? ";
+< 	s = "You have nothing to throw.";
+---
+> 	q = "Бросить какой предмет? ";
+> 	s = "Вам нечего бросать.";
+2749c2751
+< 	object_desc(o_name, sizeof(o_name), i_ptr, FALSE, 3);
+---
+> 	object_desc(o_name, sizeof(o_name), i_ptr, FALSE, 3, PAD_IMEN);
+2852c2854
+< 				cptr note_dies = " dies.";
+---
+> 				cptr note_dies = " погибает.";
+2861c2863,2865
+< 					note_dies = " is destroyed.";
+---
+> 					if (!m_ptr->ml) note_dies = " уничтожено.";
+> 					else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " уничтожена." :
+> 						r_ptr->flags1 & RF1_MALE ? " уничтожен." : " уничтожено.");
+2869c2873
+< 					msg_format("The %s finds a mark.", o_name);
+---
+> 					msg_format("%s попадает во что-то.", o_name);
+2878c2882
+< 					monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 					monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_VINIT);
+2881c2885
+< 					msg_format("The %s hits %s.", o_name, m_name);
+---
+> 					msg_format("%s попадает в %s.", o_name, m_name);
+2900c2904
+< 					msg_format("You do %d (out of %d) damage.",
+---
+> 					msg_format("Вы наносите %d (из %d) урона.",
+2922c2926
+< 						monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 						monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+2926c2930
+< 						               "%^s flees in terror!", m_name);
+---
+> 						               "%^s бежит в ужасе!", m_name);

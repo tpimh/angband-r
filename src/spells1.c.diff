@@ -1,0 +1,676 @@
+278c278
+< 		msg_print("Nothing happens.");
+---
+> 		msg_print("Ничего не происходит.");
+285c285
+< 		message(MSG_TPLEVEL, 0, "You sink through the floor.");
+---
+> 		message(MSG_TPLEVEL, 0, "Вы проваливаетесь сквозь пол.");
+296c296
+< 		message(MSG_TPLEVEL, 0, "You rise up through the ceiling.");
+---
+> 		message(MSG_TPLEVEL, 0, "Вы поднимаетесь через потолок.");
+307c307
+< 		message(MSG_TPLEVEL, 0, "You rise up through the ceiling.");
+---
+> 		message(MSG_TPLEVEL, 0, "Вы поднимаетесь через потолок.");
+318c318
+< 		message(MSG_TPLEVEL, 0, "You sink through the floor.");
+---
+> 		message(MSG_TPLEVEL, 0, "Вы проваливаетесь сквозь пол.");
+496c496
+< 		message(MSG_DEATH, 0, "You die.");
+---
+> 		message(MSG_DEATH, 0, "Вы умираете...");
+521c521
+< 			bell("Low hitpoint warning!");
+---
+> 			bell("Низкое здоровье!");
+525c525
+< 		message(MSG_HITPOINT_WARN, 0, "*** LOW HITPOINT WARNING! ***");
+---
+> 		message(MSG_HITPOINT_WARN, 0, "*** НИЗКОЕ ЗДОРОВЬЕ! ***");
+774,776d773
+< 			/* Scale the destruction chance up */
+< 			int chance = perc * 100;
+< 
+778c775
+< 			if (o_ptr->tval == TV_ROD) chance = (chance / 4);
+---
+> 			if (o_ptr->tval == TV_ROD) perc = (perc / 4);
+783c780
+< 				if (rand_int(10000) < chance) amt++;
+---
+> 				if (rand_int(100) < perc) amt++;
+790c787,788
+< 				object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3);
+---
+> 				int rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3,
+> 					(amt < o_ptr->number) ? PAD_RODIT : PAD_IMEN);
+793c791
+< 				msg_format("%sour %s (%c) %s destroyed!",
+---
+> 				msg_format("%s %s (%c) %s уничтожен%s!",
+795,796c793,798
+< 				            ((amt == o_ptr->number) ? "All of y" :
+< 				             (amt > 1 ? "Some of y" : "One of y")) : "Y"),
+---
+> 				            ((amt == o_ptr->number) ? "Все ваши" :
+> 				             (amt > 1 ? "Некоторые из ваших" :
+> 				              (rod == ROD_M ? "Один из ваших" : rod == ROD_F ? "Одна из ваших" : rod == ROD_N ? "Одно из ваших" : "Одни из ваших")
+> 				              )) :
+> 				              (rod == ROD_M ? "Ваш" : rod == ROD_F ? "Ваша" : rod == ROD_N ? "Ваше" : "Ваши")
+> 				              ),
+798c800,804
+< 				           ((amt > 1) ? "were" : "was"));
+---
+> 				           ((amt > 1) ? "были" :
+> 				              (rod == ROD_M ? "был" : rod == ROD_F ? "была" : rod == ROD_N ? "было" : "были")
+> 				           ),
+> 				              (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы")
+> 				           );
+842a849,850
+> 	
+> 	int rod;
+864c872
+< 	object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
+---
+> 	rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0, PAD_IMEN);
+872c880,883
+< 		msg_format("Your %s is unaffected!", o_name);
+---
+> 		msg_format("Ваш%s %s не поврежден%s!",
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+> 			o_name,
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+878c889,892
+< 	msg_format("Your %s is damaged!", o_name);
+---
+> 	msg_format("Ваш%s %s поврежден%s!",
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+> 			o_name,
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+1211c1225
+< 	int t = 0;
+---
+> 	int t = 0, rod;
+1250c1264
+< 	object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
+---
+> 	rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0, PAD_IMEN);
+1257c1271,1272
+< 		msg_format("Your %s (%c) resist%s disenchantment!",
+---
+> 		msg_format("Ваш%s %s (%c) сопротивля%cтся антимагии!",
+> 			   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+1259c1274
+< 		           ((o_ptr->number != 1) ? "" : "s"));
+---
+> 		           ((o_ptr->number != 1) ? 'ю' : 'е'));
+1279c1294,1295
+< 	msg_format("Your %s (%c) %s disenchanted!",
+---
+> 	msg_format("Ваш%s %s (%c) был%s раззачарован%s!",
+> 		   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+1281c1297,1298
+< 	           ((o_ptr->number != 1) ? "were" : "was"));
+---
+> 	           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"),
+> 	           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+1319c1336
+< 				msg_print("You resist the effects!");
+---
+> 				msg_print("Вы сопротивляетесь эффектам!");
+1332c1349
+< 				msg_print("You resist the effects!");
+---
+> 				msg_print("Вы сопротивляетесь эффектам!");
+1336c1353
+< 			msg_print("Your body starts to scramble...");
+---
+> 			msg_print("Ваше тело начинает меняться...");
+1445c1462
+< 					msg_print("There is a bright flash of light!");
+---
+> 					msg_print("Вы видите яркую вспышку!");
+1466c1483
+< 					msg_print("Click!");
+---
+> 					msg_print("Щелк!");
+1490c1507
+< 					msg_print("There is a bright flash of light!");
+---
+> 					msg_print("Вы видите яркую вспышку!");
+1527c1544
+< 					msg_print("The wall turns into mud!");
+---
+> 					msg_print("Стена расплавляется!");
+1544,1545c1561,1562
+< 					msg_print("The vein turns into mud!");
+< 					msg_print("You have found something!");
+---
+> 					msg_print("Жила расплавляется!");
+> 					msg_print("Вы что-то нашли!");
+1565c1582
+< 					msg_print("The vein turns into mud!");
+---
+> 					msg_print("Жила расплавляется!");
+1582c1599
+< 					msg_print("The rubble turns into mud!");
+---
+> 					msg_print("Мусор расплавляется!");
+1598c1615
+< 						msg_print("There was something buried in the rubble!");
+---
+> 						msg_print("В нем что-то было закопано!");
+1613c1630
+< 					msg_print("The door turns into mud!");
+---
+> 					msg_print("Дверь расплавляется!");
+1795c1812
+< 					note_kill = (plural ? " melt!" : " melts!");
+---
+> 					note_kill = (plural ? " плавятся!" : " плавится!");
+1807c1824
+< 					note_kill = (plural ? " are destroyed!" : " is destroyed!");
+---
+> 					note_kill = (plural ? " замыкаются!" : " замыкается!");
+1819c1836
+< 					note_kill = (plural ? " burn up!" : " burns up!");
+---
+> 					note_kill = (plural ? " загораются!" : " загорается!");
+1830c1847
+< 					note_kill = (plural ? " shatter!" : " shatters!");
+---
+> 					note_kill = (plural ? " разбиваются!" : " разбивается!");
+1843c1860
+< 					note_kill = (plural ? " burn up!" : " burns up!");
+---
+> 					note_kill = (plural ? " загораются!" : " загорается!");
+1850c1867
+< 					note_kill = (plural ? " are destroyed!" : " is destroyed!");
+---
+> 					note_kill = (plural ? " замыкаются!" : " замыкается!");
+1862c1879
+< 					note_kill = (plural ? " burn up!" : " burns up!");
+---
+> 					note_kill = (plural ? " загораются!" : " загорается!");
+1869c1886
+< 					note_kill = (plural ? " shatter!" : " shatters!");
+---
+> 					note_kill = (plural ? " разбиваются!" : " разбиваются!");
+1883c1900
+< 					note_kill = (plural ? " shatter!" : " shatters!");
+---
+> 					note_kill = (plural ? " разбиваются!" : " разбивается!");
+1893c1910
+< 				note_kill = (plural ? " are destroyed!" : " is destroyed!");
+---
+> 				note_kill = (plural ? " дезинтегрируются!" : " дезинтегрируется!");
+1903c1920
+< 					note_kill = (plural ? " are destroyed!" : " is destroyed!");
+---
+> 					note_kill = (plural ? " сгорают!" : " сгорает!");
+1927c1944
+< 							msg_print("Click!");
+---
+> 							msg_print("Щелк!");
+1940a1958,1959
+> 			int rod = 0;
+> 			
+1945c1964
+< 				object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
+---
+> 				rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0, PAD_IMEN);
+1954,1955c1973,1975
+< 					msg_format("The %s %s unaffected!",
+< 					           o_name, (plural ? "are" : "is"));
+---
+> 					msg_format("%s не воздействован%s!",
+> 					           o_name,
+> 					           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+1965c1985
+< 					msg_format("The %s%s", o_name, note_kill);
+---
+> 					msg_format("%s%s", o_name, note_kill);
+2082c2102
+< 	cptr note_dies = " dies.";
+---
+> 	cptr note_dies = " погибает.";
+2109c2129
+< 	monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 	monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+2120c2140,2142
+< 		note_dies = " is destroyed.";
+---
+> 		if (!m_ptr->ml) note_dies = " уничтожено.";
+> 		else note_dies = (r_ptr->flags1 & RF1_FEMALE ? " уничтожена." :
+> 	                   r_ptr->flags1 & RF1_MALE ? " уничтожен." : " уничтожено.");
+2140c2162
+< 				note = " resists a lot.";
+---
+> 				note = " сопротивляется.";
+2153c2175
+< 				note = " resists a lot.";
+---
+> 				note = " сопротивляется.";
+2166c2188
+< 				note = " resists a lot.";
+---
+> 				note = " сопротивляется.";
+2179c2201
+< 				note = " resists a lot.";
+---
+> 				note = " сопротивляется.";
+2192c2214
+< 				note = " resists a lot.";
+---
+> 				note = " сопротивляется.";
+2206c2228
+< 				note = " is hit hard.";
+---
+> 				note = " серьезно задет%s.";
+2225c2247
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2238c2260
+< 				note = " is immune.";
+---
+> 				note = " неуязвим%s к атаке.";
+2244c2266
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2250c2272
+< 				note = " resists somewhat.";
+---
+> 				note = " немного сопротивляется.";
+2262c2284
+< 				note = " is immune.";
+---
+> 				note = " неуязвим%s к атаке.";
+2277c2299
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2290c2312
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2303c2325
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2316c2338
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2321c2343
+< 				note = " resists somewhat.";
+---
+> 				note = " немного сопротивляется.";
+2333c2355
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2346c2368
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2360c2382
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2372c2394
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2384c2406
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2401c2423
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2429c2451
+< 				note = " resists a lot.";
+---
+> 				note = " сопротивляется.";
+2454c2476
+< 				note = " is unaffected!";
+---
+> 				note = " не воздействован%s!";
+2474c2496
+< 				note = " is unaffected!";
+---
+> 				note = " не воздействован%s!";
+2500c2522
+< 				note = " spawns!";
+---
+> 				note = " удваивается!";
+2528c2550
+< 			note = " looks healthier.";
+---
+> 			note = " выглядит здоровее.";
+2543c2565
+< 			note = " starts moving faster.";
+---
+> 			note = " начинает двигаться быстрее.";
+2560c2582
+< 				note = " is unaffected!";
+---
+> 				note = " не воздействован%s!";
+2568c2590
+< 				note = " starts moving slower.";
+---
+> 				note = " начинает двигаться медленнее.";
+2594c2616
+< 				note = " is unaffected!";
+---
+> 				note = " не воздействован%s!";
+2600c2622
+< 				note = " falls asleep!";
+---
+> 				note = " засыпает!";
+2633c2655
+< 				note = " is unaffected!";
+---
+> 				note = " не воздействован%s!";
+2657,2658c2679,2680
+< 				note = " cringes from the light!";
+< 				note_dies = " shrivels away in the light!";
+---
+> 				note = " корчится от света!";
+> 				note_dies = " погибает от лучей света!";
+2679c2701
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2685,2686c2707,2708
+< 				note = " cringes from the light!";
+< 				note_dies = " shrivels away in the light!";
+---
+> 				note = " корчится от света!";
+> 				note_dies = " погибает от лучей света!";
+2699c2721
+< 				note = " resists.";
+---
+> 				note = " сопротивляется.";
+2719,2720c2741,2742
+< 				note = " loses some skin!";
+< 				note_dies = " dissolves!";
+---
+> 				note = " теряет части тела!";
+> 				note_dies = " рассыпается!";
+2816c2838
+< 					note = " is unaffected!";
+---
+> 					note = " не воздействован%s!";
+2854c2876
+< 					note = " is unaffected!";
+---
+> 					note = " не воздействован%s!";
+2888c2910
+< 				note = " is unaffected!";
+---
+> 				note = " не воздействован%s!";
+2912,2913c2934,2935
+< 				note = " shudders.";
+< 				note_dies = " dissolves!";
+---
+> 				note = " трясется.";
+> 				note_dies = " рассыпается!";
+2943,2944c2965,2966
+< 				note = " shudders.";
+< 				note_dies = " dissolves!";
+---
+> 				note = " трясется.";
+> 				note_dies = " рассыпается!";
+2968,2969c2990,2991
+< 			note = " shudders.";
+< 			note_dies = " dissolves!";
+---
+> 			note = " трясется.";
+> 			note_dies = " рассыпается!";
+3016c3038
+< 		note = " is unaffected!";
+---
+> 		note = " не воздействован%s!";
+3028c3050
+< 			note = " changes!";
+---
+> 			note = " меняется!";
+3056c3078
+< 		note = " disappears!";
+---
+> 		note = " исчезает!";
+3077c3099
+< 			note = " is more dazed.";
+---
+> 			note = " оглушен%s сильнее.";
+3082c3104
+< 			note = " is dazed.";
+---
+> 			note = " оглушен%s.";
+3102c3124
+< 			note = " looks more confused.";
+---
+> 			note = " контужен%s сильнее.";
+3109c3131
+< 			note = " looks confused.";
+---
+> 			note = " контужен%s.";
+3151c3173,3174
+< 			if (note) msg_format("%^s%s", m_name, note);
+---
+> 			if (note) msg_format("%^s%s", m_name, format(note,
+> 				(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о")));
+3156c3179
+< 		{
+---
+> 		{	
+3158c3181,3182
+< 			if (note && seen) msg_format("%^s%s", m_name, note);
+---
+> 			if (note && seen) msg_format("%^s%s", m_name, format(note,
+> 				(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о")));
+3183c3207,3208
+< 			if (note && seen) msg_format("%^s%s", m_name, note);
+---
+> 			if (note && seen) msg_format("%^s%s", m_name, format(note,
+> 				(r_ptr->flags1 & RF1_FEMALE ? "а" : r_ptr->flags1 & RF1_MALE ? "" : "о")));
+3193c3218
+< 				               "%^s flees in terror!", m_name);
+---
+> 				               "%^s бежит в ужасе!", m_name);
+3292c3317
+< 	monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 	monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+3295,3296c3320,3321
+< 	monster_desc(killer, sizeof(killer), m_ptr, 0x88);
+< 
+---
+> 	monster_desc(killer, sizeof(killer), m_ptr, 0x88, PAD_TVORIT);
+> 	
+3300c3325
+< 		/* HACK - event was handled, skip it */
+---
+> 		/* Hack -- event was handled, skip it */
+3303a3329
+> 
+3310c3336
+< 			if (blind) msg_print("You are hit by acid!");
+---
+> 			if (blind) msg_print("В вас попали кислотой!");
+3318c3344
+< 			if (blind) msg_print("You are hit by fire!");
+---
+> 			if (blind) msg_print("В вас попали огнем!");
+3326c3352
+< 			if (blind) msg_print("You are hit by cold!");
+---
+> 			if (blind) msg_print("В вас попали холодом!");
+3334c3360
+< 			if (blind) msg_print("You are hit by lightning!");
+---
+> 			if (blind) msg_print("В вас попали молнией!");
+3342c3368
+< 			if (blind) msg_print("You are hit by poison!");
+---
+> 			if (blind) msg_print("В вас попали ядом!");
+3356c3382
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3364c3390
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3373c3399
+< 			if (blind) msg_print("You are hit by something sharp!");
+---
+> 			if (blind) msg_print("В вас попали чем-то острым!");
+3381c3407
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас попали чем-то горячим!");
+3394c3420
+< 			if (blind) msg_print("You are hit by something strange!");
+---
+> 			if (blind) msg_print("В вас попали чем-то странным!");
+3403c3429
+< 					msg_print("You keep hold of your life force!");
+---
+> 					msg_print("Вы сопротивляетесь вытягиванию жизни!");
+3407c3433
+< 					msg_print("You feel your life slipping away!");
+---
+> 					msg_print("Ваша жизнь вытягивается из вас!");
+3412c3438
+< 					msg_print("You feel your life draining away!");
+---
+> 					msg_print("Ваша жизнь высасывается из вас!");
+3423c3449
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас попали чем-то мокрым!");
+3439c3465
+< 			if (blind) msg_print("You are hit by something strange!");
+---
+> 			if (blind) msg_print("В вас попали чем-то очень странным!");
+3456c3482
+< 					msg_print("You keep hold of your life force!");
+---
+> 					msg_print("Вы сопротивляетесь вытягиванию жизни!");
+3460c3486
+< 					msg_print("You feel your life slipping away!");
+---
+> 					msg_print("Ваша жизнь вытягивается из вас!");
+3465c3491
+< 					msg_print("You feel your life draining away!");
+---
+> 					msg_print("Ваша жизнь высасывается из вас!");
+3476c3502
+< 			if (blind) msg_print("You are hit by something sharp!");
+---
+> 			if (blind) msg_print("В вас попали чем-то острым!");
+3492c3518
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3509c3535
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3525c3551
+< 			if (blind) msg_print("You are hit by something strange!");
+---
+> 			if (blind) msg_print("В вас попали чем-то странным!");
+3541c3567
+< 			if (blind) msg_print("You are hit by something strange!");
+---
+> 			if (blind) msg_print("В вас попали чем-то странным!");
+3557c3583
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3569c3595
+< 			if (blind) msg_print("You are hit by something strange!");
+---
+> 			if (blind) msg_print("В вас попали чем-то странным!");
+3578c3604
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3594c3620
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3610c3636
+< 			if (blind) msg_print("You are hit by something strange!");
+---
+> 			if (blind) msg_print("В вас попали чем-то странным!");
+3616c3642
+< 					msg_print("You feel life has clocked back.");
+---
+> 					msg_print("Ваша жизнь пошла вспять.");
+3625,3630c3651,3656
+< 						case 1: k = A_STR; act = "strong"; break;
+< 						case 2: k = A_INT; act = "bright"; break;
+< 						case 3: k = A_WIS; act = "wise"; break;
+< 						case 4: k = A_DEX; act = "agile"; break;
+< 						case 5: k = A_CON; act = "hale"; break;
+< 						case 6: k = A_CHR; act = "beautiful"; break;
+---
+> 						case 1: k = A_STR; act = "сильным"; break;
+> 						case 2: k = A_INT; act = "умным"; break;
+> 						case 3: k = A_WIS; act = "мудрым"; break;
+> 						case 4: k = A_DEX; act = "ловким"; break;
+> 						case 5: k = A_CON; act = "здоровым"; break;
+> 						case 6: k = A_CHR; act = "красивым"; break;
+3633c3659
+< 					msg_format("You're not as %s as you used to be...", act);
+---
+> 					msg_format("Вы чувствуете себя намного менее %s...", act);
+3643c3669
+< 					msg_print("You're not as powerful as you used to be...");
+---
+> 					msg_print("Вы чувствуете себя намного менее могущественным...");
+3661,3663c3687,3689
+< 			if (blind) msg_print("You are hit by something strange!");
+< 			msg_print("Gravity warps around you.");
+< 
+---
+> 			if (blind) msg_print("В вас попали чем-то странным!");
+> 			msg_print("Гравитация вокруг вас искривляется.");
+> 			
+3667c3693
+< 
+---
+> 			
+3681c3707
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3689c3715
+< 			if (blind) msg_print("You are hit by something!");
+---
+> 			if (blind) msg_print("В вас чем-то попали!");
+3697c3723
+< 			if (blind) msg_print("You are hit by something sharp!");
+---
+> 			if (blind) msg_print("В вас попали чем-то острым!");
+4301,4307c4327
+< 			if (project_p(who, dist, y, x, dam, typ))
+< 			{
+< 				notice = TRUE;
+< 
+< 				/* Only affect the player once */
+< 				break;
+< 			}
+---
+> 			if (project_p(who, dist, y, x, dam, typ)) notice = TRUE;

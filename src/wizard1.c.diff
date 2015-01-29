@@ -1,0 +1,271 @@
+72c72
+< 	{ TV_SHOT,		"Ammo" },
+---
+> 	{ TV_SHOT,		"Боеприпасы" },
+76c76
+< 	{ TV_BOW,		"Bows" },
+---
+> 	{ TV_BOW,		"Луки" },
+78c78
+< 	{ TV_SWORD,		"Weapons" },
+---
+> 	{ TV_SWORD,		"Оружие" },
+83c83
+< 	{ TV_SOFT_ARMOR,	"Armour (Body)" },
+---
+> 	{ TV_SOFT_ARMOR,	"Доспехи (тело)" },
+87c87
+< 	{ TV_CLOAK,		"Armour (Misc)" },
+---
+> 	{ TV_CLOAK,		"Доспехи (проч)" },
+94,95c94,95
+< 	{ TV_AMULET,	"Amulets" },
+< 	{ TV_RING,		"Rings" },
+---
+> 	{ TV_AMULET,	"Амулеты" },
+> 	{ TV_RING,		"Кольца" },
+97,99c97,99
+< 	{ TV_SCROLL,	"Scrolls" },
+< 	{ TV_POTION,	"Potions" },
+< 	{ TV_FOOD,		"Food" },
+---
+> 	{ TV_SCROLL,	"Свитки" },
+> 	{ TV_POTION,	"Зелья" },
+> 	{ TV_FOOD,		"Еда" },
+101,103c101,103
+< 	{ TV_ROD,		"Rods" },
+< 	{ TV_WAND,		"Wands" },
+< 	{ TV_STAFF,		"Staffs" },
+---
+> 	{ TV_ROD,		"Жезлы" },
+> 	{ TV_WAND,		"Палочки" },
+> 	{ TV_STAFF,		"Посохи" },
+105,106c105,106
+< 	{ TV_MAGIC_BOOK,	"Books (Mage)" },
+< 	{ TV_PRAYER_BOOK,	"Books (Priest)" },
+---
+> 	{ TV_MAGIC_BOOK,	"Книги (Маг)" },
+> 	{ TV_PRAYER_BOOK,	"Книги (Священник)" },
+108c108
+< 	{ TV_CHEST,		"Chests" },
+---
+> 	{ TV_CHEST,		"Сундуки" },
+110c110
+< 	{ TV_SPIKE,		"Various" },
+---
+> 	{ TV_SPIKE,		"Прочее" },
+154,156d153
+< 	/* Make known */
+< 	i_ptr->ident |= (IDENT_KNOWN);
+< 	
+250c247
+< 		msg_print("Cannot create spoiler file.");
+---
+> 		msg_print("Невозможно создать спойлер.");
+256c253
+< 	fprintf(fff, "Spoiler File -- Basic Items (%s)\n\n\n", VERSION_STRING);
+---
+> 	fprintf(fff, "Файл спойлера -- Основные предметы (%s)\n\n\n", VERSION_STRING);
+259c256
+< 	fprintf(fff, format, "Description", "Dam/AC", "Wgt", "Lev", "Cost");
+---
+> 	fprintf(fff, format, "Описание   ", "Ур/Бр ", "Вес", "Ур.", "Цена");
+339c336
+< 		msg_print("Cannot close spoiler file.");
+---
+> 		msg_print("Не удалось закрыть файл спойлера.");
+344c341
+< 	msg_print("Successfully created a spoiler file.");
+---
+> 	msg_print("Успешно создан файл спойлера.");
+361,365c358,362
+< 	{ TV_SWORD,         "Edged Weapons" },
+< 	{ TV_POLEARM,       "Polearms" },
+< 	{ TV_HAFTED,        "Hafted Weapons" },
+< 	{ TV_BOW,           "Bows" },
+< 	{ TV_DIGGING,       "Diggers" },
+---
+> 	{ TV_SWORD,         "Клинки" },
+> 	{ TV_POLEARM,       "Прочее оружие" },
+> 	{ TV_HAFTED,        "Тупое оружие" },
+> 	{ TV_BOW,           "Луки" },
+> 	{ TV_DIGGING,       "Копание" },
+367c364
+< 	{ TV_SOFT_ARMOR,    "Body Armor" },
+---
+> 	{ TV_SOFT_ARMOR,    "Доспехи" },
+371,373c368,370
+< 	{ TV_CLOAK,         "Cloaks" },
+< 	{ TV_SHIELD,        "Shields" },
+< 	{ TV_HELM,          "Helms/Crowns" },
+---
+> 	{ TV_CLOAK,         "Плащи" },
+> 	{ TV_SHIELD,        "Щиты" },
+> 	{ TV_HELM,          "Шлемы/Короны" },
+375,376c372,373
+< 	{ TV_GLOVES,        "Gloves" },
+< 	{ TV_BOOTS,         "Boots" },
+---
+> 	{ TV_GLOVES,        "Перчатки" },
+> 	{ TV_BOOTS,         "Ботинки" },
+378,380c375,377
+< 	{ TV_LITE,          "Light Sources" },
+< 	{ TV_AMULET,        "Amulets" },
+< 	{ TV_RING,          "Rings" },
+---
+> 	{ TV_LITE,          "Свет" },
+> 	{ TV_AMULET,        "Амулеты" },
+> 	{ TV_RING,          "Кольца" },
+454c451
+< 		msg_print("Cannot create spoiler file.");
+---
+> 		msg_print("Невозможно создать спойлер.");
+466c463
+< 	spoiler_underline(format("Artifact Spoilers for %s %s",
+---
+> 	spoiler_underline(format("Спойлер артефактов для %s %s",
+511c508
+< 			text_out(format("\nLevel %u, Rarity %u, %d.%d lbs, %ld AU\n",
+---
+> 			text_out(format("\nУровень %u, редкость %u, %d.%d фнт, стоит %ld\n",
+523c520
+< 		msg_print("Cannot close spoiler file.");
+---
+> 		msg_print("Не удалось закрыть файл спойлера.");
+528c525
+< 	msg_print("Successfully created a spoiler file.");
+---
+> 	msg_print("Успешно создан файл спойлера.");
+568c565
+< 		msg_print("Cannot create spoiler file.");
+---
+> 		msg_print("Невозможно создать файл спойлера.");
+573c570
+< 	fprintf(fff, "Monster Spoilers for %s Version %s\n",
+---
+> 	fprintf(fff, "Спойлер монстров для %s версия %s\n",
+579c576
+< 	        "Name", "Lev", "Rar", "Spd", "Hp", "Ac", "Visual Info");
+---
+> 	        "Назв", "Ур.", "Ред", "Ско", "Зд", "Бр", "Картинка");
+581c578
+< 	        "----", "---", "---", "---", "--", "--", "-----------");
+---
+> 	        "----", "---", "---", "---", "--", "--", "--------");
+607a605,607
+> 		char rname[80];
+> 		
+> 		expand_rus_codes2(rname, name, PAD_IMEN, 0, 1);
+612c612
+< 			strnfmt(nam, sizeof(nam), "[Q] %s", name);
+---
+> 			strnfmt(nam, sizeof(nam), "[К] %s", rname);
+616c616
+< 			strnfmt(nam, sizeof(nam), "[U] %s", name);
+---
+> 			strnfmt(nam, sizeof(nam), "[У] %s", rname);
+620c620
+< 			strnfmt(nam, sizeof(nam), "The %s", name);
+---
+> 			strnfmt(nam, sizeof(nam), "%s", rname);
+675c675
+< 		msg_print("Cannot close spoiler file.");
+---
+> 		msg_print("Не удалось закрыть файл спойлера.");
+680c680
+< 	msg_print("Successfully created a spoiler file.");
+---
+> 	msg_print("Успешно создан файл спойлера.");
+715c715
+< 		msg_print("Cannot create spoiler file.");
+---
+> 		msg_print("Не удалось создать файл спойлера.");
+724c724
+< 	strnfmt(buf, sizeof(buf), "Monster Spoilers for %s Version %s\n",
+---
+> 	strnfmt(buf, sizeof(buf), "Спойлер монстров для %s версия %s\n",
+754a755
+> 		char rname[80];
+759c760
+< 			text_out("[Q] ");
+---
+> 			text_out("[К] ");
+763c764
+< 			text_out("[U] ");
+---
+> 			text_out("[У] ");
+767c768
+< 			text_out("The ");
+---
+> //			text_out("The ");
+771c772,773
+< 		strnfmt(buf, sizeof(buf), "%s  (", (r_name + r_ptr->name));	/* ---)--- */
+---
+> 		expand_rus_codes2(rname, (r_name + r_ptr->name), PAD_IMEN, 0, 1);
+> 		strnfmt(buf, sizeof(buf), "%s  (", rname);	/* ---)--- */
+787c789
+< 		sprintf(buf, "Num:%d  ", r_idx);
+---
+> 		sprintf(buf, "  N:%d  ", r_idx);
+791c793
+< 		sprintf(buf, "Lev:%d  ", r_ptr->level);
+---
+> 		sprintf(buf, "Ур.:%d  ", r_ptr->level);
+795c797
+< 		sprintf(buf, "Rar:%d  ", r_ptr->rarity);
+---
+> 		sprintf(buf, "Ред:%d  ", r_ptr->rarity);
+801c803
+< 			sprintf(buf, "Spd:+%d  ", (r_ptr->speed - 110));
+---
+> 			sprintf(buf, "Ско:+%d  ", (r_ptr->speed - 110));
+805c807
+< 			sprintf(buf, "Spd:-%d  ", (110 - r_ptr->speed));
+---
+> 			sprintf(buf, "Ско:-%d  ", (110 - r_ptr->speed));
+812c814
+< 			sprintf(buf, "Hp:%d  ", r_ptr->hdice * r_ptr->hside);
+---
+> 			sprintf(buf, "Зд:%d  ", r_ptr->hdice * r_ptr->hside);
+816c818
+< 			sprintf(buf, "Hp:%dd%d  ", r_ptr->hdice, r_ptr->hside);
+---
+> 			sprintf(buf, "Зд:%dd%d  ", r_ptr->hdice, r_ptr->hside);
+821c823
+< 		sprintf(buf, "Ac:%d  ", r_ptr->ac);
+---
+> 		sprintf(buf, "Бр:%d  ", r_ptr->ac);
+825c827
+< 		sprintf(buf, "Exp:%ld\n", (long)(r_ptr->mexp));
+---
+> 		sprintf(buf, "Опы:%ld\n", (long)(r_ptr->mexp));
+841c843
+< 		msg_print("Cannot close spoiler file.");
+---
+> 		msg_print("Не удалось закрыть файл спойлера.");
+845c847
+< 	msg_print("Successfully created a spoiler file.");
+---
+> 	msg_print("Успешно создан файл спойлера.");
+869c871
+< 		prt("Create a spoiler file.", 2, 0);
+---
+> 		prt("Создать файл спойлера.", 2, 0);
+872,875c874,877
+< 		prt("(1) Brief Object Info (obj-desc.spo)", 5, 5);
+< 		prt("(2) Brief Artifact Info (artifact.spo)", 6, 5);
+< 		prt("(3) Brief Monster Info (mon-desc.spo)", 7, 5);
+< 		prt("(4) Full Monster Info (mon-info.spo)", 8, 5);
+---
+> 		prt("(1) Краткая информация об объектах (obj-desc.spo)", 5, 5);
+> 		prt("(2) Краткая информация об артефактах (artifact.spo)", 6, 5);
+> 		prt("(3) Краткая информация о монстрах (mon-desc.spo)", 7, 5);
+> 		prt("(4) Полная информация о монстрах (mon-info.spo)", 8, 5);
+878c880
+< 		prt("Command: ", 12, 0);
+---
+> 		prt("Команда: ", 12, 0);
+916c918
+< 			bell("Illegal command for spoilers!");
+---
+> 			bell("Неправильная команда!");

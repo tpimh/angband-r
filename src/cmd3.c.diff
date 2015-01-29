@@ -1,0 +1,473 @@
+39c39
+< 	prt("(Inventory) Command: ", 0, 0);
+---
+> 	prt("(Инвентарь) Команда: ", 0, 0);
+85c85
+< 	prt("(Equipment) Command: ", 0, 0);
+---
+> 	prt("(Экипировка) Команда: ", 0, 0);
+128c128
+< 	int item, slot;
+---
+> 	int item, slot, rod;
+146,147c146,147
+< 	q = "Wear/Wield which item? ";
+< 	s = "You have nothing you can wear or wield.";
+---
+> 	q = "Надеть/взять в руки какой предмет? ";
+> 	s = "У вас нет ничего, что можно надеть или взять в руки.";
+170c170
+< 		object_desc(o_name, sizeof(o_name), &inventory[slot], FALSE, 0);
+---
+> 		int rod = object_desc(o_name, sizeof(o_name), &inventory[slot], FALSE, 0, PAD_IMEN);
+173,174c173,177
+< 		msg_format("The %s you are %s appears to be cursed.",
+< 		           o_name, describe_use(slot));
+---
+> 		msg_format("Похоже, что ваш%s %s проклят%s.",
+> 		           o_name,
+> 		           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+> 		           describe_use(slot),
+> 		           (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+229c232
+< 		act = "You are wielding";
+---
+> 		act = "Вы сражаетесь";
+233c236
+< 		act = "You are shooting with";
+---
+> 		act = "Вы стреляете";
+237c240
+< 		act = "Your light source is";
+---
+> 		act = "Ваш источник света:";
+241c244
+< 		act = "You are wearing";
+---
+> 		act = "Вы одели";
+245c248,249
+< 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 	rod = object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3,
+> 		(slot == INVEN_WIELD || slot == INVEN_BOW ? PAD_TVORIT : slot == INVEN_LITE ? PAD_IMEN : PAD_VINIT));
+254c258,260
+< 		msg_print("Oops! It feels deathly cold!");
+---
+> 		msg_format("Черт! Он%s жутко холодн%s!",
+> 			(rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"),
+> 			(rod == ROD_M ? "ый" : rod == ROD_F ? "ая" : rod == ROD_N ? "ое" : "ые"));
+296,297c302,303
+< 	q = "Take off which item? ";
+< 	s = "You are not wearing anything to take off.";
+---
+> 	q = "Снять какой предмет? ";
+> 	s = "Вам нечего снимать с себя.";
+317c323
+< 		msg_print("Hmmm, it seems to be cursed.");
+---
+> 		msg_print("Хм. Похоже, этот предмет проклят.");
+345,346c351,352
+< 	q = "Drop which item? ";
+< 	s = "You have nothing to drop.";
+---
+> 	q = "Бросить какой предмет? ";
+> 	s = "Вам нечего бросать.";
+371c377
+< 		msg_print("Hmmm, it seems to be cursed.");
+---
+> 		msg_print("Хм. Похоже, этот предмет проклят.");
+391a398
+> 	int old_number;
+395,397d401
+< 	object_type *i_ptr;
+< 	object_type object_type_body;
+< 
+406,407c410,411
+< 	q = "Destroy which item? ";
+< 	s = "You have nothing to destroy.";
+---
+> 	q = "Уничтожить какой предмет? ";
+> 	s = "Вам нечего уничтожать.";
+428,446c432,436
+< 	/* Get local object */
+< 	i_ptr = &object_type_body;
+< 
+< 	/* Obtain a local object */
+< 	object_copy(i_ptr, o_ptr);
+< 
+< 	if ((o_ptr->tval == TV_WAND) ||
+< 	    (o_ptr->tval == TV_STAFF) ||
+< 	    (o_ptr->tval == TV_ROD))
+< 	{
+< 		/* Calculate the amount of destroyed charges */
+< 		i_ptr->pval = o_ptr->pval * amt / o_ptr->number;
+< 	}
+< 
+< 	/* Set quantity */
+< 	i_ptr->number = amt;
+< 
+< 	/* Describe the destroyed object */
+< 	object_desc(o_name, sizeof(o_name), i_ptr, TRUE, 3);
+---
+> 	/* Describe the object */
+> 	old_number = o_ptr->number;
+> 	o_ptr->number = amt;
+> 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_VINIT);
+> 	o_ptr->number = old_number;
+451c441
+< 		strnfmt(out_val, sizeof(out_val), "Really destroy %s? ", o_name);
+---
+> 		strnfmt(out_val, sizeof(out_val), "Действительно уничтожить %s? ", o_name);
+462c452
+< 		msg_format("You cannot destroy %s.", o_name);
+---
+> 		msg_format("Вы не можете уничтожить %s.", o_name);
+495c485
+< 	msg_format("You destroy %s.", o_name);
+---
+> 	msg_format("Вы уничтожили %s.", o_name);
+531,532c521,522
+< 	q = "Examine which item? ";
+< 	s = "You have nothing to examine.";
+---
+> 	q = "Исследовать какой предмет? ";
+> 	s = "Вам нечего исследовать.";
+567,568c557,558
+< 	q = "Un-inscribe which item? ";
+< 	s = "You have nothing to un-inscribe.";
+---
+> 	q = "Стереть надпись с какого предмета? ";
+> 	s = "Вам неоткуда стирать надписи.";
+586c576
+< 		msg_print("That item had no inscription to remove.");
+---
+> 		msg_print("На этом предмете ничего не написано.");
+591c581
+< 	msg_print("Inscription removed.");
+---
+> 	msg_print("Надпись стерта.");
+621,622c611,612
+< 	q = "Inscribe which item? ";
+< 	s = "You have nothing to inscribe.";
+---
+> 	q = "Надписать какой предмет? ";
+> 	s = "Вам нечего надписывать.";
+638c628
+< 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3);
+---
+> 	object_desc(o_name, sizeof(o_name), o_ptr, TRUE, 3, PAD_IMEN);
+641c631
+< 	msg_format("Inscribing %s.", o_name);
+---
+> 	msg_format("Надписывается %s.", o_name);
+655c645
+< 	if (get_string("Inscription: ", tmp, sizeof(tmp)))
+---
+> 	if (get_string("Надпись: ", tmp, sizeof(tmp)))
+708,709c698,699
+< 	q = "Refill with which source of oil? ";
+< 	s = "You have no sources of oil.";
+---
+> 	q = "Заполнить каким источником масла? ";
+> 	s = "У вас нет источников масла.";
+735c725
+< 	msg_print("You fuel your lamp.");
+---
+> 	msg_print("Вы заправляете свою лампу.");
+741c731
+< 		msg_print("Your lamp is full.");
+---
+> 		msg_print("Ваша лампа полна.");
+850,851c840,841
+< 	q = "Refuel with which torch? ";
+< 	s = "You have no extra torches.";
+---
+> 	q = "Добавить какой факел? ";
+> 	s = "У вас нет лишних факелов.";
+877c867
+< 	msg_print("You combine the torches.");
+---
+> 	msg_print("Вы соединяете факелы.");
+883c873
+< 		msg_print("Your torch is fully fueled.");
+---
+> 		msg_print("Ваш факел полностью заполнен.");
+889c879
+< 		msg_print("Your torch glows more brightly.");
+---
+> 		msg_print("Ваш факел вспыхивает ярче.");
+931c921
+< 		msg_print("You are not wielding a light.");
+---
+> 		msg_print("Вы не несете источника света.");
+949c939
+< 		msg_print("Your light cannot be refilled.");
+---
+> 		msg_print("Ваш источник света нельзя заправить.");
+966c956
+< 		msg_print("Target Selected.");
+---
+> 		msg_print("Цель задана.");
+972c962
+< 		msg_print("Target Aborted.");
+---
+> 		msg_print("Цель отменена.");
+986c976
+< 		msg_print("Target Selected.");
+---
+> 		msg_print("Цель задана.");
+1018c1008
+< 			tmp_val[0] = '\0';
+---
+> 			strnfmt(tmp_val, sizeof(tmp_val), "(текущий)");
+1022,1024c1012,1014
+< 			strnfmt(tmp_val, sizeof(tmp_val), "%s%s of",
+< 			        ((y2 < y1) ? " north" : (y2 > y1) ? " south" : ""),
+< 			        ((x2 < x1) ? " west" : (x2 > x1) ? " east" : ""));
+---
+> 			strnfmt(tmp_val, sizeof(tmp_val), "%s%s",
+> 			        ((y2 < y1) ? "С" : (y2 > y1) ? "Ю" : ""),
+> 			        ((x2 < x1) ? "З" : (x2 > x1) ? "В" : ""));
+1029,1030c1019,1020
+< 		        "Map sector [%d,%d], which is%s your sector.  Direction?",
+< 		        (y2 / PANEL_HGT), (x2 / PANEL_WID), tmp_val);
+---
+> 		        "Сектор карты [%d,%d] %s%s.  Направление?",
+> 		        (y2 / PANEL_HGT), (x2 / PANEL_WID), tmp_val, !((y2 == y1) && (x2 == x1)) ? " от текущего" : "");
+1036c1026
+< 		        	"Map sector [%d(%02d),%d(%02d)], which is%s your sector.  Direction?",
+---
+> 		        	"Сектор карты [%d(%02d),%d(%02d)] %s%s. Направление?",
+1038c1028,1029
+< 		        	(x2 / PANEL_WID), (x2 % PANEL_WID), tmp_val);
+---
+> 		        	(x2 / PANEL_WID), (x2 % PANEL_WID), tmp_val,
+> 		        	 !((y2 == y1) && (x2 == x1)) ? " от текущего" : "");
+1056c1047
+< 			if (!dir) bell("Illegal direction for locate!");
+---
+> 			if (!dir) bell("Неправильное направление!");
+1084,1089c1075,1080
+< 	" :A dark grid",
+< 	"!:A potion (or oil)",
+< 	"\":An amulet (or necklace)",
+< 	"#:A wall (or secret door)",
+< 	"$:Treasure (gold or gems)",
+< 	"%:A vein (magma or quartz)",
+---
+> 	" :Темная клетка",
+> 	"!:Напиток (или масло)",
+> 	"\":Амулет",
+> 	"#:Стена или секретная дверь",
+> 	"$:Сокровища (золото или драгоценности)",
+> 	"%:Минеральная жила",
+1091,1099c1082,1090
+< 	"':An open door",
+< 	"(:Soft armor",
+< 	"):A shield",
+< 	"*:A vein with treasure",
+< 	"+:A closed door",
+< 	",:Food (or mushroom patch)",
+< 	"-:A wand (or rod)",
+< 	".:Floor",
+< 	"/:A polearm (Axe/Pike/etc)",
+---
+> 	"':Открытая дверь",
+> 	"(:Мягкие доспехи",
+> 	"):Щит",
+> 	"*:Жила с сокровищем",
+> 	"+:Закрытая дверь",
+> 	",:Еда или грибы",
+> 	"-:Палочка (или жезл)",
+> 	".:Пол",
+> 	"/:Прочее оружие (секиры и т.п.)",
+1101,1108c1092,1099
+< 	"1:Entrance to General Store",
+< 	"2:Entrance to Armory",
+< 	"3:Entrance to Weaponsmith",
+< 	"4:Entrance to Temple",
+< 	"5:Entrance to Alchemy shop",
+< 	"6:Entrance to Magic store",
+< 	"7:Entrance to Black Market",
+< 	"8:Entrance to your home",
+---
+> 	"1:Вход в Главный Магазин",
+> 	"2:Вход в Магазин Доспехов",
+> 	"3:Вход в Оружейную",
+> 	"4:Вход в Храм",
+> 	"5:Вход в Магазин Алхимика",
+> 	"6:Вход в Магазин Магии",
+> 	"7:Вход на Черный Рынок",
+> 	"8:Вход домой",
+1110,1129c1101,1120
+< 	"::Rubble",
+< 	";:A glyph of warding",
+< 	"<:An up staircase",
+< 	"=:A ring",
+< 	">:A down staircase",
+< 	"?:A scroll",
+< 	"@:You",
+< 	"A:Angel",
+< 	"B:Bird",
+< 	"C:Canine",
+< 	"D:Ancient Dragon/Wyrm",
+< 	"E:Elemental",
+< 	"F:Dragon Fly",
+< 	"G:Ghost",
+< 	"H:Hybrid",
+< 	"I:Insect",
+< 	"J:Snake",
+< 	"K:Killer Beetle",
+< 	"L:Lich",
+< 	"M:Multi-Headed Reptile",
+---
+> 	"::Мусор",
+> 	";:Руна защиты",
+> 	"<:Лестница вверх",
+> 	"=:Кольцо",
+> 	">:Лестница вниз",
+> 	"?:Свиток",
+> 	"@:Вы",
+> 	"A:Ангел",
+> 	"B:Птица",
+> 	"C:Собака",
+> 	"D:Древний Дракон/Змей",
+> 	"E:Элементаль",
+> 	"F:Стрекоза",
+> 	"G:Привидение",
+> 	"H:Гибрид",
+> 	"I:Насекомое",
+> 	"J:Змея",
+> 	"K:Жучок",
+> 	"L:Лич",
+> 	"M:Гидра",
+1131,1147c1122,1138
+< 	"O:Ogre",
+< 	"P:Giant Humanoid",
+< 	"Q:Quylthulg (Pulsing Flesh Mound)",
+< 	"R:Reptile/Amphibian",
+< 	"S:Spider/Scorpion/Tick",
+< 	"T:Troll",
+< 	"U:Major Demon",
+< 	"V:Vampire",
+< 	"W:Wight/Wraith/etc",
+< 	"X:Xorn/Xaren/etc",
+< 	"Y:Yeti",
+< 	"Z:Zephyr Hound",
+< 	"[:Hard armor",
+< 	"\\:A hafted weapon (mace/whip/etc)",
+< 	"]:Misc. armor",
+< 	"^:A trap",
+< 	"_:A staff",
+---
+> 	"O:Огр",
+> 	"P:Гигант",
+> 	"Q:Квулсхулг (пульсирующий холмик)",
+> 	"R:Рептилия/Амфибия",
+> 	"S:Паук/Скорпион/Клещ",
+> 	"T:Тролль",
+> 	"U:Большой Демон",
+> 	"V:Вампир",
+> 	"W:Умертвие/Призрак и др.",
+> 	"X:Хорн/Харен и др.",
+> 	"Y:Йети",
+> 	"Z:Гончая Эфира",
+> 	"[:Твердые доспехи",
+> 	"\\:Тупое оружие (дубина, кнут и т.п.)",
+> 	"]:Разные доспехи",
+> 	"^:Ловушка",
+> 	"_:Посох",
+1149,1171c1140,1162
+< 	"a:Ant",
+< 	"b:Bat",
+< 	"c:Centipede",
+< 	"d:Dragon",
+< 	"e:Floating Eye",
+< 	"f:Feline",
+< 	"g:Golem",
+< 	"h:Hobbit/Elf/Dwarf",
+< 	"i:Icky Thing",
+< 	"j:Jelly",
+< 	"k:Kobold",
+< 	"l:Louse",
+< 	"m:Mold",
+< 	"n:Naga",
+< 	"o:Orc",
+< 	"p:Person/Human",
+< 	"q:Quadruped",
+< 	"r:Rodent",
+< 	"s:Skeleton",
+< 	"t:Townsperson",
+< 	"u:Minor Demon",
+< 	"v:Vortex",
+< 	"w:Worm/Worm-Mass",
+---
+> 	"a:Муравей",
+> 	"b:Летучая мышь",
+> 	"c:Гусеница",
+> 	"d:Дракон",
+> 	"e:Летающий Глаз",
+> 	"f:Кошка",
+> 	"g:Голем",
+> 	"h:Хоббит/Эльф/Гном",
+> 	"i:Скользкое существо",
+> 	"j:Желе",
+> 	"k:Кобольд",
+> 	"l:Вошь",
+> 	"m:Плесень",
+> 	"n:Нага",
+> 	"o:Орк",
+> 	"p:Человек",
+> 	"q:Четвероногое",
+> 	"r:Крыса",
+> 	"s:Скелет",
+> 	"t:Горожанин",
+> 	"u:Малый Демон",
+> 	"v:Вихрь",
+> 	"w:Черви",
+1173,1178c1164,1169
+< 	"y:Yeek",
+< 	"z:Zombie/Mummy",
+< 	"{:A missile (arrow/bolt/shot)",
+< 	"|:An edged weapon (sword/dagger/etc)",
+< 	"}:A launcher (bow/crossbow/sling)",
+< 	"~:A tool (or miscellaneous item)",
+---
+> 	"y:Йик",
+> 	"z:Зомби/Мумия",
+> 	"{:Чем стреляют (стрела/болт/...)",
+> 	"|:Клинок (меч, кинжал и т.п.)",
+> 	"}:Из чего стреляют (лук/арбалет/праща)",
+> 	"~:Прочий предмет",
+1310c1301
+< 	if (!get_com("Enter character to be identified: ", &sym)) return;
+---
+> 	if (!get_com("Введите символ: ", &sym)) return;
+1322c1313
+< 		strcpy(buf, "Full monster list.");
+---
+> 		strcpy(buf, "Полный список монстров.");
+1327c1318
+< 		strcpy(buf, "Unique monster list.");
+---
+> 		strcpy(buf, "Список уникальных монстров.");
+1332c1323
+< 		strcpy(buf, "Non-unique monster list.");
+---
+> 		strcpy(buf, "Список неуникальных монстров.");
+1340c1331
+< 		strnfmt(buf, sizeof(buf), "%c - %s.", sym, "Unknown Symbol");
+---
+> 		strnfmt(buf, sizeof(buf), "%c - %s.", sym, "Неизвестный символ.");
+1380c1371
+< 	put_str("Recall details? (k/p/y/n): ", 0, 40);
+---
+> 	put_str("Просмотреть детали? (k/p/y/n): ", 0, 40);
+1443c1434
+< 		Term_addstr(-1, TERM_WHITE, " [(r)ecall, ESC]");
+---
+> 		Term_addstr(-1, TERM_WHITE, " [(r)подробнее, ESC]");
+1458c1449
+< 				Term_addstr(-1, TERM_WHITE, " [(r)ecall, ESC]");
+---
+> 				Term_addstr(-1, TERM_WHITE, " [(r)подробнее, ESC]");

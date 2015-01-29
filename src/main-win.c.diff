@@ -1,0 +1,191 @@
+701c701
+< 	MessageBox(NULL, lpMsgBuf, "Error", MB_OK | MB_ICONINFORMATION);
+---
+> 	MessageBox(NULL, lpMsgBuf, "Ошибка", MB_OK | MB_ICONINFORMATION);
+731c731
+< 		if (islower((unsigned char)*s)) *s = toupper((unsigned char)*s);
+---
+> 		if (a_islower((unsigned char)*s)) *s = a_toupper((unsigned char)*s);
+866c866
+< 		quit_fmt("Cannot find required file:\n%s", s);
+---
+> 		quit_fmt("Не найден необходимый файл:\n%s", s);
+879c879
+< 		quit_fmt("Cannot find required directory:\n%s", s);
+---
+> 		quit_fmt("Не найдена необходимая папка:\n%s", s);
+1260c1260
+< 			plog("Please switch to high- or true-color mode.");
+---
+> 			plog("Для полноценной работы необходима глубина цвета 16 или 24 бит.");
+1323c1323
+< 	if (!hNewPal) quit("Cannot create palette!");
+---
+> 	if (!hNewPal) quit("Не удалось создать палитру!");
+1336c1336
+< 	if (i == 0) quit("Cannot realize palette!");
+---
+> 	if (i == 0) quit("Не удалось реализовать палитру!");
+1412c1412
+< 			plog_fmt("Cannot read bitmap file '%s'", name);
+---
+> 			plog_fmt("Не удалось прочитать файл '%s'", name);
+1428c1428
+< 				plog_fmt("Cannot read bitmap file '%s'", buf);
+---
+> 				plog_fmt("Не удалось прочитать файл '%s'", buf);
+1439c1439
+< 			plog("Cannot activate palette!");
+---
+> 			plog("Не удалось включить палитру!");
+1623c1623
+< 	ofn.lpstrFilter = "Angband Font Files (*.fon)\0*.fon\0";
+---
+> 	ofn.lpstrFilter = "Файлы шрифтов для Angband (*.fon)\0*.fon\0";
+1817c1817
+< 			plog("Cannot initialize sound!");
+---
+> 			plog("Не удалось инициализировать звук!");
+1846c1846
+< 			plog("Cannot initialize graphics!");
+---
+> 			plog("Не удалось инициализировать графику!");
+2318,2320c2318,2349
+< 			/* Dump the text */
+< 			ExtTextOut(hdc, rc.left, rc.top, 0, &rc,
+< 			           s+i, 1, NULL);
+---
+> 			/* Мега-Хак -- перекодировка CP1251 в KOI8-R на лету */
+> 			cptr win2koi[] = {
+> 				0xe1, 0xe2, 0xf7, 0xe7, 0xe4, 0xe5, 0xf6, 0xfa,		/* А..З */
+> 				0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, 0xef, 0xf0,		/* И..П */
+> 				0xf2, 0xf3, 0xf4, 0xf5, 0xe6, 0xe8, 0xe3, 0xfe,		/* Р..Ч */
+> 				0xfb, 0xfd, 0xff, 0xf9, 0xf8, 0xfc, 0xe0, 0xf1,		/* Ш..Я */
+> 				0xc1, 0xc2, 0xd7, 0xc7, 0xc4, 0xc5, 0xd6, 0xda,		/* а..з */
+> 				0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 0xd0,		/* и..п */
+> 				0xd2, 0xd3, 0xd4, 0xd5, 0xc6, 0xc8, 0xc3, 0xde,		/* р..ч */
+> 				0xdb, 0xdd, 0xdf, 0xd9, 0xd8, 0xdc, 0xc0, 0xd1		/* щ..я */
+> 			};
+> 			
+> 			byte str[2] = "";
+> 
+> 			str[0] = (byte)*(s+i);
+> 			
+> 			if (str[0] < 0xc0)
+> 			{
+> 				/* Dump the text */
+> 				ExtTextOut(hdc, rc.left, rc.top, 0, &rc,
+> 				           str, 1, NULL);
+> 			}
+> 			else
+> 			{
+> 				str[0] = win2koi[str[0] - 0xc0];
+> 				
+> 				/* Dump the text */
+> 				ExtTextOut(hdc, rc.left, rc.top, 0, &rc,
+> 				           str, 1, NULL);
+> 			}
+> 				
+> 				
+2789c2818
+< 		if (!td->w) quit("Failed to create sub-window");
+---
+> 		if (!td->w) quit("Не удалось создать подокно");
+2823c2852
+< 	if (!td->w) quit_fmt("Failed to create %s window", VERSION_NAME);
+---
+> 	if (!td->w) quit_fmt("Не удалось создать окно %s", VERSION_NAME);
+3315,3316c3344,3345
+< 		plog_fmt("Cannot find help file: %s", tmp);
+< 		plog("Use the online help files instead.");
+---
+> 		plog_fmt("Не удалось найти файл справки: %s", tmp);
+> 		plog("Используйте встроенную справку игры (нажмите \"?\").");
+3340c3369
+< 				plog("You cannot do that yet...");
+---
+> 				plog("Подождите...");
+3344c3373
+< 				plog("You can't start a new game while you're still playing!");
+---
+> 				plog("Игра уже идет!");
+3361c3390
+< 				plog("You cannot do that yet...");
+---
+> 				plog("Подождите...");
+3365c3394
+< 				plog("You can't open a new game while you're still playing!");
+---
+> 				plog("Игра уже идет!");
+3372c3401
+< 				ofn.lpstrFilter = "Save Files (*.)\0*\0";
+---
+> 				ofn.lpstrFilter = "Сохраненные игры (*.)\0*\0";
+3410c3439
+< 				plog("You may not do that right now.");
+---
+> 				plog("Сейчас это сделать нельзя.");
+3423c3452
+< 					plog("You may not do that right now.");
+---
+> 					plog("Сейчас это сделать нельзя.");
+3443c3472
+< 			plog("You are not allowed to do that!");
+---
+> 			plog("Нельзя отключить это окно!");
+3629c3658
+< 				plog("You may not do that right now.");
+---
+> 				plog("Сейчас это сделать нельзя.");
+3653c3682
+< 				plog("You may not do that right now.");
+---
+> 				plog("Сейчас это сделать нельзя.");
+3677c3706
+< 				plog("You may not do that right now.");
+---
+> 				plog("Сейчас это сделать нельзя.");
+3701c3730
+< 				plog("You may not do that right now.");
+---
+> 				plog("Сейчас это сделать нельзя.");
+3725c3754
+< 				plog("You may not do that right now.");
+---
+> 				plog("Сейчас это сделать нельзя.");
+3743c3772
+< 				plog("You may not do that right now.");
+---
+> 				plog("Сейчас это сделать нельзя.");
+3825c3854
+< 					plog("Failed to create saver window");
+---
+> 					plog("Не удалось создать окно заставки");
+3853c3882
+< 				plog("You may not do that right now.");
+---
+> 				plog("Сейчас это сделать нельзя.");
+4089c4118
+< 					plog("You may not do that right now.");
+---
+> 					plog("Сейчас это сделать нельзя.");
+4618c4647
+< 		MessageBox(NULL, str, "Warning",
+---
+> 		MessageBox(NULL, str, "Информация",
+4632c4661
+< 		MessageBox(NULL, str, "Error",
+---
+> 		MessageBox(NULL, str, "Ошибка",
+4667c4696
+< 		MessageBox(data[0].w, str, "Warning",
+---
+> 		MessageBox(data[0].w, str, "Информация",
+4692c4721
+< 			MessageBox(data[0].w, str, "Error",
+---
+> 			MessageBox(data[0].w, str, "Ошибка",
+5072c5101
+< 	prt("[Choose 'New' or 'Open' from the 'File' menu]", 23, 17);
+---
+> 	prt("[Выберите 'Новая' или 'Открыть' из меню 'Игра']", 23, 20);

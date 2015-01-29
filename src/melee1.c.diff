@@ -1,0 +1,272 @@
+79,86c79,86
+< 	"insults you!",
+< 	"insults your mother!",
+< 	"gives you the finger!",
+< 	"humiliates you!",
+< 	"defiles you!",
+< 	"dances around you!",
+< 	"makes obscene gestures!",
+< 	"moons you!!!"
+---
+> 	"оскорбляет вас!",
+> 	"оскорбляет вашу маму!",
+> 	"показывает вам палец!",
+> 	"смеется над вами!",
+> 	"дразнит вас!",
+> 	"угрожает вам!",
+> 	"показывает вам кукиш!!!",
+> 	"обзывает вас!"
+98,101c98,101
+< 	"seems sad about something.",
+< 	"asks if you have seen his dogs.",
+< 	"tells you to get off his land.",
+< 	"mumbles something about mushrooms."
+---
+> 	"выглядит грустным.",
+> 	"спрашивает насчет своих собак.",
+> 	"требует убраться с его земли.",
+> 	"что-то говорит про грибы."
+146c146
+< 	monster_desc(m_name, sizeof(m_name), m_ptr, 0);
+---
+> 	monster_desc(m_name, sizeof(m_name), m_ptr, 0, PAD_IMEN);
+149c149
+< 	monster_desc(ddesc, sizeof(ddesc), m_ptr, 0x88);
+---
+> 	monster_desc(ddesc, sizeof(ddesc), m_ptr, 0x88, PAD_TVORIT);
+242c242
+< 				msg_format("%^s is repelled.", m_name);
+---
+> 				msg_format("%^s отражается.", m_name);
+257c257
+< 					act = "hits you.";
+---
+> 					act = "бьет вас.";
+264c264
+< 					act = "touches you.";
+---
+> 					act = "касается вас.";
+270c270
+< 					act = "punches you.";
+---
+> 					act = "толкает вас.";
+277c277
+< 					act = "kicks you.";
+---
+> 					act = "пинает вас.";
+284c284
+< 					act = "claws you.";
+---
+> 					act = "царапает вас.";
+291c291
+< 					act = "bites you.";
+---
+> 					act = "кусает вас.";
+298c298
+< 					act = "stings you.";
+---
+> 					act = "жалит вас.";
+310c310
+< 					act = "butts you.";
+---
+> 					act = "бодает вас.";
+317c317
+< 					act = "crushes you.";
+---
+> 					act = "сдавливает вас.";
+324c324
+< 					act = "engulfs you.";
+---
+> 					act = "обволакивает вас.";
+336c336
+< 					act = "crawls on you.";
+---
+> 					act = "ползет по вам.";
+342c342
+< 					act = "drools on you.";
+---
+> 					act = "кричит на вас.";
+348c348
+< 					act = "spits on you.";
+---
+> 					act = "плюет на вас.";
+360c360
+< 					act = "gazes at you.";
+---
+> 					act = "смотрит на вас.";
+366c366
+< 					act = "wails at you.";
+---
+> 					act = "воет на вас.";
+372c372
+< 					act = "releases spores at you.";
+---
+> 					act = "высыпает споры на вас.";
+384c384
+< 					act = "begs you for money.";
+---
+> 					act = "просит милостыню у вас.";
+482a483
+> 
+520c521
+< 							msg_print("Energy drains from your pack!");
+---
+> 							msg_print("Энергия вытекает из вашего рюкзака!");
+562c563
+< 						msg_print("You quickly protect your money pouch!");
+---
+> 						msg_print("Вы быстро закрываете кошелек рукой!");
+578c579
+< 							msg_print("Nothing was stolen.");
+---
+> 							msg_print("Ничего не было украдено.");
+582,583c583,584
+< 							msg_print("Your purse feels lighter.");
+< 							msg_format("%ld coins were stolen!", (long)gold);
+---
+> 							msg_print("Ваш кошелек становится легче.");
+> 							msg_format("%ld монет было украдено!", (long)gold);
+587,588c588,589
+< 							msg_print("Your purse feels lighter.");
+< 							msg_print("All of your coins were stolen!");
+---
+> 							msg_print("Ваш кошелек становится легче.");
+> 							msg_print("Все ваши деньги были украдены!");
+615c616
+< 						msg_print("You grab hold of your backpack!");
+---
+> 						msg_print("Вы быстро закрываете свою рюкзак!");
+631a633
+> 						int rod;
+646c648
+< 						object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3);
+---
+> 						rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 3, PAD_IMEN);
+649,651c651,655
+< 						msg_format("%sour %s (%c) was stolen!",
+< 						           ((o_ptr->number > 1) ? "One of y" : "Y"),
+< 						           o_name, index_to_label(i));
+---
+> 						msg_format("Ваш%s %s (%c) был%s похищен%s!",
+> 							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+> 						           o_name, index_to_label(i),
+> 							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"),
+> 							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+695a700,701
+> 						int rod;
+> 						
+709c715
+< 						object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0);
+---
+> 						rod = object_desc(o_name, sizeof(o_name), o_ptr, FALSE, 0, PAD_IMEN);
+712,714c718,722
+< 						msg_format("%sour %s (%c) was eaten!",
+< 						           ((o_ptr->number > 1) ? "One of y" : "Y"),
+< 						           o_name, index_to_label(i));
+---
+> 						msg_format("Ваш%s %s (%c) был%s съеден%s!",
+> 							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "е" : "и"),
+> 						           o_name, index_to_label(i),
+> 							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "и"),
+> 							   (rod == ROD_M ? "" : rod == ROD_F ? "а" : rod == ROD_N ? "о" : "ы"));
+748c756
+< 							msg_print("Your light dims.");
+---
+> 							msg_print("Свет мерцает.");
+765c773
+< 					msg_print("You are covered in acid!");
+---
+> 					msg_print("Вы покрыты кислотой!");
+782c790
+< 					msg_print("You are struck by electricity!");
+---
+> 					msg_print("Вас ударило током!");
+799c807
+< 					msg_print("You are enveloped in flames!");
+---
+> 					msg_print("Вас обволакивает пламя!");
+816c824
+< 					msg_print("You are covered with frost!");
+---
+> 					msg_print("Вас покрывает иней!");
+875c883
+< 						msg_print("You stand your ground!");
+---
+> 						msg_print("Вы не поддаетесь страху!");
+880c888
+< 						msg_print("You stand your ground!");
+---
+> 						msg_print("Вы не поддаетесь страху!");
+908c916
+< 						msg_print("You are unaffected!");
+---
+> 						msg_print("Вы не воздействованы!");
+913c921
+< 						msg_print("You resist the effects!");
+---
+> 						msg_print("Вы сопротивляетесь эффектам!");
+1028c1036
+< 						
+---
+> 
+1050c1058
+< 						msg_print("You keep hold of your life force!");
+---
+> 						msg_print("Вы сопротивляетесь вытягиванию жизни!");
+1057c1065
+< 							msg_print("You feel your life slipping away!");
+---
+> 							msg_print("Ваша жизнь вытягивается из вас!");
+1062c1070
+< 							msg_print("You feel your life draining away!");
+---
+> 							msg_print("Ваша жизнь высасывается из вас!");
+1079c1087
+< 						msg_print("You keep hold of your life force!");
+---
+> 						msg_print("Вы сопротивляетесь вытягиванию жизни!");
+1087c1095
+< 							msg_print("You feel your life slipping away!");
+---
+> 							msg_print("Ваша жизнь вытягивается из вас!");
+1092c1100
+< 							msg_print("You feel your life draining away!");
+---
+> 							msg_print("Ваша жизнь высасывается из вас!");
+1109c1117
+< 						msg_print("You keep hold of your life force!");
+---
+> 						msg_print("Вы сопротивляетесь вытягиванию жизни!");
+1117c1125
+< 							msg_print("You feel your life slipping away!");
+---
+> 							msg_print("Ваша жизнь вытягивается из вас!");
+1122c1130
+< 							msg_print("You feel your life draining away!");
+---
+> 							msg_print("Ваша жизнь высасывается из вас!");
+1139c1147
+< 						msg_print("You keep hold of your life force!");
+---
+> 						msg_print("Вы сопротивляетесь вытягиванию жизни!");
+1147c1155
+< 							msg_print("You feel your life slipping away!");
+---
+> 							msg_print("Ваша жизнь вытягивается из вас!");
+1152c1160
+< 							msg_print("You feel your life draining away!");
+---
+> 							msg_print("Ваша жизнь высасывается из вас!");
+1274c1282
+< 					msg_format("%^s misses you.", m_name);
+---
+> 					msg_format("%^s не попадает в вас.", m_name);
+1295,1296c1303
+< 
+< 		/* Skip the other blows if necessary */
+---
+> 		
+1304c1311
+< 		msg_print("There is a puff of smoke!");
+---
+> 		msg_print("Вор исчезает в клубе дыма!");
