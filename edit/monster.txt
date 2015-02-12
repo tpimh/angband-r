@@ -10107,8 +10107,8 @@ D: causing much pain and suffering in the world to please him.  His disgusting
 D: visage, twisted with evil, is crowned with iron, the two remaining Silmarils
 D: forever burning him.  Grond, the mighty Hammer of the Underworld, cries
 D: defiance as he strides towards you to crush you to a pulp!
-drop-artifact:'Grond'
-drop-artifact:of Morgoth
+drop-artifact:'Гронд'
+drop-artifact:Моргота
 
 
 # Max is currently N:619
