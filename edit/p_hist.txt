@@ -28,376 +28,376 @@
 
 
 N:1:2:10:25
-D:You are the illegitimate and unacknowledged child 
+D:Вы незаконорожденный и отвергнутый ребенок 
 N:1:2:20:35
-D:You are the illegitimate but acknowledged child 
+D:Вы незаконорожденный, но принятый ребенок 
 N:1:2:95:45
-D:You are one of several children 
+D:Вы один из нескольких детей 
 N:1:2:100:50
-D:You are the first child 
+D:Вы единственный ребенок 
 
 N:2:3:40:65
-D:of a Serf.  
+D:крестьянина.  
 N:2:3:65:80
-D:of a Yeoman.  
+D:воина.  
 N:2:3:80:90
-D:of a Townsman.  
+D:горожанина.  
 N:2:3:90:105
-D:of a Guildsman.  
+D:купца.  
 N:2:3:96:120
-D:of a Landed Knight.  
+D:рыцаря.  
 N:2:3:99:130
-D:of a Titled Noble.  
+D:аристократа.  
 N:2:3:100:140
-D:of a Royal Blood Line.  
+D:короля.  
 
 N:3:50:20:20
-D:You are the black sheep of the family.  
+D:Вы были не нужны своей семье.  
 N:3:50:80:55
-D:You are a credit to the family.  
+D:Вы были подарком своей семье.  
 N:3:50:100:60
-D:You are a well liked child.  
+D:Вы были любимым ребенком.  
 
 N:4:1:15:40
-D:Your mother was of the Avari. 
+D:Ваша мать была из Авари. 
 N:4:1:30:45
-D:Your father was of the Avari. 
+D:Ваш отец был из Авари. 
 N:4:1:50:50
-D:Your mother was of the Nandor. 
+D:Ваша мать была из Нандор. 
 N:4:1:70:55
-D:Your father was of the Nandor.  
+D:Ваш отец был из Нандор.  
 N:4:1:85:60
-D:Your mother was of the Sindar.  
+D:Ваша мать была из Синдар.  
 N:4:1:95:65
-D:Your father was of the Sindar.  
+D:Ваш отец был из Синдар.  
 N:4:1:98:70
-D:Your mother was of the Noldor.  
+D:Ваша мать была из Нолдор.  
 N:4:1:100:75
-D:Your father was of the Noldor.  
+D:Ваш отец был из Нолдор.  
 
 N:5:6:60:50
-D:You are one of several children 
+D:Вы один из нескольких детей 
 N:5:6:100:55
-D:You are the only child 
+D:Вы единственный ребенок 
 
 N:6:9:40:40
-D:of an Avarin 
+D:Аваринского 
 N:6:9:70:50
-D:of a Nandorin 
+D:Нандорского 
 N:6:9:100:60
-D:of a Sindarin 
+D:Синдарского 
 
 N:7:8:60:50
-D:You are one of several children 
+D:Вы один из нескольких детей 
 N:7:8:100:55
-D:You are the only child 
+D:Вы единственный ребенок 
 
 N:8:9:75:50
-D:of a Telerin 
+D:Телеринского 
 N:8:9:95:55
-D:of a Noldorin 
+D:Нолдорского 
 N:8:9:100:60
-D:of a Vanyarin 
+D:Ваньярского 
 
 N:9:54:40:80
-D:Ranger.  
+D:следопыта.  
 N:9:54:70:90
-D:Archer.  
+D:лучника.  
 N:9:54:87:110
-D:Warrior.  
+D:воина.  
 N:9:54:95:125
-D:Mage.  
+D:мага.  
 N:9:54:99:140
-D:Prince.  
+D:принца.  
 N:9:54:100:145
-D:King.  
+D:короля.  
 
 N:10:11:85:45
-D:You are one of several children of a Hobbit 
+D:Вы один из нескольких детей хоббита-
 N:10:11:100:55
-D:You are the only child of a Hobbit 
+D:Вы единственный ребенок хоббита-
 
 N:11:3:20:55
-D:Burglar.  
+D:вора.  
 N:11:3:30:80
-D:Miller.  
+D:мельника.  
 N:11:3:40:90
-D:Tavern Owner.  
+D:владельца таверны.  
 N:11:3:50:100
-D:Archer.  
+D:лучника.  
 N:11:3:80:110
-D:Warrior.  
+D:воина.  
 N:11:3:95:115
-D:Shirriff.  
+D:ширрифа.  
 N:11:3:99:125
-D:Mayor.  
+D:мэра.  
 N:11:3:100:140
-D:Clan Elder.  
+D:старшего клана.  
 
 N:13:14:85:45
-D:You are one of several children of a Gnome 
+D:Вы один из нескольких детей карлика-
 N:13:14:100:55
-D:You are the only child of a Gnome 
+D:Вы единственный ребенок карлика-
 
 N:14:3:20:55
-D:Beggar.  
+D:попрошайки.  
 N:14:3:50:70
-D:Braggart.  
+D:вора.  
 N:14:3:75:85
-D:Prankster.  
+D:торговца.  
 N:14:3:95:100
-D:Warrior.  
+D:воина.  
 N:14:3:100:125
-D:Mage.  
+D:мага.  
 
 N:16:17:25:40
-D:You are one of two children of a Dwarven 
+D:Вы один из нескольких детей гнома-
 N:16:17:100:50
-D:You are the only child of a Dwarven 
+D:Вы единственный ребенок гнома-
 
 N:17:18:10:60
-D:Thief.  
+D:вора.  
 N:17:18:25:75
-D:Prison Guard.  
+D:тюремщика.  
 N:17:18:75:90
-D:Miner.  
+D:шахтера.  
 N:17:18:90:110
-D:Warrior.  
+D:воина.  
 N:17:18:99:130
-D:Priest.  
+D:священника.  
 N:17:18:100:150
-D:King.  
+D:короля.  
 
 N:18:57:15:10
-D:You are the black sheep of the family.  
+D:Вы были не нужны своей семье.  
 N:18:57:85:50
-D:You are a credit to the family.  
+D:Вы были подарком своей семье.  
 N:18:57:100:55
-D:You are a well liked child.  
+D:Вы были любимым ребенком.  
 
 N:19:20:25:25
-D:Your mother was an Orc, 
+D:Ваша мать была орком, 
 N:19:20:100:25
-D:Your father was an Orc, 
+D:Ваш отец был орком, 
 
 N:20:2:20:30
-D:and it is acknowledged. You are the adopted child 
+D:и это подтверждено. Вас приняли в семью 
 N:20:2:100:50
-D:but it is unacknowledged. You are the adopted child 
+D:но это не подтверждено. Вас приняли в семью 
 
 N:21:22:30:20
-D:Your mother was a Stone-Troll 
+D:Ваша мать была каменным троллем-
 N:21:22:60:25
-D:Your father was a Stone-Troll 
+D:Ваш отец был каменным троллем-
 N:21:22:75:30
-D:Your mother was a Cave-Troll 
+D:Ваша мать была пещерным троллем-
 N:21:22:90:35
-D:Your father was a Cave-Troll 
+D:Ваш отец был пещерным троллем-
 N:21:22:95:40
-D:Your mother was a Water-Troll 
+D:Ваша мать была водяным троллем-
 N:21:22:100:45
-D:Your father was a Water-Troll 
+D:Ваш отец был водяным троллем-
 
 N:22:62:5:60
-D:Cook.  
+D:поваром.  
 N:22:62:95:55
-D:Warrior.  
+D:воином.  
 N:22:62:99:65
-D:Shaman.  
+D:шаманом.  
 N:22:62:100:80
-D:Clan Chief.  
+D:старшим клана.  
 
 N:23:24:20:40
-D:You are the runt of 
+D:Вы были самым маленьким из 
 N:23:24:80:50
-D:You come from 
+D:Вы были одним из 
 N:23:24:100:55
-D:You are the largest of 
+D:Вы были самым большим из 
 
 N:24:25:15:45
-D:a litter of 3 pups. 
+D:трех щенков. 
 N:24:25:40:45
-D:a litter of 4 pups. 
+D:четырех щенков. 
 N:24:25:70:50
-D:a litter of 5 pups. 
+D:пяти щенков. 
 N:24:25:85:50
-D:a litter of 6 pups. 
+D:шести щенков. 
 N:24:25:95:55
-D:a litter of 7 pups. 
+D:семи щенков. 
 N:24:25:100:55
-D:a litter of 8 pups. 
+D:восьми щенков. 
 
 N:25:26:25:40
-D:Your father was a fungus farmer, 
+D:Ваш отец был фермером, 
 N:25:26:50:45
-D:Your father was a hunter, 
+D:Ваш отец был охотником, 
 N:25:26:75:50
-D:Your father was a warrior, 
+D:Ваш отец был воином, 
 N:25:26:95:55
-D:Your father was a shaman, 
+D:Ваш отец был шаманом, 
 N:25:26:100:60
-D:Your father was the tribal chief, 
+D:Ваш отец был вождем племени, 
 
 N:26:67:20:45
-D:and your mother was a prisoner of war. 
+D:а мать - пленницей племени. 
 N:26:67:95:50
-D:and your mother was a cook. 
+D:а мать - поварихой. 
 N:26:67:100:55
-D:and your mother was one of the Chief's harem. 
+D:а мать была из гарема вождя. 
 
 N:50:51:20:50
-D:You have dark brown eyes, 
+D:У вас темно-карие глаза, 
 N:50:51:60:50
-D:You have brown eyes, 
+D:У вас карие глаза, 
 N:50:51:70:50
-D:You have hazel eyes, 
+D:У вас светло-карие глаза, 
 N:50:51:80:50
-D:You have green eyes, 
+D:У вас зеленые глаза, 
 N:50:51:90:50
-D:You have blue eyes, 
+D:У вас голубые глаза, 
 N:50:51:100:50
-D:You have blue-gray eyes, 
+D:У вас серо-голубые глаза, 
 
 N:51:52:70:50
-D:straight 
+D:прямые 
 N:51:52:90:50
-D:wavy 
+D:волнистые 
 N:51:52:100:50
-D:curly 
+D:кудрявые 
 
 N:52:53:30:50
-D:black hair, 
+D:черные волосы 
 N:52:53:70:50
-D:brown hair, 
+D:темные волосы 
 N:52:53:80:50
-D:auburn hair, 
+D:русые волосы 
 N:52:53:90:50
-D:red hair, 
+D:рыжие волосы 
 N:52:53:100:50
-D:blond hair, 
+D:светлые волосы 
 
 N:53:0:10:50
-D:and a very dark complexion.
+D:и очень неприятное лицо.
 N:53:0:30:50
-D:and a dark complexion.
+D:и неприятное лицо.
 N:53:0:80:50
-D:and an average complexion.
+D:и обычное лицо.
 N:53:0:90:50
-D:and a fair complexion.
+D:и красивое лицо.
 N:53:0:100:50
-D:and a very fair complexion.
+D:и очень красивое лицо.
 
 N:54:55:85:50
-D:You have light grey eyes, 
+D:У вас светло-серые глаза, 
 N:54:55:95:50
-D:You have light blue eyes, 
+D:У вас светло-голубые глаза, 
 N:54:55:100:50
-D:You have light green eyes, 
+D:У вас светло-зеленые глаза, 
 
 N:55:56:75:50
-D:straight 
+D:прямые 
 N:55:56:100:50
-D:wavy 
+D:волнистые 
 
 N:56:0:75:50
-D:black hair, and a fair complexion.
+D:черные волосы и красивое лицо.
 N:56:0:85:50
-D:brown hair, and a fair complexion.
+D:темные волосы и красивое лицо.
 N:56:0:95:50
-D:blond hair, and a fair complexion.
+D:светлые волосы и красивое лицо.
 N:56:0:100:50
-D:silver hair, and a fair complexion.
+D:серебряные волосы и красивое лицо.
 
 N:57:58:99:50
-D:You have dark brown eyes, 
+D:У вас темно-карие глаза, 
 N:57:58:100:50
-D:You have glowing red eyes, 
+D:У вас горящие красные глаза, 
 
 N:58:59:90:50
-D:straight 
+D:прямые 
 N:58:59:100:50
-D:wavy 
+D:волнистые 
 
 N:59:60:75:50
-D:black hair, 
+D:черные волосы, 
 N:59:60:100:50
-D:brown hair, 
+D:темные волосы, 
 
 N:60:61:25:47
-D:a one foot beard, 
+D:борода длиною в фут 
 N:60:61:60:49
-D:a two foot beard, 
+D:борода длиною в два фута 
 N:60:61:90:51
-D:a three foot beard, 
+D:борода длиною в три фута 
 N:60:61:100:53
-D:a four foot beard, 
+D:борода длиною в четыре фута 
 
 N:61:0:100:50
-D:and a dark complexion.
+D:и неприятное лицо.
 
 N:62:63:60:50
-D:You have slime-green eyes, 
+D:У вас слизисто-зеленые глаза, 
 N:62:63:85:50
-D:You have puke-yellow eyes, 
+D:У вас маслянисто-желтые глаза, 
 N:62:63:99:50
-D:You have blue-bloodshot eyes, 
+D:У вас кровавые синие глаза, 
 N:62:63:100:55
-D:You have glowing red eyes, 
+D:У вас горящие красные глаза, 
 
 N:63:64:33:50
-D:dirty 
+D:грязные 
 N:63:64:66:50
-D:mangy 
+D:спутанные 
 N:63:64:100:50
-D:oily 
+D:жирные 
 
 N:64:65:33:50
-D:sea-weed green hair, 
+D:зеленые волосы 
 N:64:65:66:50
-D:bright red hair, 
+D:красные волосы 
 N:64:65:100:50
-D:dark purple hair, 
+D:темно-пурпурные волосы 
 
 N:65:66:25:50
-D:and green 
+D:и зеленая 
 N:65:66:50:50
-D:and blue 
+D:и синяя 
 N:65:66:75:50
-D:and white 
+D:и белая 
 N:65:66:100:50
-D:and black 
+D:и черная 
 
 N:66:0:33:50
-D:ulcerous skin.
+D:обветревшая кожа.
 N:66:0:66:50
-D:scabby skin.
+D:потрескавшаяся кожа.
 N:66:0:100:50
-D:leprous skin.
+D:неровная кожа.
 
 N:67:68:10:50
-D:You have black eyes, 
+D:У вас черные глаза, 
 N:67:68:40:50
-D:You have dark brown eyes, 
+D:У вас темно-карие глаза, 
 N:67:68:80:50
-D:You have brown eyes, 
+D:У вас карие глаза, 
 N:67:68:99:50
-D:You have light brown eyes, 
+D:У вас светло-карие глаза, 
 N:67:68:100:50
-D:You have glowing red eyes, 
+D:У вас горящие красные глаза, 
 
 N:68:69:40:50
-D:a dark brown hide, 
+D:темно-коричневая шерсть 
 N:68:69:60:50
-D:a reddish-brown hide, 
+D:красно-коричневая шерсть 
 N:68:69:95:50
-D:an olive green hide, 
+D:зеленая шерсть 
 N:68:69:100:50
-D:a deep blue hide, 
+D:синяя шерсть 
 
 N:69:0:10:50
-D:and large, flat teeth.
+D:и большие плоские зубы.
 N:69:0:90:50
-D:and small, sharp teeth.
+D:и маленькие острые зубы.
 N:69:0:100:50
-D:and large, sharp teeth.
+D:и большие острые зубы.
 

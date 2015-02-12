@@ -84,7 +84,7 @@
 
 ### Body Armor ###
 
-N:4:of Resist Acid
+N:4:Кислотоупорности
 X:16:0
 W:0:1:0:1000
 A:100:1 to 30
@@ -93,7 +93,7 @@ T:36:0:99
 T:37:0:6
 F:RES_ACID | IGNORE_ACID
 
-N:5:of Resist Lightning
+N:5:Электроизоляции
 X:10:0
 W:0:1:0:400
 A:100:1 to 30
@@ -102,7 +102,7 @@ T:36:0:99
 T:37:0:6
 F:RES_ELEC | IGNORE_ELEC
 
-N:6:of Resist Fire
+N:6:Огнеупорности
 X:14:0
 W:0:1:0:800
 A:100:1 to 30
@@ -111,7 +111,7 @@ T:36:0:99
 T:37:0:6
 F:RES_FIRE | IGNORE_FIRE
 
-N:7:of Resist Cold
+N:7:Хладостойкости
 X:12:0
 W:0:1:0:600
 A:100:1 to 30
@@ -120,7 +120,7 @@ T:36:0:99
 T:37:0:6
 F:RES_COLD | IGNORE_COLD
 
-N:8:of Resistance
+N:8:Сопротивления
 X:20:0
 W:0:2:0:12500
 A:50:10 to 100
@@ -131,7 +131,7 @@ T:37:0:99
 F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 
-N:9:of Elvenkind
+N:9:Эльфов
 X:25:2
 W:0:4:0:15000
 A:10:30 to 127
@@ -143,7 +143,7 @@ L:d2:0:STEALTH
 F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 
-N:10:of Vulnerability
+N:10:Уязвимости
 X:0:0
 W:0:2:0:0
 A:10:10 to 80
@@ -155,7 +155,7 @@ F:AGGRAVATE | LIGHT_CURSE
 
 ### Robes only ###
 
-N:11:of Permanence
+N:11:Постоянства
 X:30:2
 W:0:4:0:30000
 A:10:30 to 127
@@ -167,7 +167,7 @@ F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 
 ### Heavy metal armor only ###
 
-N:12:(Dwarven)
+N:12:Гномов
 X:18:0
 W:0:4:0:5000
 A:20:20 to 127
@@ -186,7 +186,7 @@ L:d2M3:1:INFRA
 
 ### Shields ###
 
-N:15:(Dwarven)
+N:15:Гномов
 X:20:0
 W:0:4:0:5000
 A:20:40 to 127
@@ -197,35 +197,35 @@ F:FREE_ACT |
 L:d2:1:STR
 L:d2:1:CON
 
-N:16:of Resist Acid
+N:16:Кислотоупорности
 X:16:0
 W:0:1:0:1000
 A:100:1 to 30
 T:34:0:99
 F:RES_ACID | IGNORE_ACID
 
-N:17:of Resist Lightning
+N:17:Электроизоляции
 X:10:0
 W:0:1:0:400
 A:100:1 to 30
 T:34:0:99
 F:RES_ELEC | IGNORE_ELEC
 
-N:18:of Resist Fire
+N:18:Огнеупорности
 X:14:0
 W:0:1:0:800
 A:100:1 to 30
 T:34:0:99
 F:RES_FIRE | IGNORE_FIRE
 
-N:19:of Resist Cold
+N:19:Хладостойкости
 X:12:0
 W:0:1:0:600
 A:100:1 to 30
 T:34:0:99
 F:RES_COLD | IGNORE_COLD
 
-N:20:of Resistance
+N:20:Сопротивления
 X:20:0
 W:0:2:0:12500
 A:50:10 to 100
@@ -234,7 +234,7 @@ T:34:0:99
 F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 
-N:21:of Elvenkind
+N:21:Эльфов
 X:25:2
 W:0:4:0:18000
 A:10:30 to 127
@@ -244,7 +244,7 @@ L:d2:0:STEALTH
 F:RES_FIRE | RES_COLD | RES_ACID | RES_ELEC
 F:IGNORE_ACID | IGNORE_FIRE | IGNORE_COLD | IGNORE_ELEC
 
-N:22:of Preservation
+N:22:Сохранения
 X:25:2
 W:60:4:0:24000
 A:5:40 to 127
@@ -253,7 +253,7 @@ T:34:0:99
 F:RES_DISEN | SUST_STR | SUST_CON | SUST_DEX | HOLD_LIFE
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 
-N:23:of Vulnerability
+N:23:Уязвимости
 X:0:0
 W:0:2:0:0
 A:10:10 to 80
@@ -264,7 +264,7 @@ F:AGGRAVATE | LIGHT_CURSE
 
 ### Crowns and Helms ###
 
-N:24:of Intelligence
+N:24:Интеллекта
 X:13:0
 W:0:2:0:500
 A:100:1 to 40
@@ -272,7 +272,7 @@ T:32:0:99
 F:SUST_INT
 L:d2:0:INT
 
-N:25:of Wisdom
+N:25:Мудрости
 X:13:0
 W:0:2:0:500
 A:100:1 to 40
@@ -281,12 +281,12 @@ F:SUST_WIS
 L:d2:0:WIS
 
 # remove post-3.5
-N:26:of Beauty
+N:26:Красоты
 X:8:0
 W:0:2:0:1000
 T:32:0:99
 
-N:27:of the Magi
+N:27:Магов
 X:15:3
 W:0:4:0:7500
 A:20:20 to 127
@@ -296,7 +296,7 @@ F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 L:d3:0:INT
 
-N:28:of Might
+N:28:Силы
 X:19:0
 W:0:4:0:7500
 A:10:40 to 127
@@ -307,8 +307,7 @@ L:d3:1:STR
 L:d3:1:DEX
 L:d3:1:CON
 
-
-N:29:of Lordliness
+N:29:Величия
 X:17:3
 W:0:2:0:7500
 A:20:40 to 127
@@ -317,7 +316,7 @@ F:SUST_WIS | RES_FEAR
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 L:d3:1:WIS
 
-N:30:of Seeing
+N:30:Зрения
 X:8:0
 W:0:2:0:2000
 A:50:10 to 60
@@ -325,14 +324,14 @@ T:32:0:99
 F:RES_BLIND | SEE_INVIS
 L:d5:0:SEARCH
 
-N:31:of Infravision
+N:31:Инфразрения
 X:11:0
 W:0:2:0:500
 A:100:1 to 20
 T:32:0:99
 L:d5:0:INFRA
 
-N:32:of Light
+N:32:Света
 X:6:0
 W:0:2:0:1000
 A:50:5 to 30
@@ -340,35 +339,35 @@ T:33:0:99
 F:RES_LIGHT
 L:1:1:LIGHT
 
-N:33:of Telepathy
+N:33:Телепатии
 X:20:0
 W:0:6:0:50000
 A:10:40 to 127
 T:32:0:99
 F:TELEPATHY
 
-N:34:of Regeneration
+N:34:Регенерации
 X:10:0
 W:0:4:0:1500
 A:20:1 to 60
 T:32:0:99
 F:REGEN
 
-N:35:of Teleportation
+N:35:Телепортации
 X:0:0
 W:0:2:0:0
 A:10:10 to 80
 T:32:0:99
 F:TELEPORT | LIGHT_CURSE
 
-N:36:of Serenity
+N:36:Ясности
 X:20:0
 W:0:6:0:4000
 A:15:20 to 127
 T:33:0:99
 F:RES_SOUND | RES_CONFU | RES_FEAR | RES_STUN
 
-N:37:of Night and Day
+N:37:Дня и Ночи
 X:18:0
 W:35:6:0:4000
 A:15:10 to 80
@@ -376,7 +375,7 @@ T:33:0:99
 F:RES_LIGHT | RES_DARK | SEE_INVIS | RES_BLIND | IGNORE_ACID
 L:1:1:LIGHT
 
-N:38:of Dullness
+N:38:Скуки
 X:0:0
 W:0:2:0:0
 A:10:45 to 80
@@ -384,7 +383,7 @@ T:33:0:99
 F:LIGHT_CURSE
 L:d5:0:INT | WIS
 
-N:39:of Sickliness
+N:39:Болезненности
 X:0:0
 W:0:2:0:0
 A:10:45 to 80
@@ -395,7 +394,7 @@ L:d5:0:STR | DEX | CON
 
 ### Cloaks ###
 
-N:40:of Protection
+N:40:Защиты
 X:10:0
 W:0:2:0:1500
 A:30:1 to 40
@@ -403,14 +402,14 @@ C:0:0:d10
 T:35:0:99
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | RES_SHARD
 
-N:41:of Stealth
+N:41:Скрытности
 X:10:0
 W:0:1:0:500
 A:60:1 to 70
 T:35:0:99
 L:d3:0:STEALTH
 
-N:42:of Aman
+N:42:Амана
 X:20:2
 W:0:6:0:4000
 A:10:20 to 127
@@ -419,7 +418,7 @@ T:35:0:99
 L:d3:0:STEALTH
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 
-N:43:of the Magi
+N:43:Магов
 X:15:3
 W:30:3:0:2000
 A:10:30 to 127
@@ -429,7 +428,7 @@ F:SUST_INT | IGNORE_ACID
 L:d2:1:INT
 L:d3:1:STEALTH
 
-N:44:of Enveloping
+N:44:Обворачивания
 X:0:0
 W:0:1:0:0
 A:10:10 to 80
@@ -437,7 +436,7 @@ C:d10:d10:0
 T:35:0:99
 F: | LIGHT_CURSE
 
-N:45:of Vulnerability
+N:45:Уязвимости
 X:0:0
 W:0:1:0:0
 A:10:10 to 80
@@ -445,7 +444,7 @@ C:0:0:d50
 T:35:0:99
 F:AGGRAVATE | LIGHT_CURSE
 
-N:46:of Irritation
+N:46:Раздражения
 X:0:0
 W:0:1:0:0
 A:10:10 to 80
@@ -457,29 +456,30 @@ F:AGGRAVATE | LIGHT_CURSE
 
 ### Gloves ###
 
-N:48:of Free Action
+N:48:Свободных Действий
 X:11:0
 W:0:4:0:1000
 A:100:1 to 60
 T:31:0:99
 F:FREE_ACT
 
-N:49:of Slaying
+N:49:Истребления
 X:17:0
 W:0:4:0:1500
 A:20:10 to 75
 C:d5:d5:0
 T:31:0:99
-D:They boost your to-hit and to-dam values.
+# "Она" = "пара перчаток..."
+D:Она повышает бонусы к удару и к урону.
 
-N:50:of Agility
+N:50:Ловкости
 X:14:0
 W:0:6:0:1000
 A:10:20 to 50
 T:31:0:99
 L:d5:0:DEX
 
-N:51:of Power
+N:51:Силы
 X:22:0
 W:0:6:0:2500
 A:5:30 to 127
@@ -488,7 +488,7 @@ T:31:0:99
 F: | 
 L:d5:0:STR
 
-N:52:of Thievery
+N:52:Воровства
 X:22:0
 W:40:12:0:5000
 A:5:40 to 127
@@ -499,7 +499,7 @@ F: | FEATHER | FREE_ACT |
 L:1+M4:1:DEX
 L:1+d2M3:2:SEARCH
 
-N:53:of Combat
+N:53:Боя
 X:22:0
 W:50:12:0:7000
 A:5:50 to 127
@@ -509,7 +509,7 @@ F: | AGGRAVATE |
 L:d2:1:STR
 L:d2:1:CON
 
-N:54:of Weakness
+N:54:Слабости
 X:0:0
 W:0:2:0:0
 A:10:10 to 80
@@ -517,7 +517,7 @@ T:31:0:99
 F:LIGHT_CURSE | 
 L:d10:0:STR
 
-N:55:of Clumsiness
+N:55:Неуклюжести
 X:0:0
 W:0:2:0:0
 A:10:10 to 80
@@ -527,14 +527,14 @@ L:d10:0:DEX
 
 ### Boots ###
 
-N:56:of Slow Descent
+N:56:Медленного Падения
 X:7:0
 W:0:5:0:250
 A:100:1 to 15
 T:30:0:99
 F:FEATHER
 
-N:57:of Stealth
+N:57:Скрытности
 X:16:0
 W:0:6:0:500
 A:20:15 to 100
@@ -542,28 +542,28 @@ T:30:1:2
 T:30:6:6
 L:d3:0:STEALTH
 
-N:58:of Free Action
+N:58:Свободных Действий
 X:15:0
 W:0:8:0:1000
 A:20:1 to 40
 F:FREE_ACT
 T:30:0:99
 
-N:59:of Speed
+N:59:Скорости
 X:25:0
 W:0:24:0:100000
 A:3:20 to 127
 T:30:0:99
 L:2+M8:0:SPEED
 
-N:60:of Stability
+N:60:Стабильности
 X:20:0
 W:0:10:0:5000
 A:10:15 to 100
 T:30:0:99
 F:RES_NEXUS | FEATHER
 
-N:61:of Elvenkind
+N:61:Эльфов
 X:30:0
 W:60:30:0:200000
 A:3:60 to 127
@@ -572,7 +572,7 @@ F:FEATHER | IGNORE_ACID | IGNORE_FIRE
 L:d4:1:STEALTH
 L:4+M5:1:SPEED
 
-N:62:of Slowness
+N:62:Медлительности
 X:0:0
 W:0:5:0:0
 A:10:10 to 80
@@ -580,7 +580,7 @@ T:30:0:99
 L:d5:0:SPEED
 F:LIGHT_CURSE | 
 
-N:63:of Annoyance
+N:63:Раздражения
 X:0:0
 W:0:10:0:0
 A:10:10 to 80
@@ -591,7 +591,7 @@ F:AGGRAVATE | LIGHT_CURSE |
 
 ### Weapons ###
 
-N:64:(Holy Avenger)
+N:64:(Священный Мститель)
 X:30:1
 W:0:12:0:20000
 A:10:15 to 127
@@ -603,7 +603,7 @@ L:d4:0:WIS
 F:SLAY_EVIL | SLAY_UNDEAD | SLAY_DEMON
 F:SEE_INVIS | BLESSED | RES_FEAR
 
-N:65:(Defender)
+N:65:(Защитник)
 X:25:1
 W:0:12:0:15000
 A:10:10 to 80
@@ -616,7 +616,7 @@ F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 L:d4:0:STEALTH
 
-N:66:(Blessed)
+N:66:(Благословленное)
 X:20:3
 W:0:10:0:5000
 A:20:1 to 60
@@ -626,7 +626,7 @@ T:23:0:99
 F:BLESSED
 L:d3:0:WIS
 
-N:67:of Gondolin
+N:67:Гондолина
 X:30:3
 W:30:20:0:25000
 A:10:20 to 127
@@ -639,7 +639,7 @@ F:RES_DARK | SEE_INVIS | FREE_ACT
 F:IGNORE_ACID | IGNORE_FIRE
 L:1:1:LIGHT
 
-N:68:of Westernesse
+N:68:Вестерноса
 X:20:0
 W:0:10:0:20000
 A:10:10 to 70
@@ -653,7 +653,7 @@ L:d2:1:CON
 F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT
 F:FREE_ACT | SEE_INVIS
 
-N:69:of Extra Attacks
+N:69:Дополнительных Атак
 X:20:0
 W:0:10:0:10000
 A:10:10 to 127
@@ -663,7 +663,7 @@ T:23:0:99
 L:d2:0:BLOWS
 
 #Fury is not currently creatable
-N:70:of Fury
+N:70:Ярости
 X:30:0
 W:40:20:0:20000
 A:2:50 to 127
@@ -680,7 +680,7 @@ L:d2:1:BLOWS
 
 # The "Branded" weapons (5)
 
-N:72:of Acid
+N:72:Кислоты
 X:20:0
 W:0:20:0:5000
 A:30:1 to 60
@@ -689,7 +689,7 @@ T:22:0:99
 T:23:0:99
 F:BRAND_ACID | RES_ACID | IGNORE_ACID
 
-N:73:of Lightning
+N:73:Молнии
 X:20:0
 W:0:15:0:4500
 A:30:1 to 60
@@ -698,7 +698,7 @@ T:22:0:99
 T:23:0:99
 F:BRAND_ELEC | RES_ELEC | IGNORE_ELEC
 
-N:74:of Flame
+N:74:Пламени
 X:15:0
 W:0:8:0:3500
 A:40:1 to 50
@@ -707,7 +707,7 @@ T:22:0:99
 T:23:0:99
 F:BRAND_FIRE | RES_FIRE | IGNORE_FIRE
 
-N:75:of Frost
+N:75:Мороза
 X:15:0
 W:0:8:0:3000
 A:40:1 to 50
@@ -716,7 +716,7 @@ T:22:0:99
 T:23:0:99
 F:BRAND_COLD | RES_COLD | IGNORE_COLD
 
-N:76:of Venom
+N:76:Яда
 X:15:0
 W:0:8:0:4000
 A:60:1 to 40
@@ -733,7 +733,7 @@ F:BRAND_POIS
 
 # The "Slay" weapons (8)
 
-N:80:of Slay Animal
+N:80:Истребления Животных
 X:18:0
 W:0:6:0:3000
 A:100:1 to 30
@@ -742,7 +742,7 @@ T:22:0:99
 T:23:0:99
 F:SLAY_ANIMAL
 
-N:81:of Slay Evil
+N:81:Истребления Зла
 X:18:0
 W:0:6:0:3000
 A:60:1 to 40
@@ -751,7 +751,7 @@ T:22:0:99
 T:23:0:99
 F:SLAY_EVIL
 
-N:82:of Slay Undead
+N:82:Истребления Мертвецов
 X:18:0
 W:0:6:0:3500
 A:100:1 to 30
@@ -760,7 +760,7 @@ T:22:0:99
 T:23:0:99
 F:SLAY_UNDEAD
 
-N:83:of Slay Demon
+N:83:Истребления Демонов
 X:14:0
 W:0:6:0:3500
 A:100:1 to 30
@@ -769,7 +769,7 @@ T:22:0:99
 T:23:0:99
 F:SLAY_DEMON
 
-N:84:of Slay Orc
+N:84:Истребления Орков
 X:10:0
 W:0:6:0:2500
 A:150:1 to 20
@@ -778,7 +778,7 @@ T:22:0:99
 T:23:0:99
 F:SLAY_ORC
 
-N:85:of Slay Troll
+N:85:Истребления Троллей
 X:10:0
 W:0:6:0:2500
 A:150:1 to 25
@@ -787,7 +787,7 @@ T:22:0:99
 T:23:0:99
 F:SLAY_TROLL
 
-N:86:of Slay Giant
+N:86:Истребления Гигантов
 X:14:0
 W:0:6:0:2500
 A:60:1 to 30
@@ -796,7 +796,7 @@ T:22:0:99
 T:23:0:99
 F:SLAY_GIANT
 
-N:87:of Slay Dragon
+N:87:Истребления Драконов
 X:18:0
 W:0:6:0:3500
 A:100:1 to 30
@@ -807,7 +807,7 @@ F:SLAY_DRAGON
 
 # The *Slay* weapons (8)
 
-N:88:of *Slay Animal*
+N:88:Уничтожения Животных
 X:20:0
 W:0:20:0:6000
 A:40:1 to 45
@@ -817,7 +817,7 @@ T:23:0:99
 F:SLAY_ANIMAL | SLOW_DIGEST
 L:d2:0:INT
 
-N:89:of *Slay Evil*
+N:89:Уничтожения Зла
 X:20:3
 W:0:20:0:5000
 A:15:10 to 127
@@ -827,7 +827,7 @@ T:23:0:99
 F:SLAY_EVIL | BLESSED
 L:d2:0:WIS
 
-N:90:of *Slay Undead*
+N:90:Уничтожения Мертвецов
 X:24:0
 W:0:20:0:8000
 A:30:10 to 60
@@ -837,7 +837,7 @@ T:23:0:99
 F:KILL_UNDEAD | SEE_INVIS
 L:d2:0:WIS
 
-N:91:of *Slay Demon*
+N:91:Уничтожения Демонов
 X:16:0
 W:0:20:0:8000
 A:30:10 to 60
@@ -847,7 +847,7 @@ T:23:0:99
 F:KILL_DEMON | RES_FIRE
 L:d2:0:INT
 
-N:92:of *Slay Orc*
+N:92:Уничтожения Орков
 X:14:0
 W:0:20:0:4000
 A:60:1 to 40
@@ -857,7 +857,7 @@ T:23:0:99
 F:SLAY_ORC | SUST_DEX
 L:d2:0:DEX
 
-N:93:of *Slay Troll*
+N:93:Уничтожения Троллей
 X:14:0
 W:0:20:0:4000
 A:60:1 to 45
@@ -867,7 +867,7 @@ T:23:0:99
 F:SLAY_TROLL | REGEN
 L:d2:0:STR
 
-N:94:of *Slay Giant*
+N:94:Уничтожения Гигантов
 X:16:0
 W:0:20:0:4000
 A:20:1 to 45
@@ -877,7 +877,7 @@ T:23:0:99
 F:SLAY_GIANT | SUST_STR
 L:d2:0:STR
 
-N:95:of *Slay Dragon*
+N:95:Уничтожения Драконов
 X:24:0
 W:0:20:0:8000
 A:30:10 to 60
@@ -923,7 +923,7 @@ F:RES_BLIND | SEE_INVIS
 
 ### Digging Tools
 
-N:100:of Digging
+N:100:Копания
 X:4:0
 W:0:1:0:500
 A:100:1 to 40
@@ -931,7 +931,7 @@ T:20:0:99
 F:BRAND_ACID
 L:d4:1:TUNNEL
 
-N:101:of Earthquakes
+N:101:Землетрясений
 X:8:0
 W:20:4:0:3000
 A:10:10 to 127
@@ -943,7 +943,7 @@ F:BRAND_ACID | IMPACT |
 
 ### Cursed Weapons
 
-N:102:of Morgul
+N:102:Моргула
 X:0:0
 W:0:5:0:1
 A:10:10 to 80
@@ -958,27 +958,27 @@ F:HOLD_LIFE | DRAIN_EXP | SLAY_UNDEAD | BRAND_POIS
 
 ### Missile Launchers ###
 
-N:104:of Accuracy
+N:104:Меткости
 X:10:0
 W:0:1:0:1000
 A:100:5 to 70
 C:d15:d5:0
 M:15:255:0
 T:19:0:99
-D:It has no special abilities, but its to-hit value may be unusually
-D: high.
+D:Он не имеет особых возможностей, но его бонус к удару может
+D: быть необычно высок.
 
-N:105:of Power
+N:105:Силы
 X:10:0
 W:0:1:0:1000
 A:100:5 to 70
 C:d5:d15:0
 M:255:15:0
 T:19:0:99
-D:It has no special abilities, but its to-dam value may be unusually
-D: high.
+D:Он не имеет особых возможностей, но его бонус к урону может
+D: быть необычно высок.
 
-N:106:of Lothlórien
+N:106:Лотлориэна
 X:30:3
 W:50:4:0:20000
 A:5:20 to 127
@@ -988,7 +988,7 @@ L:1+d2M2:2:DEX
 L:d2:1:MIGHT
 F:FREE_ACT | IGNORE_ACID | IGNORE_FIRE | 
 
-N:107:of the Haradrim
+N:107:Харадрима
 X:30:0
 W:50:4:0:20000
 A:5:20 to 127
@@ -997,7 +997,7 @@ T:19:23:23
 L:1:1:MIGHT | SHOTS
 F:IGNORE_ACID | IGNORE_FIRE | 
 
-N:108:of Extra Might
+N:108:Силы Стрельбы
 X:20:0
 W:0:2:0:10000
 A:20:15 to 100
@@ -1005,7 +1005,7 @@ C:d5:d10:0
 T:19:0:99
 L:1:0:MIGHT
 
-N:109:of Extra Shots
+N:109:Скорости Стрельбы
 X:20:0
 W:0:2:0:10000
 A:10:15 to 100
@@ -1013,7 +1013,7 @@ C:d10:d5:0
 T:19:0:99
 L:1:0:SHOTS
 
-N:110:of Buckland
+N:110:Бэклэнда
 X:25:0
 W:40:4:0:20000
 A:5:20 to 127
@@ -1024,7 +1024,7 @@ L:d2:1:SHOTS
 L:d2:1:MIGHT
 F:IGNORE_ACID | IGNORE_FIRE | 
 
-N:111:of the Nazgûl
+N:111:Назгулов
 X:0:0
 W:0:2:0:0
 A:10:10 to 80
@@ -1035,7 +1035,7 @@ F:LIGHT_CURSE | DRAIN_EXP | SEE_INVIS
 
 ### Ammo ###
 
-N:112:of Slay Animal
+N:112:Истребления Животных
 X:10:0
 W:0:6:0:20
 A:80:1 to 40
@@ -1044,7 +1044,7 @@ T:17:0:99
 T:18:0:99
 F:SLAY_ANIMAL
 
-N:113:of Slay Evil
+N:113:Истребления Зла
 X:10:0
 W:0:6:0:20
 A:10:10 to 100
@@ -1053,7 +1053,7 @@ T:17:0:99
 T:18:0:99
 F:SLAY_EVIL
 
-N:114:of Slay Undead
+N:114:Истребления Мертвецов
 X:10:0
 W:0:8:0:25
 A:15:5 to 100
@@ -1062,7 +1062,7 @@ T:17:0:99
 T:18:0:99
 F:SLAY_UNDEAD
 
-N:115:of Slay Demon
+N:115:Истребления Демонов
 X:10:0
 W:0:8:0:25
 A:15:5 to 100
@@ -1071,7 +1071,7 @@ T:17:0:99
 T:18:0:99
 F:SLAY_DEMON
 
-N:116:of Acid
+N:116:Кислоты
 X:10:0
 W:0:10:0:50
 A:5:10 to 100
@@ -1080,7 +1080,7 @@ T:17:0:99
 T:18:0:99
 F:BRAND_ACID | IGNORE_ACID
 
-N:117:of Lightning
+N:117:Молнии
 X:10:0
 W:0:10:0:45
 A:5:10 to 100
@@ -1089,7 +1089,7 @@ T:17:0:99
 T:18:0:99
 F:BRAND_ELEC | IGNORE_ELEC
 
-N:118:of Slay Giant
+N:118:Истребления Гигантов
 X:10:0
 W:0:8:0:25
 A:5:5 to 60
@@ -1098,7 +1098,7 @@ T:17:0:99
 T:18:0:99
 F:SLAY_GIANT
 
-N:119:of Slay Dragon
+N:119:Истребления Драконов
 X:10:0
 W:0:8:0:40
 A:10:10 to 100
@@ -1107,7 +1107,7 @@ T:17:0:99
 T:18:0:99
 F:SLAY_DRAGON
 
-N:120:of Holy Might
+N:120:Священной Силы
 X:20:0
 W:40:15:0:60
 A:2:30 to 127
@@ -1118,7 +1118,7 @@ T:18:2:99
 F:SLAY_EVIL | SLAY_DEMON | SLAY_UNDEAD
 F:IGNORE_FIRE | IGNORE_ACID
 
-N:121:of Venom
+N:121:Яда
 X:10:0
 W:0:6:0:40
 A:20:10 to 60
@@ -1127,7 +1127,7 @@ T:17:0:99
 T:18:0:99
 F:BRAND_POIS
 
-N:122:of Flame
+N:122:Пламени
 X:10:0
 W:0:6:0:35
 A:10:10 to 100
@@ -1136,7 +1136,7 @@ T:17:0:99
 T:18:0:99
 F:BRAND_FIRE | IGNORE_FIRE
 
-N:123:of Frost
+N:123:Мороза
 X:10:0
 W:0:6:0:30
 A:10:10 to 100
@@ -1145,7 +1145,7 @@ T:17:0:99
 T:18:0:99
 F:BRAND_COLD | IGNORE_COLD
 
-N:124:of Wounding
+N:124:Ранения
 X:5:0
 W:0:4:0:20
 A:15:15 to 127
@@ -1153,9 +1153,10 @@ C:3+d5:3+d5:0
 T:16:0:99
 T:17:0:99
 T:18:0:99
-D:Ammunition of Wounding often has unusually high to-hit and to-dam values.
+D:Они не имеют особых возможностей, но их бонусы к удару и к урону
+D: могут быть необычно высоки.
 
-N:125:of Backbiting
+N:125:Промахов
 X:0:0
 W:0:0:0:0
 A:0:10 to 80
@@ -1170,7 +1171,7 @@ T:18:0:99
 # they keep their rarity of 0 and nobody adds 'T' lines for them.
 
 # Destroyed Weapon
-N:126:(Shattered)
+N:126:(Сломано)
 X:0:0
 W:0:0:0:0
 A:0:1 to 80
@@ -1178,7 +1179,7 @@ C:d5:d5:0
 
 # Destroyed Body Armor
 
-N:127:(Blasted)
+N:127:(Разбито)
 X:0:0
 W:0:0:0:0
 A:0:1 to 80

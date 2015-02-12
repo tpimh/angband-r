@@ -10,11 +10,11 @@
 #
 
 # General store
-store:1:General Store
-owner:5000:Bilbo the Friendly (Hobbit)
-owner:10000:Rincewind the Chicken (Human)
-owner:20000:Snafu the Midget (Gnome)
-owner:30000:Lyar-el the Comely (Elf)
+store:1:Главный Магазин
+owner:5000:Бильбо Щедрый (Хоббит)
+owner:10000:Ринсвид Трусливый (Человек)
+owner:20000:Снафу Карлик (Карлик)
+owner:30000:Лиар-Эль Уступчивый (Эльф)
 slots:0:4
 turnover:2
 always:cloak:Cloak
@@ -33,11 +33,11 @@ normal:food:Flask of Whisky
 normal:food:Hard Biscuit
 
 # Armoury
-store:2:Armoury
-owner:5000:Kon-Dar the Ugly (Half-Orc)
-owner:10000:Darg-Low the Grim (Human)
-owner:25000:Decado the Handsome (Dunadan)
-owner:30000:Mauglin the Grumpy (Dwarf)
+store:2:Магазин Доспехов
+owner:5000:Кон-Дар Уродливый (Полуорк)
+owner:10000:Дарг-Лоу Угрюмый (Человек)
+owner:25000:Декадо Красивый (Дунадан)
+owner:30000:Мауглин Ворчливый (Гном)
 slots:6:18
 turnover:9
 normal:boots:Pair of Leather Sandals
@@ -60,11 +60,11 @@ normal:shield:Small Metal Shield
 normal:shield:Leather Shield
 
 # Weaponsmith
-store:3:Weaponsmith
-owner:5000:Ithyl-Mak the Beastly (Half-Troll)
-owner:10000:Arndal Beast-Slayer (Half-Elf)
-owner:25000:Tarl Beast-Master (Hobbit)
-owner:30000:Oglign Dragon-Slayer (Dwarf)
+store:3:Оружейная
+owner:5000:Итил-Мак Звериный (Полутролль)
+owner:10000:Арндал Победитель Зверей (Полуэльф)
+owner:25000:Тарл Повелитель Зверей (Хоббит)
+owner:30000:Оглигн Победитель Драконов (Гном)
 slots:3:14
 turnover:9
 normal:shot:Iron Shot
@@ -97,11 +97,11 @@ normal:bow:Long Bow
 normal:bow:Light Crossbow
 
 # Temple
-store:4:Temple
-owner:15000:Ludwig the Humble (Human)
-owner:20000:Gunnar the Paladin (Human)
-owner:25000:Delilah the Pure (Elf)
-owner:30000:Bosk the Wise (Dwarf)
+store:4:Храм
+owner:15000:Людвиг Скромный (Человек)
+owner:20000:Гуннар Паладин (Человек)
+owner:25000:Делайла Чистый (Эльф)
+owner:30000:Боск Мудрый (Гном)
 slots:6:14
 turnover:9
 always:prayer book:[Beginners Handbook]
@@ -127,11 +127,11 @@ normal:potion:Cure Serious Wounds
 normal:potion:Cure Critical Wounds
 
 # Alchemist
-store:5:Alchemist
-owner:10000:Mauser the Chemist (Half-Elf)
-owner:10000:Wizzle the Chaotic (Hobbit)
-owner:15000:Ga-nat the Greedy (Gnome)
-owner:15000:Vella the Slender (Human)
+store:5:Магазин Алхимика
+owner:10000:Маузер Химик (Полуэльф)
+owner:10000:Виззле Хаотический (Хоббит)
+owner:15000:Га-Нат Жадный (Карлик)
+owner:15000:Велла Веселый (Человек)
 slots:6:10
 turnover:9
 always:scroll:Word of Recall
@@ -152,11 +152,11 @@ normal:potion:Restore Life Levels
 normal:potion:Infravision
 
 # Magic-user's
-store:6:Magic Shop
-owner:15000:Ariel the Sorceress (Half-Elf)
-owner:20000:Buggerby the Great (Gnome)
-owner:25000:Inglorian the Mage (Human)
-owner:30000:Luthien Starshine (High-Elf)
+store:6:Магазин Магии
+owner:15000:Ариэль Колдунья (Полуэльф)
+owner:20000:Баггерби Великий (Карлик)
+owner:25000:Инглориан Маг (Человек)
+owner:30000:Лучиэнь Звездный Свет (Высший Эльф)
 slots:4:14
 turnover:9
 always:magic book:[Magic for Beginners]
@@ -182,16 +182,16 @@ normal:staff:Detect Invisible
 normal:staff:Detect Evil
 
 # Black Market - no stock given but we still need slot/turnover info
-store:7:Black Market
-owner:15000:Lo-Hak the Awful (Half-Troll)
-owner:20000:Histor the Goblin (Kobold)
-owner:25000:Durwin the Shifty (Half-Orc)
-owner:30000:Drago the Fair (Elf)
+store:7:Черный Рынок
+owner:15000:Ло-Хак Ужасный (Полутролль)
+owner:20000:Хистор Гоблин (Кобольд)
+owner:25000:Дарвин Упрямый (Полуорк)
+owner:30000:Драго Честный (Эльф)
 slots:6:18
 turnover:9
 
-store:8:Home
-owner:0:Your home
-owner:0:Your home
-owner:0:Your home
-owner:0:Your home
+store:8:Ваш Дом
+owner:0:Ваш дом
+owner:0:Ваш дом
+owner:0:Ваш дом
+owner:0:Ваш дом
