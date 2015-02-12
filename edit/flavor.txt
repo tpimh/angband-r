@@ -8,7 +8,7 @@
 # flavor:<index>:<attr>:<text>
 # fixed:<index>:<sval>:<attr>:<text>
 
-# To see how many items are in here vs. those required by the number of
+# To see how many items are in here vs. those requiКрасный by the nКоричневый of
 # objects in object.txt, the following bash script may be useful:
 #  for i in 40 45 55 65 66 70 75 80; do
 #    X=`grep "I:$i" object.txt|wc -l`
@@ -21,314 +21,314 @@
 kind:ring:=
 
 # Fixed: the One Ring
-fixed:1:55:Yellow:Plain Gold
+fixed:1:55:Желтый:прост$ANT золот$ANT
 
 # The Ring of Barahir 50
 # The Ring of Tulkas 51
 
 # The Ring of Power 'Narya'
-fixed:28:52:Red:Ruby
+fixed:28:52:Красный:рубинов$ANT
 
 # The Ring of Power 'Nenya'
-fixed:40:53:Light Blue:Mithril
+fixed:40:53:Светло-синий:мифрилов$ANT
 
 # The Ring of Power 'Vilya'
-fixed:29:54:Blue:Sapphire
+fixed:29:54:Синий:сапфиров$ANT
 
-flavor:2:Green:Alexandrite
-flavor:3:Violet:Amethyst
-flavor:4:Light Blue:Aquamarine
-flavor:5:Light Blue:Azurite
-flavor:6:Light Green:Beryl
-flavor:7:Red:Bloodstone
-flavor:8:White:Calcite
-flavor:9:Red:Carnelian
-flavor:10:Slate:Corundum
-flavor:11:White:Diamond
-flavor:12:Green:Emerald
-flavor:13:Light Green:Fluorite
-flavor:14:Red:Garnet
-flavor:15:Light Slate:Granite
-flavor:16:Light Green:Jade
-flavor:17:Umber:Jasper
-flavor:18:Blue:Lapis Lazuli
-flavor:19:Green:Malachite
-flavor:20:White:Marble
-flavor:21:Light Slate:Moonstone
-flavor:22:Light Red:Onyx
-flavor:23:Light Slate:Opal
-flavor:24:White:Pearl
-flavor:25:Light Slate:Quartz
-flavor:26:Light Slate:Quartzite
-flavor:27:Light Red:Rhodonite
-#flavor:28:Red:Ruby
-#flavor:29:Blue:Sapphire
-flavor:30:Yellow:Tiger Eye
-flavor:31:Yellow:Topaz
-flavor:32:Light Blue:Turquoise
-flavor:33:Light Umber:Zircon
-flavor:34:White:Platinum
-flavor:35:Light Umber:Bronze
-flavor:36:Yellow:Gold
-flavor:37:Light Dark:Obsidian
-flavor:38:Light Slate:Silver
-flavor:39:Umber:Tortoise Shell
-#flavor:40:Light Blue:Mithril
-flavor:41:Light Dark:Jet
-flavor:42:Yellow:Engagement
-flavor:43:Light Green:Adamantite
+flavor:2:Зеленый:александритов$ANT
+flavor:3:Фиолетовый:аметистов$ANT
+flavor:4:Светло-синий:аквамаринов$ANT
+flavor:5:Светло-синий:азуритов$ANT
+flavor:6:Светло-зеленый:бериллов$ANT
+flavor:7:Красный:змеевиков$ANT
+flavor:8:Белый:кальцитов$ANT
+flavor:9:Красный:турмалинов$ANT
+flavor:10:Серый:корундов$ANT
+flavor:11:Белый:алмазн$ANT
+flavor:12:Зеленый:изумрудн$ANT
+flavor:13:Светло-зеленый:флюоритов$ANT
+flavor:14:Красный:гранатов$ANT
+flavor:15:Светло-серый:гранитов$ANT
+flavor:16:Светло-зеленый:жадов$ANT
+flavor:17:Коричневый:хрустальн$ANT
+flavor:18:Синий:ляпис-лазурев$ANT
+flavor:19:Зеленый:малахитов$ANT
+flavor:20:Белый:мраморн$ANT
+flavor:21:Светло-серый:гематитов$ANT
+flavor:22:Светло-красный:ониксов$ANT
+flavor:23:Светло-серый:опалов$ANT
+flavor:24:Белый:жемчужн$ANT
+flavor:25:Светло-серый:кварцев$ANT
+flavor:26:Светло-серый:кварцитов$ANT
+flavor:27:Светло-красный:родонитов$ANT
+#flavor:28:Красный:рубинов$ANT
+#flavor:29:Синий:сапфиров$ANT
+flavor:30:Желтый:железн$ANT
+flavor:31:Желтый:топазов$ANT
+flavor:32:Светло-синий:медн$ANT
+flavor:33:Светло-коричневый:цирконов$ANT
+flavor:34:Белый:платинов$ANT
+flavor:35:Светло-коричневый:бронзов$ANT
+flavor:36:Желтый:золот$ANT
+flavor:37:Светло-черный:обсидианов$ANT
+flavor:38:Светло-серый:серебрян$ANT
+flavor:39:Коричневый:черепахов$ANT
+#flavor:40:Светло-синий:мифрилов$ANT
+flavor:41:Светло-черный:стальн$ANT
+flavor:42:Желтый:халцедонов$ANT
+flavor:43:Светло-зеленый:адамантитов$ANT
 
 ##### Amulets #####
 
 kind:amulet:"
 
 # The Amulet of Carlammas
-fixed:52:50:Light Umber:Bronze
+fixed:52:50:Светло-коричневый:бронзов$AMT
 
 # The Amulet of Ingwe 51
 
 # The Necklace of the Dwarves
-fixed:55:52:Yellow:Golden
+fixed:55:52:Желтый:золот$AMU
 
 # New Artifact (14): The Elfstone 'Elessar'
-fixed:44:53:Green:Green
+fixed:44:53:Зеленый:зелен$AMT
 
 # New Artifact (15): The Jewel 'Evenstar'
-fixed:46:54:White:White
+fixed:46:54:Белый:бел$AMT
 
-#flavor:44:Yellow:Amber
-flavor:45:Light Umber:Driftwood
-#flavor:46:White:Coral
-flavor:47:Light Slate:Agate
-flavor:48:White:Ivory
-flavor:49:Light Dark:Obsidian
-flavor:50:White:Bone
-flavor:51:Light Umber:Brass
-#flavor:52:Light Umber:Bronze
-flavor:53:Slate:Pewter
-flavor:54:Umber:Tortoise Shell
-#flavor:55:Yellow:Golden
-flavor:56:Light Blue:Azure
-flavor:57:White:Crystal
-flavor:58:Light Slate:Silver
-flavor:59:Light Umber:Copper
-flavor:60:Umber:Carved Oak
-flavor:61:Light Slate:Dragon Tooth
-flavor:62:Red:Ruby
-flavor:63:Light Blue:Mithril
-flavor:64:Light Green:Adamant
-flavor:65:Slate:Flint Stone
-flavor:66:Light Blue:Sea Shell
-flavor:67:Light Slate:Mother-of-Pearl
+#flavor:44:Желтый:изумрудн$AMT
+flavor:45:Светло-коричневый:аметистов$AMT
+#flavor:46:Белый:кораллов$AMT
+flavor:47:Светло-серый:агатов$AMT
+flavor:48:Белый:костян$AMU
+flavor:49:Светло-черный:обсидианов$AMT
+flavor:50:Белый:стеклянн$AMT
+flavor:51:Светло-коричневый:латунн$AMT
+#flavor:52:Светло-коричневый:бронзов$AMT
+flavor:53:Серый:малахитов$AMT
+flavor:54:Коричневый:черепахов$AMT
+#flavor:55:Желтый:золот$AMU
+flavor:56:Светло-синий:лазурн$AMT
+flavor:57:Белый:хрустальн$AMT
+flavor:58:Светло-серый:серебрян$AMT
+flavor:59:Светло-коричневый:медн$AMT
+flavor:60:Коричневый:резн$AMU дубов$AMT
+flavor:61:Светло-серый:сапфиров$AMT
+flavor:62:Красный:рубинов$AMT
+flavor:63:Светло-синий:мифрилов$AMT
+flavor:64:Светло-зеленый:адамантов$AMT
+flavor:65:Серый:платинов$AMT
+flavor:66:Светло-синий:ракушечн$AMT
+flavor:67:Светло-серый:жемчужн$AMT
 
 ##### Staves #####
 
 kind:staff:_
 
-flavor:68:Light Umber:Aspen
-flavor:69:Light Umber:Balsa
-flavor:70:Light Umber:Banyan
-flavor:71:Light Umber:Birch
-flavor:72:Light Umber:Cedar
-flavor:73:Light Umber:Cottonwood
-flavor:74:Light Umber:Cypress
-flavor:75:Light Umber:Dogwood
-flavor:76:Light Umber:Elm
-flavor:77:Light Umber:Eucalyptus
-flavor:78:Light Umber:Hemlock
-flavor:79:Light Umber:Hickory
-flavor:80:Umber:Ironwood
-flavor:81:Light Umber:Locust
-flavor:82:Umber:Mahogany
-flavor:83:Umber:Maple
-flavor:84:Umber:Mulberry
-flavor:85:Umber:Oak
-flavor:86:Umber:Pine
-flavor:87:Red:Redwood
-flavor:88:Red:Rosewood
-flavor:89:Light Umber:Spruce
-flavor:90:Light Umber:Sycamore
-flavor:91:Light Umber:Teak
-flavor:92:Umber:Walnut
-flavor:93:Green:Mistletoe
-flavor:94:Light Umber:Hawthorn
-flavor:95:Light Umber:Bamboo
-flavor:96:Light Slate:Silver
-flavor:97:Umber:Runed
-flavor:98:Yellow:Golden
-flavor:99:Slate:Ashen
-flavor:100:Light Umber:Gnarled
-flavor:101:White:Ivory
-flavor:102:Light Umber:Willow
+flavor:68:Светло-коричневый:елов$AMT
+flavor:69:Светло-коричневый:буков$AMT
+flavor:70:Светло-коричневый:баньянов$AMU
+flavor:71:Светло-коричневый:березов$AMT
+flavor:72:Светло-коричневый:яблонев$AMT
+flavor:73:Светло-коричневый:грушев$AMT
+flavor:74:Светло-коричневый:кипарисов$AMT
+flavor:75:Светло-коричневый:вязов$AMT
+flavor:76:Светло-коричневый:рябинов$AMT
+flavor:77:Светло-коричневый:эвкалиптов$AMT
+flavor:78:Светло-коричневый:тополев$AMT
+flavor:79:Светло-коричневый:лиственничн$AMT
+flavor:80:Коричневый:секвойев$AMT
+flavor:81:Светло-коричневый:смородинн$AMT
+flavor:82:Коричневый:ольхов$AMT
+flavor:83:Коричневый:кленов$AMT
+flavor:84:Коричневый:осинов$AMT
+flavor:85:Коричневый:дубов$AMT
+flavor:86:Коричневый:соснов$AMT
+flavor:87:Красный:стар$AMT
+flavor:88:Красный:мангров$AMT
+flavor:89:Светло-коричневый:пихтов$AMT
+flavor:90:Светло-коричневый:каштанов$AMT
+flavor:91:Светло-коричневый:можжевельн$AMT
+flavor:92:Коричневый:орехов$AMT
+flavor:93:Зеленый:резн$AMU
+flavor:94:Светло-коричневый:чернодеревн$AMT
+flavor:95:Светло-коричневый:бамбуков$AMT
+flavor:96:Светло-серый:серебрян$AMT
+flavor:97:Коричневый:расписанн$AMT
+flavor:98:Желтый:золот$AMU
+flavor:99:Серый:краснодеревн$AMT
+flavor:100:Светло-коричневый:сучковат$AMT
+flavor:101:Белый:костян$AMU
+flavor:102:Светло-коричневый:липов$AMT
 
 ##### Wands #####
 
 kind:wand:-
 
-flavor:103:Light Blue:Aluminium
-flavor:104:Light Dark:Cast Iron
-flavor:105:White:Chromium
-flavor:106:Light Umber:Copper
-flavor:107:Yellow:Gold
-flavor:108:Slate:Iron
-flavor:109:Light Slate:Magnesium
-flavor:110:Light Slate:Molybdenum
-flavor:111:Light Umber:Nickel
-flavor:112:Red:Rusty
-flavor:113:Light Slate:Silver
-flavor:114:Light Slate:Steel
-flavor:115:Light Slate:Tin
-flavor:116:White:Titanium
-flavor:117:White:Tungsten
-flavor:118:Light Slate:Zirconium
-flavor:119:Light Slate:Zinc
-flavor:120:Light Blue:Aluminum-Plated
-flavor:121:Light Umber:Copper-Plated
-flavor:122:Yellow:Gold-Plated
-flavor:123:Light Umber:Nickel-Plated
-flavor:124:Light Slate:Silver-Plated
-flavor:125:Light Slate:Steel-Plated
-flavor:126:Light Slate:Tin-Plated
-flavor:127:Light Slate:Zinc-Plated
-flavor:128:Light Blue:Mithril-Plated
-flavor:129:Light Blue:Mithril
-flavor:130:Umber:Runed
-flavor:131:Light Umber:Bronze
-flavor:132:Light Umber:Brass
-flavor:133:White:Platinum
-flavor:134:Slate:Lead
-flavor:135:Slate:Lead-Plated
-flavor:136:White:Ivory
-flavor:137:Slate:Pewter
+flavor:103:Светло-синий:алюминиев$AFT
+flavor:104:Светло-черный:чугунн$AFT
+flavor:105:Белый:хромов$AFT
+flavor:106:Светло-коричневый:медн$AFT
+flavor:107:Желтый:золот$AFT
+flavor:108:Серый:железн$AFT
+flavor:109:Светло-серый:магниев$AFT
+flavor:110:Светло-серый:молибденов$AFT
+flavor:111:Светло-коричневый:никелев$AFT
+flavor:112:Красный:ржав$AFT
+flavor:113:Светло-серый:серебрян$AFT
+flavor:114:Светло-серый:стальн$AFT
+flavor:115:Светло-серый:оловянн$AFT
+flavor:116:Белый:титанов$AFT
+flavor:117:Белый:вольфрамов$AFT
+flavor:118:Светло-серый:цирконов$AFT
+flavor:119:Светло-серый:цинков$AFT
+flavor:120:Светло-синий:алюминиев$AFT полированн$AFT
+flavor:121:Светло-коричневый:медн$AFT полированн$AFT
+flavor:122:Желтый:золот$AFT полированн$AFT
+flavor:123:Светло-коричневый:никелев$AFT полированн$AFT
+flavor:124:Светло-серый:серебрян$AFT полированн$AFT
+flavor:125:Светло-серый:стальн$AFT полированн$AFT
+flavor:126:Светло-серый:оловян$AFT полированн$AFT
+flavor:127:Светло-серый:цинков$AFT полированн$AFT
+flavor:128:Светло-синий:мифрилов$AFT полированн$AFT
+flavor:129:Светло-синий:мифрилов$AFT
+flavor:130:Коричневый:исписанн$AFT
+flavor:131:Светло-коричневый:бронзов$AFT
+flavor:132:Светло-коричневый:латунн$AFT
+flavor:133:Белый:платинов$AFT
+flavor:134:Серый:свинцов$AFT
+flavor:135:Серый:свинцов$AFT полированн$AFT
+flavor:136:Белый:костян$AFT
+flavor:137:Серый:палладиев$AFT
 
 ##### Rods #####
 
 kind:rod:-
 
-flavor:138:Light Blue:Aluminum
-flavor:139:Light Dark:Cast Iron
-flavor:140:White:Chromium
-flavor:141:Light Umber:Copper
-flavor:142:Yellow:Gold
-flavor:143:Slate:Iron
-flavor:144:Light Slate:Magnesium
-flavor:145:Light Slate:Molybdenum
-flavor:146:Light Umber:Nickel
-flavor:147:Red:Rusty
-flavor:148:Light Slate:Silver
-flavor:149:Light Slate:Steel
-flavor:150:Light Slate:Tin
-flavor:151:White:Titanium
-flavor:152:White:Tungsten
-flavor:153:Light Slate:Zirconium
-flavor:154:Light Slate:Zinc
-flavor:155:Light Blue:Aluminum-Plated
-flavor:156:Light Umber:Copper-Plated
-flavor:157:Yellow:Gold-Plated
-flavor:158:Light Umber:Nickel-Plated
-flavor:159:Light Slate:Silver-Plated
-flavor:160:Light Slate:Steel-Plated
-flavor:161:Light Slate:Tin-Plated
-flavor:162:Light Slate:Zinc-Plated
-flavor:163:Light Blue:Mithril-Plated
-flavor:164:Light Blue:Mithril
-flavor:165:Umber:Runed
-flavor:166:Light Umber:Bronze
-flavor:167:Light Umber:Brass
-flavor:168:White:Platinum
-flavor:169:Slate:Lead
-flavor:170:Slate:Lead-Plated
-flavor:171:White:Ivory
-flavor:172:Slate:Pewter
+flavor:138:Светло-синий:алюминиев$AMT
+flavor:139:Светло-черный:чугунн$AMT
+flavor:140:Белый:хромов$AMT
+flavor:141:Светло-коричневый:медн$AMT
+flavor:142:Желтый:золот$AMU
+flavor:143:Серый:железн$AMT
+flavor:144:Светло-серый:магниев$AMT
+flavor:145:Светло-серый:молибденов$AMT
+flavor:146:Светло-коричневый:никелев$AMT
+flavor:147:Красный:ржав$AMT
+flavor:148:Светло-серый:серебрян$AMT
+flavor:149:Светло-серый:стальн$AMU
+flavor:150:Светло-серый:оловянн$AMT
+flavor:151:Белый:титанов$AMT
+flavor:152:Белый:вольфрамов$AMT
+flavor:153:Светло-серый:циркониев$AMT
+flavor:154:Светло-серый:цинков$AMT
+flavor:155:Светло-синий:алюминиев$AMT полированн$AMT
+flavor:156:Светло-коричневый:медн$AMT полированн$AMT
+flavor:157:Желтый:золот$AMU полированн$AMT
+flavor:158:Светло-коричневый:никелев$AMT полированн$AMT
+flavor:159:Светло-серый:серебрян$AMT полированн$AMT
+flavor:160:Светло-серый:стальн$AMU полированн$AMT
+flavor:161:Светло-серый:оловянн$AMT полированн$AMT
+flavor:162:Светло-серый:цинков$AMT полированн$AMT
+flavor:163:Светло-синий:мифрилов$AMT полированн$AMT
+flavor:164:Светло-синий:мифрилов$AMT
+flavor:165:Коричневый:исписанн$AMT
+flavor:166:Светло-коричневый:бронзов$AMT
+flavor:167:Светло-коричневый:латунн$AMT
+flavor:168:Белый:платинов$AMT
+flavor:169:Серый:свинцов$AMT
+flavor:170:Серый:свинцов$AMT полированн$AMT
+flavor:171:Белый:костян$AMU
+flavor:172:Серый:палладиев$AMT
 
 ##### Mushrooms #####
 
 kind:food:,
 
-flavor:173:Blue:Blue
-flavor:174:Light Dark:Black
-flavor:175:Light Dark:Black Spotted
-flavor:176:Umber:Brown
-flavor:177:Blue:Dark Blue
-flavor:178:Green:Dark Green
-flavor:179:Red:Dark Red
-flavor:180:Yellow:Yellow
-flavor:181:Light Slate:Furry
-flavor:182:Green:Green
-flavor:183:Slate:Grey
-flavor:184:Light Blue:Light Blue
-flavor:185:Light Green:Light Green
-flavor:186:Violet:Violet
-flavor:187:Red:Red
-flavor:188:Slate:Slimy
-flavor:189:Light Umber:Tan
-flavor:190:White:White
-flavor:191:White:White Spotted
-flavor:192:Umber:Wrinkled
+flavor:173:Синий:син$AMM
+flavor:174:Светло-черный:черн$AMT
+flavor:175:Светло-черный:черн$AMT с пятнами
+flavor:176:Коричневый:коричнев$AMT
+flavor:177:Синий:темно-син$AMM
+flavor:178:Зеленый:темно-зелен$AMT
+flavor:179:Красный:темно-красн$AMT
+flavor:180:Желтый:желт$AMT
+flavor:181:Светло-серый:бледно-зелен$AMT
+flavor:182:Зеленый:зелен$AMT
+flavor:183:Серый:сер$AMT
+flavor:184:Светло-синий:светло-син$AMM
+flavor:185:Светло-зеленый:светло-зелен$AMT
+flavor:186:Фиолетовый:фиолетов$AMT
+flavor:187:Красный:красн$AMT
+flavor:188:Серый:склизк$AMM
+flavor:189:Светло-коричневый:гнил$AMU
+flavor:190:Белый:бел$AMT
+flavor:191:Белый:бел$AMT с пятнами
+flavor:192:Коричневый:морщинист$AMT
 
 ##### Potions #####
 
 kind:potion:!
 
-flavor:193:White:Clear
-flavor:194:Light Umber:Light Brown
-flavor:195:Green:Icky Green
-flavor:196:Light Blue:Azure
-flavor:197:Blue:Blue
-flavor:198:Blue:Blue Speckled
-flavor:199:Light Dark:Black
-flavor:200:Umber:Brown
-flavor:201:Umber:Brown Speckled
-flavor:202:Light Slate:Bubbling
-flavor:203:Light Green:Chartreuse
-flavor:204:White:Cloudy
-flavor:205:Light Umber:Copper Speckled
-flavor:206:Red:Crimson
-flavor:207:Light Blue:Cyan
-flavor:208:Blue:Dark Blue
-flavor:209:Green:Dark Green
-flavor:210:Red:Dark Red
-flavor:211:Yellow:Gold Speckled
-flavor:212:Green:Green
-flavor:213:Green:Green Speckled
-flavor:214:Slate:Grey
-flavor:215:Slate:Grey Speckled
-flavor:216:Light Slate:Hazy
-flavor:217:Violet:Indigo
-flavor:218:Light Blue:Light Blue
-flavor:219:Light Green:Light Green
-flavor:220:Red:Magenta
-flavor:221:Blue:Metallic Blue
-flavor:222:Red:Metallic Red
-flavor:223:Green:Metallic Green
-flavor:224:Violet:Metallic Purple
-flavor:225:Light Slate:Misty
-flavor:226:Orange:Orange
-flavor:227:Orange:Orange Speckled
-flavor:228:Light Red:Pink
-flavor:229:Light Red:Pink Speckled
-flavor:230:Violet:Puce
-flavor:231:Violet:Purple
-flavor:232:Violet:Purple Speckled
-flavor:233:Red:Red
-flavor:234:Red:Red Speckled
-flavor:235:Light Slate:Silver Speckled
-flavor:236:Light Dark:Smoky
-flavor:237:Orange:Tangerine
-flavor:238:Violet:Violet
-flavor:239:Red:Vermilion
-flavor:240:White:White
-flavor:241:Yellow:Yellow
-flavor:242:Violet:Violet Speckled
-flavor:243:Light Red:Pungent
-flavor:244:Red:Clotted Red
-flavor:245:Light Red:Viscous Pink
-flavor:246:Yellow:Oily Yellow
-flavor:247:Green:Gloopy Green
-flavor:248:Violet:Shimmering
-flavor:249:Red:Coagulated Crimson
-flavor:250:Yellow:Yellow Speckled
-flavor:251:Yellow:Gold
+flavor:193:Белый:прозрачн$AMT
+flavor:194:Светло-коричневый:светло-коричнев$AMT
+flavor:195:Зеленый:грязно-зелен$AMT
+flavor:196:Светло-синий:лазурев$AMT
+flavor:197:Синий:син$AMM
+flavor:198:Синий:небесно-голуб$AMU
+flavor:199:Светло-черный:черн$AMT
+flavor:200:Коричневый:коричнев$AMT
+flavor:201:Коричневый:темно-коричнев$AMT
+flavor:202:Светло-серый:малинов$AMT
+flavor:203:Светло-зеленый:нежно-зелен$AMT
+flavor:204:Белый:медн$AMT
+flavor:205:Светло-коричневый:кроваво-красн$AMT
+flavor:206:Красный:кроваво-красн$AMT
+flavor:207:Светло-синий:голуб$AMU
+flavor:208:Синий:темно-син$AMM
+flavor:209:Зеленый:темно-зелен$AMT
+flavor:210:Красный:темно-красн$AMT
+flavor:211:Желтый:светло-золотист$AMT
+flavor:212:Зеленый:зелен$AMT
+flavor:213:Зеленый:сине-зелен$AMT
+flavor:214:Серый:сер$AMT
+flavor:215:Серый:светло-сер$AMT
+flavor:216:Светло-серый:темно-сер$AMT
+flavor:217:Фиолетовый:бур$AMT
+flavor:218:Светло-синий:светло-син$AMM
+flavor:219:Светло-зеленый:светло-зелен$AMT
+flavor:220:Красный:пурпурн$AMT
+flavor:221:Синий:металлическ$AMM син$AMM
+flavor:222:Красный:металлическ$AMM красн$AMT
+flavor:223:Зеленый:металлическ$AMM зелен$AMT
+flavor:224:Фиолетовый:металлическ$AMM пурпурн$AMT
+flavor:225:Светло-серый:туманн$AMT
+flavor:226:Оранжевый:оранжев$AMT
+flavor:227:Оранжевый:светло-оранжев$AMT
+flavor:228:Светло-красный:розов$AMT
+flavor:229:Светло-красный:розоват$AMT
+flavor:230:Фиолетовый:синеват$AMT
+flavor:231:Фиолетовый:сиренев$AMT
+flavor:232:Фиолетовый:светло-сиренев$AMT
+flavor:233:Красный:красн$AMT
+flavor:234:Красный:красно-коричнев$AMT
+flavor:235:Светло-серый:серебрист$AMT
+flavor:236:Светло-черный:дымчат$AMT
+flavor:237:Оранжевый:солнечно-желт$AMT
+flavor:238:Фиолетовый:светло-фиолетов$AMT
+flavor:239:Красный:салатов$AMT
+flavor:240:Белый:бел$AMT
+flavor:241:Желтый:желт$AMT
+flavor:242:Фиолетовый:фиолетов$AMT
+flavor:243:Светло-красный:темно-фиолетов$AMT
+flavor:244:Красный:багров$AMT
+flavor:245:Светло-красный:светло-розов$AMT
+flavor:246:Желтый:маслянисто-желт$AMT
+flavor:247:Зеленый:ядовито-зелен$AMT
+flavor:248:Фиолетовый:мерцающ$AMM
+flavor:249:Красный:светло-красн$AMT
+flavor:250:Желтый:темно-желт$AMT
+flavor:251:Желтый:золотист$AMT
 
 ##### Scrolls #####
 
@@ -336,54 +336,54 @@ flavor:251:Yellow:Gold
 
 kind:scroll:?
 
-flavor:252:White
-flavor:253:White
-flavor:254:White
-flavor:255:White
-flavor:256:White
-flavor:257:White
-flavor:258:White
-flavor:259:White
-flavor:260:White
-flavor:261:White
-flavor:262:White
-flavor:263:White
-flavor:264:White
-flavor:265:White
-flavor:266:White
-flavor:267:White
-flavor:268:White
-flavor:269:White
-flavor:270:White
-flavor:271:White
-flavor:272:White
-flavor:273:White
-flavor:274:White
-flavor:275:White
-flavor:276:White
-flavor:277:White
-flavor:278:White
-flavor:279:White
-flavor:280:White
-flavor:281:White
-flavor:282:White
-flavor:283:White
-flavor:284:White
-flavor:285:White
-flavor:286:White
-flavor:287:White
-flavor:288:White
-flavor:289:White
-flavor:290:White
-flavor:291:White
-flavor:292:White
-flavor:293:White
-flavor:294:White
-flavor:295:White
-flavor:296:White
-flavor:297:White
-flavor:298:White
-flavor:299:White
-flavor:300:White
-flavor:301:White
-flavor:302:White
+flavor:252:Белый
+flavor:253:Белый
+flavor:254:Белый
+flavor:255:Белый
+flavor:256:Белый
+flavor:257:Белый
+flavor:258:Белый
+flavor:259:Белый
+flavor:260:Белый
+flavor:261:Белый
+flavor:262:Белый
+flavor:263:Белый
+flavor:264:Белый
+flavor:265:Белый
+flavor:266:Белый
+flavor:267:Белый
+flavor:268:Белый
+flavor:269:Белый
+flavor:270:Белый
+flavor:271:Белый
+flavor:272:Белый
+flavor:273:Белый
+flavor:274:Белый
+flavor:275:Белый
+flavor:276:Белый
+flavor:277:Белый
+flavor:278:Белый
+flavor:279:Белый
+flavor:280:Белый
+flavor:281:Белый
+flavor:282:Белый
+flavor:283:Белый
+flavor:284:Белый
+flavor:285:Белый
+flavor:286:Белый
+flavor:287:Белый
+flavor:288:Белый
+flavor:289:Белый
+flavor:290:Белый
+flavor:291:Белый
+flavor:292:Белый
+flavor:293:Белый
+flavor:294:Белый
+flavor:295:Белый
+flavor:296:Белый
+flavor:297:Белый
+flavor:298:Белый
+flavor:299:Белый
+flavor:300:Белый
+flavor:301:Белый
+flavor:302:Белый
