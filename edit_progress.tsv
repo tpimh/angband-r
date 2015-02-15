@@ -3,8 +3,8 @@ artifact.txt	✓ (M-lines, 135, 137-139 not translated)
 ego_item.txt	✓ (96-99, 128-133 not translated)
 flavor.txt	✓
 hints.txt	✗
-monster_base.txt	✗
-monster.txt	in progress (+modificators)
+monster_base.txt	✓ ('$', '.', ',' not translated)
+monster.txt	✓ (617-618 not translated)
 names.txt	✓ (scroll names not translated)
 object_base.txt	✗
 object.txt	in progress (+modificators)
