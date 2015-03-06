@@ -7,14 +7,12 @@ monster_base.txt	✓ ('$', '.', ',' not translated)
 monster.txt	✓ (617-618 not translated)
 names.txt	✓ (scroll names not translated)
 object_base.txt	✗
-object.txt	in progress (+modificators)
-pain.txt	✗
+object.txt	
+pain.txt	✓(5-12 have partial translation)
 p_class.txt	✓ (items not translated)
 p_hist.txt	✓
 pit.txt	✗
 p_race.txt	✓
-room_template.txt	✗
 spell.txt	✗
 store.txt	✓ (items not translated)
 terrain.txt	✓
-vault.txt	✗
