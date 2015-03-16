@@ -1051,7 +1051,7 @@ B:HIT:HURT:1d4
 B:TOUCH:POISON:2d4
 D:Она кажется вполне обычной кучкой медных монет, пока вы не выясняете,
 D: что у нее есть ноги, и что она может больно кусаться.
-mimic:gold:copper
+mimic:gold:медные монеты
 
 N:73:бел$AFT крыс$N1T
 T:rodent
@@ -1340,7 +1340,7 @@ B:HIT:HURT:1d6
 B:TOUCH:POISON:2d6
 D:Она кажется вполне обычной кучкой серебряных монет. За исключением
 D: ядовитого укуса.
-mimic:gold:silver
+mimic:gold:серебряные монеты
 
 N:96:снаг$N1M
 T:orc
@@ -2118,7 +2118,7 @@ B:TOUCH:POISON:3d5
 F:IM_ACID
 D:Она кажется вполне обычной кучкой золотых монет... пока не начинает
 D: подползать к вам на крошечных ножках.
-mimic:gold:gold
+mimic:gold:золотые монеты
 
 N:147:волк$N2A
 T:canine
@@ -2532,7 +2532,7 @@ B:HIT:HURT:2d5
 B:TOUCH:POISON:3d5
 F:IM_ACID
 D:Кучка разумных монет из мифрила, которые не хотят, чтобы их подобрали.
-mimic:gold:mithril
+mimic:gold:мифрил
 
 N:176:иллюзионист$N2A
 T:person
@@ -3227,12 +3227,12 @@ S:1_IN_6
 S:BO_COLD
 D:Странное существо, маскирующееся под выброшенную бутылку с магическим зельем, чтобы
 D: заманить ничего не подозревающего путника к своим ядовитым когтям.
-mimic:potion:Healing
-mimic:potion:*Healing*
-mimic:potion:Life
-mimic:potion:Experience
-mimic:potion:Augmentation
-mimic:potion:Speed
+mimic:potion:исцеления
+mimic:potion:Исцеления
+mimic:potion:жизни
+mimic:potion:опыта
+mimic:potion:улучшения
+mimic:potion:скорости
 
 N:225:мерцающ$AFM собак$N1M
 T:canine
@@ -3632,12 +3632,12 @@ S:BO_FIRE
 S:S_MONSTER
 D:Странное существо, маскирующееся под выброшенный магический свиток, чтобы
 D: заманить ничего не подозревающего путника к своим ядовитым когтям.
-mimic:scroll:Banishment
-mimic:scroll:Mass Banishment
-mimic:scroll:Teleport Level
-mimic:scroll:Acquirement
-mimic:scroll:*Acquirement*
-mimic:scroll:*Destruction*
+mimic:scroll:изгнания
+mimic:scroll:массового изгнания
+mimic:scroll:межуровневой телепортации
+mimic:scroll:приобретения
+mimic:scroll:Приобретения
+mimic:scroll:Разрушения
 
 N:252:огненн$AMT вихр*ь$N2E
 T:vortex
@@ -4388,7 +4388,7 @@ B:HIT:HURT:1d12
 F:IM_ACID
 D:Она кажется вполне обычной кучкой монет из драгоценного адаманта...
 D: пока не начинает подползать к вас на крошечных ножках.
-mimic:gold:adamantite
+mimic:gold:адамантит
 
 N:293:алгрот$N2A
 T:troll
@@ -4833,12 +4833,12 @@ S:BO_ACID | BO_COLD | BO_ELEC | BO_FIRE
 S:S_MONSTER
 D:Странное существо, маскирующееся под выброшенное кольцо, чтобы
 D: заманить ничего не подозревающего путника к своим ядовитым когтям.
-mimic:ring:Speed
-mimic:ring:Slaying
-mimic:ring:Constitution
-mimic:ring:Resist Poison
-mimic:ring:Free Action
-mimic:ring:See Invisible
+mimic:ring:скорости
+mimic:ring:истребления
+mimic:ring:телосложения
+mimic:ring:сопротивления яду
+mimic:ring:свободных действий
+mimic:ring:видения невидимого
 
 N:314:молод$AMU син$AMO дракон$N2A
 T:dragon

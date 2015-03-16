@@ -17,20 +17,20 @@ owner:20000:Снафу Карлик (Карлик)
 owner:30000:Лиар-Эль Уступчивый (Эльф)
 slots:0:4
 turnover:2
-always:cloak:Cloak
-always:food:Ration of Food
-always:light:Wooden Torch
-always:flask:Flask of Oil
-always:digger:Shovel
-always:digger:Pick
-always:shot:Iron Shot
-always:arrow:Arrow
-always:bolt:Bolt
-normal:food:Pint of Fine Wine
-normal:food:Slime Mold
+always:cloak:плащ$N2C
+always:food:рацион$N2A еды
+always:light:деревянн$AMT факел$N2A
+always:flask:фляг$N1M с маслом
+always:digger:лопат$N1T
+always:digger:кирк$N1M
+always:shot:железн$AMT слит*ок$N2A
+always:arrow:стрел$N1T
+always:bolt:болт$N2A
+normal:food:пинт$N1T вина
+normal:food:кус*ок$N2A плесени
 normal:food:Stoneskin
-normal:food:Flask of Whisky
-normal:food:Hard Biscuit
+normal:food:фляг$N1M с Whisky
+normal:food:жестк$AMM бисквит$N2A
 
 # Armoury
 store:2:Магазин Доспехов
@@ -40,24 +40,24 @@ owner:25000:Декадо Красивый (Дунадан)
 owner:30000:Мауглин Ворчливый (Гном)
 slots:6:18
 turnover:9
-normal:boots:Pair of Leather Sandals
-normal:boots:Pair of Leather Boots
-normal:boots:Pair of Iron Shod Boots
-normal:helm:Hard Leather Cap
-normal:helm:Metal Cap
-normal:helm:Iron Helm
-normal:soft armour:Robe
-normal:soft armour:Soft Leather Armour
-normal:soft armour:Studded Leather Armour
-normal:soft armour:Hard Leather Armour
-normal:soft armour:Leather Scale Mail
-normal:hard armour:Metal Scale Mail
-normal:hard armour:Chain Mail
-normal:gloves:Set of Leather Gloves
-normal:gloves:Set of Gauntlets
-normal:shield:Wicker Shield
-normal:shield:Small Metal Shield
-normal:shield:Leather Shield
+normal:boots:пар$N1T мягких кожаных башмаков
+normal:boots:пар$N1T плотных кожаных башмаков
+normal:boots:пар$N1T железных башмаков
+normal:helm:кожан$AFT шап|ок$N1M
+normal:helm:железн$AFT шап|ок$N1M
+normal:helm:железн$AMT шлем$N2A
+normal:soft armour:курт|ок$N1M
+normal:soft armour:мягк$AFM кожан$AFT брон$N1N
+normal:soft armour:клепан$AFT кожан$AFT брон$N1N
+normal:soft armour:плотн$AFT кожан$AFT брон$N1N
+normal:soft armour:кожан$AMT панцир*ь$N2E
+normal:hard armour:железн$AMT панцир*ь$N2E
+normal:hard armour:кольчуг$N1M
+normal:gloves:пар$N1T кожаных перчаток
+normal:gloves:пар$N1T железных перчаток
+normal:shield:Wicker щит$N2A
+normal:shield:маленьк$AMM железн$AMT щит$N2A
+normal:shield:кожан$AMT щит$N2A
 
 # Weaponsmith
 store:3:Оружейная
@@ -67,34 +67,34 @@ owner:25000:Тарл Повелитель Зверей (Хоббит)
 owner:30000:Оглигн Победитель Драконов (Гном)
 slots:3:14
 turnover:9
-normal:shot:Iron Shot
-normal:arrow:Arrow
-normal:bolt:Bolt
-normal:sword:Dagger
-normal:sword:Main Gauche
-normal:sword:Rapier
-normal:sword:Short Sword
-normal:sword:Cutlass
-normal:sword:Tulwar
-normal:sword:Broad Sword
-normal:sword:Long Sword
-normal:sword:Scimitar
-normal:sword:Katana
-normal:sword:Bastard Sword
-normal:polearm:Spear
-normal:polearm:Awl-Pike
-normal:polearm:Trident
-normal:polearm:Pike
-normal:polearm:Beaked Axe
-normal:polearm:Broad Axe
-normal:polearm:Battle Axe
-normal:polearm:Lance
-normal:polearm:Lucerne Hammer
-normal:hafted:Whip
-normal:bow:Sling
-normal:bow:Short Bow
-normal:bow:Long Bow
-normal:bow:Light Crossbow
+normal:shot:железн$AMT слит*ок$N2A
+normal:arrow:стрел$N1T
+normal:bolt:болт$N2A
+normal:sword:кинжал$N2A
+normal:sword:длинн$AMT кинжал$N2A
+normal:sword:рапир$N1T
+normal:sword:коротк$AMM меч$N2C
+normal:sword:резак$N2A
+normal:sword:легк$AMM меч$N2C
+normal:sword:широк$AMM меч$N2C
+normal:sword:длинн$AMT меч$N2C
+normal:sword:ятаган$N2A
+normal:sword:катан$N1T
+normal:sword:полуторн$AMT меч$N2C
+normal:polearm:коп\ь|и|й*е$N2D
+normal:polearm:коротк$AFM пик$N1M
+normal:polearm:трезуб*ец$N2B
+normal:polearm:пик$N1M
+normal:polearm:шипаст$AFT секир$N1T
+normal:polearm:широк$AFM секир$N1T
+normal:polearm:боев$AMU топор$N2A
+normal:polearm:тяжел$ANT коп\ь|и|й*е$N2D
+normal:polearm:люцернск$AMM молот$N2A
+normal:hafted:кнут$N2A
+normal:bow:пращ$N1M
+normal:bow:коротк$AMM лук$N2A
+normal:bow:длинн$AMT лук$N2A
+normal:bow:легк$AMM арбалет$N2A
 
 # Temple
 store:4:Храм
@@ -104,27 +104,27 @@ owner:25000:Делайла Чистый (Эльф)
 owner:30000:Боск Мудрый (Гном)
 slots:6:14
 turnover:9
-always:prayer book:[Beginners Handbook]
-always:prayer book:[Words of Wisdom]
-always:prayer book:[Chants and Blessings]
-always:prayer book:[Exorcism and Dispelling]
-always:potion:Cure Light Wounds
-normal:hafted:Whip
-normal:hafted:Quarterstaff
-normal:hafted:Mace
-normal:hafted:Ball-and-Chain
-normal:hafted:War Hammer
-normal:hafted:Morning Star
-normal:hafted:Flail
-normal:hafted:Lead-Filled Mace
-normal:scroll:Blessing
-normal:scroll:Holy Chant
-normal:scroll:Light
-normal:potion:Boldness
-normal:potion:Heroism
-normal:potion:Neutralize Poison
-normal:potion:Cure Serious Wounds
-normal:potion:Cure Critical Wounds
+always:prayer book:[Книга для начинающих]
+always:prayer book:[Слова Мудрости]
+always:prayer book:[Пения и благословления]
+always:prayer book:[Святые экзорцизмы]
+always:potion:лечения легких ран
+normal:hafted:кнут$N2A
+normal:hafted:дорожн$AMT посох
+normal:hafted:булав$N1T
+normal:hafted:цеп$N2A
+normal:hafted:боев$AMU молот$N2A
+normal:hafted:моргенштерн$N2A
+normal:hafted:цеп$N2A-многохвост|ок$N1T
+normal:hafted:тяжел$AFT булав$N1T
+normal:scroll:благословления
+normal:scroll:Священного Заклинания
+normal:scroll:света
+normal:potion:храбрости
+normal:potion:героизма
+normal:potion:нейтрализации яда
+normal:potion:лечения серьезных ран
+normal:potion:лечения критических ран
 
 # Alchemist
 store:5:Магазин Алхимика
@@ -134,22 +134,22 @@ owner:15000:Га-Нат Жадный (Карлик)
 owner:15000:Велла Веселый (Человек)
 slots:6:10
 turnover:9
-always:scroll:Word of Recall
-always:scroll:Phase Door
-normal:scroll:Identify
-normal:scroll:Monster Confusion
-normal:scroll:Magic Mapping
-normal:scroll:Trap Detection
-normal:scroll:Door/Stair Location
-normal:scroll:Detect Invisible
-normal:scroll:Recharging
-normal:scroll:Satisfy Hunger
-normal:potion:Boldness
-normal:potion:Berserk Strength
-normal:potion:Resist Heat
-normal:potion:Resist Cold
-normal:potion:Restore Life Levels
-normal:potion:Infravision
+always:scroll:Слова Возвращения
+always:scroll:фазовой двери
+normal:scroll:идентификации
+normal:scroll:контузии монстров
+normal:scroll:волшебной картографии
+normal:scroll:поиска ловушек
+normal:scroll:поиска дверей/лестниц
+normal:scroll:обнаружения невидимого
+normal:scroll:перезарядки
+normal:scroll:удовлетворения голода
+normal:potion:храбрости
+normal:potion:ярости
+normal:potion:сопротивления теплу
+normal:potion:сопротивления холоду
+normal:potion:восстановления опыта
+normal:potion:инфракрасного зрения
 
 # Magic-user's
 store:6:Магазин Магии
@@ -159,27 +159,27 @@ owner:25000:Инглориан Маг (Человек)
 owner:30000:Лучиэнь Звездный Свет (Высший Эльф)
 slots:4:14
 turnover:9
-always:magic book:[Magic for Beginners]
-always:magic book:[Conjurings and Tricks]
-always:magic book:[Incantations and Illusions]
-always:magic book:[Sorcery and Evocations]
-normal:ring:Searching
-normal:ring:Feather Falling
-normal:ring:Protection
-normal:amulet:Slow Digestion
-normal:amulet:Resist Acid
-normal:wand:Slow Monster
-normal:wand:Confuse Monster
-normal:wand:Sleep Monster
-normal:wand:Magic Missile
-normal:wand:Stinking Cloud
-normal:wand:Wonder
-normal:staff:Teleportation
-normal:staff:Identify
-normal:staff:Light
+always:magic book:[Магия для начинающего]
+always:magic book:[Волшебные трюки]
+always:magic book:[Заклинания и иллюзии]
+always:magic book:[Секреты колдовства]
+normal:ring:поиска
+normal:ring:медленного падения
+normal:ring:защиты
+normal:amulet:медленного пищеварения
+normal:amulet:сопротивления кислоте
+normal:wand:замедления монстра
+normal:wand:контузии монстра
+normal:wand:усыпления монстра
+normal:wand:волшебной стрелы
+normal:wand:вонючего облака
+normal:wand:Чуда
+normal:staff:телепортации
+normal:staff:идентификации
+normal:staff:света
 normal:staff:Mapping
-normal:staff:Detect Invisible
-normal:staff:Detect Evil
+normal:staff:обнаружения невидимого
+normal:staff:обнаружения зла
 
 # Black Market - no stock given but we still need slot/turnover info
 store:7:Черный Рынок
