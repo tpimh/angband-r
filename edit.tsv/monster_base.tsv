@@ -6,7 +6,7 @@ b	Bat	Летучая мышь
 B	Bird	Птица
 C	Canine (Dog)	Собака
 c	Centipede	Гусеница
-$	Creeping Coins	
+$	Creeping Coins	Creeping Coins
 d	Dragon	Дракон
 F	Dragon Fly	Стрекоза
 e	Floating Eye	Летающий Глаз
@@ -25,12 +25,12 @@ K	Killer Beetle	Жучок
 k	Kobold	Кобольд
 L	Lich	Лич
 l	Louse	Вошь
-.	Lurker	
+.	Lurker	Lurker
 U	Major Demon	Большой Демон
-?	Mimic	
+?	Mimic	Mimic
 u	Minor Demon	Малый Демон
 m	Mold	Плесень
-,	Mushroom	
+,	Mushroom	Mushroom
 n	Naga	Нага
 O	Ogre	Огр
 o	Orc	Орк
