@@ -1,67 +1,67 @@
-ID	Symbol	Color	Name	Translation
-0	 	w	<darkness>	<темнота>
-1	.	w	open floor	пол
-2	.	w	invisible trap	невидимая ловушка
-3	;	y	glyph of warding	руна защиты
-4	'	U	open door	открытая дверь
-5	'	u	broken door	сломанная дверь
-6	<	w	up staircase	лестница вверх
-7	>	w	down staircase	лестница вниз
-8	1	U	General Store	Главный Магазин
-9	2	s	Armoury	Магазин Доспехов
-10	3	w	Weapon Smiths	Оружейная
-11	4	g	Temple	Храм
-12	5	b	Alchemy Shop	Магазин Алхимика
-13	6	r	Magic Shop	Магазин Магии
-14	7	D	Black Market	Черный Рынок
-15	8	y	Home	Ваш Дом
-16	^	w	trap door	люк
-17	^	s	pit	яма
-18	^	s	pit	яма
-19	^	s	pit	яма
-20	^	B	strange rune	странная руна
-21	^	o	strange rune	странная руна
-22	^	u	discolored spot	цветной участок
-23	^	u	discolored spot	цветной участок
-24	^	r	dart trap	ловушка с дротиком
-25	^	r	dart trap	ловушка с дротиком
-26	^	r	dart trap	ловушка с дротиком
-27	^	r	dart trap	ловушка с дротиком
-28	^	g	gas trap	газовая ловушка
-29	^	g	gas trap	газовая ловушка
-30	^	g	gas trap	газовая ловушка
-31	^	g	gas trap	газовая ловушка
-32	+	U	door	дверь
-33	+	U	locked door	запертая дверь
-34	+	U	locked door	запертая дверь
-35	+	U	locked door	запертая дверь
-36	+	U	locked door	запертая дверь
-37	+	U	locked door	запертая дверь
-38	+	U	locked door	запертая дверь
-39	+	U	locked door	запертая дверь
-40	+	U	jammed door	заклиненная дверь
-41	+	U	jammed door	заклиненная дверь
-42	+	U	jammed door	заклиненная дверь
-43	+	U	jammed door	заклиненная дверь
-44	+	U	jammed door	заклиненная дверь
-45	+	U	jammed door	заклиненная дверь
-46	+	U	jammed door	заклиненная дверь
-47	+	U	jammed door	заклиненная дверь
-48	#	w	secret door	секретная дверь
-49	:	w	pile of rubble	куча мусора
-50	%	s	magma vein	магматическая жила
-51	%	W	quartz vein	кварцевая жила
-52	%	s	magma vein	магматическая жила
-53	%	W	quartz vein	кварцевая жила
-54	*	o	magma vein with treasure	магматическая жила с сокровищем
-55	*	o	quartz vein with treasure	кварцевая жила с сокровищем
-56	#	w	granite wall	гранитная стена
-57	#	w	granite wall	гранитная стена
-58	#	w	granite wall	гранитная стена
-59	#	w	granite wall	гранитная стена
-60	#	u	permanent wall	постоянная стена
-61	#	u	permanent wall	постоянная стена
-62	#	u	permanent wall	постоянная стена
-63	#	u	permanent wall	постоянная стена
-64	.	G	open floor	пол
-65	#	G	granite wall	гранитная стена
+OK	ID	Symbol	Color	Name	Translation
+✓	0	 	w	<darkness>	<темнота>
+✓	1	.	w	open floor	пол
+✓	2	.	w	invisible trap	невидимая ловушка
+✓	3	;	y	glyph of warding	руна защиты
+✓	4	'	U	open door	открытая дверь
+✓	5	'	u	broken door	сломанная дверь
+✓	6	<	w	up staircase	лестница вверх
+✓	7	>	w	down staircase	лестница вниз
+✓	8	1	U	General Store	Главный Магазин
+✓	9	2	s	Armoury	Магазин Доспехов
+✓	10	3	w	Weapon Smiths	Оружейная
+✓	11	4	g	Temple	Храм
+✓	12	5	b	Alchemy Shop	Магазин Алхимика
+✓	13	6	r	Magic Shop	Магазин Магии
+✓	14	7	D	Black Market	Черный Рынок
+✓	15	8	y	Home	Ваш Дом
+✓	16	^	w	trap door	люк
+✓	17	^	s	pit	яма
+✓	18	^	s	pit	яма
+✓	19	^	s	pit	яма
+✓	20	^	B	strange rune	странная руна
+✓	21	^	o	strange rune	странная руна
+✓	22	^	u	discolored spot	цветной участок
+✓	23	^	u	discolored spot	цветной участок
+✓	24	^	r	dart trap	ловушка с дротиком
+✓	25	^	r	dart trap	ловушка с дротиком
+✓	26	^	r	dart trap	ловушка с дротиком
+✓	27	^	r	dart trap	ловушка с дротиком
+✓	28	^	g	gas trap	газовая ловушка
+✓	29	^	g	gas trap	газовая ловушка
+✓	30	^	g	gas trap	газовая ловушка
+✓	31	^	g	gas trap	газовая ловушка
+✓	32	+	U	door	дверь
+✓	33	+	U	locked door	запертая дверь
+✓	34	+	U	locked door	запертая дверь
+✓	35	+	U	locked door	запертая дверь
+✓	36	+	U	locked door	запертая дверь
+✓	37	+	U	locked door	запертая дверь
+✓	38	+	U	locked door	запертая дверь
+✓	39	+	U	locked door	запертая дверь
+✓	40	+	U	jammed door	заклиненная дверь
+✓	41	+	U	jammed door	заклиненная дверь
+✓	42	+	U	jammed door	заклиненная дверь
+✓	43	+	U	jammed door	заклиненная дверь
+✓	44	+	U	jammed door	заклиненная дверь
+✓	45	+	U	jammed door	заклиненная дверь
+✓	46	+	U	jammed door	заклиненная дверь
+✓	47	+	U	jammed door	заклиненная дверь
+✓	48	#	w	secret door	секретная дверь
+✓	49	:	w	pile of rubble	куча мусора
+✓	50	%	s	magma vein	магматическая жила
+✓	51	%	W	quartz vein	кварцевая жила
+✓	52	%	s	magma vein	магматическая жила
+✓	53	%	W	quartz vein	кварцевая жила
+✓	54	*	o	magma vein with treasure	магматическая жила с сокровищем
+✓	55	*	o	quartz vein with treasure	кварцевая жила с сокровищем
+✓	56	#	w	granite wall	гранитная стена
+✓	57	#	w	granite wall	гранитная стена
+✓	58	#	w	granite wall	гранитная стена
+✓	59	#	w	granite wall	гранитная стена
+✓	60	#	u	permanent wall	постоянная стена
+✓	61	#	u	permanent wall	постоянная стена
+✓	62	#	u	permanent wall	постоянная стена
+✓	63	#	u	permanent wall	постоянная стена
+✓	64	.	G	open floor	пол
+✓	65	#	G	granite wall	гранитная стена
