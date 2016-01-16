@@ -2,7 +2,7 @@
 
 cp quest.txt.orig quest.txt
 
-# monster artifact part
+# monster quest part
 FILENAME=quest.txt
 PATCHNAME=monster.tsv
 while read in; do
