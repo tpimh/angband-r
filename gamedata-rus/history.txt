@@ -1,0 +1,413 @@
+# File: history.txt
+
+
+# This file is used to initialize the "player history" information for 
+# the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# Background information:
+# Pieces of player backstory are chosen from "charts", which are lists of
+# phrases or sentences with similar general meaning.
+
+# 'chart' lines give the number of the current chart, the number of the chart
+# that will be used next (or 0 if the last chart), and a cutoff for choosing
+# the current line.  If the first field in two chart lines is the same, the
+# second should be as well, to maintain consistent choices and end up with
+# something readable.
+
+# 'phrase' lines are the actual chart entries which make up the history.
+
+# Chart progression by race:
+#   Human/Dunadan -->  1 -->  2 -->  3 --> 50 --> 51 --> 52 --> 53
+#   Half-Elf      -->  4 -->  1 -->  2 -->  3 --> 50 --> 51 --> 52 --> 53
+#   Elf           -->  5 -->  6 -->  9 --> 54 --> 55 --> 56
+#   High-Elf      -->  7 -->  8 -->  9 --> 54 --> 55 --> 56
+#   Hobbit        --> 10 --> 11 -->  3 --> 50 --> 51 --> 52 --> 53
+#   Gnome         --> 13 --> 14 -->  3 --> 50 --> 51 --> 52 --> 53
+#   Dwarf         --> 16 --> 17 --> 18 --> 57 --> 58 --> 59 --> 60 --> 61
+#   Half-Orc      --> 19 --> 20 -->  2 -->  3 --> 50 --> 51 --> 52 --> 53
+#   Half-Troll    --> 21 --> 22 --> 62 --> 63 --> 64 --> 65 --> 66
+#   Kobold        --> 23 --> 24 --> 25 --> 26 --> 67 --> 68 --> 69
+
+# This table *must* be correct or the history may look very silly.
+
+# Note that the "spacing" in the "description" lines is very important!
+
+
+
+chart:1:2:10
+phrase:Вы незаконорожденный и отвергнутый ребенок 
+chart:1:2:20
+phrase:Вы незаконорожденный, но принятый ребенок 
+chart:1:2:95
+phrase:Вы один из нескольких детей 
+chart:1:2:100
+phrase:Вы единственный ребенок 
+
+chart:2:3:40
+phrase:крестьянина.  
+chart:2:3:65
+phrase:воина.  
+chart:2:3:80
+phrase:горожанина.  
+chart:2:3:90
+phrase:купца.  
+chart:2:3:96
+phrase:рыцаря.  
+chart:2:3:99
+phrase:аристократа.  
+chart:2:3:100
+phrase:короля.  
+
+chart:3:50:20
+phrase:Вы были не нужны своей семье.  
+chart:3:50:80
+phrase:Вы были подарком своей семье.  
+chart:3:50:100
+phrase:Вы были любимым ребенком.  
+
+chart:4:1:15
+phrase:Ваша мать была из Авари. 
+chart:4:1:30
+phrase:Ваш отец был из Авари. 
+chart:4:1:50
+phrase:Ваша мать была из Нандор. 
+chart:4:1:70
+phrase:Ваш отец был из Нандор.  
+chart:4:1:85
+phrase:Ваша мать была из Синдар.  
+chart:4:1:95
+phrase:Ваш отец был из Синдар.  
+chart:4:1:98
+phrase:Ваша мать была из Нолдор.  
+chart:4:1:100
+phrase:Ваш отец был из Нолдор.  
+
+chart:5:6:60
+phrase:Вы один из нескольких детей 
+chart:5:6:100
+phrase:Вы единственный ребенок 
+
+chart:6:9:40
+phrase:Аваринского 
+chart:6:9:70
+phrase:Нандорского 
+chart:6:9:100
+phrase:Синдарского 
+
+chart:7:8:60
+phrase:Вы один из нескольких детей 
+chart:7:8:100
+phrase:Вы единственный ребенок 
+
+chart:8:9:75
+phrase:Телеринского 
+chart:8:9:95
+phrase:Нолдорского 
+chart:8:9:100
+phrase:Ваньярского 
+
+chart:9:54:40
+phrase:следопыта.  
+chart:9:54:70
+phrase:лучника.  
+chart:9:54:87
+phrase:воина.  
+chart:9:54:95
+phrase:мага.  
+chart:9:54:99
+phrase:принца.  
+chart:9:54:100
+phrase:короля.  
+
+chart:10:11:85
+phrase:Вы один из нескольких детей of a Hobbit 
+chart:10:11:100
+phrase:Вы единственный ребенок of a Hobbit 
+
+chart:11:3:20
+phrase:вора.  
+chart:11:3:30
+phrase:мельника.  
+chart:11:3:40
+phrase:владельца таверны.  
+chart:11:3:50
+phrase:лучника.  
+chart:11:3:80
+phrase:воина.  
+chart:11:3:95
+phrase:ширрифа.  
+chart:11:3:99
+phrase:мэра.  
+chart:11:3:100
+phrase:старшего клана.  
+
+chart:13:14:85
+phrase:Вы один из нескольких детей of a Gnome 
+chart:13:14:100
+phrase:Вы единственный ребенок of a Gnome 
+
+chart:14:3:20
+phrase:попрошайки.  
+chart:14:3:50
+phrase:вора.  
+chart:14:3:75
+phrase:торговца.  
+chart:14:3:95
+phrase:воина.  
+chart:14:3:100
+phrase:мага.  
+
+chart:16:17:25
+phrase:Вы один из нескольких детей гнома-
+chart:16:17:100
+phrase:Вы единственный ребенок of a Dwarven 
+
+chart:17:18:10
+phrase:вора.  
+chart:17:18:25
+phrase:тюремщика.  
+chart:17:18:75
+phrase:шахтера.  
+chart:17:18:90
+phrase:воина.  
+chart:17:18:99
+phrase:священника.  
+chart:17:18:100
+phrase:короля.  
+
+chart:18:57:15
+phrase:Вы были не нужны своей семье.  
+chart:18:57:85
+phrase:Вы были подарком своей семье.  
+chart:18:57:100
+phrase:Вы были любимым ребенком.  
+
+chart:19:20:25
+phrase:Ваша мать была орком, 
+chart:19:20:100
+phrase:Ваш отец был орком, 
+
+chart:20:2:20
+phrase:и это подтверждено. Вас приняли в семью 
+chart:20:2:100
+phrase:но это не подтверждено. Вас приняли в семью 
+
+chart:21:22:30
+phrase:Ваша мать была каменным троллем-
+chart:21:22:60
+phrase:Ваш отец был каменным троллем-
+chart:21:22:75
+phrase:Ваша мать была пещерным троллем-
+chart:21:22:90
+phrase:Ваш отец был пещерным троллем-
+chart:21:22:95
+phrase:Ваша мать была водяным троллем-
+chart:21:22:100
+phrase:Ваш отец был водяным троллем-
+
+chart:22:62:5
+phrase:поваром.  
+chart:22:62:95
+phrase:воина.  
+chart:22:62:99
+phrase:шаманом.  
+chart:22:62:100
+phrase:старшим клана.  
+
+chart:23:24:20
+phrase:Вы были самым маленьким из 
+chart:23:24:80
+phrase:Вы были одним из 
+chart:23:24:100
+phrase:Вы были самым большим из 
+
+chart:24:25:15
+phrase:трех щенков. 
+chart:24:25:40
+phrase:четырех щенков. 
+chart:24:25:70
+phrase:пяти щенков. 
+chart:24:25:85
+phrase:шести щенков. 
+chart:24:25:95
+phrase:семи щенков. 
+chart:24:25:100
+phrase:восьми щенков. 
+
+chart:25:26:25
+phrase:Ваш отец был фермером, 
+chart:25:26:50
+phrase:Ваш отец был охотником, 
+chart:25:26:75
+phrase:Ваш отец был воином, 
+chart:25:26:95
+phrase:Ваш отец был шаманом, 
+chart:25:26:100
+phrase:Ваш отец был вождем племени, 
+
+chart:26:67:20
+phrase:а мать - пленницей племени. 
+chart:26:67:95
+phrase:а мать - поварихой. 
+chart:26:67:100
+phrase:а мать была из гарема вождя. 
+
+chart:50:51:20
+phrase:У вас темно-карие глаза, 
+chart:50:51:60
+phrase:У вас карие глаза, 
+chart:50:51:70
+phrase:У вас светло-карие глаза, 
+chart:50:51:80
+phrase:У вас зеленые глаза, 
+chart:50:51:90
+phrase:У вас голубые глаза, 
+chart:50:51:100
+phrase:У вас серо-голубые глаза, 
+
+chart:51:52:70
+phrase:прямые 
+chart:51:52:90
+phrase:волнистые 
+chart:51:52:100
+phrase:кудрявые 
+
+chart:52:53:30
+phrase:черные волосы 
+chart:52:53:70
+phrase:темные волосы 
+chart:52:53:80
+phrase:русые волосы 
+chart:52:53:90
+phrase:рыжие волосы 
+chart:52:53:100
+phrase:светлые волосы 
+
+chart:53:0:10
+phrase:и очень неприятное лицо.
+chart:53:0:30
+phrase:и неприятное лицо.
+chart:53:0:80
+phrase:и обычное лицо.
+chart:53:0:90
+phrase:и красивое лицо.
+chart:53:0:100
+phrase:и очень красивое лицо.
+
+chart:54:55:85
+phrase:У вас светло-серые глаза, 
+chart:54:55:95
+phrase:У вас светло-голубые глаза, 
+chart:54:55:100
+phrase:У вас светло-зеленые глаза, 
+
+chart:55:56:75
+phrase:прямые 
+chart:55:56:100
+phrase:волнистые 
+
+chart:56:0:75
+phrase:черные волосы and a fair complexion.
+chart:56:0:85
+phrase:темные волосы and a fair complexion.
+chart:56:0:95
+phrase:светлые волосы and a fair complexion.
+chart:56:0:100
+phrase:серебряные волосы и красивое лицо.
+
+chart:57:58:99
+phrase:У вас темно-карие глаза, 
+chart:57:58:100
+phrase:У вас горящие красные глаза, 
+
+chart:58:59:90
+phrase:прямые 
+chart:58:59:100
+phrase:волнистые 
+
+chart:59:60:75
+phrase:черные волосы 
+chart:59:60:100
+phrase:темные волосы 
+
+chart:60:61:25
+phrase:борода длиною в фут 
+chart:60:61:60
+phrase:борода длиною в два фута 
+chart:60:61:90
+phrase:борода длиною в три фута 
+chart:60:61:100
+phrase:борода длиною в четыре фута 
+
+chart:61:0:100
+phrase:и неприятное лицо.
+
+chart:62:63:60
+phrase:У вас слизисто-зеленые глаза, 
+chart:62:63:85
+phrase:У вас маслянисто-желтые глаза, 
+chart:62:63:99
+phrase:У вас кровавые синие глаза, 
+chart:62:63:100
+phrase:У вас горящие красные глаза, 
+
+chart:63:64:33
+phrase:грязные 
+chart:63:64:66
+phrase:спутанные 
+chart:63:64:100
+phrase:жирные 
+
+chart:64:65:33
+phrase:зеленые волосы 
+chart:64:65:66
+phrase:красные волосы 
+chart:64:65:100
+phrase:темно-пурпурные волосы 
+
+chart:65:66:25
+phrase:и зеленая 
+chart:65:66:50
+phrase:и синяя 
+chart:65:66:75
+phrase:и белая 
+chart:65:66:100
+phrase:и черная 
+
+chart:66:0:33
+phrase:обветревшая кожа.
+chart:66:0:66
+phrase:потрескавшаяся кожа.
+chart:66:0:100
+phrase:неровная кожа.
+
+chart:67:68:10
+phrase:У вас черные глаза, 
+chart:67:68:40
+phrase:У вас темно-карие глаза, 
+chart:67:68:80
+phrase:У вас карие глаза, 
+chart:67:68:99
+phrase:У вас светло-карие глаза, 
+chart:67:68:100
+phrase:У вас горящие красные глаза, 
+
+chart:68:69:40
+phrase:темно-коричневая шерсть 
+chart:68:69:60
+phrase:красно-коричневая шерсть 
+chart:68:69:95
+phrase:зеленая шерсть 
+chart:68:69:100
+phrase:синяя шерсть 
+
+chart:69:0:10
+phrase:и большие плоские зубы.
+chart:69:0:90
+phrase:и маленькие острые зубы.
+chart:69:0:100
+phrase:и большие острые зубы.
+
