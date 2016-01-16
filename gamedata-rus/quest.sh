@@ -7,7 +7,7 @@ FILENAME=quest.txt
 PATCHNAME=monster.tsv
 while read in; do
     ID=`echo "$in" | awk -F'\t' '{print $2}' | sed -e 's/\\x60/\\x27/g' -e 's/\\x27\\x27/\\x22/g'`
-    if [ "$ID" != "ID" ]; then
+    if [ "$ID" != "Name" ]; then
         NAME_B=`echo "$in" | awk -F'\t' '{print $3}' | sed -e 's/\\x60/\\x27/g' -e 's/\\x27\\x27/\\x22/g'`
 
         NAME_ORIG=`sed -n 's/^race:'"$ID"'$/'"$ID"'/p' $FILENAME`
