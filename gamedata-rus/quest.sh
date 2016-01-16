@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cp quest.txt.orig quest.txt
 
@@ -25,3 +25,11 @@ while read in; do
         fi
     fi
 done < $PATCHNAME
+
+echo "Translation status:"
+
+LINESTOTAL=`grep -e '^race:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^race:' $FILENAME | sort) <(grep -e '^race:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "race: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"

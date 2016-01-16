@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cp p_race.txt.orig p_race.txt
 
@@ -28,3 +28,11 @@ while read in; do
         fi
     fi
 done < $PATCHNAME
+
+echo "Translation status:"
+
+LINESTOTAL=`grep -e '^name:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^name:' $FILENAME | sort) <(grep -e '^name:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "name: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"

@@ -25,3 +25,12 @@ while read in; do
         fi
     fi
 done < $PATCHNAME
+
+
+echo "Translation status:"
+
+LINESTOTAL=`grep -e '^phrase:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^phrase:' $FILENAME | sort) <(grep -e '^phrase:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "phrase: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"

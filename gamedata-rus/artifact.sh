@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cp artifact.txt.orig artifact.txt
 
@@ -39,4 +39,11 @@ while read in; do
 done < $PATCHNAME
 
 
+echo "Translation status:"
 
+LINESTOTAL=`grep -e '^name:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^name:' $FILENAME | sort) <(grep -e '^name:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "name: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
+echo "desc: 0%"

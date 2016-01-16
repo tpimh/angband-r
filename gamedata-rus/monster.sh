@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cp monster.txt.orig monster.txt
 
@@ -63,3 +63,19 @@ while read in; do
         fi
     fi
 done < $PATCHNAME
+
+
+echo "Translation status:"
+
+LINESTOTAL=`grep -e '^name:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^name:' $FILENAME | sort) <(grep -e '^name:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "name: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
+echo "desc: 0%"
+
+LINESTOTAL=`grep -e '^drop-artifact:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^drop-artifact:' $FILENAME | sort) <(grep -e '^drop-artifact:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "drop-artifact: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"

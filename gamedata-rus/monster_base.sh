@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cp monster_base.txt.orig monster_base.txt
 
@@ -26,4 +26,10 @@ while read in; do
 done < $PATCHNAME
 
 
+echo "Translation status:"
 
+LINESTOTAL=`grep -e '^desc:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^desc:' $FILENAME | sort) <(grep -e '^desc:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "desc: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"

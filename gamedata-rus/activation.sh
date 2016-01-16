@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cp activation.txt.orig activation.txt
 
@@ -25,3 +25,12 @@ while read in; do
         fi
     fi
 done < $PATCHNAME
+
+
+echo "Translation status:"
+
+LINESTOTAL=`grep -e '^msg:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^msg:' $FILENAME | sort) <(grep -e '^msg:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "msg: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
