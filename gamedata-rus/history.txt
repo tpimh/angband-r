@@ -123,9 +123,9 @@ chart:9:54:100
 phrase:короля.  
 
 chart:10:11:85
-phrase:Вы один из нескольких детей of a Hobbit 
+phrase:Вы один из нескольких детей хоббита-
 chart:10:11:100
-phrase:Вы единственный ребенок of a Hobbit 
+phrase:Вы единственный ребенок хоббита-
 
 chart:11:3:20
 phrase:вора.  
@@ -145,9 +145,9 @@ chart:11:3:100
 phrase:старшего клана.  
 
 chart:13:14:85
-phrase:Вы один из нескольких детей of a Gnome 
+phrase:Вы один из нескольких детей карлика-
 chart:13:14:100
-phrase:Вы единственный ребенок of a Gnome 
+phrase:Вы единственный ребенок карлика-
 
 chart:14:3:20
 phrase:попрошайки.  
@@ -163,7 +163,7 @@ phrase:мага.
 chart:16:17:25
 phrase:Вы один из нескольких детей гнома-
 chart:16:17:100
-phrase:Вы единственный ребенок of a Dwarven 
+phrase:Вы единственный ребенок гнома-
 
 chart:17:18:10
 phrase:вора.  
@@ -310,11 +310,11 @@ chart:55:56:100
 phrase:волнистые 
 
 chart:56:0:75
-phrase:черные волосы and a fair complexion.
+phrase:черные волосы и красивое лицо.
 chart:56:0:85
-phrase:темные волосы and a fair complexion.
+phrase:темные волосы и красивое лицо.
 chart:56:0:95
-phrase:светлые волосы and a fair complexion.
+phrase:светлые волосы и красивое лицо.
 chart:56:0:100
 phrase:серебряные волосы и красивое лицо.
 

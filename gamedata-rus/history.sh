@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cp history.txt.orig history.txt
 
@@ -6,9 +6,9 @@ cp history.txt.orig history.txt
 FILENAME=history.txt
 PATCHNAME=history.tsv
 while read in; do
-    ID=`echo "$in" | awk -F'\t' '{print $1}' | sed -e 's/\\x60/\\x27/g' -e 's/\\x27\\x27/\\x22/g'`
+    ID=`echo "$in" | awk -F'\t' '{print $1}' | sed -e 's/\\x60/\\x27/g' -e 's/_/ /g'`
     if [ "$ID" != "Phrase" ]; then
-        NAME_B=`echo "$in" | awk -F'\t' '{print $2}' | sed -e 's/\\x60/\\x27/g' -e 's/\\x27\\x27/\\x22/g'`
+        NAME_B=`echo "$in" | awk -F'\t' '{print $2}' | sed -e 's/\\x60/\\x27/g' -e 's/_/ /g'`
 
         NAME_ORIG=`sed -n 's/^phrase:'"$ID"'$/'"$ID"'/p' $FILENAME | head -n1`
 
@@ -20,7 +20,7 @@ while read in; do
                 echo "(warning) ID:$ID phrase not translated"
             else
                 # replace the artifact
-                sed -i 's/^phrase:'"$NAME_ORIG"'/phrase:'"$NAME_B"'/' $FILENAME
+                sed -i 's/^phrase:'"$NAME_ORIG"'$/phrase:'"$NAME_B"'/' $FILENAME
             fi
         fi
     fi
