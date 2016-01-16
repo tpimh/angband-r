@@ -1,0 +1,442 @@
+# This file provides information for monster "templates".
+# 
+# name : template name
+# glyph : default display character
+# pain : pain message index
+# flags : flag | flag | ...
+# spells : spell flag | spell flag | ...
+# desc : description
+#
+# 'name' indicates the beginning of an entry. The template name is used in 
+# monster.txt.
+#
+# 'glyph' indicates the default display character. This is used for displaying
+# the monster in ASCII mode, and also for determining which monsters are
+# of the same "type" for things like the ESCORT flag or the S_KIN summon.
+#
+# 'pain' indicates which set of "pain messages" (from pain.txt) is used.
+#
+# 'flags' indicates the flags that every monster inherits from this template.
+#
+# 'spells' indicates the spell flags that every monster inherits from this
+# template.
+#
+# 'desc' indicates the textual description of this template that is used by
+# the '/' command in-game.
+#
+# Note that some templates have hardcoded references. In particular, changing
+# the name of the following templates will cause certain summon spells to break:
+# ancient dragon, ainu, canine, hydra, lich, major demon, spider, vampire, 
+# wraith, zephyr hound.
+# Changing other characteristics of these monsters is fine.
+
+##### Normal monster templates #####
+
+name:ancient dragon
+glyph:D
+pain:1
+flags:DRAGON | EVIL | POWERFUL | SMART
+flags:DROP_4
+flags:MOVE_BODY
+flags:NO_CONF | NO_SLEEP
+flags:FORCE_SLEEP
+desc:Древний Дракон/Змей
+
+name:ainu
+glyph:A
+pain:1
+flags:POWERFUL
+flags:ONLY_ITEM
+flags:OPEN_DOOR | BASH_DOOR | TAKE_ITEM
+flags:IM_POIS | NO_CONF | NO_SLEEP
+flags:FORCE_SLEEP
+desc:Ангел?
+
+name:ant
+glyph:a
+pain:7
+flags:ANIMAL | WEIRD_MIND
+flags:BASH_DOOR
+desc:Муравей
+
+name:bat
+glyph:b
+pain:4
+flags:ANIMAL
+desc:Летучая мышь
+
+name:bird
+glyph:B
+pain:8
+flags:ANIMAL
+desc:Птица
+
+name:canine
+glyph:C
+pain:3
+flags:ANIMAL
+desc:Собака
+
+name:centipede
+glyph:c
+pain:5
+flags:ANIMAL | WEIRD_MIND
+desc:Гусеница
+
+name:creeping coins
+glyph:$
+pain:1
+flags:COLD_BLOOD | METAL | UNAWARE | EMPTY_MIND
+flags:ONLY_GOLD
+flags:BASH_DOOR
+flags:IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP
+flags:MIMIC_INV
+desc:Creeping Coins
+
+name:dragon
+glyph:d
+pain:1
+flags:DRAGON | EVIL
+flags:FORCE_SLEEP
+desc:Дракон
+
+name:dragon fly
+glyph:F
+pain:7
+flags:ANIMAL | WEIRD_MIND
+flags:RAND_50 | BASH_DOOR
+flags:FORCE_SLEEP
+desc:Стрекоза
+
+name:eye
+glyph:e
+pain:1
+desc:Летающий Глаз
+
+name:elemental
+glyph:E
+pain:1
+flags:EMPTY_MIND
+flags:IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP
+flags:NONLIVING
+desc:Элементаль
+
+name:feline
+glyph:f
+pain:6
+flags:ANIMAL
+desc:Кошка
+
+name:ghost
+glyph:G
+pain:1
+flags:UNDEAD | EVIL | INVISIBLE | COLD_BLOOD
+flags:PASS_WALL
+flags:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | NO_STUN
+desc:Привидение
+
+name:giant
+glyph:P
+pain:1
+flags:GIANT | EVIL
+flags:BASH_DOOR
+spells:BOULDER
+desc:Гигант
+
+name:golem
+glyph:g
+pain:1
+flags:EMPTY_MIND
+flags:IM_ELEC | NO_FEAR | NO_CONF | NO_SLEEP
+flags:NONLIVING
+desc:Голем
+
+name:humanoid
+glyph:h
+pain:1
+flags:OPEN_DOOR | BASH_DOOR
+desc:Хоббит/Эльф/Гном
+
+name:hybrid
+glyph:H
+pain:1
+desc:Гибрид
+
+name:hydra
+glyph:M
+pain:4
+flags:ANIMAL
+flags:ONLY_GOLD
+flags:BASH_DOOR
+flags:FORCE_SLEEP | HURT_COLD
+desc:Гидра
+
+name:icky thing
+glyph:i
+pain:2
+flags:RAND_50
+desc:Скользкое существо
+
+name:insect
+glyph:I
+pain:7
+flags:ANIMAL | WEIRD_MIND | MULTIPLY
+flags:RAND_25 | RAND_50
+desc:Насекомое
+
+name:jelly
+glyph:j
+pain:2
+flags:EMPTY_MIND | STUPID
+flags:NO_FEAR
+desc:Желе
+
+name:killer beetle
+glyph:K
+pain:7
+flags:ANIMAL | WEIRD_MIND
+flags:BASH_DOOR
+desc:Жучок
+
+name:kobold
+glyph:k
+pain:1
+flags:EVIL
+flags:OPEN_DOOR | BASH_DOOR
+flags:IM_POIS
+desc:Кобольд
+
+name:lich
+glyph:L
+pain:1
+flags:UNDEAD | EVIL | COLD_BLOOD | SMART
+flags:OPEN_DOOR | BASH_DOOR
+flags:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | NO_STUN
+flags:FORCE_SLEEP
+spells:BRAIN_SMASH
+desc:Лич
+
+name:louse
+glyph:l
+pain:7
+flags:ANIMAL | WEIRD_MIND | MULTIPLY
+flags:RAND_50
+desc:Вошь
+
+name:lurker
+glyph:.
+pain:1
+flags:COLD_BLOOD | EMPTY_MIND | INVISIBLE | UNAWARE
+flags:NEVER_MOVE
+flags:NO_FEAR | NO_CONF | NO_SLEEP
+flags:CHAR_CLEAR | ATTR_CLEAR
+desc:Lurker
+
+name:major demon
+glyph:U
+pain:1
+flags:DEMON | EVIL
+flags:ONLY_ITEM
+flags:OPEN_DOOR | BASH_DOOR
+flags:NO_CONF | NO_SLEEP
+flags:FORCE_SLEEP
+desc:Большой Демон
+
+name:mimic
+glyph:?
+pain:1
+flags:COLD_BLOOD | EMPTY_MIND | UNAWARE
+flags:NEVER_MOVE
+flags:NO_FEAR | NO_CONF | NO_SLEEP
+flags:FORCE_SLEEP | ATTR_CLEAR
+spells:BLIND | CAUSE_2 | CONF | SCARE
+desc:Mimic
+
+name:minor demon
+glyph:u
+pain:1
+flags:DEMON | EVIL
+flags:IM_FIRE
+desc:Малый Демон
+
+name:mold
+glyph:m
+pain:2
+flags:NEVER_MOVE
+flags:IM_POIS | HURT_FIRE | NO_FEAR | NO_CONF | NO_SLEEP
+desc:Плесень
+
+name:mushroom
+glyph:,
+pain:2
+flags:EMPTY_MIND | STUPID
+flags:HURT_FIRE | NO_FEAR | NO_CONF | NO_SLEEP
+desc:Mushroom
+
+name:naga
+glyph:n
+pain:1
+flags:FEMALE | EVIL | HURT_COLD
+flags:BASH_DOOR
+desc:Нага
+
+name:ogre
+glyph:O
+pain:1
+flags:GIANT | EVIL
+flags:OPEN_DOOR | BASH_DOOR
+desc:Огр
+
+name:orc
+glyph:o
+pain:1
+flags:MALE | ORC | EVIL
+flags:OPEN_DOOR | BASH_DOOR
+desc:Орк
+
+name:person
+glyph:p
+pain:1
+flags:BASH_DOOR
+desc:Человек
+
+name:quadruped
+glyph:q
+pain:4
+flags:BASH_DOOR
+desc:Четвероногое
+
+name:quylthulg
+glyph:Q
+pain:2
+flags:EMPTY_MIND | INVISIBLE
+flags:NEVER_BLOW | NEVER_MOVE
+flags:NO_FEAR | NO_CONF | NO_SLEEP
+flags:FORCE_SLEEP
+desc:Квулсхулг
+
+name:reptile
+glyph:R
+pain:5
+flags:ANIMAL | HURT_COLD
+desc:Рептилия/Амфибия
+
+name:rodent
+glyph:r
+pain:4
+flags:ANIMAL
+desc:Крыса
+
+name:skeleton
+glyph:s
+pain:9
+flags:UNDEAD | EVIL | COLD_BLOOD
+flags:IM_COLD | IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN
+desc:Скелет
+
+name:snake
+glyph:J
+pain:5
+flags:ANIMAL | HURT_COLD
+flags:BASH_DOOR
+desc:Змея
+
+name:spider
+glyph:S
+pain:7
+flags:BASH_DOOR
+desc:Паук/Скорпион/Клещ
+
+name:townsfolk
+glyph:t
+pain:4
+desc:Горожанин
+
+name:troll
+glyph:T
+pain:1
+flags:TROLL | EVIL
+flags:OPEN_DOOR | BASH_DOOR
+desc:Тролль
+
+name:vampire
+glyph:V
+pain:1
+flags:UNDEAD | EVIL | COLD_BLOOD | REGENERATE
+flags:OPEN_DOOR | BASH_DOOR
+flags:HURT_LIGHT | HURT_FIRE | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | NO_STUN
+flags:FORCE_SLEEP
+spells:HOLD | SCARE
+desc:Вампир
+
+name:vortex
+glyph:v
+pain:11
+flags:EMPTY_MIND | POWERFUL
+flags:RAND_50 | BASH_DOOR
+flags:NO_FEAR | NO_CONF | NO_SLEEP
+flags:FORCE_SLEEP
+flags:NONLIVING
+desc:Вихрь
+
+name:worm
+glyph:w
+pain:1
+flags:ANIMAL
+desc:Черви
+
+name:wraith
+glyph:W
+pain:1
+flags:UNDEAD | EVIL | COLD_BLOOD
+flags:HURT_LIGHT | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | NO_STUN
+desc:Умертвие/Призрак
+
+name:xorn
+glyph:X
+pain:4
+flags:COLD_BLOOD | EMPTY_MIND
+flags:HURT_ROCK | IM_POIS | NO_CONF | NO_SLEEP
+desc:Хорн/Харен
+
+name:yeek
+glyph:y
+pain:1
+flags:ANIMAL
+flags:OPEN_DOOR | BASH_DOOR
+flags:IM_ACID
+desc:Йик
+
+name:yeti
+glyph:Y
+pain:1
+flags:ANIMAL
+flags:OPEN_DOOR | BASH_DOOR
+flags:IM_COLD
+desc:Йети
+
+name:zephyr hound
+glyph:Z
+pain:3
+flags:ANIMAL | GROUP_AI
+desc:Гончая Эфира
+
+name:zombie
+glyph:z
+pain:10
+flags:UNDEAD | EVIL | COLD_BLOOD
+flags:OPEN_DOOR | BASH_DOOR
+flags:IM_COLD | IM_POIS | HURT_FIRE | NO_CONF | NO_SLEEP | NO_STUN
+desc:Зомби/Мумия
+
+##### Special templates #####
+
+name:player
+glyph:@
+pain:1
+desc:Вы
+
+name:Morgoth
+glyph:P
+pain:12
+desc:Моргот
