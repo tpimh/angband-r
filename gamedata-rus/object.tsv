@@ -1,0 +1,408 @@
+ID	Name	Name translation	Description	Description translation
+0	<pile>	<куча>		
+1	& Iron Spike~	железн$AMT шип$N2A	A spike taken from the gates of Mordor.	A spike taken from the gates of Mordor.
+2	& Wooden Torch~	деревянн$AMT факел$N2A		
+3	& Lantern~	латунн$AFT ламп$N1T		
+4	& Flask~ of oil	фляг$N1M с маслом	It can be used to fuel a lantern with 7500 turns of light, up to a maximum of 15000 turns of light.  When thrown, it is considered lit, so it does more than nominal damage (which occurs even against creatures resistant to fire).	Она может быть использована для заправки лампы на 7500 ходов света (вплоть до 15000).  When thrown, it is considered lit, so it does more than nominal damage (which occurs even against creatures resistant to fire).
+6	<unknown item>	<unknown item>		
+7	<unknown treasure>	<unknown treasure>		
+10	& Ration~ of Food	рацион$N2A еды	This nutritious but fairly bland food is familiar to anyone contemplating long journeys.	This nutritious but fairly bland food is familiar to anyone contemplating long journeys.
+11	& Slime Mold~	кус*ок$N2A плесени	A strange fungal growth, prone to moving if not observed.  Not very tasty but quite filling.	A strange fungal growth, prone to moving if not observed.  Not very tasty but quite filling.
+12	& Piece~ of Elvish Waybread	эльфийск$AMM хлеб*ец$N2B	Food of the elves is always good; their waybread is no exception.  These thin cakes are wrapped in leaves and keep their tastiness for months.	Food of the elves is always good; their waybread is no exception.  These thin cakes are wrapped in leaves and keep their tastiness for months.
+13	& Hard Biscuit~	жестк$AMM бисквит$N2A	A filling if tooth-breaking biscuit made mostly of rye.	A filling if tooth-breaking biscuit made mostly of rye.
+14	& Flask~ of Whisky	фляг$N1M с Whisky	It raises your spirits.	It raises your spirits.
+15	& Pint~ of Fine Wine	пинт$N1T вина	A fine way to wash down some otherwise unappetising rations.	A fine way to wash down some otherwise unappetising rations.
+16	Second Sight	Second Sight		
+17	Fast Recovery	Fast Recovery		
+18	Vigor	Vigor		
+19	Clear Mind	Clear Mind		
+20	Emergency	Emergency		
+21	Terror	Terror		
+22	Stoneskin	Stoneskin	Its poison turns your skin to stone, albeit briefly.	Its poison turns your skin to stone, albeit briefly.
+23	Turbulence	Turbulence		
+24	Debility	Debility		
+25	Sprinting	Sprinting		
+26	Purging	Purging		
+30	& Dagger~	кинжал$N2A	A short two-edged blade perfect for thrusting.	A short two-edged blade perfect for thrusting.
+31	& Main Gauche~	длинн$AMT кинжал$N2A		
+32	& Rapier~	рапир$N1T		
+33	& Short Sword~	коротк$AMM меч$N2C		
+34	& Cutlass~	резак$N2A	A thicker and slightly longer dagger, the cutlass is a slashing sword.  It possesses a slight curve and only one side is sharp.	A thicker and slightly longer dagger, the cutlass is a slashing sword.  It possesses a slight curve and only one side is sharp.
+35	& Tulwar~	легк$AMM меч$N2C	A wider-bladed cousin of the shamshir, with less of a curve.	A wider-bladed cousin of the shamshir, with less of a curve.
+36	& Scimitar~	ятаган$N2A	A long sabre with an extreme curve to the blade.	A long sabre with an extreme curve to the blade.
+37	& Long Sword~	длинн$AMT меч$N2C		
+38	& Broad Sword~	широк$AMM меч$N2C		
+39	& Bastard Sword~	полуторн$AMT меч$N2C		
+40	& Katana~	катан$N1T		
+41	& Zweihander~	Zweihander	A sword designed for two hands.	A sword designed for two hands.
+42	& Executioner's Sword~	меч$N2C палача		
+43	& Blade~ of Chaos	клин*ок$N2A Хаоса		
+50	& Whip~	кнут$N2A		
+51	& Ball-and-Chain~	цеп$N2A		
+52	& Morning Star~	моргенштерн$N2A		
+53	& Flail~	цеп$N2A-многохвост|ок$N1T		
+54	& Two-Handed Great Flail~	двуручн$AMT цеп$N2A-многохвост|ок$N1T		
+55	& Mace~	булав$N1T		
+56	& Lead-Filled Mace~	тяжел$AFT булав$N1T		
+57	& Quarterstaff~	дорожн$AMT посох		
+58	& War Hammer~	боев$AMU молот$N2A		
+59	& Maul~	Maul		
+60	& Great Hammer~	Great молот$N2A		
+61	& Mace~ of Disruption	всесокрушающ$AFM булав$N1T		
+65	& Spear~	коп\ь|и|й*е$N2D		
+66	& Awl-Pike~	коротк$AFM пик$N1M		
+67	& Trident~	трезуб*ец$N2B		
+68	& Halberd~	алебард$N1T		
+69	& Pike~	пик$N1M		
+70	& Beaked Axe~	шипаст$AFT секир$N1T		
+71	& Broad Axe~	широк$AFM секир$N1T		
+72	& Battle Axe~	боев$AMU топор$N2A		
+73	& Lochaber Axe~	тяжел$AFT секир$N1T		
+74	& Great Axe~	длинн$AFT секир$N1T		
+75	& Scythe~	кос$N1T		
+76	& Glaive~	крив$AFT секир$N1T		
+77	& Lance~	тяжел$ANT коп\ь|и|й*е$N2D		
+78	& Scythe~ of Slicing	кос$N1T рассечения		
+79	& Lucerne Hammer~	люцернск$AMM молот$N2A		
+90	& Sling~	пращ$N1M		
+91	& Short Bow~	коротк$AMM лук$N2A		
+92	& Long Bow~	длинн$AMT лук$N2A		
+93	& Light Crossbow~	легк$AMM арбалет$N2A		
+94	& Heavy Crossbow~	тяжел$AMT арбалет$N2A		
+100	& Arrow~	стрел$N1T	It can be shot with a bow.	Они могут быть выпущены из лука.
+101	& Seeker Arrow~	точн$AFT стрел$N1T	It can be shot with a bow.	Они могут быть выпущены из лука.
+102	& Mithril Arrow~	Mithril стрел$N1T	It can be shot with a bow.	Они могут быть выпущены из лука.
+105	& Bolt~	болт$N2A	It can be shot with a crossbow.	Они могут быть выпущены из арбалета.
+106	& Seeker Bolt~	точн$AMT болт$N2A	It can be shot with a crossbow.	Они могут быть выпущены из арбалета.
+107	& Mithril Bolt~	Mithril болт$N2A	It can be shot with a crossbow.	Они могут быть выпущены из арбалета.
+110	& Rounded Pebble~	камеш*ек$N2A	It can be shot with a sling.	Они могут быть выпущены из пращи.
+111	& Iron Shot~	железн$AMT слит*ок$N2A	It can be shot with a sling.	Они могут быть выпущены из пращи.
+112	& Mithril Shot~	Mithril слит*ок$N2A	It can be shot with a sling.	Они могут быть выпущены из пращи.
+120	& Shovel~	лопат$N1T		
+121	& Pick~	кирк$N1M		
+122	& Mattock~	заступ$N2A		
+130	& Pair~ of Leather Sandals	пар$N1T мягких кожаных башмаков	A set of open-topped footgear with soft calfskin lacings and a sturdy cured leather base.	A set of open-topped footgear with soft calfskin lacings and a sturdy cured leather base.
+131	& Pair~ of Leather Boots	пар$N1T плотных кожаных башмаков		
+132	& Pair~ of Iron Shod Boots	пар$N1T железных башмаков		
+133	& Pair~ of Steel Shod Boots	пар$N1T Steel Shod Boots		
+134	& Pair~ of Mithril Shod Boots	пар$N1T Mithril Shod Boots		
+135	& Pair~ of Ethereal Slippers	пар$N1T Ethereal Slippers		
+140	& Hard Leather Cap~	кожан$AFT шап|ок$N1M		
+141	& Metal Cap~	железн$AFT шап|ок$N1M		
+142	& Iron Helm~	железн$AMT шлем$N2A		
+143	& Steel Helm~	стальн$AMU шлем$N2A		
+144	& Iron Crown~	железн$AFT корон$N1T		
+145	& Golden Crown~	золот$AFT корон$N1T		
+146	& Jewel Encrusted Crown~	драгоценн$AFT корон$N1T		
+150	& Robe~	курт|ок$N1M		
+151	Soft Leather Armour~	мягк$AFM кожан$AFT брон$N1N		
+152	Studded Leather Armour~	клепан$AFT кожан$AFT брон$N1N		
+153	Hard Leather Armour~	плотн$AFT кожан$AFT брон$N1N		
+154	Leather Scale Mail~	кожан$AMT панцир*ь$N2E		
+155	Metal Scale Mail~	железн$AMT панцир*ь$N2E		
+156	Chain Mail~	кольчуг$N1M		
+157	Augmented Chain Mail~	утолщенн$AFT кольчуг$N1M		
+158	Bar Chain Mail~	упрочненн$AFT кольчуг$N1M		
+159	Metal Brigandine Armour~	бригандинов$AMT доспех$N2A		
+160	Partial Plate Armour~	частичн$AMT пластинчат$AMT доспех$N2A		
+161	Metal Lamellar Armour~	облегченн$AMT пластинчат$AMT доспех$N2A		
+162	Full Plate Armour~	полн$AMT пластинчат$AMT доспех$N2A		
+163	Ribbed Plate Armour~	улучшенн$AMT пластинчат$AMT доспех$N2A		
+164	Mithril Chain Mail~	мифрилов$AFT кольчуг$N1M		
+165	Mithril Plate Mail~	мифрилов$AMT доспех$N2A		
+166	Adamantite Plate Mail~	адамантитов$AMT доспех$N2A		
+170	& Cloak~	плащ$N2C	A traveller's sturdy outer garment.	A traveller's sturdy outer garment.
+171	& Fur Cloak~	Fur плащ$N2C	A heavy cloak made from fur and lined with leather; a luxury.	A heavy cloak made from fur and lined with leather; a luxury.
+172	& Elven Cloak~	Elven плащ$N2C	A mantle made of curious silken material by the Galadrim that wondrously takes on the hues and shapes of its surroundings.	A mantle made of curious silken material by the Galadrim that wondrously takes on the hues and shapes of its surroundings.
+173	& Ethereal Cloak~	Ethereal плащ$N2C	This unearthly, completely transparent body mantle folds and drapes in iridescent patterns around you.  It weighs absolutely nothing.	This unearthly, completely transparent body mantle folds and drapes in iridescent patterns around you.  It weighs absolutely nothing.
+174	& Set~ of Leather Gloves	пар$N1T кожаных перчаток		
+175	& Set~ of Gauntlets	пар$N1T железных перчаток		
+176	& Set~ of Mithril Gauntlets	пар$N1T Mithril перчаток		
+177	& Set~ of Caestus	пар$N1T шипованных перчаток	An ancient battle glove designed for hand-to-hand fighting.  Its layered leather thongs are enhanced for combat by bloody-looking spikes.	An ancient battle glove designed for hand-to-hand fighting.  Its layered leather thongs are enhanced for combat by bloody-looking spikes.
+178	& Set~ of Alchemist's Gloves	пар$N1T Alchemist's перчаток	Highly protective gloves designed for an alchemist's elemental magics.	Highly protective gloves designed for an alchemist's elemental magics.
+181	& Wicker Shield~	Wicker щит$N2A	A light circular frame of wood surrounding fine-grained wickerwork.	A light circular frame of wood surrounding fine-grained wickerwork.
+182	& Small Metal Shield~	маленьк$AMM железн$AMT щит$N2A		
+183	& Leather Shield~	кожан$AMT щит$N2A		
+184	& Large Metal Shield~	больш$AMN железн$AMT щит$N2A		
+185	& Mithril Shield~	Mithril щит$N2A		
+190	Strength	силы		
+191	Intelligence	интеллекта		
+192	Dexterity	ловкости		
+193	Constitution	телосложения		
+194	Speed	скорости		
+195	Searching	поиска		
+198	Bodykeeping	Bodykeeping		
+199	Soulkeeping	Soulkeeping		
+201	Resist Poison	сопротивления яду		
+202	Resist Fire and Cold	сопротивления огню и холоду		
+203	Resist Cold and Fire	сопротивления холоду и огню		
+205	Light	Света		
+207	Flames	Пламени		
+208	Acid	Кислоты		
+209	Ice	Льда		
+210	Lightning	Молнии		
+212	Damage	урона	It boosts your to-dam value.	Оно увеличивает ваш бонус к урону.
+213	Accuracy	точности	It boosts your to-hit value.	Оно увеличивает ваш бонус к удару.
+214	Slaying	истребления	It boosts your to-hit and to-dam values.	Оно увеличивает ваши бонусы к удару и урону.
+215	Protection	защиты	It increases your armor class.	Оно увеличивает вашу броню.
+216	Teleportation	телепортации		
+217	Reckless Attacks	Reckless Attacks		
+218	Open Wounds	Open Wounds		
+219	Escaping	Escaping		
+220	the Mouse	Мыши		
+221	the Dog	Пса		
+223	Slow Digestion	медленного пищеварения		
+224	Feather Falling	медленного падения		
+225	Free Action	свободных действий		
+226	See Invisible	видения невидимого		
+227	Digging	Digging		
+230	Wisdom	мудрости		
+231	Charisma	обаяния		
+232	Resist Lightning	сопротивления электричеству		
+233	Resist Acid	сопротивления кислоте		
+234	Resistance	сопротивления		
+235	Sustenance	стабильности		
+236	the Magi	Магов		
+237	ESP	ESP		
+238	Devotion	Посвящения		
+239	Weaponmastery	Меча		
+240	Trickery	Воров		
+244	Regeneration	регенерации		
+245	Infravision	инфразрения		
+246	Searching	поиска		
+247	Teleportation	телепортации		
+248	Slow Digestion	медленного пищеварения		
+249	Adornment	(подделка)		
+250	Inertia	Inertia		
+260	Phase Door	фазовой двери		
+261	Teleportation	телепортации		
+262	Teleport Level	межуровневой телепортации		
+263	Magic Mapping	волшебной картографии		
+264	Treasure Detection	поиска сокровищ		
+265	Trap Detection	поиска ловушек		
+266	Door/Stair Location	поиска дверей/лестниц		
+267	Detect Invisible	обнаружения невидимого		
+270	Enchant Weapon To-Hit	зачарования оружия (точность)		
+271	Enchant Weapon To-Dam	зачарования оружия (урон)		
+272	Enchant Armour	зачарования доспехов		
+273	*Enchant Weapon*	Зачарования Оружия		
+274	*Enchant Armour*	Зачарования Доспехов		
+275	Remove Curse	снятия проклятья		
+276	*Remove Curse*	Уничтожения Проклятья		
+277	Restore Item	Restore Item		
+278	Summon Monster	вызова монстра		
+279	Summon Undead	вызова мертвецов		
+280	Acquirement	приобретения		
+281	*Acquirement*	Приобретения		
+282	Dispel Undead	уничтожения мертвецов		
+283	Banishment	изгнания		
+284	Mass Banishment	массового изгнания		
+285	Satisfy Hunger	удовлетворения голода		
+286	Identify	идентификации		
+289	Light	света		
+290	Word of Recall	Слова Возвращения		
+291	Recharging	перезарядки		
+292	Trap/Door Destruction	разрушения ловушек/дверей		
+293	Deep Descent	Deep Descent		
+294	Blessing	благословления		
+295	Holy Chant	Священного Заклинания		
+296	Holy Prayer	Священной Молитвы		
+297	Protection from Evil	защиты от зла		
+298	Monster Confusion	контузии монстров		
+299	Rune of Protection	руны защиты		
+300	*Destruction*	Разрушения		
+301	Aggravate Monster	привлечения монстров		
+302	Curse Weapon	проклятья оружия		
+303	Curse Armour	проклятья доспехов		
+304	Darkness	темноты		
+305	Trap Creation	создания ловушек		
+310	Strength	силы		
+311	Intelligence	интеллекта		
+312	Wisdom	мудрости		
+313	Dexterity	ловкости		
+314	Constitution	телосложения		
+315	Charisma	обаяния		
+316	Augmentation	улучшения		
+317	Experience	опыта		
+318	Cure Light Wounds	лечения легких ран		
+319	Cure Serious Wounds	лечения серьезных ран		
+320	Cure Critical Wounds	лечения критических ран		
+321	Healing	исцеления		
+322	*Healing*	Исцеления		
+323	Life	жизни		
+324	Neutralize Poison	нейтрализации яда		
+325	Restore Mana	восстановления маны		
+332	Restore Life Levels	восстановления опыта		
+333	Brawn	Brawn		
+334	Intellect	Intellect		
+335	Contemplation	Contemplation		
+336	Nimbleness	Nimbleness		
+337	Toughness	Toughness		
+341	Enlightenment	просвещения		
+342	*Enlightenment*	Просвещения		
+343	Speed	скорости		
+344	Heroism	героизма		
+345	Berserk Strength	ярости		
+346	Boldness	храбрости		
+347	Resist Heat	сопротивления теплу		
+348	Resist Cold	сопротивления холоду		
+349	Resist Poison	сопротивления яду		
+350	True Seeing	True Seeing		
+351	Infravision	инфракрасного зрения		
+355	Slime Mold Juice	(сок из слизняков)		
+356	Sleep	сна		
+357	Blindness	слепоты		
+358	Confusion	контузии		
+359	Poison	яда		
+360	Slowness	медлительности		
+361	Lose Memories	потери памяти		
+362	Salt Water	соленой воды		
+363	Dragon Breath	Dragon Breath		
+370	Magic Missile	волшебной стрелы		
+371	Lightning Bolts	молнии		
+372	Frost Bolts	ледяных стрел		
+373	Fire Bolts	огненных стрел		
+374	Acid Bolts	кислотных стрел		
+375	Stinking Cloud	вонючего облака		
+376	Lightning Balls	шаровой молнии		
+377	Cold Balls	ледяных шаров		
+378	Fire Balls	огненных шаров		
+379	Acid Balls	кислотных шаров		
+380	Slow Monster	замедления монстра		
+381	Confuse Monster	контузии монстра		
+382	Sleep Monster	усыпления монстра		
+383	Scare Monster	устрашения монстра		
+384	Light	света		
+385	Stone to Mud	плавки камня		
+386	Polymorph	трансформации		
+387	Trap/Door Destruction	разрушения двери/ловушки		
+388	Clone Monster	клонирования монстра		
+389	Teleport Other	телепортации монстра		
+390	Disarming	обезвреживания		
+391	Wonder	Чуда		
+392	Dragon's Flame	Пламени Дракона		
+393	Dragon's Frost	Холода Дракона		
+394	Dragon's Breath	Дыхания Дракона		
+395	Drain Life	высасывания жизни		
+396	Annihilation	аннигиляции		
+397	Heal Monster	лечения монстра		
+398	Haste Monster	ускорения монстра		
+400	Summoning	вызова		
+401	Haste Monsters	ускорения монстров		
+402	Darkness	темноты		
+403	Earthquakes	землетрясений		
+404	*Destruction*	Разрушения		
+405	Confuse Monsters	Confuse Monsters		
+406	Slow Monsters	замедления монстров		
+407	Sleep Monsters	усыпления монстров		
+408	Detect Invisible	обнаружения невидимого		
+409	Detect Evil	обнаружения зла		
+410	Mapping	Mapping		
+411	Curing	лечения		
+412	Cure Light Wounds	лечения легких ран		
+413	Healing	исцеления		
+414	Dispel Evil	уничтожения зла		
+415	Banishment	изгнания		
+416	Power	силы		
+417	Holiness	святости		
+418	Light	света		
+419	Starlight	Звездного Света		
+420	Teleportation	телепортации		
+421	Speed	скорости		
+422	Remove Curse	снятия проклятья		
+423	the Magi	Магов		
+424	Identify	идентификации		
+430	Treasure Location	поиска сокровищ		
+431	Door/Stair Location	поиска дверей/лестниц		
+432	Trap Location	поиска ловушек		
+433	Detection	поиска		
+434	Magic Mapping	волшебной картографии		
+435	Probing	зондирования		
+436	Fire Bolts	огненных стрел		
+437	Frost Bolts	ледяных стрел		
+438	Lightning Bolts	молний		
+439	Acid Bolts	кислотных стрел		
+440	Fire Balls	огненных шаров		
+441	Cold Balls	ледяных шаров		
+442	Lightning Balls	шаровых молний		
+443	Acid Balls	кислотных шаров		
+444	Slow Monster	замедления монстра		
+445	Sleep Monster	усыпления монстра		
+446	Curing	лечения		
+447	Healing	исцеления		
+448	Restoration	восстановления		
+449	Polymorph	трансформации		
+450	Drain Life	высасывания жизни		
+451	Teleport Other	телепортации монстра		
+452	Disarming	обезвреживания		
+453	Light	света		
+454	Illumination	освещения		
+455	Recall	возвращения		
+456	Identify	идентификации		
+457	Speed	скорости		
+460	[Magic for Beginners]	[Магия для начинающего]		
+461	[Conjurings and Tricks]	[Волшебные трюки]		
+462	[Incantations and Illusions]	[Заклинания и иллюзии]		
+463	[Sorcery and Evocations]	[Секреты колдовства]		
+464	[Beginners Handbook]	[Книга для начинающих]		
+465	[Words of Wisdom]	[Слова Мудрости]		
+466	[Chants and Blessings]	[Пения и благословления]		
+467	[Exorcism and Dispelling]	[Святые экзорцизмы]		
+468	[Resistances of Scarabtarices]	[Сопротивления Скарабтарисов]		
+469	[Raal's Tome of Destruction]	[Том Разрушений Рааля]		
+470	[Mordenkainen's Escapes]	[Выходы Морденкайнена]		
+471	[Tenser's Transformations]	[Трансформации Тензера]		
+472	[Kelek's Grimoire of Power]	[Книга Власти Келека]		
+473	[Ethereal Openings]	[Эфирные Выходы]		
+474	[Godly Insights]	[Божественные Знания]		
+475	[Purifications and Healing]	[Очищения и Исцеления]		
+476	[Holy Infusions]	[Священные Чары]		
+477	[Wrath of God]	[Ярость Бога]		
+480	& Small wooden chest~	маленьк$AMM деревянн$AMT сундук$N2A		
+481	& Large wooden chest~	больш$AMN деревянн$AMT сундук$N2A		
+482	& Small iron chest~	маленьк$AMM железн$AMT сундук$N2A		
+483	& Large iron chest~	больш$AMN железн$AMT сундук$N2A		
+484	& Small steel chest~	маленьк$AMM стальн$AMU сундук$N2A		
+485	& Large steel chest~	больш$AMN стальн$AMU сундук$N2A		
+486	& Ruined chest~	сломанн$AMT сундук$N2A		
+500	Black Dragon Scale Mail~	доспех$N2A Черного Дракона		
+501	Blue Dragon Scale Mail~	доспех$N2A Синего Дракона		
+502	White Dragon Scale Mail~	доспех$N2F Белого Дракона		
+503	Red Dragon Scale Mail~	доспех$N2A Красного Дракона		
+504	Green Dragon Scale Mail~	доспех$N2A Зеленого Дракона		
+505	Multi-Hued Dragon Scale Mail~	доспех$N2A Многоцветного Дракона		
+506	Pseudo-Dragon Scale Mail~	доспех$N2A Псевдо-дракона		
+507	Law Dragon Scale Mail~	доспех$N2A Дракона Порядка		
+508	Bronze Dragon Scale Mail~	доспех$N2A Бронзового Дракона		
+509	Gold Dragon Scale Mail~	доспех$N2A Золотого Дракона		
+510	Chaos Dragon Scale Mail~	доспех$N2A Дракона Хаоса		
+511	Balance Dragon Scale Mail~	доспех$N2A Дракона Баланса		
+512	Power Dragon Scale Mail~	доспех$N2A Дракона Власти		
+520	copper	медные монеты		
+521	silver	серебряные монеты		
+522	garnets	драгоценности		
+523	gold	золотые монеты		
+524	opals	опалы		
+525	sapphires	сапфиры		
+526	rubies	рубины		
+527	diamonds	бриллианты		
+528	emeralds	изумруды		
+529	mithril	мифрил		
+530	adamantite	адамантит		
+540	& Mighty Hammer~	массивн$AMT молот$N2A		
+542	& Massive Iron Crown~	массивн$AFT железн$AFT корон$N1T		
+550	& Phial~	фиал$N2A		
+551	& Star~	звезд$N1T		
+552	& Arkenstone~	Аркенстон$N2A		
+553	& Amulet~	амулет$N2A		
+554	& Pendant~	амулет$N2A		
+555	& Necklace~	ожерел\ь|и|й*е$N2D		
+556	& Serpent Ring~	кол\ь|ец*о$N2D		
+557	& Ring~	кол\ь|ец*о$N2D		
+558	& Ring of Power~	кол\ь|ец*о$N2D		
+559	& Ring of Power~	кол\ь|ец*о$N2D		
+560	& Ring of Power~	кол\ь|ец*о$N2D		
+561	& Ring of Power~	кол\ь|ец*о$N2D		
+562	& Palantír~	Палантир$N2A		
+563	& Elfstone~	кам*ен*ь$N2E		
+564	& Jewel~	кам*ен*ь$N2E		
