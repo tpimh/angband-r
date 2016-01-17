@@ -243,7 +243,6 @@ flags:RAND_25 | TAKE_ITEM
 desc:He tends to blubber a lot.
 
 name:6:бедн$AMT крестьянин$N2A
-plural:Boil-covered wretches
 base:townsfolk
 color:g
 info:110:2:6:1:50
@@ -320,7 +319,6 @@ desc:The typical ponce around town, with purse jingling, and looking for more
 desc: amulets of adornment to buy.
 
 name:13:подл$AMT наемник$N2A
-plural:Mean-looking mercenaries
 base:townsfolk
 color:r
 info:110:23:10:24:250
@@ -378,7 +376,6 @@ flags:EMPTY_MIND | STUPID
 desc:A small strange grey growth.
 
 name:16:сер$AMT гриб$N2A
-plural:Grey mushroom patches
 base:mushroom
 color:s
 info:110:2:2:1:0
@@ -428,7 +425,6 @@ flags:ATTR_CLEAR
 desc:It is a smallish, slimy, icky, blobby creature.
 
 name:21:бел$AFT мыш$N3
-plural:Giant white mice
 base:rodent
 color:w
 info:110:2:8:4:20
@@ -534,7 +530,6 @@ flags:DROP_60
 desc:It is a small, dog-headed humanoid.
 
 name:32:гриб$N2A-крикун$N2A
-plural:Shrieker mushroom patches
 base:mushroom
 color:R
 info:110:1:4:1:0
@@ -611,7 +606,7 @@ flags:OPEN_DOOR
 flags:FORCE_SLEEP
 spell-freq:12
 spells:CAUSE_1 | HEAL | SCARE
-drop:prayer book:[Beginners Handbook]:5:1:1
+drop:prayer book:[Книга для начинающих]:5:1:1
 friends-base:20:1d3:person
 friends-base:40:1d3:person
 friends-base:80:1d3:person
@@ -630,7 +625,7 @@ flags:OPEN_DOOR
 flags:FORCE_SLEEP
 spell-freq:12
 spells:BLIND | BLINK | CONF | MISSILE
-drop:magic book:[Magic for Beginners]:5:1:1
+drop:magic book:[Магия для начинающего]:5:1:1
 friends-base:20:1d3:person
 friends-base:40:1d3:person
 friends-base:80:1d3:person
@@ -638,7 +633,6 @@ friends:50:1d2:Same
 desc:He is leaving behind a trail of dropped spell components.
 
 name:39:желт$AMT гриб$N2A
-plural:Yellow mushroom patches
 base:mushroom
 color:y
 info:110:1:2:1:0
@@ -649,7 +643,6 @@ flags:IM_POIS
 desc:Yum!  It looks quite tasty.
 
 name:40:бел$ANT желе
-plural:White jellies
 base:jelly
 color:w
 info:120:36:2:1:99
@@ -688,7 +681,6 @@ flags:IM_FIRE
 desc:A small black and orange lizard.
 
 name:44:бел$AFT гарпи$N1N
-plural:White harpies
 base:hybrid
 color:w
 info:110:6:16:20:10
@@ -833,7 +825,6 @@ flags:RAND_50 | BASH_DOOR
 desc:It is about four feet long and carnivorous.
 
 name:56:бел$AFT вош$N3
-plural:Giant white lice
 base:louse
 color:w
 info:120:1:6:6:10
@@ -853,7 +844,6 @@ flags:RAND_25
 desc:A large black serpent's body with a female torso.
 
 name:58:пятнист$AMT гриб$N2A
-plural:Spotted mushroom patches
 base:mushroom
 color:o
 info:110:1:2:1:0
@@ -864,7 +854,6 @@ flags:IM_POIS
 desc:Yum!  It looks quite tasty.
 
 name:59:серебрян$ANT желе
-plural:Silver jellies
 base:jelly
 color:W
 info:120:45:2:1:99
@@ -879,7 +868,6 @@ desc:It is a large pile of silver flesh that sucks all light from its
 desc: surroundings.
 
 name:60:желт$ANT желе
-plural:Yellow jellies
 base:jelly
 color:y
 info:120:45:2:1:99
@@ -974,8 +962,8 @@ blow:HIT:HURT:1d8
 flags:DROP_40
 spell-freq:5
 spells:CAUSE_1 | CONF | HEAL | MISSILE
-drop:magic book:[Magic for Beginners]:5:1:1
-drop:prayer book:[Beginners Handbook]:5:1:1
+drop:magic book:[Магия для начинающего]:5:1:1
+drop:prayer book:[Книга для начинающих]:5:1:1
 friends-base:30:1d2:kobold
 friends-base:70:1d2:kobold
 desc:It is a kobold dressed in skins and gesturing wildly.
@@ -1003,7 +991,7 @@ flags:OPEN_DOOR
 flags:FORCE_SLEEP
 spell-freq:9
 spells:ARROW_1 | MISSILE
-drop:magic book:[Magic for Beginners]:3:1:1
+drop:magic book:[Магия для начинающего]:3:1:1
 friends-base:20:1d3:person
 friends-base:40:1d3:person
 friends-base:80:1d3:person
@@ -1023,7 +1011,7 @@ flags:OPEN_DOOR
 flags:FORCE_SLEEP
 spell-freq:9
 spells:CAUSE_1 | SCARE
-drop:prayer book:[Beginners Handbook]:3:1:1
+drop:prayer book:[Книга для начинающих]:3:1:1
 friends-base:20:1d3:person
 friends-base:40:1d3:person
 friends-base:80:1d3:person
@@ -1031,7 +1019,6 @@ friends:50:1d2:Same
 desc:An adventurer both devoutly religious and skillful in combat.
 
 name:71:син$ANO желе
-plural:Blue jellies
 base:jelly
 color:b
 info:110:54:2:1:99
@@ -1043,7 +1030,6 @@ flags:HURT_LIGHT | IM_COLD | NO_CONF | NO_SLEEP
 desc:It's a large pile of pulsing blue flesh.
 
 name:72:кучк$N1T медных монет
-plural:Piles of creeping copper coins
 base:creeping coins
 color:u
 info:100:32:3:28:10
@@ -1051,7 +1037,7 @@ power:4:3:378:5:9
 blow:HIT:HURT:1d4
 blow:TOUCH:POISON:2d4
 desc:It appears to be a pile of copper coins.
-mimic:gold:copper
+mimic:gold:медные монеты
 
 name:73:бел$AFT крыс$N1T
 base:rodent
@@ -1098,7 +1084,6 @@ friends-base:70:1d2:kobold
 desc:It is an ugly dog-headed humanoid wielding a bow.
 
 name:548:серебрян$AFT мыш$N3
-plural:Silver mice
 base:rodent
 color:W
 info:110:2:8:4:20
@@ -1169,7 +1154,6 @@ flags-off:IM_COLD
 desc:It is a very ugly green ghost with a voracious appetite.
 
 name:81:зелен$ANT желе
-plural:Green jellies
 base:jelly
 color:g
 info:120:99:2:1:99
@@ -1244,7 +1228,6 @@ flags:IM_POIS
 desc:It has a copper head and sharp venomous fangs.
 
 name:182:бел$AFT стрекоз$N1T
-plural:Giant white dragon flies
 base:dragon fly
 color:w
 info:110:14:12:30:1
@@ -1256,7 +1239,6 @@ spells:BR_COLD
 desc:It is a large fly that drips frost.
 
 name:208:зелен$AFT стрекоз$N1T
-plural:Giant green dragon flies
 base:dragon fly
 color:g
 info:110:14:12:30:1
@@ -1269,7 +1251,6 @@ spells:BR_POIS
 desc:A vast, foul-smelling dragonfly.
 
 name:549:гниющ$ANO желе
-plural:Rot jellies
 base:jelly
 color:u
 info:120:90:2:36:99
@@ -1287,7 +1268,6 @@ desc: terrible smell it exudes is also very hard to get rid of...
 #Deleted
 
 name:88:сиренев$AMT гриб$N2A
-plural:Purple mushroom patches
 base:mushroom
 color:P
 info:110:1:2:1:0
@@ -1326,7 +1306,6 @@ flags:RAND_50
 desc:It screeches as it attacks.
 
 name:95:кучк$N1T серебряных монет
-plural:Piles of creeping silver coins
 base:creeping coins
 color:s
 info:100:54:4:36:10
@@ -1334,7 +1313,7 @@ power:6:3:1116:9:18
 blow:HIT:HURT:1d6
 blow:TOUCH:POISON:2d6
 desc:It appears to be a pile of silver coins.
-mimic:gold:silver
+mimic:gold:серебряные монеты
 
 name:96:снаг$N1M
 base:orc
@@ -1361,7 +1340,6 @@ desc:It is recognized by the hard-scaled end of its body that is often rattled
 desc: to frighten its prey.
 
 name:231:черн$AFT стрекоз$N1T
-plural:Giant black dragon flies
 base:dragon fly
 color:s
 info:120:14:12:30:1
@@ -1373,7 +1351,6 @@ spells:BR_ACID
 desc:The size of a large bird, this fly drips caustic acid.
 
 name:234:золот$AFT стрекоз$N1T
-plural:Giant gold dragon flies
 base:dragon fly
 color:y
 info:120:14:12:30:1
@@ -1413,7 +1390,6 @@ friends:100:2d7:Same
 desc:It scuttles towards you.
 
 name:100:манес$N2A
-plural:Manes
 base:minor demon
 color:u
 info:110:36:20:48:80
@@ -1448,7 +1424,6 @@ flags:RAND_25 | TAKE_ITEM
 desc:A large red snake with a woman's torso.
 
 name:103:красн$ANT желе
-plural:Red jellies
 base:jelly
 color:r
 info:110:117:2:1:99
@@ -1503,7 +1478,6 @@ spells:DRAIN_MANA | TPORT
 desc:It is almost insubstantial.
 
 name:108:темн$AMT эльф$N2A
-plural:Dark elves
 base:humanoid
 color:D
 info:110:39:20:24:40
@@ -1680,7 +1654,6 @@ desc:Trained to hunt and kill without fear.
 ### Dungeon level 9 ###
 
 name:122:йети
-plural:Yeti
 base:yeti
 color:w
 info:110:55:20:36:30
@@ -1713,7 +1686,6 @@ flags:RAND_25
 desc:It is a rodent of unusual size.
 
 name:125:черн$AFT гарпи$N1N
-plural:Black harpies
 base:hybrid
 color:D
 info:120:14:16:26:10
@@ -1735,8 +1707,8 @@ blow:HIT:HURT:1d6
 flags:DROP_60
 flags:HURT_LIGHT
 flags:FORCE_SLEEP
-drop:magic book:[Conjurings and Tricks]:5:1:1
-drop:prayer book:[Words of Wisdom]:5:1:1
+drop:magic book:[Волшебные трюки]:5:1:1
+drop:prayer book:[Слова Мудрости]:5:1:1
 spell-freq:8
 spells:BLINK | CAUSE_1 | MISSILE
 desc:An orc dressed in skins who gestures wildly.
@@ -1918,8 +1890,8 @@ flags:FORCE_SLEEP
 spell-freq:5
 spells:BLIND | CONF | DARKNESS | MISSILE
 spells:BA_POIS
-drop:magic book:[Magic for Beginners]:10:1:1
-drop:magic book:[Conjurings and Tricks]:10:1:1
+drop:magic book:[Магия для начинающего]:10:1:1
+drop:magic book:[Волшебные трюки]:10:1:1
 desc:A dark elven figure, dressed all in black, hurling spells at you.
 
 name:137:Орфакс$N2A, сын$N2A Болдора
@@ -1956,7 +1928,6 @@ flags:HURT_LIGHT
 desc:A dark elven figure in armour and ready with his sword.
 
 name:139:прозрачн$AMT гриб$N2A
-plural:Clear mushroom patches
 base:mushroom
 color:w
 info:120:1:4:1:0
@@ -2032,7 +2003,6 @@ spells:BR_DARK | BR_LIGHT
 desc:A small relative of the dragon that inhabits dark caves.
 
 name:145:тенгу
-plural:Tengu
 base:minor demon
 color:R
 info:120:80:20:38:30
@@ -2046,7 +2016,6 @@ desc:It is a fast-moving demon that blinks quickly in and out of existence; no
 desc: other demon matches its teleporting mastery.
 
 name:146:кучк$N1T золотых монет
-plural:Piles of creeping gold coins
 base:creeping coins
 color:y
 info:100:81:5:43:10
@@ -2056,10 +2025,9 @@ blow:TOUCH:POISON:3d5
 flags:IM_ACID
 desc:It appears to be a pile of gold coins, until it starts crawling towards
 desc: you on tiny legs.
-mimic:gold:gold
+mimic:gold:золотые монеты
 
 name:147:волк$N2A
-plural:Wolves
 base:canine
 color:u
 info:120:21:30:45:10
@@ -2071,7 +2039,6 @@ friends:100:2d10:Same
 desc:It howls and snaps at you.
 
 name:148:мух$N1M
-plural:Giant fruit flies
 base:insect
 color:G
 info:120:3:8:16:10
@@ -2161,8 +2128,8 @@ spell-freq:4
 spells:BLINK | DARKNESS
 spells:BO_COLD
 spells:S_MONSTER
-drop:magic book:[Magic for Beginners]:5:1:1
-drop:magic book:[Conjurings and Tricks]:5:1:1
+drop:magic book:[Магия для начинающего]:5:1:1
+drop:magic book:[Волшебные трюки]:5:1:1
 friends:100:4d4:Same
 desc:A mage of short stature.
 
@@ -2179,7 +2146,6 @@ flags:IM_POIS
 desc:It has glistening black skin, a sleek body and highly venomous fangs.
 
 name:156:бел$AMT волк$N2A
-plural:White wolves
 base:canine
 color:w
 info:120:28:30:45:15
@@ -2193,7 +2159,6 @@ desc:A large and muscled wolf from the northern wastes.  Its breath is cold and
 desc: icy and its fur coated in frost.
 
 name:157:пурпурн$ANT желе
-plural:Grape jellies
 base:jelly
 color:P
 info:110:234:2:1:99
@@ -2250,8 +2215,8 @@ spell-freq:4
 spells:BLIND | BLINK | SLOW | TPORT
 spells:BA_POIS
 spells:S_MONSTER
-drop:magic book:[Magic for Beginners]:5:1:1
-drop:magic book:[Conjurings and Tricks]:5:1:1
+drop:magic book:[Магия для начинающего]:5:1:1
+drop:magic book:[Волшебные трюки]:5:1:1
 desc:A small humanoid that radiates some power.
 
 name:161:священник$N2A
@@ -2268,8 +2233,8 @@ flags:FORCE_SLEEP
 spell-freq:3
 spells:CAUSE_2 | HEAL | SCARE
 spells:S_MONSTER
-drop:prayer book:[Beginners Handbook]:8:1:1
-drop:prayer book:[Words of Wisdom]:8:1:1
+drop:prayer book:[Книга для начинающих]:8:1:1
+drop:prayer book:[Слова Мудрости]:8:1:1
 friends:50:1d2:грабител*ь$N2E
 friends:50:1d2:иллюзионист$N2A
 friends:50:1d2:меченос*ец$N2A
@@ -2289,8 +2254,8 @@ flags:HURT_LIGHT
 flags:FORCE_SLEEP
 spell-freq:5
 spells:BLIND | CAUSE_2 | CONF | DARKNESS | HEAL
-drop:prayer book:[Beginners Handbook]:8:1:1
-drop:prayer book:[Beginners Handbook]:8:1:1
+drop:prayer book:[Книга для начинающих]:8:1:1
+drop:prayer book:[Книга для начинающих]:8:1:1
 desc:A dark elven figure, dressed all in black, chanting curses and waiting to
 desc: deliver your soul to hell.
 
@@ -2380,7 +2345,6 @@ flags:BASH_DOOR
 desc:It is a vast armoured centipede with massive mandibles and a spiked tail.
 
 name:170:пятнист$ANT желе
-plural:Spotted jellies
 base:jelly
 color:o
 info:120:59:12:27:0
@@ -2450,7 +2414,6 @@ friends:100:2d4:Same
 desc:A hideous, smallish giant that is often found near or with orcs.
 
 name:175:кучк$N1M мифриловых монет
-plural:Piles of creeping mithril coins
 base:creeping coins
 color:B
 info:110:90:5:60:10
@@ -2460,7 +2423,7 @@ blow:TOUCH:POISON:3d5
 flags:IM_ACID
 desc:It appears to be a pile of sentient mithril coins that doesn't like being
 desc: picked up.
-mimic:gold:mithril
+mimic:gold:мифрил
 
 name:176:иллюзионист$N2A
 base:person
@@ -2475,8 +2438,8 @@ flags:FORCE_SLEEP
 spell-freq:3
 spells:BLIND | BLINK | CONF | DARKNESS | HASTE | HOLD
 spells:SLOW | TPORT
-drop:magic book:[Conjurings and Tricks]:8:1:1
-drop:magic book:[Incantations and Illusions]:8:1:1
+drop:magic book:[Волшебные трюки]:8:1:1
+drop:magic book:[Заклинания и иллюзии]:8:1:1
 friends:50:1d2:грабител*ь$N2E
 friends:50:1d2:священник$N2A
 friends:50:1d2:меченос*ец$N2A
@@ -2498,8 +2461,8 @@ spell-freq:3
 spells:BLIND | BLINK | HASTE | HOLD | SLOW
 spells:BO_ELEC | BO_FIRE
 spells:S_ANIMAL
-drop:prayer book:[Beginners Handbook]:8:1:1
-drop:prayer book:[Words of Wisdom]:8:1:1
+drop:prayer book:[Книга для начинающих]:8:1:1
+drop:prayer book:[Слова Мудрости]:8:1:1
 desc:A priest devoted to Nature.
 
 name:178:черн$AMT орк$N2A
@@ -2519,7 +2482,6 @@ friends:100:3d4:Same
 desc:He is a large orc with powerful arms and deep black skin.
 
 name:179:охров$ANT желе
-plural:Ochre jellies
 base:jelly
 color:U
 info:120:59:12:21:1
@@ -2601,7 +2563,6 @@ friends:100:2d7:Same
 desc:It is a large wolf with eyes full of cunning.
 
 name:187:черн$AFT вош$N3
-plural:Giant black lice
 base:louse
 color:D
 info:120:2:6:8:10
@@ -2654,7 +2615,6 @@ friends:100:3d4:Same
 desc:A massive orc-like figure with black skin and powerful arms.
 
 name:191:волшебн$AMT гриб$N2A
-plural:Magic mushroom patches
 base:mushroom
 color:B
 info:140:1:40:12:0
@@ -2778,7 +2738,6 @@ flags:BASH_DOOR
 desc:It is half lion, half eagle.  It flies menacingly towards you.
 
 name:201:гомункул$N2A
-plural:Homunculi
 base:minor demon
 color:y
 info:110:36:20:48:60
@@ -2934,7 +2893,6 @@ flags:ANIMAL
 desc:A huge, beastly bear, more savage than most of its kind.
 
 name:561:больш$AFM ворон$N1T
-plural:Crebain
 base:bird
 color:D
 info:120:9:40:14:0
@@ -3148,12 +3106,12 @@ spell-freq:6
 spells:BO_COLD
 desc:A strange creature that disguises itself as a discarded potion bottle to
 desc: lure unsuspecting adventurers within reach of its venomous claws.
-mimic:potion:Healing
-mimic:potion:*Healing*
-mimic:potion:Life
-mimic:potion:Experience
-mimic:potion:Augmentation
-mimic:potion:Speed
+mimic:potion:исцеления
+mimic:potion:*:Исцеления*
+mimic:potion:жизни
+mimic:potion:опыта
+mimic:potion:улучшения
+mimic:potion:скорости
 
 name:225:мерцающ$AFM собак$N1M
 base:canine
@@ -3418,7 +3376,6 @@ spells:S_MONSTER
 desc:It is a strange pulsing mound of flesh.
 
 name:244:саскватч$N2A
-plural:Sasquatches
 base:yeti
 color:g
 info:120:200:15:60:20
@@ -3429,7 +3386,6 @@ blow:BITE:HURT:2d8
 desc:A tall shaggy, furry humanoid, it could call the yeti brother.
 
 name:245:оборот*ен*ь$N2E
-plural:Werewolves
 base:canine
 color:D
 info:110:230:15:36:70
@@ -3455,8 +3411,8 @@ flags:FORCE_SLEEP
 spell-freq:5
 spells:BLIND | CONF | DARKNESS | HASTE
 spells:BO_COLD | BO_FIRE
-drop:magic book:[Conjurings and Tricks]:5:1:1
-drop:magic book:[Incantations and Illusions]:5:1:1
+drop:magic book:[Волшебные трюки]:5:1:1
+drop:magic book:[Заклинания и иллюзии]:5:1:1
 friends:80:1d3:темн$AMT эльф$N2A
 friends:70:1d2:темн$AMT эльф$N2A-воин$N2A
 friends:50:1d1:темн$AMT эльф$N2A-маг$N2A
@@ -3477,8 +3433,8 @@ spell-freq:4
 spells:ARROW_2 | BLINK | MISSILE
 spells:BO_COLD | BO_ELEC
 spells:S_ANIMAL
-drop:magic book:[Conjurings and Tricks]:5:1:1
-drop:magic book:[Incantations and Illusions]:5:1:1
+drop:magic book:[Волшебные трюки]:5:1:1
+drop:magic book:[Заклинания и иллюзии]:5:1:1
 friends:50:1d1:опытн$AMT воин$N2A
 friends:50:1d1:опытн$AMT вор$N2A
 friends:50:1d2:иллюзионист$N2A
@@ -3499,8 +3455,8 @@ flags:DROP_1
 flags:OPEN_DOOR | TAKE_ITEM
 spell-freq:4
 spells:BLIND | CAUSE_2 | HEAL | SCARE | SLOW
-drop:prayer book:[Words of Wisdom]:5:1:1
-drop:prayer book:[Chants and Blessings]:5:1:1
+drop:prayer book:[Слова Мудрости]:5:1:1
+drop:prayer book:[Пения и благословления]:5:1:1
 friends:50:1d1:опытн$AMT воин$N2A
 friends:50:1d1:опытн$AMT вор$N2A
 friends:50:1d2:иллюзионист$N2A
@@ -3558,15 +3514,14 @@ spells:BO_FIRE
 spells:S_MONSTER
 desc:A strange creature that disguises itself as a discarded scroll to lure
 desc: unsuspecting adventurers within reach of its venomous claws.
-mimic:scroll:Banishment
-mimic:scroll:Mass Banishment
-mimic:scroll:Teleport Level
-mimic:scroll:Acquirement
-mimic:scroll:*Acquirement*
-mimic:scroll:*Destruction*
+mimic:scroll:изгнания
+mimic:scroll:массового изгнания
+mimic:scroll:межуровневой телепортации
+mimic:scroll:приобретения
+mimic:scroll:*:Приобретения*
+mimic:scroll:*:Разрушения*
 
 name:252:огненн$AMT вихр*ь$N2E
-plural:Fire vortices
 base:vortex
 color:r
 info:110:45:100:36:0
@@ -3579,7 +3534,6 @@ spells:BR_FIRE
 desc:A whirling maelstrom of fire.
 
 name:253:водян$AMU вихр*ь$N2E
-plural:Water vortices
 base:vortex
 color:s
 info:110:45:100:36:0
@@ -3591,7 +3545,6 @@ spells:BR_ACID
 desc:A caustic spinning whirlpool of water.
 
 name:254:вихр*ь$N2E холода
-plural:Cold vortices
 base:vortex
 color:w
 info:110:45:100:36:0
@@ -3603,7 +3556,6 @@ spells:BR_COLD
 desc:A twisting whirlpool of frost.
 
 name:255:энергетическ$AMM вихр*ь$N2E
-plural:Energy vortices
 base:vortex
 color:b
 info:110:45:100:36:0
@@ -3943,7 +3895,6 @@ spells:DRAIN_MANA | TPORT
 desc:It is a ghostly woman's form that wails mournfully.
 
 name:593:гигантск$AMM светляк$N2A
-plural:Giant fireflies
 base:insect
 color:r
 info:120:5:8:21:10
@@ -3988,7 +3939,6 @@ friends:80:1d3:Same
 desc:A ten foot tall humanoid with powerful muscles.
 
 name:276:пукельман$N2A
-plural:Pukelmen
 base:golem
 color:m
 info:110:520:12:120:20
@@ -4020,8 +3970,8 @@ flags:FORCE_SLEEP
 spell-freq:6
 spells:CONF | DARKNESS | HEAL
 spells:S_ANIMAL | S_MONSTER | S_SPIDER
-drop:prayer book:[Words of Wisdom]:8:1:1
-drop:prayer book:[Chants and Blessings]:8:1:1
+drop:prayer book:[Слова Мудрости]:8:1:1
+drop:prayer book:[Пения и благословления]:8:1:1
 desc:A powerful dark elf, with mighty nature-controlling enchantments.
 
 name:278:каменн$AMT тролл*ь$N2E
@@ -4103,8 +4053,8 @@ flags:HURT_LIGHT | NO_CONF | NO_SLEEP
 flags:FORCE_SLEEP
 spell-freq:5
 spells:BLINK | CAUSE_1 | DARKNESS | MISSILE | SCARE
-drop:prayer book:[Beginners Handbook]:5:1:1
-drop:prayer book:[Words of Wisdom]:5:1:1
+drop:prayer book:[Книга для начинающих]:5:1:1
+drop:prayer book:[Слова Мудрости]:5:1:1
 desc:A troll who is so bright he knows how to read.
 
 name:283:сер$AMT мурав^ь*е*й$N2E
@@ -4185,7 +4135,6 @@ spells:CAUSE_2 | DARKNESS | SCARE
 desc:It is a tangible but ghostly form made of white fog.
 
 name:289:ангел$N2A
-plural:Lesser Maiar
 base:ainu
 color:o
 color:o
@@ -4289,7 +4238,6 @@ flags:IM_FIRE
 desc:It is a giant beetle wreathed in flames.
 
 name:292:кучк$N1M адамантовых монет
-plural:Piles of creeping adamantite coins
 base:creeping coins
 color:G
 info:120:260:5:60:10
@@ -4301,7 +4249,7 @@ blow:HIT:HURT:1d12
 flags:IM_ACID
 desc:It appears to be a pile of coins made of precious adamant, slithering
 desc: toward you on lots of tiny legs.
-mimic:gold:adamantite
+mimic:gold:адамантит
 
 name:293:алгрот$N2A
 base:troll
@@ -4369,8 +4317,8 @@ spell-freq:4
 spells:HEAL | HOLD | TRAPS
 spells:BA_COLD
 spells:S_MONSTER
-drop:magic book:[Incantations and Illusions]:5:1:1
-drop:magic book:[Sorcery and Evocations]:5:1:1
+drop:magic book:[Заклинания и иллюзии]:5:1:1
+drop:magic book:[Секреты колдовства]:5:1:1
 desc:A hideous ogre wrapped in black sorcerous robes.
 
 name:298:вампир$N2A
@@ -4435,8 +4383,8 @@ spell-freq:5
 spells:CAUSE_2 | HOLD | SCARE | TPORT | TRAPS
 spells:BO_FIRE
 spells:S_MONSTER
-drop:prayer book:[Words of Wisdom]:5:1:1
-drop:prayer book:[Chants and Blessings]:5:1:1
+drop:prayer book:[Слова Мудрости]:5:1:1
+drop:prayer book:[Пения и благословления]:5:1:1
 desc:It is an ogre wrapped in furs and covered in grotesque body paints.
 
 name:554:мерцающ$AFM плесен$N3
@@ -4484,8 +4432,8 @@ flags:NO_CONF | NO_SLEEP | IM_POIS
 flags:FORCE_SLEEP
 spell-freq:4
 spells:BLIND | DARKNESS | HEAL | MIND_BLAST
-drop:prayer book:[Chants and Blessings]:8:1:1
-drop:prayer book:[Exorcism and Dispelling]:5:1:1
+drop:prayer book:[Пения и благословления]:8:1:1
+drop:prayer book:[Святые экзорцизмы]:5:1:1
 desc:A wraithly snake-like form with the torso of a beautiful woman, it is the
 desc: most powerful of its kind.
 
@@ -4520,8 +4468,8 @@ flags:OPEN_DOOR
 flags:FORCE_SLEEP
 spell-freq:8
 spells:BLIND | CAUSE_3 | DARKNESS | SCARE
-drop:prayer book:[Words of Wisdom]:8:1:1
-drop:prayer book:[Chants and Blessings]:8:1:1
+drop:prayer book:[Слова Мудрости]:8:1:1
+drop:prayer book:[Пения и благословления]:8:1:1
 friends:50:1d1:опытн$AMT вор$N2A
 friends:50:1d1:следопыт$N2A
 friends:50:1d1:паладин$N2A
@@ -4563,8 +4511,8 @@ spell-freq:3
 spells:BLIND | CONF | HASTE | TELE_TO | TPORT
 spells:BO_COLD | BO_ELEC | BO_FIRE
 spells:S_MONSTER
-drop:magic book:[Incantations and Illusions]:10:1:1
-drop:magic book:[Sorcery and Evocations]:7:1:1
+drop:magic book:[Заклинания и иллюзии]:10:1:1
+drop:magic book:[Секреты колдовства]:7:1:1
 friends-base:100:1d1:golem
 desc:A mage of some power - you can tell by the size of his hat.
 
@@ -4642,7 +4590,6 @@ friends:100:4d4:Same
 desc:He is a white troll with powerfully clawed hands.
 
 name:605:летуч$AFM мыш$N3 Горгорота
-plural:Bats of Gorgoroth
 base:bat
 color:g
 info:120:110:20:36:30
@@ -4713,7 +4660,6 @@ desc:It is a massive worm form, many feet in length.  Its vast maw drips acid
 desc: and poison.
 
 name:312:катоблепас$N2A
-plural:Catoblepae
 base:quadruped
 color:g
 info:110:165:15:66:40
@@ -4743,12 +4689,12 @@ spells:BO_ACID | BO_COLD | BO_ELEC | BO_FIRE
 spells:S_MONSTER
 desc:A strange creature that disguises itself as a discarded ring to lure
 desc: unsuspecting adventurers within reach of its venomous claws.
-mimic:ring:Speed
-mimic:ring:Slaying
-mimic:ring:Constitution
-mimic:ring:Resist Poison
-mimic:ring:Free Action
-mimic:ring:See Invisible
+mimic:ring:скорости
+mimic:ring:истребления
+mimic:ring:телосложения
+mimic:ring:сопротивления яду
+mimic:ring:свободных действий
+mimic:ring:видения невидимого
 
 name:314:молод$AMU син$AMO дракон$N2A
 base:dragon
@@ -5201,8 +5147,8 @@ flags:FORCE_SLEEP
 spell-freq:6
 spells:HEAL
 spells:S_ANIMAL | S_SPIDER
-drop:prayer book:[Chants and Blessings]:10:1:1
-drop:prayer book:[Exorcism and Dispelling]:5:1:1
+drop:prayer book:[Пения и благословления]:10:1:1
+drop:prayer book:[Святые экзорцизмы]:5:1:1
 friends-base:50:2d4:spider
 desc:An adept at unarmed combat, the mystic strikes with stunning power.  He can
 desc: summon help from nature and is able to focus his power to ease any pain.
@@ -5374,7 +5320,6 @@ desc: your eyes with spectrums of colour.
 ### Dungeon level 34 ###
 
 name:311:архангел$N2A
-plural:Maiar
 base:ainu
 color:B
 info:110:528:30:81:255
@@ -5485,7 +5430,6 @@ desc: evil deep within your body.
 #Deleted
 
 name:354:мастер$N2A-вор$N2A
-plural:Master thieves
 base:person
 color:b
 info:130:99:20:45:5
@@ -5527,7 +5471,6 @@ desc: once openly swore allegiance to the High Elves, but were secretly in the
 desc: pay of Morgoth.
 
 name:356:лич$N2C
-plural:Liches
 base:lich
 color:o
 info:110:264:20:72:60
@@ -5797,7 +5740,6 @@ desc: its hideous black body seems to struggle against reality as the universe
 desc: itself struggles to banish it.
 
 name:373:мумак$N2A
-plural:Mûmakil
 base:quadruped
 color:s
 info:110:495:20:82:70
@@ -6011,7 +5953,6 @@ desc:A tangible but ghostly form, made of grey fog.  The air around it feels
 desc: deathly cold.
 
 name:381:колосс$N2A
-plural:Colossi
 base:golem
 color:G
 info:100:2640:12:180:10
@@ -6073,8 +6014,8 @@ spells:BLIND | CAUSE_3 | HASTE | HOLD | SCARE | TELE_TO
 spells:TPORT
 spells:BO_NETH
 spells:S_UNDEAD
-drop:prayer book:[Chants and Blessings]:8:1:1
-drop:prayer book:[Exorcism and Dispelling]:8:1:1
+drop:prayer book:[Пения и благословления]:8:1:1
+drop:prayer book:[Святые экзорцизмы]:8:1:1
 friends-base:80:1d3:skeleton
 desc:A gaunt figure, clothed in black robes.
 
@@ -6117,8 +6058,8 @@ spell-freq:2
 spells:HOLD | TPORT
 spells:BO_FIRE
 spells:S_DEMON
-drop:magic book:[Incantations and Illusions]:8:1:1
-drop:magic book:[Sorcery and Evocations]:8:1:1
+drop:magic book:[Заклинания и иллюзии]:8:1:1
+drop:magic book:[Секреты колдовства]:8:1:1
 friends-base:50:1d3:minor demon
 friends:100:1d1:квазит$N2A
 desc:A figure twisted by evil standing in robes of deepest crimson.
@@ -6179,7 +6120,6 @@ friends:50:1d2:молод$AMU черн$AMT дракон$N2A
 desc:A large dragon, with scales of deepest black.
 
 name:615:велик$AFM муми$N1N
-plural:Greater mummies
 base:zombie
 color:y
 info:110:299:30:102:90
@@ -6326,7 +6266,6 @@ flags:ATTR_MULTI
 desc:It is a giant beetle, whose carapace shimmers with vibrant energies.
 
 name:400:пространственн$AMT вихр*ь$N2E
-plural:Nexus vortices
 base:vortex
 color:P
 info:120:176:100:48:0
@@ -6339,7 +6278,6 @@ spells:BR_NEXU
 desc:A maelstrom of potent magical energy.
 
 name:401:плазменн$AMT вихр*ь$N2E
-plural:Plasma vortices
 base:vortex
 color:R
 info:120:176:100:48:0
@@ -6434,8 +6372,8 @@ spell-freq:5
 spells:BLIND | CAUSE_3 | SCARE
 spells:BO_NETH
 spells:S_MONSTERS
-drop:prayer book:[Chants and Blessings]:8:1:1
-drop:prayer book:[Exorcism and Dispelling]:8:1:1
+drop:prayer book:[Пения и благословления]:8:1:1
+drop:prayer book:[Святые экзорцизмы]:8:1:1
 friends:50:1d1:бес$N2A
 desc:It is a humanoid figure dressed in armour of an ancient form.  From beneath
 desc: its helmet, eyes glow a baleful red and seem to pierce you like lances of
@@ -6461,7 +6399,6 @@ desc:A Black Númenorean who usurped the throne of Gondor, he is treacherous and
 desc: evil.
 
 name:409:временн$AMU вихр*ь$N2E
-plural:Time vortices
 base:vortex
 color:B
 info:130:176:100:48:0
@@ -6473,7 +6410,6 @@ spells:BR_TIME
 desc:You haven't seen it yet.
 
 name:410:сверкающ$AMO вихр*ь$N2E
-plural:Shimmering vortices
 base:vortex
 color:o
 info:140:176:100:48:0
@@ -6527,7 +6463,6 @@ desc:A figure that seems made of void, its strangely human shape is cloaked in
 desc: shadow.  It reaches out at you.
 
 name:418:эринейс
-plural:Erinyes
 base:major demon
 color:u
 info:110:210:20:75:70
@@ -6580,7 +6515,6 @@ desc:An intelligent arachnid whose hairy legs weave spells in the air.
 ### Dungeon level 39 ###
 
 name:350:херувим$N2A
-plural:Greater Maiar
 base:ainu
 color:G
 info:120:880:30:81:155
@@ -6829,8 +6763,8 @@ flags:FORCE_SLEEP
 spell-freq:2
 spells:BLIND
 spells:S_DRAGON
-drop:magic book:[Incantations and Illusions]:8:1:1
-drop:magic book:[Sorcery and Evocations]:8:1:1
+drop:magic book:[Заклинания и иллюзии]:8:1:1
+drop:magic book:[Секреты колдовства]:8:1:1
 friends-base:30:1d1:dragon
 friends-base:60:1d1:dragon
 desc:This elusive female spellcaster has a special affinity for dragons, whom
@@ -6854,8 +6788,8 @@ spells:BLIND | BLINK | CAUSE_3 | CONF | TELE_TO | TRAPS
 spells:BA_COLD | BA_FIRE
 spells:BO_ACID
 spells:S_DRAGON | S_MONSTER | S_UNDEAD
-drop:magic book:[Incantations and Illusions]:5:1:1
-drop:magic book:[Sorcery and Evocations]:10:1:1
+drop:magic book:[Заклинания и иллюзии]:5:1:1
+drop:magic book:[Секреты колдовства]:10:1:1
 friends:30:1d1:мастер$N2A-вор$N2A
 friends:30:1d1:вожд*ь$N2E следопытов
 friends:30:1d1:патриарх$N2A
@@ -6994,8 +6928,8 @@ flags:FORCE_SLEEP
 spell-freq:2
 spells:BLIND | CAUSE_3 | CAUSE_4 | HEAL | HOLD
 spells:S_MONSTER | S_UNDEAD
-drop:prayer book:[Chants and Blessings]:5:1:1
-drop:prayer book:[Exorcism and Dispelling]:10:1:1
+drop:prayer book:[Пения и благословления]:5:1:1
+drop:prayer book:[Святые экзорцизмы]:10:1:1
 friends:30:1d1:мастер$N2A-вор$N2A
 friends:30:1d1:вожд*ь$N2E следопытов
 friends:30:1d1:колдун$N2A
@@ -7095,13 +7029,12 @@ spells:TELE_TO
 spells:BA_COLD | BA_FIRE
 spells:BO_ACID
 spells:S_DEMON | S_MONSTER | S_UNDEAD
-drop:magic book:[Incantations and Illusions]:5:1:1
-drop:magic book:[Sorcery and Evocations]:10:1:1
+drop:magic book:[Заклинания и иллюзии]:5:1:1
+drop:magic book:[Секреты колдовства]:10:1:1
 desc:A dark elven figure, dressed in deepest black.  Power seems to crackle from
 desc: his slender frame.
 
 name:451:мастер$N2A-лич$N2C
-plural:Master liches
 base:lich
 color:r
 info:120:1584:20:96:50
@@ -7175,8 +7108,8 @@ spells:ARROW_2 | ARROW_3 | ARROW_4 | BLINK | HASTE | MISSILE
 spells:BA_COLD
 spells:BO_ELEC | BO_FIRE
 spells:S_ANIMAL
-drop:magic book:[Incantations and Illusions]:8:1:1
-drop:magic book:[Sorcery and Evocations]:8:1:1
+drop:magic book:[Заклинания и иллюзии]:8:1:1
+drop:magic book:[Секреты колдовства]:8:1:1
 friends:30:1d1:мастер$N2A-вор$N2A
 friends:30:1d1:колдун$N2A
 friends:30:1d1:патриарх$N2A
@@ -7308,7 +7241,6 @@ desc:A sorceress in life, Adunaphel quickly fell under Sauron's sway and the
 desc: power of the rings.
 
 name:456:глабрезу
-plural:Glabrezu
 base:major demon
 color:U
 info:110:616:20:60:70
@@ -7414,8 +7346,8 @@ flags:OPEN_DOOR | TAKE_ITEM
 flags:NO_FEAR | NO_CONF | NO_SLEEP
 spell-freq:4
 spells:BLIND | CAUSE_3 | CAUSE_4 | HASTE | HEAL | SCARE
-drop:prayer book:[Chants and Blessings]:10:1:1
-drop:prayer book:[Exorcism and Dispelling]:10:1:1
+drop:prayer book:[Пения и благословления]:10:1:1
+drop:prayer book:[Святые экзорцизмы]:10:1:1
 friends:30:1d1:мастер$N2A-вор$N2A
 friends:30:1d1:вожд*ь$N2E следопытов
 friends:30:1d1:патриарх$N2A
@@ -7705,7 +7637,6 @@ desc:  He tramples weaker creatures underfoot in his eagerness to get to his
 desc: real enemy, and his battle-cry strikes terror into his foes.
 
 name:584:циклоп$N2A
-plural:Cyclopes
 base:giant
 color:u
 info:120:1050:20:144:20
@@ -7952,8 +7883,8 @@ flags:FORCE_SLEEP
 spell-freq:3
 spells:HEAL
 spells:S_ANIMAL
-drop:prayer book:[Chants and Blessings]:8:1:1
-drop:prayer book:[Exorcism and Dispelling]:8:1:1
+drop:prayer book:[Пения и благословления]:8:1:1
+drop:prayer book:[Святые экзорцизмы]:8:1:1
 friends-base:50:2d4:spider
 desc:A lord of all that is natural, skilled in the mystic ways.  He is a master
 desc: of martial arts and is at one with nature, able to summon help from the
@@ -8087,7 +8018,6 @@ desc: Sauron's power.
 ### Dungeon level 53 ###
 
 name:502:вихр*ь$N2E хаоса
-plural:Chaos vortices
 base:vortex
 color:v
 info:120:315:100:96:0
@@ -8103,7 +8033,6 @@ spells:BR_CHAO
 desc:Void, nothingness, spinning destructively.
 
 name:614:шторм$N2A антимагии
-plural:Storms of Unmagic
 base:vortex
 color:v
 info:120:315:50:48:0
@@ -8144,7 +8073,6 @@ desc:A massive glowing eagle bathed in flames.  The searing heat chars your skin
 desc: and melts your armour.
 
 name:557:демилич$N2C
-plural:Demiliches
 base:lich
 color:U
 info:120:2816:20:150:40
@@ -8210,7 +8138,6 @@ desc: pass through Cirith Ungol, but occasionally goes out foraging for food to
 desc: feed her voracious appetite.
 
 name:455:Архон$N2A
-plural:Istari
 base:ainu
 color:y
 info:130:1800:30:140:255
@@ -8232,7 +8159,6 @@ desc: They have taken the form of human wizards, and channel powerful magic to
 desc: crush their foes.
 
 name:476:костян$AMU дракон$N2A
-plural:Dracoliches
 base:ancient dragon
 color:G
 info:120:3080:25:144:80
@@ -8292,7 +8218,6 @@ desc: he fell victim to Sauron's wiles, tried to fight the Valar themselves, and
 desc: condemned Númenor to oblivion.
 
 name:567:Барбазу
-plural:Barbazu
 base:major demon
 color:G
 info:120:700:25:90:70
@@ -8372,8 +8297,8 @@ flags:FORCE_SLEEP
 spell-freq:3
 spells:HEAL | MIND_BLAST
 spells:S_ANIMAL | S_HOUND | S_SPIDER
-drop:prayer book:[Chants and Blessings]:5:1:1
-drop:prayer book:[Exorcism and Dispelling]:15:1:1
+drop:prayer book:[Пения и благословления]:5:1:1
+drop:prayer book:[Святые экзорцизмы]:15:1:1
 friends-base:80:3d5:spider
 desc:He is one of the few true masters of the art, being extremely skillful in
 desc: all forms of unarmed combat and controlling the world's natural creatures
@@ -8528,7 +8453,6 @@ desc: strength and priestly wisdom are a true match for any adventurer.
 ### Dungeon level 60 ###
 
 name:503:эфирн$AMT вихр*ь$N2E
-plural:Aether vortices
 base:vortex
 color:v
 info:130:420:100:48:0
@@ -8826,7 +8750,6 @@ desc: expecting mayhem and chaos ahead.  It appears to have an almost kamikaze
 desc: relish for combat.  You suspect all may not be as it seems.
 
 name:558:архилич$N2C
-plural:Archliches
 base:lich
 color:B
 info:120:3520:20:180:40
@@ -9021,7 +8944,6 @@ desc: its form onto the ground.  You shudder when you see the acid eating away
 desc: the very stones of the dungeon - what could it do to you?
 
 name:579:Велик$AMM Зме*й$N2E Грома
-plural:Great Wyrms of Thunder
 base:ancient dragon
 color:y
 info:120:3080:30:225:30
@@ -9385,7 +9307,6 @@ desc: uncertain all of a sudden.
 ### Dungeon level 75 ###
 
 name:519:Велик$AMM Зме*й$N2E Хаоса
-plural:Great Wyrms of Chaos
 base:ancient dragon
 color:v
 info:120:3960:40:255:20
@@ -9407,7 +9328,6 @@ desc: then foul.  Its body is twisted by chaotic forces as it strives to stay
 desc: real.  Its very existence distorts the universe around it.
 
 name:520:Велик$AMM Зме*й$N2E Закона
-plural:Great Wyrms of Law
 base:ancient dragon
 color:B
 info:120:3960:40:255:20
@@ -9566,7 +9486,6 @@ desc: of vast demon armies.
 ### Dungeon level 79 ###
 
 name:521:Велик$AMM Зме*й$N2E Баланса
-plural:Great Wyrms of Balance
 base:ancient dragon
 color:P
 info:120:4400:40:255:20
@@ -9589,7 +9508,6 @@ desc: upstart troublemaker without the wisdom to control your actions.  It will
 desc: destroy you.
 
 name:523:Велик$AMM Зме*й$N2E Радуги
-plural:Great Wyrms of Many Colours
 base:ancient dragon
 color:v
 info:120:4400:40:255:20

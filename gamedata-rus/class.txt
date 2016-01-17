@@ -110,12 +110,12 @@ skill-throw:55:45
 skill-dig:0:0
 info:9:0:7000:40
 attack:6:30:5
-equip:food:Ration of Food:1:3
-equip:light:Wooden Torch:1:3
-equip:potion:Berserk Strength:1:1
-equip:sword:Dagger:1:1
-equip:soft armour:Soft Leather Armour:1:1
-equip:scroll:Word of Recall:1:1
+equip:food:рацион$N2A еды:1:3
+equip:light:деревянн$AMT факел$N2A:1:3
+equip:potion:ярости:1:1
+equip:sword:кинжал$N2A:1:1
+equip:soft armour:мягк$AFM кожан$AFT брон$N1N:1:1
+equip:scroll:Слова Возвращения:1:1
 flags:BRAVERY_30 | PSEUDO_ID_IMPROV | NO_MANA
 title:Новобранец
 title:Солдат
@@ -146,11 +146,11 @@ skill-throw:20:15
 skill-dig:0:0
 info:0:30:170000:5
 attack:4:40:2
-equip:food:Ration of Food:1:3
-equip:light:Wooden Torch:1:3
-equip:magic book:[Magic for Beginners]:1:1
-equip:sword:Dagger:1:1
-equip:scroll:Word of Recall:1:1
+equip:food:рацион$N2A еды:1:3
+equip:light:деревянн$AMT факел$N2A:1:3
+equip:magic book:[Магия для начинающего]:1:1
+equip:sword:кинжал$N2A:1:1
+equip:scroll:Слова Возвращения:1:1
 flags:CUMBER_GLOVE | ZERO_FAIL | BEAM | CHOOSE_SPELLS
 title:Неофит
 title:Ученик
@@ -165,7 +165,7 @@ title:Архимаг
 
 magic:1:300:1:9
 
-book:magic book:[Magic for Beginners]:6:1
+book:magic book:[Магия для начинающего]:6:1
 
 spell:Волшебная Стрела:1:1:22:4
 effect:BOLT_OR_BEAM:MISSILE:-10
@@ -212,7 +212,7 @@ dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 10
 desc:Shoots a radius-2 poison ball.
 
-book:magic book:[Conjurings and Tricks]:9:1
+book:magic book:[Волшебные трюки]:9:1
 
 spell:Контузия Монстра:5:4:30:4
 effect:BOLT_AWARE:OLD_CONF
@@ -269,7 +269,7 @@ dice:$B+1d100
 expr:B:PLAYER_LEVEL:/ 5
 desc:Invokes a random spell effect.
 
-book:magic book:[Incantations and Illusions]:9:1
+book:magic book:[Заклинания и иллюзии]:9:1
 
 spell:Удовлетворение Голода:9:7:45:8
 effect:SET_NOURISH
@@ -335,7 +335,7 @@ dice:20
 desc:Attempts to slow a single monster.
 desc:  Uniques are not affected.
 
-book:magic book:[Sorcery and Evocations]:6:1
+book:magic book:[Секреты колдовства]:6:1
 
 spell:Ледяной Шар:19:6:55:8
 effect:BALL:COLD:2
@@ -376,7 +376,7 @@ effect:SENSE_OBJECTS
 dice:22d40
 desc:Detects all treasure in the immediate area.
 
-book:magic book:[Resistances of Scarabtarices]:5:1
+book:magic book:[Сопротивления Скарабтарисов]:5:1
 
 spell:Сопротивление Холоду:10:5:50:10
 effect:TIMED_INC:OPP_COLD
@@ -412,7 +412,7 @@ effect:TIMED_INC:SHIELD
 dice:30+d20
 desc:Grants you +50 to AC for 30+1d20 turns.
 
-book:magic book:[Raal's Tome of Destruction]:7:1
+book:magic book:[Том Разрушений Рааля]:7:1
 
 spell:Ударная Волна:16:5:40:6
 effect:BALL:SOUND:2
@@ -466,7 +466,7 @@ expr:D:PLAYER_LEVEL:+ 0
 desc:Fires a gravity beam that hurts each monster in its path
 desc: and has a chance of teleporting it away.
 
-book:magic book:[Mordenkainen's Escapes]:5:1
+book:magic book:[Выходы Морденкайнена]:5:1
 
 spell:Создание Дверей:13:9:40:12
 effect:TOUCH:MAKE_DOOR
@@ -506,7 +506,7 @@ desc:  Higher level monsters are more likely to break the glyph.
 desc:  The glyph will remain where it is, until a monster succeeds in
 desc: breaking it, or until you leave the level.
 
-book:magic book:[Tenser's Transformations]:2:1
+book:magic book:[Трансформации Тензера]:2:1
 
 spell:Большая Перезарядка:30:30:95:100
 effect:RECHARGE
@@ -526,7 +526,7 @@ desc: the to-hit bonus and the to-dam bonus of the same ammunition.
 desc:  The spell has no effect if the ammunition is already branded, has a
 desc: slay, is broken, or is cursed.
 
-book:magic book:[Kelek's Grimoire of Power]:8:1
+book:magic book:[Книга Власти Келека]:8:1
 
 spell:Землетрясение:20:18:60:20
 effect:EARTHQUAKE
@@ -610,12 +610,12 @@ skill-throw:35:20
 skill-dig:0:0
 info:2:20:15000:40
 attack:4:35:3
-equip:food:Ration of Food:1:3
-equip:light:Wooden Torch:1:3
-equip:prayer book:[Beginners Handbook]:1:1
-equip:hafted:Mace:1:1
-equip:potion:Cure Serious Wounds:2:2
-equip:scroll:Word of Recall:1:1
+equip:food:рацион$N2A еды:1:3
+equip:light:деревянн$AMT факел$N2A:1:3
+equip:prayer book:[Книга для начинающих]:1:1
+equip:hafted:булав$N1T:1:1
+equip:potion:лечения серьезных ран:2:2
+equip:scroll:Слова Возвращения:1:1
 flags:BLESS_WEAPON | ZERO_FAIL | PSEUDO_ID_IMPROV
 title:Верующий
 title:Аколит
@@ -630,7 +630,7 @@ title:Патриарх
 
 magic:1:350:2:9
 
-book:prayer book:[Beginners Handbook]:7:2
+book:prayer book:[Книга для начинающих]:7:2
 
 spell:Поиск Зла:1:1:10:4
 effect:DETECT_EVIL
@@ -679,7 +679,7 @@ spell:Замедление Яда:3:3:28:4
 effect:TIMED_DEC:POISONED:2
 desc:Halves the remaining duration of any current poisoning.
 
-book:prayer book:[Words of Wisdom]:7:2
+book:prayer book:[Слова Мудрости]:7:2
 
 spell:Устрашение Монстра:5:4:29:3
 effect:BOLT_AWARE:TURN_ALL
@@ -733,7 +733,7 @@ effect:TIMED_INC:OPP_FIRE
 dice:10+d10
 desc:Gives you temporary resistance to cold and fire, for 10+1d10 turns each.
 
-book:prayer book:[Chants and Blessings]:9:2
+book:prayer book:[Пения и благословления]:9:2
 
 spell:Нейтрализация Яда:9:6:38:4
 effect:CURE:POISONED
@@ -808,7 +808,7 @@ expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to scare each undead monster within line of sight,
 desc: causing it to flee in terror for a level-dependant duration.
 
-book:prayer book:[Exorcism and Dispelling]:6:2
+book:prayer book:[Святые экзорцизмы]:6:2
 
 spell:Молитва:15:14:50:5
 effect:TIMED_INC:BLESSED
@@ -863,7 +863,7 @@ desc:Inflicts unresistable damage on each evil monster within line of sight,
 desc: cures 1000 points of damage, cures all stunning, heals all cut damage,
 desc: neutralizes poison, and removes fear.
 
-book:prayer book:[Ethereal Openings]:6:2
+book:prayer book:[Эфирные Выходы]:6:2
 
 spell:Скачок:3:3:50:6
 effect:TELEPORT
@@ -906,7 +906,7 @@ desc: same dungeon depth) will be generated.  This has exactly the same
 desc: side effects as leaving and re-entering the level through a stair,
 desc: except that you won't start on a square with a stair.
 
-book:prayer book:[Godly Insights]:5:2
+book:prayer book:[Божественные Знания]:5:2
 
 spell:Поиск Монстров:3:3:50:2
 effect:DETECT_VISIBLE_MONSTERS
@@ -947,7 +947,7 @@ effect:ENLIGHTENMENT
 desc:Lights up, maps out, and detects all objects on the complete current
 desc: dungeon level.
 
-book:prayer book:[Purifications and Healing]:5:2
+book:prayer book:[Очищения и Исцеления]:5:2
 
 spell:Лечение Серьезных Ран:15:5:50:25
 effect:HEAL_HP
@@ -988,7 +988,7 @@ spell:Воспоминания:35:70:90:250
 effect:RESTORE_EXP
 desc:Restores experience points to maximum if it is currently below maximum.
 
-book:prayer book:[Holy Infusions]:5:2
+book:prayer book:[Священные Чары]:5:2
 
 spell:Открытые Пути:5:6:50:40
 effect:TOUCH:KILL_DOOR
@@ -1028,7 +1028,7 @@ desc: to-dam bonus of the same weapon.
 desc:  The prayer has no effect if the weapon is an artifact or ego item,
 desc: is already branded, has a slay, is broken, or is cursed.
 
-book:prayer book:[Wrath of God]:5:2
+book:prayer book:[Ярость Бога]:5:2
 
 spell:Уничтожение Мертвецов:15:7:70:25
 effect:PROJECT_LOS_AWARE:DISP_UNDEAD
@@ -1079,12 +1079,12 @@ skill-throw:66:30
 skill-dig:0:0
 info:6:25:10000:40
 attack:5:30:4
-equip:food:Ration of Food:1:3
-equip:light:Wooden Torch:1:3
-equip:magic book:[Magic for Beginners]:1:1
-equip:sword:Dagger:1:1
-equip:soft armour:Soft Leather Armour:1:1
-equip:scroll:Word of Recall:1:1
+equip:food:рацион$N2A еды:1:3
+equip:light:деревянн$AMT факел$N2A:1:3
+equip:magic book:[Магия для начинающего]:1:1
+equip:sword:кинжал$N2A:1:1
+equip:soft armour:мягк$AFM кожан$AFT брон$N1N:1:1
+equip:scroll:Слова Возвращения:1:1
 flags:CUMBER_GLOVE | CHOOSE_SPELLS | PSEUDO_ID_IMPROV
 title:Бродяга
 title:Карманник
@@ -1099,7 +1099,7 @@ title:Король воров
 
 magic:5:350:1:9
 
-book:magic book:[Magic for Beginners]:6:1
+book:magic book:[Магия для начинающего]:6:1
 
 spell:Поиск Монстров:5:1:50:1
 effect:DETECT_VISIBLE_MONSTERS
@@ -1143,7 +1143,7 @@ dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 10
 desc:Shoots a radius-2 poison ball.
 
-book:magic book:[Conjurings and Tricks]:7:1
+book:magic book:[Волшебные трюки]:7:1
 
 spell:Контузия Монстра:15:6:75:1
 effect:BOLT_AWARE:OLD_CONF
@@ -1185,7 +1185,7 @@ dice:$B+1d100
 expr:B:PLAYER_LEVEL:/ 5
 desc:Invokes a random spell effect.
 
-book:magic book:[Incantations and Illusions]:6:1
+book:magic book:[Заклинания и иллюзии]:6:1
 
 spell:Удовлетворение Голода:25:12:95:1
 effect:SET_NOURISH
@@ -1226,7 +1226,7 @@ dice:20
 desc:Attempts to slow a single monster.
 desc:  Uniques are not affected.
 
-book:magic book:[Sorcery and Evocations]:3:1
+book:magic book:[Секреты колдовства]:3:1
 
 spell:Телепортация Монстра:31:25:70:3
 effect:BOLT_STATUS:AWAY_ALL
@@ -1248,7 +1248,7 @@ expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to put to sleep each monster within line of sight.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-book:magic book:[Resistances of Scarabtarices]:5:1
+book:magic book:[Сопротивления Скарабтарисов]:5:1
 
 spell:Сопротивление Холоду:16:12:50:40
 effect:TIMED_INC:OPP_COLD
@@ -1284,7 +1284,7 @@ effect:TIMED_INC:SHIELD
 dice:30+d20
 desc:Grants you +50 to AC for 30+1d20 turns.
 
-book:magic book:[Raal's Tome of Destruction]:2:1
+book:magic book:[Том Разрушений Рааля]:2:1
 
 spell:Ударная Волна:35:25:80:50
 effect:BALL:SOUND:2
@@ -1300,7 +1300,7 @@ dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 40
 desc:Shoots a radius-3 poison ball.
 
-book:magic book:[Mordenkainen's Escapes]:4:1
+book:magic book:[Выходы Морденкайнена]:4:1
 
 spell:Создание Дверей:17:7:30:15
 effect:TOUCH:MAKE_DOOR
@@ -1330,7 +1330,7 @@ desc: of recall again.
 desc:  This spell has no effect when the option to restrict the use of
 desc: stairs and recall is set, unless Morgoth is dead.
 
-book:magic book:[Tenser's Transformations]:6:1
+book:magic book:[Трансформации Тензера]:6:1
 
 spell:Героизм:26:15:30:40
 effect:HEAL_HP
@@ -1381,7 +1381,7 @@ desc: the to-hit bonus and the to-dam bonus of the same ammunition.
 desc:  The spell has no effect if the ammunition is already branded, has a
 desc: slay, is broken, or is cursed.
 
-book:magic book:[Kelek's Grimoire of Power]:1:1
+book:magic book:[Книга Власти Келека]:1:1
 
 spell:Бедлам:29:20:70:20
 effect:BALL:OLD_CONF:4
@@ -1407,13 +1407,13 @@ skill-throw:72:45
 skill-dig:0:0
 info:4:30:20000:40
 attack:5:35:4
-equip:food:Ration of Food:1:3
-equip:light:Wooden Torch:1:3
-equip:magic book:[Magic for Beginners]:1:1
-equip:sword:Dagger:1:1
-equip:bow:Short Bow:1:1
-equip:arrow:Arrow:15:20
-equip:scroll:Word of Recall:1:1
+equip:food:рацион$N2A еды:1:3
+equip:light:деревянн$AMT факел$N2A:1:3
+equip:magic book:[Магия для начинающего]:1:1
+equip:sword:кинжал$N2A:1:1
+equip:bow:коротк$AMM лук$N2A:1:1
+equip:arrow:стрел$N1T:15:20
+equip:scroll:Слова Возвращения:1:1
 flags:CUMBER_GLOVE | EXTRA_SHOT | CHOOSE_SPELLS | PSEUDO_ID_IMPROV
 title:Бегун
 title:Бродяжник
@@ -1428,7 +1428,7 @@ title:Следопыт
 
 magic:3:400:1:9
 
-book:magic book:[Magic for Beginners]:7:1
+book:magic book:[Магия для начинающего]:7:1
 
 spell:Волшебная Стрела:3:1:30:1
 effect:BOLT_OR_BEAM:MISSILE:-10
@@ -1485,7 +1485,7 @@ dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 10
 desc:Shoots a radius-2 poison ball.
 
-book:magic book:[Conjurings and Tricks]:9:1
+book:magic book:[Волшебные трюки]:9:1
 
 spell:Контузия Монстра:7:6:40:2
 effect:BOLT_AWARE:OLD_CONF
@@ -1542,7 +1542,7 @@ dice:$B+1d100
 expr:B:PLAYER_LEVEL:/ 5
 desc:Invokes a random spell effect.
 
-book:magic book:[Incantations and Illusions]:9:1
+book:magic book:[Заклинания и иллюзии]:9:1
 
 spell:Удовлетворение Голода:17:17:55:3
 effect:SET_NOURISH
@@ -1608,7 +1608,7 @@ dice:20
 desc:Attempts to slow a single monster.
 desc:  Uniques are not affected.
 
-book:magic book:[Sorcery and Evocations]:6:1
+book:magic book:[Секреты колдовства]:6:1
 
 spell:Ледяной Шар:27:21:65:6
 effect:BALL:COLD:2
@@ -1649,7 +1649,7 @@ effect:SENSE_OBJECTS
 dice:22d40
 desc:Detects all treasure in the immediate area.
 
-book:magic book:[Resistances of Scarabtarices]:5:1
+book:magic book:[Сопротивления Скарабтарисов]:5:1
 
 spell:Сопротивление Холоду:8:15:50:30
 effect:TIMED_INC:OPP_COLD
@@ -1685,7 +1685,7 @@ effect:TIMED_INC:SHIELD
 dice:30+d20
 desc:Grants you +50 to AC for 30+1d20 turns.
 
-book:magic book:[Raal's Tome of Destruction]:4:1
+book:magic book:[Том Разрушений Рааля]:4:1
 
 spell:Cloud Kill:22:19:60:6
 effect:BALL:POIS:3
@@ -1718,7 +1718,7 @@ desc: damage to each monster in its area of effect.
 desc:  If this kills the monster that blocked the path to the target
 desc: location, the next meteor may continue to find another target.
 
-book:magic book:[Mordenkainen's Escapes]:5:1
+book:magic book:[Выходы Морденкайнена]:5:1
 
 spell:Создание Дверей:20:17:20:25
 effect:TOUCH:MAKE_DOOR
@@ -1758,7 +1758,7 @@ desc:  Higher level monsters are more likely to break the glyph.
 desc:  The glyph will remain where it is, until a monster succeeds in
 desc: breaking it, or until you leave the level.
 
-book:magic book:[Tenser's Transformations]:6:1
+book:magic book:[Трансформации Тензера]:6:1
 
 spell:Героизм:18:15:30:40
 effect:HEAL_HP
@@ -1809,7 +1809,7 @@ desc: the to-hit bonus and the to-dam bonus of the same ammunition.
 desc:  The spell has no effect if the ammunition is already branded, has a
 desc: slay, is broken, or is cursed.
 
-book:magic book:[Kelek's Grimoire of Power]:3:1
+book:magic book:[Книга Власти Келека]:3:1
 
 spell:Землетрясение:30:28:60:16
 effect:EARTHQUAKE
@@ -1854,12 +1854,12 @@ skill-throw:40:30
 skill-dig:0:0
 info:6:35:60000:40
 attack:5:30:5
-equip:food:Ration of Food:1:3
-equip:light:Wooden Torch:1:3
-equip:prayer book:[Beginners Handbook]:1:1
-equip:sword:Dagger:1:1
-equip:scroll:Protection from Evil:1:1
-equip:scroll:Word of Recall:1:1
+equip:food:рацион$N2A еды:1:3
+equip:light:деревянн$AMT факел$N2A:1:3
+equip:prayer book:[Книга для начинающих]:1:1
+equip:sword:кинжал$N2A:1:1
+equip:scroll:защиты от зла:1:1
+equip:scroll:Слова Возвращения:1:1
 flags:PSEUDO_ID_IMPROV
 title:Галлант
 title:Хранитель
@@ -1874,7 +1874,7 @@ title:Паладин-лорд
 
 magic:1:400:2:9
 
-book:prayer book:[Beginners Handbook]:7:2
+book:prayer book:[Книга для начинающих]:7:2
 
 spell:Поиск Зла:1:1:30:4
 effect:DETECT_EVIL
@@ -1923,7 +1923,7 @@ spell:Замедление Яда:9:7:40:3
 effect:TIMED_DEC:POISONED:2
 desc:Halves the remaining duration of any current poisoning.
 
-book:prayer book:[Words of Wisdom]:7:2
+book:prayer book:[Слова Мудрости]:7:2
 
 spell:Устрашение Монстра:9:7:40:3
 effect:BOLT_AWARE:TURN_ALL
@@ -1979,7 +1979,7 @@ desc:Gives you temporary resistance to cold and fire, for 10+1d10 turns each.
 dice:10+d10
 desc:Gives you temporary resistance to cold and fire, for 10+1d10 turns each.
 
-book:prayer book:[Chants and Blessings]:9:2
+book:prayer book:[Пения и благословления]:9:2
 
 spell:Нейтрализация Яда:15:15:50:4
 effect:CURE:POISONED
@@ -2054,7 +2054,7 @@ expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to scare each undead monster within line of sight,
 desc: causing it to flee in terror for a level-dependant duration.
 
-book:prayer book:[Exorcism and Dispelling]:4:2
+book:prayer book:[Святые экзорцизмы]:4:2
 
 spell:Молитва:29:22:50:3
 effect:TIMED_INC:BLESSED
@@ -2085,7 +2085,7 @@ dice:d$S
 expr:S:PLAYER_LEVEL:* 3
 desc:Inflicts unresistable damage on each evil monster within line of sight.
 
-book:prayer book:[Ethereal Openings]:5:2
+book:prayer book:[Эфирные Выходы]:5:2
 
 spell:Скачок:7:7:50:2
 effect:TELEPORT
@@ -2121,7 +2121,7 @@ desc: of recall again.
 desc:  This prayer has no effect when the option to restrict the use of
 desc: stairs and recall is set, unless Morgoth is dead.
 
-book:prayer book:[Godly Insights]:4:2
+book:prayer book:[Божественные Знания]:4:2
 
 spell:Поиск Монстров:5:5:50:1
 effect:DETECT_VISIBLE_MONSTERS
@@ -2157,7 +2157,7 @@ desc:Probes each monster within line of sight, giving information on the
 desc: current hit points of the monster and many of its characteristics
 desc: and abilities (excluding its melee, spellcasting, and breath attacks).
 
-book:prayer book:[Purifications and Healing]:3:2
+book:prayer book:[Очищения и Исцеления]:3:2
 
 spell:Лечение Серьезных Ран:9:4:50:25
 effect:HEAL_HP
@@ -2187,7 +2187,7 @@ effect:RESTORE_STAT:DEX
 effect:RESTORE_STAT:CON
 desc:Restores to maximum all stats that are currently below maximum.
 
-book:prayer book:[Holy Infusions]:5:2
+book:prayer book:[Священные Чары]:5:2
 
 spell:Открытые Пути:10:16:50:20
 effect:TOUCH:KILL_DOOR
@@ -2222,7 +2222,7 @@ desc: to-dam bonus of the same weapon.
 desc:  The prayer has no effect if the weapon is an artifact or ego item,
 desc: is already branded, has a slay, is broken, or is cursed.
 
-book:prayer book:[Wrath of God]:3:2
+book:prayer book:[Ярость Бога]:3:2
 
 spell:Уничтожение Мертвецов:20:13:70:20
 effect:PROJECT_LOS_AWARE:DISP_UNDEAD

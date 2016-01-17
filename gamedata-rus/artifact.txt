@@ -83,7 +83,7 @@
 # The Phial of Galadriel
 
 name:1:Галадриэли
-base-object:light:Phial
+base-object:light:фиал$N2A
 graphics:~:y
 info:5:10:10000
 alloc:40:5 to 100
@@ -99,7 +99,7 @@ desc:Its light is imperishable, and near it darkness cannot endure.
 # The Star of Elendil
 
 name:2:Элендила
-base-object:light:Star
+base-object:light:звезд$N1T
 graphics:~:y
 info:30:5:30000
 alloc:4:30 to 100
@@ -113,7 +113,7 @@ desc:The shining Star of the North, a treasured heirloom of Elendil's house.
 # The Arkenstone of Thrain
 
 name:3:Трейна
-base-object:light:Arkenstone
+base-object:light:Аркенстон$N2A
 graphics:~:y
 info:50:5:50000
 alloc:2:50 to 127
@@ -131,7 +131,7 @@ desc:sparks of white radiance shot with glints of the rainbow.
 # The Amulet of Carlammas
 
 name:4:Карлеммаса
-base-object:amulet:Amulet
+base-object:amulet:амулет$N2A
 graphics:":d
 info:50:3:60000
 alloc:10:50 to 100
@@ -144,7 +144,7 @@ desc:A fiery circle of bronze, with mighty spells to ward off and banish evil.
 # The Amulet of Ingwe
 
 name:5:Ингве
-base-object:amulet:Pendant
+base-object:amulet:амулет$N2A
 graphics:":d
 info:65:3:90000
 alloc:3:65 to 127
@@ -159,7 +159,7 @@ desc:nothing of evil could stand.
 # The Necklace of the Dwarves
 
 name:6:'Наугламир'
-base-object:amulet:Necklace
+base-object:amulet:ожерель|и|й*е$N2D
 graphics:":y
 info:50:3:75000
 alloc:2:50 to 127
@@ -195,7 +195,7 @@ desc:it rests upon the bearer.
 # The Ring of Barahir
 
 name:8:Бараира
-base-object:ring:Serpent Ring
+base-object:ring:коль|ец*о$N2D
 graphics:=:d
 info:50:2:65000
 alloc:4:50 to 100
@@ -208,7 +208,7 @@ desc:form this ring, an ancient treasure of Isildur's house.
 # The Ring of Tulkas
 
 name:9:Тулкаса
-base-object:ring:Ring
+base-object:ring:коль|ец*о$N2D
 graphics:=:d
 info:70:2:150000
 alloc:2:70 to 127
@@ -285,7 +285,7 @@ desc:hidden by the Elves from Sauron.
 # The Ring of Power 'The One Ring'
 
 name:13:Всевластья
-base-object:ring:Ring of Power
+base-object:ring:коль|ец*о$N2D
 graphics:=:y
 info:100:2:5000000
 alloc:1:100 to 127
@@ -310,7 +310,7 @@ desc:being who wears it.
 # New Artifact (14): The Elfstone 'Elessar'
 
 name:14:'Элессар'
-base-object:amulet:Elfstone
+base-object:amulet:кам*ен*ь$N2E
 graphics:":g
 info:60:3:40000
 alloc:2:60 to 127
@@ -327,7 +327,7 @@ desc: its wearer brings healing after victory in battle.
 # New Artifact (15): The Jewel 'Evenstar'
 
 name:15:'Вечерняя Звезда'
-base-object:amulet:Jewel
+base-object:amulet:кам*ен*ь$N2E
 graphics:":w
 info:40:3:25000
 alloc:2:30 to 70
@@ -344,7 +344,7 @@ desc:return to the Shire.
 ### Dragon Scale Mails ###
 
 name:16:'Отвратитель Лезвий'
-base-object:dragon armour:Multi-Hued Dragon Scale Mail
+base-object:dragon armour:доспех$N2A Многоцветного Дракона
 info:90:200:400000
 alloc:11:90 to 127
 power:50:2d4:-4:0:25
@@ -359,7 +359,7 @@ desc:untamed Lightning as you put it on.
 
 
 name:17:'Крушитель Клинков'
-base-object:dragon armour:Power Dragon Scale Mail
+base-object:dragon armour:доспех$N2A Дракона Власти
 info:100:250:500000
 alloc:6:100 to 127
 power:80:2d4:-8:0:35
@@ -375,7 +375,7 @@ desc:and ethereal swirl around it in an inextricably intermingled nimbus.
 
 
 name:18:'Равновесие'
-base-object:dragon armour:Balance Dragon Scale Mail
+base-object:dragon armour:доспех$N2A Дракона Баланса
 info:95:250:400000
 alloc:8:95 to 127
 power:60:2d4:-4:0:25
@@ -390,7 +390,7 @@ desc:mightiest wyrms of Law and Chaos fear the judgement of its wearer.
 ### Heavy Armor ###
 
 name:19:'Хранитель Душ'
-base-object:hard armour:Adamantite Plate Mail
+base-object:hard armour:адамантитов$AMT доспех$N2A
 info:75:420:300000
 alloc:11:75 to 127
 power:90:2d4:-4:0:20
@@ -405,7 +405,7 @@ desc:nothing else can.
 
 
 name:20:Исилдура
-base-object:hard armour:Full Plate Armour
+base-object:hard armour:полн$AMT пластинчат$AMT доспех$N2A
 info:30:300:50000
 alloc:30:55 to 127
 power:75:2d4:0:0:25
@@ -417,7 +417,7 @@ desc:warding and stability deeply engraved into its surface.
 
 
 name:21:Рохиррим
-base-object:hard armour:Metal Brigandine Armour
+base-object:hard armour:бригандинов$AMT доспех$N2A
 info:30:200:30000
 alloc:30:45 to 100
 power:50:1d4:0:0:15
@@ -430,7 +430,7 @@ desc:the Young, matchless in combat, you feel his spirit surround you.
 
 
 name:22:'Белегеннон'
-base-object:hard armour:Mithril Chain Mail
+base-object:hard armour:мифрилов$AFT кольчуг$N1M
 info:40:150:105000
 alloc:30:55 to 127
 power:35:1d4:-1:0:20
@@ -444,7 +444,7 @@ desc:concealment rests within.
 
 
 name:23:Келеборна
-base-object:hard armour:Mithril Plate Mail
+base-object:hard armour:мифрилов$AMT доспех$N2A
 info:40:250:150000
 alloc:30:65 to 127
 power:65:2d4:-3:0:25
@@ -458,7 +458,7 @@ desc:its powers to protect and banish.
 
 
 name:24:Арведуи
-base-object:hard armour:Chain Mail
+base-object:hard armour:кольчуг$N1M
 info:20:220:32000
 alloc:30:20 to 75
 power:40:1d4:-2:0:15
@@ -470,7 +470,7 @@ desc:as you put it on.
 
 
 name:25:Каспаньона
-base-object:hard armour:Augmented Chain Mail
+base-object:hard armour:утолщенн$AFT кольчуг$N1M
 info:25:270:40000
 alloc:11:35 to 100
 power:45:1d4:-2:0:20
@@ -487,7 +487,7 @@ desc: wearer's path.
 ### Light Armor ###
 
 name:26:Химринга
-base-object:soft armour:Hard Leather Armour
+base-object:soft armour:плотн$AFT кожан$AFT брон$N1N
 info:50:100:35000
 alloc:20:25 to 90
 power:20:0d0:0:0:15
@@ -500,7 +500,7 @@ desc: Morgoth.
 
 
 name:27:'Хитломир'
-base-object:soft armour:Soft Leather Armour
+base-object:soft armour:мягк$AFM кожан$AFT брон$N1N
 info:20:80:45000
 alloc:20:20 to 80
 power:10:0d0:0:0:20
@@ -511,7 +511,7 @@ desc:truly more than it appears.
 
 
 name:28:'Талкенттот'
-base-object:soft armour:Leather Scale Mail
+base-object:soft armour:кожан$AMT панцир*ь$N2E
 info:20:60:25000
 alloc:20:30 to 100
 power:20:1d1:-1:0:25
@@ -525,7 +525,7 @@ desc:hardened leather.  Those who wear it move with agility and assurance.
 
 # should be Shield of Deflection
 name:29:Гил-Гэлада
-base-object:shield:Mithril Shield
+base-object:shield:Mithril щит$N2A
 info:70:80:65000
 alloc:25:70 to 127
 power:20:1d3:0:0:20
@@ -539,7 +539,7 @@ desc:gates of the Dark Tower, and with whom came light even to Gorgoroth.
 
 
 name:30:Торина
-base-object:shield:Small Metal Shield
+base-object:shield:маленьк$AMM железн$AMT щит$N2A
 info:40:65:60000
 alloc:14:40 to 127
 power:5:1d2:0:0:25
@@ -550,7 +550,7 @@ desc:this little metal shield is proof against the Element of Earth.
 
 
 name:31:Келегорма
-base-object:shield:Leather Shield
+base-object:shield:кожан$AMT щит$N2A
 info:30:60:12000
 alloc:28:30 to 100
 power:8:1d2:0:0:20
@@ -563,7 +563,7 @@ desc:containing the conflicts of the elements.
 
 
 name:32:Анариона
-base-object:shield:Large Metal Shield
+base-object:shield:больш$AMN железн$AMT щит$N2A
 info:40:120:160000
 alloc:11:40 to 100
 power:12:1d3:0:0:20
@@ -576,7 +576,7 @@ desc:even Sauron could not corrupt.
 ### Helmets and Crowns ###
 
 name:33:Селебримбэра
-base-object:helm:Metal Cap
+base-object:helm:железн$AFT шап|ок$N1M
 info:55:20:45000
 alloc:8:55 to 100
 power:3:1d1:0:0:18
@@ -588,7 +588,7 @@ desc:enchantment will never be diminished.
 
 
 name:34:Моргота
-base-object:crown:Massive Iron Crown
+base-object:crown:массивн$AFT железн$AFT корон$N1T
 info:100:400:10000000
 alloc:0:100 to 100
 power:0:1d1:0:0:0
@@ -604,7 +604,7 @@ desc:greatest treasures of Middle-Earth.
 
 
 name:35:Берутиэли
-base-object:crown:Iron Crown
+base-object:crown:железн$AFT корон$N1T
 info:40:20:1
 alloc:8:45 to 100
 power:0:1d1:0:0:20
@@ -616,7 +616,7 @@ desc:cost.
 
 
 name:36:Трандуила
-base-object:helm:Hard Leather Cap
+base-object:helm:кожан$AFT шап|ок$N1M
 info:50:15:50000
 alloc:14:40 to 100
 power:2:0d0:0:0:10
@@ -627,7 +627,7 @@ desc:his forest domain.
 
 
 name:37:Тенгела
-base-object:helm:Metal Cap
+base-object:helm:железн$AFT шап|ок$N1M
 info:10:20:22000
 alloc:18:10 to 100
 power:3:1d1:0:0:12
@@ -638,7 +638,7 @@ desc:engraved silver.  It grants the wearer nobility and understanding.
 
 
 name:38:Хельма
-base-object:helm:Steel Helm
+base-object:helm:стальн$AMU шлем$N2A
 info:20:60:45000
 alloc:11:40 to 127
 power:9:1d3:0:0:20
@@ -652,7 +652,7 @@ desc:knew of his coming, none could stand against him.
 
 
 name:39:Дор-Ломина
-base-object:helm:Iron Helm
+base-object:helm:железн$AMT шлем$N2A
 info:40:50:300000
 alloc:5:40 to 127
 power:7:1d3:0:0:20
@@ -667,7 +667,7 @@ desc:hearts of the servants of Morgoth.
 
 
 name:40:'Холхеннет'
-base-object:helm:Iron Helm
+base-object:helm:железн$AMT шлем$N2A
 info:20:50:100000
 alloc:18:20 to 100
 power:7:1d3:0:0:10
@@ -680,7 +680,7 @@ desc:awareness.
 
 
 name:41:Горлима
-base-object:helm:Iron Helm
+base-object:helm:железн$AMT шлем$N2A
 info:20:75:1
 alloc:18:20 to 75
 power:7:1d3:8:8:10
@@ -693,7 +693,7 @@ desc:needed succor.
 
 
 name:42:Гондора
-base-object:crown:Golden Crown
+base-object:crown:золот$AFT корон$N1T
 info:40:30:100000
 alloc:5:45 to 127
 power:0:1d1:0:0:15
@@ -708,7 +708,7 @@ desc:of Gondor through an age of the world.
 
 
 name:43:Нуменора
-base-object:crown:Jewel Encrusted Crown
+base-object:crown:драгоценн$AFT корон$N1T
 info:60:40:50000
 alloc:5:60 to 127
 power:0:1d1:0:0:18
@@ -724,7 +724,7 @@ desc:once worn by the kings of ancient Númenor.
 ### Cloaks and Shadow Cloaks ###
 
 name:44:'Коллуин'
-base-object:cloak:Cloak
+base-object:cloak:плащ$N2C
 info:5:10:50000
 alloc:2:5 to 100
 power:1:0d0:0:0:15
@@ -736,7 +736,7 @@ desc:of Elements.
 
 
 name:45:'Холколлет'
-base-object:cloak:Cloak
+base-object:cloak:плащ$N2C
 info:5:10:18000
 alloc:5:5 to 100
 power:1:0d0:0:0:4
@@ -749,7 +749,7 @@ desc:the Sindar.
 
 
 name:46:Тингола
-base-object:cloak:Cloak
+base-object:cloak:плащ$N2C
 info:5:10:35000
 alloc:5:5 to 100
 power:1:0d0:0:0:18
@@ -762,7 +762,7 @@ desc:showing calm and clear as moonlight on still water.
 
 
 name:47:Торонгиля
-base-object:cloak:Cloak
+base-object:cloak:плащ$N2C
 info:5:10:8000
 alloc:10:5 to 75
 power:1:0d0:0:0:10
@@ -774,7 +774,7 @@ desc:and sea.
 
 
 name:48:'Коланнон'
-base-object:cloak:Cloak
+base-object:cloak:плащ$N2C
 info:5:10:20000
 alloc:5:5 to 100
 power:1:0d0:0:0:15
@@ -786,7 +786,7 @@ desc:of Law.  Seldom will its wearer be diverted from his mission.
 
 
 name:49:Лучиэни
-base-object:cloak:Elven Cloak
+base-object:cloak:Elven плащ$N2C
 info:40:5:45000
 alloc:2:40 to 127
 power:6:0d0:0:0:20
@@ -801,7 +801,7 @@ desc:death.
 
 
 name:50:Туора
-base-object:cloak:Ethereal Cloak
+base-object:cloak:Ethereal плащ$N2C
 info:40:0:35000
 alloc:2:70 to 127
 power:6:0d0:0:0:12
@@ -815,7 +815,7 @@ desc:of hostile eyes.
 ### Gloves and Gauntlets ###
 
 name:51:Эола
-base-object:gloves:Set of Gauntlets
+base-object:gloves:пар$N1T железных перчаток
 info:55:25:40000
 alloc:3:55 to 127
 power:3:1d1:0:0:14
@@ -828,7 +828,7 @@ desc:with magics he could channel in battle.
 
 
 name:52:'Кембелег'
-base-object:gloves:Set of Leather Gloves
+base-object:gloves:пар$N1T кожаных перчаток
 info:10:5:36000
 alloc:3:10 to 100
 power:1:0d0:8:8:15
@@ -838,7 +838,7 @@ desc:A hero's handgear that lends great prowess in battle.
 
 
 name:53:'Кеммитрим'
-base-object:gloves:Set of Leather Gloves
+base-object:gloves:пар$N1T кожаных перчаток
 info:10:5:30000
 alloc:18:10 to 80
 power:1:0d0:5:5:10
@@ -851,7 +851,7 @@ desc:magical bolts with great frequency.
 
 
 name:54:'Пархах'
-base-object:gloves:Set of Gauntlets
+base-object:gloves:пар$N1T железных перчаток
 info:1:25:15000
 alloc:40:10 to 60
 power:3:1d1:0:0:14
@@ -863,7 +863,7 @@ desc:A set of gauntlets that smoulder with an unnatural heat.
 
 
 name:55:'Парниммен'
-base-object:gloves:Set of Gauntlets
+base-object:gloves:пар$N1T железных перчаток
 info:20:25:13000
 alloc:5:50 to 127
 power:3:1d1:0:0:14
@@ -875,7 +875,7 @@ desc:A set of handgear, freezing with unnatural cold.
 
 
 name:56:'Пареген'
-base-object:gloves:Set of Gauntlets
+base-object:gloves:пар$N1T железных перчаток
 info:1:25:11000
 alloc:23:10 to 75
 power:3:1d1:0:0:14
@@ -886,7 +886,7 @@ desc:A set of handgear with sparks that crackle across its knuckleguards.
 
 
 name:57:'Парнен'
-base-object:gloves:Set of Gauntlets
+base-object:gloves:пар$N1T железных перчаток
 info:1:25:12000
 alloc:30:10 to 60
 power:3:1d1:3:3:14
@@ -899,7 +899,7 @@ desc: untarnished.
 
 
 name:58:'Кемлост'
-base-object:gloves:Set of Gauntlets
+base-object:gloves:пар$N1T железных перчаток
 info:10:25:0
 alloc:5:10 to 100
 power:3:1d1:-12:-12:0
@@ -911,7 +911,7 @@ desc:having lost to Carcharoth the hand that clasped a Silmaril.
 
 
 name:59:Фингольфина
-base-object:gloves:Set of Caestus
+base-object:gloves:пар$N1T шипованных перчаток
 info:40:40:110000
 alloc:3:40 to 127
 power:5:1d1:10:10:20
@@ -927,7 +927,7 @@ desc:Morgoth seven mighty wounds and pain that will last until the end of Arda.
 ### Boots ###
 
 name:60:Феанора
-base-object:boots:Pair of Leather Boots
+base-object:boots:пар$N1T плотных кожаных башмаков
 info:40:20:300000
 alloc:1:40 to 127
 power:2:1d1:0:0:20
@@ -942,7 +942,7 @@ desc:no other."
 
 
 name:61:'Дал-и-талион'
-base-object:boots:Pair of Leather Boots
+base-object:boots:пар$N1T плотных кожаных башмаков
 info:10:20:40000
 alloc:4:50 to 100
 power:2:1d1:0:0:15
@@ -956,7 +956,7 @@ desc:against the powers of corruption and withering.
 
 
 name:62:Трора
-base-object:boots:Pair of Steel Shod Boots
+base-object:boots:пар$N1T Steel Shod Boots
 info:30:60:12000
 alloc:5:30 to 100
 power:7:1d1:0:0:20
@@ -967,7 +967,7 @@ desc:Dwarven king-in-exile who wore them.
 
 
 name:63:Гнилоуста
-base-object:boots:Pair of Leather Boots
+base-object:boots:пар$N1T плотных кожаных башмаков
 info:10:20:17000
 alloc:8:15 to 80
 power:2:1d1:-1:-1:0
@@ -985,7 +985,7 @@ desc:messenger, a servant, a spy... or a coward.
 ### Swords and Daggers ###
 
 name:64:Маэдроса
-base-object:sword:Main Gauche
+base-object:sword:длинн$AMT кинжал$N2A
 info:15:30:20000
 alloc:3:15 to 65
 power:0:2d5:12:15:0
@@ -997,7 +997,7 @@ desc:from Angband.
 
 
 name:65:'Ангрист'
-base-object:sword:Dagger
+base-object:sword:кинжал$N2A
 info:20:12:100000
 alloc:2:20 to 100
 power:0:2d4:10:15:5
@@ -1010,7 +1010,7 @@ desc: through ordinary metal as easily as its name, "Iron Cleaver", suggests.
 
 
 name:66:'Нартанк'
-base-object:sword:Dagger
+base-object:sword:кинжал$N2A
 info:1:12:12000
 alloc:40:1 to 50
 power:0:2d4:9:12:10
@@ -1021,7 +1021,7 @@ desc:Instead of a blade, a flame seems to emerge from this dagger's hilt.
 
 
 name:67:'Нимтанк'
-base-object:sword:Dagger
+base-object:sword:кинжал$N2A
 info:1:12:11000
 alloc:40:1 to 50
 power:0:2d4:9:12:10
@@ -1032,7 +1032,7 @@ desc:From the hilt of this dagger springs not so much a blade as an icicle.
 
 
 name:68:'Dethanc'
-base-object:sword:Dagger
+base-object:sword:кинжал$N2A
 info:1:12:13000
 alloc:40:1 to 50
 power:0:2d4:9:12:10
@@ -1043,7 +1043,7 @@ desc:In this dagger is bound the very force of lightning.
 
 
 name:69:Рильи
-base-object:sword:Dagger
+base-object:sword:кинжал$N2A
 info:5:12:15000
 alloc:5:5 to 75
 power:0:2d4:14:13:0
@@ -1055,7 +1055,7 @@ desc:wearer seems oddly immune.
 
 
 name:70:'Белангиль'
-base-object:sword:Dagger
+base-object:sword:кинжал$N2A
 info:10:12:40000
 alloc:2:10 to 80
 power:0:3d4:16:14:0
@@ -1068,7 +1068,7 @@ desc:an edge to wound the wind.
 
 
 name:71:'Калрис'
-base-object:sword:Bastard Sword
+base-object:sword:полуторн$AMT меч$N2C
 info:30:140:100000
 alloc:7:30 to 127
 power:0:5d4:-20:20:0
@@ -1082,7 +1082,7 @@ desc:peril.
 
 
 name:72:'Аранрут'
-base-object:sword:Broad Sword
+base-object:sword:широк$AMM меч$N2C
 info:20:150:50000
 alloc:2:20 to 100
 power:0:3d5:20:12:0
@@ -1096,7 +1096,7 @@ desc:lightfooted as you clasp its hilt of gold and silver inlay.
 
 
 name:73:'Глемдринг'
-base-object:sword:Broad Sword
+base-object:sword:широк$AMM меч$N2C
 info:20:150:40000
 alloc:5:20 to 80
 power:0:2d5:10:15:0
@@ -1108,7 +1108,7 @@ desc:from dying orcs who dared to behold hidden Gondolin.
 
 
 name:74:'Аэглин'
-base-object:sword:Broad Sword
+base-object:sword:широк$AMM меч$N2C
 info:20:150:45000
 alloc:3:20 to 100
 power:0:2d5:12:16:0
@@ -1121,7 +1121,7 @@ desc:eerily in the globes of light they create.
 
 
 name:75:'Оркрист'
-base-object:sword:Broad Sword
+base-object:sword:широк$AMM меч$N2C
 info:20:150:40000
 alloc:5:20 to 80
 power:0:2d5:10:15:0
@@ -1175,7 +1175,7 @@ desc:very lifeblood of its wielder.
 
 
 name:79:'Гондрикам'
-base-object:sword:Cutlass
+base-object:sword:резак$N2A
 info:20:110:28000
 alloc:12:20 to 65
 power:0:1d8:10:11:50
@@ -1188,7 +1188,7 @@ desc:men of Umbar who met it in combat.
 
 
 name:80:'Крисдуриан'
-base-object:sword:Executioner's Sword
+base-object:sword:меч$N2C палача
 info:40:260:100000
 alloc:4:40 to 127
 power:0:4d5:18:19:0
@@ -1201,7 +1201,7 @@ desc:both the living and undead.
 
 
 name:81:'Агларанг'
-base-object:sword:Katana
+base-object:sword:катан$N1T
 info:30:50:40000
 alloc:4:30 to 100
 power:0:6d5:10:10:0
@@ -1213,7 +1213,7 @@ desc:is combat incarnate.
 
 
 name:82:'Рингиль'
-base-object:sword:Long Sword
+base-object:sword:длинн$AMT меч$N2C
 info:20:130:300000
 alloc:1:20 to 127
 power:0:4d5:22:25:0
@@ -1229,7 +1229,7 @@ desc:of old; his lame foot will remind him of its might should he face it again.
 
 
 name:83:'Андрил'
-base-object:sword:Long Sword
+base-object:sword:длинн$AMT меч$N2C
 info:20:130:80000
 alloc:3:20 to 127
 power:0:3d5:10:15:10
@@ -1245,7 +1245,7 @@ desc:and no creature of Sauron can withstand it.
 
 
 name:84:'Ангуриэл'
-base-object:sword:Long Sword
+base-object:sword:длинн$AMT меч$N2C
 info:20:130:40000
 alloc:3:20 to 127
 power:0:2d5:10:12:0
@@ -1257,7 +1257,7 @@ desc:other blade he forged.
 
 
 name:85:'Эльвагиль'
-base-object:sword:Long Sword
+base-object:sword:длинн$AMT меч$N2C
 info:1:130:30000
 alloc:50:10 to 50
 power:0:2d5:12:12:0
@@ -1268,7 +1268,7 @@ desc:and secret places of the earth.
 
 
 name:86:'Форасгиль'
-base-object:sword:Rapier
+base-object:sword:рапир$N1T
 info:1:40:15000
 alloc:38:5 to 50
 power:0:1d6:12:19:0
@@ -1277,7 +1277,7 @@ desc:A slender, tapered needle of ice that coldly grips its impaled prey.
 
 
 name:87:'Карет Асдриаг'
-base-object:sword:Rapier
+base-object:sword:рапир$N1T
 info:15:40:25000
 alloc:10:15 to 80
 power:0:2d6:16:12:0
@@ -1288,7 +1288,7 @@ desc:of dismay to creatures natural and unnatural.
 
 
 name:88:'Жало'
-base-object:sword:Short Sword
+base-object:sword:коротк$AMM меч$N2C
 info:20:75:100000
 alloc:6:20 to 100
 power:0:1d7:7:8:0
@@ -1302,7 +1302,7 @@ desc:abilities he did not know he had.
 
 
 name:89:'Харадеккет'
-base-object:sword:Scimitar
+base-object:sword:ятаган$N2A
 info:20:130:30000
 alloc:7:20 to 80
 power:0:4d2:9:11:0
@@ -1313,7 +1313,7 @@ desc:as the "Sickle of Harad", and a deadly foe to the undead.
 
 
 name:90:'Гилеттар'
-base-object:sword:Short Sword
+base-object:sword:коротк$AMM меч$N2C
 info:20:80:15000
 alloc:12:20 to 80
 power:0:1d7:13:11:0
@@ -1324,7 +1324,7 @@ desc:Brethil.
 
 
 name:91:'Зов Судьбы'
-base-object:sword:Blade of Chaos
+base-object:sword:клин*ок$N2A Хаоса
 info:70:180:200000
 alloc:4:70 to 127
 power:0:6d5:18:28:-50
@@ -1341,7 +1341,7 @@ desc:shadow of death even as you inflict wounds that will not heal.
 ### Polearms ###
 
 name:92:Мелькора
-base-object:polearm:Spear
+base-object:polearm:копь|и|й*е$N2D
 info:65:200:100000
 alloc:2:65 to 127
 power:0:4d6:-12:20:0 
@@ -1356,7 +1356,7 @@ desc:the Two Trees with wounds that would not heal.
 
 
 name:93:Теодена
-base-object:polearm:Beaked Axe
+base-object:polearm:шипаст$AFT секир$N1T
 info:20:180:40000
 alloc:7:20 to 100
 power:0:2d6:8:10:0
@@ -1369,7 +1369,7 @@ desc:Dragon, and the designs of your enemies stand naked and revealed.
 
 
 name:94:Боли
-base-object:polearm:Glaive
+base-object:polearm:крив$AFT секир$N1T
 info:30:300:50000
 alloc:4:30 to 127
 power:0:9d6:0:30:0
@@ -1379,7 +1379,7 @@ desc:down.
 
 
 name:95:'Озондир'
-base-object:polearm:Halberd
+base-object:polearm:алебард$N1T
 info:20:140:22000
 alloc:12:25 to 80
 power:0:3d5:16:12:0
@@ -1391,7 +1391,7 @@ desc:clear-eyed in barrows fell, wielding a halberd glowing ruby red.
 
 
 name:96:'Тил-и-арк'
-base-object:polearm:Pike
+base-object:polearm:пик$N1M
 info:20:160:32000
 alloc:7:20 to 80
 power:0:3d5:10:12:10
@@ -1403,7 +1403,7 @@ desc:fire demons, who war forever, fettered by sorcerous binds.
 
 
 name:97:'Айглос'
-base-object:polearm:Spear
+base-object:polearm:копь|и|й*е$N2D
 info:15:50:140000
 alloc:2:15 to 100
 power:0:3d6:15:25:5
@@ -1417,7 +1417,7 @@ desc:  Against it, all the foul corruptions of Sauron dashed in vain.
 
 
 name:98:Ороме
-base-object:polearm:Spear
+base-object:polearm:копь|и|й*е$N2D
 info:15:50:60000
 alloc:2:15 to 127
 power:0:4d6:15:15:0
@@ -1432,7 +1432,7 @@ desc:frost, and able to pierce rock or flesh with ease.
 
 
 name:99:'Нимлот'
-base-object:polearm:Spear
+base-object:polearm:копь|и|й*е$N2D
 info:15:50:30000
 alloc:8:15 to 65
 power:0:1d6:11:13:0
@@ -1445,7 +1445,7 @@ desc:spear.
 
 
 name:100:Эорлингов
-base-object:polearm:Lance
+base-object:polearm:тяжел$ANT копь|и|й*е$N2D
 info:20:360:55000
 alloc:4:20 to 100
 power:0:3d8:13:21:0
@@ -1457,7 +1457,7 @@ desc:and dire wolves.
 
 
 name:101:Дарина
-base-object:polearm:Great Axe
+base-object:polearm:длинн$AFT секир$N1T
 info:30:230:150000
 alloc:1:40 to 127
 power:0:4d4:10:20:15
@@ -1471,7 +1471,7 @@ desc:Khazad-dûm protect its wielder and slay all evils found underground.
 
 
 name:102:Эонве
-base-object:polearm:Great Axe
+base-object:polearm:длинн$AFT секир$N1T
 info:30:230:200000
 alloc:1:40 to 127
 power:0:5d4:15:18:8
@@ -1486,7 +1486,7 @@ desc:evil at a word, and grants Maia-like powers of body and mind.
 
 
 name:103:Балли Каменной Руки
-base-object:polearm:Battle Axe
+base-object:polearm:боев$AMU топор$N2A
 info:30:170:90000
 alloc:7:30 to 100
 power:0:3d8:8:11:5
@@ -1499,7 +1499,7 @@ desc:more.
 
 
 name:104:'Лотаранг'
-base-object:polearm:Battle Axe
+base-object:polearm:боев$AMU топор$N2A
 info:30:170:21000
 alloc:7:30 to 100
 power:0:2d8:14:13:0
@@ -1511,7 +1511,7 @@ desc:of the Rangers of Arnor.
 
 
 name:105:'Мэндвайн'
-base-object:polearm:Lochaber Axe
+base-object:polearm:тяжел$AFT секир$N1T
 info:30:240:30000
 alloc:12:30 to 100
 power:0:3d8:12:17:0
@@ -1523,7 +1523,7 @@ desc:intricately engraved upon its surface in filleted gold.
 
 
 name:106:'Баруккелед'
-base-object:polearm:Broad Axe
+base-object:polearm:широк$AFM секир$N1T
 info:20:160:50000
 alloc:12:20 to 75
 power:0:2d6:13:19:0
@@ -1534,7 +1534,7 @@ desc:creatures of earth.
 
 
 name:107:Ярости
-base-object:polearm:Trident
+base-object:polearm:трезуб*ец$N2B
 info:15:70:90000
 alloc:3:15 to 100
 power:0:3d10:16:18:0 
@@ -1547,7 +1547,7 @@ desc:evil and undead.
 
 
 name:108:Ульмо
-base-object:polearm:Trident
+base-object:polearm:трезуб*ец$N2B
 info:30:70:120000
 alloc:1:30 to 127
 power:0:4d10:15:19:0
@@ -1563,7 +1563,7 @@ desc:of the undead, and is utterly in command of the Element of water.
 
 
 name:109:'Ававир'
-base-object:polearm:Scythe
+base-object:polearm:кос$N1T
 info:40:180:18000
 alloc:12:45 to 100
 power:0:5d3:18:12:30
@@ -1578,7 +1578,7 @@ desc:returning.
 
 
 name:110:Хурина
-base-object:polearm:Beaked Axe
+base-object:polearm:шипаст$AFT секир$N1T
 info:20:180:90000
 alloc:7:20 to 100
 power:0:3d6:12:15:0
@@ -1598,7 +1598,7 @@ desc:come again!"
 ### Blunt Weapons ###
 
 name:111:'Гронд'
-base-object:hafted:Mighty Hammer
+base-object:hafted:массивн$AMT молот$N2A
 info:100:1000:500000
 alloc:0:100 to 100
 power:0:9d9:5:25:10
@@ -1610,7 +1610,7 @@ desc:  Its wielder holds the lives of all Morgoth's servants in his hand.
 
 
 name:112:'Тотила'
-base-object:hafted:Flail
+base-object:hafted:цеп$N2A-многохвост|ок$N1T
 info:20:150:55000
 alloc:12:20 to 65
 power:0:3d6:16:12:0
@@ -1623,7 +1623,7 @@ desc:becomes a fiery comet as you bring it down.
 
 
 name:113:'Громовой Кулак'
-base-object:hafted:Two-Handed Great Flail
+base-object:hafted:двуручн$AMT цеп$N2A-многохвост|ок$N1T
 info:45:300:160000
 alloc:3:45 to 127
 power:0:4d6:5:18:0
@@ -1636,7 +1636,7 @@ desc:crackle around its massive head.
 
 
 name:114:'Кровавый Шип'
-base-object:hafted:Morning Star
+base-object:hafted:моргенштерн$N2A
 info:20:150:30000
 alloc:3:20 to 75
 power:0:2d6:8:22:0
@@ -1648,7 +1648,7 @@ desc:bathe it in the blood of your foes.
 
 
 name:115:'Огненная Звезда'
-base-object:hafted:Morning Star
+base-object:hafted:моргенштерн$N2A
 info:20:150:35000
 alloc:7:20 to 100
 power:0:2d6:15:17:2
@@ -1660,7 +1660,7 @@ desc: up in wrath.
 
 
 name:116:'Таратол'
-base-object:hafted:Mace
+base-object:hafted:булав$N1T
 info:20:200:50000
 alloc:7:20 to 100
 power:0:3d4:12:12:0
@@ -1673,7 +1673,7 @@ desc:fingers and eyebrows.
 
 
 name:117:Ауле
-base-object:hafted:Great Hammer
+base-object:hafted:Great молот$N2A
 info:40:120:250000
 alloc:1:40 to 127
 power:0:18d1:19:21:5
@@ -1688,7 +1688,7 @@ desc:invokes the strength of mountains to ward off the tumult of the elements.
 
 
 name:118:'Нар-и-вагиль'
-base-object:hafted:Quarterstaff
+base-object:hafted:дорожн$AMT посох
 info:20:150:70000
 alloc:5:20 to 80
 power:0:1d9:10:20:0
@@ -1698,7 +1698,7 @@ desc:auras of protection and thought.
 
 
 name:119:'Эририль'
-base-object:hafted:Quarterstaff
+base-object:hafted:дорожн$AMT посох
 info:20:150:20000
 alloc:5:20 to 100
 power:0:1d9:13:15:0
@@ -1711,7 +1711,7 @@ desc:grants keen sight and clear knowledge of many hidden things.
 
 
 name:120:Олорина
-base-object:hafted:Quarterstaff
+base-object:hafted:дорожн$AMT посох
 info:30:150:130000
 alloc:1:30 to 100
 power:0:2d9:10:13:0
@@ -1727,7 +1727,7 @@ desc:deals.
 
 
 name:121:'Сеятель Смерти'
-base-object:hafted:Mace of Disruption
+base-object:hafted:всесокрушающ$AFM булав$N1T
 info:80:400:400000
 alloc:3:80 to 127
 power:0:7d8:18:18:0
@@ -1744,7 +1744,7 @@ desc:of the Undead!
 
 
 name:122:'Турмиль'
-base-object:polearm:Lucerne Hammer
+base-object:polearm:люцернск$AMM молот$N2A
 info:20:120:30000
 alloc:7:20 to 100
 power:0:2d5:10:11:8
@@ -1759,7 +1759,7 @@ desc: physical blows.
 
 
 name:123:Госмога
-base-object:hafted:Whip
+base-object:hafted:кнут$N2A
 info:60:90:25000
 alloc:4:60 to 127
 power:0:6d3:13:15:0
@@ -1777,7 +1777,7 @@ desc:even Ungoliant to heel.
 ### Missile Weapons ###
 
 name:124:'Бельтрондинг'
-base-object:bow:Long Bow
+base-object:bow:длинн$AMT лук$N2A
 info:40:40:35000
 alloc:5:40 to 127
 power:0:0d0:20:22:0
@@ -1788,7 +1788,7 @@ desc:Beleg himself could draw them.
 
 
 name:125:Барда
-base-object:bow:Long Bow
+base-object:bow:длинн$AMT лук$N2A
 info:30:40:20000
 alloc:5:40 to 127
 power:0:0d0:17:19:0
@@ -1799,7 +1799,7 @@ desc:songs record.
 
 
 name:126:'Кубрагол'
-base-object:bow:Light Crossbow
+base-object:bow:легк$AMM арбалет$N2A
 info:50:110:50000
 alloc:4:50 to 127
 power:0:0d0:10:14:0
@@ -1809,7 +1809,7 @@ desc:shoot bolts that blaze with flame unquenchable.
 
 
 name:127:Умбара
-base-object:bow:Heavy Crossbow
+base-object:bow:тяжел$AMT арбалет$N2A
 info:60:200:35000
 alloc:5:60 to 127
 power:0:4d1:18:18:0
@@ -1822,7 +1822,7 @@ desc:with mighty power for those brave enough to risk betrayal.
 
 
 name:128:Амрода
-base-object:bow:Short Bow
+base-object:bow:коротк$AMM лук$N2A
 info:25:30:9000
 alloc:10:30 to 100
 power:0:0d0:12:15:0
@@ -1833,7 +1833,7 @@ desc:sons.  The bows are like and yet unlike, much as the twin brothers were.
 
 
 name:129:Амраса
-base-object:bow:Short Bow
+base-object:bow:коротк$AMM лук$N2A
 info:25:30:9000
 alloc:10:30 to 80
 power:0:0d0:12:15:0
@@ -1847,7 +1847,7 @@ desc:sons.  The bows are like and yet unlike, much as the twin brothers were.
 ### Digging Tools ###
 
 name:130:Нейна
-base-object:digger:Mattock
+base-object:digger:заступ$N2A
 info:60:240:30000
 alloc:12:60 to 100
 power:0:2d8:12:18:0
@@ -1862,7 +1862,7 @@ desc:although Náin himself fell before their lord Azog.
 
 
 name:131:Эребора
-base-object:digger:Pick
+base-object:digger:кирк$N1M
 info:55:180:30000
 alloc:20:55 to 100
 power:0:4d3:5:20:0
@@ -1876,7 +1876,7 @@ desc:should the wielder ever tunnel through into a foe's stronghold.
 ### Miscellaneous new stuff ###
 
 name:132:Фандина Синего Плаща
-base-object:hafted:Ball-and-Chain
+base-object:hafted:цеп$N2A
 info:65:130:60000
 alloc:2:65 to 127
 power:0:4d4:13:17:10
@@ -1890,7 +1890,7 @@ desc:haunt the halls of Angband still.
 
 
 name:133:Азагала
-base-object:sword:Main Gauche
+base-object:sword:длинн$AMT кинжал$N2A
 info:18:30:50000
 alloc:3:18 to 100
 power:0:2d5:12:14:0
@@ -1904,7 +1904,7 @@ desc:wounded.
 
 
 name:134:Харадрима
-base-object:shield:Leather Shield
+base-object:shield:кожан$AMT щит$N2A
 info:35:90:25000
 alloc:10:35 to 127
 power:9:1d2:5:5:15
@@ -1918,7 +1918,7 @@ desc:also draw attention to himself.
 
 
 name:135:of Elros
-base-object:shield:Wicker Shield
+base-object:shield:Wicker щит$N2A
 info:40:30:60000
 alloc:10:50 to 127
 power:2:1d1:0:0:20
@@ -1929,7 +1929,7 @@ desc: life by the Valar, even his shield became imbued with power.
 
 
 name:136:Эовин
-base-object:sword:Bastard Sword
+base-object:sword:полуторн$AMT меч$N2C
 info:30:140:120000
 alloc:3:30 to 127
 power:0:4d4:12:16:0
@@ -1942,7 +1942,7 @@ desc:himself, whom no mortal man could hinder.
 
 
 name:137:of Radagast
-base-object:boots:Pair of Leather Boots
+base-object:boots:пар$N1T плотных кожаных башмаков
 info:10:20:7000
 alloc:8:15 to 70
 power:2:1d1:0:0:12
@@ -1953,7 +1953,7 @@ desc: boots possess the magic of Radagast, friend of birds and nature.
 
 
 name:138:'Stormwalker'
-base-object:boots:Pair of Mithril Shod Boots
+base-object:boots:пар$N1T Mithril Shod Boots
 info:30:40:40000
 alloc:3:60 to 127
 power:8:1d1:0:0:24

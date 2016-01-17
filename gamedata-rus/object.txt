@@ -3771,56 +3771,56 @@ time:100
 
 ##### Basic Books #####
 
-name:460:[Magic for Beginners]
+name:460:[Магия для начинающего]
 graphics:?:R
 type:magic book
 properties:1:30:25
 alloc:40:1 to 100
 combat:0:1d1:0:0:0
 
-name:461:[Conjurings and Tricks]
+name:461:[Волшебные трюки]
 graphics:?:R
 type:magic book
 properties:5:30:100
 alloc:40:5 to 100
 combat:0:1d1:0:0:0
 
-name:462:[Incantations and Illusions]
+name:462:[Заклинания и иллюзии]
 graphics:?:R
 type:magic book
 properties:10:30:400
 alloc:40:10 to 100
 combat:0:1d1:0:0:0
 
-name:463:[Sorcery and Evocations]
+name:463:[Секреты колдовства]
 graphics:?:R
 type:magic book
 properties:20:30:800
 alloc:40:20 to 100
 combat:0:1d1:0:0:0
 
-name:464:[Beginners Handbook]
+name:464:[Книга для начинающих]
 graphics:?:G
 type:prayer book
 properties:1:30:25
 alloc:40:1 to 100
 combat:0:1d1:0:0:0
 
-name:465:[Words of Wisdom]
+name:465:[Слова Мудрости]
 graphics:?:G
 type:prayer book
 properties:5:30:100
 alloc:40:5 to 100
 combat:0:1d1:0:0:0
 
-name:466:[Chants and Blessings]
+name:466:[Пения и благословления]
 graphics:?:G
 type:prayer book
 properties:10:30:400
 alloc:40:10 to 100
 combat:0:1d1:0:0:0
 
-name:467:[Exorcism and Dispelling]
+name:467:[Святые экзорцизмы]
 graphics:?:G
 type:prayer book
 properties:40:30:800
@@ -3831,7 +3831,7 @@ combat:0:1d1:0:0:0
 
 ##### Special Books (note resistances) #####
 
-name:468:[Resistances of Scarabtarices]
+name:468:[Сопротивления Скарабтарисов]
 graphics:?:r
 type:magic book
 properties:40:30:10000
@@ -3839,7 +3839,7 @@ alloc:15:40 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:469:[Raal's Tome of Destruction]
+name:469:[Том Разрушений Рааля]
 graphics:?:r
 type:magic book
 properties:50:30:20000
@@ -3847,7 +3847,7 @@ alloc:15:50 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:470:[Mordenkainen's Escapes]
+name:470:[Выходы Морденкайнена]
 graphics:?:r
 type:magic book
 properties:60:30:30000
@@ -3855,7 +3855,7 @@ alloc:15:60 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:471:[Tenser's Transformations]
+name:471:[Трансформации Тензера]
 graphics:?:r
 type:magic book
 properties:70:30:50000
@@ -3863,7 +3863,7 @@ alloc:15:70 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:472:[Kelek's Grimoire of Power]
+name:472:[Книга Власти Келека]
 graphics:?:r
 type:magic book
 properties:80:30:90000
@@ -3871,7 +3871,7 @@ alloc:10:90 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:473:[Ethereal Openings]
+name:473:[Эфирные Выходы]
 graphics:?:g
 type:prayer book
 properties:40:30:10000
@@ -3879,7 +3879,7 @@ alloc:15:40 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:474:[Godly Insights]
+name:474:[Божественные Знания]
 graphics:?:g
 type:prayer book
 properties:50:30:20000
@@ -3887,7 +3887,7 @@ alloc:15:50 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:475:[Purifications and Healing]
+name:475:[Очищения и Исцеления]
 graphics:?:g
 type:prayer book
 properties:60:30:30000
@@ -3895,7 +3895,7 @@ alloc:15:60 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:476:[Holy Infusions]
+name:476:[Священные Чары]
 graphics:?:g
 type:prayer book
 properties:70:30:50000
@@ -3903,7 +3903,7 @@ alloc:15:70 to 100
 combat:0:1d1:0:0:0
 flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | GOOD
 
-name:477:[Wrath of God]
+name:477:[Ярость Бога]
 graphics:?:g
 type:prayer book
 properties:80:30:90000

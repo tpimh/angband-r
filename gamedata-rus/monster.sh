@@ -66,6 +66,33 @@ while read in; do
     fi
 done < $PATCHNAME
 
+# monster drop and mimic parts
+FILENAME=monster.txt
+PATCHNAME=object.tsv
+while read in; do
+    ID=`echo "$in" | awk -F'\t' '{print $2}' | sed -e 's/\\x60/\\x27/g' -e 's/\\x27\\x27/\\x22/g' -e 's/~//g' -e 's/& //g' -e 's@/@\\\/@g' -e 's/\[/\\\[/g' -e 's/\]/\\\]/g'`
+    if [ "$ID" != "Name" ]; then
+        NAME_B=`echo "$in" | awk -F'\t' '{print $3}' | sed -e 's/\\x60/\\x27/g' -e 's/\\x27\\x27/\\x22/g'  -e 's@/@\\\/@g' -e 's/\[/\\\[/g' -e 's/\]/\\\]/g'`
+
+        NAME_ORIG=`sed -n 's/^\(drop\|mimic\):.*:'"$ID"':*.*$/'"$ID"'/p' $FILENAME | head -n1 | sed 's@/@\\\/@g'`
+
+        if [ "$NAME_ORIG" = "" ]; then
+            # be silent if monster was not found
+            echo -n
+        else
+            if [ "$ID" = "$NAME_B" ]; then
+                echo "(warning) '$ID' object name not translated"
+            else
+                # replace the artifact
+                sed -i 's/^\(drop\|mimic\):\(.*\):'"$ID"'\(:*\)\(.*\)$/\1:\2:'"$NAME_B"'\3\4/' $FILENAME
+            fi
+        fi
+    fi
+done < $PATCHNAME
+
+# remove plurals
+sed -i '/^plural:/ d' $FILENAME
+
 
 echo "Translation status of $FILENAME:"
 
@@ -74,10 +101,29 @@ NOTRANS=`comm -12 <(grep -e '^name:' $FILENAME | sort) <(grep -e '^name:' $FILEN
 TRANS=`expr $LINESTOTAL - $NOTRANS`
 
 echo "name: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
-echo "desc: 0%"
+
+LINESTOTAL=`grep -e '^friends:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^friends:' $FILENAME | sort) <(grep -e '^friends:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "friends: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
 
 LINESTOTAL=`grep -e '^drop-artifact:' $FILENAME | wc -l`
 NOTRANS=`comm -12 <(grep -e '^drop-artifact:' $FILENAME | sort) <(grep -e '^drop-artifact:' $FILENAME.orig | sort) | wc -l`
 TRANS=`expr $LINESTOTAL - $NOTRANS`
 
 echo "drop-artifact: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
+
+LINESTOTAL=`grep -e '^drop:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^drop:' $FILENAME | sort) <(grep -e '^drop:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "drop: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
+
+LINESTOTAL=`grep -e '^mimic:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^mimic:' $FILENAME | sort) <(grep -e '^mimic:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "mimic: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
+
+echo "desc: 0%"
