@@ -1,0 +1,127 @@
+# File: pain.txt
+
+
+# This file is used to initialize the monster pain messages for Angband.
+
+# === Understanding pain.txt ===
+
+# type: serial number
+# message: message
+# message: message
+# etc.
+
+# 'type' indicates the beginning of an entry. The serial number must
+# increase for each new item.
+
+# 'message' is for the pain message. Each entry must have 7 messages --
+# each one corresponds to a range of health, with higher messages 
+# being displayed when a monster is damaged only a little, and lower
+# messages being displayed when a monster is near death.
+
+type:1
+message:не замечает атаки.
+message:пыхтит от боли.
+message:кричит от боли.
+message:вопит от боли.
+message:вопит в агонии.
+message:бьется в агонии.
+message:слабо кричит.
+
+type:2
+message:не замечает атаки.
+message:дергается.
+message:пульсирует.
+message:извивается от боли.
+message:бьется в конвульсиях.
+message:бьется в агонии.
+message:слабо дергается.
+
+type:3
+message:не замечает атаки.
+message:рычит от боли.
+message:лает от боли.
+message:воет от боли.
+message:воет в агонии.
+message:бьется в агонии.
+message:слабо скулит.
+
+type:4
+message:игнорирует атаку.
+message:пыхтит от боли.
+message:шипит от боли.
+message:вопит от боли.
+message:вопит в агонии.
+message:бьется в агонии.
+message:слабо кричит.
+
+type:5
+message:не замечает атаки.
+message:hiss[es].
+message:rear[s] up in anger.
+message:hiss[es] furiously.
+message:бьется в конвульсиях.
+message:бьется в агонии.
+message:слабо дергается.
+
+type:6
+message:не замечает атаки.
+message:рычит.
+message:growl[s] angrily.
+message:hiss[es] от боли.
+message:mewl[s] от боли.
+message:hiss[es] в агонии.
+message:mewl[s] pitifully.
+
+type:7
+message:игнорирует атаку.
+message:drone[s] angrily.
+message:scuttle[s] about.
+message:twitch[es] от боли.
+message:дергается от боли.
+message:дергается в агонии.
+message:немного подергивается.
+
+type:8
+message:не замечает атаки.
+message:flap[s] angrily.
+message:jeer[s] от боли.
+message:squawk[s] от боли.
+message:twitter[s] в агонии.
+message:flutter[s] about.
+message:chirp[s] feebly.
+
+type:9
+message:игнорирует атаку.
+message:дергается.
+message:rattle[s].
+message:clatter[s].
+message:shake[s].
+message:stagger[s].
+message:crumple[s].
+
+type:10
+message:игнорирует атаку.
+message:пыхтит.
+message:дергается.
+message:moan[s].
+message:groan[s].
+message:hesitate[s].
+message:stagger[s].
+
+type:11
+message:игнорирует атаку.
+message:spin[s] fiercely.
+message:swirl[s] about.
+message:twist[s] around.
+message:spin[s] slowly.
+message:swirl[s] weakly.
+message:twist[s] limply.
+
+type:12
+message:laugh[s] off the attack.
+message:sneer[s].
+message:scowl[s].
+message:bellow[s] in rage.
+message:вопит in fury.
+message:пыхтит.
+message:wince[s].
