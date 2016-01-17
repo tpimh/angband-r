@@ -30,11 +30,13 @@ while read in; do
                 sed -i 's/^friends:\(.*\):\(.*\):'"$NAME_ORIG"'$/friends:\1:\2:'"$NAME_B"'/i' $FILENAME
             fi
 
-            if [ "$DESC_A" = "$DESC_B" ]; then
-                echo "(warning) ID:$ID description not translated"
-            else
-                #TODO: replace the description
-                echo -n
+            if [ "$DESC_A" != "" ]; then
+                if [ "$DESC_A" = "$DESC_B" ]; then
+                    echo "(warning) ID:$ID description not translated"
+                else
+                    #TODO: replace the description
+                    echo -n
+                fi
             fi
         fi
     fi

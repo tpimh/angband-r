@@ -28,11 +28,13 @@ while read in; do
                 sed -i 's/^name:'"$ID"':'"$NAME_ORIG"'$/name:'"$ID"':'"$NAME_B"'/' $FILENAME
             fi
 
-            if [ "$DESC_A" = "$DESC_B" ]; then
-                echo "(warning) ID:$ID description not translated"
-            else
-                #TODO: replace the description
-                echo -n
+            if [ "$DESC_A" != "" ]; then
+                if [ "$DESC_A" = "$DESC_B" ]; then
+                    echo "(warning) ID:$ID description not translated"
+                else
+                    #TODO: replace the description
+                    echo -n
+                fi
             fi
         fi
     fi
