@@ -167,7 +167,7 @@ magic:1:300:1:9
 
 book:magic book:[Magic for Beginners]:6:1
 
-spell:Magic Missile:1:1:22:4
+spell:Волшебная Стрела:1:1:22:4
 effect:BOLT_OR_BEAM:MISSILE:-10
 dice:$Dd4
 expr:D:PLAYER_LEVEL:- 1 / 5 + 3
@@ -177,18 +177,18 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Detect Monsters:1:1:23:4
+spell:Поиск Монстров:1:1:23:4
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all non-invisible monsters in the immediate area,
 desc: for one turn only.
 
-spell:Phase Door:1:2:24:4
+spell:Фазовая Дверь:1:2:24:4
 effect:TELEPORT
 dice:10
 desc:Teleports you randomly up to 10 squares away.
 
-spell:Light Area:1:2:26:4
+spell:Освещение:1:2:26:4
 effect:LIGHT_AREA
 param:1:10
 dice:2d$S
@@ -197,7 +197,7 @@ desc:Lights up all squares in a level-dependant area, and hurts
 desc: all light-sensitive monsters in the area of effect.
 desc:  If you are in a room, the entire room will be lit up as well.
 
-spell:Find Traps, Doors & Stairs:3:3:25:2
+spell:Поиск Ловушек, Дверей и Лестниц:3:3:25:2
 effect:DETECT_TRAPS
 dice:22d40
 effect:DETECT_DOORS
@@ -206,7 +206,7 @@ effect:DETECT_STAIRS
 dice:22d40
 desc:Detects all traps, doors, and stairs in the immediate area.
 
-spell:Stinking Cloud:3:2:27:3
+spell:Вонючее Облако:3:2:27:3
 effect:BALL:POIS:2
 dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 10
@@ -214,47 +214,47 @@ desc:Shoots a radius-2 poison ball.
 
 book:magic book:[Conjurings and Tricks]:9:1
 
-spell:Confuse Monster:5:4:30:4
+spell:Контузия Монстра:5:4:30:4
 effect:BOLT_AWARE:OLD_CONF
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to confuse a single monster for a level-dependant duration.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-spell:Lightning Bolt:5:4:30:4
+spell:Удар Молнии:5:4:30:4
 effect:BEAM:ELEC
 dice:$Dd6
 expr:D:PLAYER_LEVEL:- 5 / 6 + 3
 desc:Fires a lightning beam that hurts each monster in its path.
 
-spell:Trap/Door Destruction:5:5:30:6
+spell:Разрушение Ловушки/Двери:5:5:30:6
 effect:TOUCH:KILL_DOOR
 desc:Destroys all traps and doors within a 1-square radius of you.
 
-spell:Cure Poison:5:5:35:4
+spell:Лечение Яда:5:5:35:4
 effect:CURE:POISONED
 desc:Neutralizes poison.
 
-spell:Sleep Monster:7:5:30:4
+spell:Усыпление Монстра:7:5:30:4
 effect:BOLT_AWARE:OLD_SLEEP
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to put to sleep a single monster.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-spell:Teleport Self:7:6:35:5
+spell:Телепортация:7:6:35:5
 effect:TELEPORT
 dice:$B
 expr:B:PLAYER_LEVEL:* 5
 desc:Teleports you randomly within the current level.
 
-spell:Spear of Light:7:6:30:5
+spell:Копье Света:7:6:30:5
 effect:LINE:LIGHT_WEAK
 dice:6d8
 desc:Fires a beam that lights up each square and hurts each
 desc: light-sensitive monster in its path.
 
-spell:Frost Bolt:7:3:40:6
+spell:Ледяная Стрела:7:3:40:6
 effect:BOLT_OR_BEAM:COLD:-10
 dice:$Dd8
 expr:D:PLAYER_LEVEL:- 5 / 4 + 5
@@ -263,7 +263,7 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Wonder:7:10:50:5
+spell:Чудо:7:10:50:5
 effect:WONDER
 dice:$B+1d100
 expr:B:PLAYER_LEVEL:/ 5
@@ -271,13 +271,13 @@ desc:Invokes a random spell effect.
 
 book:magic book:[Incantations and Illusions]:9:1
 
-spell:Satisfy Hunger:9:7:45:8
+spell:Удовлетворение Голода:9:7:45:8
 effect:SET_NOURISH
 dice:16999
 desc:Magically renders you well-fed (but not satiated).
 desc:  This will also cure a bloated stomach.
 
-spell:Lesser Recharging:9:7:75:10
+spell:Малая Перезарядка:9:7:75:10
 effect:RECHARGE
 dice:$B
 expr:B:PLAYER_LEVEL:/ 5 + 2
@@ -286,14 +286,14 @@ desc:  Chance of success and number of charges gained increase with your
 desc: level and decrease with level of wand or staff and number of charges.
 desc:  A failed attempt to recharge destroys one wand or staff from the stack.
 
-spell:Turn Stone to Mud:9:7:44:8
+spell:Плавка Камня:9:7:44:8
 effect:LINE:KILL_WALL
 dice:20+1d30
 desc:Produces a beam that destroys the first section of wall it hits,
 desc: unless it is a permanent wall.  Each monster caught in the beam that
 desc: is susceptible to rock remover takes 20+1d30 points of damage.
 
-spell:Fire Bolt:10:3:50:7
+spell:Огненная Стрела:10:3:50:7
 effect:BOLT_OR_BEAM:FIRE
 dice:$Dd8
 expr:D:PLAYER_LEVEL:- 5 / 4 + 6
@@ -302,25 +302,25 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Polymorph Other:11:7:45:9
+spell:Трансформация:11:7:45:9
 effect:BOLT_STATUS:OLD_POLY
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to polymorph a single monster.
 desc:  Uniques are not affected.
 
-spell:Identify:11:7:25:6
+spell:Идентификация:11:7:25:6
 effect:IDENTIFY
 desc:Reveals the powers of an object.
 
-spell:Reveal Monsters:15:6:40:6
+spell:Обнаружение Монстров:15:6:40:6
 effect:DETECT_INVISIBLE_MONSTERS
 dice:22d40
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all monsters in the immediate area, for one turn only.
 
-spell:Acid Bolt:15:4:50:8
+spell:Кислотная Стрела:15:4:50:8
 effect:BOLT_OR_BEAM:ACID
 dice:$Dd8
 expr:D:PLAYER_LEVEL:- 5 / 4 + 8
@@ -329,7 +329,7 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Slow Monster:17:9:50:7
+spell:Замедление Монстра:17:9:50:7
 effect:BOLT_STATUS:OLD_SLOW
 dice:20
 desc:Attempts to slow a single monster.
@@ -337,33 +337,33 @@ desc:  Uniques are not affected.
 
 book:magic book:[Sorcery and Evocations]:6:1
 
-spell:Frost Ball:19:6:55:8
+spell:Ледяной Шар:19:6:55:8
 effect:BALL:COLD:2
 dice:$B
 expr:B:PLAYER_LEVEL:+ 30
 desc:Shoots a radius-2 frost ball.
 
-spell:Teleport Other:23:12:60:8
+spell:Телепортация Монстра:23:12:60:8
 effect:BOLT_STATUS:AWAY_ALL
 dice:$B
 expr:B:MAX_SIGHT:* 5
 desc:Produces a bolt that teleports the first monster in its path
 desc: up to 100 squares away.
 
-spell:Haste Self:25:12:65:10
+spell:Ускорение:25:12:65:10
 effect:TIMED_INC:FAST:5
 dice:$B+d20
 expr:B:PLAYER_LEVEL:+ 0
 desc:Hastes you (+10 to speed) for a level-dependant duration.
 
-spell:Mass Sleep:25:7:50:6
+spell:Массовое Усыпление:25:7:50:6
 effect:PROJECT_LOS:OLD_SLEEP
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to put to sleep each monster within line of sight.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-spell:Fire Ball:26:9:65:12
+spell:Огненный Шар:26:9:65:12
 effect:BALL:FIRE:2
 dice:$B
 expr:B:PLAYER_LEVEL:+ 55
@@ -378,22 +378,22 @@ desc:Detects all treasure in the immediate area.
 
 book:magic book:[Resistances of Scarabtarices]:5:1
 
-spell:Resist Cold:10:5:50:10
+spell:Сопротивление Холоду:10:5:50:10
 effect:TIMED_INC:OPP_COLD
 dice:20+d20
 desc:Grants you resistance to cold for 20+1d20 turns.
 
-spell:Resist Fire:10:5:50:10
+spell:Сопротивление Огню:10:5:50:10
 effect:TIMED_INC:OPP_FIRE
 dice:20+d20
 desc:Grants you resistance to fire for 20+1d20 turns.
 
-spell:Resist Poison:25:10:45:20
+spell:Сопротивление Яду:25:10:45:20
 effect:TIMED_INC:OPP_POIS
 dice:20+d20
 desc:Grants you resistance to poison for 20+1d20 turns.
 
-spell:Resistance:28:20:65:30
+spell:Сопротивление:28:20:65:30
 effect:TIMED_INC:OPP_ACID
 dice:20+d20
 effect:TIMED_INC:OPP_ELEC
@@ -407,14 +407,14 @@ dice:20+d20
 desc:Grants you resistance to acid, cold, fire, lightning, and poison for
 desc: 20+1d20 turns.
 
-spell:Shield:32:24:75:30
+spell:Щит:32:24:75:30
 effect:TIMED_INC:SHIELD
 dice:30+d20
 desc:Grants you +50 to AC for 30+1d20 turns.
 
 book:magic book:[Raal's Tome of Destruction]:7:1
 
-spell:Shock Wave:16:5:40:6
+spell:Ударная Волна:16:5:40:6
 effect:BALL:SOUND:2
 dice:$B
 expr:B:PLAYER_LEVEL:+ 10
@@ -422,7 +422,7 @@ desc:Shoots a radius-2 sound ball.
 desc:  Apart from doing sound damage, this also has a chance to stun
 desc: each monster in the area of effect.
 
-spell:Explosion:20:10:50:10
+spell:Взрыв:20:10:50:10
 effect:BALL:SHARD:2
 dice:$B
 expr:B:PLAYER_LEVEL:* 2 + 20
@@ -434,13 +434,13 @@ dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 40
 desc:Shoots a radius-3 poison ball.
 
-spell:Acid Ball:20:7:70:20
+spell:Кислотный Шар:20:7:70:20
 effect:BALL:ACID:2
 dice:$B
 expr:B:PLAYER_LEVEL:+ 40
 desc:Shoots a radius-2 acid ball.
 
-spell:Ice Storm:27:11:75:24
+spell:Ледяной Шторм:27:11:75:24
 effect:BALL:ICE:3
 dice:$B
 expr:B:PLAYER_LEVEL:* 2 + 50
@@ -459,7 +459,7 @@ desc: damage to each monster in its area of effect.
 desc:  If this kills the monster that blocked the path to the target
 desc: location, the next meteor may continue to find another target.
 
-spell:Rift:35:20:60:25
+spell:Сдвиг:35:20:60:25
 effect:BEAM:GRAVITY
 dice:40+$Dd7
 expr:D:PLAYER_LEVEL:+ 0
@@ -468,25 +468,25 @@ desc: and has a chance of teleporting it away.
 
 book:magic book:[Mordenkainen's Escapes]:5:1
 
-spell:Door Creation:13:9:40:12
+spell:Создание Дверей:13:9:40:12
 effect:TOUCH:MAKE_DOOR
 desc:A door is created on each empty floor space that is directly
 desc: adjacent to you.  These doors are closed, but not locked.
 
-spell:Stair Creation:24:20:50:20
+spell:Создание Лестниц:24:20:50:20
 effect:CREATE_STAIRS
 desc:A stair (going up or down, chosen at random) is created on the space
 desc: where you are standing.  This will destroy any terrain feature that
 desc: was there before.  It will also destroy all items currently on the
 desc: floor where the spell is cast.
 
-spell:Teleport Level:28:17:65:20
+spell:Межуровневая Телепортация:28:17:65:20
 effect:TELEPORT_LEVEL
 desc:Teleports you 1 level up or 1 level down (chosen at random).
 desc:  This spell has no effect when the option to restrict the use of
 desc: stairs and recall is set.
 
-spell:Word of Recall:30:25:75:15
+spell:Слово Возвращения:30:25:75:15
 effect:RECALL
 desc:Teleports you from the dungeon to the town or from the town to the
 desc: deepest level you have visited in the dungeon.
@@ -496,7 +496,7 @@ desc: of recall again.
 desc:  This spell has no effect when the option to restrict the use of
 desc: stairs and recall is set, unless Morgoth is dead.
 
-spell:Rune of Protection:36:60:70:40
+spell:Руна Защиты:36:60:70:40
 effect:RUNE
 desc:Inscribes a glyph of warding beneath you.
 desc:  Summoned monsters can't appear on the glyph.
@@ -508,7 +508,7 @@ desc: breaking it, or until you leave the level.
 
 book:magic book:[Tenser's Transformations]:2:1
 
-spell:Greater Recharging:30:30:95:100
+spell:Большая Перезарядка:30:30:95:100
 effect:RECHARGE
 dice:$B
 expr:B:PLAYER_LEVEL:+ 50
@@ -518,7 +518,7 @@ desc: level and decrease with level of wand or staff and number of charges,
 desc: but are overall much better than for the spell Lesser Recharging.
 desc:  A failed attempt to recharge destroys one wand or staff from the stack.
 
-spell:Elemental Brand:32:60:95:120
+spell:Клеймо Элементов:32:60:95:120
 effect:BRAND_AMMO
 desc:Brands one stack of ammunition with fire, cold, or poison
 desc: (selected at random) and at the same time attempts to improve
@@ -528,7 +528,7 @@ desc: slay, is broken, or is cursed.
 
 book:magic book:[Kelek's Grimoire of Power]:8:1
 
-spell:Earthquake:20:18:60:20
+spell:Землетрясение:20:18:60:20
 effect:EARTHQUAKE
 param:10
 desc:Causes a 10-square radius earthquake around you.
@@ -537,7 +537,7 @@ desc: squares in the area of effect.
 desc:  Artifacts will not be destroyed by this spell.
 desc:  This spell has no effect when used in the town.
 
-spell:Bedlam:25:15:60:24
+spell:Бедлам:25:15:60:24
 effect:BALL:OLD_CONF:4
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
@@ -545,7 +545,7 @@ desc:Shoots a radius-4 confusion ball that doesn't cause physical
 desc: damage but has a chance to confuse each monster in the area of effect.
 desc:  Uniques or monsters that resist confusion are not affected.
 
-spell:Rend Soul:25:15:80:30
+spell:Пытка Души:25:15:80:30
 effect:BOLT_OR_BEAM:NETHER
 param:4:1
 dice:11d$S
@@ -556,13 +556,13 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Banishment:30:45:95:25
+spell:Изгнание:30:45:95:25
 effect:BANISH
 desc:Removes all monsters represented by a chosen symbol from the level.
 desc:  Uniques are not affected.
 desc:  You take 1d4 points of damage for every monster removed.
 
-spell:Word of Destruction:33:21:80:35
+spell:Слово Разрушения:33:21:80:35
 effect:DESTRUCTION
 param:15
 desc:Destroys everything in a 15-square radius circle around you.
@@ -572,13 +572,13 @@ desc:  You will also be blinded for 10+1d10 turns, unless you
 desc: have resistance to blindness or light.
 desc:  This spell has no effect when used in the town.
 
-spell:Mass Banishment:35:75:90:100
+spell:Поток Метеоров:35:75:90:100
 effect:MASS_BANISH
 desc:Removes all monsters within 20 squares of you.
 desc:  Uniques are not affected.
 desc:  You take 1d3 points of damage for every monster removed.
 
-spell:Chaos Strike:38:15:90:40
+spell:Удар Хаоса:38:15:90:40
 effect:BOLT_OR_BEAM:CHAOS
 dice:13d$S
 expr:S:PLAYER_LEVEL:+ 0
@@ -587,7 +587,7 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Mana Storm:42:16:95:200
+spell:Шторм Маны:42:16:95:200
 effect:BALL:MANA:3
 dice:$B
 expr:B:PLAYER_LEVEL:* 2 + 300
@@ -632,13 +632,13 @@ magic:1:350:2:9
 
 book:prayer book:[Beginners Handbook]:7:2
 
-spell:Detect Evil:1:1:10:4
+spell:Поиск Зла:1:1:10:4
 effect:DETECT_EVIL
 dice:22d40
 desc:Detects all evil monsters in the immediate area,
 desc: for one turn only.
 
-spell:Cure Light Wounds:1:2:15:4
+spell:Лечение Легких Ран:1:2:15:4
 effect:HEAL_HP
 dice:15+m15
 effect:CURE:BLIND
@@ -648,16 +648,16 @@ effect:TIMED_DEC:CONFUSED
 dice:20
 desc:Cures 15% of your wounds (min 15hp) and heals 20 points worth of cuts.
 
-spell:Bless:1:2:20:4
+spell:Благословление:1:2:20:4
 effect:TIMED_INC:BLESSED
 dice:12+d12
 desc:Blesses you, giving a bonus of +5 to AC and +10 to-hit, for 12+1d12 turns.
 
-spell:Remove Fear:1:2:5:4
+spell:Снятие Страха:1:2:5:4
 effect:CURE:AFRAID
 desc:Removes fear.
 
-spell:Call Light:3:2:25:1
+spell:Призвать Свет:3:2:25:1
 effect:LIGHT_AREA
 param:1:10
 dice:2d$S
@@ -666,7 +666,7 @@ desc:Lights up all squares in a level-dependant area, and hurts
 desc: all light-sensitive monsters in the area of effect.
 desc:  If you are in a room, the entire room will be lit up as well.
 
-spell:Find Traps, Doors & Stairs:3:3:27:2
+spell:Поиск Ловушек, Дверей и Лестниц:3:3:27:2
 effect:DETECT_TRAPS
 dice:22d40
 effect:DETECT_DOORS
@@ -675,26 +675,26 @@ effect:DETECT_STAIRS
 dice:22d40
 desc:Detects all traps, doors, and stairs in the immediate area.
 
-spell:Slow Poison:3:3:28:4
+spell:Замедление Яда:3:3:28:4
 effect:TIMED_DEC:POISONED:2
 desc:Halves the remaining duration of any current poisoning.
 
 book:prayer book:[Words of Wisdom]:7:2
 
-spell:Scare Monster:5:4:29:3
+spell:Устрашение Монстра:5:4:29:3
 effect:BOLT_AWARE:TURN_ALL
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to scare a single monster for a level-dependant duration.
 desc:  Uniques and monsters that resist fear are not affected.
 
-spell:Portal:5:4:30:4
+spell:Портал:5:4:30:4
 effect:TELEPORT
 dice:$B
 expr:B:PLAYER_LEVEL:* 3
 desc:Teleports you randomly over a short distance.
 
-spell:Cure Serious Wounds:5:4:32:4
+spell:Лечение Серьезных Ран:5:4:32:4
 effect:HEAL_HP
 dice:25+m20
 effect:CURE:BLIND
@@ -702,20 +702,20 @@ effect:CURE:CUT
 effect:CURE:CONFUSED
 desc:Cures 20% of your wounds (min 25hp) and heals all cut damage.
 
-spell:Chant:5:5:34:4
+spell:Пение:5:5:34:4
 effect:TIMED_INC:BLESSED
 dice:24+d24
 desc:Blesses you, giving a bonus of +5 to AC and +10 to-hit, for 24+1d24
 desc: turns.
 
-spell:Sanctuary:7:5:36:3
+spell:Убежище:7:5:36:3
 effect:TOUCH_AWARE:OLD_SLEEP
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to put to sleep each monster directly adjacent to you.
 desc:  Uniques and monsters that resist sleep are not affected.
 
-spell:Satisfy Hunger:7:5:38:4
+spell:Удовлетворение Голода:7:5:38:4
 effect:SET_NOURISH
 dice:16999
 desc:Magically renders you well-fed (but not satiated).
@@ -726,7 +726,7 @@ desc:  This will also cure a bloated stomach.
 #D:Removes all ordinary curses from all equipped items.
 #D:  Heavy or permanent curses are not affected.
 
-spell:Resist Heat and Cold:7:7:38:5
+spell:Сопротивление Огню и Холоду:7:7:38:5
 effect:TIMED_INC:OPP_COLD
 dice:10+d10
 effect:TIMED_INC:OPP_FIRE
@@ -735,11 +735,11 @@ desc:Gives you temporary resistance to cold and fire, for 10+1d10 turns each.
 
 book:prayer book:[Chants and Blessings]:9:2
 
-spell:Neutralize Poison:9:6:38:4
+spell:Нейтрализация Яда:9:6:38:4
 effect:CURE:POISONED
 desc:Neutralizes poison.
 
-spell:Orb of Draining:9:7:40:4
+spell:Святой Огонь:9:7:40:4
 effect:BALL:HOLY_ORB
 param:2:30
 dice:$B+3d6
@@ -750,7 +750,7 @@ desc:  Evil monsters take double damage.
 desc:  All cursed items in the area of effect are destroyed.
 desc:  The bigger area of effect is attained at character level 30.
 
-spell:Cure Critical Wounds:9:7:38:4
+spell:Лечение Критических Ран:9:7:38:4
 effect:HEAL_HP
 dice:30+m25
 effect:CURE:BLIND
@@ -767,7 +767,7 @@ effect:TIMED_INC:SINVIS
 dice:24+d24
 desc:Enables you to see invisible monsters for 24+1d24 turns.
 
-spell:Protection from Evil:11:8:42:4
+spell:Защита от Зла:11:8:42:4
 effect:TIMED_INC:PROTEVIL
 dice:$B+d25
 expr:B:PLAYER_LEVEL:* 3
@@ -775,7 +775,7 @@ desc:Protects you from evil for a level-dependant duration:
 desc: all melee attacks by evil monsters have a chance to be repelled,
 desc: unless the monster's level is higher than your character level.
 
-spell:Earthquake:11:9:55:5
+spell:Землетрясение:11:9:55:5
 effect:EARTHQUAKE
 param:10
 desc:Causes a 10-square radius earthquake around you.
@@ -784,12 +784,12 @@ desc: squares in the area of effect.
 desc:  Artifacts will not be destroyed by this prayer.
 desc:  This prayer has no effect when used in the town.
 
-spell:Sense Surroundings:13:10:45:4
+spell:Чувствовать Окружающее:13:10:45:4
 effect:MAP_AREA
 dice:22d40
 desc:Maps out a portion of the level around you.
 
-spell:Cure Mortal Wounds:13:11:45:4
+spell:Лечение Смертельных Ран:13:11:45:4
 effect:HEAL_HP
 dice:50+m30
 effect:CURE:BLIND
@@ -801,7 +801,7 @@ effect:CURE:AMNESIA
 desc:Cures 30% of your wounds (min 50hp), cures all stunning and heals all
 desc: cut damage, poison and amnesia.
 
-spell:Turn Undead:15:12:50:5
+spell:Устрашение Мертвецов:15:12:50:5
 effect:PROJECT_LOS_AWARE:TURN_UNDEAD
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
@@ -810,18 +810,18 @@ desc: causing it to flee in terror for a level-dependant duration.
 
 book:prayer book:[Exorcism and Dispelling]:6:2
 
-spell:Prayer:15:14:50:5
+spell:Молитва:15:14:50:5
 effect:TIMED_INC:BLESSED
 dice:48+d48
 desc:Blesses you, giving a bonus of +5 to AC and +10 to-hit, for 48+1d48 turns.
 
-spell:Dispel Undead:17:14:55:7
+spell:Уничтожение Мертвецов:17:14:55:7
 effect:PROJECT_LOS_AWARE:DISP_UNDEAD
 dice:d$S
 expr:S:PLAYER_LEVEL:* 3
 desc:Inflicts unresistable damage on each undead monster within line of sight.
 
-spell:Heal:21:16:60:7
+spell:Исцеление:21:16:60:7
 effect:HEAL_HP
 dice:300+m35
 effect:CURE:BLIND
@@ -833,13 +833,13 @@ effect:CURE:AMNESIA
 desc:Cures 35% of your max hp (min 300), cures all stunning and heals all cut
 desc: damage, poison and amnesia.
 
-spell:Dispel Evil:25:20:70:12
+spell:Уничтожение Зла:25:20:70:12
 effect:PROJECT_LOS_AWARE:DISP_EVIL
 dice:d$S
 expr:S:PLAYER_LEVEL:* 3
 desc:Inflicts unresistable damage on each evil monster within line of sight.
 
-spell:Glyph of Warding:33:55:90:15
+spell:Руна Охраны:33:55:90:15
 effect:RUNE
 desc:Inscribes a glyph of warding beneath you.
 desc:  Summoned monsters can't appear on the glyph.
@@ -849,7 +849,7 @@ desc:  Higher level monsters are more likely to break the glyph.
 desc:  The glyph will remain where it is, until a monster succeeds in
 desc: breaking it, or until you leave the level.
 
-spell:Holy Word:39:32:95:20
+spell:Священное Слово:39:32:95:20
 effect:PROJECT_LOS_AWARE:DISP_EVIL
 dice:d$S
 expr:S:PLAYER_LEVEL:* 4
@@ -865,31 +865,31 @@ desc: neutralizes poison, and removes fear.
 
 book:prayer book:[Ethereal Openings]:6:2
 
-spell:Blink:3:3:50:6
+spell:Скачок:3:3:50:6
 effect:TELEPORT
 dice:10
 desc:Teleports you randomly up to 10 squares away.
 
-spell:Teleport Self:10:10:50:8
+spell:Телепортация:10:10:50:8
 effect:TELEPORT
 dice:$B
 expr:B:PLAYER_LEVEL:* 8
 desc:Teleports you randomly within the current level.
 
-spell:Teleport Other:20:20:80:16
+spell:Телепортация Монстра:20:20:80:16
 effect:BOLT_STATUS:AWAY_ALL
 dice:$B
 expr:B:MAX_SIGHT:* 5
 desc:Produces a bolt that teleports the first monster in its path
 desc: up to 100 squares away.
 
-spell:Teleport Level:30:40:75:133
+spell:Межуровневая Телепортация:30:40:75:133
 effect:TELEPORT_LEVEL
 desc:Teleports you 1 level up or 1 level down (chosen at random).
 desc:  This spell has no effect when the option to restrict the use of
 desc: stairs and recall is set.
 
-spell:Word of Recall:35:50:75:11
+spell:Слово Возвращения:35:50:75:11
 effect:RECALL
 desc:Teleports you from the dungeon to the town or from the town to the
 desc: deepest level you have visited in the dungeon.
@@ -899,7 +899,7 @@ desc: of recall again.
 desc:  This prayer has no effect when the option to restrict the use of
 desc: stairs and recall is set, unless Morgoth is dead.
 
-spell:Alter Reality:40:60:75:250
+spell:Изменение Мира:40:60:75:250
 effect:ALTER_REALITY
 desc:The current level will be discarded and a new dungeon level (on the
 desc: same dungeon depth) will be generated.  This has exactly the same
@@ -908,13 +908,13 @@ desc: except that you won't start on a square with a stair.
 
 book:prayer book:[Godly Insights]:5:2
 
-spell:Detect Monsters:3:3:50:2
+spell:Поиск Монстров:3:3:50:2
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all non-invisible monsters in the immediate area,
 desc: for one turn only.
 
-spell:Detection:10:10:80:20
+spell:Поиск:10:10:80:20
 effect:DETECT_TRAPS
 dice:22d40
 effect:DETECT_DOORS
@@ -936,20 +936,20 @@ spell:Perception:20:20:80:20
 effect:IDENTIFY
 desc:Reveals the powers of an object.
 
-spell:Probing:25:40:80:150
+spell:Анализ Монстра:25:40:80:150
 effect:PROBE
 desc:Probes each monster within line of sight, giving information on the
 desc: current hit points of the monster and many of its characteristics
 desc: and abilities (excluding its melee, spellcasting, and breath attacks).
 
-spell:Clairvoyance:35:50:80:230
+spell:Ясновидение:35:50:80:230
 effect:ENLIGHTENMENT
 desc:Lights up, maps out, and detects all objects on the complete current
 desc: dungeon level.
 
 book:prayer book:[Purifications and Healing]:5:2
 
-spell:Cure Serious Wounds:15:5:50:25
+spell:Лечение Серьезных Ран:15:5:50:25
 effect:HEAL_HP
 dice:25+m20
 effect:CURE:BLIND
@@ -957,7 +957,7 @@ effect:CURE:CUT
 effect:CURE:CONFUSED
 desc:Cures 20% of your wounds (min 25hp) and heals all cut damage.
 
-spell:Cure Mortal Wounds:17:7:60:45
+spell:Лечение Смертельных Ран:17:7:60:45
 effect:HEAL_HP
 dice:50+m30
 effect:CURE:BLIND
@@ -969,14 +969,14 @@ effect:CURE:AMNESIA
 desc:Cures 30% of your wounds (min 50hp), cures all stunning and heals all
 desc: cut damage, poison and amnesia.
 
-spell:Healing:30:50:80:130
+spell:Исцеление:30:50:80:130
 effect:HEAL_HP
 dice:2000
 effect:CURE:STUN
 effect:CURE:CUT
 desc:Cures 2000 points of damage, cures all stunning and heals all cut damage.
 
-spell:Restoration:35:70:90:230
+spell:Восстановление:35:70:90:230
 effect:RESTORE_STAT:STR
 effect:RESTORE_STAT:INT
 effect:RESTORE_STAT:WIS
@@ -984,17 +984,17 @@ effect:RESTORE_STAT:DEX
 effect:RESTORE_STAT:CON
 desc:Restores to maximum all stats that are currently below maximum.
 
-spell:Remembrance:35:70:90:250
+spell:Воспоминания:35:70:90:250
 effect:RESTORE_EXP
 desc:Restores experience points to maximum if it is currently below maximum.
 
 book:prayer book:[Holy Infusions]:5:2
 
-spell:Unbarring Ways:5:6:50:40
+spell:Открытые Пути:5:6:50:40
 effect:TOUCH:KILL_DOOR
 desc:Destroys all traps and doors within a 1-square radius of you.
 
-spell:Recharging:15:20:80:25
+spell:Перезарядка:15:20:80:25
 effect:RECHARGE
 dice:$B
 expr:B:PLAYER_LEVEL:+ 20
@@ -1008,19 +1008,19 @@ desc:  A failed attempt to recharge destroys one wand or staff from the stack.
 #D:Removes all ordinary and heavy curses from all equipped objects.
 #D:  Permanent curses are not affected.
 
-spell:Enchant Weapon:35:50:80:230
+spell:Зачарование Оружия:35:50:80:230
 effect:ENCHANT:TOBOTH
 dice:1d4
 desc:Attempts to improve the to-hit bonus and the to-dam bonus of a weapon.
 desc: Also gives a chance to break a curse.
 
-spell:Enchant Armour:37:60:85:250
+spell:Зачарование Доспехов:37:60:85:250
 effect:ENCHANT:TOAC
 dice:1+1d3
 desc:Attempts to improve the armour class bonus of a piece of armour.
 desc: Also gives a chance to break a curse.
 
-spell:Elemental Brand:45:95:85:250
+spell:Клеймо Элементов:45:95:85:250
 effect:BRAND_WEAPON
 desc:Brands the currently wielded melee weapon with fire (50%) or cold (50%),
 desc: and at the same time attempts to improve the to-hit bonus and the
@@ -1030,24 +1030,24 @@ desc: is already branded, has a slay, is broken, or is cursed.
 
 book:prayer book:[Wrath of God]:5:2
 
-spell:Dispel Undead:15:7:70:25
+spell:Уничтожение Мертвецов:15:7:70:25
 effect:PROJECT_LOS_AWARE:DISP_UNDEAD
 dice:d$S
 expr:S:PLAYER_LEVEL:* 4
 desc:Inflicts unresistable damage on each undead monster within line of sight.
 
-spell:Dispel Evil:20:10:75:60
+spell:Уничтожение Зла:20:10:75:60
 effect:PROJECT_LOS_AWARE:DISP_EVIL
 dice:d$S
 expr:S:PLAYER_LEVEL:* 4
 desc:Inflicts unresistable damage on each evil monster within line of sight.
 
-spell:Banish Evil:25:25:80:250
+spell:Изгнание Зла:25:25:80:250
 effect:PROJECT_LOS_AWARE:AWAY_EVIL
 dice:100
 desc:Teleports away each evil monster within line of sight.
 
-spell:Word of Destruction:35:35:80:115
+spell:Слово Разрушения:35:35:80:115
 effect:DESTRUCTION
 param:15
 desc:Destroys everything in a 15-square radius circle around you.
@@ -1057,7 +1057,7 @@ desc:  You will also be blinded for 10+1d10 turns, unless you
 desc: have resistance to blindness or light.
 desc:  This prayer has no effect when used in the town.
 
-spell:Annihilation:45:60:75:250
+spell:Аннигиляция:45:60:75:250
 effect:BOLT:OLD_DRAIN
 dice:200
 desc:Inflicts 200 points of damage on a single monster that is not
@@ -1101,18 +1101,18 @@ magic:5:350:1:9
 
 book:magic book:[Magic for Beginners]:6:1
 
-spell:Detect Monsters:5:1:50:1
+spell:Поиск Монстров:5:1:50:1
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all non-invisible monsters in the immediate area,
 desc: for one turn only.
 
-spell:Phase Door:7:2:55:1
+spell:Фазовая Дверь:7:2:55:1
 effect:TELEPORT
 dice:10
 desc:Teleports you randomly up to 10 squares away.
 
-spell:Light Area:9:3:60:1
+spell:Освещение:9:3:60:1
 effect:LIGHT_AREA
 param:1:10
 dice:2d$S
@@ -1128,7 +1128,7 @@ effect:DETECT_OBJECTS
 dice:22d40
 desc:Detects all objects in the immediate area.
 
-spell:Find Traps, Doors & Stairs:8:3:50:1
+spell:Поиск Ловушек, Дверей и Лестниц:8:3:50:1
 effect:DETECT_TRAPS
 dice:22d40
 effect:DETECT_DOORS
@@ -1137,7 +1137,7 @@ effect:DETECT_STAIRS
 dice:22d40
 desc:Detects all traps, doors, and stairs in the immediate area.
 
-spell:Stinking Cloud:21:12:50:10
+spell:Вонючее Облако:21:12:50:10
 effect:BALL:POIS:2
 dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 10
@@ -1145,41 +1145,41 @@ desc:Shoots a radius-2 poison ball.
 
 book:magic book:[Conjurings and Tricks]:7:1
 
-spell:Confuse Monster:15:6:75:1
+spell:Контузия Монстра:15:6:75:1
 effect:BOLT_AWARE:OLD_CONF
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to confuse a single monster for a level-dependant duration.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-spell:Trap/Door Destruction:14:7:60:2
+spell:Разрушение Ловушки/Двери:14:7:60:2
 effect:TOUCH:KILL_DOOR
 desc:Destroys all traps and doors within a 1-square radius of you.
 
-spell:Cure Poison:21:9:90:1
+spell:Лечение Яда:21:9:90:1
 effect:CURE:POISONED
 desc:Neutralizes poison.
 
-spell:Sleep Monster:19:8:85:1
+spell:Усыпление Монстра:19:8:85:1
 effect:BOLT_AWARE:OLD_SLEEP
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to put to sleep a single monster.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-spell:Teleport Self:22:9:50:1
+spell:Телепортация:22:9:50:1
 effect:TELEPORT
 dice:$B
 expr:B:PLAYER_LEVEL:* 5
 desc:Teleports you randomly within the current level.
 
-spell:Spear of Light:23:10:95:1
+spell:Копье Света:23:10:95:1
 effect:LINE:LIGHT_WEAK
 dice:6d8
 desc:Fires a beam that lights up each square and hurts each
 desc: light-sensitive monster in its path.
 
-spell:Wonder:20:10:70:20
+spell:Чудо:20:10:70:20
 effect:WONDER
 dice:$B+1d100
 expr:B:PLAYER_LEVEL:/ 5
@@ -1187,13 +1187,13 @@ desc:Invokes a random spell effect.
 
 book:magic book:[Incantations and Illusions]:6:1
 
-spell:Satisfy Hunger:25:12:95:1
+spell:Удовлетворение Голода:25:12:95:1
 effect:SET_NOURISH
 dice:16999
 desc:Magically renders you well-fed (but not satiated).
 desc:  This will also cure a bloated stomach.
 
-spell:Lesser Recharging:27:15:99:1
+spell:Малая Перезарядка:27:15:99:1
 effect:RECHARGE
 dice:$B
 expr:B:PLAYER_LEVEL:/ 5 + 2
@@ -1202,25 +1202,25 @@ desc:  Chance of success and number of charges gained increase with your
 desc: level and decrease with level of wand or staff and number of charges.
 desc:  A failed attempt to recharge destroys one wand or staff from the stack.
 
-spell:Turn Stone to Mud:24:11:70:1
+spell:Плавка Камня:24:11:70:1
 effect:LINE:KILL_WALL
 dice:20+1d30
 desc:Produces a beam that destroys the first section of wall it hits,
 desc: unless it is a permanent wall.  Each monster caught in the beam that
 desc: is susceptible to rock remover takes 20+1d30 points of damage.
 
-spell:Identify:18:18:60:2
+spell:Идентификация:18:18:60:2
 effect:IDENTIFY
 desc:Reveals the powers of an object.
 
-spell:Reveal Monsters:20:11:50:4
+spell:Обнаружение Монстров:20:11:50:4
 effect:DETECT_INVISIBLE_MONSTERS
 dice:22d40
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all monsters in the immediate area, for one turn only.
 
-spell:Slow Monster:28:20:70:2
+spell:Замедление Монстра:28:20:70:2
 effect:BOLT_STATUS:OLD_SLOW
 dice:20
 desc:Attempts to slow a single monster.
@@ -1228,20 +1228,20 @@ desc:  Uniques are not affected.
 
 book:magic book:[Sorcery and Evocations]:3:1
 
-spell:Teleport Other:31:25:70:3
+spell:Телепортация Монстра:31:25:70:3
 effect:BOLT_STATUS:AWAY_ALL
 dice:$B
 expr:B:MAX_SIGHT:* 5
 desc:Produces a bolt that teleports the first monster in its path
 desc: up to 100 squares away.
 
-spell:Haste Self:32:25:70:6
+spell:Ускорение:32:25:70:6
 effect:TIMED_INC:FAST:5
 dice:$B+d20
 expr:B:PLAYER_LEVEL:+ 0
 desc:Hastes you (+10 to speed) for a level-dependant duration.
 
-spell:Mass Sleep:24:15:80:10
+spell:Массовое Усыпление:24:15:80:10
 effect:PROJECT_LOS:OLD_SLEEP
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
@@ -1250,22 +1250,22 @@ desc:  Uniques and monsters that resist confusion are not affected.
 
 book:magic book:[Resistances of Scarabtarices]:5:1
 
-spell:Resist Cold:16:12:50:40
+spell:Сопротивление Холоду:16:12:50:40
 effect:TIMED_INC:OPP_COLD
 dice:20+d20
 desc:Grants you resistance to cold for 20+1d20 turns.
 
-spell:Resist Fire:19:12:50:40
+spell:Сопротивление Огню:19:12:50:40
 effect:TIMED_INC:OPP_FIRE
 dice:20+d20
 desc:Grants you resistance to fire for 20+1d20 turns.
 
-spell:Resist Poison:30:25:75:60
+spell:Сопротивление Яду:30:25:75:60
 effect:TIMED_INC:OPP_POIS
 dice:20+d20
 desc:Grants you resistance to poison for 20+1d20 turns.
 
-spell:Resistance:31:30:85:80
+spell:Сопротивление:31:30:85:80
 effect:TIMED_INC:OPP_ACID
 dice:20+d20
 effect:TIMED_INC:OPP_ELEC
@@ -1279,14 +1279,14 @@ dice:20+d20
 desc:Grants you resistance to acid, cold, fire, lightning, and poison for
 desc: 20+1d20 turns.
 
-spell:Shield:34:20:75:80
+spell:Щит:34:20:75:80
 effect:TIMED_INC:SHIELD
 dice:30+d20
 desc:Grants you +50 to AC for 30+1d20 turns.
 
 book:magic book:[Raal's Tome of Destruction]:2:1
 
-spell:Shock Wave:35:25:80:50
+spell:Ударная Волна:35:25:80:50
 effect:BALL:SOUND:2
 dice:$B
 expr:B:PLAYER_LEVEL:+ 10
@@ -1302,25 +1302,25 @@ desc:Shoots a radius-3 poison ball.
 
 book:magic book:[Mordenkainen's Escapes]:4:1
 
-spell:Door Creation:17:7:30:15
+spell:Создание Дверей:17:7:30:15
 effect:TOUCH:MAKE_DOOR
 desc:A door is created on each empty floor space that is directly
 desc: adjacent to you.  These doors are closed, but not locked.
 
-spell:Stair Creation:25:12:40:25
+spell:Создание Лестниц:25:12:40:25
 effect:CREATE_STAIRS
 desc:A stair (going up or down, chosen at random) is created on the space
 desc: where you are standing.  This will destroy any terrain feature that
 desc: was there before.  It will also destroy all items currently on the
 desc: floor where the spell is cast.
 
-spell:Teleport Level:25:20:60:20
+spell:Межуровневая Телепортация:25:20:60:20
 effect:TELEPORT_LEVEL
 desc:Teleports you 1 level up or 1 level down (chosen at random).
 desc:  This spell has no effect when the option to restrict the use of
 desc: stairs and recall is set.
 
-spell:Word of Recall:36:40:80:18
+spell:Слово Возвращения:36:40:80:18
 effect:RECALL
 desc:Teleports you from the dungeon to the town or from the town to the
 desc: deepest level you have visited in the dungeon.
@@ -1332,7 +1332,7 @@ desc: stairs and recall is set, unless Morgoth is dead.
 
 book:magic book:[Tenser's Transformations]:6:1
 
-spell:Heroism:26:15:30:40
+spell:Героизм:26:15:30:40
 effect:HEAL_HP
 dice:10
 effect:CURE:AFRAID
@@ -1341,7 +1341,7 @@ dice:25+d25
 desc:Cures 10 points of damage, removes fear and grants you heroism
 desc: (resistance to fear, and a bonus of +12 to-hit) for 25+1d25 turns.
 
-spell:Berserker:28:20:60:60
+spell:Ярость:28:20:60:60
 effect:HEAL_HP
 dice:30
 effect:CURE:AFRAID
@@ -1351,19 +1351,19 @@ desc:Cures 30 points of damage, removes fear, and grants you berserk
 desc: strength (resistance to fear, a bonus of +24 to-hit, and a penalty
 desc: of -10 to AC) for 25+1d25 turns.
 
-spell:Enchant Armor:31:50:95:90
+spell:Зачарование Доспехов:31:50:95:90
 effect:ENCHANT:TOAC
 dice:$B+1d3
 expr:B:PLAYER_LEVEL:/ 20 - 1
 desc:Attempts to improve the armour class bonus of a piece of armour.
 
-spell:Enchant Weapon:33:55:90:90
+spell:Зачарование Оружия:33:55:90:90
 effect:ENCHANT:TOBOTH
 dice:$B+1d4
 expr:B:PLAYER_LEVEL:/ 20 - 1
 desc:Attempts to improve the to-hit bonus and the to-dam bonus of a weapon.
 
-spell:Greater Recharging:35:40:95:100
+spell:Большая Перезарядка:35:40:95:100
 effect:RECHARGE
 dice:$B
 expr:B:PLAYER_LEVEL:+ 50
@@ -1373,7 +1373,7 @@ desc: level and decrease with level of wand or staff and number of charges,
 desc: but are overall much better than for the spell Lesser Recharging.
 desc:  A failed attempt to recharge destroys one wand or staff from the stack.
 
-spell:Elemental Brand:37:60:80:120
+spell:Клеймо Элементов:37:60:80:120
 effect:BRAND_AMMO
 desc:Brands one stack of ammunition with fire, cold, or poison
 desc: (selected at random) and at the same time attempts to improve
@@ -1383,7 +1383,7 @@ desc: slay, is broken, or is cursed.
 
 book:magic book:[Kelek's Grimoire of Power]:1:1
 
-spell:Bedlam:29:20:70:20
+spell:Бедлам:29:20:70:20
 effect:BALL:OLD_CONF:4
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
@@ -1430,7 +1430,7 @@ magic:3:400:1:9
 
 book:magic book:[Magic for Beginners]:7:1
 
-spell:Magic Missile:3:1:30:1
+spell:Волшебная Стрела:3:1:30:1
 effect:BOLT_OR_BEAM:MISSILE:-10
 dice:$Dd4
 expr:D:PLAYER_LEVEL:- 1 / 5 + 3
@@ -1440,18 +1440,18 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Detect Monsters:3:2:35:2
+spell:Поиск Монстров:3:2:35:2
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all non-invisible monsters in the immediate area,
 desc: for one turn only.
 
-spell:Phase Door:3:2:35:2
+spell:Фазовая Дверь:3:2:35:2
 effect:TELEPORT
 dice:10
 desc:Teleports you randomly up to 10 squares away.
 
-spell:Light Area:5:3:35:1
+spell:Освещение:5:3:35:1
 effect:LIGHT_AREA
 param:1:10
 dice:2d$S
@@ -1460,7 +1460,7 @@ desc:Lights up all squares in a level-dependant area, and hurts
 desc: all light-sensitive monsters in the area of effect.
 desc:  If you are in a room, the entire room will be lit up as well.
 
-spell:Cure Light Wounds:5:3:40:1
+spell:Лечение Легких Ран:5:3:40:1
 effect:HEAL_HP
 dice:15+m15
 effect:CURE:BLIND
@@ -1470,7 +1470,7 @@ effect:TIMED_DEC:CONFUSED
 dice:20
 desc:Cures 15% of your wounds (min 15hp) and heals 20 points worth of cuts.
 
-spell:Find Traps, Doors & Stairs:5:4:45:2
+spell:Поиск Ловушек, Дверей и Лестниц:5:4:45:2
 effect:DETECT_TRAPS
 dice:22d40
 effect:DETECT_DOORS
@@ -1479,7 +1479,7 @@ effect:DETECT_STAIRS
 dice:22d40
 desc:Detects all traps, doors, and stairs in the immediate area.
 
-spell:Stinking Cloud:7:5:40:3
+spell:Вонючее Облако:7:5:40:3
 effect:BALL:POIS:2
 dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 10
@@ -1487,47 +1487,47 @@ desc:Shoots a radius-2 poison ball.
 
 book:magic book:[Conjurings and Tricks]:9:1
 
-spell:Confuse Monster:7:6:40:2
+spell:Контузия Монстра:7:6:40:2
 effect:BOLT_AWARE:OLD_CONF
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to confuse a single monster for a level-dependant duration.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-spell:Lightning Bolt:9:7:40:3
+spell:Удар Молнии:9:7:40:3
 effect:BEAM:ELEC
 dice:$Dd6
 expr:D:PLAYER_LEVEL:- 5 / 6 + 3
 desc:Fires a lightning beam that hurts each monster in its path.
 
-spell:Trap/Door Destruction:9:8:45:3
+spell:Разрушение Ловушки/Двери:9:8:45:3
 effect:TOUCH:KILL_DOOR
 desc:Destroys all traps and doors within a 1-square radius of you.
 
-spell:Cure Poison:11:9:45:3
+spell:Лечение Яда:11:9:45:3
 effect:CURE:POISONED
 desc:Neutralizes poison.
 
-spell:Sleep Monster:11:8:40:3
+spell:Усыпление Монстра:11:8:40:3
 effect:BOLT_AWARE:OLD_SLEEP
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to put to sleep a single monster.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-spell:Teleport Self:13:10:45:3
+spell:Телепортация:13:10:45:3
 effect:TELEPORT
 dice:$B
 expr:B:PLAYER_LEVEL:* 5
 desc:Teleports you randomly within the current level.
 
-spell:Spear of Light:13:11:55:4
+spell:Копье Света:13:11:55:4
 effect:LINE:LIGHT_WEAK
 dice:6d8
 desc:Fires a beam that lights up each square and hurts each
 desc: light-sensitive monster in its path.
 
-spell:Frost Bolt:15:12:50:4
+spell:Ледяная Стрела:15:12:50:4
 effect:BOLT_OR_BEAM:COLD:-10
 dice:$Dd8
 expr:D:PLAYER_LEVEL:- 5 / 4 + 5
@@ -1536,7 +1536,7 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Wonder:15:18:80:10
+spell:Чудо:15:18:80:10
 effect:WONDER
 dice:$B+1d100
 expr:B:PLAYER_LEVEL:/ 5
@@ -1544,13 +1544,13 @@ desc:Invokes a random spell effect.
 
 book:magic book:[Incantations and Illusions]:9:1
 
-spell:Satisfy Hunger:17:17:55:3
+spell:Удовлетворение Голода:17:17:55:3
 effect:SET_NOURISH
 dice:16999
 desc:Magically renders you well-fed (but not satiated).
 desc:  This will also cure a bloated stomach.
 
-spell:Lesser Recharging:29:17:90:4
+spell:Малая Перезарядка:29:17:90:4
 effect:RECHARGE
 dice:$B
 expr:B:PLAYER_LEVEL:/ 5 + 2
@@ -1559,14 +1559,14 @@ desc:  Chance of success and number of charges gained increase with your
 desc: level and decrease with level of wand or staff and number of charges.
 desc:  A failed attempt to recharge destroys one wand or staff from the stack.
 
-spell:Turn Stone to Mud:15:13:50:4
+spell:Плавка Камня:15:13:50:4
 effect:LINE:KILL_WALL
 dice:20+1d30
 desc:Produces a beam that destroys the first section of wall it hits,
 desc: unless it is a permanent wall.  Each monster caught in the beam that
 desc: is susceptible to rock remover takes 20+1d30 points of damage.
 
-spell:Fire Bolt:25:20:60:3
+spell:Огненная Стрела:25:20:60:3
 effect:BOLT_OR_BEAM:FIRE
 dice:$Dd8
 expr:D:PLAYER_LEVEL:- 5 / 4 + 6
@@ -1575,25 +1575,25 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Polymorph Other:21:19:60:3
+spell:Трансформация:21:19:60:3
 effect:BOLT_STATUS:OLD_POLY
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to polymorph a single monster.
 desc:  Uniques are not affected.
 
-spell:Identify:23:25:90:3
+spell:Идентификация:23:25:90:3
 effect:IDENTIFY
 desc:Reveals the powers of an object.
 
-spell:Reveal Monsters:25:17:50:4
+spell:Обнаружение Монстров:25:17:50:4
 effect:DETECT_INVISIBLE_MONSTERS
 dice:22d40
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all monsters in the immediate area, for one turn only.
 
-spell:Acid Bolt:20:16:50:6
+spell:Кислотная Стрела:20:16:50:6
 effect:BOLT_OR_BEAM:ACID
 dice:$Dd8
 expr:D:PLAYER_LEVEL:- 5 / 4 + 8
@@ -1602,7 +1602,7 @@ desc:  Sometimes a beam is fired instead that hurts each monster
 desc: in its path.
 desc:  The chance to get a beam goes up with your character level.
 
-spell:Slow Monster:25:21:65:3
+spell:Замедление Монстра:25:21:65:3
 effect:BOLT_STATUS:OLD_SLOW
 dice:20
 desc:Attempts to slow a single monster.
@@ -1610,33 +1610,33 @@ desc:  Uniques are not affected.
 
 book:magic book:[Sorcery and Evocations]:6:1
 
-spell:Frost Ball:27:21:65:6
+spell:Ледяной Шар:27:21:65:6
 effect:BALL:COLD:2
 dice:$B
 expr:B:PLAYER_LEVEL:+ 30
 desc:Shoots a radius-2 frost ball.
 
-spell:Teleport Other:31:25:70:3
+spell:Телепортация Монстра:31:25:70:3
 effect:BOLT_STATUS:AWAY_ALL
 dice:$B
 expr:B:MAX_SIGHT:* 5
 desc:Produces a bolt that teleports the first monster in its path
 desc: up to 100 squares away.
 
-spell:Haste Self:33:25:75:4
+spell:Ускорение:33:25:75:4
 effect:TIMED_INC:FAST:5
 dice:$B+d20
 expr:B:PLAYER_LEVEL:+ 0
 desc:Hastes you (+10 to speed) for a level-dependant duration.
 
-spell:Mass Sleep:23:20:60:4
+spell:Массовое Усыпление:23:20:60:4
 effect:PROJECT_LOS:OLD_SLEEP
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to put to sleep each monster within line of sight.
 desc:  Uniques and monsters that resist confusion are not affected.
 
-spell:Fire Ball:34:28:80:9
+spell:Огненный Шар:34:28:80:9
 effect:BALL:FIRE:2
 dice:$B
 expr:B:PLAYER_LEVEL:+ 55
@@ -1651,22 +1651,22 @@ desc:Detects all treasure in the immediate area.
 
 book:magic book:[Resistances of Scarabtarices]:5:1
 
-spell:Resist Cold:8:15:50:30
+spell:Сопротивление Холоду:8:15:50:30
 effect:TIMED_INC:OPP_COLD
 dice:20+d20
 desc:Grants you resistance to cold for 20+1d20 turns.
 
-spell:Resist Fire:8:15:50:30
+spell:Сопротивление Огню:8:15:50:30
 effect:TIMED_INC:OPP_FIRE
 dice:20+d20
 desc:Grants you resistance to fire for 20+1d20 turns.
 
-spell:Resist Poison:26:25:75:50
+spell:Сопротивление Яду:26:25:75:50
 effect:TIMED_INC:OPP_POIS
 dice:20+d20
 desc:Grants you resistance to poison for 20+1d20 turns.
 
-spell:Resistance:31:40:85:70
+spell:Сопротивление:31:40:85:70
 effect:TIMED_INC:OPP_ACID
 dice:20+d20
 effect:TIMED_INC:OPP_ELEC
@@ -1680,7 +1680,7 @@ dice:20+d20
 desc:Grants you resistance to acid, cold, fire, lightning, and poison for
 desc: 20+1d20 turns.
 
-spell:Shield:35:30:75:80
+spell:Щит:35:30:75:80
 effect:TIMED_INC:SHIELD
 dice:30+d20
 desc:Grants you +50 to AC for 30+1d20 turns.
@@ -1693,13 +1693,13 @@ dice:$B
 expr:B:PLAYER_LEVEL:/ 2 + 40
 desc:Shoots a radius-3 poison ball.
 
-spell:Acid Ball:30:24:70:6
+spell:Кислотный Шар:30:24:70:6
 effect:BALL:ACID:2
 dice:$B
 expr:B:PLAYER_LEVEL:+ 40
 desc:Shoots a radius-2 acid ball.
 
-spell:Ice Storm:35:35:70:10
+spell:Ледяной Шторм:35:35:70:10
 effect:BALL:ICE:3
 dice:$B
 expr:B:PLAYER_LEVEL:* 2 + 50
@@ -1720,25 +1720,25 @@ desc: location, the next meteor may continue to find another target.
 
 book:magic book:[Mordenkainen's Escapes]:5:1
 
-spell:Door Creation:20:17:20:25
+spell:Создание Дверей:20:17:20:25
 effect:TOUCH:MAKE_DOOR
 desc:A door is created on each empty floor space that is directly
 desc: adjacent to you.  These doors are closed, but not locked.
 
-spell:Stair Creation:32:32:50:40
+spell:Создание Лестниц:32:32:50:40
 effect:CREATE_STAIRS
 desc:A stair (going up or down, chosen at random) is created on the space
 desc: where you are standing.  This will destroy any terrain feature that
 desc: was there before.  It will also destroy all items currently on the
 desc: floor where the spell is cast.
 
-spell:Teleport Level:34:27:60:15
+spell:Межуровневая Телепортация:34:27:60:15
 effect:TELEPORT_LEVEL
 desc:Teleports you 1 level up or 1 level down (chosen at random).
 desc:  This spell has no effect when the option to restrict the use of
 desc: stairs and recall is set.
 
-spell:Word of Recall:35:35:75:16
+spell:Слово Возвращения:35:35:75:16
 effect:RECALL
 desc:Teleports you from the dungeon to the town or from the town to the
 desc: deepest level you have visited in the dungeon.
@@ -1748,7 +1748,7 @@ desc: of recall again.
 desc:  This spell has no effect when the option to restrict the use of
 desc: stairs and recall is set, unless Morgoth is dead.
 
-spell:Rune of Protection:40:75:80:80
+spell:Руна Защиты:40:75:80:80
 effect:RUNE
 desc:Inscribes a glyph of warding beneath you.
 desc:  Summoned monsters can't appear on the glyph.
@@ -1760,7 +1760,7 @@ desc: breaking it, or until you leave the level.
 
 book:magic book:[Tenser's Transformations]:6:1
 
-spell:Heroism:18:15:30:40
+spell:Героизм:18:15:30:40
 effect:HEAL_HP
 dice:10
 effect:CURE:AFRAID
@@ -1769,7 +1769,7 @@ dice:25+d25
 desc:Cures 10 points of damage, removes fear and grants you heroism
 desc: (resistance to fear, and a bonus of +12 to-hit) for 25+1d25 turns.
 
-spell:Berserker:23:30:80:35
+spell:Ярость:23:30:80:35
 effect:HEAL_HP
 dice:30
 effect:CURE:AFRAID
@@ -1779,19 +1779,19 @@ desc:Cures 30 points of damage, removes fear, and grants you berserk
 desc: strength (resistance to fear, a bonus of +24 to-hit, and a penalty
 desc: of -10 to AC) for 25+1d25 turns.
 
-spell:Enchant Armor:33:45:90:50
+spell:Зачарование Доспехов:33:45:90:50
 effect:ENCHANT:TOAC
 dice:$B+1d3
 expr:B:PLAYER_LEVEL:/ 20 - 1
 desc:Attempts to improve the armour class bonus of a piece of armour.
 
-spell:Enchant Weapon:34:50:90:60
+spell:Зачарование Оружия:34:50:90:60
 effect:ENCHANT:TOBOTH
 dice:$B+1d4
 expr:B:PLAYER_LEVEL:/ 20 - 1
 desc:Attempts to improve the to-hit bonus and the to-dam bonus of a weapon.
 
-spell:Greater Recharging:35:50:95:115
+spell:Большая Перезарядка:35:50:95:115
 effect:RECHARGE
 dice:$B
 expr:B:PLAYER_LEVEL:+ 50
@@ -1801,7 +1801,7 @@ desc: level and decrease with level of wand or staff and number of charges,
 desc: but are overall much better than for the spell Lesser Recharging.
 desc:  A failed attempt to recharge destroys one wand or staff from the stack.
 
-spell:Elemental Brand:31:60:95:180
+spell:Клеймо Элементов:31:60:95:180
 effect:BRAND_AMMO
 desc:Brands one stack of ammunition with fire, cold, or poison
 desc: (selected at random) and at the same time attempts to improve
@@ -1811,7 +1811,7 @@ desc: slay, is broken, or is cursed.
 
 book:magic book:[Kelek's Grimoire of Power]:3:1
 
-spell:Earthquake:30:28:60:16
+spell:Землетрясение:30:28:60:16
 effect:EARTHQUAKE
 param:10
 desc:Causes a 10-square radius earthquake around you.
@@ -1820,7 +1820,7 @@ desc: squares in the area of effect.
 desc:  Artifacts will not be destroyed by this spell.
 desc:  This spell has no effect when used in the town.
 
-spell:Bedlam:32:30:70:12
+spell:Бедлам:32:30:70:12
 effect:BALL:OLD_CONF:4
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
@@ -1828,7 +1828,7 @@ desc:Shoots a radius-4 confusion ball that doesn't cause physical
 desc: damage but has a chance to confuse each monster in the area of effect.
 desc:  Uniques or monsters that resist confusion are not affected.
 
-spell:Word of Destruction:37:30:95:30
+spell:Слово Разрушения:37:30:95:30
 effect:DESTRUCTION
 param:15
 desc:Destroys everything in a 15-square radius circle around you.
@@ -1876,13 +1876,13 @@ magic:1:400:2:9
 
 book:prayer book:[Beginners Handbook]:7:2
 
-spell:Detect Evil:1:1:30:4
+spell:Поиск Зла:1:1:30:4
 effect:DETECT_EVIL
 dice:22d40
 desc:Detects all evil monsters in the immediate area,
 desc: for one turn only.
 
-spell:Cure Light Wounds:2:2:35:4
+spell:Лечение Легких Ран:2:2:35:4
 effect:HEAL_HP
 dice:15+m15
 effect:CURE:BLIND
@@ -1892,16 +1892,16 @@ effect:TIMED_DEC:CONFUSED
 dice:20
 desc:Cures 15% of your wounds (min 15hp) and heals 20 points worth of cuts.
 
-spell:Bless:3:3:35:4
+spell:Благословление:3:3:35:4
 effect:TIMED_INC:BLESSED
 dice:12+d12
 desc:Blesses you, giving a bonus of +5 to AC and +10 to-hit, for 12+1d12 turns.
 
-spell:Remove Fear:5:3:15:4
+spell:Снятие Страха:5:3:15:4
 effect:CURE:AFRAID
 desc:Removes fear.
 
-spell:Call Light:5:4:35:4
+spell:Призвать Свет:5:4:35:4
 effect:LIGHT_AREA
 param:1:10
 dice:2d$S
@@ -1910,7 +1910,7 @@ desc:Lights up all squares in a level-dependant area, and hurts
 desc: all light-sensitive monsters in the area of effect.
 desc:  If you are in a room, the entire room will be lit up as well.
 
-spell:Find Traps, Doors & Stairs:7:5:40:3
+spell:Поиск Ловушек, Дверей и Лестниц:7:5:40:3
 effect:DETECT_TRAPS
 dice:22d40
 effect:DETECT_DOORS
@@ -1919,26 +1919,26 @@ effect:DETECT_STAIRS
 dice:22d40
 desc:Detects all traps, doors, and stairs in the immediate area.
 
-spell:Slow Poison:9:7:40:3
+spell:Замедление Яда:9:7:40:3
 effect:TIMED_DEC:POISONED:2
 desc:Halves the remaining duration of any current poisoning.
 
 book:prayer book:[Words of Wisdom]:7:2
 
-spell:Scare Monster:9:7:40:3
+spell:Устрашение Монстра:9:7:40:3
 effect:BOLT_AWARE:TURN_ALL
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to scare a single monster for a level-dependant duration.
 desc:  Uniques and monsters that resist fear are not affected.
 
-spell:Portal:9:8:40:3
+spell:Портал:9:8:40:3
 effect:TELEPORT
 dice:$B
 expr:B:PLAYER_LEVEL:* 3
 desc:Teleports you randomly over a short distance.
 
-spell:Cure Serious Wounds:11:9:40:3
+spell:Лечение Серьезных Ран:11:9:40:3
 effect:HEAL_HP
 dice:25+m20
 effect:CURE:BLIND
@@ -1946,20 +1946,20 @@ effect:CURE:CUT
 effect:CURE:CONFUSED
 desc:Cures 20% of your wounds (min 25hp) and heals all cut damage.
 
-spell:Chant:11:10:45:3
+spell:Пение:11:10:45:3
 effect:TIMED_INC:BLESSED
 dice:24+d24
 desc:Blesses you, giving a bonus of +5 to AC and +10 to-hit, for 24+1d24
 desc: turns.
 
-spell:Sanctuary:11:10:45:3
+spell:Убежище:11:10:45:3
 effect:TOUCH_AWARE:OLD_SLEEP
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
 desc:Attempts to put to sleep each monster directly adjacent to you.
 desc:  Uniques and monsters that resist sleep are not affected.
 
-spell:Satisfy Hunger:13:10:45:3
+spell:Удовлетворение Голода:13:10:45:3
 effect:SET_NOURISH
 dice:16999
 desc:Magically renders you well-fed (but not satiated).
@@ -1970,7 +1970,7 @@ desc:  This will also cure a bloated stomach.
 #D:Removes all ordinary curses from all equipped items.
 #D:  Heavy or permanent curses are not affected.
 
-spell:Resist Heat and Cold:15:13:45:4
+spell:Сопротивление Огню и Холоду:15:13:45:4
 effect:TIMED_INC:OPP_COLD
 dice:10+d10
 effect:TIMED_INC:OPP_FIRE
@@ -1981,11 +1981,11 @@ desc:Gives you temporary resistance to cold and fire, for 10+1d10 turns each.
 
 book:prayer book:[Chants and Blessings]:9:2
 
-spell:Neutralize Poison:15:15:50:4
+spell:Нейтрализация Яда:15:15:50:4
 effect:CURE:POISONED
 desc:Neutralizes poison.
 
-spell:Orb of Draining:17:15:50:4
+spell:Святой Огонь:17:15:50:4
 effect:BALL:HOLY_ORB
 param:2:30
 dice:$B+3d6
@@ -1996,7 +1996,7 @@ desc:  Evil monsters take double damage.
 desc:  All cursed items in the area of effect are destroyed.
 desc:  The bigger area of effect is attained at character level 30.
 
-spell:Cure Critical Wounds:17:15:50:4
+spell:Лечение Критических Ран:17:15:50:4
 effect:HEAL_HP
 dice:30+m25
 effect:CURE:BLIND
@@ -2008,12 +2008,12 @@ effect:CURE:AMNESIA
 desc:Cures 25% of your wounds (min 30hp) and heals all cut damage, poison,
 desc: amnesia and stunning.
 
-spell:Sense Invisible:19:15:50:4
+spell:Чувствовать Невидимое:19:15:50:4
 effect:TIMED_INC:SINVIS
 dice:24+d24
 desc:Enables you to see invisible monsters for 24+1d24 turns.
 
-spell:Protection from Evil:19:15:50:4
+spell:Защита от Зла:19:15:50:4
 effect:TIMED_INC:PROTEVIL
 dice:$B+d25
 expr:B:PLAYER_LEVEL:* 3
@@ -2021,7 +2021,7 @@ desc:Protects you from evil for a level-dependant duration:
 desc: all melee attacks by evil monsters have a chance to be repelled,
 desc: unless the monster's level is higher than your character level.
 
-spell:Earthquake:21:17:50:3
+spell:Землетрясение:21:17:50:3
 effect:EARTHQUAKE
 param:10
 desc:Causes a 10-square radius earthquake around you.
@@ -2030,12 +2030,12 @@ desc: squares in the area of effect.
 desc:  Artifacts will not be destroyed by this prayer.
 desc:  This prayer has no effect when used in the town.
 
-spell:Sense Surroundings:23:17:50:3
+spell:Чувствовать Окружающее:23:17:50:3
 effect:MAP_AREA
 dice:22d40
 desc:Maps out a portion of the level around you.
 
-spell:Cure Mortal Wounds:25:20:50:3
+spell:Лечение Смертельных Ран:25:20:50:3
 effect:HEAL_HP
 dice:50+m30
 effect:CURE:BLIND
@@ -2047,7 +2047,7 @@ effect:CURE:AMNESIA
 desc:Cures 30% of your wounds (min 50hp), cures all stunning and heals all
 desc: cut damage, poison and amnesia.
 
-spell:Turn Undead:27:21:50:3
+spell:Устрашение Мертвецов:27:21:50:3
 effect:PROJECT_LOS_AWARE:TURN_UNDEAD
 dice:$B
 expr:B:PLAYER_LEVEL:+ 0
@@ -2056,18 +2056,18 @@ desc: causing it to flee in terror for a level-dependant duration.
 
 book:prayer book:[Exorcism and Dispelling]:4:2
 
-spell:Prayer:29:22:50:3
+spell:Молитва:29:22:50:3
 effect:TIMED_INC:BLESSED
 dice:48+d48
 desc:Blesses you, giving a bonus of +5 to AC and +10 to-hit, for 48+1d48 turns.
 
-spell:Dispel Undead:31:24:60:3
+spell:Уничтожение Мертвецов:31:24:60:3
 effect:PROJECT_LOS_AWARE:DISP_UNDEAD
 dice:d$S
 expr:S:PLAYER_LEVEL:* 3
 desc:Inflicts unresistable damage on each undead monster within line of sight.
 
-spell:Heal:33:28:60:3
+spell:Исцеление:33:28:60:3
 effect:HEAL_HP
 dice:300+m35
 effect:CURE:BLIND
@@ -2079,7 +2079,7 @@ effect:CURE:AMNESIA
 desc:Cures 35% of your max hp (min 300), cures all stunning and heals all cut
 desc: damage, poison and amnesia.
 
-spell:Dispel Evil:35:32:70:4
+spell:Уничтожение Зла:35:32:70:4
 effect:PROJECT_LOS_AWARE:DISP_EVIL
 dice:d$S
 expr:S:PLAYER_LEVEL:* 3
@@ -2087,31 +2087,31 @@ desc:Inflicts unresistable damage on each evil monster within line of sight.
 
 book:prayer book:[Ethereal Openings]:5:2
 
-spell:Blink:7:7:50:2
+spell:Скачок:7:7:50:2
 effect:TELEPORT
 dice:10
 desc:Teleports you randomly up to 10 squares away.
 
-spell:Teleport Self:20:20:50:4
+spell:Телепортация:20:20:50:4
 effect:TELEPORT
 dice:$B
 expr:B:PLAYER_LEVEL:* 8
 desc:Teleports you randomly within the current level.
 
-spell:Teleport Other:25:25:80:12
+spell:Телепортация Монстра:25:25:80:12
 effect:BOLT_STATUS:AWAY_ALL
 dice:$B
 expr:B:MAX_SIGHT:* 5
 desc:Produces a bolt that teleports the first monster in its path
 desc: up to 100 squares away.
 
-spell:Teleport Level:35:50:75:115
+spell:Межуровневая Телепортация:35:50:75:115
 effect:TELEPORT_LEVEL
 desc:Teleports you 1 level up or 1 level down (chosen at random).
 desc:  This spell has no effect when the option to restrict the use of
 desc: stairs and recall is set.
 
-spell:Word of Recall:40:60:75:10
+spell:Слово Возвращения:40:60:75:10
 effect:RECALL
 desc:Teleports you from the dungeon to the town or from the town to the
 desc: deepest level you have visited in the dungeon.
@@ -2123,13 +2123,13 @@ desc: stairs and recall is set, unless Morgoth is dead.
 
 book:prayer book:[Godly Insights]:4:2
 
-spell:Detect Monsters:5:5:50:1
+spell:Поиск Монстров:5:5:50:1
 effect:DETECT_VISIBLE_MONSTERS
 dice:22d40
 desc:Detects all non-invisible monsters in the immediate area,
 desc: for one turn only.
 
-spell:Detection:15:15:80:12
+spell:Поиск:15:15:80:12
 effect:DETECT_TRAPS
 dice:22d40
 effect:DETECT_DOORS
@@ -2151,7 +2151,7 @@ spell:Perception:25:25:80:16
 effect:IDENTIFY
 desc:Reveals the powers of an object.
 
-spell:Probing:30:15:80:135
+spell:Анализ Монстра:30:15:80:135
 effect:PROBE
 desc:Probes each monster within line of sight, giving information on the
 desc: current hit points of the monster and many of its characteristics
@@ -2159,7 +2159,7 @@ desc: and abilities (excluding its melee, spellcasting, and breath attacks).
 
 book:prayer book:[Purifications and Healing]:3:2
 
-spell:Cure Serious Wounds:9:4:50:25
+spell:Лечение Серьезных Ран:9:4:50:25
 effect:HEAL_HP
 dice:25+m20
 effect:CURE:BLIND
@@ -2167,7 +2167,7 @@ effect:CURE:CUT
 effect:CURE:CONFUSED
 desc:Cures 20% of your wounds (min 25hp) and heals all cut damage.
 
-spell:Cure Mortal Wounds:20:10:60:35
+spell:Лечение Смертельных Ран:20:10:60:35
 effect:HEAL_HP
 dice:50+m30
 effect:CURE:BLIND
@@ -2179,7 +2179,7 @@ effect:CURE:AMNESIA
 desc:Cures 30% of your wounds (min 50hp), cures all stunning and heals all
 desc: cut damage, poison and amnesia.
 
-spell:Restoration:45:80:90:250
+spell:Восстановление:45:80:90:250
 effect:RESTORE_STAT:STR
 effect:RESTORE_STAT:INT
 effect:RESTORE_STAT:WIS
@@ -2189,11 +2189,11 @@ desc:Restores to maximum all stats that are currently below maximum.
 
 book:prayer book:[Holy Infusions]:5:2
 
-spell:Unbarring Ways:10:16:50:20
+spell:Открытые Пути:10:16:50:20
 effect:TOUCH:KILL_DOOR
 desc:Destroys all traps and doors within a 1-square radius of you.
 
-spell:Recharging:25:30:80:15
+spell:Перезарядка:25:30:80:15
 effect:RECHARGE
 dice:$B
 expr:B:PLAYER_LEVEL:+ 20
@@ -2202,19 +2202,19 @@ desc:  Chance of success and number of charges gained increase with your
 desc: level and decrease with level of wand or staff and number of charges.
 desc:  A failed attempt to recharge destroys one wand or staff from the stack.
 
-spell:Enchant Weapon:40:70:80:200
+spell:Зачарование Оружия:40:70:80:200
 effect:ENCHANT:TOBOTH
 dice:1d4
 desc:Attempts to improve the to-hit bonus and the to-dam bonus of a weapon.
 desc: Also gives a chance to break a curse.
 
-spell:Enchant Armour:42:80:85:250
+spell:Зачарование Доспехов:42:80:85:250
 effect:ENCHANT:TOAC
 dice:1+1d3
 desc:Attempts to improve the armour class bonus of a piece of armour.
 desc: Also gives a chance to break a curse.
 
-spell:Elemental Brand:47:95:85:250
+spell:Клеймо Элементов:47:95:85:250
 effect:BRAND_WEAPON
 desc:Brands the currently wielded melee weapon with fire (50%) or cold (50%),
 desc: and at the same time attempts to improve the to-hit bonus and the
@@ -2224,18 +2224,18 @@ desc: is already branded, has a slay, is broken, or is cursed.
 
 book:prayer book:[Wrath of God]:3:2
 
-spell:Dispel Undead:20:13:70:20
+spell:Уничтожение Мертвецов:20:13:70:20
 effect:PROJECT_LOS_AWARE:DISP_UNDEAD
 dice:d$S
 expr:S:PLAYER_LEVEL:* 4
 desc:Inflicts unresistable damage on each undead monster within line of sight.
 
-spell:Banish Evil:30:35:80:200
+spell:Изгнание Зла:30:35:80:200
 effect:PROJECT_LOS_AWARE:AWAY_EVIL
 dice:100
 desc:Teleports away each evil monster within line of sight.
 
-spell:Word of Destruction:40:40:80:100
+spell:Слово Разрушения:40:40:80:100
 effect:DESTRUCTION
 param:15
 desc:Destroys everything in a 15-square radius circle around you.

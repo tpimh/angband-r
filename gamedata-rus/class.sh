@@ -53,6 +53,30 @@ while read in; do
     fi
 done < $PATCHNAME
 
+# spells
+FILENAME=class.txt
+PATCHNAME=spell.tsv
+while read in; do
+    ID=`echo "$in" | awk -F'\t' '{print $2}' | sed -e 's/\\x60/\\x27/g' -e 's/\\x27\\x27/\\x22/g' -e 's@/@\\\/@g'`
+    if [ "$ID" != "Name" ]; then
+        NAME_B=`echo "$in" | awk -F'\t' '{print $3}' | sed -e 's/\\x60/\\x27/g' -e 's/\\x27\\x27/\\x22/g' -e 's@/@\\\/@g'`
+
+        NAME_ORIG=`sed -n 's/^spell:'"$ID"':.*/'"$ID"'/p' $FILENAME`
+
+        if [ "$NAME_ORIG" = "" ]; then
+            # be silent if monster was not found
+            echo -n
+        else
+            if [ "$ID" = "$NAME_B" ]; then
+                echo "(warning) '$ID' spell name not translated"
+            else
+                # replace the artifact
+                sed -i 's/^spell:'"$ID"':/spell:'"$NAME_B"':/' $FILENAME
+            fi
+        fi
+    fi
+done < $PATCHNAME
+
 
 echo "Translation status of $FILENAME:"
 
@@ -67,3 +91,9 @@ NOTRANS=`comm -12 <(grep -e '^title:' $FILENAME | sort) <(grep -e '^title:' $FIL
 TRANS=`expr $LINESTOTAL - $NOTRANS`
 
 echo "title: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
+
+LINESTOTAL=`grep -e '^spell:' $FILENAME | wc -l`
+NOTRANS=`comm -12 <(grep -e '^spell:' $FILENAME | sort) <(grep -e '^spell:' $FILENAME.orig | sort) | wc -l`
+TRANS=`expr $LINESTOTAL - $NOTRANS`
+
+echo "spell: $TRANS/$LINESTOTAL (`expr ${TRANS}00 / $LINESTOTAL`%)"
