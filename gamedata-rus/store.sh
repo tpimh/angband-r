@@ -50,7 +50,7 @@ while read in; do
     fi
 done < $PATCHNAME
 
-echo "Translation status:"
+echo "Translation status of $FILENAME:"
 
 LINESTOTAL=`grep -e '^owner:' $FILENAME | wc -l`
 NOTRANS=`comm -12 <(grep -e '^owner:' $FILENAME | sort) <(grep -e '^owner:' $FILENAME.orig | sort) | wc -l`

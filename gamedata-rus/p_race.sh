@@ -29,7 +29,7 @@ while read in; do
     fi
 done < $PATCHNAME
 
-echo "Translation status:"
+echo "Translation status of $FILENAME:"
 
 LINESTOTAL=`grep -e '^name:' $FILENAME | wc -l`
 NOTRANS=`comm -12 <(grep -e '^name:' $FILENAME | sort) <(grep -e '^name:' $FILENAME.orig | sort) | wc -l`
