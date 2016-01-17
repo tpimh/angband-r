@@ -1861,7 +1861,7 @@ power:12
 effect:ENCHANT:TOAC
 dice:1
 
-name:273:*Enchant Weapon*
+name:273:Зачарования Оружия
 graphics:?:w
 type:scroll
 properties:50:5:500
@@ -1872,7 +1872,7 @@ effect:ENCHANT:TOBOTH
 dice:1d3
 
 
-name:274:*Enchant Armour*
+name:274:Зачарования Доспехов
 graphics:?:w
 type:scroll
 properties:50:5:500
@@ -1893,7 +1893,7 @@ power:8
 effect:REMOVE_CURSE
 
 ## Removed in 3.4 until curses are redone
-name:276:*Remove Curse*
+name:276:Уничтожения Проклятья
 graphics:?:w
 type:scroll
 properties:50:5:8000
@@ -1935,7 +1935,7 @@ power:20000
 effect:ACQUIRE
 dice:1
 
-name:281:*Acquirement*
+name:281:Приобретения
 graphics:?:w
 type:scroll
 properties:60:5:10000
@@ -2107,7 +2107,7 @@ alloc:30:70 to 100
 power:20
 effect:RUNE
 
-name:300:*Destruction*
+name:300:Разрушения
 graphics:?:w
 type:scroll
 properties:40:5:1000
@@ -2322,7 +2322,7 @@ effect:CURE:CONFUSED
 effect:NOURISH
 dice:200
 
-name:322:*Healing*
+name:322:Исцеления
 graphics:!:d
 type:potion
 properties:40:4:1500
@@ -2467,7 +2467,7 @@ power:22
 effect:ENLIGHTENMENT
 dice:1
 
-name:342:*Enlightenment*
+name:342:Просвещения
 graphics:!:d
 type:potion
 properties:70:4:12000
@@ -3131,7 +3131,7 @@ power:5
 effect:EARTHQUAKE
 param:10
 
-name:404:*Destruction*
+name:404:Разрушения
 graphics:_:d
 type:staff
 properties:50:50:6000

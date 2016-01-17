@@ -3107,7 +3107,7 @@ spells:BO_COLD
 desc:A strange creature that disguises itself as a discarded potion bottle to
 desc: lure unsuspecting adventurers within reach of its venomous claws.
 mimic:potion:исцеления
-mimic:potion:*:Исцеления*
+mimic:potion:Исцеления
 mimic:potion:жизни
 mimic:potion:опыта
 mimic:potion:улучшения
@@ -3518,8 +3518,8 @@ mimic:scroll:изгнания
 mimic:scroll:массового изгнания
 mimic:scroll:межуровневой телепортации
 mimic:scroll:приобретения
-mimic:scroll:*:Приобретения*
-mimic:scroll:*:Разрушения*
+mimic:scroll:Приобретения
+mimic:scroll:Разрушения
 
 name:252:огненн$AMT вихр*ь$N2E
 base:vortex

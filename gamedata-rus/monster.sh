@@ -92,7 +92,8 @@ done < $PATCHNAME
 
 # remove plurals
 sed -i '/^plural:/ d' $FILENAME
-
+# fix a strange thing
+sed -i 's/\*:\(.*\)\*/\1/g' $FILENAME
 
 echo "Translation status of $FILENAME:"
 
