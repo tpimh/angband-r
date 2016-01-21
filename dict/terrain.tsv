@@ -1,4 +1,11 @@
 ID	Name	Translation
+0	unknown grid	unknown grid
+1	open floor	open floor
+2	closed door	closed door
+3	open door	open door
+4	broken door	broken door
+5	up staircase	up staircase
+6	down staircase	down staircase
 7	General Store	Главный Магазин
 8	Armoury	Магазин Доспехов
 9	Weapon Smiths	Оружейная
@@ -7,3 +14,16 @@ ID	Name	Translation
 12	Magic Shop	Магазин Магии
 13	Black Market	Черный Рынок
 14	Home	Ваш Дом
+15	secret door	secret door
+16	pile of rubble	pile of rubble
+17	magma vein	magma vein
+18	quartz vein	quartz vein
+19	magma vein with treasure	magma vein with treasure
+20	quartz vein with treasure	quartz vein with treasure
+21	granite wall	granite wall
+22	permanent wall	permanent wall
+23	dtrap edge - floor	dtrap edge - floor
+24	dtrap edge - wall	dtrap edge - wall
+25	lava flow	lava flow
+26	pile of passable rubble	pile of passable rubble
+
