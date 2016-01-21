@@ -1,9 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 . ./func.sh
 
-IN=$1
-
-OUT=$IN
+IN="$1"
+OUT="$IN"
 
 printf "%s\n" "$OUT"

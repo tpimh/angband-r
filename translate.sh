@@ -6,7 +6,7 @@ for F in $ENGDIR/*.txt; do
     FNAME=`basename "$F"`
     echo -n > $RUSDIR/$FNAME
     while IFS='' read -r IN; do
-        OUT=`bash ${FNAME%.txt}.sh $IN`
+        OUT=`bash ${FNAME%.txt}.sh "$IN"`
         printf "%s\n" "$OUT" >> $RUSDIR/$FNAME
     done < $ENGDIR/$FNAME
 done
