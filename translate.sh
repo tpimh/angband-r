@@ -1,5 +1,16 @@
 #!/bin/sh
 
+. ./func.sh
+
+for F in $ENGDIR/*.txt; do
+    FNAME=`basename "$F"`
+    echo -n > $RUSDIR/$FNAME
+    while IFS='' read -r IN; do
+        OUT=`bash ${FNAME%.txt}.sh $IN`
+        printf "%s\n" "$OUT" >> $RUSDIR/$FNAME
+    done < $ENGDIR/$FNAME
+done
+
 bash count.sh name monster
 
 bash count.sh msg activation

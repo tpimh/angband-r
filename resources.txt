@@ -1,0 +1,97 @@
+activation:
+# msg: - (messages)
+# desc: -
+
+artifact:
+# name: - (artifact#ID)
+# desc: - (...)
+# base-object: - (object#NAME)
+# msg: - (messages)
+
+body: N/A
+
+class:
+# name: - (class#ID)
+# title: - (title)
+# spell: - (spell#ID)
+# desc: - (...)
+# equip: - (object#NAME)
+# book: - (object#NAME)
+
+constants: N/A
+
+dungeon_profile: N/A
+
+ego_item:
+# name: - (ego_item#ID)
+# item: - (object#NAME)
+
+flavor:
+# flavor: -
+# fixed: -
+
+hints:
+# H: -
+
+history:
+# phrase: - (history#ID&NAME)
+
+monster:
+# name: - (monster#ID)
+# desc: - (...)
+# friends: - (monster#NAME)
+# plural: del
+# drop-artifact: - (artifact#NAME)
+# drop: - (object#NAME)
+# mimic: - (object#NAME)
+
+monster_base:
+# desc: - (monster_base)
+
+monster_spell:
+# lore: -
+# message-vis: -
+# message-invis: -
+# message-save: -
+# message-miss: -
+
+names:
+# word: -
+
+object:
+# name: - (object#ID)
+# desc: - (...)
+# msg: - (messages)
+
+object_base:
+# name: -
+
+pain:
+# message: - (pain)
+
+pit:
+# mon-ban: - (monster#NAME)
+
+p_race:
+# name: - (race#ID)
+
+quest:
+# race: - (monster#NAME)
+
+room_template: N/A
+
+store:
+# store: - (terrain#NAME)
+# owner: - (owner)
+# normal: - (object#NAME)
+# always: - (object#NAME)
+
+terrain:
+# name: - (terrain#ID)
+# desc: -
+
+trap:
+# name: -
+# desc: -
+
+vault: N/A
