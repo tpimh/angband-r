@@ -3743,7 +3743,7 @@ friends:50:3d4:Half-orc
 friends:80:2d7:Warg
 friends:100:4d4:Uruk
 friends:50:1d3:Orc captain
-friends:100:1d1:Bolg, son of Azog
+friends:100:1d1:Bolg, Son of Azog
 desc:He is also known as the King of Khazad-dûm.  His ego is renowned to be 
 desc: bigger than his head.
 
@@ -4314,7 +4314,7 @@ blow:BITE:HURT:1d6
 flags:REGENERATE 
 flags:DROP_20
 flags:IM_POIS
-friends:30:1d5:Forest Troll
+friends:30:1d5:Forest troll
 friends:100:3d3:Same
 desc:A powerful troll form.  Venom drips from its needlelike claws.
 
@@ -4464,7 +4464,7 @@ flags:DROP_40
 flags:OPEN_DOOR
 flags:IM_COLD
 spell-freq:10
-friends:60:1d7:Cold Hound
+friends:60:1d7:Cold hound
 friends:80:1d3:Same
 desc:A twelve foot tall giant covered in furs.
 
@@ -4820,7 +4820,7 @@ flags:DROP_40
 flags:OPEN_DOOR
 flags:IM_FIRE
 spell-freq:8
-friends:60:1d7:Fire Hound
+friends:60:1d7:Fire hound
 friends:80:1d3:Same
 desc:A glowing fourteen foot tall giant.  Flames drip from its red skin.
 
@@ -5402,7 +5402,7 @@ blow:BITE:HURT:2d6
 blow:BITE:HURT:2d6
 flags:MALE | REGENERATE
 flags:DROP_20 | ONLY_ITEM
-friends:100:2d4:Stone Troll
+friends:100:2d4:Stone troll
 friends:100:4d4:Same
 desc:A huge, ugly, half-human in search of plunder.
 
@@ -6573,7 +6573,7 @@ flags:FORCE_SLEEP
 spell-freq:6
 spells:CAUSE_3 | HOLD | MISSILE | SLOW
 spells:BO_FIRE
-friends:50:2d3:Mirkwood Spider
+friends:50:2d3:Mirkwood spider
 friends:100:3d3:Same
 desc:An intelligent arachnid whose hairy legs weave spells in the air.
 
@@ -6857,9 +6857,9 @@ spells:S_DRAGON | S_MONSTER | S_UNDEAD
 drop:magic book:[Incantations and Illusions]:5:1:1
 drop:magic book:[Sorcery and Evocations]:10:1:1
 friends:30:1d1:Master thief
-friends:30:1d1:Ranger chieftain
+friends:30:1d1:Ranger Chieftain
 friends:30:1d1:Patriarch
-friends:30:1d1:Knight templar
+friends:30:1d1:Knight Templar
 friends:30:1d1:Berserker
 desc:A human figure in robes, he moves with magically improved speed, and his
 desc: hands are ablur with spell casting.
@@ -6997,9 +6997,9 @@ spells:S_MONSTER | S_UNDEAD
 drop:prayer book:[Chants and Blessings]:5:1:1
 drop:prayer book:[Exorcism and Dispelling]:10:1:1
 friends:30:1d1:Master thief
-friends:30:1d1:Ranger chieftain
+friends:30:1d1:Ranger Chieftain
 friends:30:1d1:Sorcerer
-friends:30:1d1:Knight templar
+friends:30:1d1:Knight Templar
 friends:30:1d1:Berserker
 desc:An evil priest, dressed all in black.  Deadly spells hit you at an alarming
 desc: rate as his black spiked mace rains down blow after blow on your pitiful
@@ -7180,7 +7180,7 @@ drop:magic book:[Sorcery and Evocations]:8:1:1
 friends:30:1d1:Master thief
 friends:30:1d1:Sorcerer
 friends:30:1d1:Patriarch
-friends:30:1d1:Knight templar
+friends:30:1d1:Knight Templar
 friends:30:1d1:Berserker
 desc:A chieftain among the Rangers.  His understanding of nature gives him
 desc: powerful elemental spells to use against you, in addition to his skills
@@ -7417,7 +7417,7 @@ spells:BLIND | CAUSE_3 | CAUSE_4 | HASTE | HEAL | SCARE
 drop:prayer book:[Chants and Blessings]:10:1:1
 drop:prayer book:[Exorcism and Dispelling]:10:1:1
 friends:30:1d1:Master thief
-friends:30:1d1:Ranger chieftain
+friends:30:1d1:Ranger Chieftain
 friends:30:1d1:Patriarch
 friends:30:1d1:Sorcerer
 friends:30:1d1:Berserker
@@ -7694,9 +7694,9 @@ flags:NO_FEAR | NO_CONF | NO_SLEEP
 spell-freq:4
 spells:HASTE | SCARE
 friends:30:1d1:Master thief
-friends:30:1d1:Ranger chieftain
+friends:30:1d1:Ranger Chieftain
 friends:30:1d1:Patriarch
-friends:30:1d1:Knight templar
+friends:30:1d1:Knight Templar
 friends:30:1d1:Sorcerer
 desc:Even the strongest of normal human warriors fears the Berserker - the one
 desc: who can drive himself into such a terrible battle-frenzy that he can
@@ -7860,7 +7860,7 @@ spells:CAUSE_3 | DRAIN_MANA | HEAL | HOLD | MIND_BLAST | SLOW
 spells:BA_FIRE
 spells:BO_FIRE
 spells:S_KIN | S_SPIDER
-friends:50:3d3:Mirkwood Spider
+friends:50:3d3:Mirkwood spider
 friends:100:4d4:Aranea
 desc:A vast, bloated arachnid, master of its brood: among the more terrible of
 desc: Ungoliant's descendants, this is a monster such as those who haunted the
@@ -9745,7 +9745,7 @@ spell-freq:3
 spells:SCARE
 spells:S_HOUND | S_MONSTERS
 friends:100:3d5:Werewolf
-friends:100:2d4:Wolf Chieftain
+friends:100:2d4:Wolf chieftain
 desc:Draugluin provides Sauron with a fearsome personal guard.  He is an
 desc: enormous wolf inhabited with a human spirit.  He is chief of all his kind.
 
@@ -9870,8 +9870,8 @@ spell-freq:4
 spells:BLIND | CONF | SCARE
 spells:BR_FIRE | BR_PLAS
 spells:S_HI_DEMON | S_UNDEAD
-friends:100:1d3:Lesser balrog
-friends:50:1d2:Greater balrog
+friends:100:1d3:Lesser Balrog
+friends:50:1d2:Greater Balrog
 friends:100:1d1:The Balrog of Moria
 desc:A massive form cloaked in flame.  Lungorthin stares balefully at you with
 desc: eyes that smoulder red.  The dungeon floor where he stands is scorched by
@@ -9976,11 +9976,11 @@ spell-freq:3
 spells:BLIND | CONF | SCARE
 spells:BR_FIRE | BR_PLAS
 spells:S_HI_DEMON | S_HI_UNDEAD
-friends:100:1d5:Lesser balrog
+friends:100:1d5:Lesser Balrog
 friends:30:1d3:Osyluth
 friends:30:1d3:Gelugon
-friends:30:1d3:Pit fiend
-friends:100:1d2:Greater balrog
+friends:30:1d3:Pit Fiend
+friends:100:1d2:Greater Balrog
 friends:100:1d1:The Balrog of Moria
 friends:100:1d1:Lungorthin, the Balrog of White Fire
 desc:Gothmog is the Chief Balrog in Morgoth's personal guard.  He is renowned
