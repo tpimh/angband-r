@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 . ./func.sh
 
@@ -10,8 +10,6 @@ for F in $ENGDIR/*.txt; do
         printf "%s\n" "$OUT" >> $RUSDIR/$FNAME
     done < $ENGDIR/$FNAME
 done
-
-bash count.sh name monster
 
 bash count.sh msg activation
 bash count.sh desc activation
